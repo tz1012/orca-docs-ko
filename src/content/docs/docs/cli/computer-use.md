@@ -1,7 +1,7 @@
 ---
 title: "컴퓨터 사용"
 sourceUrl: https://www.onorca.dev/docs/cli/computer-use
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/automations/
 next: /orca-docs-ko/docs/cli/worktree-checkpoints/
@@ -13,7 +13,7 @@ translationNotice:
 
 접근성 트리, 스크린샷, 안전한 UI 작업을 통해 에이전트에서 로컬 데스크톱 앱을 구동합니다.
 
-'orca computer' CLI를 사용하면 에이전트가 기본 데스크톱 앱을 검사하고 제어할 수 있습니다. 즉, 실행 중인 앱 목록을 표시하고, 접근성 트리를 읽고, 컨트롤을 클릭하고, 값을 설정하고, 텍스트를 입력하고, 스크롤하고, 스크린샷을 찍을 수 있습니다. 터미널이나 내장 브라우저가 아닌 OS나 타사 앱을 구동해야 하는 작업에 사용하세요.
+`orca computer` CLI를 사용하면 에이전트가 기본 데스크톱 앱을 검사하고 제어할 수 있습니다. 즉, 실행 중인 앱 목록을 표시하고, 접근성 트리를 읽고, 컨트롤을 클릭하고, 값을 설정하고, 텍스트를 입력하고, 스크롤하고, 스크린샷을 찍을 수 있습니다. 터미널이나 내장 브라우저가 아닌 OS나 타사 앱을 구동해야 하는 작업에 사용하세요.
 
 베타
 
@@ -29,7 +29,7 @@ orca computer permissions --json
 orca computer capabilities --json
 ````
 
-'permissions'에서 누락된 항목이 보고되면 시스템 설정에서 `Orca Computer Use`(컴퓨터 사용)에 접근성(및 macOS의 화면 녹화)을 부여한 다음 'permissions --json'을 다시 실행하여 확인하세요.
+`permissions`에서 누락된 항목이 보고되면 시스템 설정에서 `Orca Computer Use`(Orca 컴퓨터 사용)에 접근성(및 macOS의 화면 녹화)을 부여한 다음 `permissions --json`을 다시 실행하여 확인하세요.
 
 ## 스냅샷 → 행동 → 스냅샷
 
@@ -51,7 +51,7 @@ orca computer click --app com.spotify.client --element-index 42 --json
 orca computer get-app-state --app com.microsoft.edgemac --json
 ````
 
-앱 이름은 명확해야 작동합니다(`--app Spotify`). 번들 ID와 이름이 모두 충돌하는 경우에만 '--app pid:<number>'를 사용하세요.
+앱 이름은 명확해야 작동합니다(`--app Spotify`). 번들 ID와 이름이 모두 충돌하는 경우에만 `--app pid:<number>`를 사용하세요.
 
 ## 사용 가능한 작업
 
@@ -82,7 +82,7 @@ printf '%s' "$TEXT" | orca computer set-value \
 
 ## 스크린샷
 
-`get-app-state`은 접근성 트리와 기본적으로 스크린샷을 반환합니다. `--json`를 사용하면 이미지 바이트가 디스크에 기록되고 경로가 응답에 포함되지 않고 `screenshot.path`에 반환됩니다. 픽셀이 필요하지 않은 경우 '--no-screenshot'를 전달하세요(더 빠르고 작은 페이로드). 캡처하기 전에 숨겨진 창이나 최소화된 창을 표시하려면 '--restore-window'를 전달하세요.
+`get-app-state`은 접근성 트리와 기본적으로 스크린샷을 반환합니다. `--json`를 사용하면 이미지 바이트가 디스크에 기록되고 경로가 응답에 포함되지 않고 `screenshot.path`에 반환됩니다. 픽셀이 필요하지 않은 경우 `--no-screenshot`를 전달하세요(더 빠르고 작은 페이로드). 캡처하기 전에 숨겨진 창이나 최소화된 창을 표시하려면 `--restore-window`를 전달하세요.
 
 ## 상담원으로부터 사용하세요
 

@@ -28,7 +28,7 @@
     },
     "/docs/model/tabs-panes-splits/:list:tabs:0": {
       "sourceHash": "180b3735cff9b90bf9f3d9eb9d5bdd558c78b88acd224784d43efd95cb23697c",
-      "translated": "- 그룹 내에서 탭을 위아래로 드래그하여 순서를 바꾸세요.\n- 탭을 다른 그룹으로 드래그하여 이동하세요.\n- macOS에서는 'ORCA_PROTECTED_0001', Windows/Linux에서는 'ORCA_PROTECTED_0002'를 사용하여 활성 작업 트리의 모든 편집기 파일 탭을 닫습니다.\n- 활성 탭 색상 막대는 어느 창에 초점이 맞춰져 있는지 표시합니다."
+      "translated": "- 그룹 내에서 탭을 위아래로 드래그하여 순서를 바꾸세요.\n- 탭을 다른 그룹으로 드래그하여 이동하세요.\n- macOS에서는 `ORCA_PROTECTED_0001`, Windows/Linux에서는 `ORCA_PROTECTED_0002`를 사용하여 활성 작업 트리의 모든 편집기 파일 탭을 닫습니다.\n- 활성 탭 색상 막대는 어느 창에 초점이 맞춰져 있는지 표시합니다."
     },
     "/docs/model/tabs-panes-splits/:heading:split-panes:0": {
       "sourceHash": "911aefc85fe5479f776571c7d27a6fd53b0f1529300aeeda2e9520da28864ce3",

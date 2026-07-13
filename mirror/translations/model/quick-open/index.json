@@ -44,7 +44,7 @@
     },
     "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:3": {
       "sourceHash": "a528ea4e44978e507c738dd4f61a69e7d001152b0b0370bf3028300c81644011",
-      "translated": "쿼리가 기존 작업 트리와 일치하지 않는 경우 팔레트는 입력된 텍스트를 이름으로 사용하여 **Create worktree** 행을 제공합니다. 기존 경기가 먼저 선택된 상태로 유지되므로 실제 결과가 나올 때 Enter 키를 누르면 계속해서 이동합니다."
+      "translated": "쿼리가 기존 작업 트리와 일치하지 않는 경우 팔레트는 입력된 텍스트를 이름으로 사용하여 `Create worktree`(작업 트리 만들기) 행을 제공합니다. 기존 경기가 먼저 선택된 상태로 유지되므로 실제 결과가 나올 때 Enter 키를 누르면 계속해서 이동합니다."
     },
     "/docs/model/quick-open/:aside:worktree-jump-palette-cmd-j:0": {
       "sourceHash": "bc7ae636351da95811436427340d53009419997beddd9b144abd51f4592f261b",

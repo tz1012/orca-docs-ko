@@ -1,7 +1,7 @@
 ---
 title: "에이전트 최대 절전 모드"
 sourceUrl: https://www.onorca.dev/docs/agents/hibernation
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/session-history/
 next: /orca-docs-ko/docs/agents/usage-tracking/
@@ -26,7 +26,7 @@ Orca은 다음 `all`(모두) 해당하는 경우에만 에이전트 터미널을
 - 에이전트는 `done`(완료) 상태입니다. 마지막 차례를 마쳤으며 입력을 기다리고 있지 않습니다.
 - 터미널이 활성 작업 트리 또는 현재 전경 터미널을 렌더링하는 작업 트리에 없습니다.
 - 에이전트가 완료된 이후 키 입력을 받지 못했습니다.
-- 에이전트가 [재개 가능한 세션](/orca-docs-ko/docs/agents/session-history/): Claude, Codex, Gemini, Antigravity, OpenCode, Droid 또는 Grok을 사용하는 에이전트입니다.
+- 에이전트가 [재개 가능한 세션](/orca-docs-ko/docs/agents/session-history/): Claude, Codex, Gemini, Antigravity, OpenCode, Droid 또는 Grok을 포함하는 에이전트입니다.
 - 구성된 유휴 기간(기본값 30분) 이상 동안 유휴 상태였습니다.
 - 현재 단말기를 구동하고 있는 모바일 세션이 없습니다.
 

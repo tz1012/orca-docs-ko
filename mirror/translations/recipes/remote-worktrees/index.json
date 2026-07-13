@@ -24,7 +24,7 @@
     },
     "/docs/recipes/remote-worktrees/:list:run:0": {
       "sourceHash": "f13260fc839002042dbf207a1b50a42214a8ede5f21e2d0a6b18aad1faaae4bb",
-      "translated": "1. 작업 트리를 생성합니다. ORCA_PROTECTED_0001은 원격에서 'ORCA_PROTECTED_0002'를 실행합니다.\n2. 에이전트를 시작합니다. 이는 노트북이 아닌 원격 호스트에서 실행됩니다.\n3. 파일 인라인 편집 — ORCA_PROTECTED_0003 스트림은 원격 파일 시스템에 저장됩니다.\n4. 평소처럼 노트북에서 차이점을 검토하고 커밋하고 푸시합니다."
+      "translated": "1. 작업 트리를 생성합니다. ORCA_PROTECTED_0001은 원격에서 `ORCA_PROTECTED_0002`를 실행합니다.\n2. 에이전트를 시작합니다. 이는 노트북이 아닌 원격 호스트에서 실행됩니다.\n3. 파일 인라인 편집 — ORCA_PROTECTED_0003 스트림은 원격 파일 시스템에 저장됩니다.\n4. 평소처럼 노트북에서 차이점을 검토하고 커밋하고 푸시합니다."
     },
     "/docs/recipes/remote-worktrees/:heading:disconnects:0": {
       "sourceHash": "c423e129947e813d35c84791e303bc3691ce4e0a55719abc9dd9a17540ee8a30",

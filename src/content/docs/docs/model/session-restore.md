@@ -1,7 +1,7 @@
 ---
 title: "세션 복원"
 sourceUrl: https://www.onorca.dev/docs/model/session-restore
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/agents-sessions/
 next: /orca-docs-ko/docs/model/quick-open/
@@ -39,7 +39,7 @@ Orca이 닫혀 있는 동안 데몬이 충돌하면 보유하고 있던 모든 �
 
 `Daemon survives → agents keep running:`(데몬이 살아남음 → 에이전트가 계속 실행됨:)
 
-- **Cmd-Q** — 일반적인 종료 방법입니다. 에이전트는 백그라운드에서 계속 작업합니다.
+- `Cmd-Q`(앱 종료) — 일반적인 종료 방법입니다. 에이전트는 백그라운드에서 계속 작업합니다.
 - `Auto-updater relaunch`(자동 업데이트 프로그램 다시 시작) — 업데이트를 설치하기 위해 Orca이 다시 시작됩니다. 에이전트는 영향을 받지 않습니다.
 - `App crash`(앱 충돌) — Orca 자체가 충돌하는 경우 데몬은 다음 실행 시 웜 재연결을 위해 세션을 활성 상태로 유지합니다.
 

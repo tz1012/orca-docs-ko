@@ -12,7 +12,7 @@
     },
     "/docs/troubleshooting/:list:agent-wont-start:0": {
       "sourceHash": "fb39e97ee4bda4a7bdc71494fa2f67984702fbb90f99e9191d2210e3e0561fea",
-      "translated": "- 터미널을 열고 에이전트의 CLI를 수동으로 실행합니다. 여기서 실패하면 ORCA_PROTECTED_0001이 아닌 CLI 자체의 인증 또는 설치 문제입니다.\n- CLI가 ORCA_PROTECTED_0003이 보는 'ORCA_PROTECTED_0002'에 있는지 확인하세요([설정 → 에이전트](ORCA_PROTECTED_0004) 확인).\n- 탭에서 `Restart`(다시 시작) 칩을 사용해 보세요."
+      "translated": "- 터미널을 열고 에이전트의 CLI를 수동으로 실행합니다. 여기서 실패하면 ORCA_PROTECTED_0001이 아닌 CLI 자체의 인증 또는 설치 문제입니다.\n- CLI가 ORCA_PROTECTED_0003이 보는 `ORCA_PROTECTED_0002`에 있는지 확인하세요([설정 → 에이전트](ORCA_PROTECTED_0004) 확인).\n- 탭에서 `Restart`(다시 시작) 칩을 사용해 보세요."
     },
     "/docs/troubleshooting/:heading:diff-view-looks-wrong-stuck:0": {
       "sourceHash": "b0a13c660732b1481ef348c4fcf1fda843f19809d37c4996d63bdb45a3527d1e",
@@ -28,7 +28,7 @@
     },
     "/docs/troubleshooting/:list:worktree-creation-fails:0": {
       "sourceHash": "67d380b6e6bdefaa7369702a16ea7993fb58d16434fbb3bea2b74ef30c716c71",
-      "translated": "- 시작 참조를 가져오지 못할 수 있습니다. 저장소에서 터미널을 열고 'ORCA_PROTECTED_0001'을 실행하세요.\n- 대상 디렉터리에 이미 해당 분기에 대한 작업 트리가 있을 수 있습니다. 이를 삭제하거나 새 분기 이름을 선택하세요."
+      "translated": "- 시작 참조를 가져오지 못할 수 있습니다. 저장소에서 터미널을 열고 `ORCA_PROTECTED_0001`을 실행하세요.\n- 대상 디렉터리에 이미 해당 분기에 대한 작업 트리가 있을 수 있습니다. 이를 삭제하거나 새 분기 이름을 선택하세요."
     },
     "/docs/troubleshooting/:heading:orca-cli-says-command-not-found:0": {
       "sourceHash": "6ed6610dc7c9252e7e2d6bde888d5af44a244845bd958398e7832bb5475c4191",
@@ -40,11 +40,11 @@
     },
     "/docs/troubleshooting/:heading:browser-says-browser-no-tab:0": {
       "sourceHash": "86dc791d7e993518f5e6d4b29e826f3091a48700982a29966ab3e42eb431795a",
-      "translated": "## 브라우저에 'ORCA_PROTECTED_0001'이라고 표시됩니다."
+      "translated": "## 브라우저에 `ORCA_PROTECTED_0001`이라고 표시됩니다."
     },
     "/docs/troubleshooting/:paragraph:browser-says-browser-no-tab:0": {
       "sourceHash": "53f3534cba46a1af1d778768f4c6b9f12a48980e661666ceaaed2be5d18696e2",
-      "translated": "현재 작업 트리에 열려 있는 탭이 없습니다. 'ORCA_PROTECTED_0001'로 열거나 수동으로 브라우저 창을 열고 탐색하세요."
+      "translated": "현재 작업 트리에 열려 있는 탭이 없습니다. `ORCA_PROTECTED_0001`로 열거나 수동으로 브라우저 창을 열고 탐색하세요."
     },
     "/docs/troubleshooting/:heading:performance-memory:0": {
       "sourceHash": "a3cfd7d348bd2fbf7cd089d174b4e46c6e312f5094d381d1774bed18f9059c19",
@@ -68,7 +68,7 @@
     },
     "/docs/troubleshooting/:list:reporting-issues:0": {
       "sourceHash": "348d563f0dad9bcbdf6dc600d2787206579e0d90175308fda2f599e9ba05e52a",
-      "translated": "- [GitHub 문제](ORCA_PROTECTED_0001) — 버그 및 기능 요청.\n- [Discord](ORCA_PROTECTED_0002) — 실시간 도움을 드립니다."
+      "translated": "- [ORCA_PROTECTED_0001 문제](ORCA_PROTECTED_0002) — 버그 및 기능 요청.\n- [Discord](ORCA_PROTECTED_0003) — 실시간 도움을 드립니다."
     }
   }
 }

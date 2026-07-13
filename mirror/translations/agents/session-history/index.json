@@ -8,7 +8,7 @@
     },
     "/docs/agents/session-history/:paragraph:agent-session-history:0": {
       "sourceHash": "c433a396d49594642e0cb9245ff20e269e58f4cee99c76fcd978e169775626ad",
-      "translated": "ORCA_PROTECTED_0002의 오른쪽 사이드바에서 Claude, ORCA_PROTECTED_0001, Cursor, Gemini 및 기타 에이전트 세션을 찾아보고 재개하세요."
+      "translated": "ORCA_PROTECTED_0001, ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, ORCA_PROTECTED_0004 및 ORCA_PROTECTED_0005의 오른쪽 사이드바에서 기타 에이전트 세션을 찾아보고 재개하세요."
     },
     "/docs/agents/session-history/:paragraph:agent-session-history:1": {
       "sourceHash": "96a49f0d3f3d53eebe581211291b3f86ab279e8989ee3cebad0c9d6a77bdd915",
@@ -24,7 +24,7 @@
     },
     "/docs/agents/session-history/:paragraph:open-the-panel:1": {
       "sourceHash": "a5736cbeea5766abb5415e62562443e8e54dd1c53a1b687004fee35d8719e540",
-      "translated": "헤더에는 'ORCA_PROTECTED_0001'과 같은 개수와 검색창이 표시됩니다. 세션 제목, 작업 디렉터리, 분기, 모델을 기준으로 필터링하거나 대화의 텍스트 미리보기를 입력하세요."
+      "translated": "헤더에는 `ORCA_PROTECTED_0001`과 같은 개수와 검색창이 표시됩니다. 세션 제목, 작업 디렉터리, 분기, 모델을 기준으로 필터링하거나 대화의 텍스트 미리보기를 입력하세요."
     },
     "/docs/agents/session-history/:heading:scope:0": {
       "sourceHash": "06f13eceae24bd0eb87002e30400999346da1ac5f0f9e44ba02101ab01d1f6a3",
@@ -52,7 +52,7 @@
     },
     "/docs/agents/session-history/:list:view-options:0": {
       "sourceHash": "ca0fc777d0233f5c3a192f2d7b37172dd54fc6f24085d2913aa27ae738c91e16",
-      "translated": "- `Agents`(에이전트) — 개별 CLI를 켜거나 끕니다(Claude, ORCA_PROTECTED_0001, Cursor, Gemini, Hermes, Pi, Copilot, ORCA_PROTECTED_0002, Grok, OpenClaw, Droid, Rovo Dev). 비활성화된 에이전트는 검사 중에 건너뜁니다.\n- `Sort`(정렬) — `ORCA_PROTECTED_0003` 또는 `ORCA_PROTECTED_0004`.\n- `Group`(그룹) — `ORCA_PROTECTED_0005`, `ORCA_PROTECTED_0006`(`ORCA_PROTECTED_0007`당 제목 하나) 또는 `ORCA_PROTECTED_0008`(CLI당 제목 하나).\n- `Hide empty sessions`(빈 세션 숨기기) — 녹음된 메시지가 없는 세션을 삭제합니다."
+      "translated": "- `Agents`(에이전트) — 개별 CLI를 켜거나 끕니다(ORCA_PROTECTED_0001, ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, ORCA_PROTECTED_0004, ORCA_PROTECTED_0005, ORCA_PROTECTED_0006, ORCA_PROTECTED_0007, ORCA_PROTECTED_0008, ORCA_PROTECTED_0009, ORCA_PROTECTED_0010, ORCA_PROTECTED_0011, ORCA_PROTECTED_0012). 비활성화된 에이전트는 검사 중에 건너뜁니다.\n- `Sort`(정렬) — `ORCA_PROTECTED_0013` 또는 `ORCA_PROTECTED_0014`.\n- `Group`(그룹) — `ORCA_PROTECTED_0015`, `ORCA_PROTECTED_0016`(`ORCA_PROTECTED_0017`당 제목 하나) 또는 `ORCA_PROTECTED_0018`(CLI당 제목 하나).\n- `Hide empty sessions`(빈 세션 숨기기) — 녹음된 메시지가 없는 세션을 삭제합니다."
     },
     "/docs/agents/session-history/:heading:resume-a-session:0": {
       "sourceHash": "c2de38e7a185b425ef2ae4e0956aa9e6e8ce88455586a56b76c8f13645db0a38",
@@ -64,7 +64,7 @@
     },
     "/docs/agents/session-history/:list:resume-a-session:0": {
       "sourceHash": "62fc7b0a721ad3bd0225c4cf7c515f82e0912140d719a4adc35e2a97728a7b1f",
-      "translated": "- `Resume`(재개) — 세션의 `ORCA_PROTECTED_0001`에서 새 터미널을 열고 에이전트의 재개 명령(예: `ORCA_PROTECTED_0002`, `ORCA_PROTECTED_0003`, `ORCA_PROTECTED_0004`, `ORCA_PROTECTED_0005`)을 실행합니다. ORCA_PROTECTED_0006 세션은 원래 세션이 1을 설정하면 `ORCA_PROTECTED_0007`도 다시 내보냅니다.\n- `Copy resume command`(재개 명령 복사) — 외부 터미널에서 사용할 수 있도록 동일한 셸 명령을 클립보드에 복사합니다.\n- `Copy session ID`(세션 ID 복사) / `Copy log path`(로그 경로 복사) — 스크립트를 작성하거나 버그 보고서에 기록을 첨부하는 데 사용됩니다.\n- `Open log`(로그 열기) / `Reveal log`(로그 공개) — ORCA_PROTECTED_0008에서 원시 기록 파일을 열거나 OS 파일 관리자에서 해당 파일로 이동합니다.\n- **Open cwd** — 세션의 작업 디렉터리를 작업 공간으로 엽니다."
+      "translated": "- `Resume`(재개) — 세션의 `ORCA_PROTECTED_0001`에서 새 터미널을 열고 에이전트의 재개 명령(예: `ORCA_PROTECTED_0002`, `ORCA_PROTECTED_0003`, `ORCA_PROTECTED_0004`, `ORCA_PROTECTED_0005`)을 실행합니다. ORCA_PROTECTED_0006 세션은 원래 세션이 1을 설정하면 `ORCA_PROTECTED_0007`도 다시 내보냅니다.\n- `Copy resume command`(재개 명령 복사) — 외부 터미널에서 사용할 수 있도록 동일한 셸 명령을 클립보드에 복사합니다.\n- `Copy session ID`(세션 ID 복사) / `Copy log path`(로그 경로 복사) — 스크립트를 작성하거나 버그 보고서에 기록을 첨부하는 데 사용됩니다.\n- `Open log`(로그 열기) / `Reveal log`(로그 공개) — ORCA_PROTECTED_0008에서 원시 기록 파일을 열거나 OS 파일 관리자에서 해당 파일로 이동합니다.\n- `Open cwd`(작업 디렉터리 열기) — 세션의 작업 디렉터리를 작업 공간으로 엽니다."
     },
     "/docs/agents/session-history/:aside:resume-a-session:0": {
       "sourceHash": "933bb00d30947b85287a0e19fb172fdc9ae0808f38dd33c21fa1912addef541a",
@@ -76,7 +76,7 @@
     },
     "/docs/agents/session-history/:paragraph:where-the-transcripts-come-from:0": {
       "sourceHash": "793d9f0ead30cb323f10d6ae9f03ad0d2d3b424aa3dff3e67f2f6e7d1b02e2d9",
-      "translated": "ORCA_PROTECTED_0001은 각 에이전트의 자체 디스크 세션 저장소(ORCA_PROTECTED_0002의 `ORCA_PROTECTED_0003`, Claude의 `ORCA_PROTECTED_0004` 기록, 커서의 세션 로그, ORCA_PROTECTED_0005의 레거시 세션 파일 또는 `ORCA_PROTECTED_0006` 등)를 읽습니다. 활성화할 추가 항목은 없습니다. CLI가 기록을 작성하면 다음 스캔 후 패널에 표시됩니다. 요청 시 다시 검색하려면 헤더에 있는 `Refresh Session History`(새로 고침 세션 기록) 버튼을 사용하세요."
+      "translated": "ORCA_PROTECTED_0001은 각 에이전트의 자체 온디스크 세션 저장소(ORCA_PROTECTED_0002의 `ORCA_PROTECTED_0003`, ORCA_PROTECTED_0004의 `ORCA_PROTECTED_0005` 기록, ORCA_PROTECTED_0006의 세션 로그, ORCA_PROTECTED_0007의 레거시 세션 파일 또는 `ORCA_PROTECTED_0008` 등. 활성화할 추가 항목은 없습니다. CLI가 기록을 작성하면 다음 스캔 후 패널에 표시됩니다. 요청 시 다시 검색하려면 헤더에 있는 `Refresh Session History`(새로 고침 세션 기록) 버튼을 사용하세요."
     },
     "/docs/agents/session-history/:heading:next-steps:0": {
       "sourceHash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",

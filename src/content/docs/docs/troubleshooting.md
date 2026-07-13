@@ -1,7 +1,7 @@
 ---
 title: "문제 해결 및 FAQ"
 sourceUrl: https://www.onorca.dev/docs/troubleshooting
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/telemetry/
 next: false
@@ -14,7 +14,7 @@ translationNotice:
 ## 에이전트가 시작되지 않습니다
 
 - 터미널을 열고 에이전트의 CLI를 수동으로 실행합니다. 여기서 실패하면 Orca이 아닌 CLI 자체의 인증 또는 설치 문제입니다.
-- CLI가 Orca이 보는 'PATH'에 있는지 확인하세요([설정 → 에이전트](/orca-docs-ko/docs/settings/) 확인).
+- CLI가 Orca이 보는 `PATH`에 있는지 확인하세요([설정 → 에이전트](/orca-docs-ko/docs/settings/) 확인).
 - 탭에서 `Restart`(다시 시작) 칩을 사용해 보세요.
 
 ## Diff 보기가 잘못되었거나 멈춘 것 같습니다.
@@ -24,16 +24,16 @@ translationNotice:
 
 ## 워크트리 생성 실패
 
-- 시작 참조를 가져오지 못할 수 있습니다. 저장소에서 터미널을 열고 'git fetch origin'을 실행하세요.
+- 시작 참조를 가져오지 못할 수 있습니다. 저장소에서 터미널을 열고 `git fetch origin`을 실행하세요.
 - 대상 디렉터리에 이미 해당 분기에 대한 작업 트리가 있을 수 있습니다. 이를 삭제하거나 새 분기 이름을 선택하세요.
 
 ## Orca CLI에 "명령을 찾을 수 없습니다"라고 표시됩니다.
 
 [설정 → 실험 → CLI](/orca-docs-ko/docs/settings/)에서 CLI를 등록합니다. macOS에서는 `~/.local/bin`에 shim을 설치합니다. 쉘의 `PATH`에 있는지 확인하세요.
 
-## 브라우저에 'browser_no_tab'이라고 표시됩니다.
+## 브라우저에 `browser_no_tab`이라고 표시됩니다.
 
-현재 작업 트리에 열려 있는 탭이 없습니다. 'orca tab create --url ...'로 열거나 수동으로 브라우저 창을 열고 탐색하세요.
+현재 작업 트리에 열려 있는 탭이 없습니다. `orca tab create --url ...`로 열거나 수동으로 브라우저 창을 열고 탐색하세요.
 
 ## 성능 및 메모리
 

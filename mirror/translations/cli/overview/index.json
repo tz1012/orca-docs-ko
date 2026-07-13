@@ -12,7 +12,7 @@
     },
     "/docs/cli/overview/:paragraph:orca-cli-overview:1": {
       "sourceHash": "6f70c327d68b5353a89929ee803b6aede9b66216be7bc50d836be2971cffa286",
-      "translated": "ORCA_PROTECTED_0001 CLI는 모든 셸에서 실행 중인 ORCA_PROTECTED_0003 편집기를 스크립팅하기 위한 'ORCA_PROTECTED_0002' 명령줄 인터페이스입니다. 이를 사용하여 작업 트리를 생성 및 검사하고, 에이전트 터미널을 구동하고, 파일 및 차이점을 열고, 내장 브라우저를 자동화하고, 예약된 자동화를 실행하고, 스크립트 또는 AI 에이전트에서 ORCA_PROTECTED_0004 기본 도구를 제어합니다."
+      "translated": "ORCA_PROTECTED_0001 CLI는 모든 셸에서 실행 중인 ORCA_PROTECTED_0003 편집기를 스크립팅하기 위한 `ORCA_PROTECTED_0002` 명령줄 인터페이스입니다. 이를 사용하여 작업 트리를 생성 및 검사하고, 에이전트 터미널을 구동하고, 파일 및 차이점을 열고, 내장 브라우저를 자동화하고, 예약된 자동화를 실행하고, 스크립트 또는 AI 에이전트에서 ORCA_PROTECTED_0004 기본 도구를 제어합니다."
     },
     "/docs/cli/overview/:paragraph:orca-cli-overview:2": {
       "sourceHash": "25079a6c19137b17fca24f9b870e0cf561aa34f7a811551b05176e2f34df5649",
@@ -124,7 +124,7 @@
     },
     "/docs/cli/overview/:paragraph:mobile-emulator:0": {
       "sourceHash": "e09af4e5175f8d06f66c0b63ffe55d33d6bab3ee3ae9bc92dad0e289dfeeb0d0",
-      "translated": "CLI는 ORCA_PROTECTED_0001의 모바일 에뮬레이터 브리지를 통해 iOS 시뮬레이터를 구동할 수도 있습니다. 범위는 활성 작업 트리로 지정되므로 에이전트와 스크립트는 'ORCA_PROTECTED_0002'에서 시뮬레이터를 연결하고, 정규화된 좌표를 탭하고, 텍스트를 입력하고, 제스처를 보내고, 장치를 회전하고, ORCA_PROTECTED_0003을 떠나지 않고도 종료할 수 있습니다."
+      "translated": "CLI는 ORCA_PROTECTED_0001의 모바일 에뮬레이터 브리지를 통해 iOS 시뮬레이터를 구동할 수도 있습니다. 범위는 활성 작업 트리로 지정되므로 에이전트와 스크립트는 `ORCA_PROTECTED_0002`에서 시뮬레이터를 연결하고, 정규화된 좌표를 탭하고, 텍스트를 입력하고, 제스처를 보내고, 장치를 회전하고, ORCA_PROTECTED_0003을 떠나지 않고도 종료할 수 있습니다."
     },
     "/docs/cli/overview/:code:mobile-emulator:0": {
       "sourceHash": "a872677bc7d7a4ba508d97a1a315a36fb55a205ba3947a9d934d24fe2d6cb5a8",

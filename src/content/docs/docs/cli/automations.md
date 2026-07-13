@@ -1,7 +1,7 @@
 ---
 title: "예약된 자동화"
 sourceUrl: https://www.onorca.dev/docs/cli/automations
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/orchestration/
 next: /orca-docs-ko/docs/cli/computer-use/
@@ -29,11 +29,11 @@ orca automations create \
   --json
 ````
 
-`--trigger`은 `hourly`, `daily`, `weekdays`, `weekly`와 같은 사전 설정과 크론 표현식 또는 RRULE 문자열을 허용합니다. 일정이 런타임 기본값 대신 특정 IANA 시간대를 따라야 하는 경우 '--timezone <tz>'을 사용하세요.
+`--trigger`은 `hourly`, `daily`, `weekdays`, `weekly`와 같은 사전 설정과 크론 표현식 또는 RRULE 문자열을 허용합니다. 일정이 런타임 기본값 대신 특정 IANA 시간대를 따라야 하는 경우 `--timezone <tz>`을 사용하세요.
 
 ## 실행이 발생하는 위치 선택
 
-각 실행이 저장소에서 작업을 생성하거나 선택해야 하는 경우 '--repo <selector>'을 사용하세요. 대신 기존 Orca 작업 트리 내에서 자동화를 실행해야 하는 경우 '--workspace <selector>'를 사용하세요.
+각 실행이 저장소에서 작업을 생성하거나 선택해야 하는 경우 `--repo <selector>`을 사용하세요. 대신 기존 Orca 작업 트리 내에서 자동화를 실행해야 하는 경우 `--workspace <selector>`를 사용하세요.
 
 ````
 orca automations create \
@@ -49,7 +49,7 @@ orca automations create \
 
 ## 기존 자동화 세션 재사용
 
-기존 작업 트리를 대상으로 하는 자동화의 경우 매번 빈 터미널에서 시작하는 대신 나중에 실행이 이전 라이브 자동화 터미널에서 계속되어야 하는 경우 '--reuse-session'을 추가하세요.
+기존 작업 트리를 대상으로 하는 자동화의 경우 매번 빈 터미널에서 시작하는 대신 나중에 실행이 이전 라이브 자동화 터미널에서 계속되어야 하는 경우 `--reuse-session`을 추가하세요.
 
 ````
 orca automations create \
@@ -62,7 +62,7 @@ orca automations create \
   --disabled
 ````
 
-실행할 때마다 자동화를 새로운 터미널로 다시 전환하려면 'orca automations edit <automationId> --fresh-session --json'을 사용하세요.
+실행할 때마다 자동화를 새로운 터미널로 다시 전환하려면 `orca automations edit <automationId> --fresh-session --json`을 사용하세요.
 
 ## 검토 및 활성화
 

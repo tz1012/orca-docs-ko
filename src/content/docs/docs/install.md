@@ -1,7 +1,7 @@
 ---
 title: "설치"
 sourceUrl: https://www.onorca.dev/docs/install
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/
 next: /orca-docs-ko/docs/first-session/
@@ -45,7 +45,7 @@ brew install --cask stablyai/orca/orca
 
 ## 업데이트
 
-Orca은 기본적으로 자동 업데이트되어 **stable** 채널을 추적합니다. 안정적인 릴리스는 심사를 거칩니다. `RC (release candidate)`(RC(출시 후보)) 빌드는 새로운 기능을 먼저 출시하며 대개 매일 출시됩니다.
+Orca은 기본적으로 자동 업데이트되어 `stable`(안정) 채널을 추적합니다. 안정적인 릴리스는 심사를 거칩니다. `RC (release candidate)`(RC(출시 후보)) 빌드는 새로운 기능을 먼저 출시하며 대개 매일 출시됩니다.
 
 RC 채널에는 앱 내 선택 기능이 없습니다. RC 빌드를 가져오려면 다음 중 하나를 수행하세요.
 
@@ -54,7 +54,7 @@ RC 채널에는 앱 내 선택 기능이 없습니다. RC 빌드를 가져오려
 
 현재 업데이트가 마음에 들지 않음
 
-이전 버전은 [GitHub 릴리스 페이지](https://github.com/stablyai/orca/releases)에서 항상 사용할 수 있습니다. Orca는 되돌아가도 작업 트리 데이터를 강제로 다운그레이드하지 않습니다.
+이전 버전은 항상 [GitHub 릴리스 페이지](https://github.com/stablyai/orca/releases)에서 사용할 수 있습니다. Orca은 되돌아가도 작업 트리 데이터를 강제로 다운그레이드하지 않습니다.
 
 ## 플랫폼 노트
 
@@ -68,4 +68,4 @@ RC 채널에는 앱 내 선택 기능이 없습니다. RC 빌드를 가져오려
 
 ### 리눅스
 
-AppImage 및 '.deb' 빌드를 사용할 수 있습니다. 자세한 내용은 릴리스 페이지를 참조하세요.
+AppImage 및 `.deb` 빌드를 사용할 수 있습니다. 자세한 내용은 릴리스 페이지를 참조하세요.

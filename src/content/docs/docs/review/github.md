@@ -1,7 +1,7 @@
 ---
 title: "호스팅된 리뷰, 문제 및 조치"
 sourceUrl: https://www.onorca.dev/docs/review/github
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/commit-push/
 next: /orca-docs-ko/docs/review/linear/
@@ -13,7 +13,7 @@ translationNotice:
 
 호스팅된 코드 검토는 작업 트리의 가장 중요한 부분입니다. Orca은 작업 트리를 끌어오기 요청 또는 병합 요청에 연결하고 검토 상태를 인라인으로 표시하며 앱을 종료하지 않고도 문제를 분류할 수 있습니다.
 
-![GitHub 통합 — 작업 트리를 떠나지 않고도 PR 열기, 확인 보기 및 문제 분류.](/orca-docs-ko/assets/mirror/729ae73e8ebc63ef8a8448d87cc59395e3c108c5e0a600c7ec954b57ce32533c.jpg)
+![GitHub 통합 - 작업 트리를 떠나지 않고도 PR 열기, 확인 확인 및 문제 분류.](/orca-docs-ko/assets/mirror/729ae73e8ebc63ef8a8448d87cc59395e3c108c5e0a600c7ec954b57ce32533c.jpg)
 
 GitHub 통합 — 작업 트리를 떠나지 않고도 PR을 열고, 확인하고, 문제를 분류할 수 있습니다.
 
@@ -25,20 +25,20 @@ GitHub 통합 — 작업 트리를 떠나지 않고도 PR을 열고, 확인하�
 
 - 작업 트리가 푸시되면 소스 제어 패널에서 호스팅된 리뷰를 엽니다. 만들기 전에 기본 브랜치, 제목, 설명 및 초안 상태를 확인하세요.
 - 링크된 리뷰가 사이드바에 상태와 함께 표시되므로 지점이 아직 열려 있는지, 병합되었는지, 닫혀 있는지 알 수 있습니다.
-- Orca에 연결된 PR/MR에 대한 URL이 있는 경우 분기 컨텍스트 행에 간단한 `Open review page in browser`(브라우저에서 검토 페이지 열기) 링크가 표시됩니다. 내부 PR 보기를 열지 않고도 클릭 한 번으로 GitHub, GitLab, Bitbucket, Azure DevOps 또는 Gitea의 검토로 이동할 수 있습니다.
+- Orca에 연결된 PR/MR에 대한 URL이 있는 경우 분기 컨텍스트 행에 간략한 `Open review page in browser`(브라우저에서 검토 페이지 열기) 링크가 표시됩니다. 내부 PR 보기를 열지 않고도 한 번의 클릭으로 GitHub, GitLab, Bitbucket, Azure DevOps 또는 Gitea의 검토로 이동합니다.
 - GitHub 풀 요청의 경우 사이드바의 PR 작업 메뉴를 사용하여 리뷰 링크를 복사하거나, 리뷰를 닫거나, 상태 변경을 확인한 후 다시 엽니다.
 - GitHub 확인, 리뷰 및 댓글은 PR 탭에서 인라인으로 열립니다. GitLab 병합 요청 및 문제는 동일한 검토 화면에서 열립니다.
-- GitHub 끌어오기 요청에 실패한 검사가 있는 경우 PR 보기에서 `Fix broken checks`(깨진 검사 수정)을 사용하여 실패한 검사 이름과 링크를 에이전트에 전달하세요.
+- GitHub 풀 요청에 실패한 확인이 있는 경우 PR 보기에서 `Fix broken checks`(깨진 확인 수정)을 사용하여 실패한 확인 이름과 링크를 에이전트에 전달합니다.
 
 ### 자동 병합
 
-공개 GitHub PR의 경우 PR 보기의 병합 버튼이 `Enable auto-merge`(자동 병합 활성화)를 제공하므로 GitHub는 요구 사항(검사, 필수 검토)이 통과되면 자동으로 분기를 병합합니다. 병합 방법은 저장소의 기본값을 따르며 **Squash and merge**, **Create merge commit** 또는 **Rebase and merge** 중 하나입니다. 저장소에서 허용하지 않는 방법은 표시되지 않습니다. 보류 중인 자동 병합을 취소하려면 동일한 컨트롤에서 `Disable auto-merge`(자동 병합 비활성화)를 사용하세요. 기본 분기가 GitHub의 병합 대기열을 사용하는 경우 동일한 컨트롤은 `Merge when ready`(준비 시 병합)을 읽고 대신 PR을 대기열에 추가합니다. 자동 병합 제어는 GitHub가 초안, 폐쇄, 충돌 또는 불안정으로 보고하는 PR과 자동 병합을 허용하지 않는 저장소의 경우 숨겨집니다. 이 경우 수동 병합 작업만 표시됩니다.
+열려 있는 GitHub PR의 경우 PR 보기의 병합 버튼이 `Enable auto-merge`(자동 병합 활성화)를 제공하므로 GitHub는 요구 사항(검사, 필수 검토)이 통과되면 자동으로 분기를 병합합니다. 병합 방법은 저장소의 기본값을 따르며 `Squash and merge`(스쿼시 후 병합), `Create merge commit`(병합 커밋 만들기) 또는 `Rebase and merge`(리베이스 후 병합) 중 하나입니다. 저장소에서 허용하지 않는 방법은 표시되지 않습니다. 보류 중인 자동 병합을 취소하려면 동일한 컨트롤에서 `Disable auto-merge`(자동 병합 비활성화)를 사용하세요. 기본 분기가 GitHub의 병합 대기열을 사용하는 경우 동일한 컨트롤은 `Merge when ready`(준비 시 병합)을 읽고 대신 PR을 대기열에 추가합니다. PR GitHub 보고서가 초안, 마감, 충돌 또는 불안정으로 보고되고 자동 병합을 허용하지 않는 저장소의 경우 자동 병합 제어가 숨겨집니다. 이 경우 수동 병합 작업만 표시됩니다.
 
 ## 문제
 
 이슈 서랍을 사용하면 Orca 내에서 GitHub 및 GitLab 이슈를 찾아보고 필터링하고 편집할 수 있습니다. 이슈에서 작업 트리를 생성하면 작업 이름이 미리 채워지고 둘이 연결되어 리뷰가 작업에 계속 연결됩니다.
 
-GitHub 문제의 경우 세부 정보 대화 상자에는 코멘트를 타임라인 이벤트(할당, 멘션, 상호 참조, 상태 변경, 프로젝트 열 이동)와 함께 삽입하는 `Activity`(활동) 섹션이 있으므로 Orca을 떠나지 않고도 전체 기록을 볼 수 있습니다.
+GitHub 문제의 경우 세부 정보 대화 상자에는 코멘트를 타임라인 이벤트(할당, 멘션, 상호 참조, 상태 변경 및 프로젝트 열 이동)와 인터리브하는 `Activity`(활동) 섹션이 있으므로 Orca를 떠나지 않고도 전체 기록을 볼 수 있습니다.
 
 작업 공간 사이드바에 있는 링크된 이슈 메뉴를 사용하면 서랍을 열지 않고도 이슈 링크를 복사할 수 있습니다.
 
@@ -46,7 +46,7 @@ GitLab 리포지토리의 경우 서랍에는 선택한 프로젝트의 미해�
 
 ## 작업
 
-실패한 GitHub Actions 검사는 작업 트리에 빨간색 칩으로 표시됩니다. 실패한 작업 로그를 인라인으로 보려면 클릭하세요.
+실패한 GitHub 작업 확인은 작업 트리에 빨간색 칩으로 표시됩니다. 실패한 작업 로그를 인라인으로 보려면 클릭하세요.
 
 ## 작업
 
@@ -55,4 +55,4 @@ Orca은 `Tasks`(작업) 사이드바 항목 아래에 전체 GitHub 프로젝트
 ## 다음 단계
 
 - [Orca에서 커밋 및 푸시](/orca-docs-ko/docs/review/commit-push/) - 단계 변경, 분기 푸시, 호스팅된 검토 생성.
-- [선형 항목 서랍](/orca-docs-ko/docs/review/linear/) — 작업 소스가 git 공급자 외부에 있는 경우 선형을 사용합니다.
+- [Linear 항목 서랍](/orca-docs-ko/docs/review/linear/) - 작업 소스가 git 공급자 외부에 있는 경우 Linear를 사용합니다.

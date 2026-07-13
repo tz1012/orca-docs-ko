@@ -20,7 +20,7 @@
     },
     "/docs/review/annotate-ai-diff/:list:leave-a-comment:0": {
       "sourceHash": "f20164755e52b53807f5a4639213978a5004a3d2a5aefafc82575aa245173b0b",
-      "translated": "1. diff에서 아무 줄이나 가리키면 여백에 `+`(추가 버튼)가 나타납니다.\n2. 클릭하세요(또는 줄에 커서를 두고 `ORCA_PROTECTED_0001`을 누르세요).\n3. 피드백을 입력하세요. 마크다운이 지원됩니다.\n4. 저장하려면 `ORCA_PROTECTED_0002`를 누르고, 취소하려면 `ORCA_PROTECTED_0003`을 누르세요."
+      "translated": "1. diff에서 아무 라인이나 마우스로 가리킵니다. 홈통에 ***가 나타납니다.\n2. 클릭하세요(또는 줄에 커서를 두고 `ORCA_PROTECTED_0001`을 누르세요).\n3. 피드백을 입력하세요. 마크다운이 지원됩니다.\n4. 저장하려면 `ORCA_PROTECTED_0002`를 누르고, 취소하려면 `ORCA_PROTECTED_0003`을 누르세요."
     },
     "/docs/review/annotate-ai-diff/:paragraph:leave-a-comment:0": {
       "sourceHash": "3dd722f7262c6bf70047d4257b60f965a2eed72cbe60ad1ff489006fc498cf38",

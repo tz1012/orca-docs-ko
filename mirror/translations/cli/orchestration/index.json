@@ -16,11 +16,11 @@
     },
     "/docs/cli/orchestration/:paragraph:orchestration:2": {
       "sourceHash": "91253d5719701d3b80e3229530638071ceed1cd9a2283fadf8abba433da06146",
-      "translated": "조정 상태가 중요한 경우 오케스트레이션을 사용하세요. 일회용 터미널 입력의 경우 'ORCA_PROTECTED_0001'을 사용하세요. 소유권, 종속성 또는 작업자 완료로 추적된 작업의 경우 'ORCA_PROTECTED_0002'를 사용하세요."
+      "translated": "조정 상태가 중요한 경우 오케스트레이션을 사용하세요. 일회용 터미널 입력의 경우 `ORCA_PROTECTED_0001`을 사용하세요. 소유권, 종속성 또는 작업자 완료로 추적된 작업의 경우 `ORCA_PROTECTED_0002`를 사용하세요."
     },
     "/docs/cli/orchestration/:aside:orchestration:0": {
       "sourceHash": "099d4668e834b827f3661d7916bf09168bdf701a5c3384117f7187c76b3c91ba",
-      "translated": "실험적\n\n이 명령을 사용하기 전에 설정 -> 실험에서 오케스트레이션을 활성화하세요. CLI는 실행 중인 ORCA_PROTECTED_0001 런타임과 통신하므로 'ORCA_PROTECTED_0002'가 먼저 성공해야 합니다."
+      "translated": "실험적\n\n이 명령을 사용하기 전에 설정 -> 실험에서 오케스트레이션을 활성화하세요. CLI는 실행 중인 ORCA_PROTECTED_0001 런타임과 통신하므로 `ORCA_PROTECTED_0002`가 먼저 성공해야 합니다."
     },
     "/docs/cli/orchestration/:heading:core-model:0": {
       "sourceHash": "143cc632d0e64de15b35b23486a81c4272531faa0a1ae1f3cf53774da77461dc",
@@ -36,7 +36,7 @@
     },
     "/docs/cli/orchestration/:paragraph:core-model:1": {
       "sourceHash": "acf7fb23e6df84c192a31269abe0796f559ec2b43f1428bb690a39ee158ec494",
-      "translated": "'ORCA_PROTECTED_0001'과 같이 터미널에 인쇄된 작업 ID는 클릭 가능한 링크입니다. 하나를 클릭하면 ORCA_PROTECTED_0002 런타임에 작업의 현재 디스패치를 ​​요청하고 작업이 원격 또는 SSH 런타임에 있는 경우를 포함하여 할당된 터미널에 초점을 맞춥니다."
+      "translated": "`ORCA_PROTECTED_0001`과 같이 터미널에 인쇄된 작업 ID는 클릭 가능한 링크입니다. 하나를 클릭하면 ORCA_PROTECTED_0002 런타임에 작업의 현재 디스패치를 ​​요청하고 작업이 원격 또는 SSH 런타임에 있는 경우를 포함하여 할당된 터미널에 초점을 맞춥니다."
     },
     "/docs/cli/orchestration/:heading:see-who-can-work:0": {
       "sourceHash": "598962ae02ad1494433bd5149738b68caa32142738ecc50a20e0a61ad05d9179",
@@ -56,7 +56,7 @@
     },
     "/docs/cli/orchestration/:paragraph:see-who-can-work:1": {
       "sourceHash": "fe276a87247940ab3e6574563466649cdd63174ff1e507582bbe4ca9ae20d560",
-      "translated": "PowerShell에서는 'ORCA_PROTECTED_0001'과 같은 그룹 주소를 인용하세요."
+      "translated": "PowerShell에서는 `ORCA_PROTECTED_0001`과 같은 그룹 주소를 인용하세요."
     },
     "/docs/cli/orchestration/:heading:send-and-read-messages:0": {
       "sourceHash": "8473d0bb066840434d2033859a7e1b1c7975e8bb29dc592cd47fa63554daeaa0",
@@ -68,7 +68,7 @@
     },
     "/docs/cli/orchestration/:paragraph:send-and-read-messages:0": {
       "sourceHash": "3b4848785cd61865020fd6fda475fafcf284cab284994d9a97e855b3ae0ba7e9",
-      "translated": "'ORCA_PROTECTED_0001'이 기본값이며 일치하는 메시지를 읽은 것으로 표시합니다. `ORCA_PROTECTED_0002`는 메시지를 읽은 것으로 표시하지 않고 메시지를 반환합니다."
+      "translated": "`ORCA_PROTECTED_0001`이 기본값이며 일치하는 메시지를 읽은 것으로 표시합니다. `ORCA_PROTECTED_0002`는 메시지를 읽은 것으로 표시하지 않고 메시지를 반환합니다."
     },
     "/docs/cli/orchestration/:paragraph:send-and-read-messages:1": {
       "sourceHash": "7e60a1abf3b30c36a014d4c39f69643c7767aab2333b81909533ef9c56e1b821",
@@ -96,7 +96,7 @@
     },
     "/docs/cli/orchestration/:paragraph:manual-dispatch-flow:1": {
       "sourceHash": "76a0202a691095618744c856c35672ea10e6f396e3e55b848fbc2ace965bad83",
-      "translated": "작업 목록에 ORCA_PROTECTED_0002가 표시하는 간결한 작업 항목을 보려면 `ORCA_PROTECTED_0001`을 사용하세요. 파견된 작업자 행에 전체 프롬프트보다 짧은 레이블이 필요한 경우 'ORCA_PROTECTED_0003'을 사용하세요."
+      "translated": "작업 목록에 ORCA_PROTECTED_0002가 표시하는 간결한 작업 항목을 보려면 `ORCA_PROTECTED_0001`을 사용하세요. 파견된 작업자 행에 전체 프롬프트보다 짧은 레이블이 필요한 경우 `ORCA_PROTECTED_0003`을 사용하세요."
     },
     "/docs/cli/orchestration/:paragraph:manual-dispatch-flow:2": {
       "sourceHash": "afc7edd8170ae7f08860cb4be4cdc25e619858ebd6bad1c5bd4b71f825b94fd5",
@@ -140,7 +140,7 @@
     },
     "/docs/cli/orchestration/:list:worker-contract:0": {
       "sourceHash": "932065c6d7bdb239c28de5458a31e0c3b4a01e8ea470c6db093c67fcf98b5985",
-      "translated": "- 실패하더라도 `ORCA_PROTECTED_0001`을 정확히 한 번만 보냅니다.\n- 간단한 'ORCA_PROTECTED_0002' 요약(수행된 작업, 발견된 작업, 남은 작업)을 포함합니다.\n- 오래된 재시도가 잘못된 디스패치를 ​​완료할 수 없도록 작업 ID와 디스패치 ID를 모두 포함합니다.\n- 장기간 활성 작업 중에 `ORCA_PROTECTED_0003` 메시지를 보냅니다.\n- 질문을 차단하려면 로컬 TUI 프롬프트 대신 `ORCA_PROTECTED_0004`를 사용하세요."
+      "translated": "- 실패하더라도 `ORCA_PROTECTED_0001`을 정확히 한 번만 보냅니다.\n- 간단한 `ORCA_PROTECTED_0002` 요약(수행된 작업, 발견된 작업, 남은 작업)을 포함합니다.\n- 오래된 재시도가 잘못된 디스패치를 ​​완료할 수 없도록 작업 ID와 디스패치 ID를 모두 포함합니다.\n- 장기간 활성 작업 중에 `ORCA_PROTECTED_0003` 메시지를 보냅니다.\n- 질문을 차단하려면 로컬 TUI 프롬프트 대신 `ORCA_PROTECTED_0004`를 사용하세요."
     },
     "/docs/cli/orchestration/:paragraph:worker-contract:1": {
       "sourceHash": "4a2e217f847e40d215c39b7a14b7f32e590cf781ddc6284fd78fe67fe02acb3c",
@@ -204,7 +204,7 @@
     },
     "/docs/cli/orchestration/:paragraph:decision-gates:0": {
       "sourceHash": "8a8389b62562ec39682875bd2dff02cf4407c3028209eef689205a06cdf6a148",
-      "translated": "작업자와 코디네이터 간의 질문에는 'ORCA_PROTECTED_0001'을 사용하세요. 코디네이터가 작업 DAG를 생성했고 결정이 기록될 때까지 작업을 차단하려는 경우 명시적 게이트를 사용합니다."
+      "translated": "작업자와 코디네이터 간의 질문에는 `ORCA_PROTECTED_0001`을 사용하세요. 코디네이터가 작업 DAG를 생성했고 결정이 기록될 때까지 작업을 차단하려는 경우 명시적 게이트를 사용합니다."
     },
     "/docs/cli/orchestration/:code:decision-gates:0": {
       "sourceHash": "a4c7f6c580af2cd47c49f1f19f352985bcf39e224357c36d62d14ca4bcb78aa6",
@@ -240,7 +240,7 @@
     },
     "/docs/cli/orchestration/:paragraph:recovery:3": {
       "sourceHash": "504b8b1f18f63b8e3444cff2cc2f1cf29b1f4f8530e3a4c6ee4ca9ac2351a4bd",
-      "translated": "'ORCA_PROTECTED_0001'은 런타임 전역 조정 상태에 영향을 미칩니다. 의도된 정리가 아닌 이상 다른 코디네이터가 활성화되어 있는 동안 실행하지 마십시오."
+      "translated": "`ORCA_PROTECTED_0001`은 런타임 전역 조정 상태에 영향을 미칩니다. 의도된 정리가 아닌 이상 다른 코디네이터가 활성화되어 있는 동안 실행하지 마십시오."
     },
     "/docs/cli/orchestration/:heading:choosing-the-right-command:0": {
       "sourceHash": "71610f9ab58694d022f6ab7328890b3665652d9d5bfd3aa860d9846f11ea8e9a",
@@ -248,15 +248,15 @@
     },
     "/docs/cli/orchestration/:paragraph:choosing-the-right-command:0": {
       "sourceHash": "295726373efc9df083965ce69fc96cab26cb7329a266f63867bb5e01b6a8fe1e",
-      "translated": "감시 중인 에이전트에게 간단한 프롬프트를 표시하려면 'ORCA_PROTECTED_0001'을 사용하세요."
+      "translated": "감시 중인 에이전트에게 간단한 프롬프트를 표시하려면 `ORCA_PROTECTED_0001`을 사용하세요."
     },
     "/docs/cli/orchestration/:paragraph:choosing-the-right-command:1": {
       "sourceHash": "da78e956f421211434ac58072cdff546261323ad7b4a26163d8c34d5d81eef4a",
-      "translated": "작업자가 'ORCA_PROTECTED_0002'를 보고하고, 코디네이터를 통해 질문하고, 작업 ID로 추적해야 하는 경우 'ORCA_PROTECTED_0001'을 사용하세요."
+      "translated": "작업자가 `ORCA_PROTECTED_0002`를 보고하고, 코디네이터를 통해 질문하고, 작업 ID로 추적해야 하는 경우 `ORCA_PROTECTED_0001`을 사용하세요."
     },
     "/docs/cli/orchestration/:paragraph:choosing-the-right-command:2": {
       "sourceHash": "dc52f3b6359e0bc34715c83c059f681d5b219f2765a30ed2cad5e9b9583dcd54",
-      "translated": "ORCA_PROTECTED_0002가 코디네이터 루프를 관리하고 사용 가능한 작업자 터미널에 준비된 작업을 파견하도록 하려면 'ORCA_PROTECTED_0001'을 사용하세요."
+      "translated": "ORCA_PROTECTED_0002가 코디네이터 루프를 관리하고 사용 가능한 작업자 터미널에 준비된 작업을 파견하도록 하려면 `ORCA_PROTECTED_0001`을 사용하세요."
     }
   }
 }

@@ -1,7 +1,7 @@
 ---
 title: "Orca ADE에서 GLM-5.2를 사용하는 방법"
 sourceUrl: https://www.onorca.dev/docs/agents/glm-agent
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/claude-code/
 next: /orca-docs-ko/docs/agents/codex/
@@ -19,7 +19,7 @@ Orca은 격리된 작업 트리, 터미널 창, 브라우저 탭, 검토 흐름 
 
 전제 조건
 
-에이전트 하니스에서 GLM-5.2를 구성하기 전에 GLM 코딩 계획 액세스 권한이 있는 활성 [Z.ai CodePlan 구독](https://z.ai/subscribe)이 필요합니다. OpenAI 호환 하네스에는 Z.ai API 키도 필요합니다. Orca는 GLM 액세스를 포함하거나 재판매하지 않습니다.
+에이전트 하니스에서 GLM-5.2를 구성하기 전에 GLM 코딩 계획 액세스 권한이 있는 활성 [Z.ai CodePlan 구독](https://z.ai/subscribe)이 필요합니다. OpenAI 호환 하네스에도 Z.ai API 키가 필요합니다. Orca은 GLM 액세스를 포함하거나 재판매하지 않습니다.
 
 소스
 
@@ -45,27 +45,27 @@ Claude Code은 `~/.claude/settings.json`에서 모델 재정의를 읽습니다.
 }
 ````
 
-GLM-5.2의 1M 컨텍스트 변형을 원할 때 `[1m]` 접미사를 사용하고 `CLAUDE_CODE_AUTO_COMPACT_WINDOW`를 `1000000`으로 설정하여 Claude Code의 압축 창이 해당 컨텍스트 크기와 일치하도록 합니다. Claude Code에 '[1m]' 모델이 존재하지 않는다고 표시되면 Claude Code을 업데이트하고 다시 시도하세요.
+GLM-5.2의 1M 컨텍스트 변형을 원할 때 `[1m]` 접미사를 사용하고 `CLAUDE_CODE_AUTO_COMPACT_WINDOW`를 `1000000`으로 설정하여 Claude Code의 압축 창이 해당 컨텍스트 크기와 일치하도록 합니다. Claude Code에 `[1m]` 모델이 존재하지 않는다고 표시되면 Claude Code을 업데이트하고 다시 시도하세요.
 
 코딩 작업의 경우 Z.ai는 `/effort`을 사용하여 Claude Code 노력을 `max`로 설정할 것을 권장합니다. Claude Code의 낮은 노력 설정은 GLM-5.2 높은 노력에 매핑되는 반면 `xhigh`, `max` 및 `ultracode`은 GLM-5.2 최대 노력에 매핑됩니다.
 
-## OpenCode, Cline, Kilo Code, Roo Code 및 Droid
+## OpenCode, Cline, Kilo 코드, Roo 코드 및 Droid
 
 OpenAI 호환 공급자를 노출하는 에이전트 하네스의 경우:
 
 1. Orca 외부 또는 내부에서 하네스 설정을 엽니다.
-2. OpenAI 호환 공급자 옵션을 선택하거나, 하네스에 Z.ai 공급자 옵션이 있는 경우 Z.ai 공급자 옵션을 선택합니다.
-3. 기본 URL을 `https://api.z.ai/api/coding/paas/v4`로 설정합니다.
+2. OpenAI 호환 제공자 옵션을 선택하거나 하네스에 Z.ai 제공자 옵션이 있는 경우 이를 선택합니다.
+3. 기본 URL을 `https://api.z.ai/api/coding/paas/v4`으로 설정합니다.
 4. Z.ai API 키를 추가하세요.
-5. 커스텀 모델 이름을 `glm-5.2`으로 설정합니다.
+5. 커스텀 모델 이름을 `glm-5.2`로 설정합니다.
 6. 하네스가 해당 필드를 노출하는 경우 컨텍스트 창 크기를 `1000000`로 설정합니다.
 7. 하네스가 이 공급자 경로에 대한 이미지 지원을 구체적으로 문서화하지 않는 한 이미지 지원을 비활성화합니다.
 
 저장한 후 Orca의 에이전트 선택기에서 하네스를 실행합니다. Orca는 선택한 작업 트리에서 동일하게 구성된 CLI를 실행합니다.
 
-## 오픈클로
+## OpenClaw 설정
 
-OpenClaw가 공급자 모델 목록에서 직접 GLM-5.2를 선택할 수 없는 경우 `~/.openclaw/openclaw.json`에 모델을 수동으로 추가하세요.
+OpenClaw이 공급자 모델 목록에서 직접 GLM-5.2를 선택할 수 없는 경우 `~/.openclaw/openclaw.json`에 모델을 수동으로 추가하세요.
 
 `models.providers.zai.models`에 `glm-5.2`을 추가합니다.
 
@@ -114,7 +114,7 @@ OpenClaw 게이트웨이를 다시 시작합니다.
 openclaw gateway restart
 ````
 
-그런 다음 Orca에서 OpenClaw를 시작하거나 Orca 터미널에서 'openclaw tui'를 실행하여 GLM-5.2가 활성화되어 있는지 확인하세요.
+그런 다음 Orca에서 OpenClaw을 실행하거나 Orca 터미널에서 `openclaw tui`을 실행하여 GLM-5.2가 활성화되어 있는지 확인하세요.
 
 ## 다른 GLM-5.2 하네스 추가
 

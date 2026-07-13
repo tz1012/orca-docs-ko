@@ -16,7 +16,7 @@
     },
     "/docs/editing/viewers/:paragraph:mermaid:0": {
       "sourceHash": "d782fc046bc6f7399dd134f0b1fa018af784f3dcac75f62a46e5731d0bbb6616",
-      "translated": "인어 다이어그램은 마크다운 미리보기 내에서 인라인으로 렌더링됩니다. 독립 실행형 'ORCA_PROTECTED_0001' 파일은 ORCA_PROTECTED_0002를 사용하는 전용 뷰어에서 열립니다."
+      "translated": "인어 다이어그램은 마크다운 미리보기 내에서 인라인으로 렌더링됩니다. 독립 실행형 `ORCA_PROTECTED_0001` 파일은 ORCA_PROTECTED_0002를 사용하는 전용 뷰어에서 열립니다."
     },
     "/docs/editing/viewers/:heading:pdf:0": {
       "sourceHash": "413879475ef7bb4b35cba4dbc86249396ba841ba51c45e4d2995ff52d8b3aa79",
@@ -40,7 +40,7 @@
     },
     "/docs/editing/viewers/:paragraph:csv-tsv:0": {
       "sourceHash": "ac0350d5102e3d50b7314b426e5fa54ced01611c55af4192a8eca1bb37a963fd",
-      "translated": "'ORCA_PROTECTED_0001' 및 'ORCA_PROTECTED_0002' 파일은 정렬 가능한 열과 빠른 검색 기능이 있는 테이블 뷰어에서 열립니다. 고정 장치, 내보내기 및 리포지토리에 체크인된 모든 표 형식 데이터에 유용합니다. 셀을 직접 편집해야 하는 경우 도구 모음을 사용하여 원시 텍스트 보기로 다시 전환하세요."
+      "translated": "`ORCA_PROTECTED_0001` 및 `ORCA_PROTECTED_0002` 파일은 정렬 가능한 열과 빠른 검색 기능이 있는 테이블 뷰어에서 열립니다. 고정 장치, 내보내기 및 리포지토리에 체크인된 모든 표 형식 데이터에 유용합니다. 셀을 직접 편집해야 하는 경우 도구 모음을 사용하여 원시 텍스트 보기로 다시 전환하세요."
     },
     "/docs/editing/viewers/:heading:jupyter-notebooks:0": {
       "sourceHash": "cdd54213e87af4a00447b7996b4925392cc0762ec8aa8df7412202e09279e23f",
@@ -48,7 +48,7 @@
     },
     "/docs/editing/viewers/:paragraph:jupyter-notebooks:0": {
       "sourceHash": "61b7ace70340325627e8f990d5aaf43439790cc306bb168df8dac579cfd308a9",
-      "translated": "'ORCA_PROTECTED_0001' 파일은 렌더링된 마크다운, 구문 강조 코드 셀, 저장된 출력이 포함된 노트북 뷰어에서 열립니다. 셀을 편집하면 nbformat을 유지하면서 디스크의 `ORCA_PROTECTED_0002`에 다시 기록되므로 diff는 깨끗하게 유지됩니다."
+      "translated": "`ORCA_PROTECTED_0001` 파일은 렌더링된 마크다운, 구문 강조 코드 셀, 저장된 출력이 포함된 노트북 뷰어에서 열립니다. 셀을 편집하면 nbformat을 유지하면서 디스크의 `ORCA_PROTECTED_0002`에 다시 기록되므로 diff는 깨끗하게 유지됩니다."
     },
     "/docs/editing/viewers/:aside:jupyter-notebooks:0": {
       "sourceHash": "3ca0d978838788eafeab8facdd9835edf46aff4b524dab26ca180d14ddcdbf4a",

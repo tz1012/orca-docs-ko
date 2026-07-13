@@ -20,11 +20,11 @@
     },
     "/docs/editing/markdown/:paragraph:slash-menu:0": {
       "sourceHash": "aa4f757ea7adc7cdfd6bd6b29daae1ecc3e165b7666204642acb8643efe85aa2",
-      "translated": "슬래시 메뉴(제목, 목록, 코드 블록, 설명선, 이미지, 인어 다이어그램, 토글 블록)를 열려면 빈 줄에 'ORCA_PROTECTED_0001'을 입력하세요."
+      "translated": "슬래시 메뉴(제목, 목록, 코드 블록, 설명선, 이미지, 인어 다이어그램, 토글 블록)를 열려면 빈 줄에 `ORCA_PROTECTED_0001`을 입력하세요."
     },
     "/docs/editing/markdown/:paragraph:slash-menu:1": {
       "sourceHash": "f7b9edaeaa76b3eb41bada9d5dca78f17b70fb271164cd3ad9dbdf7cd129ec54",
-      "translated": "축소 가능한 메모에는 'ORCA_PROTECTED_0001'을 사용하고, 전환 요약을 최상위 제목처럼 읽어야 하는 경우에는 'ORCA_PROTECTED_0002'를 사용하세요. ORCA_PROTECTED_0003은 둘 다 이식 가능한 'ORCA_PROTECTED_0004' / 'ORCA_PROTECTED_0005' 마크다운으로 저장하므로 파일은 여전히 ​​ORCA_PROTECTED_0006 외부에서 미리 볼 수 있습니다."
+      "translated": "축소 가능한 메모에는 `ORCA_PROTECTED_0001`을 사용하고, 전환 요약을 최상위 제목처럼 읽어야 하는 경우에는 `ORCA_PROTECTED_0002`를 사용하세요. ORCA_PROTECTED_0003은 둘 다 이식 가능한 `ORCA_PROTECTED_0004` / `ORCA_PROTECTED_0005` 마크다운으로 저장하므로 파일은 여전히 ​​ORCA_PROTECTED_0006 외부에서 미리 볼 수 있습니다."
     },
     "/docs/editing/markdown/:heading:internal-links:0": {
       "sourceHash": "c2bb452fee73a13efa278a8d03e45415468d6ec84ab90f2ed0e26950b2ff8e86",
@@ -32,7 +32,7 @@
     },
     "/docs/editing/markdown/:paragraph:internal-links:0": {
       "sourceHash": "aaf655b3f1bd19208563c066cfcd3977f8bc2f74f6efc15c7c8c6a21b37f4493",
-      "translated": "위키 스타일 링크를 시작하려면 'ORCA_PROTECTED_0001'을 입력하세요. ORCA_PROTECTED_0002는 작업 트리 내의 파일 경로를 자동 완성하고 상대 링크를 삽입합니다."
+      "translated": "위키 스타일 링크를 시작하려면 `ORCA_PROTECTED_0001`을 입력하세요. ORCA_PROTECTED_0002는 작업 트리 내의 파일 경로를 자동 완성하고 상대 링크를 삽입합니다."
     },
     "/docs/editing/markdown/:heading:search:0": {
       "sourceHash": "62c53ea4911e0c798f817b7767cc46f15ba8aef089fe3921b0d7adee26e954a1",

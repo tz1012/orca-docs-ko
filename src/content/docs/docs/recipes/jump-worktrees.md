@@ -1,7 +1,7 @@
 ---
 title: "10개의 작업 트리 사이를 이동합니다."
 sourceUrl: https://www.onorca.dev/docs/recipes/jump-worktrees
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/review-ai-diff/
 next: /orca-docs-ko/docs/recipes/design-mode-fix/
@@ -17,7 +17,7 @@ translationNotice:
 
 1. `Cmd-J`은 점프 팔레트를 엽니다. 작업 이름의 일부를 입력하세요. 점프를 입력하십시오. Shift-Enter가 분할되어 열립니다.
 2. 사이드바를 스캔합니다. 활성 에이전트가 있는 작업 트리에는 녹색 점이 있습니다. 먼저 입력(노란색)이 필요한 항목으로 이동하세요.
-3. 각 작업 트리에서 **Restart** 칩은 종료된 모든 에이전트를 다시 시작합니다. 노트북 절전 모드 후 대량 재개에 적합합니다.
+3. 각 작업 트리에서 `Restart`(다시 시작) 칩은 종료된 모든 에이전트를 다시 시작합니다. 노트북 절전 모드 후 대량 재개에 적합합니다.
 4. [영구 벨](/orca-docs-ko/docs/notifications/)을 사용하여 "에이전트 완료" 대기열을 비웁니다. 알림을 클릭하면 작업 트리로 이동합니다.
 
 ## 위생

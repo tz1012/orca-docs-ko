@@ -1,7 +1,7 @@
 ---
 title: "에이전트 후크 및 메모리"
 sourceUrl: https://www.onorca.dev/docs/agents/hooks-memory
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/usage-tracking/
 next: /orca-docs-ko/docs/review/diff-viewer/
@@ -15,7 +15,7 @@ Orca은 Claude Code 및 Codex이 이미 사용하고 있는 에이전트 후크 
 
 ## 저장소별 후크
 
-Orca은 각 저장소의 '.claude/' 및 '.codex/' 구성을 읽습니다. Orca가 해당 저장소의 작업 트리에서 에이전트를 시작할 때 이미 가지고 있는 후크가 실행됩니다.
+Orca은 각 저장소의 `.claude/` 및 `.codex/` 구성을 읽습니다. Orca가 해당 저장소의 작업 트리에서 에이전트를 시작할 때 이미 가지고 있는 후크가 실행됩니다.
 
 ## 작업 트리 설정 후크
 
@@ -23,7 +23,7 @@ Orca은 각 저장소의 '.claude/' 및 '.codex/' 구성을 읽습니다. Orca�
 
 ## 메모리 파일
 
-Claude의 `CLAUDE.md` 및 Codex의 `AGENTS.md`(repo 루트 또는 중첩)은 단독으로 남겨지며 에이전트에 속합니다. Orca는 다른 파일과 마찬가지로 파일 탐색기에 해당 파일을 표시하므로 인라인으로 편집할 수 있습니다.
+Claude의 `CLAUDE.md` 및 Codex의 `AGENTS.md`(repo 루트 또는 중첩)는 단독으로 남겨지며 에이전트에 속합니다. Orca는 다른 파일과 마찬가지로 파일 탐색기에 해당 파일을 표시하므로 인라인으로 편집할 수 있습니다.
 
 ## 재시작에서 살아남기
 

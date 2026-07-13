@@ -1,7 +1,7 @@
 ---
 title: "Orca이란 무엇입니까?"
 sourceUrl: https://www.onorca.dev/docs
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: false
 next: /orca-docs-ko/docs/install/
@@ -32,9 +32,9 @@ Orca은 이미 생활용 코드를 작성하고 AI를 대체 수단이 아닌 �
 
 ## Orca이 아닌 것
 
-- **모델이 아닙니다.** Orca은 이미 사용 중인 에이전트를 실행합니다. 자체 Claude, Codex 또는 OpenCode 구독을 가져오세요.
-- **git 대체가 아닙니다.** 모든 작업 트리는 실제 git 작업 트리입니다. 원할 때마다 'cd'를 사용하여 일반 git을 사용할 수 있습니다.
-- **클라우드 전용이 아닙니다.** Orca는 로컬에서 실행됩니다. 원격 에이전트는 SSH를 통해 귀하가 소유한 컴퓨터로 이동합니다.
+- **모델이 아닙니다.** Orca은 이미 사용하고 있는 에이전트를 실행합니다. 자체 Claude, Codex 또는 OpenCode 구독을 가져오세요.
+- **git 대체가 아닙니다.** 모든 작업 트리는 실제 git 작업 트리입니다. 원할 때마다 `cd`를 사용하여 일반 git을 사용할 수 있습니다.
+- **클라우드 전용이 아닙니다.** Orca은 로컬에서 실행됩니다. 원격 에이전트는 SSH를 통해 귀하가 소유한 컴퓨터로 이동합니다.
 
 다음 단계
 

@@ -1,7 +1,7 @@
 ---
 title: "에이전트 세션 기록"
 sourceUrl: https://www.onorca.dev/docs/agents/session-history
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/codex-hot-swap/
 next: /orca-docs-ko/docs/agents/hibernation/
@@ -11,7 +11,7 @@ translationNotice:
   rights: "원본 문서와 이미지의 권리는 Lovecast Inc. 및 각 권리자에게 있습니다."
 ---
 
-Orca의 오른쪽 사이드바에서 Claude, Codex, Cursor, Gemini 및 기타 에이전트 세션을 찾아보고 재개하세요.
+Claude, Codex, Cursor, Gemini 및 Orca의 오른쪽 사이드바에서 기타 에이전트 세션을 찾아보고 재개하세요.
 
 Orca은 지원 에이전트 CLI가 남긴 온디스크 세션 기록을 스캔하여 `Agent Session History`(에이전트 세션 기록)이라는 오른쪽 사이드바 패널에 나열합니다. 이전 세션을 선택하고 `Resume`(재개)를 클릭하면 Orca가 새 터미널에서 에이전트의 재개 명령을 실행합니다. 동일한 `cwd`, 동일한 세션 ID, 수동 `--resume` 플래그 랭글링이 없습니다.
 
@@ -19,7 +19,7 @@ Orca은 지원 에이전트 CLI가 남긴 온디스크 세션 기록을 스캔�
 
 오른쪽 사이드바를 열고 `Agents`(에이전트) 탭으로 전환하세요. 패널 헤더에는 "에이전트 세션 기록"이 표시됩니다.
 
-헤더에는 '12 shown · 47 recent'과 같은 개수와 검색창이 표시됩니다. 세션 제목, 작업 디렉터리, 분기, 모델을 기준으로 필터링하거나 대화의 텍스트 미리보기를 입력하세요.
+헤더에는 `12 shown · 47 recent`과 같은 개수와 검색창이 표시됩니다. 세션 제목, 작업 디렉터리, 분기, 모델을 기준으로 필터링하거나 대화의 텍스트 미리보기를 입력하세요.
 
 ## 범위
 
@@ -48,7 +48,7 @@ Orca은 지원 에이전트 CLI가 남긴 온디스크 세션 기록을 스캔�
 - `Copy resume command`(재개 명령 복사) — 외부 터미널에서 사용할 수 있도록 동일한 셸 명령을 클립보드에 복사합니다.
 - `Copy session ID`(세션 ID 복사) / `Copy log path`(로그 경로 복사) — 스크립트를 작성하거나 버그 보고서에 기록을 첨부하는 데 사용됩니다.
 - `Open log`(로그 열기) / `Reveal log`(로그 공개) — Orca에서 원시 기록 파일을 열거나 OS 파일 관리자에서 해당 파일로 이동합니다.
-- **Open cwd** — 세션의 작업 디렉터리를 작업 공간으로 엽니다.
+- `Open cwd`(작업 디렉터리 열기) — 세션의 작업 디렉터리를 작업 공간으로 엽니다.
 
 이력서에는 로컬 작업 공간이 필요합니다
 
@@ -56,7 +56,7 @@ Orca은 지원 에이전트 CLI가 남긴 온디스크 세션 기록을 스캔�
 
 ## 성적표의 출처
 
-Orca은 각 에이전트의 자체 디스크 세션 저장소(Codex의 `~/.codex/sessions`, Claude의 `~/.claude` 기록, 커서의 세션 로그, OpenCode의 레거시 세션 파일 또는 `~/.local/share/opencode/opencode.db` 등)를 읽습니다. 활성화할 추가 항목은 없습니다. CLI가 기록을 작성하면 다음 스캔 후 패널에 표시됩니다. 요청 시 다시 검색하려면 헤더에 있는 `Refresh Session History`(새로 고침 세션 기록) 버튼을 사용하세요.
+Orca은 각 에이전트의 자체 온디스크 세션 저장소(Codex의 `~/.codex/sessions`, Claude의 `~/.claude` 기록, Cursor의 세션 로그, OpenCode의 레거시 세션 파일 또는 `~/.local/share/opencode/opencode.db` 등. 활성화할 추가 항목은 없습니다. CLI가 기록을 작성하면 다음 스캔 후 패널에 표시됩니다. 요청 시 다시 검색하려면 헤더에 있는 `Refresh Session History`(새로 고침 세션 기록) 버튼을 사용하세요.
 
 ## 다음 단계
 

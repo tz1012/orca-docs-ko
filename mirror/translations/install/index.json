@@ -20,7 +20,7 @@
     },
     "/docs/install/:list:download:0": {
       "sourceHash": "7fa00ad64c9143c8148cea055e015d4a0584d8131a6cb3aff3a4aa347b5555f2",
-      "translated": "- **macOS:** [Apple Silicon](ORCA_PROTECTED_0001) · [Intel](ORCA_PROTECTED_0002)\n\n- **Windows:** [설치 프로그램](ORCA_PROTECTED_0003)\n\n- **Linux:** [앱 이미지](ORCA_PROTECTED_0004) · [.deb](ORCA_PROTECTED_0005)\n\n- 이전 버전: [GitHub 릴리스](ORCA_PROTECTED_0006)."
+      "translated": "- **macOS:** [Apple Silicon](ORCA_PROTECTED_0001) · [Intel](ORCA_PROTECTED_0002)\n\n- **Windows:** [설치 프로그램](ORCA_PROTECTED_0003)\n\n- **Linux:** [앱 이미지](ORCA_PROTECTED_0004) · [.deb](ORCA_PROTECTED_0005)\n\n- 이전 버전: [ORCA_PROTECTED_0006 릴리스](ORCA_PROTECTED_0007)."
     },
     "/docs/install/:heading:homebrew-macos:0": {
       "sourceHash": "05b500816f3622c0f78bc0ad6e8a7b2f895d9276296d75efba9e440603a9d9da",
@@ -36,7 +36,7 @@
     },
     "/docs/install/:paragraph:homebrew-macos:1": {
       "sourceHash": "29210e699bbefb1831a03ff131259be226a2d5ee482abfbf69aeafec13dd5793",
-      "translated": "`ORCA_PROTECTED_0001`은 새로운 안정적인 빌드를 선택합니다. 캐스크는 안정적인 채널을 추적합니다. RC 빌드의 경우 위의 GitHub 릴리스 링크를 사용하거나 [업데이트](ORCA_PROTECTED_0002)에 설명된 인앱 `Check for Updates`(업데이트 확인) 흐름을 사용하세요."
+      "translated": "`ORCA_PROTECTED_0001`은 새로운 안정적인 빌드를 선택합니다. 캐스크는 안정적인 채널을 추적합니다. RC 빌드의 경우 위의 ORCA_PROTECTED_0002 릴리스 링크를 사용하거나 [업데이트](ORCA_PROTECTED_0003)에 설명된 인앱 `Check for Updates`(업데이트 확인) 흐름을 사용하세요."
     },
     "/docs/install/:heading:first-launch:0": {
       "sourceHash": "840fb94e091cdc0b570f28420f195d423562d85cc1373def7dba5ecf4a06b5e2",
@@ -56,7 +56,7 @@
     },
     "/docs/install/:paragraph:updates:0": {
       "sourceHash": "5ba3a3d0482d2aaeabd594a6380737dcca7a6ef91687195c5689e488a3bdc164",
-      "translated": "ORCA_PROTECTED_0001은 기본적으로 자동 업데이트되어 **stable** 채널을 추적합니다. 안정적인 릴리스는 심사를 거칩니다. `RC (release candidate)`(RC(출시 후보)) 빌드는 새로운 기능을 먼저 출시하며 대개 매일 출시됩니다."
+      "translated": "ORCA_PROTECTED_0001은 기본적으로 자동 업데이트되어 `stable`(안정) 채널을 추적합니다. 안정적인 릴리스는 심사를 거칩니다. `RC (release candidate)`(RC(출시 후보)) 빌드는 새로운 기능을 먼저 출시하며 대개 매일 출시됩니다."
     },
     "/docs/install/:paragraph:updates:1": {
       "sourceHash": "4a5b98ed55f9d405f7f5e3dcc5ee487a22d886dd72c05a04b92625e4e3e076c5",
@@ -64,11 +64,11 @@
     },
     "/docs/install/:list:updates:0": {
       "sourceHash": "05c33bba7a040bfec5544be3cee85494b46289502c4228f636077f25a6808cec",
-      "translated": "- Shift 키를 누른 채 `Check for Updates`(업데이트 확인)([설정 → 일반 → 업데이트](ORCA_PROTECTED_0001) 또는 앱/도움말 메뉴)을 클릭하세요. 해당 단일 확인에는 시험판이 포함됩니다.\n- 또는 [GitHub 릴리스 페이지](ORCA_PROTECTED_0002)에서 직접 빌드를 다운로드하세요."
+      "translated": "- Shift 키를 누른 채 `Check for Updates`(업데이트 확인)([설정 → 일반 → 업데이트](ORCA_PROTECTED_0001) 또는 앱/도움말 메뉴)을 클릭하세요. 해당 단일 확인에는 시험판이 포함됩니다.\n- 또는 [ORCA_PROTECTED_0002 릴리스 페이지](ORCA_PROTECTED_0003)에서 직접 빌드를 다운로드하세요."
     },
     "/docs/install/:aside:updates:0": {
       "sourceHash": "afd476dbf8ee670e786935d67d67212adc2d6efd37dfdddfb1e70eb029e7b829",
-      "translated": "현재 업데이트가 마음에 들지 않음\n\n이전 버전은 [GitHub 릴리스 페이지](ORCA_PROTECTED_0001)에서 항상 사용할 수 있습니다. ORCA_PROTECTED_0002는 되돌아가도 작업 트리 데이터를 강제로 다운그레이드하지 않습니다."
+      "translated": "현재 업데이트가 마음에 들지 않음\n\n이전 버전은 항상 [ORCA_PROTECTED_0001 릴리스 페이지](ORCA_PROTECTED_0002)에서 사용할 수 있습니다. ORCA_PROTECTED_0003은 되돌아가도 작업 트리 데이터를 강제로 다운그레이드하지 않습니다."
     },
     "/docs/install/:heading:platform-notes:0": {
       "sourceHash": "fe2404de517fa8fd640e426841d17afd5c89a71452b784eff6d684eb773f7218",
@@ -96,7 +96,7 @@
     },
     "/docs/install/:paragraph:linux:0": {
       "sourceHash": "c1e95d1198a5507c89f74ef65dc2518dce5a66ef9f6abba4087c67cd68c2cb73",
-      "translated": "AppImage 및 'ORCA_PROTECTED_0001' 빌드를 사용할 수 있습니다. 자세한 내용은 릴리스 페이지를 참조하세요."
+      "translated": "AppImage 및 `ORCA_PROTECTED_0001` 빌드를 사용할 수 있습니다. 자세한 내용은 릴리스 페이지를 참조하세요."
     }
   }
 }

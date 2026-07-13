@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 개요"
 sourceUrl: https://www.onorca.dev/docs/cli/overview
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/remote-servers/
 next: /orca-docs-ko/docs/cli/reference/
@@ -13,7 +13,7 @@ translationNotice:
 
 Orca CLI를 사용하여 터미널에서 Orca를 스크립팅하고, 작업 트리를 관리하고, 에이전트 터미널을 제어하고, 내장 브라우저를 자동화하고, 에이전트 기술을 설치하십시오.
 
-Orca CLI는 모든 셸에서 실행 중인 Orca 편집기를 스크립팅하기 위한 'orca' 명령줄 인터페이스입니다. 이를 사용하여 작업 트리를 생성 및 검사하고, 에이전트 터미널을 구동하고, 파일 및 차이점을 열고, 내장 브라우저를 자동화하고, 예약된 자동화를 실행하고, 스크립트 또는 AI 에이전트에서 Orca 기본 도구를 제어합니다.
+Orca CLI는 모든 셸에서 실행 중인 Orca 편집기를 스크립팅하기 위한 `orca` 명령줄 인터페이스입니다. 이를 사용하여 작업 트리를 생성 및 검사하고, 에이전트 터미널을 구동하고, 파일 및 차이점을 열고, 내장 브라우저를 자동화하고, 예약된 자동화를 실행하고, 스크립트 또는 AI 에이전트에서 Orca 기본 도구를 제어합니다.
 
 데스크톱 앱과 함께 제공됩니다. [설정 → 실험 → CLI](/orca-docs-ko/docs/settings/)에 등록하세요.
 
@@ -102,7 +102,7 @@ orca screenshot --json
 
 ## 모바일 에뮬레이터
 
-CLI는 Orca의 모바일 에뮬레이터 브리지를 통해 iOS 시뮬레이터를 구동할 수도 있습니다. 범위는 활성 작업 트리로 지정되므로 에이전트와 스크립트는 'orca emulator list'에서 시뮬레이터를 연결하고, 정규화된 좌표를 탭하고, 텍스트를 입력하고, 제스처를 보내고, 장치를 회전하고, Orca을 떠나지 않고도 종료할 수 있습니다.
+CLI는 Orca의 모바일 에뮬레이터 브리지를 통해 iOS 시뮬레이터를 구동할 수도 있습니다. 범위는 활성 작업 트리로 지정되므로 에이전트와 스크립트는 `orca emulator list`에서 시뮬레이터를 연결하고, 정규화된 좌표를 탭하고, 텍스트를 입력하고, 제스처를 보내고, 장치를 회전하고, Orca을 떠나지 않고도 종료할 수 있습니다.
 
 ````
 orca emulator list --json

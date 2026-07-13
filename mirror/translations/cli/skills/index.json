@@ -8,7 +8,7 @@
     },
     "/docs/cli/skills/:paragraph:orca-skills-registry-mcp:0": {
       "sourceHash": "9055d24e1048ef54de2642d08a4b653cf58a6d91ae33590bee276f11c534dbba",
-      "translated": "orca-cli, 오케스트레이션, 컴퓨터 사용, orca-linear 및 orca-emulator를 포함하여 npx 기술 추가를 사용하여 ORCA_PROTECTED_0001 에이전트 기술을 설치합니다."
+      "translated": "orca-cli, 오케스트레이션, 컴퓨터 사용, ORCA_PROTECTED_0002 및 ORCA_PROTECTED_0003을 포함하여 npx 기술 추가를 사용하여 ORCA_PROTECTED_0001 에이전트 기술을 설치합니다."
     },
     "/docs/cli/skills/:paragraph:orca-skills-registry-mcp:1": {
       "sourceHash": "47ae3b59bbb51153575ebc9d8cd166199a286a42bcdee991e3126a1382091174",
@@ -20,11 +20,11 @@
     },
     "/docs/cli/skills/:paragraph:installable-orca-skills:0": {
       "sourceHash": "7e1860b6fcde94b883b019119d7f3cab57309e891d0a88c3c5ae1e2d7512a6c8",
-      "translated": "공개 ORCA_PROTECTED_0002 저장소 및 스킬 이름과 함께 `ORCA_PROTECTED_0001`을 사용하세요. 기본 에이전트 설정에서는 `ORCA_PROTECTED_0003`, `ORCA_PROTECTED_0004` 및 `ORCA_PROTECTED_0005`를 사용합니다. 에이전트에 선형 티켓 컨텍스트가 필요한 경우 'ORCA_PROTECTED_0006'을 설치하고 ORCA_PROTECTED_0008에서 로컬 iOS 시뮬레이터를 구동해야 하는 경우 'ORCA_PROTECTED_0007'을 설치하세요."
+      "translated": "공개 ORCA_PROTECTED_0002 저장소 및 스킬 이름과 함께 `ORCA_PROTECTED_0001`을 사용하세요. 기본 에이전트 설정에서는 `ORCA_PROTECTED_0003`, `ORCA_PROTECTED_0004` 및 `ORCA_PROTECTED_0005`를 사용합니다. 에이전트가 ORCA_PROTECTED_0007 티켓 컨텍스트가 필요한 경우 `ORCA_PROTECTED_0006`을 설치하고, ORCA_PROTECTED_0009에서 로컬 iOS 시뮬레이터를 구동해야 하는 경우 `ORCA_PROTECTED_0008`을 설치하세요."
     },
     "/docs/cli/skills/:table:installable-orca-skills:0": {
       "sourceHash": "8f85ebd5f00024336a699147613c5635134a08eaad24c4aabcdb6a16747416d4",
-      "translated": "| 스킬 | 설치 | 다음 용도로 사용 |\n| --- | --- | --- |\n| [`ORCA_PROTECTED_0001`](ORCA_PROTECTED_0002) | ORCA_PROTECTED_0003` | ORCA_PROTECTED_0004 관리 작업 트리, 터미널, 파일, 자동화 및 내장 브라우저. |\n| [`ORCA_PROTECTED_0005`](ORCA_PROTECTED_0006) | ORCA_PROTECTED_0007` | 메시지, 작업, 파견 및 결정 게이트를 통한 구조화된 다중 에이전트 조정. |\n| [`ORCA_PROTECTED_0008`](ORCA_PROTECTED_0009) | ORCA_PROTECTED_0010` | 접근성 트리, 스크린샷, 클릭, 입력, 안전한 UI 작업을 통한 데스크톱 앱 제어. |\n| [`ORCA_PROTECTED_0011`](ORCA_PROTECTED_0012) | `ORCA_PROTECTED_0013` | 연결된 선형 문제로 작업하는 상담원을 위한 선형 티켓 컨텍스트입니다. |\n| [`ORCA_PROTECTED_0014`](ORCA_PROTECTED_0015) | `ORCA_PROTECTED_0016` | 탭, 제스처, 입력, 권한, 카메라 삽입 및 접근성을 갖춘 ORCA_PROTECTED_0017의 iOS 시뮬레이터 제어입니다. |"
+      "translated": "| 스킬 | 설치 | 다음 용도로 사용 |\n| --- | --- | --- |\n| [`ORCA_PROTECTED_0001`](ORCA_PROTECTED_0002) | `ORCA_PROTECTED_0003` | ORCA_PROTECTED_0004 관리 작업 트리, 터미널, 파일, 자동화 및 내장 브라우저. |\n| [`ORCA_PROTECTED_0005`](ORCA_PROTECTED_0006) | `ORCA_PROTECTED_0007` | 메시지, 작업, 파견 및 결정 게이트를 통한 구조화된 다중 에이전트 조정. |\n| [`ORCA_PROTECTED_0008`](ORCA_PROTECTED_0009) | `ORCA_PROTECTED_0010` | 접근성 트리, 스크린샷, 클릭, 입력, 안전한 UI 작업을 통한 데스크톱 앱 제어. |\n| [`ORCA_PROTECTED_0011`](ORCA_PROTECTED_0012) | `ORCA_PROTECTED_0013` | 연결된 ORCA_PROTECTED_0015 문제로 작업하는 에이전트에 대한 ORCA_PROTECTED_0014 티켓 컨텍스트입니다. |\n| [`ORCA_PROTECTED_0016`](ORCA_PROTECTED_0017) | `ORCA_PROTECTED_0018` | 탭, 제스처, 입력, 권한, 카메라 삽입 및 접근성을 갖춘 ORCA_PROTECTED_0019의 iOS 시뮬레이터 제어입니다. |"
     },
     "/docs/cli/skills/:heading:orca-cli:0": {
       "sourceHash": "ba12ba817987fc15538c1faf01d882e80fc0ca031a486d1dbcc5403bb1260dfc",
@@ -48,7 +48,7 @@
     },
     "/docs/cli/skills/:paragraph:orchestration:0": {
       "sourceHash": "b7cdba76e89361f8013e9235369b10f702107b5403f6bdbbf82deb322664b33e",
-      "translated": "에이전트가 'ORCA_PROTECTED_0001' 메시지, 작업, 디스패치 및 작업자 완료 추적을 통해 다른 에이전트를 조정해야 하는 경우 이 기능을 사용하세요. 워크플로는 [조정](ORCA_PROTECTED_0002)을 참조하세요."
+      "translated": "에이전트가 `ORCA_PROTECTED_0001` 메시지, 작업, 디스패치 및 작업자 완료 추적을 통해 다른 에이전트를 조정해야 하는 경우 이 기능을 사용하세요. 워크플로는 [조정](ORCA_PROTECTED_0002)을 참조하세요."
     },
     "/docs/cli/skills/:heading:computer-use:0": {
       "sourceHash": "e06446c1f301230609c6fe8152208721cfdc259d0baa704d887c314587877fcc",
@@ -64,7 +64,7 @@
     },
     "/docs/cli/skills/:heading:orca-linear:0": {
       "sourceHash": "de01beb10b0c1d9115394cb367a26011aa7804a1d887407761e021fa76fb70ff",
-      "translated": "## 오카-선형"
+      "translated": "## ORCA_PROTECTED_0001 스킬"
     },
     "/docs/cli/skills/:code:orca-linear:0": {
       "sourceHash": "590c9a6352653074c9390ed2093a041f9176b4086f297de2fc2d89ca705082e3",
@@ -72,11 +72,11 @@
     },
     "/docs/cli/skills/:paragraph:orca-linear:0": {
       "sourceHash": "4940cdea65c5d20b64d4be15046e89e54deffbedcb5a5e7a4fb473af3b9ca12b",
-      "translated": "상담원에게 ORCA_PROTECTED_0001의 선형 티켓 컨텍스트가 필요한 경우 이를 사용하세요. 기존 'ORCA_PROTECTED_0002' 설치는 계속 작동하며 ORCA_PROTECTED_0003은 설치된 선형 기술에 업데이트 작업을 라우팅합니다."
+      "translated": "에이전트가 ORCA_PROTECTED_0002의 ORCA_PROTECTED_0001 티켓 컨텍스트가 필요한 경우 이를 사용하세요. 기존 `ORCA_PROTECTED_0003` 설치는 계속 작동하며 ORCA_PROTECTED_0004는 설치된 ORCA_PROTECTED_0005 기술에 업데이트 작업을 라우팅합니다."
     },
     "/docs/cli/skills/:heading:orca-emulator:0": {
       "sourceHash": "0c7c2612cd596ca771acef6e8b133ab617a491d0f0d27951043273fa88d5aaa7",
-      "translated": "## 오카 에뮬레이터"
+      "translated": "## ORCA_PROTECTED_0001 스킬"
     },
     "/docs/cli/skills/:code:orca-emulator:0": {
       "sourceHash": "ef0db9085c1201079f63a6b7d9add0327eba67cf81c8dea45e7da24132fe0064",
@@ -84,7 +84,7 @@
     },
     "/docs/cli/skills/:paragraph:orca-emulator:0": {
       "sourceHash": "e64500a922cc0d7a26d9e8f1844761b156ab79e441c0b3de958bc5f9fba80d66",
-      "translated": "에이전트가 'ORCA_PROTECTED_0002' 명령을 통해 ORCA_PROTECTED_0001 내부에서 iOS 시뮬레이터를 제어해야 하는 경우 이 기능을 사용하세요."
+      "translated": "에이전트가 `ORCA_PROTECTED_0002` 명령을 통해 ORCA_PROTECTED_0001 내부에서 iOS 시뮬레이터를 제어해야 하는 경우 이 기능을 사용하세요."
     },
     "/docs/cli/skills/:heading:add-your-own-skills:0": {
       "sourceHash": "845839156281f9616cb6744ff0a377e655089fc4a562d9dfa9ff4d9b838a1bec",

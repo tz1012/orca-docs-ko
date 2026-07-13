@@ -1,7 +1,7 @@
 ---
 title: "사용자 정의 CLI 에이전트 추가"
 sourceUrl: https://www.onorca.dev/docs/agents/custom-cli
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/cursor-cli/
 next: /orca-docs-ko/docs/agents/codex-hot-swap/
@@ -35,4 +35,4 @@ CLI 에이전트를 추가하세요. 바이너리에서 Orca을 가리키면 콤
 
 Orca은 OSC 타이틀 업데이트를 관찰하여 작동/유휴 상태를 감지합니다. 에이전트가 `working` 또는 `idle`과 같은 제목을 내보내면 Orca가 자동으로 이를 선택합니다. 그렇지 않은 경우 탭은 라이브 상태 점이 없는 완전한 기능을 갖춘 터미널입니다.
 
-Orca은 에이전트 콤보 상자를 통해 일반 'bash' 또는 'zsh'을 실행하는 데 만족합니다. 이는 에이전트 없이 모든 작업 트리 컨텍스트가 있는 범위 지정 셸을 원할 때 유용합니다.
+Orca은 에이전트 콤보 상자를 통해 일반 `bash` 또는 `zsh`을 실행하는 데 만족합니다. 이는 에이전트 없이 모든 작업 트리 컨텍스트가 있는 범위 지정 셸을 원할 때 유용합니다.

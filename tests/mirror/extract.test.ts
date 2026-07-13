@@ -164,6 +164,58 @@ describe("Markdown protection", () => {
     expect(restoreProtected(result.markdown, result.map)).toBe(source);
   });
 
+  test("does not protect an indented nested list item as a code block", () => {
+    const source = [
+      "1. Enter these fields:",
+      "    - **Atlassian email** — the address on your Atlassian account.",
+      "    - **Atlassian API token** — keep it secure.",
+    ].join("\n");
+
+    const result = protectMarkdown(source);
+
+    expect(Object.values(result.map)).toEqual([
+      "Atlassian",
+      "Atlassian",
+      "Atlassian",
+    ]);
+    expect(result.markdown).toContain("    - **ORCA_PROTECTED_0001 email**");
+    expect(result.markdown).toContain("the address on your ORCA_PROTECTED_0002 account");
+    expect(restoreProtected(result.markdown, result.map)).toBe(source);
+  });
+
+  test("protects exact supported product and integration names", () => {
+    const source =
+      "Anthropic, Gemini, Google, Goose, Block, Augment, Continue, Factory, Linear, orca-linear, orca-emulator, Grok, Antigravity, Aider, Amp, Kiro, Auggie, Cline, Codebuff, Rovo Dev, Hermes, and OpenClaw.";
+
+    const result = protectMarkdown(source);
+
+    expect(Object.values(result.map)).toEqual([
+      "Anthropic",
+      "Gemini",
+      "Google",
+      "Goose",
+      "Block",
+      "Augment",
+      "Continue",
+      "Factory",
+      "Linear",
+      "orca-linear",
+      "orca-emulator",
+      "Grok",
+      "Antigravity",
+      "Aider",
+      "Amp",
+      "Kiro",
+      "Auggie",
+      "Cline",
+      "Codebuff",
+      "Rovo Dev",
+      "Hermes",
+      "OpenClaw",
+    ]);
+    expect(restoreProtected(result.markdown, result.map)).toBe(source);
+  });
+
   test("protects bracketed IPv6 URLs without losing balanced parentheses", () => {
     const source = "Visit http://[::1]/docs and https://[2001:db8::1]/a_(b).";
 

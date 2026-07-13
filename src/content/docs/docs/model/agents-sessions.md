@@ -1,7 +1,7 @@
 ---
 title: "에이전트 및 세션"
 sourceUrl: https://www.onorca.dev/docs/model/agents-sessions
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/tabs-panes-splits/
 next: /orca-docs-ko/docs/model/session-restore/
@@ -38,7 +38,7 @@ translationNotice:
 
 ## 실행 기본값
 
-Orca은 완전 자율성 권한 플래그가 사전 적용된 지원되는 모든 에이전트를 시작합니다. 예를 들어 Claude는 '--dangerously-skip-permissions', Codex은 '--dangerously-bypass-approvals-and-sandbox', Gemini는 '--yolo'로, 선택기의 다른 에이전트에 대해서는 이에 상응하는 항목을 실행합니다. 그 의도는 작업 트리 자체가 샌드박스라는 것입니다. 즉, 에이전트는 흐름을 중단시키는 도구별 승인 메시지 없이 작업을 수행할 수 있습니다.
+Orca은 완전 자율성 권한 플래그가 사전 적용된 지원되는 모든 에이전트를 시작합니다. 즉, Claude와 `--dangerously-skip-permissions`, Codex와 `--dangerously-bypass-approvals-and-sandbox`, Gemini과 `--yolo`, 그리고 선택기. 그 의도는 작업 트리 자체가 샌드박스라는 것입니다. 즉, 에이전트는 흐름을 중단시키는 도구별 승인 메시지 없이 작업을 수행할 수 있습니다.
 
 에이전트에 대해 다른 기본값을 원하는 경우 `Settings → Agents`(설정 → 에이전트)를 열고 에이전트 행을 확장한 다음 해당 `launch arguments`(실행 인수)를 편집하세요. Orca은 재정의를 기억하고 이후 실행 시마다 이를 적용합니다. 되돌리려는 경우 필드 옆에 있는 `Reset`(재설정) 버튼을 사용하면 배송된 플래그를 다시 되돌릴 수 있습니다.
 

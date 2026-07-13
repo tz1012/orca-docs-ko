@@ -60,7 +60,7 @@
     },
     "/docs/terminal/:paragraph:warp-theme-import:0": {
       "sourceHash": "2e511f2884666a1b229640b7144e6ce831e1d6cd0d4fd1b18b54ab168518a281",
-      "translated": "Warp에서 테마를 수집한 경우 [설정 → 터미널](ORCA_PROTECTED_0001) 아래 터미널 테마 선택기에서 `Import themes from Warp`(Warp에서 테마 가져오기)를 클릭하여 ORCA_PROTECTED_0002 터미널 테마로 가져옵니다. ORCA_PROTECTED_0003은 현재 OS(macOS의 경우 `ORCA_PROTECTED_0004`, Linux의 경우 `ORCA_PROTECTED_0005`, Windows의 경우 `ORCA_PROTECTED_0006`)에 대한 Warp의 테마 디렉터리를 검색하고 가져올 YAML 테마를 선택할 수 있도록 합니다. 옆에 있는 **Import from YAML** 버튼은 동일한 선택기를 사용하여 Warp 형식 `ORCA_PROTECTED_0007`/`ORCA_PROTECTED_0008` 파일의 모든 폴더를 가리킵니다. 이는 테마를 기본 위치 외부에 저장할 때 유용합니다."
+      "translated": "Warp에서 테마를 수집한 경우 [설정 → 터미널](ORCA_PROTECTED_0001) 아래 터미널 테마 선택기에서 `Import themes from Warp`(Warp에서 테마 가져오기)를 클릭하여 ORCA_PROTECTED_0002 터미널 테마로 가져옵니다. ORCA_PROTECTED_0003은 현재 OS(macOS의 경우 `ORCA_PROTECTED_0004`, Linux의 경우 `ORCA_PROTECTED_0005`, Windows의 경우 `ORCA_PROTECTED_0006`)에 대한 Warp의 테마 디렉터리를 검색하고 가져올 YAML 테마를 선택할 수 있도록 합니다. 옆에 있는 `Import from YAML`(YAML에서 가져오기) 버튼은 동일한 선택기를 사용하여 Warp 형식 `ORCA_PROTECTED_0007`/`ORCA_PROTECTED_0008` 파일의 모든 폴더를 가리킵니다. 이는 테마를 기본 위치 외부에 저장할 때 유용합니다."
     },
     "/docs/terminal/:paragraph:warp-theme-import:1": {
       "sourceHash": "4bb7aa08beb40deeb0566ed3a0c30740fc5b36d0042d1d4dd7fbf8c36b63227d",
@@ -72,7 +72,7 @@
     },
     "/docs/terminal/:paragraph:windows-shell:0": {
       "sourceHash": "b38e51fb6dfce3f8cf019d8e0329bb08b2e63b6f46e109021f2343fc6daf0207",
-      "translated": "Windows의 기본 셸은 [설정 → 터미널](ORCA_PROTECTED_0001)에서 PowerShell, 명령 프롬프트, WSL 간에 구성할 수 있습니다. 'ORCA_PROTECTED_0002'가 성공하면 WSL이 자동으로 제공됩니다. 탭 표시줄의 **++** 드롭다운에는 하위 메뉴도 표시되므로 기본값을 변경하지 않고도 모든 셸에서 일회용 탭을 열 수 있습니다."
+      "translated": "Windows의 기본 셸은 [설정 → 터미널](ORCA_PROTECTED_0001)에서 PowerShell, 명령 프롬프트, WSL 간에 구성할 수 있습니다. `ORCA_PROTECTED_0002`가 성공하면 WSL이 자동으로 제공됩니다. 탭 표시줄의 **++** 드롭다운에는 하위 메뉴도 표시되므로 기본값을 변경하지 않고도 모든 셸에서 일회용 탭을 열 수 있습니다."
     },
     "/docs/terminal/:paragraph:windows-shell:1": {
       "sourceHash": "1cfdb782ab39ece64aacf383220d5316b8503028110175080c9c910cca491044",
@@ -112,7 +112,7 @@
     },
     "/docs/terminal/:list:floating-terminal:0": {
       "sourceHash": "acbcaef51221241b511cde6c78a119e9b2692705ac28d20f92bcf69216102272",
-      "translated": "- `ORCA_PROTECTED_0001`(macOS) / `ORCA_PROTECTED_0002`(`ORCA_PROTECTED_0003`)로 전환합니다. 동일한 단축키는 이미 열려 있으면 패널에 초점을 맞추고, 이미 초점이 맞춰져 있으면 패널을 닫습니다.\n- 창 가장자리에 있는 플로팅 버튼을 클릭하거나, [설정 → 터미널 → 플로팅 터미널](ORCA_PROTECTED_0004) 아래 상태 표시줄로 트리거를 이동하세요.\n- 시작 작업 디렉터리를 동일한 설정(기본적으로 `ORCA_PROTECTED_0005`)으로 설정하면 새 부동 탭이 예상하는 위치에 놓이게 됩니다.\n- 부동 패널은 자체 탭을 호스팅하고 오케스트레이션 설정을 지원합니다. 작업 트리 창을 요청하지 않고 백그라운드 실행을 시작합니다."
+      "translated": "- `ORCA_PROTECTED_0001`(macOS) / `ORCA_PROTECTED_0002`(ORCA_PROTECTED_0003)로 전환합니다. 동일한 코드는 이미 열려 있는 경우 패널에 초점을 맞추고 이미 초점이 맞춰진 경우 패널을 닫습니다.\n- 창 가장자리에 있는 플로팅 버튼을 클릭하거나, [설정 → 터미널 → 플로팅 터미널](ORCA_PROTECTED_0004) 아래 상태 표시줄로 트리거를 이동하세요.\n- 시작 작업 디렉터리를 동일한 설정(기본적으로 `ORCA_PROTECTED_0005`)으로 설정하면 새 부동 탭이 예상하는 위치에 놓이게 됩니다.\n- 부동 패널은 자체 탭을 호스팅하고 오케스트레이션 설정을 지원합니다. 작업 트리 창을 요청하지 않고 백그라운드 실행을 시작합니다."
     },
     "/docs/terminal/:heading:quick-commands:0": {
       "sourceHash": "7f51496625f0d8029771dc6731fb4d0946fdd0c122c211235e9d8f48eb114869",
@@ -120,7 +120,7 @@
     },
     "/docs/terminal/:paragraph:quick-commands:0": {
       "sourceHash": "29fa6082dca0b62c3c140a475cf065134d72fe3f1af454eb40bd7262b3631d3a",
-      "translated": "빠른 명령은 `ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002` 또는 프로젝트별 설정 스크립트와 같이 자주 실행하는 터미널 명령을 저장합니다. 또한 Claude 및 ORCA_PROTECTED_0003과 같은 시작 시간 프롬프트 에이전트에 대해 재사용 가능한 에이전트 프롬프트를 저장할 수도 있습니다. `Settings → Quick Commands`(설정 → 빠른 명령) 또는 탭 표시줄의 `Add command`(명령 추가) 버튼에서 생성한 다음 작업 트리 탭 표시줄의 빠른 명령 분할 버튼 또는 터미널 컨텍스트 메뉴에서 실행합니다."
+      "translated": "빠른 명령은 `ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002` 또는 프로젝트별 설정 스크립트와 같이 자주 실행하는 터미널 명령을 저장합니다. 또한 ORCA_PROTECTED_0003 및 ORCA_PROTECTED_0004와 같은 시작 시간 프롬프트 에이전트에 대해 재사용 가능한 에이전트 프롬프트를 저장할 수도 있습니다. `Settings → Quick Commands`(설정 → 빠른 명령) 또는 탭 표시줄의 `Add command`(명령 추가) 버튼에서 생성한 다음 작업 트리 탭 표시줄의 빠른 명령 분할 버튼 또는 터미널 컨텍스트 메뉴에서 실행합니다."
     },
     "/docs/terminal/:paragraph:quick-commands:1": {
       "sourceHash": "7b56cad836d60d247e01e953b3b4450ff8b5abb19bc5bdbca790688ce6bd2682",

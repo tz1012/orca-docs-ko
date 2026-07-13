@@ -20,7 +20,7 @@
     },
     "/docs/ssh/:list:add-an-ssh-target:0": {
       "sourceHash": "60d95e81c040721ee41dd6e0af5da8b71e519dbf8d360a1e842bf1c816ad5952",
-      "translated": "1. [설정 → SSH](ORCA_PROTECTED_0001)를 엽니다.\n2. 대상(호스트, 사용자, 포트, 선택적 ID 파일)을 추가합니다. ORCA_PROTECTED_0002는 또한 'ORCA_PROTECTED_0003' 지시문에서 참조하는 파일을 포함하여 OpenSSH 구성 파일에서 호스트를 가져옵니다.\n3. 키가 암호로 보호된 경우 ORCA_PROTECTED_0004가 처음으로 메시지를 표시합니다.\n4. `Test`(테스트)를 클릭하여 연결을 확인합니다."
+      "translated": "1. [설정 → SSH](ORCA_PROTECTED_0001)를 엽니다.\n2. 대상(호스트, 사용자, 포트, 선택적 ID 파일)을 추가합니다. ORCA_PROTECTED_0002는 또한 `ORCA_PROTECTED_0003` 지시문에서 참조하는 파일을 포함하여 OpenSSH 구성 파일에서 호스트를 가져옵니다.\n3. 키가 암호로 보호된 경우 ORCA_PROTECTED_0004가 처음으로 메시지를 표시합니다.\n4. `Test`(테스트)를 클릭하여 연결을 확인합니다."
     },
     "/docs/ssh/:heading:use-a-target:0": {
       "sourceHash": "6276e8b6ed84037268084625ae6b9f841dc19520c8f32daff3c404ee8aecf9de",
@@ -80,7 +80,7 @@
     },
     "/docs/ssh/:paragraph:port-forwarding:0": {
       "sourceHash": "ed7f8e9386b8aaf428f549c1a4aa0e344d00e334d3be0a416368d9fc4474aee1",
-      "translated": "원격 작업 트리의 경우 오른쪽 사이드바에 `Ports`(포트) 탭이 표시됩니다(`ORCA_PROTECTED_0001`로 전환). ORCA_PROTECTED_0002는 원격에서 'ORCA_PROTECTED_0003'을 검색하고 `Detected`(감지됨) 아래에 수신 대기 포트를 나열합니다. 한 번의 클릭으로 해당 포트를 노트북으로 전달합니다. 수동으로 전달을 추가하거나 편집하거나 제거할 수도 있습니다. 전달은 앱을 다시 시작하고 SSH를 다시 ​​연결해도 지속되며 권한 있는 원격 포트는 로컬에서 자동으로 다시 매핑됩니다(예: 원격 80 → 로컬 10080)."
+      "translated": "원격 작업 트리의 경우 오른쪽 사이드바에 `Ports`(포트) 탭이 표시됩니다(`ORCA_PROTECTED_0001`로 전환). ORCA_PROTECTED_0002는 원격에서 `ORCA_PROTECTED_0003`을 검색하고 `Detected`(감지됨) 아래에 수신 대기 포트를 나열합니다. 한 번의 클릭으로 해당 포트를 노트북으로 전달합니다. 수동으로 전달을 추가하거나 편집하거나 제거할 수도 있습니다. 전달은 앱을 다시 시작하고 SSH를 다시 ​​연결해도 지속되며 권한 있는 원격 포트는 로컬에서 자동으로 다시 매핑됩니다(예: 원격 80 → 로컬 10080)."
     }
   }
 }

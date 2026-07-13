@@ -16,7 +16,7 @@
     },
     "/docs/agents/hooks-memory/:paragraph:per-repo-hooks:0": {
       "sourceHash": "feb9a12d6804173438b3e84fff2f9aae1a45e7dcf8951e3a212062d694afa643",
-      "translated": "ORCA_PROTECTED_0001은 각 저장소의 'ORCA_PROTECTED_0002' 및 'ORCA_PROTECTED_0003' 구성을 읽습니다. ORCA_PROTECTED_0004가 해당 저장소의 작업 트리에서 에이전트를 시작할 때 이미 가지고 있는 후크가 실행됩니다."
+      "translated": "ORCA_PROTECTED_0001은 각 저장소의 `ORCA_PROTECTED_0002` 및 `ORCA_PROTECTED_0003` 구성을 읽습니다. ORCA_PROTECTED_0004가 해당 저장소의 작업 트리에서 에이전트를 시작할 때 이미 가지고 있는 후크가 실행됩니다."
     },
     "/docs/agents/hooks-memory/:heading:worktree-setup-hooks:0": {
       "sourceHash": "c7fb8b6224625da07dd75898b94e06dfa68a48873deb88e9b3a998036b3ffda6",
@@ -32,7 +32,7 @@
     },
     "/docs/agents/hooks-memory/:paragraph:memory-files:0": {
       "sourceHash": "1b357ec4d33c2ff76834be514c0c6bd9a8616975e022e9fe5a0af37e0c9d62f0",
-      "translated": "Claude의 `ORCA_PROTECTED_0001` 및 ORCA_PROTECTED_0002의 `ORCA_PROTECTED_0003`(repo 루트 또는 중첩)은 단독으로 남겨지며 에이전트에 속합니다. ORCA_PROTECTED_0004는 다른 파일과 마찬가지로 파일 탐색기에 해당 파일을 표시하므로 인라인으로 편집할 수 있습니다."
+      "translated": "ORCA_PROTECTED_0001의 `ORCA_PROTECTED_0002` 및 ORCA_PROTECTED_0003의 `ORCA_PROTECTED_0004`(repo 루트 또는 중첩)는 단독으로 남겨지며 에이전트에 속합니다. ORCA_PROTECTED_0005는 다른 파일과 마찬가지로 파일 탐색기에 해당 파일을 표시하므로 인라인으로 편집할 수 있습니다."
     },
     "/docs/agents/hooks-memory/:heading:surviving-a-restart:0": {
       "sourceHash": "3df67dd01cf8301303f569eb8820ed096cf93ad1581feb6bcdbe90e152589ddd",

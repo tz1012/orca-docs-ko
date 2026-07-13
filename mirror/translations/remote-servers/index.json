@@ -88,7 +88,7 @@
     },
     "/docs/remote-servers/:paragraph:install-orca-on-the-server:6": {
       "sourceHash": "43cbed01d1900708c0714e32783d5ea04df16127fc90e6e0cb4d7b0be04b28ca",
-      "translated": "`ORCA_PROTECTED_0001` 명령이 `ORCA_PROTECTED_0002`에 없으면 서버에서 ORCA_PROTECTED_0003을 한 번 열고 `Settings -> General -> ORCA_PROTECTED_0004 CLI`(설정 -> 일반 -> CLI)에서 번들 CLI를 설치합니다. 일부 Linux 설치에서는 등록된 명령이 'ORCA_PROTECTED_0005'일 수 있습니다. 컴퓨터에 설치된 명령을 사용하십시오."
+      "translated": "`ORCA_PROTECTED_0001` 명령이 `ORCA_PROTECTED_0002`에 없으면 서버에서 ORCA_PROTECTED_0003을 한 번 열고 `Settings -> General -> ORCA_PROTECTED_0004 CLI`(설정 → 일반 → Orca 명령줄 도구)에서 번들 CLI를 설치합니다. 일부 Linux 설치에서는 등록된 명령이 `ORCA_PROTECTED_0005`일 수 있습니다. 컴퓨터에 설치된 명령을 사용하십시오."
     },
     "/docs/remote-servers/:heading:start-a-headless-server:0": {
       "sourceHash": "dc1d0ad017ed74fb61678c91f2792a9ed51b368f709ab3e64c0df5d148630524",
@@ -104,11 +104,11 @@
     },
     "/docs/remote-servers/:paragraph:start-a-headless-server:1": {
       "sourceHash": "30dbfb4b2d1a6d27fb5245e3612b0ca4e4a3cf222b64b96a7957a1560c69c15b",
-      "translated": "`ORCA_PROTECTED_0001`은 데스크톱 창을 열지 않고 ORCA_PROTECTED_0002 런타임 서버를 시작합니다. 포그라운드에서 실행되고 런타임 엔드포인트와 페어링 URL을 인쇄하며 'ORCA_PROTECTED_0003'을 누르면 중지됩니다."
+      "translated": "`ORCA_PROTECTED_0001`은 데스크톱 창을 열지 않고 ORCA_PROTECTED_0002 런타임 서버를 시작합니다. 포그라운드에서 실행되고 런타임 엔드포인트와 페어링 URL을 인쇄하며 `ORCA_PROTECTED_0003`을 누르면 중지됩니다."
     },
     "/docs/remote-servers/:paragraph:start-a-headless-server:2": {
       "sourceHash": "251aafab22e9b315355ae51cd3dbdc5e9b4ab43b2606a32748a30b5c377b9362",
-      "translated": "클라이언트가 서버에 연결하는 데 사용해야 하는 주소에는 'ORCA_PROTECTED_0001'을 사용하세요. 이는 LAN IP, Tailscale 호스트 이름, SSH 전달 호스트 또는 터널 호스트 이름과 같이 노트북이나 백엔드가 실제로 연결할 수 있는 주소여야 합니다. 클라이언트가 동일한 시스템에서 실행되고 있지 않는 한 'ORCA_PROTECTED_0002'를 사용하지 마세요."
+      "translated": "클라이언트가 서버에 연결하는 데 사용해야 하는 주소에는 `ORCA_PROTECTED_0001`을 사용하세요. 이는 LAN IP, Tailscale 호스트 이름, SSH 전달 호스트 또는 터널 호스트 이름과 같이 노트북이나 백엔드가 실제로 연결할 수 있는 주소여야 합니다. 클라이언트가 동일한 시스템에서 실행되고 있지 않는 한 `ORCA_PROTECTED_0002`를 사용하지 마세요."
     },
     "/docs/remote-servers/:paragraph:start-a-headless-server:3": {
       "sourceHash": "268b4ce6a5adc1a3da726e9b6ee57db7fc743beafd85a22d421b85557faa7aa7",
@@ -120,7 +120,7 @@
     },
     "/docs/remote-servers/:paragraph:start-a-headless-server:4": {
       "sourceHash": "a4d107bc36af6f7692aea6b88286081a5a064c27eeae1afed355821f94ed9634",
-      "translated": "클라이언트는 해당 호스트와 포트에 연결할 수 있어야 합니다. 브라우저 클라이언트의 경우 'ORCA_PROTECTED_0001'은 웹 클라이언트 번들이 사용 가능한 경우 페어링 데이터가 포함된 브라우저 URL도 인쇄합니다. 모바일 페어링의 경우 'ORCA_PROTECTED_0002'를 추가하세요."
+      "translated": "클라이언트는 해당 호스트와 포트에 연결할 수 있어야 합니다. 브라우저 클라이언트의 경우 `ORCA_PROTECTED_0001`은 웹 클라이언트 번들이 사용 가능한 경우 페어링 데이터가 포함된 브라우저 URL도 인쇄합니다. 모바일 페어링의 경우 `ORCA_PROTECTED_0002`를 추가하세요."
     },
     "/docs/remote-servers/:heading:pair-with-mobile:0": {
       "sourceHash": "b4eb17c58479a0a5c6c14308acf14236c6fc2a43f014fdc3a8280227e7f179c9",
@@ -128,7 +128,7 @@
     },
     "/docs/remote-servers/:paragraph:pair-with-mobile:0": {
       "sourceHash": "1ccf75640f2b059444fdeb6bdd1d27a6a2d072a8b531be0150066998c4619c35",
-      "translated": "클라이언트가 ORCA_PROTECTED_0002 모바일 앱인 경우 'ORCA_PROTECTED_0001'을 사용하세요. 플래그는 기본 런타임 환경 페어링 링크 대신 모바일 범위 페어링 ORCA_PROTECTED_0003을 인쇄합니다."
+      "translated": "클라이언트가 ORCA_PROTECTED_0002 모바일 앱인 경우 `ORCA_PROTECTED_0001`을 사용하세요. 플래그는 기본 런타임 환경 페어링 링크 대신 모바일 범위 페어링 ORCA_PROTECTED_0003을 인쇄합니다."
     },
     "/docs/remote-servers/:paragraph:pair-with-mobile:1": {
       "sourceHash": "fefed85c629172107af63c22da7d9e08a7a617ce86a5ff7406ddd2aec00de3c4",
@@ -144,11 +144,11 @@
     },
     "/docs/remote-servers/:list:pair-with-mobile:0": {
       "sourceHash": "36ca66c2f2fa9c28d2bfa97773eb3060aaa8848d3626a4f7612dee2dcb10dc98",
-      "translated": "1. 'ORCA_PROTECTED_0001'을 서버에서 계속 실행하세요.\n2. ORCA_PROTECTED_0002 모바일 앱을 열고 `Pair`(페어링)을 선택합니다.\n3. 단말기에 표시된 `Mobile pairing QR`(모바일 페어링 QR)을 스캔하거나 인쇄된 페어링 URL을 붙여넣습니다.\n4. 모바일이 다시 연결되기를 원할 때마다 동일한 주소와 포트로 서버에 연결할 수 있도록 남겨두세요."
+      "translated": "1. `ORCA_PROTECTED_0001`을 서버에서 계속 실행하세요.\n2. ORCA_PROTECTED_0002 모바일 앱을 열고 `Pair`(페어링)을 선택합니다.\n3. 단말기에 표시된 `Mobile pairing QR`(모바일 페어링 QR)을 스캔하거나 인쇄된 페어링 URL을 붙여넣습니다.\n4. 모바일이 다시 연결되기를 원할 때마다 동일한 주소와 포트로 서버에 연결할 수 있도록 남겨두세요."
     },
     "/docs/remote-servers/:paragraph:pair-with-mobile:3": {
       "sourceHash": "36013c301a44b23196ce73bda0349180186b978d8033ef5933c0d0612ff1a99f",
-      "translated": "페어링 후 휴대폰을 연결할 수 없는 경우 휴대폰이 현재 네트워크에서 'ORCA_PROTECTED_0001' 및 포트에 연결할 수 있는지 확인하세요. Tailscale의 경우 전화기는 동일한 tailnet에 연결되어야 하며 모든 ACL에서 허용되어야 합니다."
+      "translated": "페어링 후 휴대폰을 연결할 수 없는 경우 휴대폰이 현재 네트워크에서 `ORCA_PROTECTED_0001` 및 포트에 연결할 수 있는지 확인하세요. Tailscale의 경우 전화기는 동일한 tailnet에 연결되어야 하며 모든 ACL에서 허용되어야 합니다."
     },
     "/docs/remote-servers/:aside:pair-with-mobile:0": {
       "sourceHash": "ef366d33c8629b5e8640f39e3d1b6f62ef4c1d3e2e86c890492843af06f104d5",
@@ -164,7 +164,7 @@
     },
     "/docs/remote-servers/:list:share-a-running-desktop-app-as-a-server:0": {
       "sourceHash": "77d5bfabdd4505a580240b1e1b568af82ce9185b717b87654bcaa44b42eb0e56",
-      "translated": "1. `Settings -> Remote ORCA_PROTECTED_0001 Servers`(설정 -> 원격 서버)를 엽니다.\n2. `Advertise this app as a server`(이 앱을 서버로 광고)에서 `New Link`(새 링크)를 클릭합니다.\n3. 생성된 접속링크를 복사하세요."
+      "translated": "1. `Settings -> Remote ORCA_PROTECTED_0001 Servers`(설정 → 원격 Orca 서버)를 엽니다.\n2. `Advertise this app as a server`(이 앱을 서버로 광고)에서 `New Link`(새 링크)를 클릭합니다.\n3. 생성된 접속링크를 복사하세요."
     },
     "/docs/remote-servers/:paragraph:share-a-running-desktop-app-as-a-server:1": {
       "sourceHash": "b2ee11f5714bea327afef77522ab29293ddae6f80842f304f58bc29ed0e1eaa3",
@@ -180,11 +180,11 @@
     },
     "/docs/remote-servers/:list:connect-from-your-laptop:0": {
       "sourceHash": "91e7baf3f48d398ae2011b72903b1f7530ecfdef9efc09c5b3cba193f3d3ffd6",
-      "translated": "1. `Settings -> Remote ORCA_PROTECTED_0001 Servers`(설정 -> 원격 서버)를 엽니다.\n2. `Add Server`(서버 추가)를 클릭합니다.\n3. 서버에 이름을 지정합니다.\n4. `ORCA_PROTECTED_0002`로 출력된 페어링 URL 또는 `New Link`(새 링크)로 생성된 액세스 링크를 붙여넣습니다.\n5. `Add Server`(서버 추가)를 클릭한 다음 동일한 창에서 서버에 연결합니다."
+      "translated": "1. `Settings -> Remote ORCA_PROTECTED_0001 Servers`(설정 → 원격 Orca 서버)를 엽니다.\n2. `Add Server`(서버 추가)를 클릭합니다.\n3. 서버에 이름을 지정합니다.\n4. `ORCA_PROTECTED_0002`로 출력된 페어링 URL 또는 `New Link`(새 링크)로 생성된 액세스 링크를 붙여넣습니다.\n5. `Add Server`(서버 추가)를 클릭한 다음 동일한 창에서 서버에 연결합니다."
     },
     "/docs/remote-servers/:paragraph:connect-from-your-laptop:1": {
       "sourceHash": "f6923a6db2b4e4b542f65e7477d932a16b7f21717643213d9fe4a736bcd2d8e9",
-      "translated": "페어링 후 ORCA_PROTECTED_0001은 연결 상태와 함께 `Remote ORCA_PROTECTED_0002 Servers`(원격 서버)에 서버를 나열합니다. 새 서버 라우팅 프로젝트, 터미널 및 공급자 확인을 해당 원격 서버로 기본값으로 설정하려는 경우에만 `Advanced -> Default runtime`(고급 -> 기본 런타임)을 사용하세요."
+      "translated": "페어링 후 ORCA_PROTECTED_0001은 연결 상태와 함께 `Remote ORCA_PROTECTED_0002 Servers`(원격 Orca 서버)에 서버를 나열합니다. 새 서버 라우팅 프로젝트, 터미널 및 공급자 확인을 해당 원격 서버로 기본값으로 설정하려는 경우에만 `Advanced -> Default runtime`(고급 -> 기본 런타임)을 사용하세요."
     },
     "/docs/remote-servers/:heading:start-sessions-from-the-ui:0": {
       "sourceHash": "412ae395b398e911221ff67a681179f5c2d2ff2d7a303dd8470e4b990a187dfe",
@@ -224,7 +224,7 @@
     },
     "/docs/remote-servers/:paragraph:start-sessions-from-automation:2": {
       "sourceHash": "df2e3991294365877157979af8fc581527b38b78c1a079b74d4453539f88618b",
-      "translated": "그런 다음 'ORCA_PROTECTED_0001'을 사용하여 해당 서버를 타겟팅합니다."
+      "translated": "그런 다음 `ORCA_PROTECTED_0001`을 사용하여 해당 서버를 타겟팅합니다."
     },
     "/docs/remote-servers/:code:start-sessions-from-automation:1": {
       "sourceHash": "ca894e02c625052eb9e7d69d843a402df41eadb5499ed89ade92b6cddb1f3d75",
@@ -276,7 +276,7 @@
     },
     "/docs/remote-servers/:paragraph:when-to-use-ssh-instead:4": {
       "sourceHash": "7984ecd05437858bac15cc9a85110bc8010871ea330aa502315642ee0c0fe1e1",
-      "translated": "백엔드가 서버에 SSH를 통해 'ORCA_PROTECTED_0001'을 직접 실행하는 경우 ORCA_PROTECTED_0002는 이에 대해 ORCA_PROTECTED_0003 관리 세션으로 인식할 필요가 없습니다. 백엔드가 서버에 SSH를 연결하고 'ORCA_PROTECTED_0004'를 실행하는 경우 어쨌든 서버에는 원격 ORCA_PROTECTED_0006 서버 모델인 ORCA_PROTECTED_0005 런타임이 필요합니다."
+      "translated": "백엔드가 서버에 SSH를 통해 `ORCA_PROTECTED_0001`을 직접 실행하는 경우 ORCA_PROTECTED_0002는 이에 대해 ORCA_PROTECTED_0003 관리 세션으로 인식할 필요가 없습니다. 백엔드가 서버에 SSH를 연결하고 `ORCA_PROTECTED_0004`를 실행하는 경우 어쨌든 서버에는 원격 ORCA_PROTECTED_0006 서버 모델인 ORCA_PROTECTED_0005 런타임이 필요합니다."
     },
     "/docs/remote-servers/:heading:troubleshooting:0": {
       "sourceHash": "659a188b36f9c3262a28539e24c345df4edc9657f59b116b0a1d9887cf2e28e0",
@@ -304,7 +304,7 @@
     },
     "/docs/remote-servers/:paragraph:the-pairing-address-is-wrong:0": {
       "sourceHash": "a2b93788ff58ff853d99f9e0574a927e5eea6f2d023eb921b62e8cbc5ebffd4a",
-      "translated": "클라이언트가 사용해야 하는 주소로 'ORCA_PROTECTED_0001'을 다시 실행하세요."
+      "translated": "클라이언트가 사용해야 하는 주소로 `ORCA_PROTECTED_0001`을 다시 실행하세요."
     },
     "/docs/remote-servers/:code:the-pairing-address-is-wrong:0": {
       "sourceHash": "151792a201440f265c238505d8eb8923ebf10c6745f2577f84a4f3d4814106e5",
@@ -320,7 +320,7 @@
     },
     "/docs/remote-servers/:paragraph:the-server-cannot-find-orca:0": {
       "sourceHash": "84f38c485165be652d839ef7b671194f4fb0ca72990e7f0bac60d81aeaaa2c72",
-      "translated": "`Settings -> General -> ORCA_PROTECTED_0001 CLI`(설정 -> 일반 -> CLI)에서 번들 CLI를 설치하거나 패키지에 등록된 명령 이름을 사용하세요. 일부 Linux 설치에서는 `ORCA_PROTECTED_0002`일 수 있습니다."
+      "translated": "`Settings -> General -> ORCA_PROTECTED_0001 CLI`(설정 → 일반 → Orca 명령줄 도구)에서 번들 CLI를 설치하거나 패키지에 등록된 명령 이름을 사용하세요. 일부 Linux 설치에서는 `ORCA_PROTECTED_0002`일 수 있습니다."
     },
     "/docs/remote-servers/:heading:the-server-cannot-find-codex-claude-or-another-agent:0": {
       "sourceHash": "faf73808f26c33f16fe8047b1684299c8bd26173401f88f3a1c6c437e3a87c92",
@@ -328,7 +328,7 @@
     },
     "/docs/remote-servers/:paragraph:the-server-cannot-find-codex-claude-or-another-agent:0": {
       "sourceHash": "fac9063a4d58cbe796b2c26c2cea61e7eaeba179e8b7142b2978b0327f5365b0",
-      "translated": "서버 시스템에 에이전트 CLI를 설치하고 인증합니다. 원격 에이전트 세션은 노트북이 아닌 서버의 'ORCA_PROTECTED_0001', 홈 디렉터리 및 자격 증명을 사용합니다."
+      "translated": "서버 시스템에 에이전트 CLI를 설치하고 인증합니다. 원격 에이전트 세션은 노트북이 아닌 서버의 `ORCA_PROTECTED_0001`, 홈 디렉터리 및 자격 증명을 사용합니다."
     },
     "/docs/remote-servers/:heading:the-cli-cannot-target-active-or-current:0": {
       "sourceHash": "5703fea3626e1658c2001364864f4ece12feeedf064a776a48933e20ccc51a0d",
@@ -336,7 +336,7 @@
     },
     "/docs/remote-servers/:paragraph:the-cli-cannot-target-active-or-current:0": {
       "sourceHash": "8e9750bc49fcfa750e1a7e596737e188811e349bbc276e0ab04207c85fc2e188",
-      "translated": "CLI 명령이 원격 환경을 대상으로 하는 경우 호출자의 현재 디렉터리는 서버의 현재 디렉터리가 아닙니다. 'ORCA_PROTECTED_0001' 또는 'ORCA_PROTECTED_0002'와 같은 명시적인 서버측 선택기를 사용하세요."
+      "translated": "CLI 명령이 원격 환경을 대상으로 하는 경우 호출자의 현재 디렉터리는 서버의 현재 디렉터리가 아닙니다. `ORCA_PROTECTED_0001` 또는 `ORCA_PROTECTED_0002`와 같은 명시적인 서버측 선택기를 사용하세요."
     },
     "/docs/remote-servers/:heading:next-steps:0": {
       "sourceHash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",

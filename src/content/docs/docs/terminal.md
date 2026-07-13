@@ -1,7 +1,7 @@
 ---
 title: "터미널"
 sourceUrl: https://www.onorca.dev/docs/terminal
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/profiles/
 next: /orca-docs-ko/docs/ssh/
@@ -39,13 +39,13 @@ Ghostty를 사용하는 경우 Orca은 처음 시작할 때 테마, 글꼴 및 �
 
 ## 워프 테마 가져오기
 
-Warp에서 테마를 수집한 경우 [설정 → 터미널](/orca-docs-ko/docs/settings/) 아래 터미널 테마 선택기에서 `Import themes from Warp`(Warp에서 테마 가져오기)를 클릭하여 Orca 터미널 테마로 가져옵니다. Orca은 현재 OS(macOS의 경우 `~/.warp/themes`, Linux의 경우 `$XDG_DATA_HOME/warp-terminal/themes`, Windows의 경우 `%APPDATA%\warp\Warp\data\themes`)에 대한 Warp의 테마 디렉터리를 검색하고 가져올 YAML 테마를 선택할 수 있도록 합니다. 옆에 있는 **Import from YAML** 버튼은 동일한 선택기를 사용하여 Warp 형식 `.yaml`/`.yml` 파일의 모든 폴더를 가리킵니다. 이는 테마를 기본 위치 외부에 저장할 때 유용합니다.
+Warp에서 테마를 수집한 경우 [설정 → 터미널](/orca-docs-ko/docs/settings/) 아래 터미널 테마 선택기에서 `Import themes from Warp`(Warp에서 테마 가져오기)를 클릭하여 Orca 터미널 테마로 가져옵니다. Orca은 현재 OS(macOS의 경우 `~/.warp/themes`, Linux의 경우 `$XDG_DATA_HOME/warp-terminal/themes`, Windows의 경우 `%APPDATA%\warp\Warp\data\themes`)에 대한 Warp의 테마 디렉터리를 검색하고 가져올 YAML 테마를 선택할 수 있도록 합니다. 옆에 있는 `Import from YAML`(YAML에서 가져오기) 버튼은 동일한 선택기를 사용하여 Warp 형식 `.yaml`/`.yml` 파일의 모든 폴더를 가리킵니다. 이는 테마를 기본 위치 외부에 저장할 때 유용합니다.
 
 가져온 테마는 테마 드롭다운에서 Orca의 내장 기능과 함께 표시됩니다.
 
 ## 윈도우 셸
 
-Windows의 기본 셸은 [설정 → 터미널](/orca-docs-ko/docs/settings/)에서 PowerShell, 명령 프롬프트, WSL 간에 구성할 수 있습니다. 'wsl.exe --status'가 성공하면 WSL이 자동으로 제공됩니다. 탭 표시줄의 **++** 드롭다운에는 하위 메뉴도 표시되므로 기본값을 변경하지 않고도 모든 셸에서 일회용 탭을 열 수 있습니다.
+Windows의 기본 셸은 [설정 → 터미널](/orca-docs-ko/docs/settings/)에서 PowerShell, 명령 프롬프트, WSL 간에 구성할 수 있습니다. `wsl.exe --status`가 성공하면 WSL이 자동으로 제공됩니다. 탭 표시줄의 **++** 드롭다운에는 하위 메뉴도 표시되므로 기본값을 변경하지 않고도 모든 셸에서 일회용 탭을 열 수 있습니다.
 
 WSL 파일 시스템(`\\wsl.localhost\...`)에 있는 저장소의 경우 Orca는 `wsl.exe -d <distro>`을 통해 시작됩니다. WSL에서 열린 Windows 경로 저장소의 경우 Orca는 cwd를 `/mnt/<drive>/...`로 변환하고 로그인 bash로 이동합니다.
 
@@ -71,13 +71,13 @@ macOS의 일본어 JIS 키보드의 경우 물리적 엔 키가 터미널 세션
 
 부동 터미널은 현재 작업 트리나 탭에 관계없이 항상 한 코드 떨어져 있는 전역 쉘 표면입니다. 새로 설치하는 경우 기본적으로 켜져 있습니다.
 
-- `Cmd+Option+A`(macOS) / `Ctrl+Alt+A`(`Linux/Windows`)로 전환합니다. 동일한 단축키는 이미 열려 있으면 패널에 초점을 맞추고, 이미 초점이 맞춰져 있으면 패널을 닫습니다.
+- `Cmd+Option+A`(macOS) / `Ctrl+Alt+A`(Linux/Windows)로 전환합니다. 동일한 코드는 이미 열려 있는 경우 패널에 초점을 맞추고 이미 초점이 맞춰진 경우 패널을 닫습니다.
 - 창 가장자리에 있는 플로팅 버튼을 클릭하거나, [설정 → 터미널 → 플로팅 터미널](/orca-docs-ko/docs/settings/) 아래 상태 표시줄로 트리거를 이동하세요.
 - 시작 작업 디렉터리를 동일한 설정(기본적으로 `~`)으로 설정하면 새 부동 탭이 예상하는 위치에 놓이게 됩니다.
 - 부동 패널은 자체 탭을 호스팅하고 오케스트레이션 설정을 지원합니다. 작업 트리 창을 요청하지 않고 백그라운드 실행을 시작합니다.
 
 ## 빠른 명령
 
-빠른 명령은 `npm run dev`, `pnpm test` 또는 프로젝트별 설정 스크립트와 같이 자주 실행하는 터미널 명령을 저장합니다. 또한 Claude 및 Codex과 같은 시작 시간 프롬프트 에이전트에 대해 재사용 가능한 에이전트 프롬프트를 저장할 수도 있습니다. `Settings → Quick Commands`(설정 → 빠른 명령) 또는 탭 표시줄의 `Add command`(명령 추가) 버튼에서 생성한 다음 작업 트리 탭 표시줄의 빠른 명령 분할 버튼 또는 터미널 컨텍스트 메뉴에서 실행합니다.
+빠른 명령은 `npm run dev`, `pnpm test` 또는 프로젝트별 설정 스크립트와 같이 자주 실행하는 터미널 명령을 저장합니다. 또한 Claude 및 Codex와 같은 시작 시간 프롬프트 에이전트에 대해 재사용 가능한 에이전트 프롬프트를 저장할 수도 있습니다. `Settings → Quick Commands`(설정 → 빠른 명령) 또는 탭 표시줄의 `Add command`(명령 추가) 버튼에서 생성한 다음 작업 트리 탭 표시줄의 빠른 명령 분할 버튼 또는 터미널 컨텍스트 메뉴에서 실행합니다.
 
 각 명령에는 레이블, 명령 텍스트 및 범위가 있습니다. 모든 곳에 적용되는 명령의 경우 `Global`(전역)을 사용하고, 특정 저장소의 작업 트리에만 명령을 표시하려면 `Project`(프로젝트)를 사용하세요. 탭 표시줄 버튼은 새로운 터미널 탭을 열고 명령을 실행합니다. 터미널 상황에 맞는 메뉴는 현재 터미널에 명령을 삽입할 수 있습니다.

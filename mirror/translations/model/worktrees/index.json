@@ -36,7 +36,7 @@
     },
     "/docs/model/worktrees/:paragraph:creation-runs-in-the-background:0": {
       "sourceHash": "f243e6dccbda3718c78e6ffb32aac430c2a6426c88abcc17dbc3db370f7c46de",
-      "translated": "작업 트리 만들기 대화 상자를 제출하면 즉시 닫힙니다. ORCA_PROTECTED_0003을 계속 사용하는 동안 'ORCA_PROTECTED_0001' 및 'ORCA_PROTECTED_0002' 작업은 백그라운드에서 계속됩니다. 새 작업 트리가 진행률 행과 함께 사이드바에 나타나고 작업 트리 탭에는 체크아웃이 완료되어 터미널로 전환될 때까지 실시간 설정 상태가 표시됩니다. 생성이 진행되는 동안 다른 작업 트리로 전환하거나, 진행 상황을 확인하거나, 탭 내 패널에서 취소할 수 있습니다. 생성에 실패하면 패널에서 재시도를 통해 오류를 표시합니다."
+      "translated": "작업 트리 만들기 대화 상자를 제출하면 즉시 닫힙니다. ORCA_PROTECTED_0003을 계속 사용하는 동안 `ORCA_PROTECTED_0001` 및 `ORCA_PROTECTED_0002` 작업은 백그라운드에서 계속됩니다. 새 작업 트리가 진행률 행과 함께 사이드바에 나타나고 작업 트리 탭에는 체크아웃이 완료되어 터미널로 전환될 때까지 실시간 설정 상태가 표시됩니다. 생성이 진행되는 동안 다른 작업 트리로 전환하거나, 진행 상황을 확인하거나, 탭 내 패널에서 취소할 수 있습니다. 생성에 실패하면 패널에서 재시도를 통해 오류를 표시합니다."
     },
     "/docs/model/worktrees/:heading:start-from-picker:0": {
       "sourceHash": "285b6470f2ec5035bc01980f885492ad50eea4c6a233d99665a61a9f583192f8",
@@ -56,11 +56,11 @@
     },
     "/docs/model/worktrees/:paragraph:naming-the-branch:0": {
       "sourceHash": "eb345e925960ece33af762b7a513f38652dbe1e06f265ab0a5624bcebc66357f",
-      "translated": "기본적으로 ORCA_PROTECTED_0001은 사용자가 입력한 작업 영역 이름이나 연결된 GitHub PR, ORCA_PROTECTED_0002 문제 또는 작업 영역이 생성될 때 GitLab MR에서 새 작업 트리의 분기 이름을 파생합니다. 대신 명시적인 분기 이름을 설정하려면 Create Worktree 대화 상자에서 **Advanced** 서랍을 확장하고 **Branch name** 필드(자리 표시자 `ORCA_PROTECTED_0003`)에 입력하세요."
+      "translated": "기본적으로 ORCA_PROTECTED_0001은 사용자가 입력한 작업공간 이름이나 연결된 ORCA_PROTECTED_0002 PR, ORCA_PROTECTED_0003 문제 또는 작업공간이 생성될 때 GitLab MR에서 새 작업 트리의 분기 이름을 파생합니다. 대신 명시적인 분기 이름을 설정하려면 `Create Worktree`(작업 트리 만들기) 대화 상자에서 `Advanced`(고급) 서랍을 확장하고 `Branch name`(브랜치 이름) 필드(자리 표시자 `ORCA_PROTECTED_0004`)에 입력하세요."
     },
     "/docs/model/worktrees/:paragraph:naming-the-branch:1": {
       "sourceHash": "8635d609ae06fc7405aebf304fae203ad8362368daacc4c2173d47f090cd1ce5",
-      "translated": "분기 이름 필드는 입력된 작업 영역 이름이나 기본 분기에서 생성하는 경우에만 제공됩니다. 작업 영역이 추적된 작업 항목에 연결되면 해당 항목에서 분기가 파생됩니다. 링크된 GitHub PR은 제출 시 분기를 다시 해결하므로 ORCA_PROTECTED_0001은 자동으로 무시되는 재정의를 방지하기 위해 필드를 숨깁니다."
+      "translated": "분기 이름 필드는 입력된 작업 영역 이름이나 기본 분기에서 생성하는 경우에만 제공됩니다. 작업공간이 추적된 작업 항목에 연결되면 분기는 해당 항목에서 파생됩니다. 링크된 ORCA_PROTECTED_0001 PR은 제출 시 분기를 다시 해결하기도 합니다. 따라서 ORCA_PROTECTED_0002는 자동으로 무시되는 재정의를 피하기 위해 필드를 숨깁니다."
     },
     "/docs/model/worktrees/:heading:sidebar-layout:0": {
       "sourceHash": "3e3dd8410ab7fdebcb1a10423107d99bd6dc9b21d41a8160790a5ab858e42274",
@@ -80,7 +80,7 @@
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:3": {
       "sourceHash": "b4f294c2c7154f23e22dabd5a154f3a7aa42576defc0c3032048115d3a510f90",
-      "translated": "작업 트리를 프로젝트 상단에 고정하여 장기 실행 작업을 계속 볼 수 있으며, 작업 트리를 마우스 오른쪽 버튼으로 클릭하면 보관/휴면/삭제 작업이 표시됩니다. 다중 선택에 작업 트리를 추가하려면 'ORCA_PROTECTED_0001'(ORCA_PROTECTED_0003의 'ORCA_PROTECTED_0002')을 누른 채 클릭하고, 연속 범위를 선택하려면 'ORCA_PROTECTED_0004'를 길게 누릅니다. 선택한 작업 트리를 마우스 오른쪽 버튼으로 클릭하면 선택 항목의 모든 작업 트리에 작업이 적용됩니다. Repo 행 자체는 드래그로 재정렬할 수 있습니다."
+      "translated": "작업 트리를 프로젝트 상단에 고정하여 장기 실행 작업을 계속 볼 수 있으며, 작업 트리를 마우스 오른쪽 버튼으로 클릭하면 보관/휴면/삭제 작업이 표시됩니다. 다중 선택에 작업 트리를 추가하려면 `ORCA_PROTECTED_0001`(ORCA_PROTECTED_0003의 `ORCA_PROTECTED_0002`)을 누른 채 클릭하고, 연속 범위를 선택하려면 `ORCA_PROTECTED_0004`를 길게 누릅니다. 선택한 작업 트리를 마우스 오른쪽 버튼으로 클릭하면 선택 항목의 모든 작업 트리에 작업이 적용됩니다. Repo 행 자체는 드래그로 재정렬할 수 있습니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:4": {
       "sourceHash": "a081940712c9350033f2cdcd9883ee40d693684015940f817be22237df1f4e84",
@@ -116,7 +116,7 @@
     },
     "/docs/model/worktrees/:aside:using-plain-git:0": {
       "sourceHash": "bf834e6525771c025c139c165dafc5155b96ea59ac96a26c69501035017fd8d1",
-      "translated": "CLI에서 'ORCA_PROTECTED_0001'을 실행하면 ORCA_PROTECTED_0002는 다음에 해당 저장소를 새로 고칠 때 자체 상태를 확인하고 정리합니다."
+      "translated": "CLI에서 `ORCA_PROTECTED_0001`을 실행하면 ORCA_PROTECTED_0002는 다음에 해당 저장소를 새로 고칠 때 자체 상태를 확인하고 정리합니다."
     }
   }
 }

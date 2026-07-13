@@ -44,7 +44,7 @@
     },
     "/docs/agents/codex-hot-swap/:paragraph:claude-code-accounts:0": {
       "sourceHash": "19ab738d8d523828ca9cb8e2ae506784d632866e96d0b505f5b6c834cd266b2d",
-      "translated": "Claude 계정 전환기는 동일하게 작동합니다. 즉, 다른 데이터 디렉터리(`ORCA_PROTECTED_0001`), 동일한 UX입니다."
+      "translated": "ORCA_PROTECTED_0001 계정 전환기는 동일하게 작동합니다. 즉, 다른 데이터 디렉터리(`ORCA_PROTECTED_0002`), 동일한 UX입니다."
     }
   }
 }

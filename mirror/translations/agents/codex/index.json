@@ -8,7 +8,7 @@
     },
     "/docs/agents/codex/:paragraph:codex-in-orca:0": {
       "sourceHash": "a3a3dce475d8f192363f7cb74581dcb080965b0731bf20da00babd8844a955b9",
-      "translated": "ORCA_PROTECTED_0001은 OpenAI의 에이전트 CLI입니다. ORCA_PROTECTED_0002의 ORCA_PROTECTED_0003 통합은 앱에서 가장 심층적인 통합 중 하나입니다. 사용, 핫스왑 및 다시 시작은 모두 계정 ID를 유지합니다."
+      "translated": "ORCA_PROTECTED_0001은 ORCA_PROTECTED_0002의 에이전트 CLI입니다. ORCA_PROTECTED_0003의 ORCA_PROTECTED_0004 통합은 앱에서 가장 심층적인 통합 중 하나입니다. 사용, 핫스왑 및 다시 시작은 모두 계정 ID를 유지합니다."
     },
     "/docs/agents/codex/:heading:setup:0": {
       "sourceHash": "0ecddf15e1aff85f7399e0fd362b9856d804a3e66dd65e41b547c255fc86d8c1",
@@ -16,7 +16,7 @@
     },
     "/docs/agents/codex/:list:setup:0": {
       "sourceHash": "bb4ad26de41bb1eedd3a6ff1fc2169c9c81b36a7566e9b55c88bc9011b54af7f",
-      "translated": "1. OpenAI 문서에 따라 ORCA_PROTECTED_0001을 설치합니다.\n2. 아무 터미널에서나 로그인하세요.\n3. ORCA_PROTECTED_0002는 계정 및 자격 증명에 대해 'ORCA_PROTECTED_0003'을 읽습니다."
+      "translated": "1. ORCA_PROTECTED_0002의 문서에 따라 ORCA_PROTECTED_0001을 설치합니다.\n2. 아무 터미널에서나 로그인하세요.\n3. ORCA_PROTECTED_0003은 계정 및 자격 증명에 대해 `ORCA_PROTECTED_0004`를 읽습니다."
     },
     "/docs/agents/codex/:heading:launching:0": {
       "sourceHash": "deec0a144035bc7a7bb357ec17bbe25927b03a914653411d367154bb8d9e58ad",
@@ -24,7 +24,7 @@
     },
     "/docs/agents/codex/:paragraph:launching:0": {
       "sourceHash": "ef1905a393a07c946ce87284d49757f4e330c960f7af5250c6170f870a56d934",
-      "translated": "에이전트 콤보 상자에서 **ORCA_PROTECTED_0001**을 선택합니다. ORCA_PROTECTED_0002는 작업 트리를 `ORCA_PROTECTED_0004`로 사용하여 `ORCA_PROTECTED_0003`을 시작하고 현재 선택된 계정을 통해 인증을 라우팅합니다."
+      "translated": "에이전트 콤보 상자에서 `ORCA_PROTECTED_0001`(Codex 에이전트)을 선택합니다. ORCA_PROTECTED_0002는 작업 트리를 `ORCA_PROTECTED_0004`로 사용하여 `ORCA_PROTECTED_0003`을 시작하고 현재 선택된 계정을 통해 인증을 라우팅합니다."
     },
     "/docs/agents/codex/:heading:account-hot-swap:0": {
       "sourceHash": "d14f29eddfb33ec43d1113ffc14164f8169353b543376014e46c057de34872a5",

@@ -1,7 +1,7 @@
 ---
 title: "리치 마크다운 편집기"
 sourceUrl: https://www.onorca.dev/docs/editing/markdown
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/monaco/
 next: /orca-docs-ko/docs/editing/viewers/
@@ -19,13 +19,13 @@ translationNotice:
 
 ## 슬래시 메뉴
 
-슬래시 메뉴(제목, 목록, 코드 블록, 설명선, 이미지, 인어 다이어그램, 토글 블록)를 열려면 빈 줄에 '/'을 입력하세요.
+슬래시 메뉴(제목, 목록, 코드 블록, 설명선, 이미지, 인어 다이어그램, 토글 블록)를 열려면 빈 줄에 `/`을 입력하세요.
 
-축소 가능한 메모에는 '/toggle-text'을 사용하고, 전환 요약을 최상위 제목처럼 읽어야 하는 경우에는 '/toggle-h1'를 사용하세요. Orca은 둘 다 이식 가능한 '<details>' / '<summary>' 마크다운으로 저장하므로 파일은 여전히 ​​Orca 외부에서 미리 볼 수 있습니다.
+축소 가능한 메모에는 `/toggle-text`을 사용하고, 전환 요약을 최상위 제목처럼 읽어야 하는 경우에는 `/toggle-h1`를 사용하세요. Orca은 둘 다 이식 가능한 `<details>` / `<summary>` 마크다운으로 저장하므로 파일은 여전히 ​​Orca 외부에서 미리 볼 수 있습니다.
 
 ## 내부 링크
 
-위키 스타일 링크를 시작하려면 '[['을 입력하세요. Orca는 작업 트리 내의 파일 경로를 자동 완성하고 상대 링크를 삽입합니다.
+위키 스타일 링크를 시작하려면 `[[`을 입력하세요. Orca는 작업 트리 내의 파일 경로를 자동 완성하고 상대 링크를 삽입합니다.
 
 ## 검색
 

@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -15,7 +15,7 @@ translationNotice:
 
 ## 일반
 
-- **Orca CLI** — 셸 및 에이전트용 번들 명령줄 도구를 등록합니다.
+- `Orca CLI`(ORCA 명령줄 도구) — 셸 및 에이전트용 번들 명령줄 도구를 등록합니다.
 - `Updates`(업데이트) — 업데이트를 확인하고 설치합니다. 최신 RC 빌드를 포함하려면 Shift 키를 누른 채 `Check for Updates`(업데이트 확인)을 클릭하고, 성능 태그가 지정된 최신 시험판을 확인하려면 Cmd 키를 누른 채 클릭(macOS)/Ctrl 키를 누른 채 클릭(Windows 및 Linux)하세요.
 - `UI zoom`(UI 확대/축소) — 설치별 UI 규모입니다.
 - `Default new-worktree name`(기본 새 작업 트리 이름) — 사용자 정의 접두사 또는 해양 생물.
@@ -53,7 +53,7 @@ translationNotice:
 
 - 설치된 에이전트 - 감지 및 사용자 정의.
 - 감지된 에이전트를 활성화하거나 비활성화하여 실행 메뉴에 사용하려는 CLI만 표시되도록 합니다.
-- 에이전트 권한 - CLI 권한 프롬프트를 줄이려면 **Yolo**를 선택하고, 사용자 정의하지 않은 에이전트에 대해 각 에이전트의 자체 승인 흐름을 유지하려면 `Manual`(수동)을 선택하세요.
+- 에이전트 권한 - CLI 권한 프롬프트를 줄이려면 `Yolo`(자동 승인)를 선택하고, 사용자 정의하지 않은 에이전트에 대해 각 에이전트의 자체 승인 흐름을 유지하려면 `Manual`(수동 승인)을 선택하세요.
 - Claude 및 Codex 계정 목록.
 - 에이전트당 시작 후크.
 
@@ -67,9 +67,9 @@ translationNotice:
 ## 통합
 
 - GitHub OAuth.
-- 선형 API 토큰.
+- Linear API 토큰입니다.
 - Jira — Atlassian 사이트 URL, 이메일 및 API 토큰([Jira 항목 서랍](/orca-docs-ko/docs/review/jira/) 참조).
-- MiniMax — MiniMax CLI에 대한 로컬 사용량 및 속도 제한 추적을 활성화하려면 MiniMax 세션 쿠키(`platform.minimax.io/console/usage`에서)를 붙여넣습니다. 선택적 그룹 ID 및 사용 모델 필드는 쿠키에서 선택한 기본값을 재정의합니다.
+- MiniMax - MiniMax 세션 쿠키(`platform.minimax.io/console/usage`에서)를 붙여넣어 MiniMax CLI에 대한 로컬 사용량 및 속도 제한 추적을 활성화합니다. 선택적 그룹 ID 및 사용 모델 필드는 쿠키에서 선택한 기본값을 재정의합니다.
 - MCP 서버.
 
 ## 알림
@@ -97,7 +97,7 @@ translationNotice:
 
 - 전체 키맵 — 모든 바인딩을 다시 매핑할 수 있습니다.
 - Sleeping Workspaces 배송을 언바운드로 전환합니다. 사이드바 Sleep-WorkTree 필터에 대한 직접 바로가기를 원하는 경우 여기에 할당하세요.
-- 모든 편집기 탭을 닫으면 기본적으로 macOS에서는 'Cmd+Option+W', Windows/Linux에서는 'Ctrl+Alt+W'로 설정됩니다.
+- 모든 편집기 탭을 닫으면 기본적으로 macOS에서는 `Cmd+Option+W`, Windows/Linux에서는 `Ctrl+Alt+W`로 설정됩니다.
 
 ## 저장소
 

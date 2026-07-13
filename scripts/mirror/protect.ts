@@ -260,7 +260,7 @@ const protectSemanticLiterals = (
     },
     {
       pattern:
-        /\b(?:GitHub Copilot|Claude Code|Cursor CLI|OpenCode|Codex|ORCA|Orca)\b/g,
+        /\b(?:GitHub Copilot CLI|GitHub Copilot|Claude Agent Teams|Claude Code|Cursor CLI|Charm Crush|Command Code|Mistral Vibe|Qwen Code|Rovo Dev|orca-emulator|orca-linear|Antigravity|Anthropic|OpenClaw|OpenCode|Kilocode|Autohand|Codebuff|MiniMax|Moonshot|Atlassian|Gemini|Google|Codex|Goose|Block|Augment|Continue|Factory|Linear|Grok|xAI|OMP|Ante|Aider|Amp|Kilo|Kiro|Charm|Auggie|Cline|Cursor|Devin|Droid|Kimi|Mistral|Qwen|Hermes|Nous|OpenAI|GitHub|Claude|Copilot|ORCA|Orca|Pi)\b/g,
       trim: false,
     },
     {
@@ -433,7 +433,7 @@ export const protectMarkdown = (markdown: string): ProtectedMarkdown => {
   );
 
   protectedMarkdown = protectedMarkdown.replace(
-    /^((?: {4,}[ \t]*|\t+[ \t]*))(\S[^\r\n]*)(?=\r?$)/gm,
+    /^((?: {4,}[ \t]*|\t+[ \t]*))((?![-+*]\s|\d+[.)]\s|>\s)\S[^\r\n]*)(?=\r?$)/gm,
     (_match, indentation: string, command: string) =>
       command.includes("\u0000ORCA_INTERNAL_")
         ? `${indentation}${command}`

@@ -1,7 +1,7 @@
 ---
 title: "Orca의 Codex"
 sourceUrl: https://www.onorca.dev/docs/agents/codex
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/glm-agent/
 next: /orca-docs-ko/docs/agents/cursor-cli/
@@ -15,13 +15,13 @@ Codex은 OpenAI의 에이전트 CLI입니다. Orca의 Codex 통합은 앱에서 
 
 ## 설정
 
-1. OpenAI 문서에 따라 Codex을 설치합니다.
+1. OpenAI의 문서에 따라 Codex을 설치합니다.
 2. 아무 터미널에서나 로그인하세요.
-3. Orca는 계정 및 자격 증명에 대해 '~/.codex'을 읽습니다.
+3. Orca은 계정 및 자격 증명에 대해 `~/.codex`를 읽습니다.
 
 ## 출시
 
-에이전트 콤보 상자에서 **Codex**을 선택합니다. Orca는 작업 트리를 `cwd`로 사용하여 `codex`을 시작하고 현재 선택된 계정을 통해 인증을 라우팅합니다.
+에이전트 콤보 상자에서 `Codex`(Codex 에이전트)을 선택합니다. Orca는 작업 트리를 `cwd`로 사용하여 `codex`을 시작하고 현재 선택된 계정을 통해 인증을 라우팅합니다.
 
 ## 계정 핫스왑
 

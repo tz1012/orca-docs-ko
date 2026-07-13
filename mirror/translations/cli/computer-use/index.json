@@ -12,7 +12,7 @@
     },
     "/docs/cli/computer-use/:paragraph:computer-use:1": {
       "sourceHash": "9efb94ddbed1362aa2b3f2e162299d3022d83c7d04cc04b669d1ff450509f97d",
-      "translated": "'ORCA_PROTECTED_0001' CLI를 사용하면 에이전트가 기본 데스크톱 앱을 검사하고 제어할 수 있습니다. 즉, 실행 중인 앱 목록을 표시하고, 접근성 트리를 읽고, 컨트롤을 클릭하고, 값을 설정하고, 텍스트를 입력하고, 스크롤하고, 스크린샷을 찍을 수 있습니다. 터미널이나 내장 브라우저가 아닌 OS나 타사 앱을 구동해야 하는 작업에 사용하세요."
+      "translated": "`ORCA_PROTECTED_0001` CLI를 사용하면 에이전트가 기본 데스크톱 앱을 검사하고 제어할 수 있습니다. 즉, 실행 중인 앱 목록을 표시하고, 접근성 트리를 읽고, 컨트롤을 클릭하고, 값을 설정하고, 텍스트를 입력하고, 스크롤하고, 스크린샷을 찍을 수 있습니다. 터미널이나 내장 브라우저가 아닌 OS나 타사 앱을 구동해야 하는 작업에 사용하세요."
     },
     "/docs/cli/computer-use/:aside:computer-use:0": {
       "sourceHash": "4cee0e365559cbdc1a7688467a96551fe7dc56dadab02e9668d367a477105310",
@@ -32,7 +32,7 @@
     },
     "/docs/cli/computer-use/:paragraph:first-time-setup:1": {
       "sourceHash": "ed625b6bc82b7742c586bc47f502cc4ee46d58b77d52c42ff407f4463de8155a",
-      "translated": "'ORCA_PROTECTED_0001'에서 누락된 항목이 보고되면 시스템 설정에서 `ORCA_PROTECTED_0002 Computer Use`(컴퓨터 사용)에 접근성(및 macOS의 화면 녹화)을 부여한 다음 'ORCA_PROTECTED_0003'을 다시 실행하여 확인하세요."
+      "translated": "`ORCA_PROTECTED_0001`에서 누락된 항목이 보고되면 시스템 설정에서 `ORCA_PROTECTED_0002 Computer Use`(Orca 컴퓨터 사용)에 접근성(및 macOS의 화면 녹화)을 부여한 다음 `ORCA_PROTECTED_0003`을 다시 실행하여 확인하세요."
     },
     "/docs/cli/computer-use/:heading:snapshot-act-snapshot:0": {
       "sourceHash": "a2757f359ee5e5e444d15270d2a37449cfe45dc4de50ec5db4aca455bf79b8c3",
@@ -64,7 +64,7 @@
     },
     "/docs/cli/computer-use/:paragraph:selecting-an-app:1": {
       "sourceHash": "6556dc55b9ce46fef964637b0bae752934a64192b9b5148d6859a19b1cf1b8a9",
-      "translated": "앱 이름은 명확해야 작동합니다(`ORCA_PROTECTED_0001`). 번들 ID와 이름이 모두 충돌하는 경우에만 'ORCA_PROTECTED_0002'를 사용하세요."
+      "translated": "앱 이름은 명확해야 작동합니다(`ORCA_PROTECTED_0001`). 번들 ID와 이름이 모두 충돌하는 경우에만 `ORCA_PROTECTED_0002`를 사용하세요."
     },
     "/docs/cli/computer-use/:heading:available-actions:0": {
       "sourceHash": "7e64b73bc9502e12760d3a09327ab814d44bff496cc77f1ee072b6cfee5aa3d6",
@@ -100,7 +100,7 @@
     },
     "/docs/cli/computer-use/:paragraph:screenshots:0": {
       "sourceHash": "ee2724ce0924827c08c45436cac92adebcce602222c11341b2f42d8542267569",
-      "translated": "`ORCA_PROTECTED_0001`은 접근성 트리와 기본적으로 스크린샷을 반환합니다. `ORCA_PROTECTED_0002`를 사용하면 이미지 바이트가 디스크에 기록되고 경로가 응답에 포함되지 않고 `ORCA_PROTECTED_0003`에 반환됩니다. 픽셀이 필요하지 않은 경우 'ORCA_PROTECTED_0004'를 전달하세요(더 빠르고 작은 페이로드). 캡처하기 전에 숨겨진 창이나 최소화된 창을 표시하려면 'ORCA_PROTECTED_0005'를 전달하세요."
+      "translated": "`ORCA_PROTECTED_0001`은 접근성 트리와 기본적으로 스크린샷을 반환합니다. `ORCA_PROTECTED_0002`를 사용하면 이미지 바이트가 디스크에 기록되고 경로가 응답에 포함되지 않고 `ORCA_PROTECTED_0003`에 반환됩니다. 픽셀이 필요하지 않은 경우 `ORCA_PROTECTED_0004`를 전달하세요(더 빠르고 작은 페이로드). 캡처하기 전에 숨겨진 창이나 최소화된 창을 표시하려면 `ORCA_PROTECTED_0005`를 전달하세요."
     },
     "/docs/cli/computer-use/:heading:use-it-from-an-agent:0": {
       "sourceHash": "c8a7505bb9ca0f2075eda9c7055eb1c6e789dddb5c08670bd75757b0f8b9a88c",

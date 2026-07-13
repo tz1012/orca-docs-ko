@@ -1,7 +1,7 @@
 ---
 title: "퀵 오픈 & 점프 팔레트"
 sourceUrl: https://www.onorca.dev/docs/model/quick-open
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/session-restore/
 next: /orca-docs-ko/docs/agents/supported/
@@ -32,6 +32,6 @@ Cmd-J 범위는 작업 트리, 최근 항목 및 탭 간에 이동합니다.
 
 작업 트리에서 Shift-Enter를 누르면 현재 창을 바꾸는 대신 새 분할에서 열립니다.
 
-쿼리가 기존 작업 트리와 일치하지 않는 경우 팔레트는 입력된 텍스트를 이름으로 사용하여 **Create worktree** 행을 제공합니다. 기존 경기가 먼저 선택된 상태로 유지되므로 실제 결과가 나올 때 Enter 키를 누르면 계속해서 이동합니다.
+쿼리가 기존 작업 트리와 일치하지 않는 경우 팔레트는 입력된 텍스트를 이름으로 사용하여 `Create worktree`(작업 트리 만들기) 행을 제공합니다. 기존 경기가 먼저 선택된 상태로 유지되므로 실제 결과가 나올 때 Enter 키를 누르면 계속해서 이동합니다.
 
 바로가기 바인딩은 [설정 → 바로가기](/orca-docs-ko/docs/settings/)에서 다시 매핑할 수 있습니다.

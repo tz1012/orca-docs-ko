@@ -1,7 +1,7 @@
 ---
 title: "SSH를 통해 원격 컴퓨터에서 작업"
 sourceUrl: https://www.onorca.dev/docs/recipes/remote-worktrees
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/design-mode-fix/
 next: /orca-docs-ko/docs/settings/
@@ -21,7 +21,7 @@ translationNotice:
 
 ## 실행
 
-1. 작업 트리를 생성합니다. Orca은 원격에서 'git worktree add'를 실행합니다.
+1. 작업 트리를 생성합니다. Orca은 원격에서 `git worktree add`를 실행합니다.
 2. 에이전트를 시작합니다. 이는 노트북이 아닌 원격 호스트에서 실행됩니다.
 3. 파일 인라인 편집 — Orca 스트림은 원격 파일 시스템에 저장됩니다.
 4. 평소처럼 노트북에서 차이점을 검토하고 커밋하고 푸시합니다.

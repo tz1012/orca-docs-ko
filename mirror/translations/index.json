@@ -40,7 +40,7 @@
     },
     "/docs/:list:what-orca-is-not:0": {
       "sourceHash": "b94c681b697680e5d2de831b1b69cdc42225a8788fbb397a50d403353fe0f145",
-      "translated": "- **모델이 아닙니다.** ORCA_PROTECTED_0001은 이미 사용 중인 에이전트를 실행합니다. 자체 Claude, ORCA_PROTECTED_0002 또는 ORCA_PROTECTED_0003 구독을 가져오세요.\n- **git 대체가 아닙니다.** 모든 작업 트리는 실제 git 작업 트리입니다. 원할 때마다 'ORCA_PROTECTED_0004'를 사용하여 일반 git을 사용할 수 있습니다.\n- **클라우드 전용이 아닙니다.** ORCA_PROTECTED_0005는 로컬에서 실행됩니다. 원격 에이전트는 SSH를 통해 귀하가 소유한 컴퓨터로 이동합니다."
+      "translated": "- **모델이 아닙니다.** ORCA_PROTECTED_0001은 이미 사용하고 있는 에이전트를 실행합니다. 자체 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003 또는 ORCA_PROTECTED_0004 구독을 가져오세요.\n- **git 대체가 아닙니다.** 모든 작업 트리는 실제 git 작업 트리입니다. 원할 때마다 `ORCA_PROTECTED_0005`를 사용하여 일반 git을 사용할 수 있습니다.\n- **클라우드 전용이 아닙니다.** ORCA_PROTECTED_0006은 로컬에서 실행됩니다. 원격 에이전트는 SSH를 통해 귀하가 소유한 컴퓨터로 이동합니다."
     },
     "/docs/:aside:what-orca-is-not:0": {
       "sourceHash": "f12c976cb310721a8e50a7b14df2bbe4f64a20cafff47c7e379e3430313f4077",

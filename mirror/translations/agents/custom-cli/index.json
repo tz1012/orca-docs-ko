@@ -40,7 +40,7 @@
     },
     "/docs/agents/custom-cli/:aside:making-state-dots-work:0": {
       "sourceHash": "9559c3a5a144b05f28bba5e9214aa44ce25468b36f9ac6f88bbe81ebb724e0e0",
-      "translated": "ORCA_PROTECTED_0001은 에이전트 콤보 상자를 통해 일반 'ORCA_PROTECTED_0002' 또는 'ORCA_PROTECTED_0003'을 실행하는 데 만족합니다. 이는 에이전트 없이 모든 작업 트리 컨텍스트가 있는 범위 지정 셸을 원할 때 유용합니다."
+      "translated": "ORCA_PROTECTED_0001은 에이전트 콤보 상자를 통해 일반 `ORCA_PROTECTED_0002` 또는 `ORCA_PROTECTED_0003`을 실행하는 데 만족합니다. 이는 에이전트 없이 모든 작업 트리 컨텍스트가 있는 범위 지정 셸을 원할 때 유용합니다."
     }
   }
 }

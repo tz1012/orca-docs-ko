@@ -8,7 +8,7 @@
     },
     "/docs/agents/usage-tracking/:paragraph:usage-rate-limit-tracking:0": {
       "sourceHash": "8b6b84d12dc1c8df561f7ec9b4ce474d15cadb0bb508bab44d2f0c66ea56274a",
-      "translated": "ORCA_PROTECTED_0001은 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, Gemini, ORCA_PROTECTED_0004, Kimi Code 및 MiniMax의 로컬 사용 상태를 읽고 이를 상태 표시줄에 표시하므로 에이전트가 중단되기 전에 속도 제한에 얼마나 근접했는지 알 수 있습니다."
+      "translated": "ORCA_PROTECTED_0001은 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, ORCA_PROTECTED_0004, ORCA_PROTECTED_0005, ORCA_PROTECTED_0006 코드 및 ORCA_PROTECTED_0007에 대한 로컬 사용 상태를 읽고 이를 상태 표시줄에 표시하므로 에이전트가 정지되기 전에 속도 제한에 얼마나 근접했는지 알 수 있습니다."
     },
     "/docs/agents/usage-tracking/:heading:whats-shown:0": {
       "sourceHash": "d15ce61a6832d2de882e15da9f610660137184aebce2274edba18ab433e72d99",
@@ -16,7 +16,7 @@
     },
     "/docs/agents/usage-tracking/:list:whats-shown:0": {
       "sourceHash": "8d45c5715c817844d5c217ea66c7a37266ca76219d61babd57a0afd8764a9fdb",
-      "translated": "- 활성 계정의 계획에 대한 현재 사용량입니다.\n- 5시간, 일일, 주간 및 Claude Fable 주간 창(해당하는 경우)에 대한 재설정 시간입니다.\n- 한도의 80%를 넘으면 경고 칩이 표시됩니다."
+      "translated": "- 활성 계정의 계획에 대한 현재 사용량입니다.\n- 5시간, 매일, 매주 및 ORCA_PROTECTED_0001 Fable 주간 창(해당되는 경우)에 대한 재설정 시간입니다.\n- 한도의 80%를 넘으면 경고 칩이 표시됩니다."
     },
     "/docs/agents/usage-tracking/:heading:how-it-works:0": {
       "sourceHash": "5ae438610cf16e31eb584a453d76f45d94f6d1bb14751446ac4e99e3e37c33a8",

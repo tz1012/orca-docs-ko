@@ -1149,6 +1149,11 @@ const prepareProtectedPendingPage = async () => {
   return { workspace, pendingConfig, path, translation, paragraph };
 };
 
+const englishOnlyWithRetainedTokens = (translated: string) => {
+  const tokens = translated.match(/ORCA_PROTECTED_\d+/gu) ?? [];
+  return `English only ${tokens.join(" ")}`;
+};
+
 test("validates protected tokens retained by pending-removal pages", async () => {
   const fixture = await prepareProtectedPendingPage();
   fixture.paragraph.translated = fixture.paragraph.translated.replace(
@@ -1170,8 +1175,9 @@ test("validates protected tokens retained by pending-removal pages", async () =>
 
 test("validates Korean coverage retained by pending-removal pages", async () => {
   const fixture = await prepareProtectedPendingPage();
-  fixture.paragraph.translated =
-    "Continue to [the documentation landing page](ORCA_PROTECTED_0001) for setup details.";
+  fixture.paragraph.translated = englishOnlyWithRetainedTokens(
+    fixture.paragraph.translated,
+  );
   await writeFile(
     fixture.path,
     `${JSON.stringify(fixture.translation, null, 2)}\n`,
@@ -1188,8 +1194,9 @@ test("validates Korean coverage retained by pending-removal pages", async () => 
 test("check revalidates retained pending-removal translation policy", async () => {
   const fixture = await prepareProtectedPendingPage();
   await applyMirror(fixture.pendingConfig);
-  fixture.paragraph.translated =
-    "Continue to [the documentation landing page](ORCA_PROTECTED_0001) for setup details.";
+  fixture.paragraph.translated = englishOnlyWithRetainedTokens(
+    fixture.paragraph.translated,
+  );
   await writeFile(
     fixture.path,
     `${JSON.stringify(fixture.translation, null, 2)}\n`,

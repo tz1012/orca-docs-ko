@@ -1,7 +1,7 @@
 ---
 title: "AI 차이점에 주석 달기"
 sourceUrl: https://www.onorca.dev/docs/review/annotate-ai-diff
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/diff-viewer/
 next: /orca-docs-ko/docs/review/attribution/
@@ -19,7 +19,7 @@ AI Diff에 주석 달기 — diff 라인에 고정된 인라인 댓글
 
 ## 댓글을 남겨주세요
 
-1. diff에서 아무 줄이나 가리키면 여백에 `+`(추가 버튼)가 나타납니다.
+1. diff에서 아무 라인이나 마우스로 가리킵니다. 홈통에 ***가 나타납니다.
 2. 클릭하세요(또는 줄에 커서를 두고 `c`을 누르세요).
 3. 피드백을 입력하세요. 마크다운이 지원됩니다.
 4. 저장하려면 `Cmd-Enter`를 누르고, 취소하려면 `Esc`을 누르세요.

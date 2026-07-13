@@ -52,7 +52,7 @@
     },
     "/docs/model/session-restore/:list:when-restore-runs:0": {
       "sourceHash": "ac3120482b579c0a3b80a7be3698db706473a7204ced4c4f88e6d85bcbd4bd66",
-      "translated": "- **Cmd-Q** — 일반적인 종료 방법입니다. 에이전트는 백그라운드에서 계속 작업합니다.\n- `Auto-updater relaunch`(자동 업데이트 프로그램 다시 시작) — 업데이트를 설치하기 위해 ORCA_PROTECTED_0001이 다시 시작됩니다. 에이전트는 영향을 받지 않습니다.\n- `App crash`(앱 충돌) — ORCA_PROTECTED_0002 자체가 충돌하는 경우 데몬은 다음 실행 시 웜 재연결을 위해 세션을 활성 상태로 유지합니다."
+      "translated": "- `Cmd-Q`(앱 종료) — 일반적인 종료 방법입니다. 에이전트는 백그라운드에서 계속 작업합니다.\n- `Auto-updater relaunch`(자동 업데이트 프로그램 다시 시작) — 업데이트를 설치하기 위해 ORCA_PROTECTED_0001이 다시 시작됩니다. 에이전트는 영향을 받지 않습니다.\n- `App crash`(앱 충돌) — ORCA_PROTECTED_0002 자체가 충돌하는 경우 데몬은 다음 실행 시 웜 재연결을 위해 세션을 활성 상태로 유지합니다."
     },
     "/docs/model/session-restore/:paragraph:when-restore-runs:2": {
       "sourceHash": "e425b3606afcbe1d8e39c270aafd610273c45e0197d563a6fe23ea9e94f7a260",

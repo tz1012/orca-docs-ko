@@ -1,7 +1,7 @@
 ---
 title: "원격 Orca 서버"
 sourceUrl: https://www.onorca.dev/docs/remote-servers
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/ssh/
 next: /orca-docs-ko/docs/cli/overview/
@@ -77,7 +77,7 @@ chmod +x orca-linux.AppImage
 
 Codex, Claude Code, OpenCode 또는 기타 터미널 에이전트와 같이 동일한 서버에서 사용하려는 에이전트 CLI를 설치합니다. 에이전트 프로세스는 서버에서 실행되므로 해당 CLI와 자격 증명을 서버에서 사용할 수 있어야 합니다.
 
-`orca` 명령이 `PATH`에 없으면 서버에서 Orca을 한 번 열고 `Settings -> General -> Orca CLI`(설정 -> 일반 -> CLI)에서 번들 CLI를 설치합니다. 일부 Linux 설치에서는 등록된 명령이 'orca-ide'일 수 있습니다. 컴퓨터에 설치된 명령을 사용하십시오.
+`orca` 명령이 `PATH`에 없으면 서버에서 Orca을 한 번 열고 `Settings -> General -> Orca CLI`(설정 → 일반 → Orca 명령줄 도구)에서 번들 CLI를 설치합니다. 일부 Linux 설치에서는 등록된 명령이 `orca-ide`일 수 있습니다. 컴퓨터에 설치된 명령을 사용하십시오.
 
 ## 헤드리스 서버 시작
 
@@ -87,9 +87,9 @@ Codex, Claude Code, OpenCode 또는 기타 터미널 에이전트와 같이 동�
 orca serve --pairing-address <server-ip-or-tailscale-hostname>
 ````
 
-`orca serve`은 데스크톱 창을 열지 않고 Orca 런타임 서버를 시작합니다. 포그라운드에서 실행되고 런타임 엔드포인트와 페어링 URL을 인쇄하며 'Ctrl-C'을 누르면 중지됩니다.
+`orca serve`은 데스크톱 창을 열지 않고 Orca 런타임 서버를 시작합니다. 포그라운드에서 실행되고 런타임 엔드포인트와 페어링 URL을 인쇄하며 `Ctrl-C`을 누르면 중지됩니다.
 
-클라이언트가 서버에 연결하는 데 사용해야 하는 주소에는 '--pairing-address'을 사용하세요. 이는 LAN IP, Tailscale 호스트 이름, SSH 전달 호스트 또는 터널 호스트 이름과 같이 노트북이나 백엔드가 실제로 연결할 수 있는 주소여야 합니다. 클라이언트가 동일한 시스템에서 실행되고 있지 않는 한 '127.0.0.1'를 사용하지 마세요.
+클라이언트가 서버에 연결하는 데 사용해야 하는 주소에는 `--pairing-address`을 사용하세요. 이는 LAN IP, Tailscale 호스트 이름, SSH 전달 호스트 또는 터널 호스트 이름과 같이 노트북이나 백엔드가 실제로 연결할 수 있는 주소여야 합니다. 클라이언트가 동일한 시스템에서 실행되고 있지 않는 한 `127.0.0.1`를 사용하지 마세요.
 
 고정 포트가 필요한 경우 명시적으로 전달하세요.
 
@@ -97,11 +97,11 @@ orca serve --pairing-address <server-ip-or-tailscale-hostname>
 orca serve --port 6768 --pairing-address devbox.tailnet-name.ts.net
 ````
 
-클라이언트는 해당 호스트와 포트에 연결할 수 있어야 합니다. 브라우저 클라이언트의 경우 'orca serve'은 웹 클라이언트 번들이 사용 가능한 경우 페어링 데이터가 포함된 브라우저 URL도 인쇄합니다. 모바일 페어링의 경우 '--mobile-pairing'를 추가하세요.
+클라이언트는 해당 호스트와 포트에 연결할 수 있어야 합니다. 브라우저 클라이언트의 경우 `orca serve`은 웹 클라이언트 번들이 사용 가능한 경우 페어링 데이터가 포함된 브라우저 URL도 인쇄합니다. 모바일 페어링의 경우 `--mobile-pairing`를 추가하세요.
 
 ## 모바일과 페어링
 
-클라이언트가 Orca 모바일 앱인 경우 '--mobile-pairing'을 사용하세요. 플래그는 기본 런타임 환경 페어링 링크 대신 모바일 범위 페어링 QR/link을 인쇄합니다.
+클라이언트가 Orca 모바일 앱인 경우 `--mobile-pairing`을 사용하세요. 플래그는 기본 런타임 환경 페어링 링크 대신 모바일 범위 페어링 QR/link을 인쇄합니다.
 
 서버 시스템에서 휴대전화가 연결할 수 있는 주소를 선택하세요. Tailscale IP 또는 호스트 이름은 일반적으로 가장 쉬운 옵션입니다.
 
@@ -111,12 +111,12 @@ orca serve --pairing-address 100.64.1.20 --mobile-pairing
 
 그런 다음 휴대폰에서 페어링하세요.
 
-1. 'orca serve'을 서버에서 계속 실행하세요.
+1. `orca serve`을 서버에서 계속 실행하세요.
 2. Orca 모바일 앱을 열고 `Pair`(페어링)을 선택합니다.
 3. 단말기에 표시된 `Mobile pairing QR`(모바일 페어링 QR)을 스캔하거나 인쇄된 페어링 URL을 붙여넣습니다.
 4. 모바일이 다시 연결되기를 원할 때마다 동일한 주소와 포트로 서버에 연결할 수 있도록 남겨두세요.
 
-페어링 후 휴대폰을 연결할 수 없는 경우 휴대폰이 현재 네트워크에서 '--pairing-address' 및 포트에 연결할 수 있는지 확인하세요. Tailscale의 경우 전화기는 동일한 tailnet에 연결되어야 하며 모든 ACL에서 허용되어야 합니다.
+페어링 후 휴대폰을 연결할 수 없는 경우 휴대폰이 현재 네트워크에서 `--pairing-address` 및 포트에 연결할 수 있는지 확인하세요. Tailscale의 경우 전화기는 동일한 tailnet에 연결되어야 하며 모든 ACL에서 허용되어야 합니다.
 
 페어링 URL을 비공개로 유지하세요
 
@@ -126,7 +126,7 @@ orca serve --pairing-address 100.64.1.20 --mobile-pairing
 
 서버 시스템에 이미 Orca 앱이 열려 있는 경우 대신 인앱 공유 흐름을 사용하십시오.
 
-1. `Settings -> Remote Orca Servers`(설정 -> 원격 서버)를 엽니다.
+1. `Settings -> Remote Orca Servers`(설정 → 원격 Orca 서버)를 엽니다.
 2. `Advertise this app as a server`(이 앱을 서버로 광고)에서 `New Link`(새 링크)를 클릭합니다.
 3. 생성된 접속링크를 복사하세요.
 
@@ -136,13 +136,13 @@ orca serve --pairing-address 100.64.1.20 --mobile-pairing
 
 클라이언트 컴퓨터에서:
 
-1. `Settings -> Remote Orca Servers`(설정 -> 원격 서버)를 엽니다.
+1. `Settings -> Remote Orca Servers`(설정 → 원격 Orca 서버)를 엽니다.
 2. `Add Server`(서버 추가)를 클릭합니다.
 3. 서버에 이름을 지정합니다.
 4. `orca serve`로 출력된 페어링 URL 또는 `New Link`(새 링크)로 생성된 액세스 링크를 붙여넣습니다.
 5. `Add Server`(서버 추가)를 클릭한 다음 동일한 창에서 서버에 연결합니다.
 
-페어링 후 Orca은 연결 상태와 함께 `Remote Orca Servers`(원격 서버)에 서버를 나열합니다. 새 서버 라우팅 프로젝트, 터미널 및 공급자 확인을 해당 원격 서버로 기본값으로 설정하려는 경우에만 `Advanced -> Default runtime`(고급 -> 기본 런타임)을 사용하세요.
+페어링 후 Orca은 연결 상태와 함께 `Remote Orca Servers`(원격 Orca 서버)에 서버를 나열합니다. 새 서버 라우팅 프로젝트, 터미널 및 공급자 확인을 해당 원격 서버로 기본값으로 설정하려는 경우에만 `Advanced -> Default runtime`(고급 -> 기본 런타임)을 사용하세요.
 
 ## UI에서 세션 시작
 
@@ -167,7 +167,7 @@ orca serve --pairing-address 100.64.1.20 --mobile-pairing
 orca environment add --name server-b --pairing-code '<orca://pair?...>'
 ````
 
-그런 다음 '--environment'을 사용하여 해당 서버를 타겟팅합니다.
+그런 다음 `--environment`을 사용하여 해당 서버를 타겟팅합니다.
 
 ````
 orca terminal create \
@@ -215,7 +215,7 @@ Server B service
 
 노트북 Orca만 원격 시스템에서 작업을 시작하고 관리해야 하는 경우 SSH 작업 트리를 사용하세요. 원격 시스템이 랩탑, 브라우저 클라이언트, 모바일 클라이언트 또는 백엔드 자동화가 모두 상호 작용할 수 있는 공유 Orca 관리 세션을 호스팅해야 하는 경우 원격 Orca 서버를 사용하십시오.
 
-백엔드가 서버에 SSH를 통해 'codex'을 직접 실행하는 경우 Orca는 이에 대해 Orca 관리 세션으로 인식할 필요가 없습니다. 백엔드가 서버에 SSH를 연결하고 'orca terminal create'를 실행하는 경우 어쨌든 서버에는 원격 Orca 서버 모델인 Orca 런타임이 필요합니다.
+백엔드가 서버에 SSH를 통해 `codex`을 직접 실행하는 경우 Orca는 이에 대해 Orca 관리 세션으로 인식할 필요가 없습니다. 백엔드가 서버에 SSH를 연결하고 `orca terminal create`를 실행하는 경우 어쨌든 서버에는 원격 Orca 서버 모델인 Orca 런타임이 필요합니다.
 
 ## 문제 해결
 
@@ -231,7 +231,7 @@ nc -vz <server-address> 6768
 
 ### 페어링 주소가 잘못되었습니다
 
-클라이언트가 사용해야 하는 주소로 'orca serve'을 다시 실행하세요.
+클라이언트가 사용해야 하는 주소로 `orca serve`을 다시 실행하세요.
 
 ````
 orca serve --port 6768 --pairing-address <reachable-address>
@@ -241,15 +241,15 @@ Tailscale의 경우 서버의 Tailscale 호스트 이름 또는 Tailscale IP를 
 
 ### 서버에서 `orca`을 찾을 수 없습니다.
 
-`Settings -> General -> Orca CLI`(설정 -> 일반 -> CLI)에서 번들 CLI를 설치하거나 패키지에 등록된 명령 이름을 사용하세요. 일부 Linux 설치에서는 `orca-ide`일 수 있습니다.
+`Settings -> General -> Orca CLI`(설정 → 일반 → Orca 명령줄 도구)에서 번들 CLI를 설치하거나 패키지에 등록된 명령 이름을 사용하세요. 일부 Linux 설치에서는 `orca-ide`일 수 있습니다.
 
 ### 서버에서 `codex`, `claude` 또는 다른 에이전트를 찾을 수 없습니다.
 
-서버 시스템에 에이전트 CLI를 설치하고 인증합니다. 원격 에이전트 세션은 노트북이 아닌 서버의 'PATH', 홈 디렉터리 및 자격 증명을 사용합니다.
+서버 시스템에 에이전트 CLI를 설치하고 인증합니다. 원격 에이전트 세션은 노트북이 아닌 서버의 `PATH`, 홈 디렉터리 및 자격 증명을 사용합니다.
 
 ### CLI는 `active` 또는 `current`를 대상으로 지정할 수 없습니다.
 
-CLI 명령이 원격 환경을 대상으로 하는 경우 호출자의 현재 디렉터리는 서버의 현재 디렉터리가 아닙니다. 'path:/srv/my-app' 또는 'id:<worktree-id>'와 같은 명시적인 서버측 선택기를 사용하세요.
+CLI 명령이 원격 환경을 대상으로 하는 경우 호출자의 현재 디렉터리는 서버의 현재 디렉터리가 아닙니다. `path:/srv/my-app` 또는 `id:<worktree-id>`와 같은 명시적인 서버측 선택기를 사용하세요.
 
 ## 다음 단계
 

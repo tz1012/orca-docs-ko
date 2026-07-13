@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 참조"
 sourceUrl: https://www.onorca.dev/docs/cli/reference
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/overview/
 next: /orca-docs-ko/docs/cli/orchestration/
@@ -82,7 +82,7 @@ orca worktree set --worktree active --comment "reproduced failure; testing token
 orca worktree rm --worktree id:<worktreeId> --force --json
 ````
 
-worktree create`이 Orca 관리 작업 트리 내부에서 실행되면 Orca은 관계를 유추할 수 있을 때 새 작업 트리를 하위 작업 트리로 기록합니다. 명시적으로 하려면 '--parent-worktree active'를 전달하고 새 작업이 독립적인 경우에는 '--no-parent'를 전달합니다.
+`worktree create`이 Orca 관리 작업 트리 내부에서 실행되면 Orca은 관계를 유추할 수 있을 때 새 작업 트리를 하위 작업 트리로 기록합니다. 명시적으로 하려면 `--parent-worktree active`를 전달하고 새 작업이 독립적인 경우에는 `--no-parent`를 전달합니다.
 
 에이전트 시작 플래그:
 
@@ -92,7 +92,7 @@ orca worktree create --name quick-check --agent codex --prompt "Summarize the di
 orca worktree create --name hidden-setup --setup inherit --json
 ````
 
-'--agent'은 첫 번째 터미널에서 선택한 에이전트를 시작합니다. `--prompt`는 해당 에이전트에 초기 작업을 보냅니다. `--setup run|skip|inherit`은 저장소 설정 후크를 제어합니다. `inherit`는 저장소 정책을 따릅니다.
+`--agent`은 첫 번째 터미널에서 선택한 에이전트를 시작합니다. `--prompt`는 해당 에이전트에 초기 작업을 보냅니다. `--setup run|skip|inherit`은 저장소 설정 후크를 제어합니다. `inherit`는 저장소 정책을 따릅니다.
 
 ## 터미널
 
@@ -110,11 +110,11 @@ orca terminal switch --terminal <handle> --json
 orca terminal close --terminal <handle> --json
 ````
 
-현재 작업 트리의 활성 터미널을 대상으로 하려면 '--terminal'을 생략하세요. 단말기가 무엇을 기다리고 있는지 확실하지 않은 경우 보내기 전에 읽어보십시오.
+현재 작업 트리의 활성 터미널을 대상으로 하려면 `--terminal`을 생략하세요. 단말기가 무엇을 기다리고 있는지 확실하지 않은 경우 보내기 전에 읽어보십시오.
 
 터미널 핸들
 
-터미널 핸들은 런타임 범위입니다. Orca이 다시 시작되거나 명령이 오래된 터미널 핸들을 보고하는 경우 'orca terminal list --json'를 실행하고 핸들을 다시 획득하세요.
+터미널 핸들은 런타임 범위입니다. Orca이 다시 시작되거나 명령이 오래된 터미널 핸들을 보고하는 경우 `orca terminal list --json`를 실행하고 핸들을 다시 획득하세요.
 
 긴 출력의 경우 커서 읽기를 사용하십시오. 한 번의 읽기에서 `nextCursor`을 저장한 다음 `--cursor`와 함께 다시 전달하여 새 출력만 가져옵니다.
 
@@ -158,7 +158,7 @@ orca full-screenshot --worktree active --json
 orca pdf --worktree active --json
 ````
 
-아직 입력된 Orca 명령이 없는 브라우저 작업에만 'orca exec --command "<agent-browser command>" --json'을 사용하세요.
+아직 입력된 Orca 명령이 없는 브라우저 작업에만 `orca exec --command "<agent-browser command>" --json`을 사용하세요.
 
 브라우저 장치 에뮬레이션:
 
@@ -169,7 +169,7 @@ orca screenshot --worktree active --json
 
 ## 데스크탑 컴퓨터 사용
 
-내장 브라우저 외부의 기본 데스크톱 앱에는 'orca computer'을 사용하세요.
+내장 브라우저 외부의 기본 데스크톱 앱에는 `orca computer`을 사용하세요.
 
 ````
 orca computer permissions --json
@@ -183,7 +183,7 @@ orca computer paste-text --app com.apple.Safari --text "hello" --json
 
 ## 모바일 에뮬레이터
 
-모바일 에뮬레이터 명령은 Orca의 작업 트리 범위 브리지를 통해 iOS 시뮬레이터 장치를 제어합니다. 에이전트가 Orca 내부에서 작동 중일 때 원시 'serve-sim' 또는 'simctl' 대신 이를 사용하면 수명 주기 및 활성 장치 상태가 현재 작업 트리에 계속 연결됩니다.
+모바일 에뮬레이터 명령은 Orca의 작업 트리 범위 브리지를 통해 iOS 시뮬레이터 장치를 제어합니다. 에이전트가 Orca 내부에서 작동 중일 때 원시 `serve-sim` 또는 `simctl` 대신 이를 사용하면 수명 주기 및 활성 장치 상태가 현재 작업 트리에 계속 연결됩니다.
 
 ````
 orca emulator list --worktree active --json
@@ -198,11 +198,11 @@ orca emulator kill --worktree active --json
 orca emulator shutdown --worktree active --json
 ````
 
-좌표는 `0`에서 `1`로 정규화됩니다. 단일 탭에는 'tap'을 선호하고, 드래그 또는 다단계 터치 입력에는 'gesture'를 사용하세요. 스크립트가 작업 트리의 활성 에뮬레이터 대신 특정 시뮬레이터를 대상으로 해야 하는 경우 `--device <udid-or-name>` 또는 `--emulator <id>`을 전달합니다.
+좌표는 `0`에서 `1`로 정규화됩니다. 단일 탭에는 `tap`을 선호하고, 드래그 또는 다단계 터치 입력에는 `gesture`를 사용하세요. 스크립트가 작업 트리의 활성 에뮬레이터 대신 특정 시뮬레이터를 대상으로 해야 하는 경우 `--device <udid-or-name>` 또는 `--emulator <id>`을 전달합니다.
 
-## 선형
+## Linear 연동
 
-'orca linear' 하위 명령은 연결된 선형 작업 공간을 스크립트 및 에이전트에 노출합니다. 읽기 명령은 JSON 티켓 컨텍스트를 반환합니다. 쓰기 명령은 상태를 변경합니다. 작업 트리에 연결된 선형 문제(있는 경우)는 `--current`를 통해 연결할 수 있습니다.
+`orca linear` 하위 명령은 연결된 Linear 작업공간을 스크립트 및 에이전트에 노출합니다. 읽기 명령은 JSON 티켓 컨텍스트를 반환합니다. 쓰기 명령은 상태를 변경합니다. 작업 트리에 연결된 Linear 문제(있는 경우)는 `--current`를 통해 도달할 수 있습니다.
 
 읽기:
 
@@ -230,7 +230,7 @@ orca linear attach --current --url https://example.com/repro --title "Repro" --j
 orca linear create --title "Flaky login test" --team ENG --priority high --json
 ````
 
-여러 개의 연결된 작업공간 간 라우팅을 위한 `--workspace <id>`를 포함하여 전체 플래그 목록을 보려면 `orca linear <command> --help`을 실행하세요. 스크립트가 Orca에 연결된 작업 트리 외부에서 실행될 수 있는 경우 명시적인 문제 ID(예: `ENG-123`)를 전달하세요. '--current'는 작업 트리가 선형 문제에 연결된 경우에만 해결되기 때문입니다.
+여러 개의 연결된 작업공간 간 라우팅을 위한 `--workspace <id>`를 포함하여 전체 플래그 목록을 보려면 `orca linear <command> --help`을 실행하세요. 스크립트가 Orca에 연결된 작업 트리 외부에서 실행될 수 있는 경우 명시적인 문제 ID(예: `ENG-123`)를 전달하세요. `--current`는 작업 트리가 Linear 문제에 연결된 경우에만 해결되기 때문입니다.
 
 ## 자동화, 환경 및 후크
 

@@ -1,7 +1,7 @@
 ---
 title: "파일 탐색기 및 외부 드래그-드롭"
 sourceUrl: https://www.onorca.dev/docs/editing/file-explorer
-checkedAt: "2026-07-13T08:43:49.755Z"
+checkedAt: "2026-07-13T09:05:36.078Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/viewers/
 next: /orca-docs-ko/docs/browser/overview/
@@ -28,7 +28,7 @@ translationNotice:
 
 ## 폴더 검색
 
-폴더를 마우스 오른쪽 버튼으로 클릭하고 `Find in Folder`(폴더에서 찾기)를 선택하면 해당 폴더의 범위가 이미 지정된 검색이 열립니다. 파일 탐색기에서 폴더를 선택하고 macOS에서는 'Cmd-Shift-F'을, Windows 및 Linux에서는 'Ctrl-Shift-F'를 누를 수도 있습니다.
+폴더를 마우스 오른쪽 버튼으로 클릭하고 `Find in Folder`(폴더에서 찾기)를 선택하면 해당 폴더의 범위가 이미 지정된 검색이 열립니다. 파일 탐색기에서 폴더를 선택하고 macOS에서는 `Cmd-Shift-F`을, Windows 및 Linux에서는 `Ctrl-Shift-F`를 누를 수도 있습니다.
 
 ## 다음 단계
 
