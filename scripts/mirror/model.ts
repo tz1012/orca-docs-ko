@@ -1,0 +1,103 @@
+import { z } from "zod";
+
+const Sha256Schema = z.string().regex(/^[a-f0-9]{64}$/);
+const MirrorPathSchema = z.string().regex(/^\/.*\/$/);
+
+export const SegmentKindSchema = z.enum([
+  "heading",
+  "paragraph",
+  "list",
+  "table",
+  "code",
+  "blockquote",
+  "aside",
+  "figure",
+  "image",
+]);
+
+export const SourceSegmentSchema = z.strictObject({
+  id: z.string().min(1),
+  kind: SegmentKindSchema,
+  source: z.string().min(1),
+  sourceHash: Sha256Schema,
+  protected: z.record(z.string(), z.string()),
+});
+
+export type SourceSegment = z.infer<typeof SourceSegmentSchema>;
+
+export const NavigationGroupSchema = z.strictObject({
+  sourceLabel: z.string().min(1),
+  sourceUrls: z.array(z.url()),
+});
+
+export type NavigationGroup = z.infer<typeof NavigationGroupSchema>;
+
+export const ImageStateSchema = z.strictObject({
+  sourceUrl: z.url(),
+  localPath: z.string().startsWith("/").nullable(),
+  contentHash: Sha256Schema.nullable(),
+  robotsRemote: z.boolean(),
+});
+
+export type ImageState = z.infer<typeof ImageStateSchema>;
+
+export const SourcePageSchema = z.strictObject({
+  sourceUrl: z.url(),
+  mirrorPath: MirrorPathSchema,
+  titleSegmentId: z.string().min(1),
+  pageHash: Sha256Schema,
+  checkedAt: z.iso.datetime(),
+  sitemapLastmod: z.string().min(1).nullable(),
+  segments: z.array(SourceSegmentSchema).min(1),
+  images: z.array(ImageStateSchema),
+  navigationGroups: z.array(NavigationGroupSchema),
+  previousSourceUrl: z.url().nullable(),
+  nextSourceUrl: z.url().nullable(),
+});
+
+export type SourcePage = z.infer<typeof SourcePageSchema>;
+
+export const ManifestStatusSchema = z.enum([
+  "active",
+  "pending-removal",
+  "redirect",
+]);
+
+export const ManifestPageSchema = z.strictObject({
+  sourceUrl: z.url(),
+  mirrorPath: MirrorPathSchema,
+  titleSegmentId: z.string().min(1),
+  pageHash: Sha256Schema,
+  checkedAt: z.iso.datetime(),
+  sitemapLastmod: z.string().min(1).nullable(),
+  translatedAt: z.iso.datetime().nullable(),
+  missingRuns: z.number().int().nonnegative(),
+  status: ManifestStatusSchema,
+  redirectTo: MirrorPathSchema.nullable(),
+  segmentHashes: z.record(z.string(), Sha256Schema),
+  images: z.array(ImageStateSchema),
+});
+
+export type ManifestPage = z.infer<typeof ManifestPageSchema>;
+
+export const SourceManifestSchema = z.strictObject({
+  schemaVersion: z.literal(1),
+  generatedAt: z.iso.datetime(),
+  pages: z.record(z.string(), ManifestPageSchema),
+});
+
+export type SourceManifest = z.infer<typeof SourceManifestSchema>;
+
+export const TranslationEntrySchema = z.strictObject({
+  sourceHash: Sha256Schema,
+  translated: z.string().trim().min(1),
+});
+
+export const TranslationFileSchema = z.strictObject({
+  sourceUrl: z.url(),
+  mirrorPath: MirrorPathSchema,
+  entries: z.record(z.string(), TranslationEntrySchema),
+});
+
+export type TranslationEntry = z.infer<typeof TranslationEntrySchema>;
+export type TranslationFile = z.infer<typeof TranslationFileSchema>;
