@@ -3,6 +3,7 @@ export const MIRROR_USER_AGENT = "orca-docs-ko-mirror/1.0";
 const REQUEST_TIMEOUT_MS = 20_000;
 const MAX_ATTEMPTS = 3;
 const RETRY_DELAYS_MS = [500, 1500] as const;
+const MEBIBYTE = 1024 * 1024;
 const MAX_BODY_BYTES = 10 * 1024 * 1024;
 
 type Sleep = (milliseconds: number) => Promise<void>;
@@ -20,6 +21,11 @@ const isRetryable = (status: number) =>
 
 const responseError = (response: Response, url: URL) =>
   new Error(`HTTP ${response.status} for ${url.href}`);
+
+const bodyCeilingLabel = (maxBytes: number) =>
+  maxBytes % MEBIBYTE === 0
+    ? `${maxBytes / MEBIBYTE} MiB`
+    : `${maxBytes} bytes`;
 
 const discard = async (response: Response) => {
   try {
@@ -40,10 +46,17 @@ export class HttpClient {
     return new TextDecoder().decode(await this.readBody(response));
   }
 
-  async bytes(url: URL): Promise<ByteResponse> {
+  async bytes(
+    url: URL,
+    maxBytes = MAX_BODY_BYTES,
+  ): Promise<ByteResponse> {
+    if (!Number.isSafeInteger(maxBytes) || maxBytes <= 0) {
+      throw new RangeError("HTTP byte ceiling must be a positive safe integer");
+    }
+
     const response = await this.request(url);
     return {
-      body: await this.readBody(response),
+      body: await this.readBody(response, maxBytes),
       contentType: response.headers.get("content-type"),
     };
   }
@@ -70,15 +83,20 @@ export class HttpClient {
     throw new Error("HTTP retry loop exhausted unexpectedly");
   }
 
-  private async readBody(response: Response): Promise<Uint8Array> {
+  private async readBody(
+    response: Response,
+    maxBytes = MAX_BODY_BYTES,
+  ): Promise<Uint8Array> {
     const declaredLength = response.headers.get("content-length");
     if (
       declaredLength !== null &&
       /^\d+$/.test(declaredLength) &&
-      Number(declaredLength) > MAX_BODY_BYTES
+      Number(declaredLength) > maxBytes
     ) {
       await discard(response);
-      throw new Error("HTTP response exceeds the 10 MiB body ceiling");
+      throw new Error(
+        `HTTP response exceeds the ${bodyCeilingLabel(maxBytes)} body ceiling`,
+      );
     }
 
     if (response.body === null) return new Uint8Array();
@@ -92,9 +110,11 @@ export class HttpClient {
       if (done) break;
 
       length += value.byteLength;
-      if (length > MAX_BODY_BYTES) {
+      if (length > maxBytes) {
         await reader.cancel();
-        throw new Error("HTTP response exceeds the 10 MiB body ceiling");
+        throw new Error(
+          `HTTP response exceeds the ${bodyCeilingLabel(maxBytes)} body ceiling`,
+        );
       }
       chunks.push(value);
     }

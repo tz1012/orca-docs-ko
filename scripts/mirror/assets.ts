@@ -106,7 +106,7 @@ export const mirrorAssets = async (
       continue;
     }
 
-    const response = await client.bytes(sourceUrl);
+    const response = await client.bytes(sourceUrl, MAX_IMAGE_BYTES);
     if (response.body.byteLength > MAX_IMAGE_BYTES) {
       throw new Error(`Image exceeds the 25 MiB body ceiling: ${image.sourceUrl}`);
     }

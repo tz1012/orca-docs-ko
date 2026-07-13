@@ -78,60 +78,95 @@ test("resets missing state when a page is observed again", () => {
   });
 });
 
-test("sorts changes and selects only added or changed segments", () => {
-  const changed = pageFixture({
-    segments: [
-      segmentFixture({
-        id: "install:h1:0",
-        source: "Install Orca",
-      }),
-      segmentFixture({
-        id: "install:p:0",
-        kind: "paragraph",
-        source: "Existing paragraph",
-      }),
-    ],
-  });
-  const unchanged = pageFixture({
-    sourceUrl: "https://www.onorca.dev/docs/zulu",
-    mirrorPath: "/docs/zulu/",
-    segments: [segmentFixture({ id: "zulu:h1:0", source: "Zulu" })],
-    titleSegmentId: "zulu:h1:0",
-  });
-  const added = pageFixture({
-    sourceUrl: "https://www.onorca.dev/docs/alpha",
-    mirrorPath: "/docs/alpha/",
-    segments: [segmentFixture({ id: "alpha:h1:0", source: "Alpha" })],
-    titleSegmentId: "alpha:h1:0",
+test("sorts every change category and selected segment ID deterministically", () => {
+  const pageFor = (slug: string, segmentIds: string[]) => {
+    const segments = segmentIds.map((id) =>
+      segmentFixture({ id, source: `Source for ${id}` }),
+    );
+    return pageFixture({
+      sourceUrl: `https://www.onorca.dev/docs/${slug}`,
+      mirrorPath: `/docs/${slug}/`,
+      segments,
+      titleSegmentId: segments[0]!.id,
+    });
+  };
+  const alpha = pageFor("alpha", ["alpha:z:0", "alpha:a:0"]);
+  const bravo = pageFor("bravo", [
+    "bravo:z:0",
+    "bravo:keep:0",
+    "bravo:a:0",
+  ]);
+  const charlie = pageFor("charlie", ["charlie:h1:0"]);
+  const xray = pageFor("xray", [
+    "xray:z:0",
+    "xray:a:0",
+    "xray:keep:0",
+  ]);
+  const yankee = pageFor("yankee", ["yankee:z:0", "yankee:a:0"]);
+  const zulu = pageFor("zulu", ["zulu:h1:0"]);
+  const staleHashesFor = (page: SourcePage) => ({
+    ...Object.fromEntries(
+      page.segments.map((segment) => [
+        segment.id,
+        segment.id.includes(":keep:")
+          ? segment.sourceHash
+          : sha256(`Previous source for ${segment.id}`),
+      ]),
+    ),
+    [`${page.titleSegmentId}:removed`]: sha256("Removed source segment"),
   });
   const manifest = manifestFixture({
-    [unchanged.mirrorPath]: manifestPageFor(unchanged),
-    [changed.mirrorPath]: manifestPageFor(changed, {
-      segmentHashes: {
-        "install:h1:0": sha256("previous heading"),
-        "install:p:0": changed.segments[1]!.sourceHash,
-        "install:removed:0": sha256("removed paragraph"),
-      },
+    [zulu.mirrorPath]: manifestPageFor(zulu),
+    "/docs/victor/": { missingRuns: 1 },
+    [xray.mirrorPath]: manifestPageFor(xray, {
+      segmentHashes: staleHashesFor(xray),
+    }),
+    "/docs/whiskey/": { missingRuns: 0 },
+    "/docs/echo/": { missingRuns: 1 },
+    "/docs/delta/": { missingRuns: 0 },
+    [charlie.mirrorPath]: manifestPageFor(charlie),
+    [bravo.mirrorPath]: manifestPageFor(bravo, {
+      segmentHashes: staleHashesFor(bravo),
     }),
   });
 
-  const plan = planChanges(manifest, [unchanged, changed, added], NEXT_DAY);
+  const plan = planChanges(
+    manifest,
+    [zulu, yankee, xray, charlie, bravo, alpha],
+    NEXT_DAY,
+  );
 
-  expect(plan.add).toEqual(["/docs/alpha/"]);
-  expect(plan.update).toEqual(["/docs/install/"]);
-  expect(plan.unchanged).toEqual(["/docs/zulu/"]);
+  expect(plan.add).toEqual(["/docs/alpha/", "/docs/yankee/"]);
+  expect(plan.update).toEqual(["/docs/bravo/", "/docs/xray/"]);
+  expect(plan.unchanged).toEqual(["/docs/charlie/", "/docs/zulu/"]);
+  expect(plan.pendingRemoval).toEqual(["/docs/delta/", "/docs/whiskey/"]);
+  expect(plan.remove).toEqual(["/docs/echo/", "/docs/victor/"]);
   expect(plan.translationSegmentIds).toEqual([
-    "alpha:h1:0",
-    "install:h1:0",
+    "alpha:a:0",
+    "alpha:z:0",
+    "bravo:a:0",
+    "bravo:z:0",
+    "xray:a:0",
+    "xray:z:0",
+    "yankee:a:0",
+    "yankee:z:0",
   ]);
   expect(Object.keys(plan.pages)).toEqual([
     "/docs/alpha/",
-    "/docs/install/",
+    "/docs/bravo/",
+    "/docs/charlie/",
+    "/docs/xray/",
+    "/docs/yankee/",
     "/docs/zulu/",
   ]);
   expect(Object.keys(plan.nextManifest.pages)).toEqual([
     "/docs/alpha/",
-    "/docs/install/",
+    "/docs/bravo/",
+    "/docs/charlie/",
+    "/docs/delta/",
+    "/docs/whiskey/",
+    "/docs/xray/",
+    "/docs/yankee/",
     "/docs/zulu/",
   ]);
 });
