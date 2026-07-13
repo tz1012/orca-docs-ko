@@ -1,7 +1,38 @@
 import { z } from "zod";
 
 const Sha256Schema = z.string().regex(/^[a-f0-9]{64}$/);
-const MirrorPathSchema = z.string().regex(/^\/.*\/$/);
+
+const isCanonicalMirrorPath = (value: string) => {
+  if (value === "/docs/") return true;
+  if (
+    !value.startsWith("/docs/") ||
+    !value.endsWith("/") ||
+    /[?#\\]/.test(value)
+  ) {
+    return false;
+  }
+
+  const segments = value.slice(1, -1).split("/");
+  if (segments.some((segment) => segment.length === 0)) return false;
+
+  return segments.every((segment) => {
+    try {
+      const decoded = decodeURIComponent(segment);
+      return (
+        decoded !== "." &&
+        decoded !== ".." &&
+        !decoded.includes("/") &&
+        !decoded.includes("\\")
+      );
+    } catch {
+      return false;
+    }
+  });
+};
+
+const MirrorPathSchema = z
+  .string()
+  .refine(isCanonicalMirrorPath, "Expected a canonical /docs/ mirror path");
 
 export const SegmentKindSchema = z.enum([
   "heading",
@@ -83,20 +114,32 @@ export type ManifestPage = z.infer<typeof ManifestPageSchema>;
 export const SourceManifestSchema = z.strictObject({
   schemaVersion: z.literal(1),
   generatedAt: z.iso.datetime(),
-  pages: z.record(z.string(), ManifestPageSchema),
+  pages: z.record(MirrorPathSchema, ManifestPageSchema),
+}).superRefine(({ pages }, context) => {
+  for (const [mirrorPath, page] of Object.entries(pages)) {
+    if (mirrorPath !== page.mirrorPath) {
+      context.addIssue({
+        code: "custom",
+        message: "Manifest page key must match page.mirrorPath",
+        path: ["pages", mirrorPath, "mirrorPath"],
+      });
+    }
+  }
 });
 
 export type SourceManifest = z.infer<typeof SourceManifestSchema>;
 
 export const TranslationEntrySchema = z.strictObject({
   sourceHash: Sha256Schema,
-  translated: z.string().trim().min(1),
+  translated: z
+    .string()
+    .refine((value) => value.trim().length > 0, "Translation cannot be empty"),
 });
 
 export const TranslationFileSchema = z.strictObject({
   sourceUrl: z.url(),
   mirrorPath: MirrorPathSchema,
-  entries: z.record(z.string(), TranslationEntrySchema),
+  entries: z.record(z.string().min(1), TranslationEntrySchema),
 });
 
 export type TranslationEntry = z.infer<typeof TranslationEntrySchema>;
