@@ -211,13 +211,11 @@ const extractAdjacentUrl = (
   });
   if (result !== null) return result;
 
-  const navigationRegions = $(
-    "nav, [role='navigation'], [data-pagination], [data-page-navigation], [aria-label], [class]",
+  const explicitPaginationRegions = $(
+    "[data-pagination], [data-page-navigation], [aria-label], [class]",
   ).filter((_index, element) => {
     const region = $(element);
     if (
-      element.tagName === "nav" ||
-      region.attr("role") === "navigation" ||
       region.attr("data-pagination") !== undefined ||
       region.attr("data-page-navigation") !== undefined
     ) {
@@ -229,7 +227,20 @@ const extractAdjacentUrl = (
       ),
     );
   });
-  const navigationAnchors = navigationRegions.find("a[href]");
+  const mainContentRegions = $(
+    "main nav, main [role='navigation'], article nav, article [role='navigation']",
+  ).filter((_index, element) => {
+    const region = $(element);
+    const excluded = region.closest(
+      "header, aside, [data-sidebar], [data-docs-sidebar], [data-navigation-sidebar]",
+    );
+    if (excluded.length > 0) return false;
+    return !/\b(sidebar|global|site navigation)\b/i.test(
+      visibleText(
+        `${region.attr("aria-label") ?? ""} ${region.attr("class") ?? ""}`,
+      ),
+    );
+  });
   const isControlLabel = (label: string) => {
     if (relation === "previous") {
       return (
@@ -243,20 +254,26 @@ const extractAdjacentUrl = (
       /^\S.+\s*(?:→|›|»)$/.test(label)
     );
   };
-  navigationAnchors.each((_index, element) => {
-    if (result !== null) return;
-    const anchor = $(element);
-    const labels = [
-      anchor.attr("aria-label") ?? "",
-      anchor.attr("title") ?? "",
-      anchor.text(),
-    ]
-      .map(visibleText)
-      .filter((label) => label.length > 0);
-    if (!labels.some(isControlLabel)) return;
-    const href = anchor.attr("href");
-    if (href !== undefined) result = canonicalDocsUrl(href, sourceUrl);
-  });
+  for (const navigationAnchors of [
+    explicitPaginationRegions.find("a[href]"),
+    mainContentRegions.find("a[href]"),
+  ]) {
+    navigationAnchors.each((_index, element) => {
+      if (result !== null) return;
+      const anchor = $(element);
+      const labels = [
+        anchor.attr("aria-label") ?? "",
+        anchor.attr("title") ?? "",
+        anchor.text(),
+      ]
+        .map(visibleText)
+        .filter((label) => label.length > 0);
+      if (!labels.some(isControlLabel)) return;
+      const href = anchor.attr("href");
+      if (href !== undefined) result = canonicalDocsUrl(href, sourceUrl);
+    });
+    if (result !== null) return result;
+  }
   return result;
 };
 

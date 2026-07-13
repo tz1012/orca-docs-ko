@@ -96,6 +96,23 @@ describe("Markdown protection", () => {
     expect(restoreProtected(result.markdown, result.map)).toBe(source);
   });
 
+  test("protects version and multiword commands, short flags, and filenames without overlap", () => {
+    const source =
+      "Run orca --version, then orca agent run with -v from C:\\orca using package.json and orca.config.yaml.";
+
+    const result = protectMarkdown(source);
+
+    expect(Object.values(result.map)).toEqual([
+      "orca --version",
+      "orca agent run",
+      "-v",
+      "C:\\orca",
+      "package.json",
+      "orca.config.yaml",
+    ]);
+    expect(restoreProtected(result.markdown, result.map)).toBe(source);
+  });
+
   test("protects valid longer closing fences with independent indentation", () => {
     const source = [
       "   ````shell",
@@ -259,6 +276,44 @@ describe("semantic page extraction", () => {
     expect(first.pageHash).not.toBe(second.pageHash);
   });
 
+  test("protects a Turndown-escaped environment variable end to end", () => {
+    const page = extractPage(
+      input("<main><h1>Config</h1><p>Set ORCA_HOME before launch.</p></main>"),
+    );
+    const paragraph = page.segments.find(
+      (segment) => segment.kind === "paragraph",
+    );
+
+    expect(paragraph?.source).toBe("Set ORCA_PROTECTED_0001 before launch.");
+    expect(paragraph?.protected).toEqual({
+      ORCA_PROTECTED_0001: "ORCA\\_HOME",
+    });
+    expect(
+      restoreProtected(paragraph?.source ?? "", paragraph?.protected ?? {}),
+    ).toBe("Set ORCA\\_HOME before launch.");
+  });
+
+  test("protects commands, short flags, Windows paths, and filenames after extraction", () => {
+    const page = extractPage(
+      input(
+        "<main><h1>CLI</h1><p>Run orca --version with -v from C:\\orca using package.json.</p></main>",
+      ),
+    );
+    const paragraph = page.segments.find(
+      (segment) => segment.kind === "paragraph",
+    );
+
+    expect(Object.values(paragraph?.protected ?? {})).toEqual([
+      "orca --version",
+      "-v",
+      "C:\\\\orca",
+      "package.json",
+    ]);
+    expect(
+      restoreProtected(paragraph?.source ?? "", paragraph?.protected ?? {}),
+    ).toBe("Run orca --version with -v from C:\\\\orca using package.json.");
+  });
+
   test("ignores Next.js prose and uses an exact pagination control label", () => {
     const page = extractPage(
       input(`
@@ -288,6 +343,45 @@ describe("semantic page extraction", () => {
     expect(page.nextSourceUrl).toBe(
       "https://www.onorca.dev/docs/first-session",
     );
+  });
+
+  test("does not let earlier sidebar or global Next steps links beat pagination", () => {
+    const page = extractPage(
+      input(`
+        <header><nav><a href="/docs/global-next">Next steps</a></nav></header>
+        <nav data-sidebar><a href="/docs/sidebar-next">Next steps</a></nav>
+        <main><article><h1>Install</h1></article></main>
+        <nav aria-label="Pagination">
+          <a href="/docs/first-session">Next: First session</a>
+        </nav>
+      `),
+    );
+
+    expect(page.nextSourceUrl).toBe(
+      "https://www.onorca.dev/docs/first-session",
+    );
+  });
+
+  test("preserves marked first/last-page and main-content single controls", () => {
+    const first = extractPage(
+      input(`
+        <main><h1>First</h1></main>
+        <div data-pagination><a href="/docs/second">Next</a></div>
+      `),
+    );
+    const last = extractPage(
+      input(`
+        <main>
+          <article><h1>Last</h1></article>
+          <nav><a href="/docs/previous">← Previous page</a></nav>
+        </main>
+      `),
+    );
+
+    expect(first.previousSourceUrl).toBeNull();
+    expect(first.nextSourceUrl).toBe("https://www.onorca.dev/docs/second");
+    expect(last.previousSourceUrl).toBe("https://www.onorca.dev/docs/previous");
+    expect(last.nextSourceUrl).toBeNull();
   });
 
   test("rejects missing articles, missing h1 headings, and empty output", () => {

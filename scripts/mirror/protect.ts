@@ -92,7 +92,11 @@ const protectSemanticLiterals = (
   );
   INTERNAL_TOKEN_PATTERN.lastIndex = 0;
   const patterns: Array<{ pattern: RegExp; trim: boolean }> = [
-    { pattern: /\borca[ \t]+[a-z][a-z0-9-]*\b/g, trim: false },
+    {
+      pattern:
+        /\borca[ \t]+(?:--[A-Za-z0-9][A-Za-z0-9-]*(?:=(?:"[^"\r\n]*"|'[^'\r\n]*'|[^\s,;!?]+))?|-[A-Za-z0-9]+|(?!(?:with|from|to|and|or|in|on|for|using|then)\b)[a-z][a-z0-9-]*(?:[ \t]+(?!(?:with|from|to|and|or|in|on|for|using|then)\b)[a-z][a-z0-9-]*)?)\b/g,
+      trim: true,
+    },
     {
       pattern:
         /\b(?:GitHub Copilot|Claude Code|Cursor CLI|OpenCode|Codex|ORCA|Orca)\b/g,
@@ -104,8 +108,12 @@ const protectSemanticLiterals = (
       trim: true,
     },
     {
+      pattern: /(?<![\w-])-[A-Za-z0-9]+(?![\w-])/g,
+      trim: false,
+    },
+    {
       pattern:
-        /(?:[A-Za-z]:\\|\\\\)(?:[^\s\\/:*?"<>|,;!?]+\\)+[^\s\\/:*?"<>|,;!?]+/g,
+        /(?:[A-Za-z]:\\+[^\s\\/:*?"<>|,;!?]+(?:\\+[^\s\\/:*?"<>|,;!?]+)*|\\{2,}[^\s\\/:*?"<>|,;!?]+\\+[^\s\\/:*?"<>|,;!?]+(?:\\+[^\s\\/:*?"<>|,;!?]+)*)/g,
       trim: true,
     },
     {
@@ -118,7 +126,12 @@ const protectSemanticLiterals = (
     },
     {
       pattern:
-        /\b(?:[A-Z][A-Z0-9]*(?:_[A-Z0-9]+)+|PATH|HOME|SHELL|USER|TEMP|TMP|PWD)\b/g,
+        /(?<![A-Za-z0-9_./\\-])(?:\.env(?:\.[A-Za-z0-9_-]+)?|(?:[A-Za-z0-9_-]+\.)+(?:json|ya?ml|toml|ini|conf|config|env|properties|m?js|cjs|tsx?|jsx|mdx?|txt|rst|html?|css|scss|sass|less|py|rb|rs|go|java|kts?|swift|c|h|cpp|hpp|cs|sh|bash|zsh|fish|ps1|sql|xml))(?![A-Za-z0-9_-]|\.[A-Za-z0-9])/gi,
+      trim: false,
+    },
+    {
+      pattern:
+        /\b(?:[A-Z][A-Z0-9]*(?:\\?_[A-Z0-9]+)+|PATH|HOME|SHELL|USER|TEMP|TMP|PWD)\b/g,
       trim: false,
     },
   ];
@@ -140,8 +153,8 @@ const protectSemanticLiterals = (
   candidates.sort(
     (left, right) =>
       left.start - right.start ||
-      left.priority - right.priority ||
-      right.end - right.start - (left.end - left.start),
+      right.end - right.start - (left.end - left.start) ||
+      left.priority - right.priority,
   );
 
   let result = "";
