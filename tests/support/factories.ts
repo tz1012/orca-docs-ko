@@ -191,11 +191,19 @@ const fixturePage = (title: string) => `<!doctype html>
 export const fixtureWorkspace = async () => {
   const root = await mkdtemp(join(tmpdir(), "orca-docs-ko-"));
   const manifestPath = join(root, "mirror", "source-manifest.json");
+  const translationRoot = join(root, "mirror", "translations");
   const contentRoot = join(root, "src", "content", "docs");
   const originalManifest = manifestFixture();
 
   await mkdir(join(root, "mirror"), { recursive: true });
+  await mkdir(translationRoot, { recursive: true });
   await mkdir(contentRoot, { recursive: true });
+  await writeFile(join(translationRoot, ".gitkeep"), "", "utf8");
+  await writeFile(
+    join(translationRoot, "README.md"),
+    "# Translation files\n",
+    "utf8",
+  );
   await writeFile(manifestPath, `${JSON.stringify(originalManifest, null, 2)}\n`);
   await writeFile(
     join(contentRoot, "404.md"),
@@ -233,7 +241,7 @@ translationNotice:
     origin: new URL("https://www.onorca.dev"),
     workspaceRoot: root,
     manifestPath,
-    translationRoot: join(root, "mirror", "translations"),
+    translationRoot,
     jobRoot: join(root, ".mirror", "jobs"),
     stagingRoot: join(root, ".mirror", "staging"),
     contentRoot,

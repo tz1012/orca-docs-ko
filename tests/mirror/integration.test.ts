@@ -5,6 +5,7 @@ import {
   rename,
   rm,
   stat,
+  symlink,
   writeFile,
 } from "node:fs/promises";
 import { hostname } from "node:os";
@@ -111,6 +112,20 @@ test("rejects ghost content before promoting the staged state", async () => {
   expect(await workspace.readManifest()).toEqual(workspace.originalManifest);
 });
 
+test("rejects ghost MDX before it can become a public route", async () => {
+  const workspace = await fixtureWorkspace();
+  await prepareMirror(workspace.config);
+  await completeTranslations(workspace);
+  const ghostPath = join(workspace.config.contentRoot, "ghost", "index.mdx");
+  await mkdir(dirname(ghostPath), { recursive: true });
+  await writeFile(ghostPath, "---\ntitle: Ghost\n---\n", "utf8");
+
+  await expect(applyMirror(workspace.config)).rejects.toThrow(
+    /content inventory.*unexpected.*file:ghost\/index\.mdx/i,
+  );
+  expect(await workspace.readManifest()).toEqual(workspace.originalManifest);
+});
+
 test("rejects ghost translations before promoting the staged state", async () => {
   const workspace = await fixtureWorkspace();
   await prepareMirror(workspace.config);
@@ -125,6 +140,57 @@ test("rejects ghost translations before promoting the staged state", async () =>
 
   await expect(applyMirror(workspace.config)).rejects.toThrow(
     /translation inventory.*unexpected.*ghost/i,
+  );
+  expect(await workspace.readManifest()).toEqual(workspace.originalManifest);
+});
+
+test("rejects arbitrary translation files before promotion", async () => {
+  const workspace = await fixtureWorkspace();
+  await prepareMirror(workspace.config);
+  await completeTranslations(workspace);
+  await writeFile(
+    join(workspace.config.translationRoot, "translator-notes.txt"),
+    "not a translation\n",
+    "utf8",
+  );
+
+  await expect(applyMirror(workspace.config)).rejects.toThrow(
+    /translation inventory.*unexpected.*file:translator-notes\.txt/i,
+  );
+  expect(await workspace.readManifest()).toEqual(workspace.originalManifest);
+});
+
+test("rejects unexpected empty directories before promotion", async () => {
+  const workspace = await fixtureWorkspace();
+  await prepareMirror(workspace.config);
+  await completeTranslations(workspace);
+  await mkdir(join(workspace.config.translationRoot, "abandoned"));
+
+  await expect(applyMirror(workspace.config)).rejects.toThrow(
+    /translation inventory.*unexpected.*directory:abandoned/i,
+  );
+  expect(await workspace.readManifest()).toEqual(workspace.originalManifest);
+});
+
+test("rejects an expected content directory junction before rendering through it", async () => {
+  const workspace = await fixtureWorkspace();
+  await prepareMirror(workspace.config);
+  await completeTranslations(workspace);
+  const target = join(workspace.root, "linked-render-target");
+  const sentinel = "do not overwrite through a junction\n";
+  await mkdir(target);
+  await writeFile(join(target, "index.md"), sentinel, "utf8");
+  await symlink(
+    target,
+    join(workspace.config.contentRoot, "install"),
+    process.platform === "win32" ? "junction" : "dir",
+  );
+
+  await expect(applyMirror(workspace.config)).rejects.toThrow(
+    /content inventory.*unexpected.*symbolic-link:install/i,
+  );
+  await expect(readFile(join(target, "index.md"), "utf8")).resolves.toBe(
+    sentinel,
   );
   expect(await workspace.readManifest()).toEqual(workspace.originalManifest);
 });
@@ -175,6 +241,120 @@ test("checks the complete mirror before running the build", async () => {
     translatedSegments: 4,
   });
   expect(builds).toBe(1);
+});
+
+test("check rejects a ghost MDX route before running the build", async () => {
+  const workspace = await fixtureWorkspace();
+  await prepareMirror(workspace.config);
+  await completeTranslations(workspace);
+  await applyMirror(workspace.config);
+  const ghostPath = join(workspace.config.contentRoot, "ghost", "index.mdx");
+  await mkdir(dirname(ghostPath), { recursive: true });
+  await writeFile(ghostPath, "---\ntitle: Ghost\n---\n", "utf8");
+  let builds = 0;
+
+  await expect(
+    checkMirror({
+      ...workspace.config,
+      runBuild: async () => {
+        builds += 1;
+      },
+    }),
+  ).rejects.toThrow(/content inventory.*unexpected.*file:ghost\/index\.mdx/i);
+  expect(builds).toBe(0);
+});
+
+test("check rejects arbitrary translation files before running the build", async () => {
+  const workspace = await fixtureWorkspace();
+  await prepareMirror(workspace.config);
+  await completeTranslations(workspace);
+  await applyMirror(workspace.config);
+  await writeFile(
+    join(workspace.config.translationRoot, "translator-notes.txt"),
+    "not a translation\n",
+    "utf8",
+  );
+  let builds = 0;
+
+  await expect(
+    checkMirror({
+      ...workspace.config,
+      runBuild: async () => {
+        builds += 1;
+      },
+    }),
+  ).rejects.toThrow(
+    /translation inventory.*unexpected.*file:translator-notes\.txt/i,
+  );
+  expect(builds).toBe(0);
+});
+
+test("check rejects a nested junction or symlink before running the build", async () => {
+  const workspace = await fixtureWorkspace();
+  await prepareMirror(workspace.config);
+  await completeTranslations(workspace);
+  await applyMirror(workspace.config);
+  const target = join(workspace.root, "linked-content-target");
+  await mkdir(target);
+  await writeFile(join(target, "index.md"), "linked ghost\n", "utf8");
+  await symlink(
+    target,
+    join(workspace.config.contentRoot, "linked-ghost"),
+    process.platform === "win32" ? "junction" : "dir",
+  );
+  let builds = 0;
+
+  await expect(
+    checkMirror({
+      ...workspace.config,
+      runBuild: async () => {
+        builds += 1;
+      },
+    }),
+  ).rejects.toThrow(
+    /content inventory.*unexpected.*symbolic-link:linked-ghost/i,
+  );
+  expect(builds).toBe(0);
+});
+
+test("rejects an unreferenced asset before promotion", async () => {
+  const workspace = await fixtureWorkspace();
+  await prepareMirror(workspace.config);
+  await completeTranslations(workspace);
+  await mkdir(workspace.config.assetRoot, { recursive: true });
+  await writeFile(
+    join(workspace.config.assetRoot, "unreferenced.bin"),
+    new Uint8Array([1, 2, 3]),
+  );
+
+  await expect(applyMirror(workspace.config)).rejects.toThrow(
+    /asset inventory.*unexpected.*file:unreferenced\.bin/i,
+  );
+  expect(await workspace.readManifest()).toEqual(workspace.originalManifest);
+});
+
+test("check rejects an unreferenced asset before running the build", async () => {
+  const workspace = await fixtureWorkspace();
+  await prepareMirror(workspace.config);
+  await completeTranslations(workspace);
+  await applyMirror(workspace.config);
+  await writeFile(
+    join(workspace.config.assetRoot, "unreferenced.bin"),
+    new Uint8Array([1, 2, 3]),
+  );
+  let builds = 0;
+
+  await expect(
+    checkMirror({
+      ...workspace.config,
+      runBuild: async () => {
+        builds += 1;
+      },
+    }),
+  ).rejects.toThrow(
+    /asset inventory.*unexpected.*file:unreferenced\.bin/i,
+  );
+  expect(builds).toBe(0);
 });
 
 test("rejects an empty sitemap without replacing prior staged work", async () => {
@@ -309,6 +489,27 @@ test("tracks a missing sitemap page separately as pending removal", async () => 
     unchanged: 1,
     pendingRemoval: 1,
   });
+
+  const removalConfig = {
+    ...pendingConfig,
+    client: {
+      ...pendingConfig.client,
+      text: async (url: URL) =>
+        url.pathname === "/docs"
+          ? workspace.config.client.text(url)
+          : pendingConfig.client.text(url),
+    },
+  };
+  await prepareMirror(removalConfig);
+  await completeTranslations(workspace);
+  const removed = await applyMirror(removalConfig);
+  expect(removed).toMatchObject({ pendingRemoval: 0, removed: 1 });
+  await expect(
+    stat(join(workspace.config.contentRoot, "install")),
+  ).rejects.toMatchObject({ code: "ENOENT" });
+  await expect(
+    stat(join(workspace.config.translationRoot, "install")),
+  ).rejects.toMatchObject({ code: "ENOENT" });
 });
 
 test("checks mirrored image hashes and current robots exceptions", async () => {
@@ -392,6 +593,39 @@ test("checks mirrored image hashes and current robots exceptions", async () => {
     }),
   ).rejects.toThrow(/local image hash mismatch/i);
   expect(builds).toBe(1);
+});
+
+test("check reports a missing manifest asset as an inventory mismatch", async () => {
+  const workspace = await fixtureWorkspace();
+  const client = workspace.config.client;
+  const imageConfig = {
+    ...workspace.config,
+    client: {
+      ...client,
+      text: async (url: URL) =>
+        url.pathname === "/docs/install"
+          ? `<!doctype html><main><article>
+              <h1>Install</h1><p>Read the documentation.</p>
+              <img src="/allowed.png" alt="Allowed">
+            </article></main>`
+          : client.text(url),
+    },
+  };
+  await prepareMirror(imageConfig);
+  await completeTranslations(workspace);
+  await applyMirror(imageConfig);
+  const manifest = await workspace.readManifest();
+  const localPath = Object.values(manifest.pages)
+    .flatMap((page) => page.images)
+    .find((image) => image.localPath !== null)!.localPath!;
+  await rm(
+    join(workspace.config.assetRoot, localPath.split("/").at(-1)!),
+    { force: true },
+  );
+
+  await expect(
+    checkMirror({ ...imageConfig, runBuild: async () => undefined }),
+  ).rejects.toThrow(/asset inventory.*missing.*file:/i);
 });
 
 test("does not promote stale robots exceptions on pending pages", async () => {

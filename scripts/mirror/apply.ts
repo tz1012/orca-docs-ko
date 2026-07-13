@@ -4,8 +4,8 @@ import {
   mkdir,
   mkdtemp,
   readFile,
-  readdir,
   rm,
+  rmdir,
   stat,
   writeFile,
 } from "node:fs/promises";
@@ -14,6 +14,11 @@ import { fileURLToPath } from "node:url";
 
 import { canMirrorAsset } from "./discover.js";
 import { sha256 } from "./hash.js";
+import {
+  assertExactInventory,
+  assertNoUnexpectedInventory,
+  expectedFileInventory,
+} from "./inventory.js";
 import {
   translationRelativePath,
   validateReady,
@@ -91,44 +96,6 @@ const cloneDirectory = async (source: string, target: string) => {
 
 const portableRelativePath = (root: string, path: string) =>
   relative(root, path).split(sep).join("/");
-
-const managedInventory = async (
-  root: string,
-  extension: ".md" | ".json",
-) => {
-  const files: string[] = [];
-  const visit = async (directory: string): Promise<void> => {
-    for (const entry of await readdir(directory, { withFileTypes: true })) {
-      const path = join(directory, entry.name);
-      if (entry.isDirectory()) {
-        await visit(path);
-      } else if (entry.name.endsWith(extension)) {
-        files.push(portableRelativePath(root, path));
-      }
-    }
-  };
-  await visit(root);
-  return files.sort();
-};
-
-const assertExactInventory = async (
-  label: "Content" | "Translation",
-  root: string,
-  extension: ".md" | ".json",
-  expectedPaths: ReadonlyArray<string>,
-) => {
-  const expected = [...new Set(expectedPaths)].sort();
-  const actual = await managedInventory(root, extension);
-  const expectedSet = new Set(expected);
-  const actualSet = new Set(actual);
-  const missing = expected.filter((path) => !actualSet.has(path));
-  const unexpected = actual.filter((path) => !expectedSet.has(path));
-  if (missing.length > 0 || unexpected.length > 0) {
-    throw new Error(
-      `${label} inventory mismatch; missing: ${missing.join(", ") || "none"}; unexpected: ${unexpected.join(", ") || "none"}`,
-    );
-  }
-};
 
 export const contentRelativePath = (mirrorPath: string) => {
   const suffix = mirrorPath.slice("/docs/".length, -1);
@@ -260,6 +227,21 @@ const removePage = async (
           `translation path for ${mirrorPath}`,
         );
   await rm(path, { force: true });
+  const resolvedRoot = resolve(root);
+  let directory = dirname(path);
+  while (directory !== resolvedRoot) {
+    try {
+      await rmdir(directory);
+    } catch (error) {
+      if (errorCode(error) === "ENOENT") {
+        directory = dirname(directory);
+        continue;
+      }
+      if (errorCode(error) === "ENOTEMPTY") return;
+      throw error;
+    }
+    directory = dirname(directory);
+  }
 };
 
 const validateImageState = async (
@@ -323,6 +305,42 @@ const applyMirrorUnlocked = async (
   if (!manifestsMatch(currentManifest, snapshot.baseManifest)) {
     throw new Error("Source manifest changed after prepare; run prepare again");
   }
+
+  const nextManifestPages = Object.values(snapshot.plan.nextManifest.pages);
+  const committedPaths = nextManifestPages.map((page) => page.mirrorPath);
+  const transitionalPages = [
+    ...Object.values(currentManifest.pages),
+    ...nextManifestPages,
+  ];
+  const transitionalPaths = transitionalPages.map((page) => page.mirrorPath);
+  await assertNoUnexpectedInventory(
+    "Content",
+    config.contentRoot,
+    expectedFileInventory([
+      "404.md",
+      ...transitionalPaths.map(contentRelativePath),
+    ]),
+  );
+  await assertNoUnexpectedInventory(
+    "Translation",
+    config.translationRoot,
+    expectedFileInventory([
+      ".gitkeep",
+      "README.md",
+      ...transitionalPaths.map(translationRelativePath),
+    ]),
+  );
+  await assertNoUnexpectedInventory(
+    "Asset",
+    config.assetRoot,
+    expectedFileInventory(
+      transitionalPages
+        .flatMap((page) => page.images)
+        .flatMap((image) =>
+          image.localPath === null ? [] : [basename(image.localPath)],
+        ),
+    ),
+  );
 
   const temporaryContent = await temporaryDirectoryFor(config.contentRoot);
   const temporaryTranslations = await temporaryDirectoryFor(
@@ -407,12 +425,10 @@ const applyMirrorUnlocked = async (
       renderedPages.set(mirrorPath, markdown);
     }
 
-    const committedPaths = Object.keys(snapshot.plan.nextManifest.pages);
     await assertExactInventory(
       "Content",
       temporaryContent,
-      ".md",
-      [
+      expectedFileInventory([
         "404.md",
         ...committedPaths.map((mirrorPath) =>
           portableRelativePath(
@@ -420,23 +436,36 @@ const applyMirrorUnlocked = async (
             join(temporaryContent, contentRelativePath(mirrorPath)),
           ),
         ),
-      ],
+      ]),
     );
     await assertExactInventory(
       "Translation",
       temporaryTranslations,
-      ".json",
-      committedPaths.map((mirrorPath) =>
-        portableRelativePath(
-          temporaryTranslations,
-          join(temporaryTranslations, translationRelativePath(mirrorPath)),
+      expectedFileInventory([
+        ".gitkeep",
+        "README.md",
+        ...committedPaths.map((mirrorPath) =>
+          portableRelativePath(
+            temporaryTranslations,
+            join(temporaryTranslations, translationRelativePath(mirrorPath)),
+          ),
         ),
-      ),
+      ]),
+    );
+    const expectedAssets = nextManifestPages
+      .flatMap((page) => page.images)
+      .flatMap((image) =>
+        image.localPath === null ? [] : [basename(image.localPath)],
+      );
+    await assertExactInventory(
+      "Asset",
+      temporaryAssets,
+      expectedFileInventory(expectedAssets),
     );
 
     validateInternalLinks(renderedPages);
     await validateImageState(
-      Object.values(snapshot.plan.nextManifest.pages),
+      nextManifestPages,
       snapshot.robotsText,
       temporaryAssets,
     );

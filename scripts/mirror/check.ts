@@ -1,6 +1,6 @@
 import { spawn, type ChildProcess } from "node:child_process";
-import { readFile, readdir } from "node:fs/promises";
-import { basename, join, relative, resolve, sep } from "node:path";
+import { readFile } from "node:fs/promises";
+import { basename, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { parse as parseYaml } from "yaml";
@@ -8,11 +8,16 @@ import { z } from "zod";
 
 import {
   assertNotice,
+  contentRelativePath,
   validateInternalLinks,
 } from "./apply.js";
 import { canMirrorAsset, discoverDocs } from "./discover.js";
 import { extractPage } from "./extract.js";
 import { sha256 } from "./hash.js";
+import {
+  assertExactInventory,
+  expectedFileInventory,
+} from "./inventory.js";
 import {
   translationRelativePath,
   validateRetainedTranslation,
@@ -179,46 +184,6 @@ const validateImages = async (
   }
 };
 
-const listFiles = async (root: string, extension: string): Promise<string[]> => {
-  let entries;
-  try {
-    entries = await readdir(root, { withFileTypes: true });
-  } catch (error) {
-    if (
-      typeof error === "object" &&
-      error !== null &&
-      "code" in error &&
-      error.code === "ENOENT"
-    ) {
-      return [];
-    }
-    throw error;
-  }
-
-  const files: string[] = [];
-  for (const entry of entries) {
-    const path = join(root, entry.name);
-    if (entry.isDirectory()) {
-      files.push(...(await listFiles(path, extension)));
-    } else if (entry.isFile() && entry.name.endsWith(extension)) {
-      files.push(path);
-    }
-  }
-  return files.sort(compareStrings);
-};
-
-const contentPathForFile = (root: string, file: string) => {
-  const portable = relative(root, file).split(sep).join("/");
-  const suffix = portable === "index.md" ? "" : portable.replace(/\/index\.md$/u, "");
-  return suffix.length === 0 ? "/docs/" : `/docs/${suffix}/`;
-};
-
-const translationPathForFile = (root: string, file: string) => {
-  const portable = relative(root, file).split(sep).join("/");
-  const suffix = portable === "index.json" ? "" : portable.replace(/\/index\.json$/u, "");
-  return suffix.length === 0 ? "/docs/" : `/docs/${suffix}/`;
-};
-
 const NotFoundFrontmatterSchema = z.object({
   title: z.literal("페이지를 찾을 수 없습니다"),
   sourceUrl: z.literal("https://www.onorca.dev/docs"),
@@ -347,46 +312,54 @@ const checkMirrorUnlocked = async (
     }
   }
 
-  const contentFiles = await listFiles(config.contentRoot, ".md");
+  const manifestPages = [...activePages, ...pendingPages];
+  const committedPaths = manifestPages
+    .map((page) => page.mirrorPath)
+    .sort(compareStrings);
+  await assertExactInventory(
+    "Content",
+    config.contentRoot,
+    expectedFileInventory([
+      "404.md",
+      ...committedPaths.map(contentRelativePath),
+    ]),
+  );
+  await assertExactInventory(
+    "Translation",
+    config.translationRoot,
+    expectedFileInventory([
+      ".gitkeep",
+      "README.md",
+      ...committedPaths.map(translationRelativePath),
+    ]),
+  );
+  await assertExactInventory(
+    "Asset",
+    config.assetRoot,
+    expectedFileInventory(
+      manifestPages
+        .flatMap((page) => page.images)
+        .flatMap((image) =>
+          image.localPath === null ? [] : [basename(image.localPath)],
+        ),
+    ),
+  );
+
   const notFoundPath = resolveWithin(
     config.contentRoot,
     resolve(config.contentRoot, "404.md"),
     "not-found content path",
   );
-  const notFoundFile = contentFiles.find((file) => resolve(file) === notFoundPath);
-  if (notFoundFile === undefined) {
-    throw new Error("Missing Korean not-found entry");
-  }
-  parseNotFoundFrontmatter(await readFile(notFoundFile, "utf8"));
-  const unexpectedContent = contentFiles.filter(
-    (file) => resolve(file) !== notFoundPath && basename(file) !== "index.md",
-  );
-  if (unexpectedContent.length > 0) {
-    throw new Error(
-      `Unexpected generated content files: ${unexpectedContent.join(", ")}`,
-    );
-  }
+  parseNotFoundFrontmatter(await readFile(notFoundPath, "utf8"));
 
   const actualContent = new Map<string, string>();
-  for (const file of contentFiles.filter(
-    (candidate) => basename(candidate) === "index.md",
-  )) {
-    const mirrorPath = contentPathForFile(config.contentRoot, file);
-    actualContent.set(mirrorPath, await readFile(file, "utf8"));
-  }
-  const actualTranslations = (
-    await listFiles(config.translationRoot, ".json")
-  ).map((file) => translationPathForFile(config.translationRoot, file));
-  const committedPaths = [...activePaths, ...pendingPages.map((page) => page.mirrorPath)].sort(
-    compareStrings,
-  );
-  if (
-    !sameStrings([...actualContent.keys()].sort(compareStrings), committedPaths)
-  ) {
-    throw new Error("Generated content pages do not match manifest pages");
-  }
-  if (!sameStrings(actualTranslations.sort(compareStrings), committedPaths)) {
-    throw new Error("Translation files do not match manifest pages");
+  for (const mirrorPath of committedPaths) {
+    const path = resolveWithin(
+      config.contentRoot,
+      join(config.contentRoot, contentRelativePath(mirrorPath)),
+      `content path for ${mirrorPath}`,
+    );
+    actualContent.set(mirrorPath, await readFile(path, "utf8"));
   }
 
   const renderedPages = new Map<string, string>();
@@ -437,7 +410,7 @@ const checkMirrorUnlocked = async (
 
   validateInternalLinks(renderedPages);
   await validateImages(
-    [...activePages, ...pendingPages],
+    manifestPages,
     discovery.robotsText,
     config.assetRoot,
   );
@@ -448,7 +421,7 @@ const checkMirrorUnlocked = async (
     throw new Error("Source manifest changed during check; retry validation");
   }
 
-  const images = [...activePages, ...pendingPages].flatMap(
+  const images = manifestPages.flatMap(
     (page) => page.images,
   );
   return {
