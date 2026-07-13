@@ -61,6 +61,9 @@ const sameStrings = (left: readonly string[], right: readonly string[]) =>
   left.length === right.length &&
   left.every((value, index) => value === right[index]);
 
+const normalizeCheckoutLineEndings = (content: string) =>
+  content.replaceAll("\r\n", "\n");
+
 const readManifest = async (path: string): Promise<SourceManifest> =>
   SourceManifestSchema.parse(JSON.parse(await readFile(path, "utf8")));
 
@@ -360,7 +363,10 @@ const checkMirrorUnlocked = async (
       join(config.contentRoot, contentRelativePath(mirrorPath)),
       `content path for ${mirrorPath}`,
     );
-    actualContent.set(mirrorPath, await readFile(path, "utf8"));
+    actualContent.set(
+      mirrorPath,
+      normalizeCheckoutLineEndings(await readFile(path, "utf8")),
+    );
   }
 
   const renderedPages = new Map<string, string>();

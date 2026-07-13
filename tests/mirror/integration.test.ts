@@ -273,6 +273,26 @@ test("checks the complete mirror before running the build", async () => {
   expect(builds).toBe(1);
 });
 
+test("checks rendered content after a Windows CRLF checkout", async () => {
+  const workspace = await fixtureWorkspace();
+  await prepareMirror(workspace.config);
+  await completeTranslations(workspace);
+  await applyMirror(workspace.config);
+  const landingPath = join(
+    workspace.config.contentRoot,
+    contentRelativePath("/docs/"),
+  );
+  const landing = await readFile(landingPath, "utf8");
+  await writeFile(landingPath, landing.replaceAll("\n", "\r\n"), "utf8");
+
+  await expect(
+    checkMirror({
+      ...workspace.config,
+      runBuild: async () => undefined,
+    }),
+  ).resolves.toMatchObject({ discovered: 2, unchanged: 2 });
+});
+
 test("check rejects a ghost MDX route before running the build", async () => {
   const workspace = await fixtureWorkspace();
   await prepareMirror(workspace.config);
