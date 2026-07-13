@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Install ORCA</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+    <script>
+      globalThis.notDocumentation = true;
+    </script>
+  </head>
+  <body>
+    <header><p>Global site header</p></header>
+
+    <article id="fallback-article">
+      <h1>Wrong fallback article</h1>
+    </article>
+
+    <nav data-sidebar aria-label="Documentation">
+      <section data-navigation-group>
+        <h2>Get started</h2>
+        <a href="/docs/install#requirements">Install</a>
+        <a href="/docs/first-session">First session</a>
+        <a href="/pricing">Pricing</a>
+      </section>
+      <section data-navigation-group data-label="Reference">
+        <a href="https://www.onorca.dev/docs/commands">Commands</a>
+        <a href="https://example.com/docs/not-orca">External docs</a>
+      </section>
+    </nav>
+
+    <main>
+      <article>
+        <header><p>Article chrome</p></header>
+        <h1 id="install">Install ORCA</h1>
+        <p>
+          Install the app, run <code>orca open</code>, and read the
+          <a href="./first-session?from=install#launch">first session guide</a>.
+          The release notes live at https://releases.onorca.dev/latest.
+        </p>
+        <p hidden>This hidden paragraph must not be extracted.</p>
+        <p aria-hidden="true">
+          This aria-hidden paragraph must not be extracted.
+        </p>
+
+        <ul>
+          <li>Download the installer.</li>
+          <li>Open the downloaded package.</li>
+        </ul>
+
+        <section>
+          <h2 id="requirements">Requirements</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Platform</th>
+                <th>Version</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>macOS</td>
+                <td>14 or later</td>
+              </tr>
+              <tr>
+                <td>Windows</td>
+                <td>11</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <pre><code class="language-shell">orca open</code></pre>
+
+          <blockquote>Keep ORCA running while an agent works.</blockquote>
+
+          <aside>
+            <strong>Note:</strong> Store projects outside temporary folders.
+          </aside>
+
+          <figure>
+            <img src="./install.png" alt="The ORCA installation screen" />
+            <figcaption>The installer opens on the welcome screen.</figcaption>
+          </figure>
+
+          <img
+            src="/docs/install-success.png"
+            alt="A successful installation"
+          />
+        </section>
+
+        <footer><p>Article footer chrome</p></footer>
+      </article>
+    </main>
+
+    <nav aria-label="Page navigation">
+      <a rel="previous" href="/docs/introduction">Introduction</a>
+      <a aria-label="Next" href="/docs/first-session">First session</a>
+    </nav>
+
+    <footer><p>Global site footer</p></footer>
+  </body>
+</html>
