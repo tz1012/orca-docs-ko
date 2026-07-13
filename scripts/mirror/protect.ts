@@ -7,6 +7,154 @@ export type ProtectedMarkdown = {
   map: Record<string, string>;
 };
 
+type ProtectionCandidate = {
+  start: number;
+  end: number;
+  priority: number;
+};
+
+const protectFencedCode = (
+  markdown: string,
+  protect: (value: string) => string,
+) => {
+  const openingPattern = /^( {0,3})(`{3,}|~{3,})([^\r\n]*)(\r?\n)/gm;
+  const closingPattern = /^( {0,3})(`{3,}|~{3,})([ \t]*)(?=\r?$)/gm;
+  let result = "";
+  let cursor = 0;
+  let opening: RegExpExecArray | null;
+
+  while ((opening = openingPattern.exec(markdown)) !== null) {
+    if (opening.index < cursor) continue;
+    const openingFence = opening[2]!;
+    const info = opening[3]!;
+    if (openingFence.startsWith("`") && info.includes("`")) continue;
+
+    const bodyStart = openingPattern.lastIndex;
+    closingPattern.lastIndex = bodyStart;
+    let closing: RegExpExecArray | null;
+    let acceptedClosing: RegExpExecArray | null = null;
+    while ((closing = closingPattern.exec(markdown)) !== null) {
+      const closingFence = closing[2]!;
+      if (
+        closingFence[0] === openingFence[0] &&
+        closingFence.length >= openingFence.length
+      ) {
+        acceptedClosing = closing;
+        break;
+      }
+    }
+    if (acceptedClosing === null) continue;
+
+    const rawBody = markdown.slice(bodyStart, acceptedClosing.index);
+    const separator = rawBody.match(/\r?\n$/)?.[0] ?? "";
+    const body =
+      separator.length === 0 ? rawBody : rawBody.slice(0, -separator.length);
+    result += markdown.slice(cursor, bodyStart);
+    result += body.length === 0 ? body : protect(body);
+    result += separator;
+    result += acceptedClosing[0];
+    cursor = acceptedClosing.index + acceptedClosing[0].length;
+    openingPattern.lastIndex = cursor;
+  }
+
+  return `${result}${markdown.slice(cursor)}`;
+};
+
+const trimCandidateEnd = (value: string) => {
+  let end = value.length;
+  while (end > 0 && /[.,;:!?]/.test(value[end - 1]!)) end -= 1;
+  for (const [opening, closing] of [
+    ["(", ")"],
+    ["[", "]"],
+    ["{", "}"],
+  ] as const) {
+    while (
+      end > 0 &&
+      value[end - 1] === closing &&
+      value.slice(0, end).split(closing).length >
+        value.slice(0, end).split(opening).length
+    ) {
+      end -= 1;
+    }
+  }
+  return end;
+};
+
+const protectSemanticLiterals = (
+  markdown: string,
+  protect: (value: string) => string,
+) => {
+  const internalRanges = [...markdown.matchAll(INTERNAL_TOKEN_PATTERN)].map(
+    (match) => ({
+      start: match.index,
+      end: match.index + match[0].length,
+    }),
+  );
+  INTERNAL_TOKEN_PATTERN.lastIndex = 0;
+  const patterns: Array<{ pattern: RegExp; trim: boolean }> = [
+    { pattern: /\borca[ \t]+[a-z][a-z0-9-]*\b/g, trim: false },
+    {
+      pattern:
+        /\b(?:GitHub Copilot|Claude Code|Cursor CLI|OpenCode|Codex|ORCA|Orca)\b/g,
+      trim: false,
+    },
+    {
+      pattern:
+        /--[A-Za-z0-9][A-Za-z0-9-]*(?:=(?:"[^"\r\n]*"|'[^'\r\n]*'|[^\s,;!?]+))?/g,
+      trim: true,
+    },
+    {
+      pattern:
+        /(?:[A-Za-z]:\\|\\\\)(?:[^\s\\/:*?"<>|,;!?]+\\)+[^\s\\/:*?"<>|,;!?]+/g,
+      trim: true,
+    },
+    {
+      pattern: /(?:~[\\/]|\.{1,2}[\\/]|\/)[^\s<>`"',;!?]+/g,
+      trim: true,
+    },
+    {
+      pattern: /\b(?:[A-Za-z0-9._-]+[\\/])+(?:[A-Za-z0-9._-]+)\b/g,
+      trim: true,
+    },
+    {
+      pattern:
+        /\b(?:[A-Z][A-Z0-9]*(?:_[A-Z0-9]+)+|PATH|HOME|SHELL|USER|TEMP|TMP|PWD)\b/g,
+      trim: false,
+    },
+  ];
+  const candidates: ProtectionCandidate[] = [];
+  patterns.forEach(({ pattern, trim }, priority) => {
+    for (const match of markdown.matchAll(pattern)) {
+      const start = match.index;
+      const length = trim ? trimCandidateEnd(match[0]) : match[0].length;
+      const end = start + length;
+      if (
+        length === 0 ||
+        internalRanges.some((range) => start < range.end && end > range.start)
+      ) {
+        continue;
+      }
+      candidates.push({ start, end, priority });
+    }
+  });
+  candidates.sort(
+    (left, right) =>
+      left.start - right.start ||
+      left.priority - right.priority ||
+      right.end - right.start - (left.end - left.start),
+  );
+
+  let result = "";
+  let cursor = 0;
+  for (const candidate of candidates) {
+    if (candidate.start < cursor) continue;
+    result += markdown.slice(cursor, candidate.start);
+    result += protect(markdown.slice(candidate.start, candidate.end));
+    cursor = candidate.end;
+  }
+  return `${result}${markdown.slice(cursor)}`;
+};
+
 const protectLinkDestinations = (
   markdown: string,
   protect: (value: string) => string,
@@ -77,23 +225,7 @@ export const protectMarkdown = (markdown: string): ProtectedMarkdown => {
     return internalToken;
   };
 
-  let protectedMarkdown = markdown.replace(
-    /(^|\r?\n)([ \t]*)(`{3,}|~{3,})([^\r\n]*)(\r?\n)([\s\S]*?)(\r?\n)\2\3([ \t]*)(?=\r?\n|$)/g,
-    (
-      match,
-      prefix: string,
-      indentation: string,
-      fence: string,
-      info: string,
-      openingNewline: string,
-      body: string,
-      closingNewline: string,
-      trailing: string,
-    ) =>
-      body.length === 0
-        ? match
-        : `${prefix}${indentation}${fence}${info}${openingNewline}${protect(body)}${closingNewline}${indentation}${fence}${trailing}`,
-  );
+  let protectedMarkdown = protectFencedCode(markdown, protect);
 
   protectedMarkdown = protectedMarkdown.replace(
     /(`+)([^\r\n]*?)\1/g,
@@ -106,7 +238,7 @@ export const protectMarkdown = (markdown: string): ProtectedMarkdown => {
   protectedMarkdown = protectLinkDestinations(protectedMarkdown, protect);
 
   protectedMarkdown = protectedMarkdown.replace(
-    /https?:\/\/[^\s<>\[\]`"']+/gi,
+    /https?:\/\/[^\s<>`"']+/gi,
     (candidate) => {
       let url = candidate;
       let suffix = "";
@@ -127,12 +259,14 @@ export const protectMarkdown = (markdown: string): ProtectedMarkdown => {
   );
 
   protectedMarkdown = protectedMarkdown.replace(
-    /^( {4}|\t)(\S[^\r\n]*)(?=\r?$)/gm,
+    /^((?: {4,}[ \t]*|\t+[ \t]*))(\S[^\r\n]*)(?=\r?$)/gm,
     (_match, indentation: string, command: string) =>
       command.includes("\u0000ORCA_INTERNAL_")
         ? `${indentation}${command}`
         : `${indentation}${protect(command)}`,
   );
+
+  protectedMarkdown = protectSemanticLiterals(protectedMarkdown, protect);
 
   const map: Record<string, string> = {};
   let tokenIndex = 0;

@@ -55,6 +55,86 @@ describe("Markdown protection", () => {
     expect(restoreProtected(result.markdown, result.map)).toBe(source);
   });
 
+  test("protects the reviewer prose probe as separate semantic literals", () => {
+    const source = "Install ORCA with --cwd /tmp/project and ORCA_HOME.";
+
+    const result = protectMarkdown(source);
+
+    expect(Object.values(result.map)).toEqual([
+      "ORCA",
+      "--cwd",
+      "/tmp/project",
+      "ORCA_HOME",
+    ]);
+    expect(restoreProtected(result.markdown, result.map)).toBe(source);
+  });
+
+  test("protects ecosystem names, commands, flags, and cross-platform paths", () => {
+    const source = [
+      "Use Orca, Codex, Claude Code, Cursor CLI, OpenCode, and GitHub Copilot.",
+      "Run orca open with --profile=release from C:\\Users\\orca\\project, ~/.config/orca, ./config/orca.json, ../shared, src/docs.md, and PATH.",
+    ].join("\n");
+
+    const result = protectMarkdown(source);
+
+    expect(Object.values(result.map)).toEqual([
+      "Orca",
+      "Codex",
+      "Claude Code",
+      "Cursor CLI",
+      "OpenCode",
+      "GitHub Copilot",
+      "orca open",
+      "--profile=release",
+      "C:\\Users\\orca\\project",
+      "~/.config/orca",
+      "./config/orca.json",
+      "../shared",
+      "src/docs.md",
+      "PATH",
+    ]);
+    expect(restoreProtected(result.markdown, result.map)).toBe(source);
+  });
+
+  test("protects valid longer closing fences with independent indentation", () => {
+    const source = [
+      "   ````shell",
+      "orca open",
+      "  `````",
+      "",
+      "~~~text",
+      "```",
+      "a marker",
+      " ~~~~",
+    ].join("\n");
+
+    const result = protectMarkdown(source);
+
+    expect(Object.values(result.map)).toEqual(["orca open", "```\na marker"]);
+    expect(restoreProtected(result.markdown, result.map)).toBe(source);
+  });
+
+  test("protects code indented by extra spaces and mixed tab whitespace", () => {
+    const source = "      orca open\n\t  orca status";
+
+    const result = protectMarkdown(source);
+
+    expect(Object.values(result.map)).toEqual(["orca open", "orca status"]);
+    expect(restoreProtected(result.markdown, result.map)).toBe(source);
+  });
+
+  test("protects bracketed IPv6 URLs without losing balanced parentheses", () => {
+    const source = "Visit http://[::1]/docs and https://[2001:db8::1]/a_(b).";
+
+    const result = protectMarkdown(source);
+
+    expect(Object.values(result.map)).toEqual([
+      "http://[::1]/docs",
+      "https://[2001:db8::1]/a_(b)",
+    ]);
+    expect(restoreProtected(result.markdown, result.map)).toBe(source);
+  });
+
   test.each([
     [
       "missing",
@@ -94,7 +174,10 @@ describe("semantic page extraction", () => {
       "figure",
       "image",
     ]);
-    expect(page.segments[0]?.source).toBe("# Install ORCA");
+    expect(page.segments[0]?.source).toBe("# Install ORCA_PROTECTED_0001");
+    expect(page.segments[0]?.protected).toEqual({
+      ORCA_PROTECTED_0001: "ORCA",
+    });
     expect(page.segments.map((segment) => segment.id)).toEqual(
       expect.arrayContaining([
         "/docs/install/:heading:install:0",
@@ -174,6 +257,37 @@ describe("semantic page extraction", () => {
     expect(firstCode?.source).toBe(secondCode?.source);
     expect(firstCode?.sourceHash).not.toBe(secondCode?.sourceHash);
     expect(first.pageHash).not.toBe(second.pageHash);
+  });
+
+  test("ignores Next.js prose and uses an exact pagination control label", () => {
+    const page = extractPage(
+      input(`
+        <main><h1>Install</h1><p><a href="/docs/nextjs">Next.js guide</a></p></main>
+        <nav aria-label="Pagination">
+          <a href="/docs/framework">Next.js guide</a>
+          <a href="/docs/first-session">Next: First session →</a>
+        </nav>
+      `),
+    );
+
+    expect(page.nextSourceUrl).toBe(
+      "https://www.onorca.dev/docs/first-session",
+    );
+  });
+
+  test("accepts destination-and-arrow labels in ARIA pagination regions", () => {
+    const page = extractPage(
+      input(`
+        <main><h1>Install</h1></main>
+        <div aria-label="Pagination">
+          <a href="/docs/first-session">First session →</a>
+        </div>
+      `),
+    );
+
+    expect(page.nextSourceUrl).toBe(
+      "https://www.onorca.dev/docs/first-session",
+    );
   });
 
   test("rejects missing articles, missing h1 headings, and empty output", () => {

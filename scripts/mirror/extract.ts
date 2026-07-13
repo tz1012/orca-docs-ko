@@ -211,19 +211,49 @@ const extractAdjacentUrl = (
   });
   if (result !== null) return result;
 
-  const labelPattern =
-    relation === "previous" ? /\b(previous|prev)\b/i : /\bnext\b/i;
-  anchors.each((_index, element) => {
+  const navigationRegions = $(
+    "nav, [role='navigation'], [data-pagination], [data-page-navigation], [aria-label], [class]",
+  ).filter((_index, element) => {
+    const region = $(element);
+    if (
+      element.tagName === "nav" ||
+      region.attr("role") === "navigation" ||
+      region.attr("data-pagination") !== undefined ||
+      region.attr("data-page-navigation") !== undefined
+    ) {
+      return true;
+    }
+    return /\b(pagination|pager|page navigation)\b/i.test(
+      visibleText(
+        `${region.attr("aria-label") ?? ""} ${region.attr("class") ?? ""}`,
+      ),
+    );
+  });
+  const navigationAnchors = navigationRegions.find("a[href]");
+  const isControlLabel = (label: string) => {
+    if (relation === "previous") {
+      return (
+        /^(?:[←‹«]\s*)?(?:previous|prev)(?:\s*$|\s*[:—-]\s*.+$|\s+.+$)/i.test(
+          label,
+        ) || /^(?:←|‹|«)\s*\S.+$/.test(label)
+      );
+    }
+    return (
+      /^next(?:\s*$|\s*[:—-]\s*.+$|\s+.+$)/i.test(label) ||
+      /^\S.+\s*(?:→|›|»)$/.test(label)
+    );
+  };
+  navigationAnchors.each((_index, element) => {
     if (result !== null) return;
     const anchor = $(element);
-    const label = visibleText(
-      [
-        anchor.attr("aria-label") ?? "",
-        anchor.attr("title") ?? "",
-        anchor.text(),
-      ].join(" "),
-    );
-    if (!labelPattern.test(label)) return;
+    const labels = [
+      anchor.attr("aria-label") ?? "",
+      anchor.attr("title") ?? "",
+      anchor.text(),
+    ]
+      .map(visibleText)
+      .filter((label) => label.length > 0);
+    if (!labels.some(isControlLabel)) return;
     const href = anchor.attr("href");
     if (href !== undefined) result = canonicalDocsUrl(href, sourceUrl);
   });
