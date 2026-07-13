@@ -7,8 +7,8 @@ export default defineConfig({
   base: "/orca-docs-ko",
   integrations: [starlight({
     title: "ORCA 한국어 문서",
-    defaultLocale: "ko",
-    locales: { ko: { label: "한국어", lang: "ko" } },
+    defaultLocale: "root",
+    locales: { root: { label: "한국어", lang: "ko" } },
     sidebar,
     components: {
       PageTitle: "./src/components/PageTitle.astro",

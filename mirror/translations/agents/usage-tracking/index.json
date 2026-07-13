@@ -1,0 +1,38 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/agents/usage-tracking",
+  "mirrorPath": "/docs/agents/usage-tracking/",
+  "entries": {
+    "/docs/agents/usage-tracking/:heading:usage-rate-limit-tracking:0": {
+      "sourceHash": "7b3b277b724339278edc087033bc02a6f530a52841b7f43d5366edee1e7f3685",
+      "translated": "# 사용량 및 속도 제한 추적"
+    },
+    "/docs/agents/usage-tracking/:paragraph:usage-rate-limit-tracking:0": {
+      "sourceHash": "8b6b84d12dc1c8df561f7ec9b4ce474d15cadb0bb508bab44d2f0c66ea56274a",
+      "translated": "ORCA_PROTECTED_0001은 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, Gemini, ORCA_PROTECTED_0004, Kimi Code 및 MiniMax의 로컬 사용 상태를 읽고 이를 상태 표시줄에 표시하므로 에이전트가 중단되기 전에 속도 제한에 얼마나 근접했는지 알 수 있습니다."
+    },
+    "/docs/agents/usage-tracking/:heading:whats-shown:0": {
+      "sourceHash": "d15ce61a6832d2de882e15da9f610660137184aebce2274edba18ab433e72d99",
+      "translated": "## 표시되는 내용"
+    },
+    "/docs/agents/usage-tracking/:list:whats-shown:0": {
+      "sourceHash": "8d45c5715c817844d5c217ea66c7a37266ca76219d61babd57a0afd8764a9fdb",
+      "translated": "- 활성 계정의 계획에 대한 현재 사용량입니다.\n- 5시간, 일일, 주간 및 Claude Fable 주간 창(해당하는 경우)에 대한 재설정 시간입니다.\n- 한도의 80%를 넘으면 경고 칩이 표시됩니다."
+    },
+    "/docs/agents/usage-tracking/:heading:how-it-works:0": {
+      "sourceHash": "5ae438610cf16e31eb584a453d76f45d94f6d1bb14751446ac4e99e3e37c33a8",
+      "translated": "## 작동 방식"
+    },
+    "/docs/agents/usage-tracking/:paragraph:how-it-works:0": {
+      "sourceHash": "d942f6be1ef4ee2bee85cb8b506e8e2e799ad5547aa48739e7a37e25dc3fa2d4",
+      "translated": "ORCA_PROTECTED_0001은 각 에이전트가 디스크(`ORCA_PROTECTED_0002`, `ORCA_PROTECTED_0003` 및 ORCA_PROTECTED_0004에 해당하는 항목)에서 유지 관리하는 로컬 사용 상태를 읽습니다. API 호출이나 추가 인증이 없습니다. 이는 판독값이 상담원 자신의 장부만큼만 최신임을 의미합니다. 숫자는 실시간이 아니라 상담원이 쓸 때 업데이트됩니다."
+    },
+    "/docs/agents/usage-tracking/:heading:multi-account-accounting:0": {
+      "sourceHash": "57a7ad1c0671cede5ca5b4249b764c9a69fd46ceaee2c714302e1c2c96fbb9d7",
+      "translated": "## 다중 계정 회계"
+    },
+    "/docs/agents/usage-tracking/:paragraph:multi-account-accounting:0": {
+      "sourceHash": "d62f94ee040a055f197251da5cb7d3b7d61dc4cca6c21164b6388b62c337d389",
+      "translated": "상태 표시줄에는 항상 *활성* 계정이 반영됩니다. 구성된 다른 계정은 고유한 사용법과 함께 계정 전환기에 표시됩니다."
+    }
+  }
+}

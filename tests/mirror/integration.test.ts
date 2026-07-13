@@ -15,6 +15,7 @@ import { expect, test } from "vitest";
 
 import {
   applyMirror,
+  contentRelativePath,
   validateInternalLinks,
 } from "../../scripts/mirror/apply.js";
 import {
@@ -87,6 +88,29 @@ const completeTranslations = async (
     );
   }
 };
+
+test("places generated entries under the docs route prefix", () => {
+  expect(contentRelativePath("/docs/")).toBe("docs.md");
+  expect(contentRelativePath("/docs/install/")).toBe(
+    join("docs", "install.md"),
+  );
+});
+
+test("migrates previously generated root entries into the docs route prefix", async () => {
+  const workspace = await fixtureWorkspace();
+  const legacyPath = join(workspace.config.contentRoot, "install", "index.md");
+  await mkdir(dirname(legacyPath), { recursive: true });
+  await writeFile(legacyPath, "legacy generated content\n", "utf8");
+  await prepareMirror(workspace.config);
+  await completeTranslations(workspace);
+
+  await applyMirror(workspace.config);
+
+  await expect(stat(legacyPath)).rejects.toMatchObject({ code: "ENOENT" });
+  await expect(
+    stat(join(workspace.config.contentRoot, "docs", "install.md")),
+  ).resolves.toBeDefined();
+});
 
 test("does not promote partial or invalid output", async () => {
   const workspace = await fixtureWorkspace();
@@ -212,7 +236,13 @@ test("promotes a complete translated snapshot as one verified state", async () =
     "/docs/install/",
   ]);
   await expect(
-    readFile(join(workspace.config.contentRoot, "install", "index.md"), "utf8"),
+    readFile(
+      join(
+        workspace.config.contentRoot,
+        contentRelativePath("/docs/install/"),
+      ),
+      "utf8",
+    ),
   ).resolves.toContain("한국어 설명입니다.");
   await expect(readFile(workspace.config.sidebarPath, "utf8")).resolves.toContain(
     "한국어 문서",
@@ -595,6 +625,48 @@ test("checks mirrored image hashes and current robots exceptions", async () => {
   expect(builds).toBe(1);
 });
 
+test("keeps twenty robots-disallowed GIFs remote across repeated prepare runs", async () => {
+  const workspace = await fixtureWorkspace();
+  const client = workspace.config.client;
+  const blockedImages = Array.from(
+    { length: 10 },
+    (_, index) => `<img src="/docs/blocked-${index}.gif" alt="Blocked ${index}">`,
+  ).join("\n");
+  const config = {
+    ...workspace.config,
+    client: {
+      text: async (url: URL) => {
+        if (url.pathname === "/robots.txt") {
+          return "User-agent: *\nDisallow: /docs/*.gif";
+        }
+        if (url.pathname === "/docs" || url.pathname === "/docs/install") {
+          return `<!doctype html><main><article><h1>Docs</h1>${blockedImages}</article></main>`;
+        }
+        return client.text(url);
+      },
+      bytes: async (url: URL) => {
+        throw new Error(`Blocked GIF must not be downloaded: ${url.href}`);
+      },
+    },
+  };
+
+  for (let run = 0; run < 2; run += 1) {
+    const result = await prepareMirror(config);
+    expect(result).toMatchObject({ localImages: 0, remoteImages: 20 });
+    const snapshot = JSON.parse(
+      await readFile(join(config.stagingRoot, "snapshot.json"), "utf8"),
+    ) as { plan: { pages: Record<string, { images: Array<{ robotsRemote: boolean }> }> } };
+    expect(
+      Object.values(snapshot.plan.pages).flatMap((page) => page.images),
+    ).toHaveLength(20);
+    expect(
+      Object.values(snapshot.plan.pages)
+        .flatMap((page) => page.images)
+        .every((image) => image.robotsRemote),
+    ).toBe(true);
+  }
+});
+
 test("check reports a missing manifest asset as an inventory mismatch", async () => {
   const workspace = await fixtureWorkspace();
   const client = workspace.config.client;
@@ -681,8 +753,7 @@ test("does not build when notice metadata is invalid", async () => {
   await applyMirror(workspace.config);
   const contentPath = join(
     workspace.config.contentRoot,
-    "install",
-    "index.md",
+    contentRelativePath("/docs/install/"),
   );
   await writeFile(
     contentPath,
@@ -717,6 +788,35 @@ test("does not treat protected code examples as internal links", () => {
     [
       "/docs/",
       "```sh\ncurl https://www.onorca.dev/docs/example-only\n```\n\n`/docs/inline-example`",
+    ],
+  ]);
+
+  expect(() => validateInternalLinks(pages)).not.toThrow();
+});
+
+test("does not treat remote Markdown image destinations as internal page links", () => {
+  const imageOnly = new Map([
+    [
+      "/docs/",
+      "![Orca window](https://www.onorca.dev/docs/orca-split-screen.gif)",
+    ],
+  ]);
+  const brokenLink = new Map([
+    [
+      "/docs/",
+      "[Missing page](https://www.onorca.dev/docs/missing-page)",
+    ],
+  ]);
+
+  expect(() => validateInternalLinks(imageOnly)).not.toThrow();
+  expect(() => validateInternalLinks(brokenLink)).toThrow(/broken internal link/i);
+});
+
+test("does not treat a docs-shaped path on another host as an internal link", () => {
+  const pages = new Map([
+    [
+      "/docs/",
+      "[Claude Code](https://docs.anthropic.com/claude/docs/claude-code)",
     ],
   ]);
 
@@ -1125,8 +1225,7 @@ test("apply rejects altered public Markdown for a retained page", async () => {
   const fixture = await prepareProtectedPendingPage();
   const contentPath = join(
     fixture.workspace.config.contentRoot,
-    "install",
-    "index.md",
+    contentRelativePath("/docs/install/"),
   );
   await writeFile(
     contentPath,
@@ -1144,8 +1243,7 @@ test("check rejects altered public Markdown for a retained page", async () => {
   await applyMirror(fixture.pendingConfig);
   const contentPath = join(
     fixture.workspace.config.contentRoot,
-    "install",
-    "index.md",
+    contentRelativePath("/docs/install/"),
   );
   await writeFile(
     contentPath,

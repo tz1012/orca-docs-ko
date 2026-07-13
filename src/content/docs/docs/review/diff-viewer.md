@@ -1,0 +1,37 @@
+---
+title: "차이점 뷰어"
+sourceUrl: https://www.onorca.dev/docs/review/diff-viewer
+checkedAt: "2026-07-13T08:43:49.755Z"
+editUrl: false
+prev: /orca-docs-ko/docs/agents/hooks-memory/
+next: /orca-docs-ko/docs/review/annotate-ai-diff/
+translationNotice:
+  title: "비공식 한국어 번역"
+  message: "이 문서는 ORCA 공식 문서의 비공식 한국어 번역입니다. 내용이 다를 경우 원문이 우선합니다."
+  rights: "원본 문서와 이미지의 권리는 Lovecast Inc. 및 각 권리자에게 있습니다."
+---
+
+Orca의 diff 뷰어는 AI 생성 코드를 잠깐 살펴보는 것이 아니라 진지하게 검토하도록 설계되었습니다. 모든 작업 트리에는 시작부터 참조에 대한 내장 차이점이 있습니다.
+
+## 기능
+
+- 스테이지된 파일, 스테이지되지 않은 파일, 추적되지 않은 모든 파일에 대한 `Combined diff`(결합된 diff).
+- 양쪽 `Line numbers`(줄 번호), 전환 가능.
+- `Image diffs`(이미지 차이) — 바이너리 이미지에 대한 병렬, 스와이프 및 어니언 스킨 모드.
+- 3방향 보기 및 인라인 해결 기능을 갖춘 `Merge-conflict UI`(병합 충돌 UI).
+- `Staging by hunk or line`(덩어리 또는 줄별 스테이징) — `git add -p`과 동일하지만 시각적입니다.
+
+## 범위 지정
+
+diff는 기본적으로 작업 트리의 시작 참조에 대한 변경 사항을 표시합니다. diff 도구 모음에서 커밋, 브랜치 또는 기본 참조에 대한 비교로 전환할 수 있습니다.
+
+## 단어 줄 바꿈
+
+diff 단어 줄 바꿈이 켜져 있으면 긴 줄이 제자리에 배치되므로 넓은 diff는 가로 스크롤 없이 위에서 아래로 읽혀집니다. 기본적으로 꺼져 있습니다. diff 편집기 헤더의 **⋯** 작업 메뉴에서 **단어 줄 바꿈**을 전환하거나 `Settings → General → Diff Word Wrap`(설정 → 일반 → Diff 단어 줄 바꿈)에서 전역 기본값을 설정합니다. 두 컨트롤 모두 동일한 설정을 공유합니다. 즉, 편집기에서 전환하면 모든 위치에서 반전됩니다.
+
+## 키보드 단축키
+
+- `j` / `k` — 다음/이전 변경 파일.
+- `n` / `p` — 다음/이전 덩어리.
+- `s` — 커서 아래에 덩어리를 준비합니다.
+- `c` — 댓글을 시작합니다([AI Diff 주석 달기](/orca-docs-ko/docs/review/annotate-ai-diff/)).

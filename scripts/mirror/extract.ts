@@ -334,9 +334,12 @@ export const extractPage = (input: ExtractPageInput): SourcePage => {
 
   article
     .find(
-      "script, style, header, footer, [hidden], [aria-hidden='true'], [inert]",
+      "script, style, footer, [hidden], [aria-hidden='true'], [inert]",
     )
     .remove();
+  article.find("header").each((_index, element) => {
+    if ($(element).find("h1").length === 0) $(element).remove();
+  });
   if (article.find("h1").length === 0) {
     throw new Error(
       `Documentation article is missing an h1: ${sourceUrl.href}`,

@@ -1,0 +1,274 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/cli/reference",
+  "mirrorPath": "/docs/cli/reference/",
+  "entries": {
+    "/docs/cli/reference/:heading:orca-cli-reference:0": {
+      "sourceHash": "300f0bddde9ab2ce5271dab319846cf6fb0a63d97863cea7fe0fe52302765668",
+      "translated": "# ORCA_PROTECTED_0001 CLI 참조"
+    },
+    "/docs/cli/reference/:paragraph:orca-cli-reference:0": {
+      "sourceHash": "010479f344216510afe60debbf6f094ca1c099479425791ebb37bfbd01c57a70",
+      "translated": "셸에서 ORCA_PROTECTED_0001을 구동하기 위한 명령, 선택기 및 에이전트 친화적인 패턴입니다."
+    },
+    "/docs/cli/reference/:paragraph:orca-cli-reference:1": {
+      "sourceHash": "fd9a878d7716084cbbb981efe5b19b2e1d816518eb4c8875f1abe0d4153c1f90",
+      "translated": "`ORCA_PROTECTED_0001` CLI는 실행 중인 ORCA_PROTECTED_0002 런타임과 통신합니다. 셸 스크립트나 에이전트가 작업 트리를 검사하고, 터미널을 실행하고, 파일을 열고, 내장 브라우저를 자동화하거나 진행 상황을 ORCA_PROTECTED_0003에 다시 보고해야 할 때 이 기능을 사용하세요."
+    },
+    "/docs/cli/reference/:heading:verify-the-runtime:0": {
+      "sourceHash": "91774b33fa5991edc7659617bd79e37cb0f970f5654c8752b4d9c2a587dfd213",
+      "translated": "## 런타임 확인"
+    },
+    "/docs/cli/reference/:paragraph:verify-the-runtime:0": {
+      "sourceHash": "086d21cdb08f60d8a3640367c03ccda9de1b9b4c5e86a84a666f4e3b10438f49",
+      "translated": "[설정 -> 실험 -> CLI](ORCA_PROTECTED_0001)에서 CLI를 등록한 후 ORCA_PROTECTED_0002에 도달할 수 있는지 확인하세요."
+    },
+    "/docs/cli/reference/:code:verify-the-runtime:0": {
+      "sourceHash": "595bb184377f99db39942e74a1073f96f380701fb0536a32628e8680d4ebf024",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:verify-the-runtime:1": {
+      "sourceHash": "b9219105d78edea33ee164afe382e21a748fc555d244e369f39aa7171640bf3a",
+      "translated": "ORCA_PROTECTED_0001이 아직 실행되고 있지 않은 경우:"
+    },
+    "/docs/cli/reference/:code:verify-the-runtime:1": {
+      "sourceHash": "4db0e00d1b42d2da4be832eb9afb965083ecb957125a403469c29fccdc619382",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:verify-the-runtime:2": {
+      "sourceHash": "6c4eee0b641e94949bcdb80fea35ff32d6cc975232f6b8b946928101db19d78d",
+      "translated": "다른 도구가 결과를 구문 분석할 때 `ORCA_PROTECTED_0001`을 사용하세요. 사람이 읽을 수 있는 출력은 빠른 터미널 점검을 위한 것입니다."
+    },
+    "/docs/cli/reference/:heading:selectors:0": {
+      "sourceHash": "9f3d6564712570a6d574fce84d85ea2dfda04bc9b4964783ae89dfcc7aa82778",
+      "translated": "## 선택자"
+    },
+    "/docs/cli/reference/:paragraph:selectors:0": {
+      "sourceHash": "62e380b71ed55a007de8b944398f517a40121e3c66706d00f7a9881647e73d1e",
+      "translated": "대부분의 명령은 긴 ID를 요구하는 대신 선택기를 허용합니다."
+    },
+    "/docs/cli/reference/:code:selectors:0": {
+      "sourceHash": "1aabf28c23892a161bc7de77f0cc45bf4679abe8a2d415080fc20aebce6aa6c9",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:selectors:1": {
+      "sourceHash": "f063846d25405c9fff47e716726c0a404ddf2572c88e984bc8203505d39017a4",
+      "translated": "`ORCA_PROTECTED_0001` 및 `ORCA_PROTECTED_0002`는 셸의 현재 디렉터리 또는 터미널 컨텍스트에서 바깥쪽 ORCA_PROTECTED_0003 관리 작업 트리를 확인합니다. 대상 작업 트리 외부에서 실행될 수 있는 스크립트에서 명시적 선택기를 사용하십시오."
+    },
+    "/docs/cli/reference/:heading:runtime-commands:0": {
+      "sourceHash": "173f67b66091bda5996e57dbf91045ea144a4e222b0bafaf3e5207700c7eb43a",
+      "translated": "## 런타임 명령"
+    },
+    "/docs/cli/reference/:code:runtime-commands:0": {
+      "sourceHash": "f6617b7e286a4d0b02cd6fb17926d5178de1d8880f23325a03a55737edfd9138",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:runtime-commands:0": {
+      "sourceHash": "1d07917d47492f7520b72786785fe1f828bc21ee5d1a6ec7b3b24735782ac14c",
+      "translated": "`ORCA_PROTECTED_0001`은 데스크톱 창을 열지 않고 포그라운드에서 런타임 서버를 시작합니다. [원격 ORCA_PROTECTED_0002 서버](ORCA_PROTECTED_0003) 또는 헤드리스 환경에 사용하고 `ORCA_PROTECTED_0004`로 중지합니다."
+    },
+    "/docs/cli/reference/:heading:repos:0": {
+      "sourceHash": "34aab32611d3888eac3f632cafd7e40d7ed8d19c836ef77296ac245f300d4215",
+      "translated": "## 저장소"
+    },
+    "/docs/cli/reference/:code:repos:0": {
+      "sourceHash": "7cd29ba89fb0908f45ef097c64c2d969972a92a2932c47b6c1385da185f6d17a",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:repos:0": {
+      "sourceHash": "a705e80a47be3302ed05e3dc1f38226b17199599035d94070dfd7e59458d62e3",
+      "translated": "많은 작업 트리를 생성하기 전에 저장소 기본 참조를 설정하여 기본적으로 새 작업이 올바른 위치에서 분기되도록 합니다."
+    },
+    "/docs/cli/reference/:heading:worktrees:0": {
+      "sourceHash": "230887445de26eacadeb21b13e9e3b94bf983559e1c5af1032f435e72146883e",
+      "translated": "## 작업 트리"
+    },
+    "/docs/cli/reference/:code:worktrees:0": {
+      "sourceHash": "8b9c34b7f1e905a5123cceb3e0809dbb5ed40661d3013eadecc3675910d5d832",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:worktrees:0": {
+      "sourceHash": "4b3e73a1207192d9a0b9d90145145508e0b33fc9d5b61b52057154aad56db80a",
+      "translated": "ORCA_PROTECTED_0001`이 ORCA_PROTECTED_0002 관리 작업 트리 내부에서 실행되면 ORCA_PROTECTED_0003은 관계를 유추할 수 있을 때 새 작업 트리를 하위 작업 트리로 기록합니다. 명시적으로 하려면 'ORCA_PROTECTED_0004'를 전달하고 새 작업이 독립적인 경우에는 'ORCA_PROTECTED_0005'를 전달합니다."
+    },
+    "/docs/cli/reference/:paragraph:worktrees:1": {
+      "sourceHash": "d89b8780a7716579e9c75eb2a60ed45dce3c9caaf6d64ef9c2af943bf91db352",
+      "translated": "에이전트 시작 플래그:"
+    },
+    "/docs/cli/reference/:code:worktrees:1": {
+      "sourceHash": "10845b90279df035617495c689c00d52a3bb730c31b845970d05f6226d68e603",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:worktrees:2": {
+      "sourceHash": "e3a3a15aaa690f14e7e2eee84be1bdaf099de72e00967a7906aec87e3ceb00b4",
+      "translated": "'ORCA_PROTECTED_0001'은 첫 번째 터미널에서 선택한 에이전트를 시작합니다. `ORCA_PROTECTED_0002`는 해당 에이전트에 초기 작업을 보냅니다. `ORCA_PROTECTED_0003`은 저장소 설정 후크를 제어합니다. `ORCA_PROTECTED_0004`는 저장소 정책을 따릅니다."
+    },
+    "/docs/cli/reference/:heading:terminals:0": {
+      "sourceHash": "dab8b31de6469c29d660c870ee1181727d0ef95d8150857f0f3c18fe23d366e5",
+      "translated": "## 터미널"
+    },
+    "/docs/cli/reference/:code:terminals:0": {
+      "sourceHash": "8d6c07d7c1a9a1a5a585fb1879706eebc46da2e1e322d9a958dfdce367083cb6",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:terminals:0": {
+      "sourceHash": "65f20ce72641235475e5f99bc9d6f014c5b962895d28626ab10e6738ba0d5bf7",
+      "translated": "현재 작업 트리의 활성 터미널을 대상으로 하려면 'ORCA_PROTECTED_0001'을 생략하세요. 단말기가 무엇을 기다리고 있는지 확실하지 않은 경우 보내기 전에 읽어보십시오."
+    },
+    "/docs/cli/reference/:aside:terminals:0": {
+      "sourceHash": "c2799e333be0254e4536a084fe683c31e40e6db6f340b900242b9cd5dd663141",
+      "translated": "터미널 핸들\n\n터미널 핸들은 런타임 범위입니다. ORCA_PROTECTED_0001이 다시 시작되거나 명령이 오래된 터미널 핸들을 보고하는 경우 'ORCA_PROTECTED_0002'를 실행하고 핸들을 다시 획득하세요."
+    },
+    "/docs/cli/reference/:paragraph:terminals:1": {
+      "sourceHash": "e6c46ee7986bce07b895825d7bfe19c7b2cd4de6a7017d62c3f57dd35c6aa126",
+      "translated": "긴 출력의 경우 커서 읽기를 사용하십시오. 한 번의 읽기에서 `ORCA_PROTECTED_0001`을 저장한 다음 `ORCA_PROTECTED_0002`와 함께 다시 전달하여 새 출력만 가져옵니다."
+    },
+    "/docs/cli/reference/:heading:files:0": {
+      "sourceHash": "c55f78cb1186e8e93dac63668e9ae9c7cd14b5a8ad73c342e7b8d95765d17d28",
+      "translated": "## 파일"
+    },
+    "/docs/cli/reference/:code:files:0": {
+      "sourceHash": "729fc4fc19ca67abb090cda23575f3ef00ab196db6015f59b720f5206ef7a678",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:files:0": {
+      "sourceHash": "5e938ad90c63b2c360e6e4e28f9f21861acee89dc9a5bad5088c6e11a6bc4667",
+      "translated": "경로는 선택한 작업 트리를 기준으로 합니다. `ORCA_PROTECTED_0001`은 git 상태를 읽고 편집, 비교 또는 두 모드 모두에서 변경된 파일을 엽니다."
+    },
+    "/docs/cli/reference/:heading:built-in-browser:0": {
+      "sourceHash": "8346d04a916d7f124a635e6a781ddced6c26adbf365df40ee515938688734d38",
+      "translated": "## 내장 브라우저"
+    },
+    "/docs/cli/reference/:paragraph:built-in-browser:0": {
+      "sourceHash": "ffb401b5126a788bbade73abcee6bc037fdd9c8378f827e721ccff550bd48e84",
+      "translated": "브라우저 명령은 선택한 작업 트리에 대한 ORCA_PROTECTED_0001의 내장 브라우저 탭을 제어합니다. Chrome, Safari 또는 ORCA_PROTECTED_0002 데스크톱 UI를 제어하지 않습니다."
+    },
+    "/docs/cli/reference/:paragraph:built-in-browser:1": {
+      "sourceHash": "433fa7b95109dfb9a6a1eaab6b9765e3e2296d77da5d7e4747e5c23d714e2aec",
+      "translated": "스냅샷 -> 작업 -> 스냅샷 루프를 사용하세요."
+    },
+    "/docs/cli/reference/:code:built-in-browser:0": {
+      "sourceHash": "a5a8839f49e95eae7ac342e9986a1e8fc6ad2ecf16a11591e06b8d5ca5505759",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:built-in-browser:2": {
+      "sourceHash": "0812fedf4e29fe7c5d05b6489c4d5d8285d074e583689bfec1953854ce4eeabc",
+      "translated": "`ORCA_PROTECTED_0001`과 같은 참조는 `ORCA_PROTECTED_0002`에서 나옵니다. 탐색, 탭 전환, 페이지를 변경하는 클릭 및 오래된 참조 오류 후에 다시 스냅샷을 찍습니다."
+    },
+    "/docs/cli/reference/:paragraph:built-in-browser:3": {
+      "sourceHash": "ef0d4be41dcda989acec552eaf4ba4bb52974163e98bd74ee97563de3f2c7178",
+      "translated": "탭 및 캡처 명령:"
+    },
+    "/docs/cli/reference/:code:built-in-browser:1": {
+      "sourceHash": "f2f53dc79ce01100869f0dbed4919a717d3ccf68f876feba4ab86ef76c643973",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:built-in-browser:4": {
+      "sourceHash": "3ad32c89c1828b417d092736a1c182ff4e11f29ff6c3013d87157180bad1b017",
+      "translated": "아직 입력된 ORCA_PROTECTED_0002 명령이 없는 브라우저 작업에만 'ORCA_PROTECTED_0001'을 사용하세요."
+    },
+    "/docs/cli/reference/:paragraph:built-in-browser:5": {
+      "sourceHash": "865021a0a4e0c8c480d6c822b89c57a00f32ce1c38c00ce394f7ffbbcb4b339c",
+      "translated": "브라우저 장치 에뮬레이션:"
+    },
+    "/docs/cli/reference/:code:built-in-browser:2": {
+      "sourceHash": "9ed9ed5d4f87af0d9afdf1ec44d414496657988b7bf1e442e2b7dc4022d3b5a0",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:heading:desktop-computer-use:0": {
+      "sourceHash": "fd4614194fee81cbc50adacf705e30067b0dd0b69a0ee385a53b15aac0ec2718",
+      "translated": "## 데스크탑 컴퓨터 사용"
+    },
+    "/docs/cli/reference/:paragraph:desktop-computer-use:0": {
+      "sourceHash": "f72f581a0d39b9e13966bc4472ce77848b5f31a0744a020b2217f2c91e61268b",
+      "translated": "내장 브라우저 외부의 기본 데스크톱 앱에는 'ORCA_PROTECTED_0001'을 사용하세요."
+    },
+    "/docs/cli/reference/:code:desktop-computer-use:0": {
+      "sourceHash": "bc00934cf632b6691d4604b6c59e7a088eb461215e86a5ca4ab41ffcca7fe5e9",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:desktop-computer-use:1": {
+      "sourceHash": "fe50c88f822debb357c652b61d10f23d169f1a620ec530c7b7ca369949a687ff",
+      "translated": "전체 작업 흐름 및 권한 설정은 [컴퓨터 사용](ORCA_PROTECTED_0001)을 참조하세요."
+    },
+    "/docs/cli/reference/:heading:mobile-emulator:0": {
+      "sourceHash": "ebb5794efdd44f0efef33103b1fe025fcaed18453a30f6561f8379e962423569",
+      "translated": "## 모바일 에뮬레이터"
+    },
+    "/docs/cli/reference/:paragraph:mobile-emulator:0": {
+      "sourceHash": "db51f55210675a123cbecc5b90ea8e9e4eccbd9bf91574b1f8588bc9d2515e43",
+      "translated": "모바일 에뮬레이터 명령은 ORCA_PROTECTED_0001의 작업 트리 범위 브리지를 통해 iOS 시뮬레이터 장치를 제어합니다. 에이전트가 ORCA_PROTECTED_0004 내부에서 작동 중일 때 원시 'ORCA_PROTECTED_0002' 또는 'ORCA_PROTECTED_0003' 대신 이를 사용하면 수명 주기 및 활성 장치 상태가 현재 작업 트리에 계속 연결됩니다."
+    },
+    "/docs/cli/reference/:code:mobile-emulator:0": {
+      "sourceHash": "d14c24d65effd05a7ca2e5d745c98a00258659af99606dfdf2618318117d877c",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:mobile-emulator:1": {
+      "sourceHash": "6a43b0094ac47f037c5ecceb235cdbbc6e09ac2663edefce97570b78c04c72a6",
+      "translated": "좌표는 `ORCA_PROTECTED_0001`에서 `ORCA_PROTECTED_0002`로 정규화됩니다. 단일 탭에는 'ORCA_PROTECTED_0003'을 선호하고, 드래그 또는 다단계 터치 입력에는 'ORCA_PROTECTED_0004'를 사용하세요. 스크립트가 작업 트리의 활성 에뮬레이터 대신 특정 시뮬레이터를 대상으로 해야 하는 경우 `ORCA_PROTECTED_0005` 또는 `ORCA_PROTECTED_0006`을 전달합니다."
+    },
+    "/docs/cli/reference/:heading:linear:0": {
+      "sourceHash": "7c0d35a5a624b089cf82f70531c5a8d40f738995f8a94c58235d70160c0a3496",
+      "translated": "## 선형"
+    },
+    "/docs/cli/reference/:paragraph:linear:0": {
+      "sourceHash": "ff018f0f70d9f1a39d4f9c1cbfd472758fa773cba112a2aae1f7cbe3d6a4d927",
+      "translated": "'ORCA_PROTECTED_0001' 하위 명령은 연결된 선형 작업 공간을 스크립트 및 에이전트에 노출합니다. 읽기 명령은 JSON 티켓 컨텍스트를 반환합니다. 쓰기 명령은 상태를 변경합니다. 작업 트리에 연결된 선형 문제(있는 경우)는 `ORCA_PROTECTED_0002`를 통해 연결할 수 있습니다."
+    },
+    "/docs/cli/reference/:paragraph:linear:1": {
+      "sourceHash": "7cdc77838b2f3453f3fab2099cc69a736afa234567d7641afcfa864a0fb0f60b",
+      "translated": "읽기:"
+    },
+    "/docs/cli/reference/:code:linear:0": {
+      "sourceHash": "4a7d671725616a3c5789b614e9f08d4e0e93e1a92bdb699f78ca5a820594fedd",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:linear:2": {
+      "sourceHash": "53ed0ceab497134ab514bb3e60cbe288114cb3ca8a0bc41e8edc7580cedbfc66",
+      "translated": "쓰다:"
+    },
+    "/docs/cli/reference/:code:linear:1": {
+      "sourceHash": "91e4e4fda1f4091fe912b99b73313a315ea66b222d14958af49f3995d0700528",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:linear:3": {
+      "sourceHash": "5577ce29e00fcfe3a0b9abfd902fb1ac8cd5dd8866ecf596436f180f1e4ec782",
+      "translated": "여러 개의 연결된 작업공간 간 라우팅을 위한 `ORCA_PROTECTED_0002`를 포함하여 전체 플래그 목록을 보려면 `ORCA_PROTECTED_0001`을 실행하세요. 스크립트가 ORCA_PROTECTED_0004에 연결된 작업 트리 외부에서 실행될 수 있는 경우 명시적인 문제 ID(예: `ORCA_PROTECTED_0003`)를 전달하세요. 'ORCA_PROTECTED_0005'는 작업 트리가 선형 문제에 연결된 경우에만 해결되기 때문입니다."
+    },
+    "/docs/cli/reference/:heading:automations-environments-and-hooks:0": {
+      "sourceHash": "f5a2ca27f23bbd47e2fe21837c099004daf5af19b5fe90a0594b133d42f36f4f",
+      "translated": "## 자동화, 환경 및 후크"
+    },
+    "/docs/cli/reference/:paragraph:automations-environments-and-hooks:0": {
+      "sourceHash": "847258ded4a7bd295185d84214ed9d21707fdfb5a53d096e7a3baebd025e7756",
+      "translated": "예약된 프롬프트:"
+    },
+    "/docs/cli/reference/:code:automations-environments-and-hooks:0": {
+      "sourceHash": "5e4836457ad17b3b41bf35b2a7eeb4d20fc34573d9234debb88a0fca7193416c",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:automations-environments-and-hooks:1": {
+      "sourceHash": "303c797478891c66c9233c91c145cdc696225637d92de388e41470c7a5347d35",
+      "translated": "원격 런타임 환경:"
+    },
+    "/docs/cli/reference/:code:automations-environments-and-hooks:1": {
+      "sourceHash": "43b8a92de6aa9c58d52e1fa304e6bfa221862929cf8ad74a017db70557756bef",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:paragraph:automations-environments-and-hooks:2": {
+      "sourceHash": "eb161aa5bb5ee0a7faa85ee61262e3f725fb20a378b7a67977e6a78797e8c99d",
+      "translated": "에이전트 상태 후크:"
+    },
+    "/docs/cli/reference/:code:automations-environments-and-hooks:2": {
+      "sourceHash": "2c50d0ca31b349ab881805fd64877ea61b4e37611be58e4b08685cbad21c584e",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/reference/:heading:agent-habits:0": {
+      "sourceHash": "114d233788aad195e2316cdf2c7af6460655165ed64c11af6db562485b527f95",
+      "translated": "## 상담원 습관"
+    },
+    "/docs/cli/reference/:list:agent-habits:0": {
+      "sourceHash": "f42569f3e054e8066f5a3e9759ae90f2f69c59bfef9a38729ea1369a5b20b62b",
+      "translated": "- 자동화 및 에이전트 호출에는 `ORCA_PROTECTED_0001`을 선호합니다.\n- UI 레이블을 구문 분석하는 것보다 선택기를 선호합니다.\n- 다음 입력이 확실하지 않은 한 입력을 보내기 전에 터미널 상태를 읽습니다.\n- 진행 체크포인트에 작업 트리 설명을 사용합니다. [작업 트리 체크포인트](ORCA_PROTECTED_0002)를 참조하세요.\n- 추적된 다중 에이전트 파견을 위해 임시 터미널 프롬프트 대신 [오케스트레이션](ORCA_PROTECTED_0003)을 사용합니다."
+    }
+  }
+}

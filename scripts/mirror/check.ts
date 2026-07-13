@@ -255,10 +255,11 @@ export const waitForBuildProcess = (child: ChildProcess) =>
     });
   });
 
-const runDefaultBuild = (workspaceRoot: string) => {
+export const runDefaultBuild = (workspaceRoot: string) => {
+  const windows = process.platform === "win32";
   const child = spawn(
-    process.platform === "win32" ? "pnpm.cmd" : "pnpm",
-    ["build"],
+    windows ? (process.env.ComSpec ?? "cmd.exe") : "pnpm",
+    windows ? ["/d", "/s", "/c", "pnpm.cmd build"] : ["build"],
     {
       cwd: workspaceRoot,
       stdio: ["ignore", "pipe", "pipe"],

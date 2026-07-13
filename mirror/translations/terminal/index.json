@@ -1,0 +1,130 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/terminal",
+  "mirrorPath": "/docs/terminal/",
+  "entries": {
+    "/docs/terminal/:heading:terminal:0": {
+      "sourceHash": "44998d279b181823ba74796a31748b126c92ead6e0d61edca43cf606c1a69fe5",
+      "translated": "# 터미널"
+    },
+    "/docs/terminal/:paragraph:terminal:0": {
+      "sourceHash": "3a65aeac957e37e2cb85cee76384faaf4519a74ca8cab35dcaba42e9f5440bcb",
+      "translated": "ORCA_PROTECTED_0001의 터미널은 VS Code가 사용하는 것과 동일한 xterm.js 기반 터미널이며 AI 에이전트 워크플로에 맞게 조정된 몇 가지 추가 기능이 있습니다."
+    },
+    "/docs/terminal/:figure:terminal:0": {
+      "sourceHash": "816861482507046089932d755d26af188066691c1175d84f5576e08d136159ec",
+      "translated": "![Ghostty 스타일 터미널 - 처음 시작할 때 Ghostty 테마, 글꼴 및 커서 가져오기](ORCA_PROTECTED_0001)\n\nGhostty 스타일 터미널 — 처음 시작할 때 Ghostty 테마, 글꼴 및 커서를 가져옵니다."
+    },
+    "/docs/terminal/:heading:panes-tabs:0": {
+      "sourceHash": "82ad4ed81ec7c1e5f728b27a0bb9744e2ee51c0c2ec21048416d0fa2d13364ad",
+      "translated": "## 창 및 탭"
+    },
+    "/docs/terminal/:paragraph:panes-tabs:0": {
+      "sourceHash": "96176a030477c37dae40179df7241f92ae9735ca2dcc2acafe936a930e3d4f81",
+      "translated": "터미널은 단순한 탭입니다. [탭, 창 및 분할 레이아웃](ORCA_PROTECTED_0001)을 참조하세요. 터미널 창을 분할하면 두 개의 셸이 나란히 제공됩니다."
+    },
+    "/docs/terminal/:heading:search:0": {
+      "sourceHash": "62c53ea4911e0c798f817b7767cc46f15ba8aef089fe3921b0d7adee26e954a1",
+      "translated": "## 검색"
+    },
+    "/docs/terminal/:paragraph:search:0": {
+      "sourceHash": "9d1f84c1fcc72dfa3dae1c3061bba0535be179a34d588d1bf4af3da60cc116d1",
+      "translated": "`ORCA_PROTECTED_0001`은 스크롤백에서 찾기를 엽니다. 일치 강조 표시, 대소문자, 정규식 및 일치 탐색이 모두 지원됩니다."
+    },
+    "/docs/terminal/:heading:copy-terminal-context:0": {
+      "sourceHash": "db76d4986f616f670a4c333b81f88ea23c1ee06ffaaef061d31e6ae07b9d6f3c",
+      "translated": "## 터미널 컨텍스트 복사"
+    },
+    "/docs/terminal/:paragraph:copy-terminal-context:0": {
+      "sourceHash": "e2111ddded0b0b28da4bff1b36e9ecef60f3c86d970fd607feb23cbe51d442b0",
+      "translated": "터미널을 마우스 오른쪽 버튼으로 클릭하고 `Copy Context`(컨텍스트 복사)를 선택하여 해당 창에서 제한된 기록을 복사합니다. ORCA_PROTECTED_0001 포크를 시작하지 않고 최근 에이전트 출력을 다른 도구에 붙여넣고 싶을 때 사용합니다."
+    },
+    "/docs/terminal/:heading:themes:0": {
+      "sourceHash": "087abce968c8fc3250f517d664d2161942ee9642763a09ce5fe0ec143feeb9a6",
+      "translated": "## 테마"
+    },
+    "/docs/terminal/:paragraph:themes:0": {
+      "sourceHash": "924126c2bdb942b9a3623ec31b3c351f42084e4042f7651d876c9b51cf8f8e91",
+      "translated": "터미널 색상 테마는 [설정 → 터미널](ORCA_PROTECTED_0001)에서 구성할 수 있습니다. ORCA_PROTECTED_0002는 인기 있는 테마 라이브러리를 제공하며 이를 사용자 정의할 수 있습니다."
+    },
+    "/docs/terminal/:heading:ghostty-import:0": {
+      "sourceHash": "5439d906941435f7ad576ac0919de007b771bbaab37ab746aee7bb0c16616bd9",
+      "translated": "## 유령 가져오기"
+    },
+    "/docs/terminal/:paragraph:ghostty-import:0": {
+      "sourceHash": "7eeffe1184da4138c888f8f4c11bd5e01181283c0cd61855756298c2062c36a7",
+      "translated": "Ghostty를 사용하는 경우 ORCA_PROTECTED_0001은 처음 시작할 때 테마, 글꼴 및 커서 구성을 가져올 수 있습니다. 나중에 [설정 → 터미널 → Ghostty에서 가져오기](ORCA_PROTECTED_0002)에서 가져오기를 다시 실행할 수 있습니다."
+    },
+    "/docs/terminal/:heading:warp-theme-import:0": {
+      "sourceHash": "26260126c7ac69582ee7838930e3a3418eea1ae9845ee07a0f3a2e15ee1615c8",
+      "translated": "## 워프 테마 가져오기"
+    },
+    "/docs/terminal/:paragraph:warp-theme-import:0": {
+      "sourceHash": "2e511f2884666a1b229640b7144e6ce831e1d6cd0d4fd1b18b54ab168518a281",
+      "translated": "Warp에서 테마를 수집한 경우 [설정 → 터미널](ORCA_PROTECTED_0001) 아래 터미널 테마 선택기에서 `Import themes from Warp`(Warp에서 테마 가져오기)를 클릭하여 ORCA_PROTECTED_0002 터미널 테마로 가져옵니다. ORCA_PROTECTED_0003은 현재 OS(macOS의 경우 `ORCA_PROTECTED_0004`, Linux의 경우 `ORCA_PROTECTED_0005`, Windows의 경우 `ORCA_PROTECTED_0006`)에 대한 Warp의 테마 디렉터리를 검색하고 가져올 YAML 테마를 선택할 수 있도록 합니다. 옆에 있는 **Import from YAML** 버튼은 동일한 선택기를 사용하여 Warp 형식 `ORCA_PROTECTED_0007`/`ORCA_PROTECTED_0008` 파일의 모든 폴더를 가리킵니다. 이는 테마를 기본 위치 외부에 저장할 때 유용합니다."
+    },
+    "/docs/terminal/:paragraph:warp-theme-import:1": {
+      "sourceHash": "4bb7aa08beb40deeb0566ed3a0c30740fc5b36d0042d1d4dd7fbf8c36b63227d",
+      "translated": "가져온 테마는 테마 드롭다운에서 ORCA_PROTECTED_0001의 내장 기능과 함께 표시됩니다."
+    },
+    "/docs/terminal/:heading:windows-shell:0": {
+      "sourceHash": "11a60b392d1f5b74c19299f2d617e10a1fb6acce4a3edbddb98222991799c16a",
+      "translated": "## 윈도우 셸"
+    },
+    "/docs/terminal/:paragraph:windows-shell:0": {
+      "sourceHash": "b38e51fb6dfce3f8cf019d8e0329bb08b2e63b6f46e109021f2343fc6daf0207",
+      "translated": "Windows의 기본 셸은 [설정 → 터미널](ORCA_PROTECTED_0001)에서 PowerShell, 명령 프롬프트, WSL 간에 구성할 수 있습니다. 'ORCA_PROTECTED_0002'가 성공하면 WSL이 자동으로 제공됩니다. 탭 표시줄의 **++** 드롭다운에는 하위 메뉴도 표시되므로 기본값을 변경하지 않고도 모든 셸에서 일회용 탭을 열 수 있습니다."
+    },
+    "/docs/terminal/:paragraph:windows-shell:1": {
+      "sourceHash": "1cfdb782ab39ece64aacf383220d5316b8503028110175080c9c910cca491044",
+      "translated": "WSL 파일 시스템(`ORCA_PROTECTED_0001`)에 있는 저장소의 경우 ORCA_PROTECTED_0002는 `ORCA_PROTECTED_0003`을 통해 시작됩니다. WSL에서 열린 Windows 경로 저장소의 경우 ORCA_PROTECTED_0004는 cwd를 `ORCA_PROTECTED_0005`로 변환하고 로그인 bash로 이동합니다."
+    },
+    "/docs/terminal/:heading:shortcuts:0": {
+      "sourceHash": "6bb95458f9ce141f0c73f75e79ce7a996a19d9db1295ab9dcf363e2a8a09029e",
+      "translated": "## 단축키"
+    },
+    "/docs/terminal/:list:shortcuts:0": {
+      "sourceHash": "ca782cfad5d09817b06452003b3f07bec9f02675c9c3b99f8b9f4c0168d7ca97",
+      "translated": "- `ORCA_PROTECTED_0001` — 현재 작업 트리의 새 터미널 탭입니다.\n- `ORCA_PROTECTED_0002`(macOS) — 기본 에이전트를 사용하는 새 에이전트 탭입니다. Linux 및 Windows에서는 이 코드가 바인딩되지 않은 상태로 제공됩니다. [설정 → 바로가기](ORCA_PROTECTED_0003)에서 하나를 할당하세요(\"새 에이전트 탭\" 검색). 지원되는 각 에이전트에는 고유한 에이전트별 \"새 에이전트 탭\" 작업도 있습니다. 코드를 바인딩하면 기본값을 거치지 않고 특정 CLI를 직접 시작할 수 있습니다.\n- `ORCA_PROTECTED_0004` — 현재 탭을 닫습니다.\n- `ORCA_PROTECTED_0005` — 오른쪽으로 분할.\n- `ORCA_PROTECTED_0006` — 분할됩니다."
+    },
+    "/docs/terminal/:heading:native-key-bindings:0": {
+      "sourceHash": "b313397667ee294730c7248553fdfce0e53116ad42389581acfb921e7aacf3ef",
+      "translated": "## 기본 키 바인딩"
+    },
+    "/docs/terminal/:paragraph:native-key-bindings:0": {
+      "sourceHash": "fffc8ce24ada9487b4a70748aa53d392497749afeb888a8497def82b35391f98",
+      "translated": "ORCA_PROTECTED_0001은 키티 키보드 프로토콜을 광고하므로 터미널 앱은 실제 `ORCA_PROTECTED_0002`, `ORCA_PROTECTED_0003` 및 기타 수정자 인식 키 입력을 볼 수 있습니다. 바인딩은 Ghostty, WezTerm 또는 기본 터미널에서와 마찬가지로 ORCA_PROTECTED_0004에서도 동일하게 작동합니다."
+    },
+    "/docs/terminal/:figure:native-key-bindings:0": {
+      "sourceHash": "85d30bbd5167a7b7895ba243bada8e5e62f12e58c2bd0dc660be95a4c69b6c85",
+      "translated": "![키티 키보드 프로토콜을 통한 기본 키 바인딩 — Shift+Enter 및 친구들은 독립형 터미널에서와 똑같이 에이전트 CLI에 도달합니다.](ORCA_PROTECTED_0001)\n\n키티 키보드 프로토콜을 통한 기본 키 바인딩 - Shift+Enter 및 친구들은 독립형 터미널에서와 똑같이 에이전트 CLI에 도달합니다."
+    },
+    "/docs/terminal/:paragraph:native-key-bindings:1": {
+      "sourceHash": "1ee95421e2df7536c3ea74a40d5dd2dc58ee6a39e0cb007de72bfa636802e626",
+      "translated": "macOS의 일본어 JIS 키보드의 경우 물리적 엔 키가 터미널 세션에서 백슬래시를 보내도록 하려면 `Settings → Terminal → JIS Yen (¥) to Backslash (\\\\)`(설정 → 터미널 → JIS 엔(\\)에서 백슬래시(\\\\))를 활성화합니다."
+    },
+    "/docs/terminal/:heading:floating-terminal:0": {
+      "sourceHash": "5e8b31707b265cc8810c26c99c6d1392d60ca17743e7a5b48f5ca4b890bce9f4",
+      "translated": "## 플로팅 터미널"
+    },
+    "/docs/terminal/:paragraph:floating-terminal:0": {
+      "sourceHash": "bee1fbafbef67574f408e98aa55a59b209751a2855be372fe083e629f6cd3d99",
+      "translated": "부동 터미널은 현재 작업 트리나 탭에 관계없이 항상 한 코드 떨어져 있는 전역 쉘 표면입니다. 새로 설치하는 경우 기본적으로 켜져 있습니다."
+    },
+    "/docs/terminal/:list:floating-terminal:0": {
+      "sourceHash": "acbcaef51221241b511cde6c78a119e9b2692705ac28d20f92bcf69216102272",
+      "translated": "- `ORCA_PROTECTED_0001`(macOS) / `ORCA_PROTECTED_0002`(`ORCA_PROTECTED_0003`)로 전환합니다. 동일한 단축키는 이미 열려 있으면 패널에 초점을 맞추고, 이미 초점이 맞춰져 있으면 패널을 닫습니다.\n- 창 가장자리에 있는 플로팅 버튼을 클릭하거나, [설정 → 터미널 → 플로팅 터미널](ORCA_PROTECTED_0004) 아래 상태 표시줄로 트리거를 이동하세요.\n- 시작 작업 디렉터리를 동일한 설정(기본적으로 `ORCA_PROTECTED_0005`)으로 설정하면 새 부동 탭이 예상하는 위치에 놓이게 됩니다.\n- 부동 패널은 자체 탭을 호스팅하고 오케스트레이션 설정을 지원합니다. 작업 트리 창을 요청하지 않고 백그라운드 실행을 시작합니다."
+    },
+    "/docs/terminal/:heading:quick-commands:0": {
+      "sourceHash": "7f51496625f0d8029771dc6731fb4d0946fdd0c122c211235e9d8f48eb114869",
+      "translated": "## 빠른 명령"
+    },
+    "/docs/terminal/:paragraph:quick-commands:0": {
+      "sourceHash": "29fa6082dca0b62c3c140a475cf065134d72fe3f1af454eb40bd7262b3631d3a",
+      "translated": "빠른 명령은 `ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002` 또는 프로젝트별 설정 스크립트와 같이 자주 실행하는 터미널 명령을 저장합니다. 또한 Claude 및 ORCA_PROTECTED_0003과 같은 시작 시간 프롬프트 에이전트에 대해 재사용 가능한 에이전트 프롬프트를 저장할 수도 있습니다. `Settings → Quick Commands`(설정 → 빠른 명령) 또는 탭 표시줄의 `Add command`(명령 추가) 버튼에서 생성한 다음 작업 트리 탭 표시줄의 빠른 명령 분할 버튼 또는 터미널 컨텍스트 메뉴에서 실행합니다."
+    },
+    "/docs/terminal/:paragraph:quick-commands:1": {
+      "sourceHash": "7b56cad836d60d247e01e953b3b4450ff8b5abb19bc5bdbca790688ce6bd2682",
+      "translated": "각 명령에는 레이블, 명령 텍스트 및 범위가 있습니다. 모든 곳에 적용되는 명령의 경우 `Global`(전역)을 사용하고, 특정 저장소의 작업 트리에만 명령을 표시하려면 `Project`(프로젝트)를 사용하세요. 탭 표시줄 버튼은 새로운 터미널 탭을 열고 명령을 실행합니다. 터미널 상황에 맞는 메뉴는 현재 터미널에 명령을 삽입할 수 있습니다."
+    }
+  }
+}

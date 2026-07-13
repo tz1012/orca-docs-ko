@@ -1,1 +1,223 @@
-[]
+[
+  {
+    "label": "분류되지 않음",
+    "items": [
+      {
+        "label": "Orca이란 무엇입니까?",
+        "slug": "docs"
+      },
+      {
+        "label": "에이전트 피드",
+        "slug": "docs/activity"
+      },
+      {
+        "label": "Orca의 Claude Code",
+        "slug": "docs/agents/claude-code"
+      },
+      {
+        "label": "핫스왑 Codex 계정",
+        "slug": "docs/agents/codex-hot-swap"
+      },
+      {
+        "label": "Orca의 Codex",
+        "slug": "docs/agents/codex"
+      },
+      {
+        "label": "Orca의 Cursor CLI",
+        "slug": "docs/agents/cursor-cli"
+      },
+      {
+        "label": "사용자 정의 CLI 에이전트 추가",
+        "slug": "docs/agents/custom-cli"
+      },
+      {
+        "label": "Orca ADE에서 GLM-5.2를 사용하는 방법",
+        "slug": "docs/agents/glm-agent"
+      },
+      {
+        "label": "에이전트 최대 절전 모드",
+        "slug": "docs/agents/hibernation"
+      },
+      {
+        "label": "에이전트 후크 및 메모리",
+        "slug": "docs/agents/hooks-memory"
+      },
+      {
+        "label": "에이전트 세션 기록",
+        "slug": "docs/agents/session-history"
+      },
+      {
+        "label": "지원되는 에이전트",
+        "slug": "docs/agents/supported"
+      },
+      {
+        "label": "사용량 및 속도 제한 추적",
+        "slug": "docs/agents/usage-tracking"
+      },
+      {
+        "label": "디자인 모드",
+        "slug": "docs/browser/design-mode"
+      },
+      {
+        "label": "작업트리별 브라우저",
+        "slug": "docs/browser/overview"
+      },
+      {
+        "label": "브라우저 사용 프로필",
+        "slug": "docs/browser/profiles"
+      },
+      {
+        "label": "예약된 자동화",
+        "slug": "docs/cli/automations"
+      },
+      {
+        "label": "컴퓨터 사용",
+        "slug": "docs/cli/computer-use"
+      },
+      {
+        "label": "오케스트레이션",
+        "slug": "docs/cli/orchestration"
+      },
+      {
+        "label": "Orca CLI 개요",
+        "slug": "docs/cli/overview"
+      },
+      {
+        "label": "Orca CLI 참조",
+        "slug": "docs/cli/reference"
+      },
+      {
+        "label": "Orca 기술 레지스트리 및 MCP",
+        "slug": "docs/cli/skills"
+      },
+      {
+        "label": "워크트리 체크포인트",
+        "slug": "docs/cli/worktree-checkpoints"
+      },
+      {
+        "label": "파일 탐색기 및 외부 드래그-드롭",
+        "slug": "docs/editing/file-explorer"
+      },
+      {
+        "label": "리치 마크다운 편집기",
+        "slug": "docs/editing/markdown"
+      },
+      {
+        "label": "모나코 편집기 및 자동 저장",
+        "slug": "docs/editing/monaco"
+      },
+      {
+        "label": "인어, PDF 및 이미지 뷰어",
+        "slug": "docs/editing/viewers"
+      },
+      {
+        "label": "첫 번째 에이전트 3인 세션",
+        "slug": "docs/first-session"
+      },
+      {
+        "label": "설치",
+        "slug": "docs/install"
+      },
+      {
+        "label": "모바일 동반자",
+        "slug": "docs/mobile"
+      },
+      {
+        "label": "에이전트 및 세션",
+        "slug": "docs/model/agents-sessions"
+      },
+      {
+        "label": "퀵 오픈 & 점프 팔레트",
+        "slug": "docs/model/quick-open"
+      },
+      {
+        "label": "세션 복원",
+        "slug": "docs/model/session-restore"
+      },
+      {
+        "label": "탭, 창 및 분할 레이아웃",
+        "slug": "docs/model/tabs-panes-splits"
+      },
+      {
+        "label": "작업 트리",
+        "slug": "docs/model/worktrees"
+      },
+      {
+        "label": "알림 및 받은 편지함",
+        "slug": "docs/notifications"
+      },
+      {
+        "label": "디자인 모드의 UI 버그 수정",
+        "slug": "docs/recipes/design-mode-fix"
+      },
+      {
+        "label": "10개의 작업 트리 사이를 이동합니다.",
+        "slug": "docs/recipes/jump-worktrees"
+      },
+      {
+        "label": "동일한 작업으로 세 명의 에이전트와 경쟁하세요",
+        "slug": "docs/recipes/parallel-agents"
+      },
+      {
+        "label": "SSH를 통해 원격 컴퓨터에서 작업",
+        "slug": "docs/recipes/remote-worktrees"
+      },
+      {
+        "label": "AI 차이점을 한 줄씩 검토합니다.",
+        "slug": "docs/recipes/review-ai-diff"
+      },
+      {
+        "label": "원격 Orca 서버",
+        "slug": "docs/remote-servers"
+      },
+      {
+        "label": "AI 차이점에 주석 달기",
+        "slug": "docs/review/annotate-ai-diff"
+      },
+      {
+        "label": "기여",
+        "slug": "docs/review/attribution"
+      },
+      {
+        "label": "Orca에서 커밋 및 푸시",
+        "slug": "docs/review/commit-push"
+      },
+      {
+        "label": "차이점 뷰어",
+        "slug": "docs/review/diff-viewer"
+      },
+      {
+        "label": "호스팅된 리뷰, 문제 및 조치",
+        "slug": "docs/review/github"
+      },
+      {
+        "label": "Jira 항목 서랍",
+        "slug": "docs/review/jira"
+      },
+      {
+        "label": "선형 항목 서랍",
+        "slug": "docs/review/linear"
+      },
+      {
+        "label": "설정 참고",
+        "slug": "docs/settings"
+      },
+      {
+        "label": "SSH 작업 트리",
+        "slug": "docs/ssh"
+      },
+      {
+        "label": "개인 정보 보호 및 원격 측정",
+        "slug": "docs/telemetry"
+      },
+      {
+        "label": "터미널",
+        "slug": "docs/terminal"
+      },
+      {
+        "label": "문제 해결 및 FAQ",
+        "slug": "docs/troubleshooting"
+      }
+    ]
+  }
+]

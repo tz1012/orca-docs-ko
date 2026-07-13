@@ -1,0 +1,134 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/settings",
+  "mirrorPath": "/docs/settings/",
+  "entries": {
+    "/docs/settings/:heading:settings-reference:0": {
+      "sourceHash": "db1ec37fb568b721b3f74e9fbaa1227a1d50de56bafee128b2b3567c3bb5b9b9",
+      "translated": "# 설정 참고"
+    },
+    "/docs/settings/:paragraph:settings-reference:0": {
+      "sourceHash": "5b3e7818ef6729a4256216c3fb7fa38dc0bd2c33401c6009e15ad14bcabaaa93",
+      "translated": "설정은 창으로 그룹화됩니다. 여기에 있는 모든 내용은 `ORCA_PROTECTED_0001`로 검색한 다음 키워드를 입력할 수 있습니다. 이 문서의 기능 페이지는 관련 창으로 직접 연결됩니다."
+    },
+    "/docs/settings/:heading:general:0": {
+      "sourceHash": "b5ed9dca907eee5a2962fd2e4be598ba888d09ba3e02008ce1d1d9e459ec6523",
+      "translated": "## 일반"
+    },
+    "/docs/settings/:list:general:0": {
+      "sourceHash": "78c27f7c1de63e35be728ccc0b9d86048f5838c270ef177f31148b328767e2fd",
+      "translated": "- **ORCA_PROTECTED_0001 CLI** — 셸 및 에이전트용 번들 명령줄 도구를 등록합니다.\n- `Updates`(업데이트) — 업데이트를 확인하고 설치합니다. 최신 RC 빌드를 포함하려면 Shift 키를 누른 채 `Check for Updates`(업데이트 확인)을 클릭하고, 성능 태그가 지정된 최신 시험판을 확인하려면 Cmd 키를 누른 채 클릭(macOS)/Ctrl 키를 누른 채 클릭(Windows 및 Linux)하세요.\n- `UI zoom`(UI 확대/축소) — 설치별 UI 규모입니다.\n- `Default new-worktree name`(기본 새 작업 트리 이름) — 사용자 정의 접두사 또는 해양 생물."
+    },
+    "/docs/settings/:heading:appearance:0": {
+      "sourceHash": "4d02debb4f6a88b18617c315436c0bd77bc4e06185b0b244b7df29d5aa1562c4",
+      "translated": "## 외관"
+    },
+    "/docs/settings/:list:appearance:0": {
+      "sourceHash": "be3de3846e5ce0af07f873984626ffaba92e2df806fd2894bde023f3fa7683ec",
+      "translated": "- 테마, 액센트 색상, 밀도.\n- UI 및 편집기용 글꼴 모음(독립적 설정 - 둘 중 하나에 설치된 글꼴 선택)\n- 편집기 미니맵 토글.\n- 상태 표시줄이 전환됩니다.\n- 앱 아이콘 — Dock 및 창 전환기에 표시되는 아이콘에 대해 클래식, 수채화, 파란색 사이를 전환합니다.\n- 언어 - 시스템(OS에 따름), 영어, 中文(简体), 한국어, 日本語 또는 Español 간에 ORCA_PROTECTED_0001 인터페이스를 전환합니다."
+    },
+    "/docs/settings/:heading:git:0": {
+      "sourceHash": "7ea0a300f45c0b35e47b599d86475a2120e65f4e8ffceb706d7ba298a6d6e3f5",
+      "translated": "## 힘내"
+    },
+    "/docs/settings/:list:git:0": {
+      "sourceHash": "04ecc0e3f303196e052257753c0616cb06557c3238004b746e62ff8136cef264",
+      "translated": "- 기본 기본 참조 확인자.\n- 서명 옵션을 커밋합니다.\n- 외부 Git 도구용 편집기입니다.\n- 작업에서 분기 자동 이름 바꾸기 - 에이전트가 작업을 시작한 후 ORCA_PROTECTED_0001 생성 생물 분기의 이름을 바꿉니다."
+    },
+    "/docs/settings/:heading:terminal:0": {
+      "sourceHash": "69914c16c799581549fb1a6274c803b985d1779f9c21ba08e275c15b33ff459d",
+      "translated": "## 터미널"
+    },
+    "/docs/settings/:list:terminal:0": {
+      "sourceHash": "a9314b571f7117504b32e7112c8df52d98174a0b6ab58f60fec854a365562e3f",
+      "translated": "- 글꼴, 테마, 커서 스타일, 패딩.\n- 유령 수입품.\n- Warp 테마 가져오기 - `Import themes from Warp`(Warp에서 테마 가져오기)(OS별로 Warp의 테마 폴더 자동 검색) 또는 Warp 형식 테마 파일의 모든 폴더에 대한 `Import from YAML`(YAML에서 가져오기)를 사용하여 Warp YAML 테마를 가져옵니다.\n- macOS 일본어 키보드의 경우 JIS 엔(¥)을 백슬래시(\\\\)로 변환합니다.\n- Windows 기본 셸(PowerShell 또는 CMD)."
+    },
+    "/docs/settings/:heading:quick-commands:0": {
+      "sourceHash": "7f51496625f0d8029771dc6731fb4d0946fdd0c122c211235e9d8f48eb114869",
+      "translated": "## 빠른 명령"
+    },
+    "/docs/settings/:list:quick-commands:0": {
+      "sourceHash": "d9cbbc14e0e0bd52c52e11178191aac6114282a674bfb382a1b9992d31b720a3",
+      "translated": "- 전역적으로 또는 프로젝트 범위로 저장된 터미널 명령.\n- 명령 목록을 검토하고 편집하기 위한 범위 필터."
+    },
+    "/docs/settings/:heading:agents:0": {
+      "sourceHash": "a37ac4f1a2b23183e0de43bf4db0c3d0cb431295272096a38195239684c4af32",
+      "translated": "## 에이전트"
+    },
+    "/docs/settings/:list:agents:0": {
+      "sourceHash": "44e18f70dc25a5653646fd53d6fdcb10516356819fd6c49e9fab8b46c52373a7",
+      "translated": "- 설치된 에이전트 - 감지 및 사용자 정의.\n- 감지된 에이전트를 활성화하거나 비활성화하여 실행 메뉴에 사용하려는 CLI만 표시되도록 합니다.\n- 에이전트 권한 - CLI 권한 프롬프트를 줄이려면 **Yolo**를 선택하고, 사용자 정의하지 않은 에이전트에 대해 각 에이전트의 자체 승인 흐름을 유지하려면 `Manual`(수동)을 선택하세요.\n- Claude 및 ORCA_PROTECTED_0001 계정 목록.\n- 에이전트당 시작 후크."
+    },
+    "/docs/settings/:heading:browser:0": {
+      "sourceHash": "95a058f2b170aabffed924f660283440f59cd254aa02c672b25c420bd0d4cae2",
+      "translated": "## 브라우저"
+    },
+    "/docs/settings/:list:browser:0": {
+      "sourceHash": "ab1a78c0de2a8026e4f3d9bbb55eb4e7780d828b822f0ce54e745c4c21a38ab5",
+      "translated": "- 프로필([브라우저 사용 프로필](ORCA_PROTECTED_0001) 참조).\n- 기본 확대/축소 - 새로 열린 브라우저 탭에 적용되는 확대/축소 수준입니다(Cmd 휠을 통한 탭별 조정은 별도로 기억됩니다).\n- 디자인 모드 기본값.\n- Devtools 옵트인."
+    },
+    "/docs/settings/:heading:integrations:0": {
+      "sourceHash": "ab4ce1a5301498f6747c01db0e5d40fad27d214b3daff56e0253a1f589aed962",
+      "translated": "## 통합"
+    },
+    "/docs/settings/:list:integrations:0": {
+      "sourceHash": "1a8f48f0374df7264f5b66548394528cce22e19dd76c418e65b36ef015ebd373",
+      "translated": "- GitHub OAuth.\n- 선형 API 토큰.\n- Jira — Atlassian 사이트 URL, 이메일 및 API 토큰([Jira 항목 서랍](ORCA_PROTECTED_0001) 참조).\n- MiniMax — MiniMax CLI에 대한 로컬 사용량 및 속도 제한 추적을 활성화하려면 MiniMax 세션 쿠키(`ORCA_PROTECTED_0002`에서)를 붙여넣습니다. 선택적 그룹 ID 및 사용 모델 필드는 쿠키에서 선택한 기본값을 재정의합니다.\n- MCP 서버."
+    },
+    "/docs/settings/:heading:notifications:0": {
+      "sourceHash": "c005f6296b6fdf2d0104cdb9b3a06850bf251055d7bfd8d71e5e02c75d11c702",
+      "translated": "## 알림"
+    },
+    "/docs/settings/:list:notifications:0": {
+      "sourceHash": "e7ba25a07fc46e750df8238a9ca6971e50f5744565219f288f119962917be79f",
+      "translated": "- 에이전트 완료: 시스템, 사운드, 칩.\n- 카테고리별로 사용자 정의 데스크탑 알림 소리.\n- PR 확인 실패.\n- 업데이트가 가능합니다."
+    },
+    "/docs/settings/:heading:voice:0": {
+      "sourceHash": "78861c5bf1ccc22a3d73371e25956ffb758fcd1fc25924dc61ae3496bd2a9a08",
+      "translated": "## 음성"
+    },
+    "/docs/settings/:list:voice:0": {
+      "sourceHash": "b1ed68df66ce10e531282e7daf22be4ee685375044fd211eeedf62ddb336ee27",
+      "translated": "- 클라우드 음성-텍스트 모델 — 받아쓰기를 위해 클라우드 STT를 활성화하려면 **OpenAI Transcription** 아래에 OpenAI API 키를 붙여넣으세요. 키는 로컬에 저장되며 OpenAI의 전사 API를 호출하는 데만 사용됩니다."
+    },
+    "/docs/settings/:heading:ssh:0": {
+      "sourceHash": "81f74e7fe61e3fc236b57f688e73ef279ed36f8b4c1c8842cc5e3705104d6a02",
+      "translated": "## SSH"
+    },
+    "/docs/settings/:list:ssh:0": {
+      "sourceHash": "43f0941eb4032b8017821240b23bf664969b12777d8921517df8e5c1c23857f0",
+      "translated": "- SSH 작업 트리, 대상, 암호, 기본 ID 파일."
+    },
+    "/docs/settings/:heading:remote-orca-servers:0": {
+      "sourceHash": "ac23e143ff454c9748b00c0d6817bcb9a47bfbd88b41b22e3436bfc743acd410",
+      "translated": "## 원격 ORCA_PROTECTED_0001 서버"
+    },
+    "/docs/settings/:list:remote-orca-servers:0": {
+      "sourceHash": "db6af176adec7db711a7586633aba45fb69df2fb3cae854f152d4e996f20d683",
+      "translated": "- 원격 ORCA_PROTECTED_0001 런타임에 페어링하고 연결합니다.\n- 이 데스크톱 앱을 서버로 광고하고 취소 가능한 액세스 링크를 생성하세요.\n- 서버 라우팅 프로젝트, 터미널 및 공급자 확인을 위한 고급 기본 런타임 선택."
+    },
+    "/docs/settings/:heading:shortcuts:0": {
+      "sourceHash": "6bb95458f9ce141f0c73f75e79ce7a996a19d9db1295ab9dcf363e2a8a09029e",
+      "translated": "## 단축키"
+    },
+    "/docs/settings/:list:shortcuts:0": {
+      "sourceHash": "3859fd4b1f98a8c2ffda2a28f981298c92e29cc4192ed17235f16e4a79b39182",
+      "translated": "- 전체 키맵 — 모든 바인딩을 다시 매핑할 수 있습니다.\n- Sleeping Workspaces 배송을 언바운드로 전환합니다. 사이드바 Sleep-WorkTree 필터에 대한 직접 바로가기를 원하는 경우 여기에 할당하세요.\n- 모든 편집기 탭을 닫으면 기본적으로 macOS에서는 'ORCA_PROTECTED_0001', Windows/Linux에서는 'ORCA_PROTECTED_0002'로 설정됩니다."
+    },
+    "/docs/settings/:heading:repository:0": {
+      "sourceHash": "68cb8a9360789bc49ea1e688cf13dbdc34d746ec69851f8a210f4d41586b1d6d",
+      "translated": "## 저장소"
+    },
+    "/docs/settings/:list:repository:0": {
+      "sourceHash": "1459a0dc8b57ffa4e63feb6e8dbc383e7bb8cb9e5b171c1a9c38cc4c95f13111",
+      "translated": "- 저장소별 기본 참조 및 후크.\n- 작업 트리 생성 시 명령을 자동 실행합니다.\n- 사이드바용 저장소 아이콘: 아이콘, 이모티콘, 업로드된 이미지, 웹사이트 파비콘 또는 GitHub 아바타를 선택한 다음 사전 설정 또는 사용자 정의 16진수 배지 색상을 선택합니다.\n- 커밋 메시지, 풀 요청 세부 정보 및 분기 이름에 대한 소스 제어 AI가 재정의됩니다."
+    },
+    "/docs/settings/:heading:experimental:0": {
+      "sourceHash": "12649fd4e8501a68841e7610458c1513498bfeba872e2d1ac772a8c30f8b1db4",
+      "translated": "## 실험적"
+    },
+    "/docs/settings/:list:experimental:0": {
+      "sourceHash": "d4aa031d293df1b6a9edfb05e720605a1dc7d3eb2dcd3ea76655731aff20f1cb",
+      "translated": "- [활동 페이지](ORCA_PROTECTED_0001) — 에이전트 이벤트에 대한 Slack 스타일 작업 트리 피드입니다.\n- 컴팩트 작업 트리 카드 — 레이아웃이 아직 실험적인 동안 사이드바에서 중복되는 두 번째 줄을 숨깁니다.\n- [에이전트 최대 절전 모드](ORCA_PROTECTED_0002) — 유휴 백그라운드 에이전트를 일시 중지하고 다시 열 때 자동으로 재개합니다.\n- 기능은 아직 안정적이지 않습니다. 동작이 변경될 수 있습니다."
+    }
+  }
+}

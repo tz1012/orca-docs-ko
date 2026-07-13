@@ -1,0 +1,54 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/agents/claude-code",
+  "mirrorPath": "/docs/agents/claude-code/",
+  "entries": {
+    "/docs/agents/claude-code/:heading:claude-code-in-orca:0": {
+      "sourceHash": "c0e38b4ba79e0db086618ed875ba1f26adf65786659afeac4155c66e511d4106",
+      "translated": "# ORCA_PROTECTED_0002의 ORCA_PROTECTED_0001"
+    },
+    "/docs/agents/claude-code/:paragraph:claude-code-in-orca:0": {
+      "sourceHash": "e5eca38417d1f5392cd335cfeb8ad3bcb3c97572cb3a4f1e99b491caca86cf48",
+      "translated": "ORCA_PROTECTED_0001은 Anthropic의 에이전트 CLI입니다. ORCA_PROTECTED_0002는 계정 인식 세션 시작, 사용 추적 및 계정 핫 스와핑 기능을 갖춘 일류 터미널 에이전트로 이를 실행합니다."
+    },
+    "/docs/agents/claude-code/:heading:setup:0": {
+      "sourceHash": "0ecddf15e1aff85f7399e0fd362b9856d804a3e66dd65e41b547c255fc86d8c1",
+      "translated": "## 설정"
+    },
+    "/docs/agents/claude-code/:list:setup:0": {
+      "sourceHash": "3efd32a04d1adb77554f03276507416c872ddcbf5c6b6cf415fa0bcc61dce6ca",
+      "translated": "1. ORCA_PROTECTED_0001(`ORCA_PROTECTED_0002` 또는 Anthropic의 문서를 따르세요)을 설치하세요.\n2. 아무 터미널에서나 한 번 로그인하세요.\n3. ORCA_PROTECTED_0003은 'ORCA_PROTECTED_0004'를 자동으로 선택합니다. 추가 구성이 필요하지 않습니다."
+    },
+    "/docs/agents/claude-code/:heading:launching:0": {
+      "sourceHash": "deec0a144035bc7a7bb357ec17bbe25927b03a914653411d367154bb8d9e58ad",
+      "translated": "## 출시"
+    },
+    "/docs/agents/claude-code/:paragraph:launching:0": {
+      "sourceHash": "f97b58e4b5fd0055fa4303119660c7440e73c3a62d1e0d13b03f0303818d252a",
+      "translated": "작업 트리에서 터미널을 열고 에이전트 콤보 상자에서 **ORCA_PROTECTED_0001**을 선택합니다. ORCA_PROTECTED_0002는 작업 디렉터리로 작업 트리를 사용하고 ORCA_PROTECTED_0003이 상태 도트에 사용하는 OSC 제목 이벤트를 내보내는 상태 줄 후크를 사용하여 이를 시작합니다."
+    },
+    "/docs/agents/claude-code/:heading:usage-rate-limits:0": {
+      "sourceHash": "5adb5642129078fc227f4904ad31f95de37aa5abebe416768dc33e0041b5ea8c",
+      "translated": "## 사용량 및 속도 제한"
+    },
+    "/docs/agents/claude-code/:paragraph:usage-rate-limits:0": {
+      "sourceHash": "235d3a909e5ef03a1615bba86902f70a2747c46254d680e76f1a9dc9ee1cba6c",
+      "translated": "ORCA_PROTECTED_0001은 로컬 'ORCA_PROTECTED_0002' 사용 상태를 읽고 상태 표시줄에 현재 사용량과 비율 제한 근접성을 표시합니다. [사용량 및 속도 제한 추적](ORCA_PROTECTED_0003)을 참조하세요."
+    },
+    "/docs/agents/claude-code/:heading:account-hot-swap:0": {
+      "sourceHash": "d14f29eddfb33ec43d1113ffc14164f8169353b543376014e46c057de34872a5",
+      "translated": "## 계정 핫스왑"
+    },
+    "/docs/agents/claude-code/:paragraph:account-hot-swap:0": {
+      "sourceHash": "246186d104636b778d09f8daab1c429680455654dff99a5faa7595bc92609e88",
+      "translated": "ORCA_PROTECTED_0001은 여러 Claude 계정을 지원하며 ORCA_PROTECTED_0002 흐름과 일치하도록 한 번의 클릭으로 계정 간에 전환할 수 있습니다. 계정 전환은 라이브 Claude 세션이 실행 중인 경우에도 작동합니다. ORCA_PROTECTED_0003은 진행 중인 스위치를 가드 뒤에 보유하므로 중복된 인증 새로 고침이 트리거되지 않습니다. [핫스왑 ORCA_PROTECTED_0004 계정](ORCA_PROTECTED_0005)을 참조하세요. Claude 흐름의 모양은 동일합니다."
+    },
+    "/docs/agents/claude-code/:heading:hooks-memory:0": {
+      "sourceHash": "0cf22c451605cbcbaab8413087bc0b4597b4724a7492780c1cba7a10a0960d1a",
+      "translated": "## 후크 및 메모리"
+    },
+    "/docs/agents/claude-code/:paragraph:hooks-memory:0": {
+      "sourceHash": "b5b52883f24eea894c3de8c2e15e0b87b4a93dc0f2ab89b8db2ea3fb30078df1",
+      "translated": "ORCA_PROTECTED_0001은 저장소별 후크 및 메모리 파일을 지원합니다. ORCA_PROTECTED_0002는 [에이전트 후크 및 메모리](ORCA_PROTECTED_0003) 아래에 이를 표시합니다."
+    }
+  }
+}

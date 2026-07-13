@@ -1,0 +1,66 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/notifications",
+  "mirrorPath": "/docs/notifications/",
+  "entries": {
+    "/docs/notifications/:heading:notifications-inbox:0": {
+      "sourceHash": "4044d3e5bfeed8876061cd79577d85eb974fa431e83eff134091e5fc5a7c0e08",
+      "translated": "# 알림 및 받은 편지함"
+    },
+    "/docs/notifications/:paragraph:notifications-inbox:0": {
+      "sourceHash": "a6fc57534d19b22a6742282302aa1162c49680d7dac8df4b2753012679dbc8d6",
+      "translated": "ORCA_PROTECTED_0001은 터미널뿐만 아니라 에이전트를 실행하므로 에이전트가 실제로 끝나는 시기와 일시 중지된 시기를 알 수 있습니다. 알림은 해당 신호를 기반으로 하여 세 명의 상담원을 대기열에 추가하고 자리를 떴다가 첫 번째 상담이 완료되면 돌아올 수 있습니다."
+    },
+    "/docs/notifications/:heading:agent-finished-pings:0": {
+      "sourceHash": "cb4f5411e9dcb1be4913f243a6d206de04b10ffb8f7598b91c59fe354afc0e1c",
+      "translated": "## 에이전트 완료 핑"
+    },
+    "/docs/notifications/:paragraph:agent-finished-pings:0": {
+      "sourceHash": "f589d2720a26b76c98b04afb5211a16a10963acfb8447a01d03d6114cd96419e",
+      "translated": "에이전트가 작업 중에서 유휴 상태로 전환되면 ORCA_PROTECTED_0001은 알림(시스템 알림, 사운드 및 작업 트리의 칩)을 발생시킵니다."
+    },
+    "/docs/notifications/:heading:persistent-bell:0": {
+      "sourceHash": "d67db63d152d45aae5931248a99121e8a0449e75d0bd014c6fbe1100f8444406",
+      "translated": "## 지속적인 벨"
+    },
+    "/docs/notifications/:paragraph:persistent-bell:0": {
+      "sourceHash": "5f60aa13c94bbaa1c4200695e80ed8ad7564dccd9293e3d2e1fce0db5c52ae5e",
+      "translated": "헤더 벨은 모든 작업 트리에서 읽지 않은 알림을 표시합니다. 알림을 클릭하면 일치하는 작업 트리 및 창으로 이동합니다."
+    },
+    "/docs/notifications/:paragraph:persistent-bell:1": {
+      "sourceHash": "68d21b35d694d3aa3254ad4dbb814252a1c2752383feaaf2bbb9dde4a2546d37",
+      "translated": "macOS에서는 읽지 않은 동일한 개수가 Dock 아이콘에 배지로 미러링되므로 ORCA_PROTECTED_0001을 포그라운드로 가져오지 않고도 보류 중인 에이전트 핑을 확인할 수 있습니다."
+    },
+    "/docs/notifications/:heading:mark-unread:0": {
+      "sourceHash": "55158c6cfd848ae203b62691a33fa9034ec961f8636731e6205d7f0da202b07f",
+      "translated": "## 읽지 않은 것으로 표시"
+    },
+    "/docs/notifications/:paragraph:mark-unread:0": {
+      "sourceHash": "57c0d5f0ea629140c982671cacf9763535313c433d481f327c447da49a7c07c8",
+      "translated": "읽지 않은 것으로 표시하려면 알림을 마우스 오른쪽 버튼으로 클릭하세요. 항목을 분류했지만 나중에 다시 확인하고 싶을 때 유용합니다."
+    },
+    "/docs/notifications/:heading:tuning:0": {
+      "sourceHash": "ae8fdf71c87f5ba11d69548d10fe70edb746374ab27979df14ab147a1df74f02",
+      "translated": "## 튜닝"
+    },
+    "/docs/notifications/:paragraph:tuning:0": {
+      "sourceHash": "1aaf3061fd10f010ca21927ff9c2c709c7393ef3c38b68c6fe27468b164e66d3",
+      "translated": "[설정 → 알림](ORCA_PROTECTED_0001)에서 특정 카테고리(시스템, 사운드, 칩 전용)를 끄세요."
+    },
+    "/docs/notifications/:heading:custom-sounds:0": {
+      "sourceHash": "92579f08388e8824336d2b4a836477d21d2a8e82e0ec4df9a6d30b086d314a92",
+      "translated": "## 맞춤 사운드"
+    },
+    "/docs/notifications/:paragraph:custom-sounds:0": {
+      "sourceHash": "feebc6656e3cd3b6c48f3691b4584f22fe42a7639e405255ff758c8a50d09004",
+      "translated": "[설정 → 알림](ORCA_PROTECTED_0001)에서 카테고리별로 사용자 정의 데스크탑 알림 소리를 선택하세요. 디스크에 있는 오디오 파일을 가리키거나 ORCA_PROTECTED_0002에 내장된 세트에서 선택하세요. 에이전트가 완료한 핑을 시스템 메일 및 Slack에서 눈에 띄게 하려는 경우에 유용합니다."
+    },
+    "/docs/notifications/:paragraph:custom-sounds:1": {
+      "sourceHash": "e8b0fc94e1842c78cc5a6a9255d9288df1e4108977c54dd3cac9c9da710cf601",
+      "translated": "지원되는 형식: MP3, WAV, OGG, M4A, AAC, FLAC. 전달된 모든 데스크톱 알림에 하나의 파일이 적용됩니다."
+    },
+    "/docs/notifications/:paragraph:custom-sounds:2": {
+      "sourceHash": "703e3719c440acd9d56bd36939b8bd7b5f7f88f6f47380b86d386ff7058ea363",
+      "translated": "사용자 정의 사운드를 사용하는 경우 동일한 설정 창에서 재생 볼륨을 설정하세요."
+    }
+  }
+}

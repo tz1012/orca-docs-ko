@@ -1,0 +1,38 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/browser/profiles",
+  "mirrorPath": "/docs/browser/profiles/",
+  "entries": {
+    "/docs/browser/profiles/:heading:browser-use-profiles:0": {
+      "sourceHash": "35f748550afae45734773c2b37ee742bc61de78fefde0a9447219af280ef713b",
+      "translated": "# 브라우저 사용 프로필"
+    },
+    "/docs/browser/profiles/:paragraph:browser-use-profiles:0": {
+      "sourceHash": "691ad26cba5bcddc38f69a4ff11a4bdadf687687eb40be9817999c95c2813224",
+      "translated": "브라우저 사용 프로필을 사용하면 로그인한 사용자, 특정 쿠키 항아리, 사용자 정의 사용자 에이전트 등 특정 ID로 ORCA_PROTECTED_0001 브라우저를 실행할 수 있습니다. 상담원이 로그인해야 하거나, 세션별 버그를 재현하거나, 여러 사용자를 에뮬레이트해야 할 때 유용합니다."
+    },
+    "/docs/browser/profiles/:heading:create-a-profile:0": {
+      "sourceHash": "98f5c938a4dc4ee265a7e357c28e98291109a753dffe67678740e81f1be79614",
+      "translated": "## 프로필 만들기"
+    },
+    "/docs/browser/profiles/:list:create-a-profile:0": {
+      "sourceHash": "627966a914c534883d56f4a2a79d715f9b47c7b72f4f1d6d84ddbbe0007ff9fc",
+      "translated": "1. [설정 → 브라우저 → 프로필](ORCA_PROTECTED_0001)을 엽니다.\n2. `Add profile`(프로필 추가)를 클릭하고 이름을 지정합니다.\n3. 선택적으로 쿠키, 사용자 에이전트 및 뷰포트 크기를 시드합니다."
+    },
+    "/docs/browser/profiles/:heading:use-a-profile:0": {
+      "sourceHash": "bcf17dfc14e3fe234a8bc07da61818530086509788fc2761c661de4852d14b15",
+      "translated": "## 프로필 사용"
+    },
+    "/docs/browser/profiles/:paragraph:use-a-profile:0": {
+      "sourceHash": "12813cce13e3cd20d3b47d897112670997ec1e440ce76974d92a8b3ee251ad6e",
+      "translated": "브라우저 도구 모음에서 프로필을 선택합니다. 해당 창의 모든 탭은 전환할 때까지 이를 사용합니다. 에이전트 기반 브라우저 명령은 활성 프로필을 상속합니다."
+    },
+    "/docs/browser/profiles/:heading:isolation:0": {
+      "sourceHash": "9cdd4be6d994d5daaf93c571f3995e671e28f4027406df3a55ca13f761e5816f",
+      "translated": "## 격리"
+    },
+    "/docs/browser/profiles/:paragraph:isolation:0": {
+      "sourceHash": "2d65084d1da6123d5ce22c5e57e7cfd0bd77b1e0e9728dca78b2f892c0ddc577",
+      "translated": "각 프로필에는 쿠키, 로컬 저장소, 캐시 등 자체 저장소 파티션이 있습니다. 프로필은 서로 유출되지 않습니다."
+    }
+  }
+}

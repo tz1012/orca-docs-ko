@@ -1,0 +1,82 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/model/agents-sessions",
+  "mirrorPath": "/docs/model/agents-sessions/",
+  "entries": {
+    "/docs/model/agents-sessions/:heading:agents-sessions:0": {
+      "sourceHash": "9f3471889efeb0d018948ee81e3ddcd528ced2fdfd050739514b075ac66199ea",
+      "translated": "# 에이전트 및 세션"
+    },
+    "/docs/model/agents-sessions/:paragraph:agents-sessions:0": {
+      "sourceHash": "499a63628af280dbe3dcc4ec9860f9f3bbb20dad5ce170739a476e8a65ec630b",
+      "translated": "상태 점, 재시작 칩, 에이전트 세션의 수명 주기입니다."
+    },
+    "/docs/model/agents-sessions/:paragraph:agents-sessions:1": {
+      "sourceHash": "93b8c2a86ad20b31c09914425ca32bd44fef9e70ee9dd08811ef0df7846b3214",
+      "translated": "`agent session`(에이전트 세션)은 하나의 작업 트리에 있는 하나의 터미널에서 실행되는 하나의 CLI 에이전트입니다. ORCA_PROTECTED_0001은 수명 주기를 추적하므로 확인하기 위해 각 탭을 클릭할 필요 없이 어떤 세션이 작동 중이고 어떤 세션이 유휴 상태인지 항상 알 수 있습니다."
+    },
+    "/docs/model/agents-sessions/:figure:agents-sessions:0": {
+      "sourceHash": "30a4b2b4d3a1ddb9b6b03e0aecd6eb80bbe805ddb264eb35d0df896ff03ae8d8",
+      "translated": "![모든 작업 트리 카드의 인라인 에이전트 상태 - 작업 중에는 노란색, 완료되면 녹색](ORCA_PROTECTED_0001)\n\n모든 작업 트리 카드의 인라인 에이전트 상태 — 작업 중에는 노란색, 완료되면 녹색"
+    },
+    "/docs/model/agents-sessions/:heading:state-dots:0": {
+      "sourceHash": "eb2d76068456fdf71e0ec48bc65a3cbacc551bd2b6757aea1b9c4745693c084a",
+      "translated": "## 상태 도트"
+    },
+    "/docs/model/agents-sessions/:paragraph:state-dots:0": {
+      "sourceHash": "ddff72d25756896c0f4a3e63b53812e41b3eb8ea5e20443b6b29302ba228db1a",
+      "translated": "모든 탭에는 에이전트의 상태를 나타내는 작은 점이 표시됩니다."
+    },
+    "/docs/model/agents-sessions/:list:state-dots:0": {
+      "sourceHash": "32b1c6ee7873d5a1f826c1653d37da2e34695bb09a2617db0d18ac9227d6c38f",
+      "translated": "- `Green pulsing`(녹색 깜박임) — 에이전트가 활발하게 작업 중입니다(유휴 상태가 아닌 TUI).\n- `Yellow`(노란색) — 에이전트가 사용자의 입력을 기다리고 있습니다.\n- `Gray`(회색) — 에이전트가 유휴 상태입니다.\n- `No dot`(점 없음) — 터미널은 인식된 에이전트 CLI가 아닌 일반 쉘입니다."
+    },
+    "/docs/model/agents-sessions/:paragraph:state-dots:1": {
+      "sourceHash": "48272197cd2cb5da9bf9926c99ef579d0518961f1b1c300f002c45d69a4a6be2",
+      "translated": "상태는 ORCA_PROTECTED_0001, ORCA_PROTECTED_0002 및 기타 여러 에이전트가 내보내는 터미널의 OSC 제목 시퀀스에서 감지됩니다."
+    },
+    "/docs/model/agents-sessions/:heading:agent-dashboard:0": {
+      "sourceHash": "af8df358e679db7a3183b32b8ee14a70113b90aae9b7f0943146f48b8cd51e9a",
+      "translated": "## 상담원 대시보드"
+    },
+    "/docs/model/agents-sessions/:paragraph:agent-dashboard:0": {
+      "sourceHash": "8305870e3c1f1bc1c517416f26082ca467b001d5cc302edea6f1d3f03b695f0a",
+      "translated": "사이드바의 각 작업 트리 카드는 동일한 색상의 상태 점으로 에이전트 세션을 인라인하므로 카드를 확장하지 않고도 모든 작업 트리의 모든 에이전트를 한 눈에 볼 수 있습니다. 행은 볼 때까지 굵게 유지되며 사이드바 상태 오버레이는 먼저 주의가 필요한 작업 트리를 표시합니다."
+    },
+    "/docs/model/agents-sessions/:paragraph:agent-dashboard:1": {
+      "sourceHash": "81d9b9146bd1f90860a031a0c70588f9c687ab0e1f8dd16536a40860beaafca6",
+      "translated": "대시보드는 기본적으로 켜져 있습니다. 토글이 없습니다. 상태 점이 표시되지 않으면 해당 세션의 에이전트 CLI가 ORCA_PROTECTED_0001이 인식하는 OSC 제목을 내보내지 않는 것입니다. 바이너리를 직접 입력하는 대신 에이전트 콤보 상자를 통해 시작하십시오."
+    },
+    "/docs/model/agents-sessions/:heading:launch-defaults:0": {
+      "sourceHash": "1dff4aef5b202c50e97db92fcd9b5af9bca40f468e63d1f7856788ed3c4563e6",
+      "translated": "## 실행 기본값"
+    },
+    "/docs/model/agents-sessions/:paragraph:launch-defaults:0": {
+      "sourceHash": "fc34a56b9865ac776bba60e3c41de606e64db354c9594211e4a5b0b4de55e0cd",
+      "translated": "ORCA_PROTECTED_0001은 완전 자율성 권한 플래그가 사전 적용된 지원되는 모든 에이전트를 시작합니다. 예를 들어 Claude는 'ORCA_PROTECTED_0002', ORCA_PROTECTED_0003은 'ORCA_PROTECTED_0004', Gemini는 'ORCA_PROTECTED_0005'로, 선택기의 다른 에이전트에 대해서는 이에 상응하는 항목을 실행합니다. 그 의도는 작업 트리 자체가 샌드박스라는 것입니다. 즉, 에이전트는 흐름을 중단시키는 도구별 승인 메시지 없이 작업을 수행할 수 있습니다."
+    },
+    "/docs/model/agents-sessions/:paragraph:launch-defaults:1": {
+      "sourceHash": "18c4c9712c285324abe8bd80a5cd0ea7a98dcc5995a64e878ed479975cc45510",
+      "translated": "에이전트에 대해 다른 기본값을 원하는 경우 `Settings → Agents`(설정 → 에이전트)를 열고 에이전트 행을 확장한 다음 해당 `launch arguments`(실행 인수)를 편집하세요. ORCA_PROTECTED_0001은 재정의를 기억하고 이후 실행 시마다 이를 적용합니다. 되돌리려는 경우 필드 옆에 있는 `Reset`(재설정) 버튼을 사용하면 배송된 플래그를 다시 되돌릴 수 있습니다."
+    },
+    "/docs/model/agents-sessions/:heading:restart-chip:0": {
+      "sourceHash": "b3ee007f74422e864d14fe350fbb44e58565efd04481d8786f0a9e911abe8f69",
+      "translated": "## 칩 재시작"
+    },
+    "/docs/model/agents-sessions/:paragraph:restart-chip:0": {
+      "sourceHash": "c9a014fdd5c87a94cec1e1684ef988e8fbf26e410d07977638fd7bf6b01d9561",
+      "translated": "에이전트가 종료되면(클린 또는 충돌) 탭에 `Restart`(다시 시작) 칩이 표시됩니다. 한 번의 클릭으로 동일한 작업 디렉터리로 동일한 에이전트를 재수화합니다. ORCA_PROTECTED_0001의 재시작 칩은 현재 계정도 보존합니다([핫 스왑 ORCA_PROTECTED_0002 계정](ORCA_PROTECTED_0003) 참조)."
+    },
+    "/docs/model/agents-sessions/:heading:session-lifecycle:0": {
+      "sourceHash": "92214b5331d3f347ec19b6ec3647874e5eb5fc6c18fb373eca7bb38b5baea2f6",
+      "translated": "## 세션 수명주기"
+    },
+    "/docs/model/agents-sessions/:list:session-lifecycle:0": {
+      "sourceHash": "209b679c1d8c88994bb6c468b31c11d2b9a341b8b36b23e1854c833b2d53d20c",
+      "translated": "1. `Launch`(실행) — 콤보 상자에서 에이전트를 선택합니다. ORCA_PROTECTED_0001은 CLI를 생성합니다.\n2. `Work`(작업) — OSC 타이틀 업데이트 상태; 터미널 출력은 검색, 복사 및 Ghostty 테마로 스크롤됩니다.\n3. `Idle`(유휴) — ORCA_PROTECTED_0002는 작업 → 유휴 전환을 감지하고 [에이전트 완료 알림](ORCA_PROTECTED_0003)을 발생시킵니다.\n4. `Exit`(종료) — 프로세스가 종료됩니다. 재시작 칩이 나타납니다."
+    },
+    "/docs/model/agents-sessions/:aside:session-lifecycle:0": {
+      "sourceHash": "a9456da7b7b739894cfd5f6267aade49dbfa546fd9312b9c8507b9154045f4a0",
+      "translated": "정확한 탐지 규칙은 [ORCA_PROTECTED_0002 CLI](ORCA_PROTECTED_0003)의 `ORCA_PROTECTED_0001` 명령을 참조하세요."
+    }
+  }
+}

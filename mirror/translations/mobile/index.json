@@ -1,0 +1,98 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/mobile",
+  "mirrorPath": "/docs/mobile/",
+  "entries": {
+    "/docs/mobile/:heading:mobile-companion:0": {
+      "sourceHash": "eeadb2e1b4b63646876d8abfbb270a4db65fba3f8eaa8b285a27b4f6d37e5b19",
+      "translated": "# 모바일 동반자"
+    },
+    "/docs/mobile/:paragraph:mobile-companion:0": {
+      "sourceHash": "dc8579f644c6715d7a682a670cd0bcbaa37c0a049c4d7a38e379e84c189853f3",
+      "translated": "ORCA_PROTECTED_0001 모바일 앱을 데스크톱에 페어링하여 에이전트를 모니터링하고 전화기에서 작업 트리를 해제하세요."
+    },
+    "/docs/mobile/:paragraph:mobile-companion:1": {
+      "sourceHash": "7d7825bb647d0fc8e87365623bf0f6351b9ca020c59474fe855c9e72aa11872a",
+      "translated": "ORCA_PROTECTED_0001 모바일 컴패니언은 데스크톱 ORCA_PROTECTED_0003과 쌍을 이루는 ORCA_PROTECTED_0002 앱으로, 실행 중인 에이전트에 대한 읽기 전용 보기(에이전트 상태, 최근 터미널 스크롤백, 전화에서 실제로 원하는 제어(프롬프트에 응답, 작업 트리 휴면, 소스 제어 검토, 에이전트 계정 전환))를 제공합니다. 페어링은 일회성이며 데스크탑은 항상 정보의 소스입니다."
+    },
+    "/docs/mobile/:figure:mobile-companion:0": {
+      "sourceHash": "4f5142942b06e803908d88cd1795f787de7a457b5e3fe07f73f479a06c38d795",
+      "translated": "![ORCA_PROTECTED_0001 모바일 — 상담원 상태, 스크롤백 및 휴대전화를 통한 빠른 응답.](ORCA_PROTECTED_0002)\n\nORCA_PROTECTED_0003 모바일 — 상담원 상태, 스크롤백 및 전화기를 통한 빠른 응답."
+    },
+    "/docs/mobile/:aside:mobile-companion:0": {
+      "sourceHash": "228c7ae7275f36fd1f2b2d1b8dbbb5f3e68607e84f38b0b4e8a09d6841052b0e",
+      "translated": "베타\n\n모바일 컴패니언은 베타 버전입니다. [App Store](ORCA_PROTECTED_0001)에서 iOS를 설치하거나, ​​[TestFlight 미리보기 채널](ORCA_PROTECTED_0002)에 가입하거나, [현재 APK 0.0.27](ORCA_PROTECTED_0003)에서 Android를 설치하세요."
+    },
+    "/docs/mobile/:heading:what-you-can-do-from-mobile:0": {
+      "sourceHash": "6b898c2b338d338615017ae7609521db174b0dc7437c980580647e0a58e4d9f0",
+      "translated": "## 모바일에서 할 수 있는 일"
+    },
+    "/docs/mobile/:list:what-you-can-do-from-mobile:0": {
+      "sourceHash": "1e6f82590f55260d23372107e33841902e9424c5cb6429e99aa3b1a9a8c80a07",
+      "translated": "- 모든 작업 트리, 해당 에이전트 및 현재 상태(작업/완료/입력 대기)를 확인하세요. 모바일은 연결된 모든 호스트(로컬 데스크톱 및 원격 ORCA_PROTECTED_0001 서버)의 작업 트리를 단일 보기에 나열하므로 호스트 간 전환 시 장치 변경이 필요하지 않습니다.\n- 깊게 중첩된 경로를 포함하여 모바일에서 작업 공간의 전체 파일 트리를 탐색하므로 데스크탑을 기다리지 않고 어떤 파일로든 이동할 수 있습니다.\n- 최근 터미널 스크롤백을 수화하여 상담원이 수행하거나 요청한 내용을 읽을 수 있습니다.\n- 모바일 단말기 보기에서 텍스트를 선택하고, 복사하고, 붙여넣습니다. 선택하려면 길게 누르고, 답장에 다시 붙여넣으려면 시트를 공유하세요.\n- 'ORCA_PROTECTED_0002' 및 'ORCA_PROTECTED_0003'을 포함하여 휴대폰 키보드에서 어색한 키에 대해 터미널 액세서리 행을 사용하거나, 입력한 각 문자가 활성 터미널로 바로 이동해야 하는 경우 **Live**로 전환하세요.\n- 상담원이 입력 대기 중일 때 짧은 답장(`ORCA_PROTECTED_0004`, `ORCA_PROTECTED_0005`, 자유 텍스트)을 보내거나, 사진이나 파일을 첨부하거나, 마이크를 탭하여 응답을 받아쓰세요. `Live`(라이브) 모드에서는 Return 키를 누르지 않고도 받아쓰기 텍스트가 활성 터미널에 삽입됩니다.\n- 휴대폰에서 반응형 페이지를 확인해야 하는 경우 `Web`(웹) 또는 `Mobile`(모바일) 보기에서 브라우저 세션을 엽니다.\n- 작업 트리에 대한 오픈 소스 제어를 통해 변경된 파일을 검토하고, 스테이지 또는 언스테이징하고, 휴대폰에서 커밋할 수 있습니다.\n- 활성 에이전트 계정을 전환하고 이동 중에도 사용량/비율 제한 상태를 확인하세요.\n- 에이전트가 완료되면 [데스크톱 알림](ORCA_PROTECTED_0006)을 미러링하여 푸시 알림을 받습니다."
+    },
+    "/docs/mobile/:paragraph:what-you-can-do-from-mobile:0": {
+      "sourceHash": "7d17c070369ff13c325d1304f93b94b8435c00199fc3a0408cff68ff7f5f1883",
+      "translated": "모바일 앱은 의도적으로 전체 편집기가 아닙니다. 이미 실행 중인 데스크톱에 대한 원격 제어입니다."
+    },
+    "/docs/mobile/:heading:pairing:0": {
+      "sourceHash": "2994a5d211c7568a50030047c8fd45a505f9c5c09a0c04de943291ca32117eaf",
+      "translated": "## 페어링"
+    },
+    "/docs/mobile/:list:pairing:0": {
+      "sourceHash": "3028550a5833777d00792c3e3fb80d921dfd425ec67938b20ecdd03cce073654",
+      "translated": "1. 데스크톱의 계정/상태 메뉴에서 ORCA_PROTECTED_0001의 페어링 흐름을 엽니다. ORCA_PROTECTED_0002는 일회성 페어링 코드를 표시합니다.\n2. 모바일에서 ORCA_PROTECTED_0003 컴패니언 앱을 열고 `Pair`(페어링)을 선택한 다음 코드를 붙여넣습니다. (데스크톱에서 딥링크를 따라 모바일 페어링 화면으로 직접 이동할 수도 있습니다.)\n3. 페어링 교환은 데스크톱과 휴대폰 간에 직접 이루어집니다. ORCA_PROTECTED_0004는 페어링된 전화기에 대해 결과 장치 토큰을 사용합니다."
+    },
+    "/docs/mobile/:paragraph:pairing:0": {
+      "sourceHash": "9422243b54663aa890deba93ba395dfb389bfabe466f95f9ea4a1515ac202de4",
+      "translated": "데스크톱 앱을 닫으면 연결이 끊어지며 클라우드 릴레이가 없습니다. 데스크톱을 다시 열면 전화기가 자동으로 다시 연결됩니다."
+    },
+    "/docs/mobile/:heading:account-switcher:0": {
+      "sourceHash": "172714fe3b5ae43c52a77bd88f0efeae84b181bce3a2eb9d9756edc834f58656",
+      "translated": "## 계정 전환기"
+    },
+    "/docs/mobile/:paragraph:account-switcher:0": {
+      "sourceHash": "61f64582af0c080d83a42bf8e7e220a740764da363bc03a32a73319098050d79",
+      "translated": "모바일 앱은 비활성 계정에 대한 인라인 사용을 포함하여 데스크톱 상태 표시줄과 동일한 계정 전환기를 노출합니다. 여기에서 전환하면 페어링된 데스크톱이 켜집니다."
+    },
+    "/docs/mobile/:heading:source-control-on-mobile:0": {
+      "sourceHash": "9e0650f80cbc46fce5959aaa44675b214de28cf5ae0600dd6ead7291260fe96f",
+      "translated": "## 모바일에서 소스 제어"
+    },
+    "/docs/mobile/:paragraph:source-control-on-mobile:0": {
+      "sourceHash": "f3a9765fa1ad02507d1055fcdf4fdba793eff2ccd5d8a9e2f9294a3d2a747811",
+      "translated": "작업 트리 세션에서 분기 아이콘을 탭하여 소스 제어를 엽니다. 소규모 후속 작업에 사용하세요. 분기 상태를 확인하고, 변경된 경로를 검사하고, 파일을 준비하거나 준비 해제하고, 준비된 세트가 준비되면 커밋하세요. 분기에 이미 GitHub 끌어오기 요청이 있는 경우 새 PR을 만드는 대신 빈 PR 상태에서 `Link an existing PR`(기존 PR 연결)을 사용하여 연결하세요."
+    },
+    "/docs/mobile/:heading:browser-view-on-mobile:0": {
+      "sourceHash": "b87c7ff3dd1466ea2465a3050d128c87408d6610f37805f86260a5686572f324",
+      "translated": "## 모바일 브라우저 보기"
+    },
+    "/docs/mobile/:paragraph:browser-view-on-mobile:0": {
+      "sourceHash": "d63fb9acc85706584776fa9cb420cf88314a54a37ec772e13de5090afa86963d",
+      "translated": "모바일 브라우저 창에는 `Web / Mobile`(웹/모바일) 스위치가 있습니다. 일반 페이지를 보려면 `Web`(웹)을 사용하고, 페어링된 데스크톱 브라우저에 휴대폰 크기의 반응형 뷰포트를 요청하려면 `Mobile`(모바일)을 사용하세요."
+    },
+    "/docs/mobile/:heading:terminal-settings:0": {
+      "sourceHash": "b267e99437929ec1da3f9c22308bb28b2805e636332497a5b28ac4c6a10b511d",
+      "translated": "## 터미널 설정"
+    },
+    "/docs/mobile/:paragraph:terminal-settings:0": {
+      "sourceHash": "8b44a9014bdd7762a70bced7a0e7f0a669d96ad22027d0b081fe81d62bd15c66",
+      "translated": "모바일 단말기에는 전용 `Terminal settings`(터미널 설정) 화면(설정 → 터미널)이 있습니다."
+    },
+    "/docs/mobile/:list:terminal-settings:0": {
+      "sourceHash": "9285ca861b10881f2fead9f7fed1a99d995071665953b3b3083d96030d440c3d",
+      "translated": "- `Text size`(텍스트 크기) — WebView가 너비에 맞춤 위에 적용되는 50%~200% 기준 확대/축소입니다. 터미널의 핀치 투 줌(Pinch-to-Zoom)은 동일한 사전 설정으로 스냅되고 지속됩니다. 이 설정은 장치별로 적용되며 데스크톱 터미널을 변경하지 않습니다.\n- `Autocomplete & autocorrect`(자동 완성 및 자동 수정) — 기본적으로 꺼져 있으므로 OS는 명령 모음의 명령, 플래그 또는 경로를 다시 쓰지 않습니다. 전화 스타일로 타이핑하려면 이 기능을 켜세요. 라이브 키보드 캡처 입력은 여전히 ​​어느 쪽이든 원시 키 입력을 스트리밍합니다."
+    },
+    "/docs/mobile/:heading:troubleshooting:0": {
+      "sourceHash": "659a188b36f9c3262a28539e24c345df4edc9657f59b116b0a1d9887cf2e28e0",
+      "translated": "## 문제 해결"
+    },
+    "/docs/mobile/:list:troubleshooting:0": {
+      "sourceHash": "80077ee671c07a3c1dab9720419651ba213c5f18ad4846653c7a42b0d1538e46",
+      "translated": "- `Stuck spinner on a worktree`(작업 트리의 회전자가 멈췄습니다) — 전화기는 데스크톱 에이전트 프로세스에서 하트비트를 추적합니다. 데스크톱에는 유휴 상태라고 표시되지만 전화기에는 작동 중인 것으로 표시되면 작업 트리 행을 강제로 새로 고쳐 상태를 동기화하세요.\n- `Pairing fails`(페어링 실패) — 데스크톱과 휴대폰이 동일한 ORCA_PROTECTED_0001 계정에 로그인되어 있는지 확인하세요. 페어링 코드는 몇 분 후에 만료됩니다. 화면에 앉아 있었다면 새로운 것을 생성하십시오."
+    },
+    "/docs/mobile/:aside:troubleshooting:0": {
+      "sourceHash": "21b0df8d36342b835ce6c77e25fe45e9eecd1daf28eb9b3063dc2e21ec047465",
+      "translated": "다음 단계\n\n모바일 알림을 [데스크톱 알림](ORCA_PROTECTED_0001)과 페어링하면 에이전트 종료 알림이 올바른 장치에 도달합니다."
+    }
+  }
+}

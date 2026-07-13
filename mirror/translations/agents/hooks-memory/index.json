@@ -1,0 +1,50 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/agents/hooks-memory",
+  "mirrorPath": "/docs/agents/hooks-memory/",
+  "entries": {
+    "/docs/agents/hooks-memory/:heading:agent-hooks-memory:0": {
+      "sourceHash": "9d154a55a5fe46575a8a4a9383d21fecfe947a4f137ef12c70273c9fd89e8ff9",
+      "translated": "# 에이전트 후크 및 메모리"
+    },
+    "/docs/agents/hooks-memory/:paragraph:agent-hooks-memory:0": {
+      "sourceHash": "be57c0d2cb0a30115bf81765e9c762bcd475002eb0c35b5f772db02f2163487e",
+      "translated": "ORCA_PROTECTED_0001은 ORCA_PROTECTED_0002 및 ORCA_PROTECTED_0003이 이미 사용하고 있는 에이전트 후크 및 메모리 규칙과 잘 작동합니다. 이를 읽고 존중하며 IDE 컨텍스트에 적합한 UI를 제공합니다."
+    },
+    "/docs/agents/hooks-memory/:heading:per-repo-hooks:0": {
+      "sourceHash": "9819585b8acd44affbd6ff5e32bae2504bbaaa31500f0ff96bdc262dbe2adaf9",
+      "translated": "## 저장소별 후크"
+    },
+    "/docs/agents/hooks-memory/:paragraph:per-repo-hooks:0": {
+      "sourceHash": "feb9a12d6804173438b3e84fff2f9aae1a45e7dcf8951e3a212062d694afa643",
+      "translated": "ORCA_PROTECTED_0001은 각 저장소의 'ORCA_PROTECTED_0002' 및 'ORCA_PROTECTED_0003' 구성을 읽습니다. ORCA_PROTECTED_0004가 해당 저장소의 작업 트리에서 에이전트를 시작할 때 이미 가지고 있는 후크가 실행됩니다."
+    },
+    "/docs/agents/hooks-memory/:heading:worktree-setup-hooks:0": {
+      "sourceHash": "c7fb8b6224625da07dd75898b94e06dfa68a48873deb88e9b3a998036b3ffda6",
+      "translated": "## 작업 트리 설정 후크"
+    },
+    "/docs/agents/hooks-memory/:paragraph:worktree-setup-hooks:0": {
+      "sourceHash": "b0e64ffaf7d67b2a64bd53126d36a80fa8ad4a939077d41edafe5db0d8402f78",
+      "translated": "작업 트리가 생성된 후 자동으로 실행되도록 명령을 구성합니다. 예: `ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002` 또는 `ORCA_PROTECTED_0003` 파일을 복원하는 스크립트. [설정 → 리포지토리 → 후크](ORCA_PROTECTED_0004)에서 설정합니다."
+    },
+    "/docs/agents/hooks-memory/:heading:memory-files:0": {
+      "sourceHash": "21800845f43abf60bb5c0a3e85ac405d387c5823f8e8d419fd85bf04829ffb56",
+      "translated": "## 메모리 파일"
+    },
+    "/docs/agents/hooks-memory/:paragraph:memory-files:0": {
+      "sourceHash": "1b357ec4d33c2ff76834be514c0c6bd9a8616975e022e9fe5a0af37e0c9d62f0",
+      "translated": "Claude의 `ORCA_PROTECTED_0001` 및 ORCA_PROTECTED_0002의 `ORCA_PROTECTED_0003`(repo 루트 또는 중첩)은 단독으로 남겨지며 에이전트에 속합니다. ORCA_PROTECTED_0004는 다른 파일과 마찬가지로 파일 탐색기에 해당 파일을 표시하므로 인라인으로 편집할 수 있습니다."
+    },
+    "/docs/agents/hooks-memory/:heading:surviving-a-restart:0": {
+      "sourceHash": "3df67dd01cf8301303f569eb8820ed096cf93ad1581feb6bcdbe90e152589ddd",
+      "translated": "## 재시작에서 살아남기"
+    },
+    "/docs/agents/hooks-memory/:paragraph:surviving-a-restart:0": {
+      "sourceHash": "a97c38648fc25217c2adf22ef590c569df14f54510d5607642d885c10dac0fd4",
+      "translated": "후크 엔드포인트는 디스크(POSIX의 경우 `ORCA_PROTECTED_0001`, Windows의 경우 `ORCA_PROTECTED_0002`)에 기록되고 모든 후크 호출 시 리소스가 제공되므로 앱을 다시 시작한 후에도 수명이 긴 에이전트 세션이 라이브 ORCA_PROTECTED_0003 서버에 계속 도달합니다. 이전 세션보다 오래 지속된 PTY의 데드 포트 POST가 더 이상 발생하지 않습니다."
+    },
+    "/docs/agents/hooks-memory/:aside:surviving-a-restart:0": {
+      "sourceHash": "26576cd47fb0fa4a7c6da343d3a52f6d85a35fcb04ce87ac8b83615ff42c7cec",
+      "translated": "ORCA_PROTECTED_0001 CLI는 현장 에이전트가 스스로 업데이트할 수 있는 주석 처리된 작업 트리 상태를 표시합니다. [작업 트리 체크포인트](ORCA_PROTECTED_0002)를 참조하세요."
+    }
+  }
+}

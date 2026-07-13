@@ -1,0 +1,62 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/agents/codex",
+  "mirrorPath": "/docs/agents/codex/",
+  "entries": {
+    "/docs/agents/codex/:heading:codex-in-orca:0": {
+      "sourceHash": "0620004b5ab237b7458a296cfd0e3745466ea0fbfe8979e93dc2ede28b75271e",
+      "translated": "# ORCA_PROTECTED_0002의 ORCA_PROTECTED_0001"
+    },
+    "/docs/agents/codex/:paragraph:codex-in-orca:0": {
+      "sourceHash": "a3a3dce475d8f192363f7cb74581dcb080965b0731bf20da00babd8844a955b9",
+      "translated": "ORCA_PROTECTED_0001은 OpenAI의 에이전트 CLI입니다. ORCA_PROTECTED_0002의 ORCA_PROTECTED_0003 통합은 앱에서 가장 심층적인 통합 중 하나입니다. 사용, 핫스왑 및 다시 시작은 모두 계정 ID를 유지합니다."
+    },
+    "/docs/agents/codex/:heading:setup:0": {
+      "sourceHash": "0ecddf15e1aff85f7399e0fd362b9856d804a3e66dd65e41b547c255fc86d8c1",
+      "translated": "## 설정"
+    },
+    "/docs/agents/codex/:list:setup:0": {
+      "sourceHash": "bb4ad26de41bb1eedd3a6ff1fc2169c9c81b36a7566e9b55c88bc9011b54af7f",
+      "translated": "1. OpenAI 문서에 따라 ORCA_PROTECTED_0001을 설치합니다.\n2. 아무 터미널에서나 로그인하세요.\n3. ORCA_PROTECTED_0002는 계정 및 자격 증명에 대해 'ORCA_PROTECTED_0003'을 읽습니다."
+    },
+    "/docs/agents/codex/:heading:launching:0": {
+      "sourceHash": "deec0a144035bc7a7bb357ec17bbe25927b03a914653411d367154bb8d9e58ad",
+      "translated": "## 출시"
+    },
+    "/docs/agents/codex/:paragraph:launching:0": {
+      "sourceHash": "ef1905a393a07c946ce87284d49757f4e330c960f7af5250c6170f870a56d934",
+      "translated": "에이전트 콤보 상자에서 **ORCA_PROTECTED_0001**을 선택합니다. ORCA_PROTECTED_0002는 작업 트리를 `ORCA_PROTECTED_0004`로 사용하여 `ORCA_PROTECTED_0003`을 시작하고 현재 선택된 계정을 통해 인증을 라우팅합니다."
+    },
+    "/docs/agents/codex/:heading:account-hot-swap:0": {
+      "sourceHash": "d14f29eddfb33ec43d1113ffc14164f8169353b543376014e46c057de34872a5",
+      "translated": "## 계정 핫스왑"
+    },
+    "/docs/agents/codex/:paragraph:account-hot-swap:0": {
+      "sourceHash": "5a74d9e20b9f1d36b62d115d69b31245bbdcad748abb0bab41186b9d50a3eeec",
+      "translated": "많은 ORCA_PROTECTED_0001 사용자는 속도 제한을 늘리기 위해 여러 계정을 실행합니다. ORCA_PROTECTED_0002의 계정 전환기는 재로그인이나 구성 편집 없이 활성 계정을 교체합니다. [핫스왑 ORCA_PROTECTED_0003 계정](ORCA_PROTECTED_0004)을 참조하세요."
+    },
+    "/docs/agents/codex/:heading:restart-chip:0": {
+      "sourceHash": "b3ee007f74422e864d14fe350fbb44e58565efd04481d8786f0a9e911abe8f69",
+      "translated": "## 칩 재시작"
+    },
+    "/docs/agents/codex/:paragraph:restart-chip:0": {
+      "sourceHash": "9ac0ac814506a17958cfe2112953140b03491c1f08cfe306a4e6a57fb6e29ee8",
+      "translated": "ORCA_PROTECTED_0001이 종료되면 다시 시작 칩이 동일한 계정으로 에이전트를 다시 시작합니다. 세션 중에 계정을 교환하고 새 계정으로 다시 시작하려면 먼저 계정 전환기를 사용한 다음 다시 시작하세요."
+    },
+    "/docs/agents/codex/:heading:usage-rate-limits:0": {
+      "sourceHash": "5adb5642129078fc227f4904ad31f95de37aa5abebe416768dc33e0041b5ea8c",
+      "translated": "## 사용량 및 속도 제한"
+    },
+    "/docs/agents/codex/:paragraph:usage-rate-limits:0": {
+      "sourceHash": "2ff5b63014992bc5c37d770d8d908ec4b7c89aaeada0341a9d66c7c229559012",
+      "translated": "ORCA_PROTECTED_0001은 활성 계정에 대한 로컬 ORCA_PROTECTED_0002 사용 상태를 읽고 이를 상태 표시줄에 표시합니다. [사용량 및 속도 제한 추적](ORCA_PROTECTED_0003)을 참조하세요."
+    },
+    "/docs/agents/codex/:heading:codex-on-windows-wsl:0": {
+      "sourceHash": "093b19f5667072529de5b6ae0ec192e7caedb3b68496ecc8bf9ee9e351a25a49",
+      "translated": "## Windows(WSL)의 ORCA_PROTECTED_0001"
+    },
+    "/docs/agents/codex/:paragraph:codex-on-windows-wsl:0": {
+      "sourceHash": "43503b2b806d6edd511fea8a77f231ce23db34f20ee076ee9b21e8d2eea445e7",
+      "translated": "Windows에서 ORCA_PROTECTED_0001은 호스트 설치 또는 WSL 배포판에서 ORCA_PROTECTED_0002를 실행할 수 있습니다. 계정 전환기에서 WSL 호스팅 ORCA_PROTECTED_0003 계정 추가 — ORCA_PROTECTED_0004는 distro(`ORCA_PROTECTED_0005` 아래) 내부에 격리된 계정 홈을 생성하고 인증 읽기를 위한 `ORCA_PROTECTED_0006` 경로로 호스트에 다시 매핑하며 선택한 배포판을 통해 시작, 핫스왑 및 속도 제한 가져오기를 라우팅합니다. ORCA_PROTECTED_0007이 대상 배포판에 설치되지 않은 경우 바이너리가 누락된 배포판을 알려주는 실행 가능한 메시지와 함께 `Add account`(계정 추가) 대화 상자가 실패합니다."
+    }
+  }
+}

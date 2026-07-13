@@ -1,0 +1,86 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/ssh",
+  "mirrorPath": "/docs/ssh/",
+  "entries": {
+    "/docs/ssh/:heading:ssh-worktrees:0": {
+      "sourceHash": "a230cfd4602617ad0e69f1b6aa564bbc779857903010047aac70aa0295252af2",
+      "translated": "# SSH 작업 트리"
+    },
+    "/docs/ssh/:paragraph:ssh-worktrees:0": {
+      "sourceHash": "dc9165c0e58797245ebb93ac1ee50c0c066fc09eae9fab6f7b2f61a4c076018a",
+      "translated": "ORCA_PROTECTED_0001은 SSH를 통해 원격 시스템에서 에이전트를 구동할 수 있습니다. 이는 장기 실행 빌드, GPU 상자 또는 노트북이 작업을 실행하기에 적합하지 않은 모든 환경에 유용합니다."
+    },
+    "/docs/ssh/:figure:ssh-worktrees:0": {
+      "sourceHash": "da913c99047f31b6ba4dea3d371a8ceaf0d502ec33335191a1b18b4401220a01",
+      "translated": "![SSH 원격 작업공간 — 에이전트는 원격 호스트에서 실행되고 편집기 및 차이점은 로컬로 유지됩니다.](ORCA_PROTECTED_0001)\n\nSSH 원격 작업 공간 — 에이전트는 원격 호스트에서 실행되고 편집기와 차이점은 로컬로 유지됩니다."
+    },
+    "/docs/ssh/:heading:add-an-ssh-target:0": {
+      "sourceHash": "40cd4e3c201258d5235c0c8df68d4d6ba1900babd5e50b316ebdcca0ad5310b8",
+      "translated": "## SSH 대상 추가"
+    },
+    "/docs/ssh/:list:add-an-ssh-target:0": {
+      "sourceHash": "60d95e81c040721ee41dd6e0af5da8b71e519dbf8d360a1e842bf1c816ad5952",
+      "translated": "1. [설정 → SSH](ORCA_PROTECTED_0001)를 엽니다.\n2. 대상(호스트, 사용자, 포트, 선택적 ID 파일)을 추가합니다. ORCA_PROTECTED_0002는 또한 'ORCA_PROTECTED_0003' 지시문에서 참조하는 파일을 포함하여 OpenSSH 구성 파일에서 호스트를 가져옵니다.\n3. 키가 암호로 보호된 경우 ORCA_PROTECTED_0004가 처음으로 메시지를 표시합니다.\n4. `Test`(테스트)를 클릭하여 연결을 확인합니다."
+    },
+    "/docs/ssh/:heading:use-a-target:0": {
+      "sourceHash": "6276e8b6ed84037268084625ae6b9f841dc19520c8f32daff3c404ee8aecf9de",
+      "translated": "## 타겟을 사용하세요"
+    },
+    "/docs/ssh/:paragraph:use-a-target:0": {
+      "sourceHash": "c6123f69041308bcc27a98118cd0fb9309dab00dbbcf5ae4692268aafccb8d69",
+      "translated": "작업 트리를 생성할 때 로컬 대신 SSH 대상을 선택합니다. ORCA_PROTECTED_0001은 다음을 수행합니다."
+    },
+    "/docs/ssh/:list:use-a-target:0": {
+      "sourceHash": "38c29346714a3b058e537f9939fb9be9286f8952b7db78d3d07e273d50ff5ef2",
+      "translated": "- 원격 호스트에 git 작업 트리를 만듭니다.\n- SSH 연결을 통해 원격으로 에이전트를 실행합니다.\n- 편집기, 차이점 및 브라우저가 여전히 로컬처럼 느껴지도록 파일 이벤트를 동기화합니다."
+    },
+    "/docs/ssh/:heading:advanced-connection-options:0": {
+      "sourceHash": "2b612e1f1f786559c42b75118aa2f99148a55ea74ca542636c02af15ac4d9635",
+      "translated": "## 고급 연결 옵션"
+    },
+    "/docs/ssh/:paragraph:advanced-connection-options:0": {
+      "sourceHash": "9b892087714ece8f9b6f3fc5a9d5715ee218ee68ff44409f11cdec3207ba0fa9",
+      "translated": "`Settings → SSH`(설정 → SSH)를 열고, 대상을 편집하고, 호스트에 프록시, 점프 호스트 또는 SSH 멀티플렉싱 재정의가 필요한 경우 `Advanced Connection`(고급 연결)을 확장합니다. ORCA_PROTECTED_0001은 기본적으로 `Reuse SSH connection for faster setup`(더 빠른 설정을 위해 SSH 연결 재사용)을 활성화합니다. 이는 macOS 및 Linux에서 OpenSSH 연결 재사용을 사용하므로 설정 명령이 각각 새로운 SSH 핸드셰이크를 지불하지 않습니다. SSH 정책이 멀티플렉싱 세션을 거부하는 호스트에 대해서만 이 기능을 끄십시오."
+    },
+    "/docs/ssh/:heading:passphrases:0": {
+      "sourceHash": "2f88cea0de69e76666e8131d64f821e139a0ccf315ca365b26c359b554e2c4a0",
+      "translated": "## 암호"
+    },
+    "/docs/ssh/:paragraph:passphrases:0": {
+      "sourceHash": "27e9b7d257016dfe4d8dd0f07d6df1660fe8ceacc772c113cfead7d5bc47f312",
+      "translated": "암호는 ORCA_PROTECTED_0001 세션이 지속되는 동안 메모리에 보관됩니다. ORCA_PROTECTED_0002를 닫으면 해당 내용이 지워집니다. SSH 설정에서 더 긴 TTL을 선택할 수 있습니다."
+    },
+    "/docs/ssh/:heading:status:0": {
+      "sourceHash": "8b1501efecf5aaab88f0940d5804c94111b5c227a27bc5fd9a3e96cca6744236",
+      "translated": "## 상태"
+    },
+    "/docs/ssh/:paragraph:status:0": {
+      "sourceHash": "63c2d5201dfe93860600c35f29a6699236de8ed2847b16b44784529528fe480a",
+      "translated": "원격 작업 트리에는 실시간 SSH 상태(녹색 연결됨, 노란색 재연결 중, 빨간색 연결 끊김)가 포함된 칩이 표시됩니다. 연결 끊김은 실행 중인 에이전트를 종료하지 않습니다. ORCA_PROTECTED_0001은 다시 연결하고 다시 연결합니다. 에이전트 상태(작업 중/유휴/차단됨)는 로컬에서와 동일한 방식으로 SSH를 통해 전파되므로 사이드바 및 [에이전트 피드](ORCA_PROTECTED_0002)에 원격 에이전트가 실시간으로 반영됩니다."
+    },
+    "/docs/ssh/:heading:sessions-across-app-close:0": {
+      "sourceHash": "4a1fbb00eb1e03b83a8bd01eeae123fdb53ffee2d6e8ed1eac08da08fc47740b",
+      "translated": "## 앱 종료 시 세션"
+    },
+    "/docs/ssh/:paragraph:sessions-across-app-close:0": {
+      "sourceHash": "49fa7d89c556073a390f471149d64b67d4a651b6c6fc15ec97b3cdbc8672339a",
+      "translated": "데스크톱 앱을 닫아도 더 이상 원격 PTY 세션이 종료되지 않습니다. 원격 터미널 세션은 원격 호스트에서 실행되는 릴레이를 통해 임대되므로 랩톱에서 ORCA_PROTECTED_0001을 종료해도 유지됩니다. 앱을 다시 열고 대상에 다시 연결하면 임대된 PTY가 스크롤백이 그대로 유지된 상태로 `attached`(연결됨) 상태로 해당 탭에 복원됩니다. 짧은 유예 기간(기본적으로 5분, 대상별로 구성 가능)은 분리된 세션을 해제하기 전에 빠른 재연결을 완료할 수 있는 릴레이 시간을 제공합니다."
+    },
+    "/docs/ssh/:heading:downloading-remote-files:0": {
+      "sourceHash": "11026e9e4490e22801420d69e44312db2e63492743b00478efbbb1f8b61034b9",
+      "translated": "## 원격 파일 다운로드 중"
+    },
+    "/docs/ssh/:paragraph:downloading-remote-files:0": {
+      "sourceHash": "ebea57ab7b609f4b5c04f534073e79ed35cd63c27e1b20353e0453441622e9b4",
+      "translated": "SSH 작업 트리의 파일 탐색기에서 파일을 마우스 오른쪽 버튼으로 클릭하고 `Download`(다운로드)를 선택하여 노트북에 복사합니다. ORCA_PROTECTED_0001은 기본 저장 대화 상자를 열어 저장 위치를 ​​선택할 수 있도록 합니다. 이는 데스크톱 전용 작업입니다. 웹 클라이언트는 Electron의 저장 대화 상자에 의존하기 때문에 다운로드를 노출하지 않습니다."
+    },
+    "/docs/ssh/:heading:port-forwarding:0": {
+      "sourceHash": "cbb923c4f1af6e793423bd1055ca2df4c9fa5392b9532c3d5ba05db813b67f76",
+      "translated": "## 포트 포워딩"
+    },
+    "/docs/ssh/:paragraph:port-forwarding:0": {
+      "sourceHash": "ed7f8e9386b8aaf428f549c1a4aa0e344d00e334d3be0a416368d9fc4474aee1",
+      "translated": "원격 작업 트리의 경우 오른쪽 사이드바에 `Ports`(포트) 탭이 표시됩니다(`ORCA_PROTECTED_0001`로 전환). ORCA_PROTECTED_0002는 원격에서 'ORCA_PROTECTED_0003'을 검색하고 `Detected`(감지됨) 아래에 수신 대기 포트를 나열합니다. 한 번의 클릭으로 해당 포트를 노트북으로 전달합니다. 수동으로 전달을 추가하거나 편집하거나 제거할 수도 있습니다. 전달은 앱을 다시 시작하고 SSH를 다시 ​​연결해도 지속되며 권한 있는 원격 포트는 로컬에서 자동으로 다시 매핑됩니다(예: 원격 80 → 로컬 10080)."
+    }
+  }
+}

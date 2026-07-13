@@ -283,6 +283,20 @@ describe("semantic page extraction", () => {
     expect(main.segments[0]?.source).toBe("# Main fallback");
   });
 
+  test("preserves a documentation title inside an article header", () => {
+    const page = extractPage(
+      input(
+        "<article><header><h1>What is Orca?</h1><p>A short pitch.</p></header><p>Orca is an IDE.</p></article>",
+      ),
+    );
+
+    expect(page.segments.map((segment) => segment.source)).toEqual([
+      "# What is ORCA_PROTECTED_0001?",
+      "A short pitch.",
+      "ORCA_PROTECTED_0001 is an IDE.",
+    ]);
+  });
+
   test("changes the segment hash when only protected command content changes", () => {
     const first = extractPage(
       input("<main><h1>Commands</h1><pre><code>orca open</code></pre></main>"),

@@ -1,0 +1,50 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/agents/codex-hot-swap",
+  "mirrorPath": "/docs/agents/codex-hot-swap/",
+  "entries": {
+    "/docs/agents/codex-hot-swap/:heading:hot-swap-codex-accounts:0": {
+      "sourceHash": "22944f8ff88f9057185621300c2d9f4472423531b4a56fa38acb0bcf85ab2027",
+      "translated": "# 핫스왑 ORCA_PROTECTED_0001 계정"
+    },
+    "/docs/agents/codex-hot-swap/:paragraph:hot-swap-codex-accounts:0": {
+      "sourceHash": "4e3735af4fe3c789191f2b9fc3754d074481ef4184e45bbf5d9aa6ade0c4b3c3",
+      "translated": "토큰을 최대화하기 위해 여러 ORCA_PROTECTED_0001 계정을 실행하는 것이 일반적입니다. ORCA_PROTECTED_0002를 사용하면 다시 로그인하거나 구성을 편집할 필요 없이 한 번의 클릭으로 활성 계정을 핫스왑할 수 있습니다. ORCA_PROTECTED_0003 계정에도 동일한 흐름이 적용됩니다."
+    },
+    "/docs/agents/codex-hot-swap/:figure:hot-swap-codex-accounts:0": {
+      "sourceHash": "aecba76975b360f6673726888ae934fa459bca21824d27fb05bec1800c6f0acc",
+      "translated": "![ORCA_PROTECTED_0001 상태 표시줄의 계정 전환기 드롭다운](ORCA_PROTECTED_0002)\n\n상태 표시줄의 ORCA_PROTECTED_0003 계정 전환기 드롭다운"
+    },
+    "/docs/agents/codex-hot-swap/:heading:add-accounts:0": {
+      "sourceHash": "0b13d06f4a03167a5c4734c30d5724cee886770645e37cc6c1c4c67915c04088",
+      "translated": "## 계정 추가"
+    },
+    "/docs/agents/codex-hot-swap/:list:add-accounts:0": {
+      "sourceHash": "31f539c45444fcbc8a8d458c1e800a3b01d6828d508654d68cfa511d6162dcdf",
+      "translated": "1. 터미널에서 각 ORCA_PROTECTED_0001 계정에 한 번 이상 로그인하여 인증이 `ORCA_PROTECTED_0002` 아래에 위치하도록 합니다.\n2. [설정 → 에이전트 → ORCA_PROTECTED_0003 계정](ORCA_PROTECTED_0004)을 엽니다.\n3. ORCA_PROTECTED_0005는 감지된 모든 계정을 사용량 및 현재 제한과 함께 나열합니다.\n4. 각각에게 \"개인\", \"직장\" 등 친근한 라벨을 부여하세요."
+    },
+    "/docs/agents/codex-hot-swap/:heading:swap-accounts:0": {
+      "sourceHash": "3a3ad26fd2f056809403d6f0210bf763a4191ab60c48d473ae2c69333b2ba325",
+      "translated": "## 계정 교환"
+    },
+    "/docs/agents/codex-hot-swap/:paragraph:swap-accounts:0": {
+      "sourceHash": "9df3319723306bd4ef7ca180f88d5dd839e7595d01034e8aedd99fff2c27e425",
+      "translated": "상태 표시줄에서 ORCA_PROTECTED_0001 칩을 클릭하여 계정 전환기를 엽니다. 계정을 선택하세요. 이후에 시작된 새로운 ORCA_PROTECTED_0002 세션은 이를 사용합니다. 이미 실행 중인 세션은 다시 시작될 때까지 원래 계정을 유지합니다."
+    },
+    "/docs/agents/codex-hot-swap/:heading:rules-gotchas:0": {
+      "sourceHash": "66870f4bd47d3772b21064103a927d211d348e25cc66136e5fc807543843b43f",
+      "translated": "## 규칙 및 주의 사항"
+    },
+    "/docs/agents/codex-hot-swap/:list:rules-gotchas:0": {
+      "sourceHash": "45afb5b99fb6fa3694ae5b4eed12cea70a5af726fc76751c66cbd6f91d823bce",
+      "translated": "- 교환이 즉시 이루어집니다. ORCA_PROTECTED_0001은 활성 자격 증명 포인터를 다시 작성하며 재인증하지 않습니다.\n- 기존 ORCA_PROTECTED_0002 프로세스는 다시 시작할 때까지 현재 계정을 유지합니다.\n- 상태 표시줄의 사용 정보는 현재 활성 계정을 따릅니다.\n- 재시작 칩은 재시작 시 활성 계정을 유지합니다."
+    },
+    "/docs/agents/codex-hot-swap/:heading:claude-code-accounts:0": {
+      "sourceHash": "79dcd1d1705a2c86334805966dc2543b54e2fea27dafe19ea99f1b15a784be8e",
+      "translated": "## ORCA_PROTECTED_0001 계정"
+    },
+    "/docs/agents/codex-hot-swap/:paragraph:claude-code-accounts:0": {
+      "sourceHash": "19ab738d8d523828ca9cb8e2ae506784d632866e96d0b505f5b6c834cd266b2d",
+      "translated": "Claude 계정 전환기는 동일하게 작동합니다. 즉, 다른 데이터 디렉터리(`ORCA_PROTECTED_0001`), 동일한 UX입니다."
+    }
+  }
+}

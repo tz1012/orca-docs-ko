@@ -1,0 +1,46 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/agents/custom-cli",
+  "mirrorPath": "/docs/agents/custom-cli/",
+  "entries": {
+    "/docs/agents/custom-cli/:heading:add-a-custom-cli-agent:0": {
+      "sourceHash": "8249833eb9fc4019e33a8b1eaa9af00a184286af80c65925ed97e6b15c2a03ad",
+      "translated": "# 사용자 정의 CLI 에이전트 추가"
+    },
+    "/docs/agents/custom-cli/:paragraph:add-a-custom-cli-agent:0": {
+      "sourceHash": "81c21c32cb88b3818931c88d2ecacdd943e111a9b9925496adc455f3036ccbe1",
+      "translated": "ORCA_PROTECTED_0001은 모든 CLI 에이전트를 일류 시민으로 취급합니다. 몇 초 안에 하나를 추가하세요."
+    },
+    "/docs/agents/custom-cli/:figure:add-a-custom-cli-agent:0": {
+      "sourceHash": "568543471d2811b127a58548c522d413d9a2d063b55c46d140eb31253a07d1fa",
+      "translated": "![CLI 에이전트 추가 — ORCA_PROTECTED_0001을 바이너리로 지정하면 콤보 상자에 표시됩니다.](ORCA_PROTECTED_0002)\n\nCLI 에이전트를 추가하세요. 바이너리에서 ORCA_PROTECTED_0003을 가리키면 콤보 상자에 표시됩니다."
+    },
+    "/docs/agents/custom-cli/:heading:add-an-agent:0": {
+      "sourceHash": "c7f567d3e5faf4f465e0e10fed804fa4ec8e8eb1721e22f05753c68a43f290ca",
+      "translated": "## 에이전트 추가"
+    },
+    "/docs/agents/custom-cli/:list:add-an-agent:0": {
+      "sourceHash": "5810c88fbd4da9be7c029c436a87e2c437061aee25bb28d6b75e7564ee4f2284",
+      "translated": "1. [설정 → 에이전트](ORCA_PROTECTED_0001)를 엽니다.\n2. `Add custom agent`(사용자 지정 에이전트 추가)를 클릭합니다.\n3. 이름, 바이너리 경로 또는 명령, 기본 인수를 입력합니다.\n4. 선택적으로 시작 후크를 연결합니다. 에이전트를 시작하기 전에 쉘 명령 ORCA_PROTECTED_0002가 실행됩니다(예: `ORCA_PROTECTED_0003`)."
+    },
+    "/docs/agents/custom-cli/:heading:what-you-get:0": {
+      "sourceHash": "51110ada303f12687d937038366733a048b2359453fe19f6a8693c3e09ef60ab",
+      "translated": "## 당신이 얻는 것"
+    },
+    "/docs/agents/custom-cli/:list:what-you-get:0": {
+      "sourceHash": "67f2ec786867f187ed9eb3514eb32667385da81a14d20780027eb17562238086",
+      "translated": "- 에이전트는 모든 터미널의 콤보박스에 표시됩니다.\n- 작업 디렉터리는 항상 현재 작업 트리입니다.\n- 종료 시 칩을 다시 시작합니다.\n- CLI가 OSC 제목을 내보내는 *경우* 상태를 점으로 표시합니다(아래 참조)."
+    },
+    "/docs/agents/custom-cli/:heading:making-state-dots-work:0": {
+      "sourceHash": "d1856bd36e11b8ca01e0c561abed35dd897407346ac36c46ca75618d0ad7a9cf",
+      "translated": "## 상태 점이 작동하도록 만들기"
+    },
+    "/docs/agents/custom-cli/:paragraph:making-state-dots-work:0": {
+      "sourceHash": "67edf5f91f905c6b735cfa3b0298363db7d2716317d05a7a7a1e6b01f6cf927a",
+      "translated": "ORCA_PROTECTED_0001은 OSC 타이틀 업데이트를 관찰하여 작동/유휴 상태를 감지합니다. 에이전트가 `ORCA_PROTECTED_0002` 또는 `ORCA_PROTECTED_0003`과 같은 제목을 내보내면 ORCA_PROTECTED_0004가 자동으로 이를 선택합니다. 그렇지 않은 경우 탭은 라이브 상태 점이 없는 완전한 기능을 갖춘 터미널입니다."
+    },
+    "/docs/agents/custom-cli/:aside:making-state-dots-work:0": {
+      "sourceHash": "9559c3a5a144b05f28bba5e9214aa44ce25468b36f9ac6f88bbe81ebb724e0e0",
+      "translated": "ORCA_PROTECTED_0001은 에이전트 콤보 상자를 통해 일반 'ORCA_PROTECTED_0002' 또는 'ORCA_PROTECTED_0003'을 실행하는 데 만족합니다. 이는 에이전트 없이 모든 작업 트리 컨텍스트가 있는 범위 지정 셸을 원할 때 유용합니다."
+    }
+  }
+}

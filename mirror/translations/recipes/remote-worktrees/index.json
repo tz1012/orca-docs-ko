@@ -1,0 +1,38 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/recipes/remote-worktrees",
+  "mirrorPath": "/docs/recipes/remote-worktrees/",
+  "entries": {
+    "/docs/recipes/remote-worktrees/:heading:work-on-a-remote-machine-over-ssh:0": {
+      "sourceHash": "5208c0ee0b9bd99787ad12e71e001658d7b357769f90a1bc101399f350e6eaf3",
+      "translated": "# SSH를 통해 원격 컴퓨터에서 작업"
+    },
+    "/docs/recipes/remote-worktrees/:paragraph:work-on-a-remote-machine-over-ssh:0": {
+      "sourceHash": "da3bedb9fd91a8e2375d44dfeddd31ae874c26882810a6dcd0cb33380c0ad541",
+      "translated": "더 강력한 개발 상자, GPU 호스트, 클라우드 샌드박스 등 SSH 대상에 ORCA_PROTECTED_0001을 지정하면 로컬 작업 트리처럼 느껴집니다. 동일한 편집기, 동일한 차이점 보기, 동일한 에이전트, 다른 컴퓨팅. 원격 저장소 *또는* 임의의 폴더만 열 수 있습니다."
+    },
+    "/docs/recipes/remote-worktrees/:heading:setup:0": {
+      "sourceHash": "0ecddf15e1aff85f7399e0fd362b9856d804a3e66dd65e41b547c255fc86d8c1",
+      "translated": "## 설정"
+    },
+    "/docs/recipes/remote-worktrees/:list:setup:0": {
+      "sourceHash": "fdfcd4790722e24faf24c1f5585ab095fcdb26b36be91d694ff3321c61ac0480",
+      "translated": "1. [설정 → SSH](ORCA_PROTECTED_0001)에서 호스트를 추가합니다.\n2. 연결을 테스트합니다. 저장소로 작업하는 경우 호스트에 git이 설치되어 있는지 확인하세요.\n3. SSH 대상을 해당 위치로 선택하여 ORCA_PROTECTED_0002에 저장소를 추가하거나 파일 선택기에서 직접 원격 폴더를 엽니다."
+    },
+    "/docs/recipes/remote-worktrees/:heading:run:0": {
+      "sourceHash": "4e0248e4c6474fc6acfe38b04c8e4b2d82645e2187ed766416463d4c9dd56aca",
+      "translated": "## 실행"
+    },
+    "/docs/recipes/remote-worktrees/:list:run:0": {
+      "sourceHash": "f13260fc839002042dbf207a1b50a42214a8ede5f21e2d0a6b18aad1faaae4bb",
+      "translated": "1. 작업 트리를 생성합니다. ORCA_PROTECTED_0001은 원격에서 'ORCA_PROTECTED_0002'를 실행합니다.\n2. 에이전트를 시작합니다. 이는 노트북이 아닌 원격 호스트에서 실행됩니다.\n3. 파일 인라인 편집 — ORCA_PROTECTED_0003 스트림은 원격 파일 시스템에 저장됩니다.\n4. 평소처럼 노트북에서 차이점을 검토하고 커밋하고 푸시합니다."
+    },
+    "/docs/recipes/remote-worktrees/:heading:disconnects:0": {
+      "sourceHash": "c423e129947e813d35c84791e303bc3691ce4e0a55719abc9dd9a17540ee8a30",
+      "translated": "## 연결 해제"
+    },
+    "/docs/recipes/remote-worktrees/:paragraph:disconnects:0": {
+      "sourceHash": "088942ed7757e270a88d650901f2b031720b9489bc59aeda9fda17b237512642",
+      "translated": "노트북이 절전 모드로 전환되고 Wi-Fi가 끊깁니다. 에이전트는 계속 원격으로 실행됩니다. ORCA_PROTECTED_0001은 터미널을 다시 연결하고 다시 연결합니다. 아무것도 잃지 않았습니다."
+    }
+  }
+}

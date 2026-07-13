@@ -1,0 +1,30 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/recipes/parallel-agents",
+  "mirrorPath": "/docs/recipes/parallel-agents/",
+  "entries": {
+    "/docs/recipes/parallel-agents/:heading:race-three-agents-on-the-same-task:0": {
+      "sourceHash": "2d54b026f73a5b4c51d4726c7d6d0f615cde0fbdd6b6e1a37afe8890bbec8eb8",
+      "translated": "# 동일한 작업으로 세 명의 에이전트와 경쟁하세요"
+    },
+    "/docs/recipes/parallel-agents/:paragraph:race-three-agents-on-the-same-task:0": {
+      "sourceHash": "834cecdf5660f7b18f44a3f2ef7940a26776b56476eb7c5b82a81fe8222c6021",
+      "translated": "여러 에이전트에서 동일한 작업을 병렬로 실행하는 것은 ORCA_PROTECTED_0001의 킬러 움직임입니다. 동일한 프롬프트, 세 개의 분기로 승자를 선택합니다."
+    },
+    "/docs/recipes/parallel-agents/:heading:steps:0": {
+      "sourceHash": "04e379c6932bff1c589362d6982930b2c138dcfe9fe69c56c9c028b070168dc3",
+      "translated": "## 단계"
+    },
+    "/docs/recipes/parallel-agents/:list:steps:0": {
+      "sourceHash": "ea80f6a0c01bc6301596dce1f3332493244508ff0a9cb333b15080035a43dc3b",
+      "translated": "1. 동일한 시작 참조에서 세 개의 작업 트리를 만듭니다. 이름을 `ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002`, `ORCA_PROTECTED_0003`으로 지정합니다.\n2. 각각 다른 에이전트(ORCA_PROTECTED_0004, ORCA_PROTECTED_0005, ORCA_PROTECTED_0006)를 시작합니다.\n3. 세 가지 모두에 동일한 프롬프트를 붙여넣습니다.\n4. 작동을 확인할 수 있도록 창을 분할합니다. 탭을 가장자리로 드래그합니다.\n5. 완료되면 각 차이점을 검토합니다. 우승자에게 [AI Diff 주석 달기](ORCA_PROTECTED_0007)를 사용하세요.\n6. 승리한 작업 트리에서 PR을 커밋하고 푸시하고 엽니다.\n7. 두 명의 패자를 삭제합니다. 한 번의 클릭으로 작업 트리와 분기가 제거됩니다."
+    },
+    "/docs/recipes/parallel-agents/:heading:why-it-works:0": {
+      "sourceHash": "fd254958c7fe45b15b0fa3ae4d64d0ab4b89c47d0d830b9200f86fd21c670f73",
+      "translated": "## 작동하는 이유"
+    },
+    "/docs/recipes/parallel-agents/:paragraph:why-it-works:0": {
+      "sourceHash": "e39c520c113ed81a0848f24af67758a66e8fcc9241ea7ab628afebe7b841221f",
+      "translated": "상담원마다 실수가 다릅니다. 동일한 작업을 병렬로 실행하는 것은 순차적 재시도보다 저렴하며 불일치를 신호로 표시합니다. 세 명의 상담원이 동의하는 경우 아마도 대답이 맞을 것입니다. 그들이 갈라진 곳에서 당신은 어려운 부분을 발견했습니다."
+    }
+  }
+}

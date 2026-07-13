@@ -1,0 +1,58 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/activity",
+  "mirrorPath": "/docs/activity/",
+  "entries": {
+    "/docs/activity/:heading:agents-feed:0": {
+      "sourceHash": "d007eb1dfbd6ead7080c5146607ee610ad282ce489275cdfba3521af2d1d7d2a",
+      "translated": "# 에이전트 피드"
+    },
+    "/docs/activity/:paragraph:agents-feed:0": {
+      "sourceHash": "def5b708ffeecb8c8785a29e9a4241b37358783fc03b9db495fb1fa25212769f",
+      "translated": "모든 작업 트리에서 에이전트 완료, 차단 상태, 응답 미리 보기 및 작업 트리 생성 이벤트에 대한 스레드 피드입니다."
+    },
+    "/docs/activity/:paragraph:agents-feed:1": {
+      "sourceHash": "b8bc0a22ae900e41fde61f4dc93b94513bf9dea5b67cf87a7eed74acffba3a30",
+      "translated": "사이드바의 `Agents`(에이전트) 항목은 모든 작업 트리에서 완료, 질문 차단, 읽지 않은 상태 및 작업 트리 생성 등 에이전트 이벤트의 스레드 피드를 엽니다. 이는 분류할 하나의 시간순 표면을 제공하여 작업 트리별 [알림](ORCA_PROTECTED_0001) 보기를 보완합니다."
+    },
+    "/docs/activity/:paragraph:agents-feed:2": {
+      "sourceHash": "f986a2eab8c75fc8cf14c408a68c00f908e5b5fdca8d45d61a5131c8c0d95e25",
+      "translated": "항목은 기본적으로 켜져 있습니다. 마지막 방문 이후 새로운 이벤트가 도착하면 읽지 않은 배지가 표시됩니다. 항목을 클릭하면 일치하는 작업 트리 및 창으로 이동합니다. ORCA_PROTECTED_0001이 시스템 알림에서 수행하는 것과 동일한 전달입니다."
+    },
+    "/docs/activity/:paragraph:agents-feed:3": {
+      "sourceHash": "2b907bf784444000dab78ca32b441bfd5359a00d0da8864c2693171509abca17",
+      "translated": "피드 필터에 초점을 맞추려면 macOS에서는 `ORCA_PROTECTED_0001`을 사용하고 Windows 및 Linux에서는 `ORCA_PROTECTED_0002`를 사용하세요. 내장된 터미널에 포커스가 있으면 동일한 바로 가기가 터미널에 그대로 유지됩니다."
+    },
+    "/docs/activity/:heading:what-shows-up:0": {
+      "sourceHash": "05baac638b345f6b240724587190329f732ee63c7da0ed165afaf9d8c5624ef1",
+      "translated": "## 무엇이 나타나는가"
+    },
+    "/docs/activity/:paragraph:what-shows-up:0": {
+      "sourceHash": "2edbaccdd69c9b798e05afb297c99cb3d94b61914cd4e738137ae4dcc86c4c77",
+      "translated": "피드의 각 항목은 다음 중 하나입니다."
+    },
+    "/docs/activity/:list:what-shows-up:0": {
+      "sourceHash": "2e52e58a914ab8300489e2bf2bf822a02ae887fadcd2102222f5881de16a4b93",
+      "translated": "- 질문에 대해 유휴 상태이거나 차단된 상태로 차례를 마무리하는 에이전트입니다.\n- 새로운 작업 트리가 생성됩니다.\n- 차단으로 나타날 만큼 오랫동안 입력을 기다리고 있는 에이전트입니다.\n- 상담원의 가장 최근 응답을 간략하게 미리 볼 수 있어 모든 스레드를 열지 않고도 피드를 훑어볼 수 있습니다."
+    },
+    "/docs/activity/:paragraph:what-shows-up:1": {
+      "sourceHash": "fdb6e22b9c2b9ef137694725c80812f0bb15c0cb398f16998c9a5cd6717c9c6b",
+      "translated": "스레드는 상태별로 그룹화됩니다. 실행 중인 에이전트는 상단에 고정되어 있어 아직 작동 중인 에이전트를 한 눈에 확인할 수 있습니다."
+    },
+    "/docs/activity/:heading:interplay-with-notifications:0": {
+      "sourceHash": "32aafd32463736740ca4307a114cd75e0b414aa5df075a64904bf9a449756dc9",
+      "translated": "## 알림과의 상호작용"
+    },
+    "/docs/activity/:paragraph:interplay-with-notifications:0": {
+      "sourceHash": "fe3caaea51214988e483c7a64ac44faccbb5d8d71b90e2502dcb713bc4460d56",
+      "translated": "에이전트 피드는 [헤더 벨](ORCA_PROTECTED_0001) 또는 시스템 알림을 대체하지 않습니다. 이러한 알림은 에이전트가 종료한 핑에서 계속 실행됩니다. 피드는 ORCA_PROTECTED_0002에서 멀리 떨어져 있을 때 따라잡을 수 있는 표면입니다. 변경된 내용을 찾기 위해 각 작업 트리를 스크롤하는 대신 스캔하세요."
+    },
+    "/docs/activity/:heading:next-steps:0": {
+      "sourceHash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
+      "translated": "## 다음 단계"
+    },
+    "/docs/activity/:list:next-steps:0": {
+      "sourceHash": "8fbf20ebc7ed031cc6a3c3b014ecc7b19ade7a9b248ca0aea0e20b5486a20fda",
+      "translated": "- [알림 및 받은 편지함](ORCA_PROTECTED_0001) — 시스템 핑, 헤더 벨 및 카테고리별 조정.\n- [에이전트 및 세션](ORCA_PROTECTED_0002) — ORCA_PROTECTED_0003이 ORCA_PROTECTED_0004 전환을 추적하여 이 피드 표면을 전환하는 방법입니다."
+    }
+  }
+}

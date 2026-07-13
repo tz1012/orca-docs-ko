@@ -1,0 +1,54 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/review/annotate-ai-diff",
+  "mirrorPath": "/docs/review/annotate-ai-diff/",
+  "entries": {
+    "/docs/review/annotate-ai-diff/:heading:annotate-ai-diff:0": {
+      "sourceHash": "4ae9b165a8cb40ee784dd7308738b6b2ef4124d48384c13b7758c7c7a5cc22ba",
+      "translated": "# AI 차이점에 주석 달기"
+    },
+    "/docs/review/annotate-ai-diff/:paragraph:annotate-ai-diff:0": {
+      "sourceHash": "8a13f9c052a36dc3ace32ee12300f54fed325e06fbe75d95c126d7db3dbde4c2",
+      "translated": "Annotate AI Diff는 에이전트 생성 코드에 대한 ORCA_PROTECTED_0001의 인라인 검토 루프입니다. AI가 생성한 덩어리의 한 줄에 주석을 남긴 다음 수정을 위해 단일 배치로 에이전트에 다시 보냅니다. 줄 번호를 복사하거나 컨텍스트 전환을 할 필요가 없습니다."
+    },
+    "/docs/review/annotate-ai-diff/:figure:annotate-ai-diff:0": {
+      "sourceHash": "2a48c806a61ab284b5e2635178c4db8e5f812f729334c760ceae705b4571de89",
+      "translated": "![AI Diff 주석 달기 — diff 줄에 고정된 인라인 댓글](ORCA_PROTECTED_0001)\n\nAI Diff에 주석 달기 — diff 라인에 고정된 인라인 댓글"
+    },
+    "/docs/review/annotate-ai-diff/:heading:leave-a-comment:0": {
+      "sourceHash": "477b14823049a3bf6a9532d2d575884d3aa1588eb0e40e2f66cfcd7559513f34",
+      "translated": "## 댓글을 남겨주세요"
+    },
+    "/docs/review/annotate-ai-diff/:list:leave-a-comment:0": {
+      "sourceHash": "f20164755e52b53807f5a4639213978a5004a3d2a5aefafc82575aa245173b0b",
+      "translated": "1. diff에서 아무 줄이나 가리키면 여백에 `+`(추가 버튼)가 나타납니다.\n2. 클릭하세요(또는 줄에 커서를 두고 `ORCA_PROTECTED_0001`을 누르세요).\n3. 피드백을 입력하세요. 마크다운이 지원됩니다.\n4. 저장하려면 `ORCA_PROTECTED_0002`를 누르고, 취소하려면 `ORCA_PROTECTED_0003`을 누르세요."
+    },
+    "/docs/review/annotate-ai-diff/:paragraph:leave-a-comment:0": {
+      "sourceHash": "3dd722f7262c6bf70047d4257b60f965a2eed72cbe60ad1ff489006fc498cf38",
+      "translated": "댓글은 정확한 줄에 고정됩니다. ORCA_PROTECTED_0001은 편집 전반에 걸쳐 이를 추적하므로 diff가 이동하면 라인을 따릅니다."
+    },
+    "/docs/review/annotate-ai-diff/:heading:send-the-batch:0": {
+      "sourceHash": "ab6e42abe1e2e3760b6908ff5b67aa1a188c2fddcdff746d4108677e757d1e98",
+      "translated": "## 배치 보내기"
+    },
+    "/docs/review/annotate-ai-diff/:paragraph:send-the-batch:0": {
+      "sourceHash": "4e484e353149495352197528a3e31872ddd566fc4f807d199771d28fda261570",
+      "translated": "검토가 완료되면 차이점 상단에 있는 `Send to agent`(상담원에게 보내기)를 클릭하세요. ORCA_PROTECTED_0001은 모든 설명이 줄에 고정된 단일 프롬프트를 구성한 다음 작업 트리의 사용 가능한 에이전트에 대한 `Send notes to`(메모 보내기) 메뉴를 엽니다. 변경 사항을 수정해야 하는 에이전트를 선택하거나 동일한 메뉴에서 새 에이전트를 시작하세요."
+    },
+    "/docs/review/annotate-ai-diff/:heading:why-batch:0": {
+      "sourceHash": "ba07333b516a5e0a426d7f0c0f9cf5589175905e126f79f520f620915acf5b26",
+      "translated": "## 왜 배치인가?"
+    },
+    "/docs/review/annotate-ai-diff/:paragraph:why-batch:0": {
+      "sourceHash": "28f766ea9f435f429f67a54dc9de48dc7918cee1f62608d24349bee2459998ce",
+      "translated": "한 번에 하나씩 댓글을 보내면 에이전트가 앞뒤로 흔들리게 됩니다. 일괄 처리는 피드백의 일관성을 유지합니다. 즉, 한 번의 사고, 한 번의 수정 통과 및 훨씬 더 높은 적중률을 제공합니다."
+    },
+    "/docs/review/annotate-ai-diff/:heading:reply-resolve-re-review:0": {
+      "sourceHash": "707b925b6155f3b9d7f72176a084d08ae9e081cf6b7567893de1e2e54bae3435",
+      "translated": "## 회신, 해결, 재검토"
+    },
+    "/docs/review/annotate-ai-diff/:list:reply-resolve-re-review:0": {
+      "sourceHash": "b3ec21fd506c470cf3f5250d8218864e36115628565c1f5d4df2dc8777f0165f",
+      "translated": "- 상담원이 수정한 후에도 댓글은 고정되어 있습니다. 이를 사용하여 수정 사항을 확인하세요.\n- 스레드를 축소하려면 `Resolve`(해결)을 클릭하세요.\n- `Send`(보내기)를 다시 누르면 해결되지 않은 댓글은 다음 일괄 처리에 포함됩니다."
+    }
+  }
+}

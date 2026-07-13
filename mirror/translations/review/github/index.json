@@ -1,0 +1,86 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/review/github",
+  "mirrorPath": "/docs/review/github/",
+  "entries": {
+    "/docs/review/github/:heading:hosted-reviews-issues-actions:0": {
+      "sourceHash": "276a8623e534f0f28e2e2d7c3a320903488f13b2e213adabd9e89e63e093bd9e",
+      "translated": "# 호스팅된 리뷰, 문제 및 조치"
+    },
+    "/docs/review/github/:paragraph:hosted-reviews-issues-actions:0": {
+      "sourceHash": "03ce105eef7f49d9378e615e10981ba145254480ad7f728279226b42b79011cc",
+      "translated": "호스팅된 코드 검토는 작업 트리의 가장 중요한 부분입니다. ORCA_PROTECTED_0001은 작업 트리를 끌어오기 요청 또는 병합 요청에 연결하고 검토 상태를 인라인으로 표시하며 앱을 종료하지 않고도 문제를 분류할 수 있습니다."
+    },
+    "/docs/review/github/:figure:hosted-reviews-issues-actions:0": {
+      "sourceHash": "8316ff13c3b9c9ebef4038fb6e0b95055f49bdd021bc9b65acd0f2e90607537a",
+      "translated": "![GitHub 통합 — 작업 트리를 떠나지 않고도 PR 열기, 확인 보기 및 문제 분류.](ORCA_PROTECTED_0001)\n\nGitHub 통합 — 작업 트리를 떠나지 않고도 PR을 열고, 확인하고, 문제를 분류할 수 있습니다."
+    },
+    "/docs/review/github/:heading:connecting-a-provider:0": {
+      "sourceHash": "35e30a88924bb9969487986a007399a69fb6c43e6aa1398fad8d21f0c8b9b1b8",
+      "translated": "## 공급자 연결"
+    },
+    "/docs/review/github/:paragraph:connecting-a-provider:0": {
+      "sourceHash": "640ae2021fba2ed75ffa2395965f890861e292a1ff11784cc5da89ae6c57ae94",
+      "translated": "[설정 → 통합](ORCA_PROTECTED_0001)에서 저장소가 사용하는 공급자를 연결하세요. GitHub는 가장 심층적인 작업 및 문제 지원을 제공합니다. GitLab 병합 요청 및 문제는 동일한 작업 트리 검토 흐름을 사용합니다. Bitbucket, Azure DevOps 및 Gitea 풀 요청은 GitHub 및 GitLab과 함께 작업 트리 사이드바와 검사 패널에 표시됩니다. 작업 트리 생성 흐름은 푸시하기 전에 원격 충돌이 있는지 확인합니다."
+    },
+    "/docs/review/github/:heading:reviews:0": {
+      "sourceHash": "62260fc2955f1fa65ac383472b6a4f1aabb6379463956e822cb6cae5e2f771d2",
+      "translated": "## 리뷰"
+    },
+    "/docs/review/github/:list:reviews:0": {
+      "sourceHash": "6bdb140ca18dee971b7b1c56a29de61683f448f709e2ed6231e9688cc00c09e1",
+      "translated": "- 작업 트리가 푸시되면 소스 제어 패널에서 호스팅된 리뷰를 엽니다. 만들기 전에 기본 브랜치, 제목, 설명 및 초안 상태를 확인하세요.\n- 링크된 리뷰가 사이드바에 상태와 함께 표시되므로 지점이 아직 열려 있는지, 병합되었는지, 닫혀 있는지 알 수 있습니다.\n- ORCA_PROTECTED_0001에 연결된 PR/MR에 대한 URL이 있는 경우 분기 컨텍스트 행에 간단한 `Open review page in browser`(브라우저에서 검토 페이지 열기) 링크가 표시됩니다. 내부 PR 보기를 열지 않고도 클릭 한 번으로 GitHub, GitLab, Bitbucket, Azure DevOps 또는 Gitea의 검토로 이동할 수 있습니다.\n- GitHub 풀 요청의 경우 사이드바의 PR 작업 메뉴를 사용하여 리뷰 링크를 복사하거나, 리뷰를 닫거나, 상태 변경을 확인한 후 다시 엽니다.\n- GitHub 확인, 리뷰 및 댓글은 PR 탭에서 인라인으로 열립니다. GitLab 병합 요청 및 문제는 동일한 검토 화면에서 열립니다.\n- GitHub 끌어오기 요청에 실패한 검사가 있는 경우 PR 보기에서 `Fix broken checks`(깨진 검사 수정)을 사용하여 실패한 검사 이름과 링크를 에이전트에 전달하세요."
+    },
+    "/docs/review/github/:heading:auto-merge:0": {
+      "sourceHash": "2d7f7dec945e4b7f6f13b583c2bf7055d6d86119a108519598a9d7084a703dec",
+      "translated": "### 자동 병합"
+    },
+    "/docs/review/github/:paragraph:auto-merge:0": {
+      "sourceHash": "44632c7e223385d38b3a6b7d12606cc196b51867da92f04d413fe6f3d9f3e6a4",
+      "translated": "공개 GitHub PR의 경우 PR 보기의 병합 버튼이 `Enable auto-merge`(자동 병합 활성화)를 제공하므로 GitHub는 요구 사항(검사, 필수 검토)이 통과되면 자동으로 분기를 병합합니다. 병합 방법은 저장소의 기본값을 따르며 **Squash and merge**, **Create merge commit** 또는 **Rebase and merge** 중 하나입니다. 저장소에서 허용하지 않는 방법은 표시되지 않습니다. 보류 중인 자동 병합을 취소하려면 동일한 컨트롤에서 `Disable auto-merge`(자동 병합 비활성화)를 사용하세요. 기본 분기가 GitHub의 병합 대기열을 사용하는 경우 동일한 컨트롤은 `Merge when ready`(준비 시 병합)을 읽고 대신 PR을 대기열에 추가합니다. 자동 병합 제어는 GitHub가 초안, 폐쇄, 충돌 또는 불안정으로 보고하는 PR과 자동 병합을 허용하지 않는 저장소의 경우 숨겨집니다. 이 경우 수동 병합 작업만 표시됩니다."
+    },
+    "/docs/review/github/:heading:issues:0": {
+      "sourceHash": "48e1e84f2733cc4d9dca4be137b445e5446118c45a56db7535d500a92ad7459e",
+      "translated": "## 문제"
+    },
+    "/docs/review/github/:paragraph:issues:0": {
+      "sourceHash": "74d5535f325c68ab1ebfca2d9d937c4f40f525328d50c150eafaeaba9d5ad9fc",
+      "translated": "이슈 서랍을 사용하면 ORCA_PROTECTED_0001 내에서 GitHub 및 GitLab 이슈를 찾아보고 필터링하고 편집할 수 있습니다. 이슈에서 작업 트리를 생성하면 작업 이름이 미리 채워지고 둘이 연결되어 리뷰가 작업에 계속 연결됩니다."
+    },
+    "/docs/review/github/:paragraph:issues:1": {
+      "sourceHash": "c5098a0a78e25a67fe2b4a9c088287da91c1ae6835153e31b5684a54695b770f",
+      "translated": "GitHub 문제의 경우 세부 정보 대화 상자에는 코멘트를 타임라인 이벤트(할당, 멘션, 상호 참조, 상태 변경, 프로젝트 열 이동)와 함께 삽입하는 `Activity`(활동) 섹션이 있으므로 ORCA_PROTECTED_0001을 떠나지 않고도 전체 기록을 볼 수 있습니다."
+    },
+    "/docs/review/github/:paragraph:issues:2": {
+      "sourceHash": "40d03a170efef94f596eb5f6e699aaadef93ee492ed4f476b9ccefb01a34a0e3",
+      "translated": "작업 공간 사이드바에 있는 링크된 이슈 메뉴를 사용하면 서랍을 열지 않고도 이슈 링크를 복사할 수 있습니다."
+    },
+    "/docs/review/github/:paragraph:issues:3": {
+      "sourceHash": "a3bfa9f6bd3241a2b2b8105e234681616f765856af9e19bf1d4d6383cd0e65fb",
+      "translated": "GitLab 리포지토리의 경우 서랍에는 선택한 프로젝트의 미해결 문제가 나열되며 사용자에게 할당된 문제로 목록 범위를 좁힐 수 있습니다."
+    },
+    "/docs/review/github/:heading:actions:0": {
+      "sourceHash": "347def7574cf5f1da6322b990c2a7ab27ca72cc42d0ca5fd2db86d2753dc4168",
+      "translated": "## 작업"
+    },
+    "/docs/review/github/:paragraph:actions:0": {
+      "sourceHash": "e036782513ce3708b6ff09cc99b02c43dc7551ddc14d3ed70727d9e80a8e6754",
+      "translated": "실패한 GitHub Actions 검사는 작업 트리에 빨간색 칩으로 표시됩니다. 실패한 작업 로그를 인라인으로 보려면 클릭하세요."
+    },
+    "/docs/review/github/:heading:tasks:0": {
+      "sourceHash": "fd67d489c7528e070c4dbe7e6b7d2eb8ce82617196a7248b9b5dfe7d50e33d33",
+      "translated": "## 작업"
+    },
+    "/docs/review/github/:paragraph:tasks:0": {
+      "sourceHash": "2586dc2151dc18a41fc02dbc5dd5580551ed80fd40f11b6b6a62a82f7ee4e3d1",
+      "translated": "ORCA_PROTECTED_0001은 `Tasks`(작업) 사이드바 항목 아래에 전체 GitHub 프로젝트 보기를 표시합니다. 저장소 전체에서 프로젝트 카드를 찾아보고, 소스 저장소별로 필터링하고, 풀 요청 초안 상태를 확인하고, 모든 카드에서 작업 트리를 생성합니다."
+    },
+    "/docs/review/github/:heading:next-steps:0": {
+      "sourceHash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
+      "translated": "## 다음 단계"
+    },
+    "/docs/review/github/:list:next-steps:0": {
+      "sourceHash": "5159e2ba39ca88275742867cfa464fb8b24dfeb7914e3360c34a5b3bb3ee374d",
+      "translated": "- [ORCA_PROTECTED_0001에서 커밋 및 푸시](ORCA_PROTECTED_0002) - 단계 변경, 분기 푸시, 호스팅된 검토 생성.\n- [선형 항목 서랍](ORCA_PROTECTED_0003) — 작업 소스가 git 공급자 외부에 있는 경우 선형을 사용합니다."
+    }
+  }
+}

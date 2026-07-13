@@ -1,0 +1,130 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/cli/computer-use",
+  "mirrorPath": "/docs/cli/computer-use/",
+  "entries": {
+    "/docs/cli/computer-use/:heading:computer-use:0": {
+      "sourceHash": "c8c1bf594f54526ca5f1a104e31a6f53c0c2a2ba8b1924ae099e8bb330ef3c05",
+      "translated": "# 컴퓨터 사용"
+    },
+    "/docs/cli/computer-use/:paragraph:computer-use:0": {
+      "sourceHash": "fde9e1c1a6c73370198c5e64274b2c9e90859bbd8a345686c789b9b801a65bab",
+      "translated": "접근성 트리, 스크린샷, 안전한 UI 작업을 통해 에이전트에서 로컬 데스크톱 앱을 구동합니다."
+    },
+    "/docs/cli/computer-use/:paragraph:computer-use:1": {
+      "sourceHash": "9efb94ddbed1362aa2b3f2e162299d3022d83c7d04cc04b669d1ff450509f97d",
+      "translated": "'ORCA_PROTECTED_0001' CLI를 사용하면 에이전트가 기본 데스크톱 앱을 검사하고 제어할 수 있습니다. 즉, 실행 중인 앱 목록을 표시하고, 접근성 트리를 읽고, 컨트롤을 클릭하고, 값을 설정하고, 텍스트를 입력하고, 스크롤하고, 스크린샷을 찍을 수 있습니다. 터미널이나 내장 브라우저가 아닌 OS나 타사 앱을 구동해야 하는 작업에 사용하세요."
+    },
+    "/docs/cli/computer-use/:aside:computer-use:0": {
+      "sourceHash": "4cee0e365559cbdc1a7688467a96551fe7dc56dadab02e9668d367a477105310",
+      "translated": "베타\n\n컴퓨터를 사용하려면 플랫폼별로 기본 도우미가 제공되며 접근성(및 macOS에서는 화면 녹화) 권한이 필요합니다. 명령 표면은 기술을 구축하기에 충분히 안정적이지만 플래그 이름은 여전히 ​​바뀔 수 있습니다."
+    },
+    "/docs/cli/computer-use/:heading:first-time-setup:0": {
+      "sourceHash": "bb3bed086b37f95e55cffceacace9d0afaf65d63aec789272a607be62c81b519",
+      "translated": "## 최초 설정"
+    },
+    "/docs/cli/computer-use/:paragraph:first-time-setup:0": {
+      "sourceHash": "aee6727f667fddcbde0e94226ae4ae7e2595b4956b0645019b0f535d76d0d033",
+      "translated": "런타임 및 권한을 확인하세요."
+    },
+    "/docs/cli/computer-use/:code:first-time-setup:0": {
+      "sourceHash": "3fe2d5a15c043b7e00ff868326fbe7507eef7baa243e98a4ff1a4aecb2d7b8c3",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/computer-use/:paragraph:first-time-setup:1": {
+      "sourceHash": "ed625b6bc82b7742c586bc47f502cc4ee46d58b77d52c42ff407f4463de8155a",
+      "translated": "'ORCA_PROTECTED_0001'에서 누락된 항목이 보고되면 시스템 설정에서 `ORCA_PROTECTED_0002 Computer Use`(컴퓨터 사용)에 접근성(및 macOS의 화면 녹화)을 부여한 다음 'ORCA_PROTECTED_0003'을 다시 실행하여 확인하세요."
+    },
+    "/docs/cli/computer-use/:heading:snapshot-act-snapshot:0": {
+      "sourceHash": "a2757f359ee5e5e444d15270d2a37449cfe45dc4de50ec5db4aca455bf79b8c3",
+      "translated": "## 스냅샷 → 행동 → 스냅샷"
+    },
+    "/docs/cli/computer-use/:paragraph:snapshot-act-snapshot:0": {
+      "sourceHash": "d07e6bad1fae77af6f306319b5f3c81c026cf9ab6d1730e8992a73e35d981ac2",
+      "translated": "모든 상호작용은 동일한 루프를 따릅니다. 즉, 앱의 현재 상태를 읽고 특정 요소에 대해 작업을 수행한 다음 상태를 다시 읽어 결과를 확인합니다."
+    },
+    "/docs/cli/computer-use/:code:snapshot-act-snapshot:0": {
+      "sourceHash": "db6724d1c4a0ac0242fa7666ae21439c8fee889a0efc46b9db6db61f11a21311",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/computer-use/:paragraph:snapshot-act-snapshot:1": {
+      "sourceHash": "a769ac6f322666d93ad03b38491870ac7643029a51dd0e007b18dfe196f84e69",
+      "translated": "요소 인덱스의 범위는 최신 `ORCA_PROTECTED_0001` 결과로 지정됩니다. 탐색, 포커스 변경, 스크롤 또는 앱 다시 렌더링 후 인덱스를 재사용하기 전에 상태를 새로 고칩니다."
+    },
+    "/docs/cli/computer-use/:heading:selecting-an-app:0": {
+      "sourceHash": "b1db4340470c06ae048ec3fb9077b061c0a3afc7f5a7d18635cd75007fcf60d7",
+      "translated": "## 앱 선택"
+    },
+    "/docs/cli/computer-use/:paragraph:selecting-an-app:0": {
+      "sourceHash": "10c24331404be45d672ebc6bd347a7a0ecbead10f0e9c01e8e2af9955eba550e",
+      "translated": "`ORCA_PROTECTED_0001`에서 반환된 번들 ID를 선호합니다."
+    },
+    "/docs/cli/computer-use/:code:selecting-an-app:0": {
+      "sourceHash": "fc3df56589a580df1eb640b757f9d0589eff2653d208d011723e0d11aed06c8c",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/computer-use/:paragraph:selecting-an-app:1": {
+      "sourceHash": "6556dc55b9ce46fef964637b0bae752934a64192b9b5148d6859a19b1cf1b8a9",
+      "translated": "앱 이름은 명확해야 작동합니다(`ORCA_PROTECTED_0001`). 번들 ID와 이름이 모두 충돌하는 경우에만 'ORCA_PROTECTED_0002'를 사용하세요."
+    },
+    "/docs/cli/computer-use/:heading:available-actions:0": {
+      "sourceHash": "7e64b73bc9502e12760d3a09327ab814d44bff496cc77f1ee072b6cfee5aa3d6",
+      "translated": "## 사용 가능한 작업"
+    },
+    "/docs/cli/computer-use/:code:available-actions:0": {
+      "sourceHash": "6fed74632b3bbf69f4669ef893abba3ca36bb685c9ca8f98060cb305a3c9c2c5",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/computer-use/:paragraph:available-actions:0": {
+      "sourceHash": "72a7913728c80b2850cec0805336855fb1b310a4c3974541f6874102a1f9e75f",
+      "translated": "원시 `ORCA_PROTECTED_0004` 또는 `ORCA_PROTECTED_0005`보다 의미 체계 작업(`ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002`, `ORCA_PROTECTED_0003`)을 선호합니다. 이는 접근성 요소를 직접 대상으로 하며 키보드 입력이 수행하지 않는 포커스 변경에도 유지됩니다."
+    },
+    "/docs/cli/computer-use/:heading:sensitive-input:0": {
+      "sourceHash": "384d6a4a7595c2d61cea33cac923c4d52a2e0238cae84cf004a3bae84f65f3f8",
+      "translated": "## 민감한 입력"
+    },
+    "/docs/cli/computer-use/:paragraph:sensitive-input:0": {
+      "sourceHash": "9a49fe163f1976204cdcb4cacc4aee96d7d2bd0c4386a5104c3d7ec52deef724",
+      "translated": "쉘 기록에 기록되지 않도록 stdin을 통해 비밀을 전달하십시오."
+    },
+    "/docs/cli/computer-use/:code:sensitive-input:0": {
+      "sourceHash": "ce37d55c0fd3ff197e6ce83a47df6c3ae81225e0fcd4ac22d056c54933da78e6",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/computer-use/:paragraph:sensitive-input:1": {
+      "sourceHash": "87e29e711ca44b863b5532ad965f1227fa1bf7a7d2b18a80e7c5b7da0a2eb75d",
+      "translated": "`ORCA_PROTECTED_0001`은 `ORCA_PROTECTED_0002` 및 `ORCA_PROTECTED_0003`에 대해 동일한 방식으로 작동합니다."
+    },
+    "/docs/cli/computer-use/:heading:screenshots:0": {
+      "sourceHash": "0ab4355cefdeb756a02ce9899e568b61f71f41dbcbefb80265642a014cac5703",
+      "translated": "## 스크린샷"
+    },
+    "/docs/cli/computer-use/:paragraph:screenshots:0": {
+      "sourceHash": "ee2724ce0924827c08c45436cac92adebcce602222c11341b2f42d8542267569",
+      "translated": "`ORCA_PROTECTED_0001`은 접근성 트리와 기본적으로 스크린샷을 반환합니다. `ORCA_PROTECTED_0002`를 사용하면 이미지 바이트가 디스크에 기록되고 경로가 응답에 포함되지 않고 `ORCA_PROTECTED_0003`에 반환됩니다. 픽셀이 필요하지 않은 경우 'ORCA_PROTECTED_0004'를 전달하세요(더 빠르고 작은 페이로드). 캡처하기 전에 숨겨진 창이나 최소화된 창을 표시하려면 'ORCA_PROTECTED_0005'를 전달하세요."
+    },
+    "/docs/cli/computer-use/:heading:use-it-from-an-agent:0": {
+      "sourceHash": "c8a7505bb9ca0f2075eda9c7055eb1c6e789dddb5c08670bd75757b0f8b9a88c",
+      "translated": "## 상담원으로부터 사용하세요"
+    },
+    "/docs/cli/computer-use/:paragraph:use-it-from-an-agent:0": {
+      "sourceHash": "a68cdd10ef78d8b9d61e28a595c43e7b6eed99ddbed600b2a1b8f6cecdc2344a",
+      "translated": "제공된 `ORCA_PROTECTED_0001` 스킬은 안전 안내와 함께 동일한 명령 표면을 패키지합니다. 에이전트의 스킬 디렉터리에 설치합니다."
+    },
+    "/docs/cli/computer-use/:code:use-it-from-an-agent:0": {
+      "sourceHash": "eb21fc5f0973eac588a6c4c4f8c4d0d0b24222656f19ee9c5933be4295870cd8",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/computer-use/:paragraph:use-it-from-an-agent:1": {
+      "sourceHash": "344cc36164fd1b67374a5245541c7930f566a80cbee0dfc6e5a8913671e42b0a",
+      "translated": "스킬을 선택하는 방법은 [스킬 등록 및 MCP](ORCA_PROTECTED_0001)를 참조하세요."
+    },
+    "/docs/cli/computer-use/:heading:next-steps:0": {
+      "sourceHash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
+      "translated": "## 다음 단계"
+    },
+    "/docs/cli/computer-use/:list:next-steps:0": {
+      "sourceHash": "aa4d54b19ad2dee9577b1528712271f5d62d5731ad8e9ab2765e68c000a17f79",
+      "translated": "- [ORCA_PROTECTED_0001 CLI 개요](ORCA_PROTECTED_0002) - 나머지 CLI 표면(작업 트리, 터미널, 브라우저).\n- [기술 레지스트리 및 MCP](ORCA_PROTECTED_0003) — 이 CLI를 에이전트에 배포합니다."
+    }
+  }
+}

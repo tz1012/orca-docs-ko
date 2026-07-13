@@ -1,0 +1,78 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/model/session-restore",
+  "mirrorPath": "/docs/model/session-restore/",
+  "entries": {
+    "/docs/model/session-restore/:heading:session-restore:0": {
+      "sourceHash": "10978ed545f7e2cc3614ad61df058c3e08a461986696b2fd82feccf2251bc905",
+      "translated": "# 세션 복원"
+    },
+    "/docs/model/session-restore/:paragraph:session-restore:0": {
+      "sourceHash": "b5059a54dac531988afaae0c8717773e10a69298d6607f3e6dc1588a5544887c",
+      "translated": "ORCA_PROTECTED_0001을 종료했다가 다시 열고 중단한 부분(작업 트리, 분할, 스크롤백, 포커스 탭)을 정확히 선택하세요."
+    },
+    "/docs/model/session-restore/:paragraph:session-restore:1": {
+      "sourceHash": "96476e0903819659d80814f46d376f6d265bd05bf887c0262ff785b6cd7b1939",
+      "translated": "ORCA_PROTECTED_0001을 닫으면 다음 실행 시 열려 있는 모든 작업 트리, 모든 터미널 분할, 각 창의 스크롤백, 초점을 맞춘 탭 등 전체 작업 공간이 다시 수화됩니다. 어떤 지점에서 어떤 에이전트를 실행했는지 기억할 필요가 없습니다. 이것이 ORCA_PROTECTED_0002의 작업입니다."
+    },
+    "/docs/model/session-restore/:figure:session-restore:0": {
+      "sourceHash": "151e897f2149a07bd8659b9dd188def907d6321a233bdca72ee4ddbcfe9607ac",
+      "translated": "![ORCA_PROTECTED_0001을 다시 시작하면 세션(터미널, 분할, 스크롤백, 포커스 탭)이 그대로 돌아옵니다.](ORCA_PROTECTED_0002)\n\nORCA_PROTECTED_0003을 다시 시작하면 세션(터미널, 분할, 스크롤백, 포커스 탭)이 그대로 돌아옵니다."
+    },
+    "/docs/model/session-restore/:heading:what-gets-restored:0": {
+      "sourceHash": "a8100611698c89fb23b39778d0b3afb451ce2ec3a83b5f8810c60ba26b035473",
+      "translated": "## 복원되는 항목"
+    },
+    "/docs/model/session-restore/:list:what-gets-restored:0": {
+      "sourceHash": "2cea0618161a5681826cad56727d9a64038c499631947aff507d1e5b098075b7",
+      "translated": "- `Open worktrees`(작업 트리 열기) — 사이드바에 열려 있던 모든 작업 트리입니다.\n- `Tabs and splits`(탭 및 분할) — 중첩 분할 및 포커스가 있는 탭을 포함하여 작업 트리당 창 레이아웃입니다.\n- `Running agent processes`(에이전트 프로세스 실행 중) — 실행 중이던 에이전트는 ORCA_PROTECTED_0001 종료 후에도 계속 실행됩니다. 백그라운드 데몬은 PTY를 소유하므로 앱 창을 닫아도 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003 또는 기타 에이전트 CLI 작업 도중에 종료되지 않습니다. 다음 실행 시 ORCA_PROTECTED_0004는 동일한 프로세스에 웜 재연결됩니다.\n- `Terminal scrollback`(터미널 스크롤백) — ORCA_PROTECTED_0005가 닫혀 있는 동안 생성된 출력을 포함하여 각 터미널의 버퍼입니다.\n- `Focused worktree and tab`(중심 작업 트리 및 탭) — ORCA_PROTECTED_0006은 닫은 것과 동일한 보기로 열립니다."
+    },
+    "/docs/model/session-restore/:heading:what-doesnt-get-restored:0": {
+      "sourceHash": "664db9b87fdbaa853a01b3a7586c46d63be5c8d49efa7a9ad529532f5bf9ad91",
+      "translated": "## 복원되지 않는 항목"
+    },
+    "/docs/model/session-restore/:paragraph:what-doesnt-get-restored:0": {
+      "sourceHash": "ef031145dfaa2680a1925c9d12e0f772884a8fe07c803eb1df72b5b7bbd79ecf",
+      "translated": "호스트가 작동하면 데몬이 죽기 때문에 재부팅, OS 업데이트, 커널 패닉, 하드 전원 끄기 등 전체 시스템을 중단시키는 모든 작업은 실행 중인 모든 에이전트를 종료합니다. 다음 실행 시 작업 트리, 탭, 분할 및 마지막으로 알려진 스크롤백이 다시 표시되지만 에이전트 프로세스 자체는 사라집니다. 계속 진행하려면 아무 탭에서나 에이전트를 다시 실행하세요."
+    },
+    "/docs/model/session-restore/:paragraph:what-doesnt-get-restored:1": {
+      "sourceHash": "d4bd9822242530a080e5b8953e69da8e21f26e9c7f3f8069ba4a5c490806f99c",
+      "translated": "ORCA_PROTECTED_0001이 닫혀 있는 동안 데몬이 충돌하면 보유하고 있던 모든 세션에 동일한 효과가 있지만 다음 실행 시 레이아웃과 스크롤백이 계속 복원됩니다."
+    },
+    "/docs/model/session-restore/:heading:when-restore-runs:0": {
+      "sourceHash": "b38e61e3ee4c890204fe266d271f26c1c88fefbac8a55358ce926b6470f1c086",
+      "translated": "## 복원이 실행될 때"
+    },
+    "/docs/model/session-restore/:paragraph:when-restore-runs:0": {
+      "sourceHash": "ce01131a6450474cef15cfaa6c4c7666ceab6d0c735eff37942f8464e233f5ce",
+      "translated": "세션 복원은 시작할 때마다 실행됩니다. 사례는 `daemon`(데몬)이 공백에서 살아남았는지 여부에 따라 나뉩니다."
+    },
+    "/docs/model/session-restore/:paragraph:when-restore-runs:1": {
+      "sourceHash": "8dddfdf76d914eb9df7d02c1b2fd1d7e7c60b616209d3eb46fb60321571cea29",
+      "translated": "`Daemon survives → agents keep running:`(데몬이 살아남음 → 에이전트가 계속 실행됨:)"
+    },
+    "/docs/model/session-restore/:list:when-restore-runs:0": {
+      "sourceHash": "ac3120482b579c0a3b80a7be3698db706473a7204ced4c4f88e6d85bcbd4bd66",
+      "translated": "- **Cmd-Q** — 일반적인 종료 방법입니다. 에이전트는 백그라운드에서 계속 작업합니다.\n- `Auto-updater relaunch`(자동 업데이트 프로그램 다시 시작) — 업데이트를 설치하기 위해 ORCA_PROTECTED_0001이 다시 시작됩니다. 에이전트는 영향을 받지 않습니다.\n- `App crash`(앱 충돌) — ORCA_PROTECTED_0002 자체가 충돌하는 경우 데몬은 다음 실행 시 웜 재연결을 위해 세션을 활성 상태로 유지합니다."
+    },
+    "/docs/model/session-restore/:paragraph:when-restore-runs:2": {
+      "sourceHash": "e425b3606afcbe1d8e39c270aafd610273c45e0197d563a6fe23ea9e94f7a260",
+      "translated": "`Daemon dies → agents are gone, layout still restores:`(데몬이 죽고 에이전트가 사라지고 레이아웃이 계속 복원됩니다.)"
+    },
+    "/docs/model/session-restore/:list:when-restore-runs:1": {
+      "sourceHash": "48e33bf21275661ca29252724c30840e7240900b5300572c8bb83675230663a4",
+      "translated": "- `Host reboot`(호스트 재부팅) — 노트북 다시 시작, OS 업데이트, 커널 패닉, 하드 전원 끄기. 작업 트리, 탭, 분할 및 마지막으로 지속되는 스크롤백은 다음 실행 시 계속해서 다시 나타납니다."
+    },
+    "/docs/model/session-restore/:aside:when-restore-runs:0": {
+      "sourceHash": "5c2e288b815baecf27dffb5751dbdfa7a79b617467a40ea125f3dfbe42035bdc",
+      "translated": "새롭게 시작하다\n\n깨끗한 상태를 원한다면 종료하기 전에 명시적으로 작업 트리를 닫으십시오. \"새 세션에서 열기\" 모드는 없습니다. ORCA_PROTECTED_0001은 항상 복원됩니다. 닫힌 작업 트리는 닫힌 상태로 유지됩니다."
+    },
+    "/docs/model/session-restore/:heading:next-steps:0": {
+      "sourceHash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
+      "translated": "## 다음 단계"
+    },
+    "/docs/model/session-restore/:list:next-steps:0": {
+      "sourceHash": "65d50347cb9c3f0606d0cfba3daf2a4ed49ffea31e3d2ee15b50cccaefb9e8ff",
+      "translated": "- [에이전트 및 세션](ORCA_PROTECTED_0001) — 에이전트 세션의 상태 점 및 수명 주기입니다.\n- [탭, 창 및 분할 레이아웃](ORCA_PROTECTED_0002) — 복원할 레이아웃이 처음에 어떻게 구축되는지입니다."
+    }
+  }
+}

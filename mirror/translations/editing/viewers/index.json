@@ -1,0 +1,58 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/editing/viewers",
+  "mirrorPath": "/docs/editing/viewers/",
+  "entries": {
+    "/docs/editing/viewers/:heading:mermaid-pdf-image-viewers:0": {
+      "sourceHash": "0a1dcb3416967ad61825ca75aa2cc82ce2059acc1ea2aa5f1fd0176a9744cc29",
+      "translated": "# 인어, PDF 및 이미지 뷰어"
+    },
+    "/docs/editing/viewers/:paragraph:mermaid-pdf-image-viewers:0": {
+      "sourceHash": "580f361963c3ca92c1dee824db912041e6f2b4c7d6303d5b2f550239e096234e",
+      "translated": "ORCA_PROTECTED_0001에는 대부분의 저장소에 표시되는 형식에 대한 내장 뷰어가 포함되어 있습니다."
+    },
+    "/docs/editing/viewers/:heading:mermaid:0": {
+      "sourceHash": "39c1dbaf024c42bde2a26efaeb2f4797c44bbbbbb4b36d0ea958de309182e000",
+      "translated": "## 인어"
+    },
+    "/docs/editing/viewers/:paragraph:mermaid:0": {
+      "sourceHash": "d782fc046bc6f7399dd134f0b1fa018af784f3dcac75f62a46e5731d0bbb6616",
+      "translated": "인어 다이어그램은 마크다운 미리보기 내에서 인라인으로 렌더링됩니다. 독립 실행형 'ORCA_PROTECTED_0001' 파일은 ORCA_PROTECTED_0002를 사용하는 전용 뷰어에서 열립니다."
+    },
+    "/docs/editing/viewers/:heading:pdf:0": {
+      "sourceHash": "413879475ef7bb4b35cba4dbc86249396ba841ba51c45e4d2995ff52d8b3aa79",
+      "translated": "## PDF"
+    },
+    "/docs/editing/viewers/:paragraph:pdf:0": {
+      "sourceHash": "34df853a1f80f4a4cae71aeff64f8d65dfb4bc71721c08f574f2f48c4720083c",
+      "translated": "스크롤, 확대/축소 및 텍스트 선택. 저장소에 체크인된 디자인 문서에 유용합니다."
+    },
+    "/docs/editing/viewers/:heading:images:0": {
+      "sourceHash": "a543e293c615aa544f0eddfe7c2a5ce1621376987585e646f7a54eb3d6e4a5f6",
+      "translated": "## 이미지"
+    },
+    "/docs/editing/viewers/:paragraph:images:0": {
+      "sourceHash": "72b82f97e4b4155b44dff8587ab7787ef236dc044733a6c20b228b5aa2519f99",
+      "translated": "`ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002`, `ORCA_PROTECTED_0003`, `ORCA_PROTECTED_0004`, `ORCA_PROTECTED_0005`. 이미지 비교 모드는 동일한 파일의 두 버전을 나란히 비교합니다."
+    },
+    "/docs/editing/viewers/:heading:csv-tsv:0": {
+      "sourceHash": "cd45db456d0e5bd74b893de9733c3587fddc2621b165d816c9c6ebb64d2d5817",
+      "translated": "## CSV / TSV"
+    },
+    "/docs/editing/viewers/:paragraph:csv-tsv:0": {
+      "sourceHash": "ac0350d5102e3d50b7314b426e5fa54ced01611c55af4192a8eca1bb37a963fd",
+      "translated": "'ORCA_PROTECTED_0001' 및 'ORCA_PROTECTED_0002' 파일은 정렬 가능한 열과 빠른 검색 기능이 있는 테이블 뷰어에서 열립니다. 고정 장치, 내보내기 및 리포지토리에 체크인된 모든 표 형식 데이터에 유용합니다. 셀을 직접 편집해야 하는 경우 도구 모음을 사용하여 원시 텍스트 보기로 다시 전환하세요."
+    },
+    "/docs/editing/viewers/:heading:jupyter-notebooks:0": {
+      "sourceHash": "cdd54213e87af4a00447b7996b4925392cc0762ec8aa8df7412202e09279e23f",
+      "translated": "## 주피터 노트북"
+    },
+    "/docs/editing/viewers/:paragraph:jupyter-notebooks:0": {
+      "sourceHash": "61b7ace70340325627e8f990d5aaf43439790cc306bb168df8dac579cfd308a9",
+      "translated": "'ORCA_PROTECTED_0001' 파일은 렌더링된 마크다운, 구문 강조 코드 셀, 저장된 출력이 포함된 노트북 뷰어에서 열립니다. 셀을 편집하면 nbformat을 유지하면서 디스크의 `ORCA_PROTECTED_0002`에 다시 기록되므로 diff는 깨끗하게 유지됩니다."
+    },
+    "/docs/editing/viewers/:aside:jupyter-notebooks:0": {
+      "sourceHash": "3ca0d978838788eafeab8facdd9835edf46aff4b524dab26ca180d14ddcdbf4a",
+      "translated": "베타\n\n노트북 편집기는 베타로 표시되어 있습니다. 셀 실행 및 더욱 풍부한 출력 렌더링이 아직 해결 중입니다. 저장소의 노트북이 제대로 로드되지 않으면 문제를 신고하세요."
+    }
+  }
+}

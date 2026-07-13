@@ -1,0 +1,102 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/review/commit-push",
+  "mirrorPath": "/docs/review/commit-push/",
+  "entries": {
+    "/docs/review/commit-push/:heading:commit-push-from-orca:0": {
+      "sourceHash": "cd9bcc1fec3ecd61142d5167035dddfeed6fa4708c6c78a3d18c23bd714e55f1",
+      "translated": "# ORCA_PROTECTED_0001에서 커밋 및 푸시"
+    },
+    "/docs/review/commit-push/:paragraph:commit-push-from-orca:0": {
+      "sourceHash": "7a33db4d63d7656f3ffd3d7be51ce268fca899c9e5771235b08f2f575ea7243b",
+      "translated": "ORCA_PROTECTED_0001을 종료하지 않고도 검토를 커밋하고 푸시하고 열 수 있습니다. 커밋 패널은 diff 뷰어 옆에 있으며 검토, 단계, 커밋, 푸시, 이동 등 일반적인 경우에 맞게 설계되었습니다."
+    },
+    "/docs/review/commit-push/:heading:commit:0": {
+      "sourceHash": "2b88d358c692b986c1cbf3a49baadb3d8a31a48384f271762d2414b0ff2a4aca",
+      "translated": "## 커밋"
+    },
+    "/docs/review/commit-push/:list:commit:0": {
+      "sourceHash": "90ee4c19ec2c4a2c10d791133236c8e6353ec50f19944b42103bd47de0343652",
+      "translated": "1. diff의 덩어리 또는 파일별로 단계가 변경됩니다.\n2. 하단 패널에 커밋 메시지를 작성하거나, ORCA_PROTECTED_0001이 단계적 변경 사항 중 하나를 작성하도록 하려면 `Generate with AI`(AI로 생성)을 사용하세요.\n3. `Commit`(커밋)(`ORCA_PROTECTED_0002`)을 누르세요."
+    },
+    "/docs/review/commit-push/:paragraph:commit:0": {
+      "sourceHash": "9847e49d45011804ac4985f1b0d1d08b85b46f9e3c62618cb6c861ac04e73861",
+      "translated": "저장소의 사전 커밋 후크는 평소와 같이 실행됩니다. 후크가 실패하면 ORCA_PROTECTED_0001이 출력을 인라인으로 표시합니다."
+    },
+    "/docs/review/commit-push/:paragraph:commit:1": {
+      "sourceHash": "8a56cc42ba96114bba7e56dd4944ee662666b39ceb4675481271d78df88a8856",
+      "translated": "커밋이 실패하면 실패 세부 정보에서 **Fix with AI**를 사용하여 후크 출력, 커밋 시도 메시지 및 준비된 파일 목록을 통해 활성 작업 트리에서 기본 에이전트를 시작합니다. 에이전트는 복구 메시지만 받습니다. 후크 우회, 커밋, 푸시 또는 검토 열기는 요청되지 않습니다."
+    },
+    "/docs/review/commit-push/:heading:push:0": {
+      "sourceHash": "d876ad037c4673b60db05e292c0a403591233a126d977efa3a0a84cd32d8a9d4",
+      "translated": "## 푸시"
+    },
+    "/docs/review/commit-push/:paragraph:push:0": {
+      "sourceHash": "f74165b7a2c7804536c73c423054c9af67085da583b1fea7d047ab9dbc942097",
+      "translated": "`Push`(푸시)는 작업 트리의 분기를 'ORCA_PROTECTED_0001'로 푸시하여 처음으로 업스트림을 설정합니다. 분기가 뒤에 있으면 ORCA_PROTECTED_0002는 자동으로 강제 푸시하지 않습니다."
+    },
+    "/docs/review/commit-push/:paragraph:push:1": {
+      "sourceHash": "31babbcf5eb19d1b2175dbcaed8ba0c712b90c2d4caa028292410fe5b3724c8a",
+      "translated": "기록(리베이스, 수정, 스쿼시)을 다시 작성했고 원격에 로컬 커밋의 이전 복사본만 있는 경우 소스 제어 패널에는 `Force push with lease`(임대를 통한 강제 푸시)가 명시적이고 별도의 작업으로 표시되며 일반 푸시에 대한 폴백은 절대 표시되지 않습니다. 레이블에는 대체되는 커밋 수와 업스트림 브랜치 이름이 표시되므로 무엇이 변경될지 정확히 알 수 있습니다. 강제 푸시는 `ORCA_PROTECTED_0001`을 사용하므로 원격의 오래된 로컬 보기는 다른 사람의 커밋을 방해하는 대신 푸시를 중단합니다."
+    },
+    "/docs/review/commit-push/:heading:open-a-hosted-review:0": {
+      "sourceHash": "e83863bde20107693ff4fe82541197d12921e0356a55c992b4dc8dcbd075b14b",
+      "translated": "## 호스팅된 리뷰 열기"
+    },
+    "/docs/review/commit-push/:paragraph:open-a-hosted-review:0": {
+      "sourceHash": "cd2c9b35d1e42f404cc22c57dae3bb058b56113ea565998fab43882270c83a7d",
+      "translated": "브랜치가 푸시된 후 소스 제어 패널의 호스팅된 검토 작업을 사용하여 풀 요청 또는 병합 요청을 생성합니다. 제출하기 전에 기본 분기, 제목, 설명 및 초안 상태를 확인하세요."
+    },
+    "/docs/review/commit-push/:paragraph:open-a-hosted-review:1": {
+      "sourceHash": "ab327c8fe3364d58002021833b35925fc828c6fcc723de91a9945418720752ab",
+      "translated": "ORCA_PROTECTED_0001이 PR 만들기 흐름의 일부로 후속 커밋을 실행해야 하고 해당 커밋이 실패하는 경우(후크가 이를 거부하거나 작업 트리가 커밋할 수 없는 상태인 경우) 컨텍스트 없이 패널로 다시 돌아가는 대신 대화 상자에 후크 출력 및 다음 단계 버튼이 포함된 자세한 실패 요약이 표시됩니다. 요약에서 **Fix with AI**를 사용하여 오류를 에이전트에 전달하거나 직접 해결하고 다시 실행하세요."
+    },
+    "/docs/review/commit-push/:paragraph:open-a-hosted-review:2": {
+      "sourceHash": "c2d6abfd2f7eb8a5a47fbe9f3e5eb24f11a7e0286c771c41f4e17a2121289f0b",
+      "translated": "ORCA_PROTECTED_0001이 분기 차이점 및 커밋에서 기본, 제목, 설명 및 초안 상태를 작성하도록 하려면 검토 만들기 대화 상자에서 `Generate pull request details with AI`(AI로 끌어오기 요청 세부 정보 생성)을 사용하세요. 검토를 작성하기 전에 필드를 검토하십시오."
+    },
+    "/docs/review/commit-push/:heading:per-repo-ai-action-recipes:0": {
+      "sourceHash": "7aa910530983a4f2295f7b76640ca128b3301f31b30c356202ee6679e40f0a39",
+      "translated": "## 저장소별 AI 액션 레시피"
+    },
+    "/docs/review/commit-push/:paragraph:per-repo-ai-action-recipes:0": {
+      "sourceHash": "8692855cb650c8ce43a0f1106a0f2c3069badfcd99af16da75b5c7a9e5a43224",
+      "translated": "`Generate with AI`(AI로 생성), `Generate pull request details with AI`(AI로 풀 요청 세부 정보 생성), `Fix with AI`(AI로 수정) 및 `Resolve with AI`(AI로 해결)은 모두 소스 제어 AI 작업입니다. 각 작업은 작업을 트리거할 때 실행되는 에이전트, CLI 인수 및 프롬프트 템플릿 ORCA_PROTECTED_0001을 선택하는 `action recipe`(작업 레시피)로 지원됩니다. [설정 → Git 및 소스 제어](ORCA_PROTECTED_0002) → `Action recipes`(액션 레시피)에서 전역 기본값으로 또는 현재 저장소 범위로 편집합니다."
+    },
+    "/docs/review/commit-push/:paragraph:per-repo-ai-action-recipes:1": {
+      "sourceHash": "85ce74f041d39140da8dcd9276453f3123cc415a7b5bec4e2dbed2cedcacdb63",
+      "translated": "저장소에 작업에 대한 자체 레시피가 있는 경우 전역 기본값에 대한 변경 사항을 저장해도 영향을 미치지 않습니다. 설정 창에는 저장소가 분기되는 것과 재정의하는 항목(에이전트, CLI 인수 또는 명령 템플릿)을 나열하는 `Repository overrides`(저장소 재정의) 메모가 해당 저장소의 설정으로 이동하는 `Review`(검토) 링크와 함께 표시되므로 재정의를 업데이트하거나 제거할 수 있습니다."
+    },
+    "/docs/review/commit-push/:heading:amend:0": {
+      "sourceHash": "124621ec53370409e22be3e983169d5dbe812b52f4ab40d7e9dd2355cbcc37c4",
+      "translated": "## 수정"
+    },
+    "/docs/review/commit-push/:paragraph:amend:0": {
+      "sourceHash": "9328c0151021561138c9dfd1aa281d98eb3789bdcddf8149f036f3b0679ccc64",
+      "translated": "수정은 명시적입니다. `Commit → Amend`(커밋 → 수정). ORCA_PROTECTED_0001은 확인하지 않는 한 이미 푸시된 커밋을 수정하지 않습니다."
+    },
+    "/docs/review/commit-push/:heading:source-control-panel:0": {
+      "sourceHash": "f61ec28192f8d7e1111606f392e6cb7464703a094232f559ee3436d06b796aeb",
+      "translated": "## 소스 제어판"
+    },
+    "/docs/review/commit-push/:paragraph:source-control-panel:0": {
+      "sourceHash": "9848fa8ab7f410e096325534ef68f51dc4d58f3901644ce8a1cc280a5cb70232",
+      "translated": "사이드바 `Source Control`(소스 제어) 패널은 현재 보기를 벗어나지 않고도 파일 준비 및 삭제, 커밋 메시지 작성, `Commit`(커밋), `Push`(푸시), `Pull`(풀) 또는 `Sync`(동기화) 실행과 같은 동일한 작업을 원클릭 작업으로 표시합니다. 경로에 ASCII가 아닌 문자가 포함된 경우에도 경로는 UTF-8로 렌더링됩니다."
+    },
+    "/docs/review/commit-push/:paragraph:source-control-panel:1": {
+      "sourceHash": "cfcf72eb35adfd157202add221aa0b137b122ae1e7fe96c07219b68c30faa592",
+      "translated": "하단에 있는 패널의 기본 버튼은 상태에 따라 이동하므로 다음 유용한 작업은 항상 한 번의 클릭으로 가능합니다. 즉, 단계화되지 않은 변경 사항이 있는 경우 `Stage Files`(파일 준비), `Commit`(커밋), 분기가 업스트림에 대해 어떻게 위치하는지에 따라 `Push`(푸시) / `Pull`(풀) / `Sync`(동기화)입니다."
+    },
+    "/docs/review/commit-push/:paragraph:source-control-panel:2": {
+      "sourceHash": "cc8ce056c1da927ff102680139ae4747adb5a4322fbed05a329527cdd6ec0982",
+      "translated": "병합, 리베이스, 선별 또는 되돌리기로 인해 충돌이 발생하면 소스 제어에서는 `Resolve with AI`(충돌 검토) 옆에 `Review conflicts`(AI로 해결)을 표시하므로 계속하기 전에 충돌 세트를 에이전트에 전달하거나 직접 검사할 수 있습니다. 진행 중인 병합 또는 리베이스가 더 이상 필요하지 않은 경우 소스 제어에서 **Abort merge** 또는 **Abort rebase**를 사용하세요."
+    },
+    "/docs/review/commit-push/:heading:next-steps:0": {
+      "sourceHash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
+      "translated": "## 다음 단계"
+    },
+    "/docs/review/commit-push/:list:next-steps:0": {
+      "sourceHash": "a460fdabd7b9904ed21b853f4c5e60e0dcdb2eb689f131bb73da58ee058d6214",
+      "translated": "- [호스팅된 리뷰, 문제 및 작업](ORCA_PROTECTED_0001) — 리뷰를 소유한 공급자를 연결합니다.\n- [AI Diff에 주석 달기](ORCA_PROTECTED_0002) — 커밋하기 전에 라인 메모를 남겨주세요."
+    }
+  }
+}

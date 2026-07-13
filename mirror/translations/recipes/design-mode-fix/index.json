@@ -1,0 +1,30 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/recipes/design-mode-fix",
+  "mirrorPath": "/docs/recipes/design-mode-fix/",
+  "entries": {
+    "/docs/recipes/design-mode-fix/:heading:fix-a-ui-bug-with-design-mode:0": {
+      "sourceHash": "171055edcfa8be6d2f5c70777fa66a800ee19d92ade9a08fa0b864ec71dc5828",
+      "translated": "# 디자인 모드의 UI 버그 수정"
+    },
+    "/docs/recipes/design-mode-fix/:paragraph:fix-a-ui-bug-with-design-mode:0": {
+      "sourceHash": "b5d6ed77b826726d4052ceb0ab47bd7eafc58ff930629f38cc327f28de7a4236",
+      "translated": "디자인 모드에서는 \"버튼이 잘못된 것 같습니다.\" → \"고정 커밋\" 루프를 1분 미만으로 축소합니다."
+    },
+    "/docs/recipes/design-mode-fix/:heading:steps:0": {
+      "sourceHash": "04e379c6932bff1c589362d6982930b2c138dcfe9fe69c56c9c028b070168dc3",
+      "translated": "## 단계"
+    },
+    "/docs/recipes/design-mode-fix/:list:steps:0": {
+      "sourceHash": "0ed58d53d8f5fed0877ba2208a760724f96d435a918aeb4963a4b7eda06e30b5",
+      "translated": "1. 작업 트리의 브라우저 창을 엽니다. 버그가 있는 페이지로 이동합니다.\n2. [디자인 모드](ORCA_PROTECTED_0001)를 켭니다.\n3. 깨진 요소를 클릭하세요. 에이전트 채팅에 풍부한 첨부 파일로 표시됩니다.\n4. 수정하고 싶은 내용을 입력하세요. \"이 패딩이 너무 빡빡합니다. 위의 카드와 일치하도록 늘리세요.\"\n5. 에이전트가 소스를 편집합니다. 핫 리로드는 브라우저를 새로 고칩니다.\n6. 요소를 다시 클릭하여 확인합니다. 여전히 잘못된 경우 반복합니다.\n7. 올바른 경우 커밋합니다."
+    },
+    "/docs/recipes/design-mode-fix/:heading:why-its-fast:0": {
+      "sourceHash": "5e615c55f3c559083b3e4b24ecd9c76dd309598bb0ee76fcd2902ebd6d06de55",
+      "translated": "## 빠른 이유"
+    },
+    "/docs/recipes/design-mode-fix/:paragraph:why-its-fast:0": {
+      "sourceHash": "16c9364a66a7c93ac9eb7c122f87576d4927fb3507ec9adbc80a03c66be4d9d8",
+      "translated": "스크린샷도 없고, DOM 헌팅도 없고, 선택기 복사도 없습니다. 에이전트는 HTML, 계산된 CSS 및 사용자가 가리키는 정확한 요소의 잘린 이미지를 가져옵니다. 이는 검토자가 원하는 것과 동일한 컨텍스트입니다."
+    }
+  }
+}

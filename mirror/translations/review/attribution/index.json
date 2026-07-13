@@ -1,0 +1,38 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/review/attribution",
+  "mirrorPath": "/docs/review/attribution/",
+  "entries": {
+    "/docs/review/attribution/:heading:attribution:0": {
+      "sourceHash": "7542e3f896d638e3f3c6eaf351d67abc4335be7a4bddbbc4f77eab3a09ad9757",
+      "translated": "# 기여"
+    },
+    "/docs/review/attribution/:paragraph:attribution:0": {
+      "sourceHash": "76c4e8444d8863a092bada9207e98794e0db3785d4e76ddf2d6a94bcb04ee72f",
+      "translated": "ORCA_PROTECTED_0001은 에이전트가 터치하는 모든 줄의 출처를 추적하므로 차이점을 읽을 때 어떤 줄이 사람이 썼는지, 어떤 줄이 AI에서 왔는지 한눈에 알 수 있습니다."
+    },
+    "/docs/review/attribution/:heading:how-it-works:0": {
+      "sourceHash": "5ae438610cf16e31eb584a453d76f45d94f6d1bb14751446ac4e99e3e37c33a8",
+      "translated": "## 작동 방식"
+    },
+    "/docs/review/attribution/:paragraph:how-it-works:0": {
+      "sourceHash": "0631dae012e2e2c2c556eb0819acb079f1504ef6f9ecac569796f5b8cd40a6f6",
+      "translated": "에이전트가 도구를 통해 파일에 쓸 때 ORCA_PROTECTED_0001은 범위를 기록합니다. diff 뷰어는 홈통에 미묘한 마커를 사용하여 AI에서 생성된 선을 렌더링합니다. AI 코드 위에 사람이 편집하면 속성이 다시 사람에게 돌아갑니다."
+    },
+    "/docs/review/attribution/:heading:why-it-matters:0": {
+      "sourceHash": "8bab3e6375d3aeaec41b44336e056987c4d8d6f71bd54dd875106dff9a8e5c66",
+      "translated": "## 그것이 중요한 이유"
+    },
+    "/docs/review/attribution/:list:why-it-matters:0": {
+      "sourceHash": "82ce718f1f887690cddac855b7362160978151b82dbb3f83961f977119f95455",
+      "translated": "- PR의 어떤 부분을 추가로 조사해야 하는지 알 수 있습니다.\n- 보안 및 규정 준수 감사를 통해 AI로 작성된 코드와 사람이 작성한 코드를 분리할 수 있습니다.\n- 검토 속도가 빨라집니다. 직접 작성한 코드를 다시 읽을 필요가 없습니다."
+    },
+    "/docs/review/attribution/:heading:scope:0": {
+      "sourceHash": "06f13eceae24bd0eb87002e30400999346da1ac5f0f9e44ba02101ab01d1f6a3",
+      "translated": "## 범위"
+    },
+    "/docs/review/attribution/:paragraph:scope:0": {
+      "sourceHash": "cfd54bee16b743d848014a3d6caf3af644558b80ec18ea47857f048fce78aa9e",
+      "translated": "속성은 ORCA_PROTECTED_0001에 로컬이며 git에 커밋되지 않습니다. 지속적인 속성을 원할 경우 diff 도구 모음에서 diff 메타데이터를 내보내세요."
+    }
+  }
+}

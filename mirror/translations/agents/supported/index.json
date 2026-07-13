@@ -1,0 +1,42 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/agents/supported",
+  "mirrorPath": "/docs/agents/supported/",
+  "entries": {
+    "/docs/agents/supported/:heading:supported-agents:0": {
+      "sourceHash": "ca591ff96a8652d7b6b511e42155e378595a9320482aa7b0e2da944954be7ced",
+      "translated": "# 지원되는 에이전트"
+    },
+    "/docs/agents/supported/:paragraph:supported-agents:0": {
+      "sourceHash": "d631717e9c9f264a68ddcedb29fec4c5296eb160c8d654dd3e4ff038e7fc3722",
+      "translated": "모든 에이전트 ORCA_PROTECTED_0001은 기본적으로 제공되며 직접 추가하는 방법도 있습니다."
+    },
+    "/docs/agents/supported/:paragraph:supported-agents:1": {
+      "sourceHash": "bd69dd5d72eaef56e2e6ce16d0a975988a60a73c6f89a335fef1a13f8e92aa45",
+      "translated": "ORCA_PROTECTED_0001은 `any CLI agent`(모든 CLI 에이전트)와 함께 작동합니다. 에이전트 콤보 상자는 터미널에서 프로세스를 시작하기만 합니다. 다음은 원클릭 ORCA_PROTECTED_0002를 통해 내장 에이전트 선택기에 사전 구성되어 제공됩니다. 지원되는 경우 더 깊은 후크, 상태, 사용 추적 및 계정 전환이 표시됩니다."
+    },
+    "/docs/agents/supported/:heading:permissions-default:0": {
+      "sourceHash": "5e1223f2771f23027d6b3b0fdc6bc94aed9e2f2aeaeea26a8917d558cf0c4283",
+      "translated": "## 권한 기본값"
+    },
+    "/docs/agents/supported/:paragraph:permissions-default:0": {
+      "sourceHash": "308b0b2ab4686e27e223987e503cdff005719e8e3145d2cc8d0d77f83e84b33c",
+      "translated": "ORCA_PROTECTED_0001은 새로운 출시에 대해 지원되는 각 CLI의 권한 우회 플래그를 미리 채웁니다. — Claude의 경우 'ORCA_PROTECTED_0002', ORCA_PROTECTED_0004의 경우 'ORCA_PROTECTED_0003', Gemini / Cursor / Crush / Kimi / Rovo Dev / Hermes / ORCA_PROTECTED_0006의 경우 'ORCA_PROTECTED_0005' / 명령 코드 및 이를 노출하는 다른 모든 에이전트에 대한 동등한 플래그입니다. 그 이유는 작업 트리가 일회용이기 때문입니다. 자체 체크아웃에서 실행 중인 에이전트는 모든 셸 명령을 다시 확인하지 않고도 실험할 수 있으며 병합하기 전에 여전히 diff를 선별하거나 삭제할 수 있습니다."
+    },
+    "/docs/agents/supported/:paragraph:permissions-default:1": {
+      "sourceHash": "2004fd2f75ef4786039894767af4f6bc0f10f6391409dd90c3026ffbc4c2f836",
+      "translated": "**Yolo**와 `Yolo`(수동) 실행 사이에서 사용자 지정되지 않은 모든 에이전트를 전환하려면 `Manual`(설정 → 에이전트 → 에이전트 권한)을 사용하세요. 특정 에이전트의 시작 인수 또는 환경을 이미 재정의한 경우 ORCA_PROTECTED_0001은 해당 에이전트를 그대로 두므로 전역 스위치가 사용자 정의 명령을 지우지 않습니다."
+    },
+    "/docs/agents/supported/:paragraph:permissions-default:2": {
+      "sourceHash": "2df7b03c769fdb74a63cdba1b7d78ab9f1bf12b4af431b2a5c9adf00e3a17cbb",
+      "translated": "한 에이전트에 대한 프롬프트만 복원하려면 설정에서 해당 에이전트의 기본 인수 또는 환경을 편집하세요. ORCA_PROTECTED_0001은 비어 있지 않은 사용자 정의 값을 명시적 재정의로 처리하고 해당 에이전트를 향후 권한 모드 마이그레이션에서 제외합니다."
+    },
+    "/docs/agents/supported/:table:permissions-default:0": {
+      "sourceHash": "27ee4a7f9cc2d8e859288d47c0f04ca99b3d46373a4791986b174631822d52f6",
+      "translated": "| 에이전트 | 메모 | 문서 |\n| --- | --- | --- |\n| ORCA_PROTECTED_0001 | 심층 통합: 사용법, 핫스왑, 후크 | [인류](ORCA_PROTECTED_0002) |\n| 클로드 에이전트 팀 | 기본적으로 비활성화됨 — 설정 → 에이전트에서 각 팀원의 기본 창을 사용하여 `ORCA_PROTECTED_0003`을 통해 실행하도록 활성화 | [인류](ORCA_PROTECTED_0004) |\n| ORCA_PROTECTED_0005 | 심층 통합: 사용량, 핫스왑 | [OpenAI](ORCA_PROTECTED_0006) |\n| 그록 | 자동 설정 | [xAI](ORCA_PROTECTED_0007) |\n| ORCA_PROTECTED_0008 CLI | 자동 설정 | [GitHub](ORCA_PROTECTED_0009) |\n| ORCA_PROTECTED_0010 | 자동 설정, 상태 | [ORCA_PROTECTED_0011](ORCA_PROTECTED_0012) |\n| 파이 | 자동 설정, 후크, 상태 | [파이](ORCA_PROTECTED_0013) |\n| OMP | 자동 설정, 후크, 상태 | [OMP](ORCA_PROTECTED_0014) |\n| 쌍둥이자리 | 자동 설정 | [구글](ORCA_PROTECTED_0015) |\n| 반중력 | 자동 설정, 후크, 상태 | [구글](ORCA_PROTECTED_0016) |\n| 앤티 | 자동 설정, 상태 | [앤티](ORCA_PROTECTED_0017) |\n| 에이더 | 자동 설정 | [에이더](ORCA_PROTECTED_0018) |\n| 거위 | 자동 설정 | [차단](ORCA_PROTECTED_0019) |\n| 앰프 | 자동 설정 | [앰프](ORCA_PROTECTED_0020) |\n| 킬로코드 | 자동 설정 | [킬로](ORCA_PROTECTED_0021) |\n| 키로 | 자동 설정 | [키로](ORCA_PROTECTED_0022) |\n| 매력 크러쉬 | 자동 설정 | [참](ORCA_PROTECTED_0023) |\n| 오기 | 자동 설정 | [보강](ORCA_PROTECTED_0024) |\n| 자동손 | 자동 설정 | [오토핸드](ORCA_PROTECTED_0025) |\n| 클라인 | 자동 설정 | [클라인](ORCA_PROTECTED_0026) |\n| 코드버프 | 자동 설정 | [코드버프](ORCA_PROTECTED_0027) |\n| 명령 코드 | 자동 설정, 상태 | [명령코드](ORCA_PROTECTED_0028) |\n| 계속 | 자동 설정 | [계속](ORCA_PROTECTED_0029) |\n| ORCA_PROTECTED_0030 | 심층 통합 | [커서](ORCA_PROTECTED_0031) |\n| 데빈 | 자동 설정 | [데빈](ORCA_PROTECTED_0032) |\n| 드로이드(공장) | 자동 설정, 후크, 상태 | [공장](ORCA_PROTECTED_0033) |\n| 키미 | 자동 설정 | [문샷](ORCA_PROTECTED_0034) |\n| 미스트랄 바이브 | 자동 설정 | [미스트랄](ORCA_PROTECTED_0035) |\n| 미니맥스 | 자동 설정, 사용량 추적, 속도 제한 추적 | [미니맥스](ORCA_PROTECTED_0036) |\n| 퀀 코드 | 설치된 `ORCA_PROTECTED_0037` 실행 파일을 통한 자동 설정 | [큐웬](ORCA_PROTECTED_0038) |\n| 로보 데브 | 자동 설정 | [아틀라시안](ORCA_PROTECTED_0039) |\n| 헤르메스 | 자동 설정 | [노우스](ORCA_PROTECTED_0040) |\n| 오픈클로 | 자동 설정 | [오픈클로](ORCA_PROTECTED_0041) |"
+    },
+    "/docs/agents/supported/:paragraph:permissions-default:3": {
+      "sourceHash": "cd5b5b9b9589c332dd9404782475abba5a37ba7d21d7241076a8c5ab6d715727",
+      "translated": "이 목록에 없는 내용은 [사용자 지정 CLI 에이전트 추가](ORCA_PROTECTED_0001)를 참조하세요."
+    }
+  }
+}

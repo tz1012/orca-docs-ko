@@ -1,0 +1,74 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/model/tabs-panes-splits",
+  "mirrorPath": "/docs/model/tabs-panes-splits/",
+  "entries": {
+    "/docs/model/tabs-panes-splits/:heading:tabs-panes-split-layouts:0": {
+      "sourceHash": "cc936c83a0d200912e534493bcc702b602894e828b3355c970d4020020ffa1ad",
+      "translated": "# 탭, 창 및 분할 레이아웃"
+    },
+    "/docs/model/tabs-panes-splits/:paragraph:tabs-panes-split-layouts:0": {
+      "sourceHash": "eea30d55b3494fe405796cf8f9d79e2ee4dda2602c4c45b711e523e0b4b9a11f",
+      "translated": "드래그하여 분할 창, 탭 그룹 및 고정된 경계."
+    },
+    "/docs/model/tabs-panes-splits/:paragraph:tabs-panes-split-layouts:1": {
+      "sourceHash": "09e85c42b28e93d83d2abd9269983ff0bd10316cb65d7899e15a7640e8a9a60b",
+      "translated": "ORCA_PROTECTED_0001의 창 시스템은 컨텍스트를 잃지 않고 여러 에이전트의 작업을 감시하도록 설계되었습니다. 탭은 창으로 그룹화됩니다. 창은 레이아웃으로 분할됩니다."
+    },
+    "/docs/model/tabs-panes-splits/:figure:tabs-panes-split-layouts:0": {
+      "sourceHash": "8dbd72ada097fead0e6fa2339c21374cdbacddfae860ef15ddd0afbd27eafcd0",
+      "translated": "![탭을 창 가장자리로 드래그하여 분할 - 터미널, 차이점 및 브라우저 탭을 나란히 표시](ORCA_PROTECTED_0001)\n\n탭을 창 가장자리로 드래그하여 분할 - 터미널, 차이점 및 브라우저 탭을 나란히 배치"
+    },
+    "/docs/model/tabs-panes-splits/:heading:tabs:0": {
+      "sourceHash": "16cae17edef8d3b208b529d338ca748a605efcfb307b9178b2ddb48ece5a32ca",
+      "translated": "## 탭"
+    },
+    "/docs/model/tabs-panes-splits/:paragraph:tabs:0": {
+      "sourceHash": "610461d2ac7db4559aef29597897ae9dc3e742d6bf4ca1beec618a7dfcbcddf6",
+      "translated": "각 탭에는 터미널, 편집기 버퍼, 브라우저, diff, PR 등 한 가지 항목이 포함됩니다. 탭은 `tab group`(탭 그룹) 내에 있습니다."
+    },
+    "/docs/model/tabs-panes-splits/:list:tabs:0": {
+      "sourceHash": "180b3735cff9b90bf9f3d9eb9d5bdd558c78b88acd224784d43efd95cb23697c",
+      "translated": "- 그룹 내에서 탭을 위아래로 드래그하여 순서를 바꾸세요.\n- 탭을 다른 그룹으로 드래그하여 이동하세요.\n- macOS에서는 'ORCA_PROTECTED_0001', Windows/Linux에서는 'ORCA_PROTECTED_0002'를 사용하여 활성 작업 트리의 모든 편집기 파일 탭을 닫습니다.\n- 활성 탭 색상 막대는 어느 창에 초점이 맞춰져 있는지 표시합니다."
+    },
+    "/docs/model/tabs-panes-splits/:heading:split-panes:0": {
+      "sourceHash": "911aefc85fe5479f776571c7d27a6fd53b0f1529300aeeda2e9520da28864ce3",
+      "translated": "## 분할 창"
+    },
+    "/docs/model/tabs-panes-splits/:paragraph:split-panes:0": {
+      "sourceHash": "cf59a8cf2e7b0759fde087392e5ba16b2a94edc0e917bb054610d9d19d888620",
+      "translated": "분할을 생성하려면 탭을 창 가장자리로 드래그하세요."
+    },
+    "/docs/model/tabs-panes-splits/:list:split-panes:0": {
+      "sourceHash": "83e9e3f30a3a9fbbe152d101367cf8d9482360104cab00bebf5f08a958c88228",
+      "translated": "- `Right edge`(오른쪽 가장자리) — ORCA_PROTECTED_0001을 분할합니다(수평 분할).\n- `Bottom edge`(하단 가장자리) — ORCA_PROTECTED_0002를 분할합니다(수직 분할)."
+    },
+    "/docs/model/tabs-panes-splits/:paragraph:split-panes:1": {
+      "sourceHash": "4fdf151cfb9db6343dbbb8bf0fc974d93019ede6b802d2a007a02261f479dd91",
+      "translated": "둥지를 나눕니다. 왼쪽에는 에이전트 터미널, 오른쪽 상단에는 차이점 보기, 오른쪽 하단에는 브라우저 탭이 모두 한 번에 있을 수 있습니다."
+    },
+    "/docs/model/tabs-panes-splits/:figure:split-panes:0": {
+      "sourceHash": "586a9f59246673e652def028a72144be132945ab022a0e799f8813fbedc8eea6",
+      "translated": "![모든 탭 유형은 다른 탭 유형과 분할될 수 있습니다. 에이전트 터미널, 차이점, 브라우저, 편집기, PR 보기는 모두 하나의 창 트리에 공존합니다.](ORCA_PROTECTED_0001)\n\n모든 탭 유형은 다른 탭 유형과 분할될 수 있습니다. 상담원 터미널, 차이점, 브라우저, 편집기, PR 보기가 모두 하나의 창 트리에 공존합니다."
+    },
+    "/docs/model/tabs-panes-splits/:paragraph:split-panes:2": {
+      "sourceHash": "1799c15f4b308e30e37bbeebc621c605e46207bb11a5ee28db040d4ac90660f5",
+      "translated": "터미널 탭은 탭 내부에서 분할될 수도 있습니다. `Split terminal right`(터미널을 오른쪽으로 분할) 또는 `Split terminal down`(터미널을 아래로 분할)하려면 터미널 탭 메뉴를 사용하거나 오른쪽으로 분할하려면 활성 터미널 창 헤더에 있는 분할 버튼을 사용하세요."
+    },
+    "/docs/model/tabs-panes-splits/:heading:pinned-boundaries:0": {
+      "sourceHash": "8b40eaf3c132f6b48d08ad49389abefe76edc91d9e12aa96389381fb8ddd1997",
+      "translated": "## 고정된 경계"
+    },
+    "/docs/model/tabs-panes-splits/:paragraph:pinned-boundaries:0": {
+      "sourceHash": "88789599318ff95fdde0fcd2041f8291a3231e28e40f15cb0bc066dfc4e242f1",
+      "translated": "창 경계는 사용자가 배치한 위치에 유지됩니다. 창 크기를 조정해도 레이아웃이 섞이지 않습니다. 경계 위치는 작업 트리별로 저장됩니다."
+    },
+    "/docs/model/tabs-panes-splits/:heading:tab-groups-across-worktrees:0": {
+      "sourceHash": "e9dafa7d27afdde79047e01e498081b4f9ac922739bb9b5e9cb2d1ce367b366d",
+      "translated": "## 작업 트리 전체의 탭 그룹"
+    },
+    "/docs/model/tabs-panes-splits/:paragraph:tab-groups-across-worktrees:0": {
+      "sourceHash": "8ca19886c5ba0285d6396c7283f89b1c156217a7fc6fd6a626a94152e38c65a9",
+      "translated": "각 작업 트리는 자체 탭 레이아웃을 소유합니다. 작업 트리를 전환하면 전체 창 트리가 교체됩니다. 즉, 브라우저 탭, 터미널 및 차이점이 떠난 그대로 다시 나타납니다."
+    }
+  }
+}

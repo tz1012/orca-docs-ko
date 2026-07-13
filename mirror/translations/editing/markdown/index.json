@@ -1,0 +1,70 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/editing/markdown",
+  "mirrorPath": "/docs/editing/markdown/",
+  "entries": {
+    "/docs/editing/markdown/:heading:rich-markdown-editor:0": {
+      "sourceHash": "dda96c692ecfd2515166ab9678cbf137299388734d6a1910619f0944c2bcaa43",
+      "translated": "# 리치 마크다운 편집기"
+    },
+    "/docs/editing/markdown/:paragraph:rich-markdown-editor:0": {
+      "sourceHash": "8ecf706c563ad78cc7158b1671b88a1da99a152172616d0b482cb4847ca8da91",
+      "translated": "마크다운 파일은 기본적으로 슬래시 메뉴, 도구 모음, 이미지 및 코드에 대한 인라인 미리 보기, 내부 링크 자동 완성 등 다양한 편집기에서 열립니다. `ORCA_PROTECTED_0001`을 사용하여 원할 때마다 원시 모나코로 전환하세요."
+    },
+    "/docs/editing/markdown/:figure:rich-markdown-editor:0": {
+      "sourceHash": "0a800d26243bef3ed189ca5584f26a7343ccb3ca628ae320ae442f50e42ea54a",
+      "translated": "![리치 마크다운 편집기 — 슬래시 메뉴, 인라인 미리보기, 내부 링크 자동 완성](ORCA_PROTECTED_0001)\n\n풍부한 마크다운 편집기 — 슬래시 메뉴, 인라인 미리보기, 내부 링크 자동 완성"
+    },
+    "/docs/editing/markdown/:heading:slash-menu:0": {
+      "sourceHash": "c24602664ec06c032aaa50e127869a0cbbf6c8e730942c7400dba239cabdb954",
+      "translated": "## 슬래시 메뉴"
+    },
+    "/docs/editing/markdown/:paragraph:slash-menu:0": {
+      "sourceHash": "aa4f757ea7adc7cdfd6bd6b29daae1ecc3e165b7666204642acb8643efe85aa2",
+      "translated": "슬래시 메뉴(제목, 목록, 코드 블록, 설명선, 이미지, 인어 다이어그램, 토글 블록)를 열려면 빈 줄에 'ORCA_PROTECTED_0001'을 입력하세요."
+    },
+    "/docs/editing/markdown/:paragraph:slash-menu:1": {
+      "sourceHash": "f7b9edaeaa76b3eb41bada9d5dca78f17b70fb271164cd3ad9dbdf7cd129ec54",
+      "translated": "축소 가능한 메모에는 'ORCA_PROTECTED_0001'을 사용하고, 전환 요약을 최상위 제목처럼 읽어야 하는 경우에는 'ORCA_PROTECTED_0002'를 사용하세요. ORCA_PROTECTED_0003은 둘 다 이식 가능한 'ORCA_PROTECTED_0004' / 'ORCA_PROTECTED_0005' 마크다운으로 저장하므로 파일은 여전히 ​​ORCA_PROTECTED_0006 외부에서 미리 볼 수 있습니다."
+    },
+    "/docs/editing/markdown/:heading:internal-links:0": {
+      "sourceHash": "c2bb452fee73a13efa278a8d03e45415468d6ec84ab90f2ed0e26950b2ff8e86",
+      "translated": "## 내부 링크"
+    },
+    "/docs/editing/markdown/:paragraph:internal-links:0": {
+      "sourceHash": "aaf655b3f1bd19208563c066cfcd3977f8bc2f74f6efc15c7c8c6a21b37f4493",
+      "translated": "위키 스타일 링크를 시작하려면 'ORCA_PROTECTED_0001'을 입력하세요. ORCA_PROTECTED_0002는 작업 트리 내의 파일 경로를 자동 완성하고 상대 링크를 삽입합니다."
+    },
+    "/docs/editing/markdown/:heading:search:0": {
+      "sourceHash": "62c53ea4911e0c798f817b7767cc46f15ba8aef089fe3921b0d7adee26e954a1",
+      "translated": "## 검색"
+    },
+    "/docs/editing/markdown/:paragraph:search:0": {
+      "sourceHash": "9d13bbd89042d72680456c53d6ffdfda8a4bee6e6e822dffa3dfb4aca7ebf127",
+      "translated": "편집기 내 마크다운 검색은 원시 마크다운이 아닌 렌더링된 텍스트를 존중합니다. 따라서 \"설치\"를 검색하면 `ORCA_PROTECTED_0001` 또는 `ORCA_PROTECTED_0002`로 쓰여진 제목을 찾습니다."
+    },
+    "/docs/editing/markdown/:heading:review-annotations:0": {
+      "sourceHash": "cbd91b687b1e932e6683590062f752833696feab7e06960dbb79815b228ea279",
+      "translated": "## 주석 검토"
+    },
+    "/docs/editing/markdown/:paragraph:review-annotations:0": {
+      "sourceHash": "2f1bee959231c36d8305fda4691c96d2439a25ed3fd304e96cbc496766f29cee",
+      "translated": "ORCA_PROTECTED_0001의 풍부한 편집기에서 마크다운을 검토할 때 원시 마크다운으로 다시 전환하지 않고도 렌더링된 텍스트를 선택하여 주석을 추가하세요. ORCA_PROTECTED_0002는 선택한 소스 범위에 연결된 메모를 유지하므로 렌더링된 문서를 계속 편집하는 동안 설명을 표시할 수 있습니다."
+    },
+    "/docs/editing/markdown/:heading:front-matter:0": {
+      "sourceHash": "c985aaddaabbd56ed0415dd84d4542d8a01d991107e7bbd32a5bf009be05b271",
+      "translated": "## 머리말"
+    },
+    "/docs/editing/markdown/:paragraph:front-matter:0": {
+      "sourceHash": "33404c6ada5d0726289c0e811b07cfcb4dce4c6fe8f5048553977410d8ee3636",
+      "translated": "YAML 및 TOML 머리말은 기본적으로 렌더링된 편집기에서 숨겨지므로 에이전트가 생성한 문서와 정적 사이트 게시물은 메타데이터 펜스 없이 더 깔끔하게 읽을 수 있습니다. 편집기의 `More actions`(추가 작업)(`ORCA_PROTECTED_0001`) 메뉴를 열고 보거나 편집해야 할 경우 `Show front matter`(머리말 표시)를 선택하세요. 동일한 메뉴를 사용하면 다시 `Hide front matter`(Hide 머리글)로 전환됩니다. 토글은 파일별로 이루어지므로 한 문서에 표시해도 나머지 문서에는 표시되지 않습니다."
+    },
+    "/docs/editing/markdown/:heading:table-of-contents:0": {
+      "sourceHash": "eb35770765c0f71c60f1f9f55359819c47591d79bdd67368e0d23af45aa97a2a",
+      "translated": "## 목차"
+    },
+    "/docs/editing/markdown/:paragraph:table-of-contents:0": {
+      "sourceHash": "85fc5e61b650feea674032648520824423ff8ba6cb115ab7a7443e970a2bde18",
+      "translated": "긴 문서의 경우 편집기 헤더에 있는 `Table of Contents`(목차) 버튼(트리 아이콘)을 클릭하면 편집기 왼쪽에 고정된 제목 개요가 열립니다. 제목을 클릭하면 해당 제목으로 이동합니다. 축소 및 확장 컨트롤은 깊게 중첩된 섹션을 읽을 수 있도록 유지합니다. 리치 모드와 미리보기 모드에서 사용할 수 있습니다."
+    }
+  }
+}

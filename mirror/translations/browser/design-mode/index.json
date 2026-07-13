@@ -1,0 +1,50 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/browser/design-mode",
+  "mirrorPath": "/docs/browser/design-mode/",
+  "entries": {
+    "/docs/browser/design-mode/:heading:design-mode:0": {
+      "sourceHash": "dccbf9097c6120611d507aaa3633ab4ac10b732815963f46561527e7a157548f",
+      "translated": "# 디자인 모드"
+    },
+    "/docs/browser/design-mode/:paragraph:design-mode:0": {
+      "sourceHash": "6b867e4cff501af51ac3cff2d37d1b0d049cb0783e85b2ae92d1b4556c026fc7",
+      "translated": "디자인 모드는 ORCA_PROTECTED_0001 브라우저를 포인터-코드 도구로 전환합니다. 이를 켜고 렌더링된 페이지에서 UI 요소를 클릭하면 해당 요소가 DOM, 계산된 스타일 및 스크린샷과 함께 풍부한 컨텍스트로 에이전트 채팅에 드롭됩니다."
+    },
+    "/docs/browser/design-mode/:figure:design-mode:0": {
+      "sourceHash": "1229e62ee719379d05665800f3fc2374a18834d0e95ffd97c87297bd8861e022",
+      "translated": "![디자인 모드: 버튼을 클릭하면 에이전트 채팅으로 이동](ORCA_PROTECTED_0001)\n\n디자인 모드: 버튼을 클릭하면 상담원 채팅으로 이동됩니다."
+    },
+    "/docs/browser/design-mode/:heading:turn-it-on:0": {
+      "sourceHash": "5a6499e07fce712c06fe89b016f7ab8540ed007018a6530bef67241c25a6f8a5",
+      "translated": "## 켜세요"
+    },
+    "/docs/browser/design-mode/:paragraph:turn-it-on:0": {
+      "sourceHash": "93b1c0d5944a5db2e0e42a8f90c7a5ce7a02aec5f1d19c78e7935ddf01300ab9",
+      "translated": "브라우저 툴바에서 `Design Mode`(디자인 모드) 토글을 클릭하세요. 커서가 선택 도구가 됩니다. 마우스를 올리면 그 아래의 요소가 강조 표시됩니다."
+    },
+    "/docs/browser/design-mode/:heading:drop-into-chat:0": {
+      "sourceHash": "b6ad763b3ed4d6200fb319097ede06f4dab32c53e5a9470699083e1f4d7522fe",
+      "translated": "## 채팅에 참여하세요"
+    },
+    "/docs/browser/design-mode/:paragraph:drop-into-chat:0": {
+      "sourceHash": "6d99b7c5b939d57c5fe4f638af29e878917e5210ac42d2d8024b33ff9ac53664",
+      "translated": "요소를 클릭합니다. ORCA_PROTECTED_0001 캡처:"
+    },
+    "/docs/browser/design-mode/:list:drop-into-chat:0": {
+      "sourceHash": "96063a669cf5c89e2515169148824b52fbdaf61e7406b1468c8fcf314687954e",
+      "translated": "- 요소의 HTML(외부 및 작은 이웃)\n- 계산된 CSS — 색상, 글꼴, 간격.\n- 요소의 잘린 스크린샷입니다.\n- 개발 모드 소스 맵을 사용할 수 있는 경우 소스 ORCA_PROTECTED_0001입니다."
+    },
+    "/docs/browser/design-mode/:paragraph:drop-into-chat:1": {
+      "sourceHash": "b92bd791fe91823b043c3366e5fba599d787dff63cff2a74eff0c85ee27a9b30",
+      "translated": "이 모든 것이 활성 에이전트 터미널에 하나의 첨부 파일로 제공되며 변경하려는 내용을 입력하면 됩니다."
+    },
+    "/docs/browser/design-mode/:heading:use-the-result:0": {
+      "sourceHash": "3fbaea8f57925bf9f53bf820cc7563357013ef5f88b6c3665f7233be4926e236",
+      "translated": "## 결과 사용"
+    },
+    "/docs/browser/design-mode/:paragraph:use-the-result:0": {
+      "sourceHash": "f099df3ea4274f0753bb64d05e314086789e7d8b051ed234592538995d17c0d8",
+      "translated": "에이전트가 ORCA_PROTECTED_0001 핫 리로드 소스를 편집하면 다시 클릭하여 확인하세요. 이 루프의 가장 엄격한 버전은 영웅 레시피 [디자인 모드로 UI 버그 수정](ORCA_PROTECTED_0002)입니다."
+    }
+  }
+}

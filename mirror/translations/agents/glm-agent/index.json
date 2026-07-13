@@ -1,0 +1,130 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/agents/glm-agent",
+  "mirrorPath": "/docs/agents/glm-agent/",
+  "entries": {
+    "/docs/agents/glm-agent/:heading:how-to-use-glm-5-2-in-orca-ade:0": {
+      "sourceHash": "a04c4f6a8066bde5ff3ddf4b075f9c3926f43e3357ebe13e65067de69f7b47a2",
+      "translated": "# ORCA_PROTECTED_0001 ADE에서 GLM-5.2를 사용하는 방법"
+    },
+    "/docs/agents/glm-agent/:paragraph:how-to-use-glm-5-2-in-orca-ade:0": {
+      "sourceHash": "1cbac316b498a36626852a59396d40ad9fdc65b8a6ccfac57935749b7f4df48f",
+      "translated": "ORCA_PROTECTED_0002 작업 트리 내에서 GLM-5.2를 실행하도록 ORCA_PROTECTED_0001 및 기타 CLI 에이전트 하네스를 구성합니다."
+    },
+    "/docs/agents/glm-agent/:paragraph:how-to-use-glm-5-2-in-orca-ade:1": {
+      "sourceHash": "62685d9b4f43a60ce4439cbe830e5770c658ad649c2381d8b6aef9884f5f6610",
+      "translated": "GLM-5.2는 이미 사용하고 있는 에이전트 하네스를 통해 ORCA_PROTECTED_0001에서 작동합니다. ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, Cline, Kilo Code, Roo Code, Droid, OpenClaw 또는 다른 CLI 에이전트에서 GLM-5.2를 구성한 다음 ORCA_PROTECTED_0004의 선택기에서 해당 에이전트를 시작합니다."
+    },
+    "/docs/agents/glm-agent/:paragraph:how-to-use-glm-5-2-in-orca-ade:2": {
+      "sourceHash": "663a8f463ed81098b319dde37c1c290f6bebdc37c9fc6dcbbe48eb708221b7f0",
+      "translated": "ORCA_PROTECTED_0001은 격리된 작업 트리, 터미널 창, 브라우저 탭, 검토 흐름 및 세션 관리를 제공합니다. [Z.ai CodePlan 구독](ORCA_PROTECTED_0002) 및 에이전트 구성은 모델 액세스를 제공합니다."
+    },
+    "/docs/agents/glm-agent/:aside:how-to-use-glm-5-2-in-orca-ade:0": {
+      "sourceHash": "cbb04adf9c4e95b642406d045c543f209de4819b725893fb049f3f17c68beadc",
+      "translated": "전제 조건\n\n에이전트 하니스에서 GLM-5.2를 구성하기 전에 GLM 코딩 계획 액세스 권한이 있는 활성 [Z.ai CodePlan 구독](ORCA_PROTECTED_0001)이 필요합니다. OpenAI 호환 하네스에는 Z.ai API 키도 필요합니다. ORCA_PROTECTED_0002는 GLM 액세스를 포함하거나 재판매하지 않습니다."
+    },
+    "/docs/agents/glm-agent/:aside:how-to-use-glm-5-2-in-orca-ade:1": {
+      "sourceHash": "3b32db7010554ff94e657a2b37a87faf465b9638cf86e21f75a3ceb7955f80e8",
+      "translated": "소스\n\n이러한 설정은 [Z.ai의 최신 모델 가이드](ORCA_PROTECTED_0001)를 따릅니다. 현재 공급자 측 세부 정보는 해당 페이지를 확인하세요."
+    },
+    "/docs/agents/glm-agent/:heading:claude-code:0": {
+      "sourceHash": "9f0f116abd34b846efde8c7b52554f5fd7f631e2c682ad1849dfcb1f96391564",
+      "translated": "## ORCA_PROTECTED_0001 에이전트"
+    },
+    "/docs/agents/glm-agent/:paragraph:claude-code:0": {
+      "sourceHash": "28af8959146793fe16f196e38630cbbec95e4ae690e38d413f7505a19bdeec8f",
+      "translated": "ORCA_PROTECTED_0001은 `ORCA_PROTECTED_0002`에서 모델 재정의를 읽습니다. ORCA_PROTECTED_0003에서 GLM-5.2를 사용하려면:"
+    },
+    "/docs/agents/glm-agent/:list:claude-code:0": {
+      "sourceHash": "c3f458b0ef5890734cb58201a5fd94d54debdf82543b102dc1506cacc10cfa19",
+      "translated": "1. `ORCA_PROTECTED_0001`을 엽니다.\n2. 아래 `ORCA_PROTECTED_0002` 블록을 추가하거나 업데이트하세요.\n3. ORCA_PROTECTED_0004에서 ORCA_PROTECTED_0003 세션을 다시 시작하여 새 환경이 로드되도록 합니다.\n4. ORCA_PROTECTED_0006 내에서 `ORCA_PROTECTED_0005`를 실행하여 활성 모델을 확인합니다."
+    },
+    "/docs/agents/glm-agent/:code:claude-code:0": {
+      "sourceHash": "67372323f90b26cebaf4d6e3934da0c7c937b8ff884e69e25c6a13cf0afc70b4",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/agents/glm-agent/:paragraph:claude-code:1": {
+      "sourceHash": "173e689625aa039e767cfd3181a47c410dcfd7e2bbe48ad86a9130d732254d31",
+      "translated": "GLM-5.2의 1M 컨텍스트 변형을 원할 때 `ORCA_PROTECTED_0001` 접미사를 사용하고 `ORCA_PROTECTED_0002`를 `ORCA_PROTECTED_0003`으로 설정하여 ORCA_PROTECTED_0004의 압축 창이 해당 컨텍스트 크기와 일치하도록 합니다. ORCA_PROTECTED_0005에 'ORCA_PROTECTED_0006' 모델이 존재하지 않는다고 표시되면 ORCA_PROTECTED_0007을 업데이트하고 다시 시도하세요."
+    },
+    "/docs/agents/glm-agent/:paragraph:claude-code:2": {
+      "sourceHash": "ca5972367e092c161aec55e03b0cfbda150025be34f9c050bf63fc8e5b99c082",
+      "translated": "코딩 작업의 경우 Z.ai는 `ORCA_PROTECTED_0003`을 사용하여 ORCA_PROTECTED_0001 노력을 `ORCA_PROTECTED_0002`로 설정할 것을 권장합니다. ORCA_PROTECTED_0004의 낮은 노력 설정은 GLM-5.2 높은 노력에 매핑되는 반면 `ORCA_PROTECTED_0005`, `ORCA_PROTECTED_0006` 및 `ORCA_PROTECTED_0007`은 GLM-5.2 최대 노력에 매핑됩니다."
+    },
+    "/docs/agents/glm-agent/:heading:opencode-cline-kilo-code-roo-code-and-droid:0": {
+      "sourceHash": "9a89cb0a0fe4a9d1c65b2a2e1f77e98d04a81f2ed605fc7527d5752d611b65af",
+      "translated": "## ORCA_PROTECTED_0001, Cline, Kilo Code, Roo Code 및 Droid"
+    },
+    "/docs/agents/glm-agent/:paragraph:opencode-cline-kilo-code-roo-code-and-droid:0": {
+      "sourceHash": "41fed63220441040f3a212550580af4325a9f844f543167cc57364071aa49fc0",
+      "translated": "OpenAI 호환 공급자를 노출하는 에이전트 하네스의 경우:"
+    },
+    "/docs/agents/glm-agent/:list:opencode-cline-kilo-code-roo-code-and-droid:0": {
+      "sourceHash": "a4d7d5ff7ffde0d3f483ae917cdf7ae3cd188b538a74013b7c038b9668bcfd69",
+      "translated": "1. ORCA_PROTECTED_0001 외부 또는 내부에서 하네스 설정을 엽니다.\n2. OpenAI 호환 공급자 옵션을 선택하거나, 하네스에 Z.ai 공급자 옵션이 있는 경우 Z.ai 공급자 옵션을 선택합니다.\n3. 기본 URL을 `ORCA_PROTECTED_0002`로 설정합니다.\n4. Z.ai API 키를 추가하세요.\n5. 커스텀 모델 이름을 `ORCA_PROTECTED_0003`으로 설정합니다.\n6. 하네스가 해당 필드를 노출하는 경우 컨텍스트 창 크기를 `ORCA_PROTECTED_0004`로 설정합니다.\n7. 하네스가 이 공급자 경로에 대한 이미지 지원을 구체적으로 문서화하지 않는 한 이미지 지원을 비활성화합니다."
+    },
+    "/docs/agents/glm-agent/:paragraph:opencode-cline-kilo-code-roo-code-and-droid:1": {
+      "sourceHash": "aa987338c27aa5cff86060247dc338fd8c363e37060462342a241a3ddc64ed48",
+      "translated": "저장한 후 ORCA_PROTECTED_0001의 에이전트 선택기에서 하네스를 실행합니다. ORCA_PROTECTED_0002는 선택한 작업 트리에서 동일하게 구성된 CLI를 실행합니다."
+    },
+    "/docs/agents/glm-agent/:heading:openclaw:0": {
+      "sourceHash": "e41aab6e60b0e620c72e1e9ff93230481d806f027e4e4a6dfdd627c16d9130d1",
+      "translated": "## 오픈클로"
+    },
+    "/docs/agents/glm-agent/:paragraph:openclaw:0": {
+      "sourceHash": "064f421ac918f334db3bb9a74d7c8f6c4c74a8931db3f85d550a988fae8fe51a",
+      "translated": "OpenClaw가 공급자 모델 목록에서 직접 GLM-5.2를 선택할 수 없는 경우 `ORCA_PROTECTED_0001`에 모델을 수동으로 추가하세요."
+    },
+    "/docs/agents/glm-agent/:paragraph:openclaw:1": {
+      "sourceHash": "7368105191ebe59417f1a59f471e7b68bf7b71ae4029dee2c323d46e11695723",
+      "translated": "`ORCA_PROTECTED_0002`에 `ORCA_PROTECTED_0001`을 추가합니다."
+    },
+    "/docs/agents/glm-agent/:code:openclaw:0": {
+      "sourceHash": "b93663093ed03caa8166adb36975ed07d5d1eb3c030fac1983ecd3f99363ce8a",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/agents/glm-agent/:paragraph:openclaw:2": {
+      "sourceHash": "fcc57e4e722d5fb628436874258d25b3725cc5c808ca54e29a360459d7d13cb0",
+      "translated": "그런 다음 기본 기본 모델을 설정합니다."
+    },
+    "/docs/agents/glm-agent/:code:openclaw:1": {
+      "sourceHash": "6dfd34c20b19827784762cc83c57122717257393382fea28408783495c67f1b5",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/agents/glm-agent/:paragraph:openclaw:3": {
+      "sourceHash": "912fe2a7fbcd1a9934d38a7769884a734b97a8ac4a16081a28e2c207352346de",
+      "translated": "그리고 `ORCA_PROTECTED_0001` 아래에 모델을 추가합니다."
+    },
+    "/docs/agents/glm-agent/:code:openclaw:2": {
+      "sourceHash": "1ddbca4e1354c3ec6f411357f1b04c48f6eb19aad91e26561bf109a4feff8d19",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/agents/glm-agent/:paragraph:openclaw:4": {
+      "sourceHash": "6a46a6c1e06d7b1560516981e9f9aae9889d32b2ec67dd6756f6df8303df4280",
+      "translated": "OpenClaw 게이트웨이를 다시 시작합니다."
+    },
+    "/docs/agents/glm-agent/:code:openclaw:3": {
+      "sourceHash": "e828a9af6698214673ea8660cf8bd5316f4643c0f64214c3af36e4b7b7bc25f0",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/agents/glm-agent/:paragraph:openclaw:5": {
+      "sourceHash": "c5ced7b08628835015ff077ccaf0ebf8681aeb47028bb21cd4fec4cdbb02502a",
+      "translated": "그런 다음 ORCA_PROTECTED_0001에서 OpenClaw를 시작하거나 ORCA_PROTECTED_0003 터미널에서 'ORCA_PROTECTED_0002'를 실행하여 GLM-5.2가 활성화되어 있는지 확인하세요."
+    },
+    "/docs/agents/glm-agent/:heading:add-any-other-glm-52-harness:0": {
+      "sourceHash": "4e82af3086619a89cd9c293be1be4a47bc42d61cf1f63ac249715cfa249a257f",
+      "translated": "## 다른 GLM-5.2 하네스 추가"
+    },
+    "/docs/agents/glm-agent/:paragraph:add-any-other-glm-52-harness:0": {
+      "sourceHash": "680e14c3e862393549d2db1291a115fe456d48149e9cd7028f2d0368a541dcbf",
+      "translated": "하네스가 아직 ORCA_PROTECTED_0001에 내장되지 않은 경우 이를 사용자 정의 CLI 에이전트로 추가합니다."
+    },
+    "/docs/agents/glm-agent/:list:add-any-other-glm-52-harness:0": {
+      "sourceHash": "017dee31e7d52b8e5572129e14eec7cac2d7f722d98a94a6b4655b7764c4f0bc",
+      "translated": "1. [설정 -> 에이전트](ORCA_PROTECTED_0001)를 엽니다.\n2. `Add custom agent`(사용자 지정 에이전트 추가)를 클릭합니다.\n3. 하네스 바이너리 또는 실행 명령에서 ORCA_PROTECTED_0002를 지정합니다.\n4. 저장한 다음 작업 트리의 에이전트 선택기에서 시작합니다."
+    },
+    "/docs/agents/glm-agent/:paragraph:add-any-other-glm-52-harness:1": {
+      "sourceHash": "1505103917efd4f339cbce69eddc07e862378b05246c0657f3928177445c2f5b",
+      "translated": "핵심 규칙은 간단합니다. 하네스가 ORCA_PROTECTED_0001 설정을 저장할 때마다 GLM-5.2를 구성한 다음 ORCA_PROTECTED_0002가 올바른 작업 트리에서 해당 하네스를 시작하도록 합니다."
+    }
+  }
+}

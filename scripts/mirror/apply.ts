@@ -100,6 +100,20 @@ const portableRelativePath = (root: string, path: string) =>
 export const contentRelativePath = (mirrorPath: string) => {
   const suffix = mirrorPath.slice("/docs/".length, -1);
   return suffix.length === 0
+    ? "docs.md"
+    : join("docs", ...suffix.split("/").slice(0, -1), `${suffix.split("/").at(-1)!}.md`);
+};
+
+const indexedContentRelativePath = (mirrorPath: string) => {
+  const suffix = mirrorPath.slice("/docs/".length, -1);
+  return suffix.length === 0
+    ? join("docs", "index.md")
+    : join("docs", ...suffix.split("/"), "index.md");
+};
+
+const legacyContentRelativePath = (mirrorPath: string) => {
+  const suffix = mirrorPath.slice("/docs/".length, -1);
+  return suffix.length === 0
     ? "index.md"
     : join(...suffix.split("/"), "index.md");
 };
@@ -159,13 +173,39 @@ const withoutCode = (markdown: string) => {
     .join("\n");
 };
 
+const withoutMarkdownImages = (markdown: string) => {
+  let output = "";
+  let cursor = 0;
+  while (cursor < markdown.length) {
+    const opening = markdown.indexOf("![", cursor);
+    if (opening < 0) return output + markdown.slice(cursor);
+    const destination = markdown.indexOf("](", opening + 2);
+    if (destination < 0) return output + markdown.slice(cursor);
+    let index = destination + 2;
+    let depth = 1;
+    for (; index < markdown.length && depth > 0; index += 1) {
+      if (markdown[index] === "\\") {
+        index += 1;
+      } else if (markdown[index] === "(") {
+        depth += 1;
+      } else if (markdown[index] === ")") {
+        depth -= 1;
+      }
+    }
+    if (depth > 0) return output + markdown.slice(cursor);
+    output += markdown.slice(cursor, opening);
+    cursor = index;
+  }
+  return output;
+};
+
 export const validateInternalLinks = (
   renderedPages: ReadonlyMap<string, string>,
 ) => {
   const activePaths = new Set(renderedPages.keys());
-  const linkPattern = /(?:https:\/\/www\.onorca\.dev|\/orca-docs-ko)?(\/docs(?:\/[^\s)'"<>?#]*)?)(?:[?#][^\s)'"<>]*)?/gu;
+  const linkPattern = /(?<![\p{L}\p{N}_./:-])(?:https:\/\/www\.onorca\.dev|\/orca-docs-ko)?(\/docs(?:\/[^\s)'"<>?#]*)?)(?:[?#][^\s)'"<>]*)?/gu;
   for (const [pagePath, markdown] of renderedPages) {
-    for (const match of withoutCode(markdown).matchAll(linkPattern)) {
+    for (const match of withoutMarkdownImages(withoutCode(markdown)).matchAll(linkPattern)) {
       const path = canonicalMirrorPath(match[1]!);
       if (!activePaths.has(path)) {
         throw new Error(`Broken internal link from ${pagePath} to ${path}`);
@@ -226,6 +266,54 @@ const removePage = async (
           join(root, translationRelativePath(mirrorPath)),
           `translation path for ${mirrorPath}`,
         );
+  await rm(path, { force: true });
+  const resolvedRoot = resolve(root);
+  let directory = dirname(path);
+  while (directory !== resolvedRoot) {
+    try {
+      await rmdir(directory);
+    } catch (error) {
+      if (errorCode(error) === "ENOENT") {
+        directory = dirname(directory);
+        continue;
+      }
+      if (errorCode(error) === "ENOTEMPTY") return;
+      throw error;
+    }
+    directory = dirname(directory);
+  }
+};
+
+const removeLegacyContentPage = async (root: string, mirrorPath: string) => {
+  const path = resolveWithin(
+    root,
+    join(root, legacyContentRelativePath(mirrorPath)),
+    `legacy content path for ${mirrorPath}`,
+  );
+  await rm(path, { force: true });
+  const resolvedRoot = resolve(root);
+  let directory = dirname(path);
+  while (directory !== resolvedRoot) {
+    try {
+      await rmdir(directory);
+    } catch (error) {
+      if (errorCode(error) === "ENOENT") {
+        directory = dirname(directory);
+        continue;
+      }
+      if (errorCode(error) === "ENOTEMPTY") return;
+      throw error;
+    }
+    directory = dirname(directory);
+  }
+};
+
+const removeIndexedContentPage = async (root: string, mirrorPath: string) => {
+  const path = resolveWithin(
+    root,
+    join(root, indexedContentRelativePath(mirrorPath)),
+    `indexed content path for ${mirrorPath}`,
+  );
   await rm(path, { force: true });
   const resolvedRoot = resolve(root);
   let directory = dirname(path);
@@ -318,7 +406,11 @@ const applyMirrorUnlocked = async (
     config.contentRoot,
     expectedFileInventory([
       "404.md",
-      ...transitionalPaths.map(contentRelativePath),
+      ...transitionalPaths.flatMap((mirrorPath) => [
+        contentRelativePath(mirrorPath),
+        indexedContentRelativePath(mirrorPath),
+        legacyContentRelativePath(mirrorPath),
+      ]),
     ]),
   );
   await assertNoUnexpectedInventory(
@@ -370,6 +462,13 @@ const applyMirrorUnlocked = async (
     );
     if (await pathExists(stagedAssets)) {
       await cp(stagedAssets, temporaryAssets, { recursive: true });
+    }
+
+    for (const mirrorPath of transitionalPaths) {
+      await Promise.all([
+        removeLegacyContentPage(temporaryContent, mirrorPath),
+        removeIndexedContentPage(temporaryContent, mirrorPath),
+      ]);
     }
 
     for (const mirrorPath of snapshot.plan.remove) {

@@ -1,0 +1,58 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/cli/worktree-checkpoints",
+  "mirrorPath": "/docs/cli/worktree-checkpoints/",
+  "entries": {
+    "/docs/cli/worktree-checkpoints/:heading:worktree-checkpoints:0": {
+      "sourceHash": "daff27f8f77c3d79ac6f4ed66ff2ad6f8cb09294b2902e8b40040d63497d2ea1",
+      "translated": "# 워크트리 체크포인트"
+    },
+    "/docs/cli/worktree-checkpoints/:paragraph:worktree-checkpoints:0": {
+      "sourceHash": "d8c66c6eed8649f43a2433299d2e65dc8ad0c276bb422e4b971bbf344d38b81f",
+      "translated": "모든 ORCA_PROTECTED_0001 작업 트리에는 UI에 표시되는 간단한 자유 텍스트 `comment`(설명) 필드가 있습니다. 즉, 작업 트리가 현재 수행 중인 작업에 대한 상태 스냅샷입니다. 에이전트는 CLI에서 이를 업데이트할 수 있으며 채팅을 강제하지 않고도 인간 공동작업자를 루프에 유지하기 위해 권장하는 패턴입니다."
+    },
+    "/docs/cli/worktree-checkpoints/:heading:the-pattern:0": {
+      "sourceHash": "fc1b8f5068d37447a0c487cec845464ddc23a4e5cbc8ada7254f0b9956c438f1",
+      "translated": "## 패턴"
+    },
+    "/docs/cli/worktree-checkpoints/:code:the-pattern:0": {
+      "sourceHash": "e834cf1e8b5dc917e4de3cd81de828c32331d6753c2397cde67a6b5576a3dae6",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/worktree-checkpoints/:heading:good-checkpoint-moments:0": {
+      "sourceHash": "2e19f1f7ece0ecc7065aa70a9cfac1c7cc32227a77575d0e1a4934dbe541fe36",
+      "translated": "## 좋은 체크포인트 순간들"
+    },
+    "/docs/cli/worktree-checkpoints/:list:good-checkpoint-moments:0": {
+      "sourceHash": "f6e21fa675dadf82d779b42147202613dba19008103b61601c7a59a96942aebb",
+      "translated": "- 의미있는 구현을 마쳤습니다.\n- 가설을 확인하거나 반박했습니다.\n- 코드 리뷰를 완료했습니다.\n- 차단기에 부딪혔습니다(외부 입력 대기, 업스트림 버그, 액세스 누락).\n- 조사에서 수정으로, 수정에서 검증으로 전환합니다."
+    },
+    "/docs/cli/worktree-checkpoints/:heading:format:0": {
+      "sourceHash": "d2779228800559caf50283aa902f74f9d754b5ef4828525268ee958b0c4e586a",
+      "translated": "## 형식"
+    },
+    "/docs/cli/worktree-checkpoints/:paragraph:format:0": {
+      "sourceHash": "a88236ee3e4437e9a6de01567f9104f208f5d77733789f2192f75a19867d6ef5",
+      "translated": "첫 번째 줄은 작업입니다. 방금 발생한 일, 위치, 상태 또는 다음 단계입니다."
+    },
+    "/docs/cli/worktree-checkpoints/:code:format:0": {
+      "sourceHash": "cd758b97d5c2cb13cc714911a2666f039bf392dce2683798fe788720bb0a31cd",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/worktree-checkpoints/:heading:reading-before-writing:0": {
+      "sourceHash": "04baff01af6c1c9e32aa5cc9fbc6708815ad3cca9a4ecfbbc913ac7ef2abd243",
+      "translated": "## 쓰기 전에 읽기"
+    },
+    "/docs/cli/worktree-checkpoints/:paragraph:reading-before-writing:0": {
+      "sourceHash": "240123735cfdfeebc6cf52c5817c19613f1830021cfdc2e29cce09e776a07f26",
+      "translated": "댓글에 사용자가 작성한 컨텍스트가 있을 수 있는 경우 먼저 읽어 목표나 제약 조건을 방해하지 않도록 하세요."
+    },
+    "/docs/cli/worktree-checkpoints/:code:reading-before-writing:0": {
+      "sourceHash": "26e69199c2622c8fd5d954c7e80c640916e20c2374cf2f6b50910c69602388fe",
+      "translated": "````\nORCA_PROTECTED_0001\n````"
+    },
+    "/docs/cli/worktree-checkpoints/:paragraph:reading-before-writing:1": {
+      "sourceHash": "397205cf5ad27afaa634dc58ea20332121b6464223583328e5eff5e0e3256540",
+      "translated": "아직 유효한 것을 보존하고, 오래된 것을 삭제하고, 업데이트를 엮으세요."
+    }
+  }
+}

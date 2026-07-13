@@ -1,0 +1,62 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/editing/monaco",
+  "mirrorPath": "/docs/editing/monaco/",
+  "entries": {
+    "/docs/editing/monaco/:heading:monaco-editor-autosave:0": {
+      "sourceHash": "e0dfc35d1cd3be2731e370364c426e6eb8829dc731008ab0ad8f5bd357a66279",
+      "translated": "# 모나코 편집기 및 자동 저장"
+    },
+    "/docs/editing/monaco/:paragraph:monaco-editor-autosave:0": {
+      "sourceHash": "27a421f65d7e236bb1aeff5c79bcf5b957f0e977373a87288e945458d69e7178",
+      "translated": "ORCA_PROTECTED_0001의 코드 편집기는 VS Code가 사용하는 것과 동일한 편집기인 Monaco이며 몇 가지 ORCA_PROTECTED_0002 관련 수정 사항이 있습니다."
+    },
+    "/docs/editing/monaco/:heading:autosave:0": {
+      "sourceHash": "81a867e0ee77b97cb443ad720d26e1be0774a44f43fb75953d96ab85bdf11378",
+      "translated": "## 자동 저장"
+    },
+    "/docs/editing/monaco/:paragraph:autosave:0": {
+      "sourceHash": "3677c4453c508e857023f18387ecf90adfc46a7ca9c450f2c9c95c1420c6fc41",
+      "translated": "흐려지거나 짧은 유휴 기간이 지나면 파일이 저장됩니다. 일반 흐름에는 저장되지 않은 변경 사항이 없기 때문에 \"더티\" 점이 없습니다."
+    },
+    "/docs/editing/monaco/:heading:multi-cursor-go-to-find:0": {
+      "sourceHash": "d5a1ee28136ee051366aab6c5dff3092a23d13acddbb23226ecec6777f159f97",
+      "translated": "## 다중 커서, 이동, 찾기"
+    },
+    "/docs/editing/monaco/:list:multi-cursor-go-to-find:0": {
+      "sourceHash": "17582d3915184cdd4fd05c770b25d488bda5602e9fefe897d76532510428701f",
+      "translated": "- `ORCA_PROTECTED_0001` — 다음 항목을 선택합니다.\n- `ORCA_PROTECTED_0002` / `ORCA_PROTECTED_0003` — 파일 찾기 / 작업 트리 찾기.\n- `ORCA_PROTECTED_0004` — 정의로 이동합니다(언어 확장에서 지원되는 경우)."
+    },
+    "/docs/editing/monaco/:heading:changes-view-mode:0": {
+      "sourceHash": "12a882cb418f32e5f3aca360fce395a71becbe58dc4bc40ec9e0ede71dbb56c4",
+      "translated": "## 보기 모드 변경"
+    },
+    "/docs/editing/monaco/:paragraph:changes-view-mode:0": {
+      "sourceHash": "8935be0a3697a62f428516ee0efdb797367a9e512abd8442fb631c6fa5a234cf",
+      "translated": "편집기 탭에서 `Changes view mode`(보기 모드)를 전환하여 커서 위치를 벗어나지 않고 파일을 탭 내 HEAD-vs-working-tree diff로 뒤집습니다. [Diff 뷰어](ORCA_PROTECTED_0001)와 동일한 단축키 — `ORCA_PROTECTED_0002`/`ORCA_PROTECTED_0003` - 덩어리를 걷고, `ORCA_PROTECTED_0004`를 스테이지로 이동합니다. 일반 파일 보기로 돌아가려면 다시 전환하세요."
+    },
+    "/docs/editing/monaco/:heading:minimap:0": {
+      "sourceHash": "8cf8dca98cdd2b32c1d4e5db1f3f12a50a8b0af467f7936075a5469578fca024",
+      "translated": "## 미니맵"
+    },
+    "/docs/editing/monaco/:paragraph:minimap:0": {
+      "sourceHash": "a3eedc0b9e4241a73fefaf6c79047a605c396a70a3a2bc0913c84ffeb906d90a",
+      "translated": "미니맵은 파일 편집기의 [설정 → 모양](ORCA_PROTECTED_0001)에서 사용할 수 있습니다. 기본적으로 꺼져 있습니다. VS Code 스타일 개요 레일을 선호하는 경우 이 기능을 켜세요."
+    },
+    "/docs/editing/monaco/:heading:custom-editor-font:0": {
+      "sourceHash": "38e35bbd8adcebb5c3f1e00c9fcbf089f66087204fe8a7c4201b483c6728a6b3",
+      "translated": "## 사용자 정의 편집기 글꼴"
+    },
+    "/docs/editing/monaco/:paragraph:custom-editor-font:0": {
+      "sourceHash": "9d1c684b587f4f38e16128affa33a0b4605e24c76d1856f1044b8674aab4d058",
+      "translated": "[설정 → 모양 → 편집기 글꼴](ORCA_PROTECTED_0001)에서 편집기에 설치된 글꼴을 선택합니다. UI 글꼴과 독립적입니다."
+    },
+    "/docs/editing/monaco/:heading:language-support:0": {
+      "sourceHash": "5d5487026604d8f740a708836e42db30d5f1cffab47758d928c36bcf4bfbfd54",
+      "translated": "## 언어 지원"
+    },
+    "/docs/editing/monaco/:paragraph:language-support:0": {
+      "sourceHash": "2b9bfb1eba69e2fdb99ae5ca346c2aca403c021aaf3007f677beebd63d8a2550",
+      "translated": "Monaco가 기본적으로 지원하는 언어에 대한 구문 강조 기능이 제공됩니다. ORCA_PROTECTED_0001은 의도적으로 IDE 우선이 아닌 편집기 우선입니다. 터미널 창에서 유형 검사기와 린터를 실행합니다."
+    }
+  }
+}

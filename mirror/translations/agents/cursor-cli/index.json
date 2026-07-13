@@ -1,0 +1,38 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/agents/cursor-cli",
+  "mirrorPath": "/docs/agents/cursor-cli/",
+  "entries": {
+    "/docs/agents/cursor-cli/:heading:cursor-cli-in-orca:0": {
+      "sourceHash": "b7bef216935428940c782fddcbaf4776d981e7c7c259cf68f67de7cb8ddcfe80",
+      "translated": "# ORCA_PROTECTED_0002의 ORCA_PROTECTED_0001"
+    },
+    "/docs/agents/cursor-cli/:paragraph:cursor-cli-in-orca:0": {
+      "sourceHash": "ff496ec947cf72ff7be3d31c447d02f1487afd189b421fa01236404d6ef2cdf6",
+      "translated": "ORCA_PROTECTED_0001은 Cursor의 명령줄 에이전트입니다. ORCA_PROTECTED_0002는 콤보박스에서 실행, 전체 OSC 상태 감지, 종료 시 칩 재시작 등 최고 수준의 지원을 통해 이를 실행합니다."
+    },
+    "/docs/agents/cursor-cli/:heading:setup:0": {
+      "sourceHash": "0ecddf15e1aff85f7399e0fd362b9856d804a3e66dd65e41b547c255fc86d8c1",
+      "translated": "## 설정"
+    },
+    "/docs/agents/cursor-cli/:list:setup:0": {
+      "sourceHash": "81a3404cb39e7a0c58163b470a3e459791da28297c98371fc5e8a52e2745ddbe",
+      "translated": "1. [커서 문서](ORCA_PROTECTED_0002)에 따라 ORCA_PROTECTED_0001을 설치합니다.\n2. 한번 로그인해 보세요.\n3. ORCA_PROTECTED_0003은 `ORCA_PROTECTED_0004`에서 CLI를 자동 감지합니다."
+    },
+    "/docs/agents/cursor-cli/:heading:launching:0": {
+      "sourceHash": "deec0a144035bc7a7bb357ec17bbe25927b03a914653411d367154bb8d9e58ad",
+      "translated": "## 출시"
+    },
+    "/docs/agents/cursor-cli/:paragraph:launching:0": {
+      "sourceHash": "f54eb0d5ddfda4fe88463f3c2fac013816195902e30f94046f49261702b581d3",
+      "translated": "콤보박스에서 `Cursor`(커서)를 선택하세요. ORCA_PROTECTED_0001은 작업 트리로 범위가 지정된 CLI를 시작합니다. 커서의 TUI는 에이전트 상태 점에 필요한 ORCA_PROTECTED_0002 상태 이벤트를 내보냅니다."
+    },
+    "/docs/agents/cursor-cli/:heading:model-selection:0": {
+      "sourceHash": "2c0c236ac0b877bd3acd84aac1fbfbbd92299c36d39192a93e5702713327b196",
+      "translated": "## 모델 선택"
+    },
+    "/docs/agents/cursor-cli/:paragraph:model-selection:0": {
+      "sourceHash": "93fefbe1dcfbff2fd47172a0ba75109c21e39ae573611bf808fcd5e8c0f95341",
+      "translated": "모델 선택은 Cursor 자체 설정에 따라 결정됩니다. ORCA_PROTECTED_0001은 이를 재정의하지 않으며 CLI 내부에서 구성합니다."
+    }
+  }
+}

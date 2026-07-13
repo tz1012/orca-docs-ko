@@ -1,0 +1,22 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/recipes/review-ai-diff",
+  "mirrorPath": "/docs/recipes/review-ai-diff/",
+  "entries": {
+    "/docs/recipes/review-ai-diff/:heading:review-an-ai-diff-line-by-line:0": {
+      "sourceHash": "8d7a7bf2bc5af242fc85727e789d037b077d10598f2d1a6aec64c46f990ef2a4",
+      "translated": "# AI 차이점을 한 줄씩 검토합니다."
+    },
+    "/docs/recipes/review-ai-diff/:paragraph:review-an-ai-diff-line-by-line:0": {
+      "sourceHash": "77daa921f444793095b1ca5f4bf361e58b82ac7c9df5fc2d3dee1d65cf904d97",
+      "translated": "AI 차이점을 잘 검토하는 것은 빠른 배송과 버그 배송의 차이입니다. 여기에 루프가 있습니다."
+    },
+    "/docs/recipes/review-ai-diff/:heading:steps:0": {
+      "sourceHash": "04e379c6932bff1c589362d6982930b2c138dcfe9fe69c56c9c028b070168dc3",
+      "translated": "## 단계"
+    },
+    "/docs/recipes/review-ai-diff/:list:steps:0": {
+      "sourceHash": "8f5ef9f0cc18b14321cfbd0288ff3d6238df7ff870da703977c324c4e64bcebe",
+      "translated": "1. 작업 트리의 Diff 보기를 엽니다.\n2. `ORCA_PROTECTED_0001` / `ORCA_PROTECTED_0002`를 사용하여 파일별로 이동합니다. 각 덩어리에 대해 다음과 같이 질문하십시오. 변경이 필요한가요? 최소한인가요? 파일의 나머지 부분과 일치합니까?\n3. 변경하고 싶은 내용에 `ORCA_PROTECTED_0003`을 사용하여 댓글을 남겨주세요. 완전한 문장이 가장 좋습니다.\n4. 전체 비교 과정을 마친 후 `Send to agent`(에이전트에게 보내기)를 클릭하세요. ORCA_PROTECTED_0004는 모든 설명을 하나의 프롬프트로 일괄 처리합니다.\n5. 상담원이 수정하는 모습을 지켜보세요. 상태 점이 노란색(추가 입력 대기 중) 또는 녹색(작동 중)으로 변합니다.\n6. 유휴 상태일 때 diff를 다시 엽니다. 귀하의 댓글은 고정되어 있습니다. 수정된 부분은 해결하고 나머지 부분은 후속 조치를 남겨주세요.\n7. 깨끗해질 때까지 반복한 다음 커밋합니다."
+    }
+  }
+}
