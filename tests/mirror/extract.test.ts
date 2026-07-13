@@ -113,6 +113,30 @@ describe("Markdown protection", () => {
     expect(restoreProtected(result.markdown, result.map)).toBe(source);
   });
 
+  test("protects only enumerated grouped Orca CLI commands", () => {
+    const source = [
+      "orca worktree create; orca file open; orca terminal create;",
+      "orca repo list; orca project setups; orca automations run;",
+      "orca orchestration send; orca computer click; orca environment list; orca tab create.",
+    ].join(" ");
+
+    const result = protectMarkdown(source);
+
+    expect(Object.values(result.map)).toEqual([
+      "orca worktree create",
+      "orca file open",
+      "orca terminal create",
+      "orca repo list",
+      "orca project setups",
+      "orca automations run",
+      "orca orchestration send",
+      "orca computer click",
+      "orca environment list",
+      "orca tab create",
+    ]);
+    expect(restoreProtected(result.markdown, result.map)).toBe(source);
+  });
+
   test("protects valid longer closing fences with independent indentation", () => {
     const source = [
       "   ````shell",
@@ -312,6 +336,47 @@ describe("semantic page extraction", () => {
     expect(
       restoreProtected(paragraph?.source ?? "", paragraph?.protected ?? {}),
     ).toBe("Run orca --version with -v from C:\\\\orca using package.json.");
+  });
+
+  test("leaves ordinary orca prose translatable and stops at command boundaries", () => {
+    const page = extractPage(
+      input(`
+        <main><h1>CLI</h1>
+          <p>orca is ready.</p>
+          <p>Run orca open the project.</p>
+        </main>
+      `),
+    );
+    const paragraphs = page.segments.filter(
+      (segment) => segment.kind === "paragraph",
+    );
+
+    expect(paragraphs[0]?.source).toBe("orca is ready.");
+    expect(paragraphs[0]?.protected).toEqual({});
+    expect(paragraphs[1]?.source).toBe("Run ORCA_PROTECTED_0001 the project.");
+    expect(paragraphs[1]?.protected).toEqual({
+      ORCA_PROTECTED_0001: "orca open",
+    });
+  });
+
+  test("protects legacy, grouped, and version Orca commands end to end", () => {
+    const page = extractPage(
+      input(
+        "<main><h1>CLI</h1><p>Use orca agent run, orca worktree create, and orca --version.</p></main>",
+      ),
+    );
+    const paragraph = page.segments.find(
+      (segment) => segment.kind === "paragraph",
+    );
+
+    expect(Object.values(paragraph?.protected ?? {})).toEqual([
+      "orca agent run",
+      "orca worktree create",
+      "orca --version",
+    ]);
+    expect(
+      restoreProtected(paragraph?.source ?? "", paragraph?.protected ?? {}),
+    ).toBe("Use orca agent run, orca worktree create, and orca --version.");
   });
 
   test("ignores Next.js prose and uses an exact pagination control label", () => {

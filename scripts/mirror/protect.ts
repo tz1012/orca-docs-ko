@@ -2,6 +2,168 @@ const PROTECTED_TOKEN_PATTERN = /\bORCA_PROTECTED_[A-Za-z0-9_]+\b/g;
 const VALID_PROTECTED_TOKEN_PATTERN = /^ORCA_PROTECTED_\d{4,}$/;
 const INTERNAL_TOKEN_PATTERN = /\u0000ORCA_INTERNAL_(\d{6,})\u0000/g;
 
+const ORCA_TOP_LEVEL_COMMANDS = [
+  "open",
+  "serve",
+  "status",
+  "agent-context",
+  "linear",
+  "snapshot",
+  "goto",
+  "click",
+  "fill",
+  "type",
+  "select",
+  "hover",
+  "keypress",
+  "scroll",
+  "back",
+  "reload",
+  "screenshot",
+  "eval",
+  "wait",
+  "check",
+  "uncheck",
+  "focus",
+  "clear",
+  "drag",
+  "upload",
+  "dblclick",
+  "forward",
+  "scrollintoview",
+  "get",
+  "inserttext",
+  "download",
+  "highlight",
+  "exec",
+];
+
+const ORCA_COMMAND_GROUPS: Readonly<Record<string, readonly string[]>> = {
+  diagnostics: ["memory"],
+  environment: ["add", "list", "show", "rm"],
+  vm: ["recipe doctor"],
+  automations: ["list", "show", "create", "edit", "remove", "run", "runs"],
+  project: [
+    "list",
+    "setups",
+    "setup-existing-folder",
+    "setup-clone",
+    "setup-create",
+    "setup-update",
+    "setup-delete",
+  ],
+  repo: ["list", "add", "show", "set-base-ref", "search-refs"],
+  worktree: ["list", "show", "current", "create", "set", "rm", "ps"],
+  file: ["open", "diff", "open-changed"],
+  terminal: [
+    "list",
+    "show",
+    "read",
+    "send",
+    "wait",
+    "stop",
+    "create",
+    "rename",
+    "split",
+    "switch",
+    "focus",
+    "close",
+  ],
+  orchestration: [
+    "send",
+    "check",
+    "reply",
+    "inbox",
+    "task-create",
+    "task-list",
+    "task-update",
+    "dispatch",
+    "dispatch-show",
+    "run",
+    "run-stop",
+    "gate-create",
+    "gate-resolve",
+    "gate-list",
+    "reset",
+  ],
+  computer: [
+    "capabilities",
+    "permissions",
+    "list-apps",
+    "list-windows",
+    "get-app-state",
+    "click",
+    "perform-secondary-action",
+    "scroll",
+    "drag",
+    "type-text",
+    "press-key",
+    "hotkey",
+    "paste-text",
+    "set-value",
+  ],
+  emulator: [
+    "list",
+    "attach",
+    "tap",
+    "type",
+    "gesture",
+    "button",
+    "rotate",
+    "exec",
+    "kill",
+  ],
+  tab: [
+    "create",
+    "list",
+    "show",
+    "current",
+    "switch",
+    "close",
+    "profile list",
+    "profile create",
+    "profile delete",
+    "profile set",
+    "profile show",
+    "profile use-default",
+    "profile clone",
+  ],
+  mouse: ["move", "down", "up", "wheel"],
+  set: ["device", "offline", "headers", "credentials", "media"],
+  storage: [
+    "local get",
+    "local set",
+    "local clear",
+    "session get",
+    "session set",
+    "session clear",
+  ],
+  clipboard: ["read", "write"],
+  dialog: ["accept", "dismiss"],
+  agent: ["run"],
+};
+
+const escapeRegularExpression = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const orcaCommandSuffixes = [
+  "--version",
+  "--help",
+  ...ORCA_TOP_LEVEL_COMMANDS,
+  ...Object.entries(ORCA_COMMAND_GROUPS).flatMap(([group, subcommands]) =>
+    subcommands.map((subcommand) => `${group} ${subcommand}`),
+  ),
+]
+  .sort((left, right) => right.length - left.length)
+  .map((suffix) =>
+    suffix.split(" ").map(escapeRegularExpression).join("[ \\t]+"),
+  );
+
+const ORCA_COMMAND_PATTERN = new RegExp(
+  `\\borca[ \\t]+(?:${orcaCommandSuffixes.join("|")}|is(?=[ \\t]+--))(?![A-Za-z0-9_-])`,
+  "g",
+);
+
 export type ProtectedMarkdown = {
   markdown: string;
   map: Record<string, string>;
@@ -93,9 +255,8 @@ const protectSemanticLiterals = (
   INTERNAL_TOKEN_PATTERN.lastIndex = 0;
   const patterns: Array<{ pattern: RegExp; trim: boolean }> = [
     {
-      pattern:
-        /\borca[ \t]+(?:--[A-Za-z0-9][A-Za-z0-9-]*(?:=(?:"[^"\r\n]*"|'[^'\r\n]*'|[^\s,;!?]+))?|-[A-Za-z0-9]+|(?!(?:with|from|to|and|or|in|on|for|using|then)\b)[a-z][a-z0-9-]*(?:[ \t]+(?!(?:with|from|to|and|or|in|on|for|using|then)\b)[a-z][a-z0-9-]*)?)\b/g,
-      trim: true,
+      pattern: ORCA_COMMAND_PATTERN,
+      trim: false,
     },
     {
       pattern:
