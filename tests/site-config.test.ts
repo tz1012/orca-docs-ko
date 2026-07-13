@@ -56,8 +56,13 @@ test(
       new URL("../dist/404.html", import.meta.url),
       "utf8",
     );
+    const rootHtml = await readFile(
+      new URL("../dist/index.html", import.meta.url),
+      "utf8",
+    );
 
     expect(html).toContain(`마지막 확인: <time datetime="${checkedAt}">`);
+    expect(rootHtml).toContain("/orca-docs-ko/docs/");
     expect(notFoundHtml).toContain("페이지를 찾을 수 없습니다");
     expect(notFoundHtml).toContain("비공식 한국어 번역");
     expect(notFoundHtml).not.toContain("초안 상태");

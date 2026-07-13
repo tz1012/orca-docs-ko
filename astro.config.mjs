@@ -5,6 +5,9 @@ import sidebar from "./mirror/sidebar.json" with { type: "json" };
 export default defineConfig({
   site: "https://tz1012.github.io",
   base: "/orca-docs-ko",
+  redirects: {
+    "/": "/orca-docs-ko/docs/",
+  },
   integrations: [starlight({
     title: "ORCA 한국어 문서",
     defaultLocale: "root",
