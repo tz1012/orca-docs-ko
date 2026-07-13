@@ -12,6 +12,7 @@ import {
   type SourcePage,
   type TranslationFile,
 } from "../../scripts/mirror/model.js";
+import { protectMarkdown } from "../../scripts/mirror/protect.js";
 import {
   NOW,
   pageFixture,
@@ -165,6 +166,75 @@ describe("Korean page rendering", () => {
     });
 
     expect(() => renderPage(page, invalid)).toThrow(/source hash/i);
+  });
+
+  test("rewrites only Markdown destinations and preserves protected URL literals", () => {
+    const protectedContent = protectMarkdown(
+      [
+        "Use `https://www.onorca.dev/docs/inline-code`.",
+        "Visit https://www.onorca.dev/docs/bare.",
+        "Image source: https://www.onorca.dev/docs/install.png.",
+        "[Internal docs](https://www.onorca.dev/docs/linked)",
+        "![Allowed image](https://www.onorca.dev/docs/install.png)",
+        "![Remote image](https://www.onorca.dev/docs/remote.gif)",
+        "```text",
+        "https://www.onorca.dev/docs/fenced-code",
+        "```",
+      ].join("\n\n"),
+    );
+    const page = pageFixture({
+      segments: [
+        segmentFixture({ id: "install:h1:0", source: "Install" }),
+        segmentFixture({
+          id: "install:p:destinations",
+          kind: "paragraph",
+          source: protectedContent.markdown,
+          protected: protectedContent.map,
+        }),
+      ],
+      images: [
+        {
+          sourceUrl: "https://www.onorca.dev/docs/install.png",
+          localPath: `/assets/mirror/${"b".repeat(64)}.png`,
+          contentHash: "b".repeat(64),
+          robotsRemote: false,
+        },
+        {
+          sourceUrl: "https://www.onorca.dev/docs/remote.gif",
+          localPath: null,
+          contentHash: null,
+          robotsRemote: true,
+        },
+      ],
+    });
+    const translation = translationFor(page, {
+      "install:h1:0": "설치",
+      "install:p:destinations": `한국어 안내입니다.\n\n${protectedContent.markdown}`,
+    });
+
+    const markdown = renderPage(page, translation);
+
+    expect(markdown).toContain(
+      "`https://www.onorca.dev/docs/inline-code`",
+    );
+    expect(markdown).toContain(
+      "Visit https://www.onorca.dev/docs/bare.",
+    );
+    expect(markdown).toContain(
+      "Image source: https://www.onorca.dev/docs/install.png.",
+    );
+    expect(markdown).toContain(
+      "[Internal docs](/orca-docs-ko/docs/linked/)",
+    );
+    expect(markdown).toContain(
+      `![Allowed image](/orca-docs-ko/assets/mirror/${"b".repeat(64)}.png)`,
+    );
+    expect(markdown).toContain(
+      "![Remote image](https://www.onorca.dev/docs/remote.gif)",
+    );
+    expect(markdown).toContain(
+      "```text\n\nhttps://www.onorca.dev/docs/fenced-code\n\n```",
+    );
   });
 
   test("renders the accessible exact notice component", async () => {

@@ -1,4 +1,6 @@
 import { readFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
+import { build } from "astro";
 import { expect, test } from "vitest";
 
 test("uses the Korean project Pages URL", async () => {
@@ -22,3 +24,22 @@ test("publishes the required source and rights metadata", async () => {
     "원본 문서와 이미지의 권리는 Lovecast Inc. 및 각 권리자에게 있습니다."
   );
 });
+
+test(
+  "renders whitespace between the checked-at label and time element",
+  async () => {
+    await build({
+      root: fileURLToPath(new URL("../", import.meta.url)),
+      logLevel: "silent",
+    });
+    const html = await readFile(
+      new URL("../dist/index.html", import.meta.url),
+      "utf8",
+    );
+
+    expect(html).toContain(
+      '마지막 확인: <time datetime="2026-07-13T01:34:57Z">',
+    );
+  },
+  30_000,
+);

@@ -107,6 +107,56 @@ const imageReplacements = (page: SourcePage) => {
   return replacements;
 };
 
+type MarkdownDestination = "link" | "image" | null;
+
+const isEscaped = (markdown: string, index: number) => {
+  let backslashes = 0;
+  for (let cursor = index - 1; cursor >= 0 && markdown[cursor] === "\\"; cursor -= 1) {
+    backslashes += 1;
+  }
+  return backslashes % 2 === 1;
+};
+
+const labelOpeningAt = (markdown: string, closingBracket: number) => {
+  let nestedBrackets = 0;
+  for (let cursor = closingBracket - 1; cursor >= 0; cursor -= 1) {
+    if (isEscaped(markdown, cursor)) continue;
+    if (markdown[cursor] === "]") {
+      nestedBrackets += 1;
+    } else if (markdown[cursor] === "[") {
+      if (nestedBrackets === 0) return cursor;
+      nestedBrackets -= 1;
+    }
+  }
+  return -1;
+};
+
+const markdownDestinationFor = (
+  markdown: string,
+  token: string,
+): MarkdownDestination => {
+  const match = new RegExp(`\\b${token}\\b`, "u").exec(markdown);
+  if (match === null) return null;
+
+  let cursor = match.index;
+  while (cursor > 0 && /[ \t]/u.test(markdown[cursor - 1]!)) cursor -= 1;
+  if (markdown[cursor - 1] === "<") {
+    cursor -= 1;
+    while (cursor > 0 && /[ \t]/u.test(markdown[cursor - 1]!)) cursor -= 1;
+  }
+  if (markdown[cursor - 1] !== "(" || markdown[cursor - 2] !== "]") {
+    return null;
+  }
+
+  const labelOpening = labelOpeningAt(markdown, cursor - 2);
+  if (labelOpening < 0 || isEscaped(markdown, labelOpening)) return null;
+  return labelOpening > 0 &&
+    markdown[labelOpening - 1] === "!" &&
+    !isEscaped(markdown, labelOpening - 1)
+    ? "image"
+    : "link";
+};
+
 const restoredSegment = (
   segment: SourcePage["segments"][number],
   translated: string,
@@ -115,10 +165,16 @@ const restoredSegment = (
   restoreProtected(
     translated,
     Object.fromEntries(
-      Object.entries(segment.protected).map(([token, value]) => [
-        token,
-        images.get(value) ?? mirrorHref(value),
-      ]),
+      Object.entries(segment.protected).map(([token, value]) => {
+        const destination = markdownDestinationFor(translated, token);
+        const replacement =
+          destination === "link"
+            ? mirrorHref(value)
+            : destination === "image"
+              ? (images.get(value) ?? value)
+              : value;
+        return [token, replacement];
+      }),
     ),
   );
 
