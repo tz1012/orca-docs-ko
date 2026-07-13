@@ -1,0 +1,27 @@
+---
+interface Props {
+  sourceUrl: string;
+  checkedAt: string;
+  title?: string;
+  message?: string;
+  rights?: string;
+}
+
+const {
+  sourceUrl,
+  checkedAt,
+  title = "비공식 한국어 번역",
+  message = "이 문서는 ORCA 공식 문서의 비공식 한국어 번역입니다. 내용이 다를 경우 원문이 우선합니다.",
+  rights = "원본 문서와 이미지의 권리는 Lovecast Inc. 및 각 권리자에게 있습니다.",
+} = Astro.props;
+---
+
+<aside class="translation-notice" aria-label="번역 안내">
+  <strong>{title}</strong>
+  <p>{message}</p>
+  <p>
+    <a href={sourceUrl}>원문 보기</a> · 마지막 확인:
+    <time datetime={checkedAt}>{checkedAt}</time>
+  </p>
+  <small>{rights}</small>
+</aside>

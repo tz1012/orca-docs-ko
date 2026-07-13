@@ -1,0 +1,34 @@
+---
+import StarlightPageTitle from "@astrojs/starlight/components/PageTitle.astro";
+
+import TranslationNotice from "./TranslationNotice.astro";
+
+type NoticeData = {
+  title?: string;
+  message?: string;
+  rights?: string;
+};
+
+type TranslationMetadata = {
+  sourceUrl?: string;
+  checkedAt?: string;
+  translationNotice?: NoticeData;
+};
+
+const data = Astro.locals.starlightRoute.entry.data as TranslationMetadata;
+const hasTranslationMetadata =
+  typeof data.sourceUrl === "string" && typeof data.checkedAt === "string";
+---
+
+<StarlightPageTitle />
+{
+  hasTranslationMetadata && (
+    <TranslationNotice
+      sourceUrl={data.sourceUrl!}
+      checkedAt={data.checkedAt!}
+      title={data.translationNotice?.title}
+      message={data.translationNotice?.message}
+      rights={data.translationNotice?.rights}
+    />
+  )
+}

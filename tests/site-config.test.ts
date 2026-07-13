@@ -15,9 +15,10 @@ test("publishes the required source and rights metadata", async () => {
   expect(source).toContain(
     "이 문서는 ORCA 공식 문서의 비공식 한국어 번역입니다. 내용이 다를 경우 원문이 우선합니다."
   );
-  expect(source).toContain("https://www.onorca.dev/docs");
-  expect(source).toContain("마지막 확인: 2026-07-13T01:34:57Z");
+  expect(source).toContain("sourceUrl: https://www.onorca.dev/docs");
+  expect(source).toContain('checkedAt: "2026-07-13T01:34:57Z"');
+  expect(source).toContain("비공식 한국어 번역");
   expect(source).toContain(
-    "원본 문서와 이미지의 권리는 Lovecast Inc. 및 각 권리 보유자에게 있습니다."
+    "원본 문서와 이미지의 권리는 Lovecast Inc. 및 각 권리자에게 있습니다."
   );
 });

@@ -1,1 +1,35 @@
+.translation-notice {
+  margin-block-start: 1.5rem;
+  border-inline-start: 0.25rem solid var(--sl-color-accent);
+  border-radius: 0.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--sl-color-bg-nav);
+  color: var(--sl-color-text);
+}
 
+.translation-notice strong {
+  display: block;
+  color: var(--sl-color-white);
+  font-size: var(--sl-text-lg);
+}
+
+.translation-notice p {
+  margin-block: 0.5rem 0;
+  line-height: var(--sl-line-height);
+}
+
+.translation-notice a {
+  color: var(--sl-color-text-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.translation-notice time {
+  white-space: nowrap;
+}
+
+.translation-notice small {
+  display: block;
+  margin-block-start: 0.75rem;
+  color: var(--sl-color-gray-2);
+}
