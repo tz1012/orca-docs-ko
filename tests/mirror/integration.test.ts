@@ -97,6 +97,38 @@ test("does not promote partial or invalid output", async () => {
   expect(await workspace.readManifest()).toEqual(workspace.originalManifest);
 });
 
+test("rejects ghost content before promoting the staged state", async () => {
+  const workspace = await fixtureWorkspace();
+  await prepareMirror(workspace.config);
+  await completeTranslations(workspace);
+  const ghostPath = join(workspace.config.contentRoot, "ghost", "index.md");
+  await mkdir(dirname(ghostPath), { recursive: true });
+  await writeFile(ghostPath, "ghost content\n", "utf8");
+
+  await expect(applyMirror(workspace.config)).rejects.toThrow(
+    /content inventory.*unexpected.*ghost/i,
+  );
+  expect(await workspace.readManifest()).toEqual(workspace.originalManifest);
+});
+
+test("rejects ghost translations before promoting the staged state", async () => {
+  const workspace = await fixtureWorkspace();
+  await prepareMirror(workspace.config);
+  await completeTranslations(workspace);
+  const ghostPath = join(
+    workspace.config.translationRoot,
+    "ghost",
+    "index.json",
+  );
+  await mkdir(dirname(ghostPath), { recursive: true });
+  await writeFile(ghostPath, "{}\n", "utf8");
+
+  await expect(applyMirror(workspace.config)).rejects.toThrow(
+    /translation inventory.*unexpected.*ghost/i,
+  );
+  expect(await workspace.readManifest()).toEqual(workspace.originalManifest);
+});
+
 test("promotes a complete translated snapshot as one verified state", async () => {
   const workspace = await fixtureWorkspace();
   await prepareMirror(workspace.config);
@@ -615,10 +647,12 @@ test("serializes prepare operations with a workspace lock", async () => {
 
 test("safely recovers a stale lock owned by a dead local process", async () => {
   const workspace = await fixtureWorkspace();
-  const lockPath = join(workspace.root, ".mirror", "sync.lock");
-  await mkdir(dirname(lockPath), { recursive: true });
+  const namespacePath = join(workspace.root, ".mirror", "sync.lock");
+  const activePath = join(namespacePath, "active");
+  const ownerPath = join(activePath, "owner.json");
+  await mkdir(activePath, { recursive: true });
   await writeFile(
-    lockPath,
+    ownerPath,
     `${JSON.stringify({
       schemaVersion: 1,
       token: "stale-test-token",
@@ -630,7 +664,7 @@ test("safely recovers a stale lock owned by a dead local process", async () => {
   );
 
   await expect(prepareMirror(workspace.config)).resolves.toBeDefined();
-  await expect(stat(lockPath)).rejects.toMatchObject({ code: "ENOENT" });
+  await expect(stat(activePath)).rejects.toMatchObject({ code: "ENOENT" });
 });
 
 test("holds the workspace lock through the complete check build", async () => {
@@ -690,9 +724,15 @@ test("apply and check both honor an existing live workspace lock", async () => {
   const workspace = await fixtureWorkspace();
   await prepareMirror(workspace.config);
   await completeTranslations(workspace);
-  const lockPath = join(workspace.root, ".mirror", "sync.lock");
+  const activePath = join(
+    workspace.root,
+    ".mirror",
+    "sync.lock",
+    "active",
+  );
+  await mkdir(activePath, { recursive: true });
   await writeFile(
-    lockPath,
+    join(activePath, "owner.json"),
     `${JSON.stringify({
       schemaVersion: 1,
       token: "live-test-token",
@@ -709,7 +749,7 @@ test("apply and check both honor an existing live workspace lock", async () => {
   await expect(checkMirror(workspace.config)).rejects.toThrow(
     /workspace.*lock|synchronization.*in progress/i,
   );
-  await rm(lockPath, { force: true });
+  await rm(activePath, { force: true, recursive: true });
 });
 
 test("rejects an apply when the prepared manifest identity is stale", async () => {

@@ -4,11 +4,12 @@ import {
   mkdir,
   mkdtemp,
   readFile,
+  readdir,
   rm,
   stat,
   writeFile,
 } from "node:fs/promises";
-import { basename, dirname, join, resolve } from "node:path";
+import { basename, dirname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { canMirrorAsset } from "./discover.js";
@@ -85,6 +86,47 @@ const cloneDirectory = async (source: string, target: string) => {
     await cp(source, target, { recursive: true });
   } else {
     await mkdir(target, { recursive: true });
+  }
+};
+
+const portableRelativePath = (root: string, path: string) =>
+  relative(root, path).split(sep).join("/");
+
+const managedInventory = async (
+  root: string,
+  extension: ".md" | ".json",
+) => {
+  const files: string[] = [];
+  const visit = async (directory: string): Promise<void> => {
+    for (const entry of await readdir(directory, { withFileTypes: true })) {
+      const path = join(directory, entry.name);
+      if (entry.isDirectory()) {
+        await visit(path);
+      } else if (entry.name.endsWith(extension)) {
+        files.push(portableRelativePath(root, path));
+      }
+    }
+  };
+  await visit(root);
+  return files.sort();
+};
+
+const assertExactInventory = async (
+  label: "Content" | "Translation",
+  root: string,
+  extension: ".md" | ".json",
+  expectedPaths: ReadonlyArray<string>,
+) => {
+  const expected = [...new Set(expectedPaths)].sort();
+  const actual = await managedInventory(root, extension);
+  const expectedSet = new Set(expected);
+  const actualSet = new Set(actual);
+  const missing = expected.filter((path) => !actualSet.has(path));
+  const unexpected = actual.filter((path) => !expectedSet.has(path));
+  if (missing.length > 0 || unexpected.length > 0) {
+    throw new Error(
+      `${label} inventory mismatch; missing: ${missing.join(", ") || "none"}; unexpected: ${unexpected.join(", ") || "none"}`,
+    );
   }
 };
 
@@ -364,6 +406,33 @@ const applyMirrorUnlocked = async (
       }
       renderedPages.set(mirrorPath, markdown);
     }
+
+    const committedPaths = Object.keys(snapshot.plan.nextManifest.pages);
+    await assertExactInventory(
+      "Content",
+      temporaryContent,
+      ".md",
+      [
+        "404.md",
+        ...committedPaths.map((mirrorPath) =>
+          portableRelativePath(
+            temporaryContent,
+            join(temporaryContent, contentRelativePath(mirrorPath)),
+          ),
+        ),
+      ],
+    );
+    await assertExactInventory(
+      "Translation",
+      temporaryTranslations,
+      ".json",
+      committedPaths.map((mirrorPath) =>
+        portableRelativePath(
+          temporaryTranslations,
+          join(temporaryTranslations, translationRelativePath(mirrorPath)),
+        ),
+      ),
+    );
 
     validateInternalLinks(renderedPages);
     await validateImageState(

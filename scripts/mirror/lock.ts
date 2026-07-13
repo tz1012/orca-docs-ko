@@ -14,6 +14,7 @@ import { dirname, join, resolve } from "node:path";
 import { z } from "zod";
 
 const LOCK_STALE_AFTER_MS = 30 * 60 * 1000;
+const OWNER_FILE = "owner.json";
 
 const LockOwnerSchema = z.strictObject({
   schemaVersion: z.literal(1),
@@ -25,9 +26,16 @@ const LockOwnerSchema = z.strictObject({
 
 type LockOwner = z.infer<typeof LockOwnerSchema>;
 
+interface LockOperations {
+  initializeOwner(ownerPath: string, contents: string): Promise<void>;
+  rename: typeof rename;
+}
+
 type WorkspaceLock = {
+  activePath: string;
+  namespacePath: string;
+  operations: LockOperations;
   owner: LockOwner;
-  path: string;
   transitionPath: string;
 };
 
@@ -59,9 +67,13 @@ const pathExists = async (path: string) => {
   }
 };
 
-const readOwner = async (path: string): Promise<LockOwner | null> => {
+const readGenerationOwner = async (
+  generationPath: string,
+): Promise<LockOwner | null> => {
   try {
-    return LockOwnerSchema.parse(JSON.parse(await readFile(path, "utf8")));
+    return LockOwnerSchema.parse(
+      JSON.parse(await readFile(join(generationPath, OWNER_FILE), "utf8")),
+    );
   } catch {
     return null;
   }
@@ -77,11 +89,11 @@ const transitionError = (path: string) =>
     `Workspace lock transition exists at ${path}; inspect it and recover manually before retrying`,
   );
 
-const createOwnerFile = async (path: string, owner: LockOwner) => {
+const initializeOwner = async (ownerPath: string, contents: string) => {
   let handle;
   try {
-    handle = await open(path, "wx", 0o600);
-    await handle.writeFile(`${JSON.stringify(owner)}\n`, "utf8");
+    handle = await open(ownerPath, "wx", 0o600);
+    await handle.writeFile(contents, "utf8");
     await handle.sync();
     await handle.close();
   } catch (error) {
@@ -90,95 +102,154 @@ const createOwnerFile = async (path: string, owner: LockOwner) => {
   }
 };
 
-const restoreQuarantinedLock = async (
-  quarantinedPath: string,
-  lockPath: string,
-) => {
-  for (let attempt = 0; attempt < 20; attempt += 1) {
-    try {
-      await rename(quarantinedPath, lockPath);
-      return;
-    } catch (error) {
-      if (errorCode(error) !== "EEXIST") throw error;
-      await new Promise<void>((resolveTurn) => setImmediate(resolveTurn));
-    }
-  }
-  throw new Error(
-    `Cannot restore quarantined lock ${quarantinedPath} to ${lockPath}; preserve the transition directory for manual recovery`,
-  );
+const DEFAULT_OPERATIONS: LockOperations = {
+  initializeOwner,
+  rename,
 };
 
-const withdrawLockCreatedDuringTransition = async (lock: WorkspaceLock) => {
-  const quarantine = `${lock.path}.withdrawn.${lock.owner.token}`;
+const ensureNamespace = async (namespacePath: string) => {
+  await mkdir(dirname(namespacePath), { recursive: true });
   try {
-    await rename(lock.path, quarantine);
+    await mkdir(namespacePath);
+  } catch (error) {
+    if (errorCode(error) !== "EEXIST") throw error;
+    const metadata = await stat(namespacePath);
+    if (!metadata.isDirectory()) {
+      throw new Error(
+        `Workspace lock namespace ${namespacePath} is a legacy or malformed file; recover it manually`,
+        { cause: error },
+      );
+    }
+  }
+};
+
+const createInitializedGeneration = async (
+  lock: WorkspaceLock,
+  prefix: string,
+) => {
+  const generationPath = join(
+    lock.namespacePath,
+    `${prefix}-${lock.owner.token}-${randomUUID()}`,
+  );
+  await mkdir(generationPath);
+  try {
+    await lock.operations.initializeOwner(
+      join(generationPath, OWNER_FILE),
+      `${JSON.stringify(lock.owner)}\n`,
+    );
+    return generationPath;
+  } catch (error) {
+    await rm(generationPath, { recursive: true, force: true });
+    throw error;
+  }
+};
+
+const destinationIsOccupied = async (error: unknown, target: string) =>
+  ["EEXIST", "ENOTEMPTY"].includes(errorCode(error) ?? "") ||
+  await pathExists(target);
+
+const restoreGenerationNoClobber = async (
+  lock: WorkspaceLock,
+  generationPath: string,
+) => {
+  try {
+    // Both paths are non-empty directories. A valid active generation cannot
+    // be replaced by directory rename on either POSIX or Windows.
+    await lock.operations.rename(generationPath, lock.activePath);
+  } catch (error) {
+    if (await pathExists(lock.activePath)) {
+      throw new Error(
+        `Cannot restore quarantined generation ${generationPath}; a new active owner at ${lock.activePath} was preserved`,
+        { cause: error },
+      );
+    }
+    throw error;
+  }
+};
+
+const withdrawGenerationCreatedDuringTransition = async (
+  lock: WorkspaceLock,
+) => {
+  const quarantine = join(
+    lock.namespacePath,
+    `withdrawn-${lock.owner.token}-${randomUUID()}`,
+  );
+  try {
+    await lock.operations.rename(lock.activePath, quarantine);
   } catch (error) {
     if (errorCode(error) === "ENOENT") return;
     throw error;
   }
-  const claimed = await readOwner(quarantine);
+  const claimed = await readGenerationOwner(quarantine);
   if (claimed?.token === lock.owner.token) {
-    await rm(quarantine, { force: true });
+    await rm(quarantine, { recursive: true, force: true });
     return;
   }
-  await restoreQuarantinedLock(quarantine, lock.path);
+  await restoreGenerationNoClobber(lock, quarantine);
 };
 
 const installOwner = async (lock: WorkspaceLock) => {
+  const candidate = await createInitializedGeneration(lock, "candidate");
   if (await pathExists(lock.transitionPath)) {
+    await rm(candidate, { recursive: true, force: true });
     throw transitionError(lock.transitionPath);
   }
-  await createOwnerFile(lock.path, lock.owner);
+  try {
+    await lock.operations.rename(candidate, lock.activePath);
+  } catch (error) {
+    await rm(candidate, { recursive: true, force: true });
+    throw error;
+  }
   if (await pathExists(lock.transitionPath)) {
-    await withdrawLockCreatedDuringTransition(lock);
+    await withdrawGenerationCreatedDuringTransition(lock);
     throw transitionError(lock.transitionPath);
   }
 };
 
 const beginTransition = async (lock: WorkspaceLock) => {
+  const candidate = await createInitializedGeneration(
+    lock,
+    "transition-candidate",
+  );
   try {
-    await mkdir(lock.transitionPath);
+    await lock.operations.rename(candidate, lock.transitionPath);
   } catch (error) {
-    if (errorCode(error) === "EEXIST") {
+    await rm(candidate, { recursive: true, force: true });
+    if (await destinationIsOccupied(error, lock.transitionPath)) {
       throw transitionError(lock.transitionPath);
     }
     throw error;
   }
-  await writeFile(
-    join(lock.transitionPath, "owner.json"),
-    `${JSON.stringify(lock.owner)}\n`,
-    "utf8",
-  );
 };
 
 const reclaimStaleLock = async (lock: WorkspaceLock) => {
   await beginTransition(lock);
   let preserveTransition = false;
   try {
-    const observed = await readOwner(lock.path);
+    const observed = await readGenerationOwner(lock.activePath);
     if (observed === null) {
       throw new Error(
-        `Workspace lock at ${lock.path} has an unparseable owner and cannot safely be reclaimed; recover it manually`,
+        `Workspace lock at ${lock.activePath} has an unparseable owner and cannot safely be reclaimed; recover it manually`,
       );
     }
     if (!ownerIsSafelyStale(observed)) return false;
 
-    const quarantinedPath = join(lock.transitionPath, "stale.lock");
-    await rename(lock.path, quarantinedPath);
-    const quarantinedOwner = await readOwner(quarantinedPath);
+    const quarantinedPath = join(lock.transitionPath, "stale-generation");
+    await lock.operations.rename(lock.activePath, quarantinedPath);
+    const quarantinedOwner = await readGenerationOwner(quarantinedPath);
     if (
       quarantinedOwner?.token !== observed.token ||
       !ownerIsSafelyStale(quarantinedOwner)
     ) {
       try {
-        await restoreQuarantinedLock(quarantinedPath, lock.path);
+        await restoreGenerationNoClobber(lock, quarantinedPath);
       } catch (error) {
         preserveTransition = true;
         throw error;
       }
       return false;
     }
-    await rm(quarantinedPath, { force: true });
+    await rm(quarantinedPath, { recursive: true, force: true });
     return true;
   } finally {
     if (!preserveTransition) {
@@ -187,11 +258,16 @@ const reclaimStaleLock = async (lock: WorkspaceLock) => {
   }
 };
 
-const acquireWorkspaceLock = async (workspaceRoot: string) => {
-  const path = join(resolve(workspaceRoot), ".mirror", "sync.lock");
+const acquireWorkspaceLock = async (
+  workspaceRoot: string,
+  operationOverrides: Partial<LockOperations>,
+) => {
+  const namespacePath = join(resolve(workspaceRoot), ".mirror", "sync.lock");
   const lock: WorkspaceLock = {
-    path,
-    transitionPath: `${path}.transition`,
+    namespacePath,
+    activePath: join(namespacePath, "active"),
+    transitionPath: join(namespacePath, "transition"),
+    operations: { ...DEFAULT_OPERATIONS, ...operationOverrides },
     owner: {
       schemaVersion: 1,
       token: randomUUID(),
@@ -200,43 +276,45 @@ const acquireWorkspaceLock = async (workspaceRoot: string) => {
       createdAt: new Date().toISOString(),
     },
   };
-  await mkdir(dirname(path), { recursive: true });
+  await ensureNamespace(namespacePath);
 
   for (let attempt = 0; attempt < 2; attempt += 1) {
     try {
       await installOwner(lock);
       return lock;
     } catch (error) {
-      if (errorCode(error) !== "EEXIST") throw error;
+      if (!await destinationIsOccupied(error, lock.activePath)) throw error;
       if (attempt === 0 && await reclaimStaleLock(lock)) continue;
       throw new Error(
-        `Workspace synchronization lock is held at ${path}; another mirror operation is in progress`,
+        `Workspace synchronization lock is held at ${lock.activePath}; another mirror operation is in progress`,
         { cause: error },
       );
     }
   }
-  throw new Error(`Unable to acquire workspace synchronization lock at ${path}`);
+  throw new Error(
+    `Unable to acquire workspace synchronization lock at ${lock.activePath}`,
+  );
 };
 
 const releaseWorkspaceLock = async (lock: WorkspaceLock) => {
   await beginTransition(lock);
-  const quarantinedPath = join(lock.transitionPath, "release.lock");
+  const quarantinedPath = join(lock.transitionPath, "release-generation");
   let preserveTransition = false;
   try {
-    await rename(lock.path, quarantinedPath);
-    const current = await readOwner(quarantinedPath);
+    await lock.operations.rename(lock.activePath, quarantinedPath);
+    const current = await readGenerationOwner(quarantinedPath);
     if (current?.token !== lock.owner.token) {
       try {
-        await restoreQuarantinedLock(quarantinedPath, lock.path);
+        await restoreGenerationNoClobber(lock, quarantinedPath);
       } catch (error) {
         preserveTransition = true;
         throw error;
       }
       throw new Error(
-        `Workspace synchronization lock ownership changed before release: ${lock.path}; the successor lock was preserved`,
+        `Workspace synchronization lock ownership changed before release: ${lock.activePath}; the successor generation was preserved`,
       );
     }
-    await rm(quarantinedPath, { force: true });
+    await rm(quarantinedPath, { recursive: true, force: true });
   } finally {
     if (!preserveTransition) {
       await rm(lock.transitionPath, { recursive: true, force: true });
@@ -246,17 +324,18 @@ const releaseWorkspaceLock = async (lock: WorkspaceLock) => {
 
 const recordReleaseWarning = async (lock: WorkspaceLock, error: unknown) => {
   const warningPath = join(
-    dirname(lock.path),
-    `sync-lock-release-warning-${Date.now()}-${lock.owner.token}.json`,
+    lock.namespacePath,
+    `release-warning-${Date.now()}-${lock.owner.token}.json`,
   );
   const warning = {
     schemaVersion: 1,
     createdAt: new Date().toISOString(),
-    lockPath: lock.path,
+    lockPath: lock.namespacePath,
+    activePath: lock.activePath,
     owner: lock.owner,
     error: messageFor(error),
     recovery:
-      "The mirror operation completed successfully. Inspect the lock and transition paths; any successor lock was preserved. Remove only artifacts whose owner is confirmed dead.",
+      "The mirror operation completed successfully. Inspect the lock namespace; any successor generation was preserved. Remove only generations whose owner is confirmed dead.",
   };
   try {
     await writeFile(warningPath, `${JSON.stringify(warning, null, 2)}\n`, "utf8");
@@ -270,8 +349,9 @@ const recordReleaseWarning = async (lock: WorkspaceLock, error: unknown) => {
 export const withWorkspaceLock = async <Value>(
   workspaceRoot: string,
   operation: () => Promise<Value>,
+  operationOverrides: Partial<LockOperations> = {},
 ): Promise<Value> => {
-  const lock = await acquireWorkspaceLock(workspaceRoot);
+  const lock = await acquireWorkspaceLock(workspaceRoot, operationOverrides);
   let operationError: unknown;
   try {
     return await operation();

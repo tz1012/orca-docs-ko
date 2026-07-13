@@ -43,7 +43,51 @@ test("rejects a configured target that contains the workspace lock", async () =>
 
   await expect(
     validate({ ...workspace.config, jobRoot: join(workspace.root, ".mirror") }),
-  ).rejects.toThrow(/jobRoot.*lock path.*overlap/i);
+  ).rejects.toThrow(/jobRoot.*lock namespace.*overlap/i);
+});
+
+test("reserves every path inside the workspace lock namespace", async () => {
+  const workspace = await fixtureWorkspace();
+
+  await expect(
+    validate({
+      ...workspace.config,
+      jobRoot: join(
+        workspace.root,
+        ".mirror",
+        "sync.lock",
+        "transition",
+        "recovery",
+      ),
+    }),
+  ).rejects.toThrow(/jobRoot.*lock namespace.*overlap/i);
+});
+
+test("rejects a lock namespace escaping through the .mirror junction", async () => {
+  const workspace = await fixtureWorkspace();
+  const outside = resolve(
+    workspace.root,
+    "..",
+    `${basename(workspace.root)}-lock-outside`,
+  );
+  await mkdir(outside, { recursive: true });
+  await symlink(
+    outside,
+    join(workspace.root, ".mirror"),
+    process.platform === "win32" ? "junction" : "dir",
+  );
+
+  try {
+    await expect(
+      validate({
+        ...workspace.config,
+        jobRoot: join(workspace.root, "lock-safe-jobs"),
+        stagingRoot: join(workspace.root, "lock-safe-staging"),
+      }),
+    ).rejects.toThrow(/lock namespace.*real path.*outside workspace/i);
+  } finally {
+    await rm(outside, { recursive: true, force: true });
+  }
 });
 
 test("enforces configured file and directory roles", async () => {

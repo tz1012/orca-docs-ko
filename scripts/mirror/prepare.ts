@@ -313,6 +313,13 @@ const realTargetFor = async (target: string) => {
 export const validateMirrorConfigPaths = async (config: MirrorConfig) => {
   const workspaceRoot = resolve(config.workspaceRoot);
   const realWorkspaceRoot = await realpath(workspaceRoot);
+  const lockNamespacePath = join(workspaceRoot, ".mirror", "sync.lock");
+  const realLockNamespacePath = await realTargetFor(lockNamespacePath);
+  if (!pathIsWithin(realWorkspaceRoot, realLockNamespacePath, false)) {
+    throw new Error(
+      `Workspace lock namespace real path resolves outside workspace root: ${realLockNamespacePath}`,
+    );
+  }
   const targets = CONFIG_PATHS.map((key) => ({
     key,
     path: resolve(String(config[key])),
@@ -348,16 +355,14 @@ export const validateMirrorConfigPaths = async (config: MirrorConfig) => {
     }
   }
 
-  const lockPath = join(workspaceRoot, ".mirror", "sync.lock");
-  const realLockPath = await realTargetFor(lockPath);
   for (const { key, path, realPath } of targets) {
     if (
-      pathIsWithin(path, lockPath, true) ||
-      pathIsWithin(lockPath, path, true) ||
-      pathIsWithin(realPath!, realLockPath, true) ||
-      pathIsWithin(realLockPath, realPath!, true)
+      pathIsWithin(path, lockNamespacePath, true) ||
+      pathIsWithin(lockNamespacePath, path, true) ||
+      pathIsWithin(realPath!, realLockNamespacePath, true) ||
+      pathIsWithin(realLockNamespacePath, realPath!, true)
     ) {
-      throw new Error(`${key} and workspace lock path overlap: ${path}`);
+      throw new Error(`${key} and workspace lock namespace overlap: ${path}`);
     }
   }
 

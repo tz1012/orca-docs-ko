@@ -2,6 +2,7 @@ import {
   mkdir,
   readFile,
   readdir,
+  rename,
   rm,
   utimes,
   writeFile,
@@ -22,25 +23,38 @@ const lockOwner = (token: string, pid: number, createdAt: string) => ({
   createdAt,
 });
 
+type LockOperationOverrides = {
+  initializeOwner?: (ownerPath: string, contents: string) => Promise<void>;
+  rename?: typeof rename;
+};
+
+const lockWithOperations = withWorkspaceLock as unknown as <Value>(
+  workspaceRoot: string,
+  operation: () => Promise<Value>,
+  overrides?: LockOperationOverrides,
+) => Promise<Value>;
+
 test("does not reclaim an old lock whose owner cannot be parsed", async () => {
   const workspace = await fixtureWorkspace();
-  const lockPath = join(workspace.root, ".mirror", "sync.lock");
-  await mkdir(dirname(lockPath), { recursive: true });
-  await writeFile(lockPath, "truncated owner record", "utf8");
+  const namespacePath = join(workspace.root, ".mirror", "sync.lock");
+  const ownerPath = join(namespacePath, "active", "owner.json");
+  await mkdir(dirname(ownerPath), { recursive: true });
+  await writeFile(ownerPath, "truncated owner record", "utf8");
   const old = new Date("2000-01-01T00:00:00.000Z");
-  await utimes(lockPath, old, old);
+  await utimes(ownerPath, old, old);
 
   await expect(
     withWorkspaceLock(workspace.root, async () => "must not run"),
   ).rejects.toThrow(/unparseable.*cannot safely be reclaimed.*manually/i);
-  await expect(readFile(lockPath, "utf8")).resolves.toBe(
+  await expect(readFile(ownerPath, "utf8")).resolves.toBe(
     "truncated owner record",
   );
 });
 
 test("a release ownership mismatch preserves the successor and records a warning", async () => {
   const workspace = await fixtureWorkspace();
-  const lockPath = join(workspace.root, ".mirror", "sync.lock");
+  const namespacePath = join(workspace.root, ".mirror", "sync.lock");
+  const ownerPath = join(namespacePath, "active", "owner.json");
   const successor = lockOwner(
     "successor-owner-token",
     process.pid,
@@ -48,30 +62,31 @@ test("a release ownership mismatch preserves the successor and records a warning
   );
 
   const result = await withWorkspaceLock(workspace.root, async () => {
-    await writeFile(lockPath, `${JSON.stringify(successor)}\n`, "utf8");
+    await writeFile(ownerPath, `${JSON.stringify(successor)}\n`, "utf8");
     return "committed";
   });
 
   expect(result).toBe("committed");
-  expect(JSON.parse(await readFile(lockPath, "utf8"))).toEqual(successor);
-  const warnings = (await readdir(join(workspace.root, ".mirror"))).filter(
-    (name) => name.startsWith("sync-lock-release-warning-"),
+  expect(JSON.parse(await readFile(ownerPath, "utf8"))).toEqual(successor);
+  const warnings = (await readdir(namespacePath)).filter(
+    (name) => name.startsWith("release-warning-"),
   );
   expect(warnings).toHaveLength(1);
   const warning = JSON.parse(
-    await readFile(join(workspace.root, ".mirror", warnings[0]!), "utf8"),
+    await readFile(join(namespacePath, warnings[0]!), "utf8"),
   ) as { lockPath: string; recovery: string };
-  expect(warning).toMatchObject({ lockPath });
+  expect(warning).toMatchObject({ lockPath: namespacePath });
   expect(warning.recovery).toMatch(/successor.*preserved|manual/i);
-  await rm(lockPath, { force: true });
+  await rm(join(namespacePath, "active"), { force: true, recursive: true });
 });
 
 test("two stale-lock contenders never run operations concurrently", async () => {
   const workspace = await fixtureWorkspace();
-  const lockPath = join(workspace.root, ".mirror", "sync.lock");
-  await mkdir(dirname(lockPath), { recursive: true });
+  const namespacePath = join(workspace.root, ".mirror", "sync.lock");
+  const ownerPath = join(namespacePath, "active", "owner.json");
+  await mkdir(dirname(ownerPath), { recursive: true });
   await writeFile(
-    lockPath,
+    ownerPath,
     `${JSON.stringify(
       lockOwner(
         "dead-owner-token",
@@ -118,7 +133,7 @@ test("two stale-lock contenders never run operations concurrently", async () => 
   ]);
   expect(firstOutcome).toBe("rejected");
   expect(entered).toHaveLength(1);
-  expect(JSON.parse(await readFile(lockPath, "utf8"))).toMatchObject({
+  expect(JSON.parse(await readFile(ownerPath, "utf8"))).toMatchObject({
     pid: process.pid,
   });
 
@@ -126,4 +141,83 @@ test("two stale-lock contenders never run operations concurrently", async () => 
   const settled = await Promise.all(tracked);
   expect(settled.filter(({ status }) => status === "fulfilled")).toHaveLength(1);
   expect(settled.filter(({ status }) => status === "rejected")).toHaveLength(1);
+});
+
+test("restore never clobbers a new active generation", async () => {
+  const workspace = await fixtureWorkspace();
+  const namespacePath = join(workspace.root, ".mirror", "sync.lock");
+  const activePath = join(namespacePath, "active");
+  const originalSuccessor = lockOwner(
+    "quarantined-successor",
+    process.pid,
+    new Date().toISOString(),
+  );
+  const newSuccessor = lockOwner(
+    "new-active-successor",
+    process.pid,
+    new Date().toISOString(),
+  );
+
+  const result = await lockWithOperations(
+    workspace.root,
+    async () => {
+      await writeFile(
+        join(activePath, "owner.json"),
+        `${JSON.stringify(originalSuccessor)}\n`,
+        "utf8",
+      );
+      return "committed";
+    },
+    {
+      rename: async (source, target) => {
+        if (
+          String(target) === activePath &&
+          String(source).includes("release-generation")
+        ) {
+          await mkdir(activePath);
+          await writeFile(
+            join(activePath, "owner.json"),
+            `${JSON.stringify(newSuccessor)}\n`,
+            "utf8",
+          );
+        }
+        await rename(source, target);
+      },
+    },
+  );
+
+  expect(result).toBe("committed");
+  const activeOwnerText = await readFile(
+    join(activePath, "owner.json"),
+    "utf8",
+  ).catch(() => null);
+  expect(activeOwnerText).not.toBeNull();
+  expect(JSON.parse(activeOwnerText!)).toEqual(newSuccessor);
+  const quarantinedOwnerText = await readFile(
+    join(namespacePath, "transition", "release-generation", "owner.json"),
+    "utf8",
+  );
+  expect(JSON.parse(quarantinedOwnerText)).toEqual(originalSuccessor);
+});
+
+test("failed owner initialization removes its incomplete generation", async () => {
+  const workspace = await fixtureWorkspace();
+  const namespacePath = join(workspace.root, ".mirror", "sync.lock");
+
+  await expect(
+    lockWithOperations(
+      workspace.root,
+      async () => "must not run",
+      {
+        initializeOwner: async (ownerPath) => {
+          await writeFile(ownerPath, "partial owner", "utf8");
+          throw new Error("simulated owner sync failure");
+        },
+      },
+    ),
+  ).rejects.toThrow(/simulated owner sync failure/i);
+
+  const entries = await readdir(namespacePath).catch(() => []);
+  expect(entries).not.toContain("active");
+  expect(entries.filter((name) => name.startsWith("candidate-"))).toEqual([]);
 });
