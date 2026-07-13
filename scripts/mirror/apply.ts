@@ -12,11 +12,14 @@ import { basename, dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { canMirrorAsset } from "./discover.js";
+import { sha256 } from "./hash.js";
 import {
   translationRelativePath,
   validateReady,
+  validateRetainedTranslation,
   validateTranslation,
 } from "./jobs.js";
+import { withWorkspaceLock } from "./lock.js";
 import {
   SourceManifestSchema,
   TranslationFileSchema,
@@ -27,7 +30,9 @@ import {
   defaultMirrorConfig,
   readPreparedSnapshot,
   replacePathsAtomically,
+  resolveWithin,
   summaryOnly,
+  validateMirrorConfigPaths,
   type MirrorConfig,
   type MirrorSummary,
 } from "./prepare.js";
@@ -181,7 +186,14 @@ const readTranslation = async (
 ): Promise<TranslationFile> =>
   TranslationFileSchema.parse(
     JSON.parse(
-      await readFile(join(root, translationRelativePath(mirrorPath)), "utf8"),
+      await readFile(
+        resolveWithin(
+          root,
+          join(root, translationRelativePath(mirrorPath)),
+          `translation path for ${mirrorPath}`,
+        ),
+        "utf8",
+      ),
     ),
   );
 
@@ -192,8 +204,16 @@ const removePage = async (
 ) => {
   const path =
     kind === "content"
-      ? join(root, contentRelativePath(mirrorPath))
-      : join(root, translationRelativePath(mirrorPath));
+      ? resolveWithin(
+          root,
+          join(root, contentRelativePath(mirrorPath)),
+          `content path for ${mirrorPath}`,
+        )
+      : resolveWithin(
+          root,
+          join(root, translationRelativePath(mirrorPath)),
+          `translation path for ${mirrorPath}`,
+        );
   await rm(path, { force: true });
 };
 
@@ -218,14 +238,23 @@ const validateImageState = async (
         throw new Error(`Allowed image is not mirrored locally: ${image.sourceUrl}`);
       }
       const filename = basename(image.localPath);
-      if (!(await pathExists(join(assetRoot, filename)))) {
+      const assetPath = resolveWithin(
+        assetRoot,
+        join(assetRoot, filename),
+        `asset path for ${image.localPath}`,
+      );
+      if (!(await pathExists(assetPath))) {
         throw new Error(`Missing local image asset: ${image.localPath}`);
+      }
+      const body = new Uint8Array(await readFile(assetPath));
+      if (sha256(body) !== image.contentHash) {
+        throw new Error(`Local image hash mismatch: ${image.localPath}`);
       }
     }
   }
 };
 
-export const applyMirror = async (
+const applyMirrorUnlocked = async (
   config: MirrorConfig,
 ): Promise<ApplyResult> => {
   const snapshot = await readPreparedSnapshot(config.stagingRoot);
@@ -271,7 +300,11 @@ export const applyMirror = async (
       cloneDirectory(config.translationRoot, temporaryTranslations),
       cloneDirectory(config.assetRoot, temporaryAssets),
     ]);
-    const stagedAssets = join(config.stagingRoot, "assets");
+    const stagedAssets = resolveWithin(
+      config.stagingRoot,
+      join(config.stagingRoot, "assets"),
+      "staged asset directory",
+    );
     if (await pathExists(stagedAssets)) {
       await cp(stagedAssets, temporaryAssets, { recursive: true });
     }
@@ -293,9 +326,10 @@ export const applyMirror = async (
       validateTranslation(page, translation);
       const markdown = renderPage(page, translation);
       assertNotice(page.mirrorPath, markdown);
-      const outputPath = join(
+      const outputPath = resolveWithin(
         temporaryContent,
-        contentRelativePath(page.mirrorPath),
+        join(temporaryContent, contentRelativePath(page.mirrorPath)),
+        `content output for ${page.mirrorPath}`,
       );
       await mkdir(dirname(outputPath), { recursive: true });
       await writeFile(outputPath, markdown, "utf8");
@@ -303,8 +337,20 @@ export const applyMirror = async (
       renderedPages.set(page.mirrorPath, markdown);
     }
     for (const mirrorPath of snapshot.plan.pendingRemoval) {
+      const retainedTranslation = await readTranslation(
+        temporaryTranslations,
+        mirrorPath,
+      );
+      validateRetainedTranslation(
+        snapshot.plan.nextManifest.pages[mirrorPath]!,
+        retainedTranslation,
+      );
       const markdown = await readFile(
-        join(temporaryContent, contentRelativePath(mirrorPath)),
+        resolveWithin(
+          temporaryContent,
+          join(temporaryContent, contentRelativePath(mirrorPath)),
+          `retained content for ${mirrorPath}`,
+        ),
         "utf8",
       );
       assertNotice(mirrorPath, markdown);
@@ -332,6 +378,13 @@ export const applyMirror = async (
       `${JSON.stringify(promotedManifest, null, 2)}\n`,
       "utf8",
     );
+
+    const finalManifestIdentity = await readManifest(config.manifestPath);
+    if (!manifestsMatch(finalManifestIdentity, currentManifest)) {
+      throw new Error(
+        "Source manifest changed during apply; no prepared paths were promoted",
+      );
+    }
 
     await replacePathsAtomically([
       { prepared: temporaryContent, target: config.contentRoot },
@@ -363,6 +416,13 @@ export const applyMirror = async (
     localImages: images.filter((image) => image.localPath !== null).length,
     remoteImages: images.filter((image) => image.robotsRemote).length,
   };
+};
+
+export const applyMirror = async (
+  config: MirrorConfig,
+): Promise<ApplyResult> => {
+  validateMirrorConfigPaths(config);
+  return withWorkspaceLock(config.workspaceRoot, () => applyMirrorUnlocked(config));
 };
 
 const runCli = async () => {

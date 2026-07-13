@@ -102,6 +102,15 @@ const manifestPageFixture = (
 ): ManifestPage => {
   const sourcePath = mirrorPath === "/docs/" ? "/docs" : mirrorPath.slice(0, -1);
   const titleSegmentId = `${mirrorPath.split("/").filter(Boolean).at(-1) ?? "docs"}:h1:0`;
+  const segmentHashes = overrides.segmentHashes ?? {
+    [titleSegmentId]: sha256("Install"),
+  };
+  const segmentValidation = overrides.segmentValidation ?? Object.fromEntries(
+    Object.keys(segmentHashes).map((segmentId) => [
+      segmentId,
+      { kind: "heading", protectedTokens: [], requiresKorean: false },
+    ]),
+  );
 
   return ManifestPageSchema.parse({
     sourceUrl: new URL(sourcePath, "https://www.onorca.dev").href,
@@ -114,7 +123,8 @@ const manifestPageFixture = (
     missingRuns: 0,
     status: "active",
     redirectTo: null,
-    segmentHashes: { [titleSegmentId]: sha256("Install") },
+    segmentHashes,
+    segmentValidation,
     images: [],
     ...overrides,
   });

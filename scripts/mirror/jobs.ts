@@ -4,8 +4,8 @@ import { fileURLToPath } from "node:url";
 
 import { z } from "zod";
 
-import { normalizeText } from "./hash.js";
 import {
+  type ManifestPage,
   SourcePageSchema,
   SourceSegmentSchema,
   TranslationFileSchema,
@@ -14,6 +14,10 @@ import {
 } from "./model.js";
 import { restoreProtected } from "./protect.js";
 import type { ChangePlan } from "./state.js";
+import {
+  HANGUL_PATTERN,
+  requiresKoreanTranslation,
+} from "./translation-policy.js";
 
 const compareStrings = (left: string, right: string) => {
   if (left < right) return -1;
@@ -21,7 +25,6 @@ const compareStrings = (left: string, right: string) => {
   return 0;
 };
 
-const HANGUL_PATTERN = /\p{Script=Hangul}/u;
 const TRANSLATION_RULES = [
   "기술 문서의 의미를 유지하고 '~합니다' 문체의 자연스러운 한국어로 번역합니다.",
   "모든 ORCA_PROTECTED 토큰을 원문과 동일하게 정확히 한 번씩 유지합니다.",
@@ -189,15 +192,55 @@ export const validateTranslation = (
       );
     }
 
-    const requiresKorean =
-      segment.kind !== "code" &&
-      segment.kind !== "image" &&
-      normalizeText(segment.source).length > 20;
+    const requiresKorean = requiresKoreanTranslation(segment);
     if (requiresKorean && !HANGUL_PATTERN.test(entry.translated)) {
       throw new KoreanCoverageError(segment.id);
     }
   }
 
+  return translation;
+};
+
+export const validateRetainedTranslation = (
+  page: ManifestPage,
+  file: TranslationFile,
+) => {
+  const translation = TranslationFileSchema.parse(file);
+  if (
+    translation.sourceUrl !== page.sourceUrl ||
+    translation.mirrorPath !== page.mirrorPath
+  ) {
+    throw new Error(
+      `Pending-removal translation identity is stale for ${page.mirrorPath}`,
+    );
+  }
+
+  for (const [segmentId, sourceHash] of Object.entries(page.segmentHashes)) {
+    const entry = translation.entries[segmentId];
+    if (entry?.sourceHash !== sourceHash) {
+      throw new Error(`Pending-removal translation hash is stale for ${segmentId}`);
+    }
+    const validation = page.segmentValidation[segmentId]!;
+    try {
+      restoreProtected(
+        entry.translated,
+        Object.fromEntries(
+          validation.protectedTokens.map((token) => [token, token]),
+        ),
+      );
+    } catch (error) {
+      throw new Error(
+        `Invalid protected tokens for retained segment ${segmentId}: ${errorMessage(error)}`,
+        { cause: error },
+      );
+    }
+    if (
+      validation.requiresKorean &&
+      !HANGUL_PATTERN.test(entry.translated)
+    ) {
+      throw new KoreanCoverageError(segmentId);
+    }
+  }
   return translation;
 };
 

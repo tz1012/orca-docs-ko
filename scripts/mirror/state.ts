@@ -4,6 +4,7 @@ import {
   type SourceManifest,
   type SourcePage,
 } from "./model.js";
+import { requiresKoreanTranslation } from "./translation-policy.js";
 
 export interface ChangePlan {
   add: string[];
@@ -31,6 +32,18 @@ const sortedRecord = <Value>(entries: Iterable<readonly [string, Value]>) =>
 const segmentHashes = (page: SourcePage) =>
   sortedRecord(
     page.segments.map((segment) => [segment.id, segment.sourceHash] as const),
+  );
+
+const segmentValidation = (page: SourcePage) =>
+  sortedRecord(
+    page.segments.map((segment) => [
+      segment.id,
+      {
+        kind: segment.kind,
+        protectedTokens: Object.keys(segment.protected).sort(compareStrings),
+        requiresKorean: requiresKoreanTranslation(segment),
+      },
+    ] as const),
   );
 
 const hashesMatch = (
@@ -61,6 +74,7 @@ const manifestPageFrom = (
   status: "active",
   redirectTo: null,
   segmentHashes: segmentHashes(page),
+  segmentValidation: segmentValidation(page),
   images: page.images,
 });
 

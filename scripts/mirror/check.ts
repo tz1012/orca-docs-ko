@@ -3,6 +3,9 @@ import { readFile, readdir } from "node:fs/promises";
 import { basename, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { parse as parseYaml } from "yaml";
+import { z } from "zod";
+
 import {
   assertNotice,
   validateInternalLinks,
@@ -12,8 +15,10 @@ import { extractPage } from "./extract.js";
 import { sha256 } from "./hash.js";
 import {
   translationRelativePath,
+  validateRetainedTranslation,
   validateTranslation,
 } from "./jobs.js";
+import { withWorkspaceLock } from "./lock.js";
 import {
   SourceManifestSchema,
   TranslationFileSchema,
@@ -24,11 +29,13 @@ import {
 } from "./model.js";
 import {
   defaultMirrorConfig,
+  resolveWithin,
   summaryOnly,
+  validateMirrorConfigPaths,
   type MirrorConfig,
   type MirrorSummary,
 } from "./prepare.js";
-import { renderPage } from "./render.js";
+import { renderPage, TRANSLATION_NOTICE } from "./render.js";
 
 export interface CheckResult extends MirrorSummary {}
 
@@ -54,7 +61,14 @@ const readTranslation = async (
 ): Promise<TranslationFile> =>
   TranslationFileSchema.parse(
     JSON.parse(
-      await readFile(join(root, translationRelativePath(mirrorPath)), "utf8"),
+      await readFile(
+        resolveWithin(
+          root,
+          join(root, translationRelativePath(mirrorPath)),
+          `translation path for ${mirrorPath}`,
+        ),
+        "utf8",
+      ),
     ),
   );
 
@@ -104,29 +118,6 @@ const withManifestState = (
   images: manifestPage.images,
 });
 
-const validatePendingTranslation = (
-  manifestPage: ManifestPage,
-  translation: TranslationFile,
-) => {
-  if (
-    translation.sourceUrl !== manifestPage.sourceUrl ||
-    translation.mirrorPath !== manifestPage.mirrorPath
-  ) {
-    throw new Error(
-      `Pending-removal translation identity is stale for ${manifestPage.mirrorPath}`,
-    );
-  }
-  for (const [segmentId, sourceHash] of Object.entries(
-    manifestPage.segmentHashes,
-  )) {
-    if (translation.entries[segmentId]?.sourceHash !== sourceHash) {
-      throw new Error(
-        `Pending-removal translation hash is stale for ${segmentId}`,
-      );
-    }
-  }
-};
-
 const validateImages = async (
   manifestPages: readonly ManifestPage[],
   robotsText: string,
@@ -148,7 +139,13 @@ const validateImages = async (
         throw new Error(`Allowed image is not mirrored locally: ${image.sourceUrl}`);
       }
       const body = new Uint8Array(
-        await readFile(join(assetRoot, basename(image.localPath))),
+        await readFile(
+          resolveWithin(
+            assetRoot,
+            join(assetRoot, basename(image.localPath)),
+            `asset path for ${image.localPath}`,
+          ),
+        ),
       );
       if (sha256(body) !== image.contentHash) {
         throw new Error(`Local image hash mismatch: ${image.localPath}`);
@@ -197,15 +194,29 @@ const translationPathForFile = (root: string, file: string) => {
   return suffix.length === 0 ? "/docs/" : `/docs/${suffix}/`;
 };
 
-const validateNotFoundEntry = (source: string) => {
-  assertNotice("/404", source);
-  if (
-    !source.includes('title: "페이지를 찾을 수 없습니다"') ||
-    !source.includes("draft: true") ||
-    !source.includes("sourceUrl: https://www.onorca.dev/docs") ||
-    !/^checkedAt: ["']?\d{4}-\d{2}-\d{2}T[^\r\n"']+["']?$/mu.test(source)
-  ) {
+const NotFoundFrontmatterSchema = z.object({
+  title: z.literal("페이지를 찾을 수 없습니다"),
+  sourceUrl: z.literal("https://www.onorca.dev/docs"),
+  checkedAt: z.iso.datetime(),
+  draft: z.literal(true),
+  translationNotice: z.object({
+    title: z.literal(TRANSLATION_NOTICE.title),
+    message: z.literal(TRANSLATION_NOTICE.message),
+    rights: z.literal(TRANSLATION_NOTICE.rights),
+  }),
+});
+
+export const parseNotFoundFrontmatter = (source: string) => {
+  const frontmatter = /^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/u.exec(source)?.[1];
+  if (frontmatter === undefined) {
     throw new Error("The Korean not-found entry is missing required metadata");
+  }
+  try {
+    return NotFoundFrontmatterSchema.parse(parseYaml(frontmatter));
+  } catch (error) {
+    throw new Error("The Korean not-found entry is missing required metadata", {
+      cause: error,
+    });
   }
 };
 
@@ -259,7 +270,7 @@ const runDefaultBuild = (workspaceRoot: string) =>
     });
   });
 
-export const checkMirror = async (
+const checkMirrorUnlocked = async (
   config: MirrorConfig,
 ): Promise<CheckResult> => {
   const manifest = await readManifest(config.manifestPath);
@@ -304,12 +315,16 @@ export const checkMirror = async (
   }
 
   const contentFiles = await listFiles(config.contentRoot, ".md");
-  const notFoundPath = resolve(config.contentRoot, "404.md");
+  const notFoundPath = resolveWithin(
+    config.contentRoot,
+    resolve(config.contentRoot, "404.md"),
+    "not-found content path",
+  );
   const notFoundFile = contentFiles.find((file) => resolve(file) === notFoundPath);
   if (notFoundFile === undefined) {
     throw new Error("Missing Korean not-found entry");
   }
-  validateNotFoundEntry(await readFile(notFoundFile, "utf8"));
+  parseNotFoundFrontmatter(await readFile(notFoundFile, "utf8"));
   const unexpectedContent = contentFiles.filter(
     (file) => resolve(file) !== notFoundPath && basename(file) !== "index.md",
   );
@@ -367,7 +382,7 @@ export const checkMirror = async (
       config.translationRoot,
       manifestPage.mirrorPath,
     );
-    validatePendingTranslation(manifestPage, translation);
+    validateRetainedTranslation(manifestPage, translation);
     const markdown = actualContent.get(manifestPage.mirrorPath)!;
     assertNotice(manifestPage.mirrorPath, markdown);
     renderedPages.set(manifestPage.mirrorPath, markdown);
@@ -380,6 +395,11 @@ export const checkMirror = async (
     config.assetRoot,
   );
   await (config.runBuild ?? (() => runDefaultBuild(config.workspaceRoot)))();
+
+  const finalManifestIdentity = await readManifest(config.manifestPath);
+  if (JSON.stringify(finalManifestIdentity) !== JSON.stringify(manifest)) {
+    throw new Error("Source manifest changed during check; retry validation");
+  }
 
   const images = [...activePages, ...pendingPages].flatMap(
     (page) => page.images,
@@ -398,6 +418,13 @@ export const checkMirror = async (
     localImages: images.filter((image) => image.localPath !== null).length,
     remoteImages: images.filter((image) => image.robotsRemote).length,
   };
+};
+
+export const checkMirror = async (
+  config: MirrorConfig,
+): Promise<CheckResult> => {
+  validateMirrorConfigPaths(config);
+  return withWorkspaceLock(config.workspaceRoot, () => checkMirrorUnlocked(config));
 };
 
 const runCli = async () => {

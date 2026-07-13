@@ -179,6 +179,21 @@ test("rejects duplicate observed mirror paths", () => {
   );
 });
 
+test("persists protected-token and Korean requirements in the manifest", () => {
+  const page = pageFixture();
+  const plan = planChanges(manifestFixture(), [page], NOW);
+
+  expect(
+    plan.nextManifest.pages[page.mirrorPath]?.segmentValidation[
+      "install:p:0"
+    ],
+  ).toEqual({
+    kind: "paragraph",
+    protectedTokens: ["ORCA_PROTECTED_0001"],
+    requiresKorean: true,
+  });
+});
+
 test("promotes translated changes without changing prior translation dates", () => {
   const unchanged = pageFixture({
     sourceUrl: "https://www.onorca.dev/docs/zulu",

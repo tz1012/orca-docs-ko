@@ -85,6 +85,14 @@ test("uses canonical mirror paths in manifest, redirect, and translation contrac
   ).toThrow();
 });
 
+test("requires durable validation metadata for every manifest segment", () => {
+  const page = manifestFixture({ "/docs/old/": {} }).pages["/docs/old/"]!;
+
+  expect(() =>
+    ManifestPageSchema.parse({ ...page, segmentValidation: {} }),
+  ).toThrow(/validation keys.*hash keys/i);
+});
+
 test.each(["", "/other/", "/docs/new/"])(
   "rejects an invalid or mismatched manifest page key: %s",
   (key) => {

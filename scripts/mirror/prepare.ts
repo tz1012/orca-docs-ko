@@ -8,14 +8,18 @@ import {
   stat,
   writeFile,
 } from "node:fs/promises";
-import { basename, dirname, join, relative, resolve } from "node:path";
+import { basename, dirname, isAbsolute, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
+import { isDeepStrictEqual } from "node:util";
+
+import { z } from "zod";
 
 import { mirrorAssets } from "./assets.js";
 import { discoverDocs } from "./discover.js";
 import { extractPage } from "./extract.js";
 import { HttpClient } from "./http.js";
 import { writeTranslationJobs } from "./jobs.js";
+import { withWorkspaceLock } from "./lock.js";
 import {
   SourceManifestSchema,
   SourcePageSchema,
@@ -79,14 +83,57 @@ type Replacement = {
   target: string;
 };
 
+export interface FileTransactionOperations {
+  mkdir: typeof mkdir;
+  rename: typeof rename;
+  rm: typeof rm;
+  stat: typeof stat;
+}
+
+export interface TransactionCleanupFailure {
+  path: string;
+  error: string;
+}
+
+type RollbackFailure = {
+  action: "remove-new" | "restore-backup";
+  target: string;
+  backup: string;
+  error: string;
+};
+
+export class AtomicRollbackError extends Error {
+  readonly rollbackFailures: readonly RollbackFailure[];
+
+  constructor(cause: unknown, rollbackFailures: readonly RollbackFailure[]) {
+    const original = cause instanceof Error ? cause.message : String(cause);
+    const recovery = rollbackFailures
+      .map((failure) =>
+        failure.action === "restore-backup"
+          ? `restore ${failure.target} from backup ${failure.backup} failed: ${failure.error}`
+          : `remove new target ${failure.target} before restoring backup ${failure.backup} failed: ${failure.error}`,
+      )
+      .join("; ");
+    super(
+      `Atomic promotion failed (${original}) and rollback is incomplete: ${recovery}. Preserve the listed backups and recover these paths manually.`,
+      { cause },
+    );
+    this.name = "AtomicRollbackError";
+    this.rollbackFailures = rollbackFailures;
+  }
+}
+
 const errorCode = (error: unknown) =>
   typeof error === "object" && error !== null && "code" in error
     ? String(error.code)
     : null;
 
-const exists = async (path: string) => {
+const existsWith = async (
+  operations: Pick<FileTransactionOperations, "stat">,
+  path: string,
+) => {
   try {
-    await stat(path);
+    await operations.stat(path);
     return true;
   } catch (error) {
     if (errorCode(error) === "ENOENT") return false;
@@ -96,6 +143,7 @@ const exists = async (path: string) => {
 
 export const replacePathsAtomically = async (
   replacements: readonly Replacement[],
+  operations: FileTransactionOperations = { mkdir, rename, rm, stat },
 ) => {
   const transaction = randomUUID();
   const records: Array<{
@@ -108,7 +156,7 @@ export const replacePathsAtomically = async (
 
   try {
     for (const replacement of replacements) {
-      await mkdir(dirname(replacement.target), { recursive: true });
+      await operations.mkdir(dirname(replacement.target), { recursive: true });
       const backup = join(
         dirname(replacement.target),
         `.${basename(replacement.target)}.${transaction}.backup`,
@@ -121,34 +169,59 @@ export const replacePathsAtomically = async (
       };
       records.push(record);
 
-      if (await exists(replacement.target)) {
-        await rename(replacement.target, backup);
+      if (await existsWith(operations, replacement.target)) {
+        await operations.rename(replacement.target, backup);
         record.movedOriginal = true;
       }
-      await rename(replacement.prepared, replacement.target);
+      await operations.rename(replacement.prepared, replacement.target);
       record.installed = true;
     }
   } catch (error) {
+    const rollbackFailures: RollbackFailure[] = [];
     for (const record of [...records].reverse()) {
+      let canRestore = true;
       if (record.installed) {
-        await rm(record.target, { recursive: true, force: true }).catch(
-          () => undefined,
-        );
+        try {
+          await operations.rm(record.target, { recursive: true, force: true });
+        } catch (rollbackError) {
+          canRestore = false;
+          rollbackFailures.push({
+            action: "remove-new",
+            target: record.target,
+            backup: record.backup,
+            error: messageFor(rollbackError),
+          });
+        }
       }
-      if (record.movedOriginal) {
-        await rename(record.backup, record.target).catch(() => undefined);
+      if (record.movedOriginal && canRestore) {
+        try {
+          await operations.rename(record.backup, record.target);
+        } catch (rollbackError) {
+          rollbackFailures.push({
+            action: "restore-backup",
+            target: record.target,
+            backup: record.backup,
+            error: messageFor(rollbackError),
+          });
+        }
       }
+    }
+    if (rollbackFailures.length > 0) {
+      throw new AtomicRollbackError(error, rollbackFailures);
     }
     throw error;
   }
 
-  await Promise.all(
-    records.map(({ backup, movedOriginal }) =>
-      movedOriginal
-        ? rm(backup, { recursive: true, force: true })
-        : Promise.resolve(),
-    ),
-  );
+  const cleanupFailures: TransactionCleanupFailure[] = [];
+  for (const { backup, movedOriginal } of records) {
+    if (!movedOriginal) continue;
+    try {
+      await operations.rm(backup, { recursive: true, force: true });
+    } catch (error) {
+      cleanupFailures.push({ path: backup, error: messageFor(error) });
+    }
+  }
+  return { cleanupFailures };
 };
 
 const messageFor = (error: unknown) =>
@@ -178,6 +251,41 @@ export const summaryOnly = (value: MirrorSummary): MirrorSummary =>
 const readManifest = async (path: string): Promise<SourceManifest> =>
   SourceManifestSchema.parse(JSON.parse(await readFile(path, "utf8")));
 
+const CONFIG_PATHS = [
+  "manifestPath",
+  "translationRoot",
+  "jobRoot",
+  "stagingRoot",
+  "contentRoot",
+  "sidebarPath",
+  "assetRoot",
+] as const satisfies readonly (keyof MirrorConfig)[];
+
+export const resolveWithin = (
+  root: string,
+  candidate: string,
+  label: string,
+) => {
+  const resolvedRoot = resolve(root);
+  const resolvedCandidate = resolve(candidate);
+  const pathFromRoot = relative(resolvedRoot, resolvedCandidate);
+  if (
+    pathFromRoot === ".." ||
+    pathFromRoot.startsWith(`..${sep}`) ||
+    isAbsolute(pathFromRoot)
+  ) {
+    throw new Error(`${label} resolves outside workspace root: ${resolvedCandidate}`);
+  }
+  return resolvedCandidate;
+};
+
+export const validateMirrorConfigPaths = (config: MirrorConfig) => {
+  const workspaceRoot = resolve(config.workspaceRoot);
+  for (const key of CONFIG_PATHS) {
+    resolveWithin(workspaceRoot, String(config[key]), key);
+  }
+};
+
 const makeTemporaryDirectory = async (target: string) => {
   await mkdir(dirname(target), { recursive: true });
   return mkdtemp(join(dirname(target), `.${basename(target)}.tmp-`));
@@ -186,38 +294,76 @@ const makeTemporaryDirectory = async (target: string) => {
 export const snapshotPath = (stagingRoot: string) =>
   join(stagingRoot, "snapshot.json");
 
+const ChangePlanSchema = z.strictObject({
+  add: z.array(SourcePageSchema.shape.mirrorPath),
+  update: z.array(SourcePageSchema.shape.mirrorPath),
+  unchanged: z.array(SourcePageSchema.shape.mirrorPath),
+  pendingRemoval: z.array(SourcePageSchema.shape.mirrorPath),
+  remove: z.array(SourcePageSchema.shape.mirrorPath),
+  translationSegmentIds: z.array(z.string().min(1)),
+  pages: z.record(SourcePageSchema.shape.mirrorPath, SourcePageSchema),
+  nextManifest: SourceManifestSchema,
+});
+
+const PreparedSnapshotSchema = z.strictObject({
+  schemaVersion: z.literal(1),
+  robotsText: z.string(),
+  discoveredUrls: z.array(z.url()),
+  failures: z.array(
+    z.strictObject({ sourceUrl: z.url(), error: z.string().min(1) }),
+  ),
+  baseManifest: SourceManifestSchema,
+  plan: ChangePlanSchema,
+});
+
 export const readPreparedSnapshot = async (
   stagingRoot: string,
 ): Promise<PreparedSnapshot> => {
-  const input = JSON.parse(
-    await readFile(snapshotPath(stagingRoot), "utf8"),
-  ) as PreparedSnapshot;
-  if (
-    input.schemaVersion !== 1 ||
-    !Array.isArray(input.discoveredUrls) ||
-    !Array.isArray(input.failures)
-  ) {
-    throw new Error("Invalid prepared mirror snapshot");
+  let input: PreparedSnapshot;
+  try {
+    input = PreparedSnapshotSchema.parse(
+      JSON.parse(await readFile(snapshotPath(stagingRoot), "utf8")),
+    );
+  } catch (error) {
+    throw new Error(`Invalid prepared mirror snapshot: ${messageFor(error)}`, {
+      cause: error,
+    });
   }
 
-  const pages = Object.fromEntries(
-    Object.entries(input.plan.pages).map(([path, page]) => [
-      path,
-      SourcePageSchema.parse(page),
-    ]),
-  );
-  return {
-    ...input,
-    baseManifest: SourceManifestSchema.parse(input.baseManifest),
-    plan: {
-      ...input.plan,
-      pages,
-      nextManifest: SourceManifestSchema.parse(input.plan.nextManifest),
-    },
+  const unique = (values: readonly string[], label: string) => {
+    if (new Set(values).size !== values.length) {
+      throw new Error(`Prepared snapshot ${label} contains duplicates`);
+    }
   };
+  unique(input.discoveredUrls, "discoveredUrls");
+  unique(
+    input.failures.map(({ sourceUrl }) => sourceUrl),
+    "failure source URLs",
+  );
+
+  const accountedUrls = [
+    ...Object.values(input.plan.pages).map(({ sourceUrl }) => sourceUrl),
+    ...input.failures.map(({ sourceUrl }) => sourceUrl),
+  ].sort();
+  const discoveredUrls = [...input.discoveredUrls].sort();
+  if (!isDeepStrictEqual(accountedUrls, discoveredUrls)) {
+    throw new Error(
+      "Prepared snapshot discovered URLs are inconsistent with pages and failures",
+    );
+  }
+
+  const expectedPlan = planChanges(
+    input.baseManifest,
+    Object.values(input.plan.pages),
+    input.plan.nextManifest.generatedAt,
+  );
+  if (!isDeepStrictEqual(input.plan, expectedPlan)) {
+    throw new Error("Prepared snapshot plan is inconsistent with its pages");
+  }
+  return input;
 };
 
-export const prepareMirror = async (
+const prepareMirrorUnlocked = async (
   config: MirrorConfig,
 ): Promise<PrepareResult> => {
   const manifest = await readManifest(config.manifestPath);
@@ -305,6 +451,15 @@ export const prepareMirror = async (
     ]);
     throw error;
   }
+};
+
+export const prepareMirror = async (
+  config: MirrorConfig,
+): Promise<PrepareResult> => {
+  validateMirrorConfigPaths(config);
+  return withWorkspaceLock(config.workspaceRoot, () =>
+    prepareMirrorUnlocked(config),
+  );
 };
 
 export const defaultMirrorConfig = (): MirrorConfig => {

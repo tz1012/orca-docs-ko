@@ -94,6 +94,19 @@ export const ManifestStatusSchema = z.enum([
   "redirect",
 ]);
 
+export const SegmentValidationSchema = z.strictObject({
+  kind: SegmentKindSchema,
+  protectedTokens: z
+    .array(z.string().regex(/^ORCA_PROTECTED_\d{4,}$/u))
+    .refine(
+      (tokens) => new Set(tokens).size === tokens.length,
+      "Protected validation tokens must be unique",
+    ),
+  requiresKorean: z.boolean(),
+});
+
+export type SegmentValidation = z.infer<typeof SegmentValidationSchema>;
+
 export const ManifestPageSchema = z.strictObject({
   sourceUrl: z.url(),
   mirrorPath: MirrorPathSchema,
@@ -106,7 +119,21 @@ export const ManifestPageSchema = z.strictObject({
   status: ManifestStatusSchema,
   redirectTo: MirrorPathSchema.nullable(),
   segmentHashes: z.record(z.string(), Sha256Schema),
+  segmentValidation: z.record(z.string(), SegmentValidationSchema),
   images: z.array(ImageStateSchema),
+}).superRefine(({ segmentHashes, segmentValidation }, context) => {
+  const hashIds = Object.keys(segmentHashes).sort();
+  const validationIds = Object.keys(segmentValidation).sort();
+  if (
+    hashIds.length !== validationIds.length ||
+    hashIds.some((id, index) => id !== validationIds[index])
+  ) {
+    context.addIssue({
+      code: "custom",
+      message: "Segment validation keys must match segment hash keys",
+      path: ["segmentValidation"],
+    });
+  }
 });
 
 export type ManifestPage = z.infer<typeof ManifestPageSchema>;
