@@ -42,7 +42,10 @@ import {
   TRANSLATION_NOTICE,
   type RenderablePage,
 } from "./render.js";
-import { promoteManifest } from "./state.js";
+import {
+  promoteManifest,
+  recordRenderedContentHashes,
+} from "./state.js";
 
 export interface ApplyResult extends MirrorSummary {}
 
@@ -354,6 +357,11 @@ const applyMirrorUnlocked = async (
         "utf8",
       );
       assertNotice(mirrorPath, markdown);
+      const expectedHash =
+        snapshot.plan.nextManifest.pages[mirrorPath]!.renderedContentHash;
+      if (expectedHash === null || sha256(markdown) !== expectedHash) {
+        throw new Error(`Retained content hash mismatch for ${mirrorPath}`);
+      }
       renderedPages.set(mirrorPath, markdown);
     }
 
@@ -368,10 +376,13 @@ const applyMirrorUnlocked = async (
       `${JSON.stringify(buildSidebar(renderables), null, 2)}\n`,
       "utf8",
     );
-    const promotedManifest = promoteManifest(
-      currentManifest,
-      snapshot.plan,
-      (config.now ?? (() => new Date().toISOString()))(),
+    const promotedManifest = recordRenderedContentHashes(
+      promoteManifest(
+        currentManifest,
+        snapshot.plan,
+        (config.now ?? (() => new Date().toISOString()))(),
+      ),
+      renderedPages,
     );
     await writeFile(
       temporaryManifest,
@@ -421,7 +432,7 @@ const applyMirrorUnlocked = async (
 export const applyMirror = async (
   config: MirrorConfig,
 ): Promise<ApplyResult> => {
-  validateMirrorConfigPaths(config);
+  await validateMirrorConfigPaths(config);
   return withWorkspaceLock(config.workspaceRoot, () => applyMirrorUnlocked(config));
 };
 

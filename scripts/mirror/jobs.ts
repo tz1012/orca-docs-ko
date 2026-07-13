@@ -15,6 +15,7 @@ import {
 import { restoreProtected } from "./protect.js";
 import type { ChangePlan } from "./state.js";
 import {
+  countFences,
   HANGUL_PATTERN,
   requiresKoreanTranslation,
 } from "./translation-policy.js";
@@ -130,15 +131,6 @@ export const writeTranslationJobs = async (
   return written;
 };
 
-const countFences = (markdown: string) =>
-  markdown
-    .split(/\r?\n/u)
-    .filter((line) =>
-      /^[ \t]{0,3}(?:>[ \t]*)*(?:`{3,}|~{3,})(?:[^`~].*)?$/u.test(
-        line,
-      ),
-    ).length;
-
 const errorMessage = (error: unknown) =>
   error instanceof Error ? error.message : String(error);
 
@@ -239,6 +231,11 @@ export const validateRetainedTranslation = (
       !HANGUL_PATTERN.test(entry.translated)
     ) {
       throw new KoreanCoverageError(segmentId);
+    }
+    if (countFences(entry.translated) !== validation.fencedCodeCount) {
+      throw new Error(
+        `Translation for retained segment ${segmentId} must preserve the fenced-code count`,
+      );
     }
   }
   return translation;

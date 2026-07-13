@@ -3,6 +3,7 @@ import {
   mkdir,
   mkdtemp,
   readFile,
+  realpath,
   rename,
   rm,
   stat,
@@ -261,6 +262,25 @@ const CONFIG_PATHS = [
   "assetRoot",
 ] as const satisfies readonly (keyof MirrorConfig)[];
 
+const FILE_CONFIG_PATHS = new Set<keyof MirrorConfig>([
+  "manifestPath",
+  "sidebarPath",
+]);
+
+const pathIsWithin = (
+  root: string,
+  candidate: string,
+  allowEqual: boolean,
+) => {
+  const pathFromRoot = relative(resolve(root), resolve(candidate));
+  if (pathFromRoot.length === 0) return allowEqual;
+  return !(
+    pathFromRoot === ".." ||
+    pathFromRoot.startsWith(`..${sep}`) ||
+    isAbsolute(pathFromRoot)
+  );
+};
+
 export const resolveWithin = (
   root: string,
   candidate: string,
@@ -268,19 +288,105 @@ export const resolveWithin = (
 ) => {
   const resolvedRoot = resolve(root);
   const resolvedCandidate = resolve(candidate);
-  const pathFromRoot = relative(resolvedRoot, resolvedCandidate);
-  if (
-    pathFromRoot === ".." ||
-    pathFromRoot.startsWith(`..${sep}`) ||
-    isAbsolute(pathFromRoot)
-  ) {
+  if (!pathIsWithin(resolvedRoot, resolvedCandidate, true)) {
     throw new Error(`${label} resolves outside workspace root: ${resolvedCandidate}`);
   }
   return resolvedCandidate;
 };
 
-export const validateMirrorConfigPaths = (config: MirrorConfig) => {
+const realTargetFor = async (target: string) => {
+  const resolvedTarget = resolve(target);
+  let existingAncestor = resolvedTarget;
+  while (true) {
+    try {
+      const realAncestor = await realpath(existingAncestor);
+      return resolve(realAncestor, relative(existingAncestor, resolvedTarget));
+    } catch (error) {
+      if (errorCode(error) !== "ENOENT") throw error;
+      const parent = dirname(existingAncestor);
+      if (parent === existingAncestor) throw error;
+      existingAncestor = parent;
+    }
+  }
+};
+
+export const validateMirrorConfigPaths = async (config: MirrorConfig) => {
   const workspaceRoot = resolve(config.workspaceRoot);
+  const realWorkspaceRoot = await realpath(workspaceRoot);
+  const targets = CONFIG_PATHS.map((key) => ({
+    key,
+    path: resolve(String(config[key])),
+    realPath: null as string | null,
+  }));
+
+  for (const target of targets) {
+    const { key, path } = target;
+    if (!pathIsWithin(workspaceRoot, path, false)) {
+      throw new Error(
+        `${key} must be a strict descendant and cannot be equal to or outside workspace root: ${path}`,
+      );
+    }
+    const realTarget = await realTargetFor(path);
+    target.realPath = realTarget;
+    if (!pathIsWithin(realWorkspaceRoot, realTarget, false)) {
+      throw new Error(
+        `${key} real path resolves outside workspace root: ${realTarget}`,
+      );
+    }
+
+    try {
+      const metadata = await stat(path);
+      const expectsFile = FILE_CONFIG_PATHS.has(key);
+      if (expectsFile && !metadata.isFile()) {
+        throw new Error(`${key} must be a file: ${path}`);
+      }
+      if (!expectsFile && !metadata.isDirectory()) {
+        throw new Error(`${key} must be a directory: ${path}`);
+      }
+    } catch (error) {
+      if (errorCode(error) !== "ENOENT") throw error;
+    }
+  }
+
+  const lockPath = join(workspaceRoot, ".mirror", "sync.lock");
+  const realLockPath = await realTargetFor(lockPath);
+  for (const { key, path, realPath } of targets) {
+    if (
+      pathIsWithin(path, lockPath, true) ||
+      pathIsWithin(lockPath, path, true) ||
+      pathIsWithin(realPath!, realLockPath, true) ||
+      pathIsWithin(realLockPath, realPath!, true)
+    ) {
+      throw new Error(`${key} and workspace lock path overlap: ${path}`);
+    }
+  }
+
+  for (let leftIndex = 0; leftIndex < targets.length; leftIndex += 1) {
+    for (let rightIndex = leftIndex + 1; rightIndex < targets.length; rightIndex += 1) {
+      const left = targets[leftIndex]!;
+      const right = targets[rightIndex]!;
+      const lexicalOverlap =
+        pathIsWithin(left.path, right.path, true) ||
+        pathIsWithin(right.path, left.path, true);
+      const realOverlap =
+        pathIsWithin(left.realPath!, right.realPath!, true) ||
+        pathIsWithin(right.realPath!, left.realPath!, true);
+      if (lexicalOverlap || realOverlap) {
+        const leftContainsRight = pathIsWithin(left.path, right.path, true);
+        const container = leftContainsRight ? left : right;
+        const contained = leftContainsRight ? right : left;
+        if (!lexicalOverlap) {
+          throw new Error(
+            `Configured paths ${left.key} and ${right.key} real paths overlap: ${left.realPath}; ${right.realPath}`,
+          );
+        }
+        throw new Error(
+          `Configured paths ${container.key} and ${contained.key} overlap: ${container.path}; ${contained.path}`,
+        );
+      }
+    }
+  }
+
   for (const key of CONFIG_PATHS) {
     resolveWithin(workspaceRoot, String(config[key]), key);
   }
@@ -456,7 +562,7 @@ const prepareMirrorUnlocked = async (
 export const prepareMirror = async (
   config: MirrorConfig,
 ): Promise<PrepareResult> => {
-  validateMirrorConfigPaths(config);
+  await validateMirrorConfigPaths(config);
   return withWorkspaceLock(config.workspaceRoot, () =>
     prepareMirrorUnlocked(config),
   );

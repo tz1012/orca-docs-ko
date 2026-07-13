@@ -108,7 +108,12 @@ const manifestPageFixture = (
   const segmentValidation = overrides.segmentValidation ?? Object.fromEntries(
     Object.keys(segmentHashes).map((segmentId) => [
       segmentId,
-      { kind: "heading", protectedTokens: [], requiresKorean: false },
+      {
+        kind: "heading",
+        fencedCodeCount: 0,
+        protectedTokens: [],
+        requiresKorean: false,
+      },
     ]),
   );
 
@@ -125,6 +130,7 @@ const manifestPageFixture = (
     redirectTo: null,
     segmentHashes,
     segmentValidation,
+    renderedContentHash: sha256(`rendered:${mirrorPath}`),
     images: [],
     ...overrides,
   });

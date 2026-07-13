@@ -189,6 +189,7 @@ test("persists protected-token and Korean requirements in the manifest", () => {
     ],
   ).toEqual({
     kind: "paragraph",
+    fencedCodeCount: 0,
     protectedTokens: ["ORCA_PROTECTED_0001"],
     requiresKorean: true,
   });

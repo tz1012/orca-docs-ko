@@ -96,6 +96,7 @@ export const ManifestStatusSchema = z.enum([
 
 export const SegmentValidationSchema = z.strictObject({
   kind: SegmentKindSchema,
+  fencedCodeCount: z.number().int().nonnegative(),
   protectedTokens: z
     .array(z.string().regex(/^ORCA_PROTECTED_\d{4,}$/u))
     .refine(
@@ -120,6 +121,7 @@ export const ManifestPageSchema = z.strictObject({
   redirectTo: MirrorPathSchema.nullable(),
   segmentHashes: z.record(z.string(), Sha256Schema),
   segmentValidation: z.record(z.string(), SegmentValidationSchema),
+  renderedContentHash: Sha256Schema.nullable(),
   images: z.array(ImageStateSchema),
 }).superRefine(({ segmentHashes, segmentValidation }, context) => {
   const hashIds = Object.keys(segmentHashes).sort();

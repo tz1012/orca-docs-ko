@@ -4,7 +4,11 @@ import {
   type SourceManifest,
   type SourcePage,
 } from "./model.js";
-import { requiresKoreanTranslation } from "./translation-policy.js";
+import { sha256 } from "./hash.js";
+import {
+  countFences,
+  requiresKoreanTranslation,
+} from "./translation-policy.js";
 
 export interface ChangePlan {
   add: string[];
@@ -40,6 +44,7 @@ const segmentValidation = (page: SourcePage) =>
       segment.id,
       {
         kind: segment.kind,
+        fencedCodeCount: countFences(segment.source),
         protectedTokens: Object.keys(segment.protected).sort(compareStrings),
         requiresKorean: requiresKoreanTranslation(segment),
       },
@@ -62,6 +67,7 @@ const hashesMatch = (
 const manifestPageFrom = (
   page: SourcePage,
   previous: ManifestPage | undefined,
+  currentHashes: Record<string, string>,
 ): ManifestPage => ({
   sourceUrl: page.sourceUrl,
   mirrorPath: page.mirrorPath,
@@ -73,8 +79,12 @@ const manifestPageFrom = (
   missingRuns: 0,
   status: "active",
   redirectTo: null,
-  segmentHashes: segmentHashes(page),
+  segmentHashes: currentHashes,
   segmentValidation: segmentValidation(page),
+  renderedContentHash:
+    previous !== undefined && hashesMatch(previous.segmentHashes, currentHashes)
+      ? previous.renderedContentHash
+      : null,
   images: page.images,
 });
 
@@ -102,7 +112,10 @@ export const planChanges = (
   for (const [mirrorPath, page] of observed) {
     const previous = manifest.pages[mirrorPath];
     const currentHashes = segmentHashes(page);
-    nextPages.set(mirrorPath, manifestPageFrom(page, previous));
+    nextPages.set(
+      mirrorPath,
+      manifestPageFrom(page, previous, currentHashes),
+    );
 
     if (previous === undefined) {
       add.push(mirrorPath);
@@ -188,3 +201,23 @@ export const promoteManifest = (
     pages: sortedRecord(pages),
   });
 };
+
+export const recordRenderedContentHashes = (
+  manifest: SourceManifest,
+  renderedPages: ReadonlyMap<string, string>,
+): SourceManifest =>
+  SourceManifestSchema.parse({
+    ...manifest,
+    pages: sortedRecord(
+      Object.entries(manifest.pages).map(([mirrorPath, page]) => {
+        const rendered = renderedPages.get(mirrorPath);
+        if (rendered === undefined) {
+          throw new Error(`Missing rendered content for ${mirrorPath}`);
+        }
+        return [
+          mirrorPath,
+          { ...page, renderedContentHash: sha256(rendered) },
+        ] as const;
+      }),
+    ),
+  });

@@ -1,4 +1,4 @@
-import { spawn } from "node:child_process";
+import { spawn, type ChildProcess } from "node:child_process";
 import { readFile, readdir } from "node:fs/promises";
 import { basename, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -36,6 +36,10 @@ import {
   type MirrorSummary,
 } from "./prepare.js";
 import { renderPage, TRANSLATION_NOTICE } from "./render.js";
+import {
+  countFences,
+  requiresKoreanTranslation,
+} from "./translation-policy.js";
 
 export interface CheckResult extends MirrorSummary {}
 
@@ -79,9 +83,24 @@ const expectedSegmentHashes = (page: SourcePage) =>
       .sort(([left], [right]) => compareStrings(left, right)),
   );
 
+const expectedSegmentValidation = (page: SourcePage) =>
+  Object.fromEntries(
+    page.segments
+      .map((segment) => [
+        segment.id,
+        {
+          kind: segment.kind,
+          fencedCodeCount: countFences(segment.source),
+          protectedTokens: Object.keys(segment.protected).sort(compareStrings),
+          requiresKorean: requiresKoreanTranslation(segment),
+        },
+      ] as const)
+      .sort(([left], [right]) => compareStrings(left, right)),
+  );
+
 const recordsMatch = (
-  left: Readonly<Record<string, string>>,
-  right: Readonly<Record<string, string>>,
+  left: Readonly<Record<string, unknown>>,
+  right: Readonly<Record<string, unknown>>,
 ) => JSON.stringify(left) === JSON.stringify(right);
 
 const assertCurrentSource = (page: SourcePage, manifestPage: ManifestPage) => {
@@ -102,9 +121,15 @@ const assertCurrentSource = (page: SourcePage, manifestPage: ManifestPage) => {
     !recordsMatch(
       expectedSegmentHashes(page),
       manifestPage.segmentHashes,
+    ) ||
+    !recordsMatch(
+      expectedSegmentValidation(page),
+      manifestPage.segmentValidation,
     )
   ) {
-    throw new Error(`Source hashes are stale for ${page.mirrorPath}`);
+    throw new Error(
+      `Source hashes or validation metadata is stale for ${page.mirrorPath}`,
+    );
   }
 };
 
@@ -230,17 +255,12 @@ export const assertCleanBuildOutput = (output: string) => {
   }
 };
 
-const runDefaultBuild = (workspaceRoot: string) =>
+export const waitForBuildProcess = (child: ChildProcess) =>
   new Promise<void>((resolveBuild, rejectBuild) => {
-    const child = spawn(
-      process.platform === "win32" ? "pnpm.cmd" : "pnpm",
-      ["build"],
-      {
-        cwd: workspaceRoot,
-        stdio: ["ignore", "pipe", "pipe"],
-        windowsHide: true,
-      },
-    );
+    if (child.stdout === null || child.stderr === null) {
+      rejectBuild(new Error("Build process output pipes are unavailable"));
+      return;
+    }
     let stdout = "";
     let stderr = "";
     child.stdout.setEncoding("utf8");
@@ -252,7 +272,7 @@ const runDefaultBuild = (workspaceRoot: string) =>
       stderr += chunk;
     });
     child.once("error", rejectBuild);
-    child.once("exit", (code) => {
+    child.once("close", (code) => {
       if (code === 0) {
         try {
           assertCleanBuildOutput(`${stdout}\n${stderr}`);
@@ -269,6 +289,19 @@ const runDefaultBuild = (workspaceRoot: string) =>
       }
     });
   });
+
+const runDefaultBuild = (workspaceRoot: string) => {
+  const child = spawn(
+    process.platform === "win32" ? "pnpm.cmd" : "pnpm",
+    ["build"],
+    {
+      cwd: workspaceRoot,
+      stdio: ["ignore", "pipe", "pipe"],
+      windowsHide: true,
+    },
+  );
+  return waitForBuildProcess(child);
+};
 
 const checkMirrorUnlocked = async (
   config: MirrorConfig,
@@ -375,6 +408,12 @@ const checkMirrorUnlocked = async (
     if (actual !== expected) {
       throw new Error(`Rendered content is stale for ${page.mirrorPath}`);
     }
+    if (
+      manifestPage.renderedContentHash === null ||
+      sha256(actual) !== manifestPage.renderedContentHash
+    ) {
+      throw new Error(`Rendered content hash is stale for ${page.mirrorPath}`);
+    }
     renderedPages.set(page.mirrorPath, actual);
   }
   for (const manifestPage of pendingPages) {
@@ -385,6 +424,14 @@ const checkMirrorUnlocked = async (
     validateRetainedTranslation(manifestPage, translation);
     const markdown = actualContent.get(manifestPage.mirrorPath)!;
     assertNotice(manifestPage.mirrorPath, markdown);
+    if (
+      manifestPage.renderedContentHash === null ||
+      sha256(markdown) !== manifestPage.renderedContentHash
+    ) {
+      throw new Error(
+        `Retained content hash mismatch for ${manifestPage.mirrorPath}`,
+      );
+    }
     renderedPages.set(manifestPage.mirrorPath, markdown);
   }
 
@@ -423,7 +470,7 @@ const checkMirrorUnlocked = async (
 export const checkMirror = async (
   config: MirrorConfig,
 ): Promise<CheckResult> => {
-  validateMirrorConfigPaths(config);
+  await validateMirrorConfigPaths(config);
   return withWorkspaceLock(config.workspaceRoot, () => checkMirrorUnlocked(config));
 };
 

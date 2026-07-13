@@ -827,6 +827,116 @@ test("check revalidates retained pending-removal translation policy", async () =
   ).rejects.toThrow(/Korean characters/i);
 });
 
+test("check rejects stale active-page validation metadata", async () => {
+  const workspace = await fixtureWorkspace();
+  await prepareMirror(workspace.config);
+  await completeTranslations(workspace);
+  await applyMirror(workspace.config);
+  const manifest = await workspace.readManifest();
+  const page = manifest.pages["/docs/install/"]!;
+  const segmentId = Object.keys(page.segmentValidation)[0]!;
+  page.segmentValidation[segmentId]!.fencedCodeCount += 1;
+  await writeFile(
+    workspace.config.manifestPath,
+    `${JSON.stringify(manifest, null, 2)}\n`,
+    "utf8",
+  );
+
+  await expect(
+    checkMirror({ ...workspace.config, runBuild: async () => undefined }),
+  ).rejects.toThrow(/validation metadata is stale/i);
+});
+
+test("apply rejects altered public Markdown for a retained page", async () => {
+  const fixture = await prepareProtectedPendingPage();
+  const contentPath = join(
+    fixture.workspace.config.contentRoot,
+    "install",
+    "index.md",
+  );
+  await writeFile(
+    contentPath,
+    `${await readFile(contentPath, "utf8")}\nAltered retained content.\n`,
+    "utf8",
+  );
+
+  await expect(applyMirror(fixture.pendingConfig)).rejects.toThrow(
+    /retained content hash.*install/i,
+  );
+});
+
+test("check rejects altered public Markdown for a retained page", async () => {
+  const fixture = await prepareProtectedPendingPage();
+  await applyMirror(fixture.pendingConfig);
+  const contentPath = join(
+    fixture.workspace.config.contentRoot,
+    "install",
+    "index.md",
+  );
+  await writeFile(
+    contentPath,
+    `${await readFile(contentPath, "utf8")}\nAltered after promotion.\n`,
+    "utf8",
+  );
+
+  await expect(
+    checkMirror({ ...fixture.pendingConfig, runBuild: async () => undefined }),
+  ).rejects.toThrow(/retained content hash.*install/i);
+});
+
+test("retained translations preserve their fenced-code count", async () => {
+  const workspace = await fixtureWorkspace();
+  const client = workspace.config.client;
+  const codeConfig = {
+    ...workspace.config,
+    client: {
+      ...client,
+      text: async (url: URL) =>
+        url.pathname === "/docs/install"
+          ? `<!doctype html><main><article><h1>Install</h1>
+              <p>Run the installation command shown below.</p>
+              <pre><code class="language-sh">orca open</code></pre>
+            </article></main>`
+          : client.text(url),
+    },
+  };
+  await prepareMirror(codeConfig);
+  await completeTranslations(workspace);
+  await applyMirror(codeConfig);
+  const pendingConfig = {
+    ...codeConfig,
+    client: {
+      ...codeConfig.client,
+      text: async (url: URL) =>
+        url.pathname === "/sitemap.xml"
+          ? "<?xml version=\"1.0\"?><urlset><url><loc>https://www.onorca.dev/docs</loc></url></urlset>"
+          : codeConfig.client.text(url),
+    },
+  };
+  await prepareMirror(pendingConfig);
+  const translationPath = join(
+    workspace.config.translationRoot,
+    "install",
+    "index.json",
+  );
+  const translation = JSON.parse(
+    await readFile(translationPath, "utf8"),
+  ) as { entries: Record<string, { translated: string }> };
+  const codeEntry = Object.values(translation.entries).find(({ translated }) =>
+    translated.includes("```"),
+  )!;
+  codeEntry.translated = `${codeEntry.translated}\n\`\`\``;
+  await writeFile(
+    translationPath,
+    `${JSON.stringify(translation, null, 2)}\n`,
+    "utf8",
+  );
+
+  await expect(applyMirror(pendingConfig)).rejects.toThrow(
+    /fenced-code count/i,
+  );
+});
+
 test("verifies staged asset bytes before promotion", async () => {
   const workspace = await fixtureWorkspace();
   const client = workspace.config.client;
