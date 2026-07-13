@@ -175,10 +175,29 @@ const fixturePage = (title: string) => `<!doctype html>
 export const fixtureWorkspace = async () => {
   const root = await mkdtemp(join(tmpdir(), "orca-docs-ko-"));
   const manifestPath = join(root, "mirror", "source-manifest.json");
+  const contentRoot = join(root, "src", "content", "docs");
   const originalManifest = manifestFixture();
 
   await mkdir(join(root, "mirror"), { recursive: true });
+  await mkdir(contentRoot, { recursive: true });
   await writeFile(manifestPath, `${JSON.stringify(originalManifest, null, 2)}\n`);
+  await writeFile(
+    join(contentRoot, "404.md"),
+    `---
+title: "페이지를 찾을 수 없습니다"
+sourceUrl: https://www.onorca.dev/docs
+checkedAt: "${NOW}"
+draft: true
+translationNotice:
+  title: "비공식 한국어 번역"
+  message: "이 문서는 ORCA 공식 문서의 비공식 한국어 번역입니다. 내용이 다를 경우 원문이 우선합니다."
+  rights: "원본 문서와 이미지의 권리는 Lovecast Inc. 및 각 권리자에게 있습니다."
+---
+
+요청한 페이지를 찾을 수 없습니다.
+`,
+    "utf8",
+  );
 
   const sitemap = `<?xml version="1.0"?><urlset>
     <url><loc>https://www.onorca.dev/docs</loc></url>
@@ -201,7 +220,7 @@ export const fixtureWorkspace = async () => {
     translationRoot: join(root, "mirror", "translations"),
     jobRoot: join(root, ".mirror", "jobs"),
     stagingRoot: join(root, ".mirror", "staging"),
-    contentRoot: join(root, "src", "content", "docs"),
+    contentRoot,
     sidebarPath: join(root, "mirror", "sidebar.json"),
     assetRoot: join(root, "public", "assets", "mirror"),
     client,

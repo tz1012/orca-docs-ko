@@ -1,0 +1,337 @@
+import { randomUUID } from "node:crypto";
+import {
+  mkdir,
+  mkdtemp,
+  readFile,
+  rename,
+  rm,
+  stat,
+  writeFile,
+} from "node:fs/promises";
+import { basename, dirname, join, relative, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
+import { mirrorAssets } from "./assets.js";
+import { discoverDocs } from "./discover.js";
+import { extractPage } from "./extract.js";
+import { HttpClient } from "./http.js";
+import { writeTranslationJobs } from "./jobs.js";
+import {
+  SourceManifestSchema,
+  SourcePageSchema,
+  type SourceManifest,
+  type SourcePage,
+} from "./model.js";
+import { planChanges, type ChangePlan } from "./state.js";
+
+export const SUMMARY_KEYS = [
+  "discovered",
+  "added",
+  "updated",
+  "unchanged",
+  "pendingRemoval",
+  "removed",
+  "translatedSegments",
+  "localImages",
+  "remoteImages",
+] as const;
+
+export type MirrorSummary = Record<(typeof SUMMARY_KEYS)[number], number>;
+
+export type MirrorClient = {
+  text(url: URL): Promise<string>;
+  bytes(
+    url: URL,
+    maxBytes?: number,
+  ): Promise<{ body: Uint8Array; contentType: string | null }>;
+};
+
+export interface MirrorConfig {
+  origin: URL;
+  workspaceRoot: string;
+  manifestPath: string;
+  translationRoot: string;
+  jobRoot: string;
+  stagingRoot: string;
+  contentRoot: string;
+  sidebarPath: string;
+  assetRoot: string;
+  client: MirrorClient;
+  now?: () => string;
+  runBuild?: () => Promise<void>;
+}
+
+export interface PreparedSnapshot {
+  schemaVersion: 1;
+  robotsText: string;
+  discoveredUrls: string[];
+  failures: Array<{ sourceUrl: string; error: string }>;
+  baseManifest: SourceManifest;
+  plan: ChangePlan;
+}
+
+export interface PrepareResult extends MirrorSummary {
+  jobs: string[];
+}
+
+type Replacement = {
+  prepared: string;
+  target: string;
+};
+
+const errorCode = (error: unknown) =>
+  typeof error === "object" && error !== null && "code" in error
+    ? String(error.code)
+    : null;
+
+const exists = async (path: string) => {
+  try {
+    await stat(path);
+    return true;
+  } catch (error) {
+    if (errorCode(error) === "ENOENT") return false;
+    throw error;
+  }
+};
+
+export const replacePathsAtomically = async (
+  replacements: readonly Replacement[],
+) => {
+  const transaction = randomUUID();
+  const records: Array<{
+    backup: string;
+    installed: boolean;
+    movedOriginal: boolean;
+    prepared: string;
+    target: string;
+  }> = [];
+
+  try {
+    for (const replacement of replacements) {
+      await mkdir(dirname(replacement.target), { recursive: true });
+      const backup = join(
+        dirname(replacement.target),
+        `.${basename(replacement.target)}.${transaction}.backup`,
+      );
+      const record = {
+        ...replacement,
+        backup,
+        installed: false,
+        movedOriginal: false,
+      };
+      records.push(record);
+
+      if (await exists(replacement.target)) {
+        await rename(replacement.target, backup);
+        record.movedOriginal = true;
+      }
+      await rename(replacement.prepared, replacement.target);
+      record.installed = true;
+    }
+  } catch (error) {
+    for (const record of [...records].reverse()) {
+      if (record.installed) {
+        await rm(record.target, { recursive: true, force: true }).catch(
+          () => undefined,
+        );
+      }
+      if (record.movedOriginal) {
+        await rename(record.backup, record.target).catch(() => undefined);
+      }
+    }
+    throw error;
+  }
+
+  await Promise.all(
+    records.map(({ backup, movedOriginal }) =>
+      movedOriginal
+        ? rm(backup, { recursive: true, force: true })
+        : Promise.resolve(),
+    ),
+  );
+};
+
+const messageFor = (error: unknown) =>
+  error instanceof Error ? error.message : String(error);
+
+const summaryFor = (
+  discovered: number,
+  plan: ChangePlan,
+): MirrorSummary => {
+  const images = Object.values(plan.pages).flatMap((page) => page.images);
+  return {
+    discovered,
+    added: plan.add.length,
+    updated: plan.update.length,
+    unchanged: plan.unchanged.length,
+    pendingRemoval: plan.pendingRemoval.length,
+    removed: plan.remove.length,
+    translatedSegments: plan.translationSegmentIds.length,
+    localImages: images.filter((image) => image.localPath !== null).length,
+    remoteImages: images.filter((image) => image.robotsRemote).length,
+  };
+};
+
+export const summaryOnly = (value: MirrorSummary): MirrorSummary =>
+  Object.fromEntries(SUMMARY_KEYS.map((key) => [key, value[key]])) as MirrorSummary;
+
+const readManifest = async (path: string): Promise<SourceManifest> =>
+  SourceManifestSchema.parse(JSON.parse(await readFile(path, "utf8")));
+
+const makeTemporaryDirectory = async (target: string) => {
+  await mkdir(dirname(target), { recursive: true });
+  return mkdtemp(join(dirname(target), `.${basename(target)}.tmp-`));
+};
+
+export const snapshotPath = (stagingRoot: string) =>
+  join(stagingRoot, "snapshot.json");
+
+export const readPreparedSnapshot = async (
+  stagingRoot: string,
+): Promise<PreparedSnapshot> => {
+  const input = JSON.parse(
+    await readFile(snapshotPath(stagingRoot), "utf8"),
+  ) as PreparedSnapshot;
+  if (
+    input.schemaVersion !== 1 ||
+    !Array.isArray(input.discoveredUrls) ||
+    !Array.isArray(input.failures)
+  ) {
+    throw new Error("Invalid prepared mirror snapshot");
+  }
+
+  const pages = Object.fromEntries(
+    Object.entries(input.plan.pages).map(([path, page]) => [
+      path,
+      SourcePageSchema.parse(page),
+    ]),
+  );
+  return {
+    ...input,
+    baseManifest: SourceManifestSchema.parse(input.baseManifest),
+    plan: {
+      ...input.plan,
+      pages,
+      nextManifest: SourceManifestSchema.parse(input.plan.nextManifest),
+    },
+  };
+};
+
+export const prepareMirror = async (
+  config: MirrorConfig,
+): Promise<PrepareResult> => {
+  const manifest = await readManifest(config.manifestPath);
+  const discovery = await discoverDocs(config.client, config.origin);
+  if (discovery.pages.length === 0) {
+    throw new Error("Refusing to prepare an empty documentation sitemap");
+  }
+
+  const checkedAt = (config.now ?? (() => new Date().toISOString()))();
+  const fetched = await Promise.allSettled(
+    discovery.pages.map(async (entry) => ({
+      entry,
+      html: await config.client.text(entry.url),
+    })),
+  );
+  const failures = fetched.flatMap((result, index) =>
+    result.status === "rejected"
+      ? [
+          {
+            sourceUrl: discovery.pages[index]!.url.href,
+            error: messageFor(result.reason),
+          },
+        ]
+      : [],
+  );
+  if (failures.length / discovery.pages.length > 0.2) {
+    throw new Error(
+      `Refusing partial preparation: ${failures.length} of ${discovery.pages.length} page fetches failed`,
+    );
+  }
+
+  const temporaryStaging = await makeTemporaryDirectory(config.stagingRoot);
+  const temporaryJobs = await makeTemporaryDirectory(config.jobRoot);
+  try {
+    const pages: SourcePage[] = [];
+    for (const result of fetched) {
+      if (result.status === "rejected") continue;
+      const page = extractPage({
+        html: result.value.html,
+        sourceUrl: result.value.entry.url,
+        checkedAt,
+        sitemapLastmod: result.value.entry.lastmod,
+      });
+      pages.push(
+        await mirrorAssets(
+          page,
+          discovery.robotsText,
+          config.client,
+          join(temporaryStaging, "assets"),
+        ),
+      );
+    }
+
+    const plan = planChanges(manifest, pages, checkedAt);
+    const snapshot: PreparedSnapshot = {
+      schemaVersion: 1,
+      robotsText: discovery.robotsText,
+      discoveredUrls: discovery.pages.map(({ url }) => url.href),
+      failures,
+      baseManifest: manifest,
+      plan,
+    };
+    await writeFile(
+      snapshotPath(temporaryStaging),
+      `${JSON.stringify(snapshot, null, 2)}\n`,
+      "utf8",
+    );
+    const temporaryJobPaths = await writeTranslationJobs(plan, temporaryJobs);
+
+    await replacePathsAtomically([
+      { prepared: temporaryStaging, target: config.stagingRoot },
+      { prepared: temporaryJobs, target: config.jobRoot },
+    ]);
+
+    return {
+      ...summaryFor(discovery.pages.length, plan),
+      jobs: temporaryJobPaths.map((path) =>
+        join(config.jobRoot, relative(temporaryJobs, path)),
+      ),
+    };
+  } catch (error) {
+    await Promise.all([
+      rm(temporaryStaging, { recursive: true, force: true }),
+      rm(temporaryJobs, { recursive: true, force: true }),
+    ]);
+    throw error;
+  }
+};
+
+export const defaultMirrorConfig = (): MirrorConfig => {
+  const workspaceRoot = resolve(".");
+  return {
+    origin: new URL("https://www.onorca.dev"),
+    workspaceRoot,
+    manifestPath: resolve(workspaceRoot, "mirror", "source-manifest.json"),
+    translationRoot: resolve(workspaceRoot, "mirror", "translations"),
+    jobRoot: resolve(workspaceRoot, ".mirror", "jobs"),
+    stagingRoot: resolve(workspaceRoot, ".mirror", "staging"),
+    contentRoot: resolve(workspaceRoot, "src", "content", "docs"),
+    sidebarPath: resolve(workspaceRoot, "mirror", "sidebar.json"),
+    assetRoot: resolve(workspaceRoot, "public", "assets", "mirror"),
+    client: new HttpClient(),
+  };
+};
+
+const runCli = async () => {
+  const result = await prepareMirror(defaultMirrorConfig());
+  process.stdout.write(`${JSON.stringify(summaryOnly(result))}\n`);
+};
+
+const executedPath = process.argv[1] ? resolve(process.argv[1]) : null;
+if (executedPath === fileURLToPath(import.meta.url)) {
+  runCli().catch((error: unknown) => {
+    process.stderr.write(`${messageFor(error)}\n`);
+    process.exitCode = 1;
+  });
+}

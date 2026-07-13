@@ -10,7 +10,10 @@ export default defineConfig({
     defaultLocale: "ko",
     locales: { ko: { label: "한국어", lang: "ko" } },
     sidebar,
-    components: { PageTitle: "./src/components/PageTitle.astro" },
+    components: {
+      PageTitle: "./src/components/PageTitle.astro",
+      DraftContentNotice: "./src/components/DraftContentNotice.astro"
+    },
     customCss: ["./src/styles/custom.css"]
   })]
 });

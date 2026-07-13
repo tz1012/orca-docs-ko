@@ -1,0 +1,8 @@
+---
+import StarlightDraftContentNotice from "@astrojs/starlight/components/DraftContentNotice.astro";
+
+const entryId = Astro.locals.starlightRoute.entry.id;
+const isNotFoundEntry = entryId === "404" || entryId.endsWith("/404");
+---
+
+{!isNotFoundEntry && <StarlightDraftContentNotice />}

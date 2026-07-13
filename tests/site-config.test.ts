@@ -25,6 +25,19 @@ test("publishes the required source and rights metadata", async () => {
   );
 });
 
+test("provides an attributed Korean Starlight not-found entry", async () => {
+  const source = await readFile("src/content/docs/404.md", "utf8");
+
+  expect(source).toContain('title: "페이지를 찾을 수 없습니다"');
+  expect(source).toContain("draft: true");
+  expect(source).toContain("sourceUrl: https://www.onorca.dev/docs");
+  expect(source).toContain('checkedAt: "2026-07-13T01:34:57Z"');
+  expect(source).toContain("비공식 한국어 번역");
+  expect(source).toContain(
+    "원본 문서와 이미지의 권리는 Lovecast Inc. 및 각 권리자에게 있습니다.",
+  );
+});
+
 test(
   "renders whitespace between the checked-at label and time element",
   async () => {
@@ -36,10 +49,17 @@ test(
       new URL("../dist/index.html", import.meta.url),
       "utf8",
     );
+    const notFoundHtml = await readFile(
+      new URL("../dist/404.html", import.meta.url),
+      "utf8",
+    );
 
     expect(html).toContain(
       '마지막 확인: <time datetime="2026-07-13T01:34:57Z">',
     );
+    expect(notFoundHtml).toContain("페이지를 찾을 수 없습니다");
+    expect(notFoundHtml).toContain("비공식 한국어 번역");
+    expect(notFoundHtml).not.toContain("초안 상태");
   },
   30_000,
 );
