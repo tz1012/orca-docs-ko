@@ -6,7 +6,7 @@
 
 **Architecture:** A TypeScript pipeline discovers source pages from the sitemap, extracts stable translatable segments, mirrors allowed images, and creates translation jobs for the local Codex agent. Validated Korean translations render into an Astro Starlight site; GitHub Actions deploys verified main-branch commits to GitHub Pages.
 
-**Tech Stack:** Node.js 24, pnpm 11, TypeScript 7, Astro 7, Starlight 0.41, Cheerio, Turndown GFM, fast-xml-parser, robots-parser, Zod 4, Vitest 4, GitHub Actions, GitHub Pages, Codex local automations.
+**Tech Stack:** Node.js 24, pnpm 11, TypeScript 6, Astro 7, Starlight 0.41, Cheerio, Turndown GFM, fast-xml-parser, robots-parser, Zod 4, Vitest 4, GitHub Actions, GitHub Pages, Codex local automations.
 
 ## Global Constraints
 
@@ -108,7 +108,7 @@ Expected: FAIL because package.json and astro.config.mjs do not exist.
     "@types/node": "24.13.3",
     "@types/turndown": "5.0.6",
     "tsx": "4.23.0",
-    "typescript": "7.0.2",
+    "typescript": "6.0.3",
     "vitest": "4.1.10"
   }
 }
