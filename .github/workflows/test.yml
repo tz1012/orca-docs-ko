@@ -1,0 +1,30 @@
+name: Validate documentation mirror
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11.7.0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm check
+      # This deliberately checks the live upstream state. A changed or
+      # unreachable source must fail validation instead of deploying stale data.
+      - run: pnpm mirror:check
+      - run: pnpm build
