@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 참조"
 sourceUrl: https://www.onorca.dev/docs/cli/reference
-checkedAt: "2026-07-13T09:05:36.078Z"
+checkedAt: "2026-07-14T04:54:05.418Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/overview/
 next: /orca-docs-ko/docs/cli/orchestration/
@@ -45,7 +45,7 @@ orca worktree show --worktree branch:feature-name --json
 orca worktree show --worktree issue:123 --json
 ````
 
-`active` 및 `current`는 셸의 현재 디렉터리 또는 터미널 컨텍스트에서 바깥쪽 Orca 관리 작업 트리를 확인합니다. 대상 작업 트리 외부에서 실행될 수 있는 스크립트에서 명시적 선택기를 사용하십시오.
+`active` 및 `current`는 셸의 현재 디렉터리나 터미널 컨텍스트를 기준으로 이를 포함하는 Orca 관리 작업 트리로 해석됩니다. 대상 작업 트리 외부에서 실행될 수 있는 스크립트에서는 명시적 선택기를 사용합니다. 원격 런타임에서는 로컬 셸의 현재 디렉터리가 런타임 호스트에 존재하지 않을 수 있으므로 `id:<repoId>::<absolute-worktree-path>` 또는 `path:<absolute-server-path>`와 같은 전체 서버 측 선택기를 사용하는 것이 좋습니다.
 
 ## 런타임 명령
 

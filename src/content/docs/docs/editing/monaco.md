@@ -1,7 +1,7 @@
 ---
 title: "모나코 편집기 및 자동 저장"
 sourceUrl: https://www.onorca.dev/docs/editing/monaco
-checkedAt: "2026-07-13T09:05:36.078Z"
+checkedAt: "2026-07-14T04:54:05.418Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/jira/
 next: /orca-docs-ko/docs/editing/markdown/
@@ -26,6 +26,10 @@ Orca의 코드 편집기는 VS Code가 사용하는 것과 동일한 편집기�
 ## 보기 모드 변경
 
 편집기 탭에서 `Changes view mode`(보기 모드)를 전환하여 커서 위치를 벗어나지 않고 파일을 탭 내 HEAD-vs-working-tree diff로 뒤집습니다. [Diff 뷰어](/orca-docs-ko/docs/review/diff-viewer/)와 동일한 단축키 — `n`/`p` - 덩어리를 걷고, `s`를 스테이지로 이동합니다. 일반 파일 보기로 돌아가려면 다시 전환하세요.
+
+## 자동 줄 바꿈
+
+파일 편집기는 기본적으로 긴 줄을 자동으로 바꿉니다. 소스 파일을 가로로 스크롤하려면 [`Settings → General → Editor`(설정 → 일반 → 편집기)](/orca-docs-ko/docs/settings/)에서 `Editor Word Wrap`(편집기 자동 줄 바꿈)을 끕니다. 이 설정은 diff 편집기에만 적용되는 `Diff Word Wrap`(diff 자동 줄 바꿈)과 별개입니다.
 
 ## 미니맵
 

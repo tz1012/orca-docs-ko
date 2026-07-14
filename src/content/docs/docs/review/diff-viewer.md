@@ -1,7 +1,7 @@
 ---
 title: "차이점 뷰어"
 sourceUrl: https://www.onorca.dev/docs/review/diff-viewer
-checkedAt: "2026-07-13T09:05:36.078Z"
+checkedAt: "2026-07-14T04:54:05.418Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/hooks-memory/
 next: /orca-docs-ko/docs/review/annotate-ai-diff/
@@ -31,7 +31,8 @@ diff 단어 줄 바꿈이 켜져 있으면 긴 줄이 제자리에 배치되므�
 
 ## 키보드 단축키
 
-- `j` / `k` — 다음/이전 변경 파일.
-- `n` / `p` — 다음/이전 덩어리.
-- `s` — 커서 아래에 덩어리를 준비합니다.
-- `c` — 댓글을 시작합니다([AI Diff 주석 달기](/orca-docs-ko/docs/review/annotate-ai-diff/)).
+- `j` / `k` — 다음/이전 변경 파일로 이동합니다.
+- `n` / `p` — 다음/이전 변경 구간으로 이동합니다.
+- `F7` / `Shift+F7` — 활성 편집기의 다음/이전 변경 사항으로 이동합니다.
+- `s` — 커서가 있는 변경 구간을 스테이징합니다.
+- `c` — 댓글 작성을 시작합니다([`Annotate AI Diff`(AI diff 주석 달기)](/orca-docs-ko/docs/review/annotate-ai-diff/)).

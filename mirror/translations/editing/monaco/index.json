@@ -10,6 +10,14 @@
       "sourceHash": "27a421f65d7e236bb1aeff5c79bcf5b957f0e977373a87288e945458d69e7178",
       "translated": "ORCA_PROTECTED_0001의 코드 편집기는 VS Code가 사용하는 것과 동일한 편집기인 Monaco이며 몇 가지 ORCA_PROTECTED_0002 관련 수정 사항이 있습니다."
     },
+    "/docs/editing/monaco/:heading:word-wrap:0": {
+      "sourceHash": "c4233c098946610c43cf482644efd458bd506c2ce324fae3cc53567f075a5bbc",
+      "translated": "## 자동 줄 바꿈"
+    },
+    "/docs/editing/monaco/:paragraph:word-wrap:0": {
+      "sourceHash": "db5e9861c2320714039224ec84fe4e058234b5480d10a4bdb29d7880e7e375e1",
+      "translated": "파일 편집기는 기본적으로 긴 줄을 자동으로 바꿉니다. 소스 파일을 가로로 스크롤하려면 [`Settings → General → Editor`(설정 → 일반 → 편집기)](ORCA_PROTECTED_0001)에서 `Editor Word Wrap`(편집기 자동 줄 바꿈)을 끕니다. 이 설정은 diff 편집기에만 적용되는 `Diff Word Wrap`(diff 자동 줄 바꿈)과 별개입니다."
+    },
     "/docs/editing/monaco/:heading:autosave:0": {
       "sourceHash": "81a867e0ee77b97cb443ad720d26e1be0774a44f43fb75953d96ab85bdf11378",
       "translated": "## 자동 저장"

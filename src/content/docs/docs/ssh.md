@@ -1,7 +1,7 @@
 ---
 title: "SSH 작업 트리"
 sourceUrl: https://www.onorca.dev/docs/ssh
-checkedAt: "2026-07-13T09:05:36.078Z"
+checkedAt: "2026-07-14T04:54:05.418Z"
 editUrl: false
 prev: /orca-docs-ko/docs/terminal/
 next: /orca-docs-ko/docs/remote-servers/
@@ -51,6 +51,8 @@ SSH 원격 작업 공간 — 에이전트는 원격 호스트에서 실행되고
 ## 원격 파일 다운로드 중
 
 SSH 작업 트리의 파일 탐색기에서 파일을 마우스 오른쪽 버튼으로 클릭하고 `Download`(다운로드)를 선택하여 노트북에 복사합니다. Orca은 기본 저장 대화 상자를 열어 저장 위치를 ​​선택할 수 있도록 합니다. 이는 데스크톱 전용 작업입니다. 웹 클라이언트는 Electron의 저장 대화 상자에 의존하기 때문에 다운로드를 노출하지 않습니다.
+
+SSH 대상이 시스템 SSH를 사용하는 경우 Orca은 별도의 동기화 도구 없이 동일한 공급자를 통해 파일을 전송합니다. 다운로드는 파일에만 사용할 수 있으므로 디렉터리는 먼저 압축하거나 터미널에서 복사해야 합니다.
 
 ## 포트 포워딩
 

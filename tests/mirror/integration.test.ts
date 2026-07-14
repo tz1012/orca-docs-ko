@@ -383,6 +383,61 @@ test("rejects an unreferenced asset before promotion", async () => {
   expect(await workspace.readManifest()).toEqual(workspace.originalManifest);
 });
 
+test("removes a previously mirrored asset after its source image changes", async () => {
+  const workspace = await fixtureWorkspace();
+  const client = workspace.config.client;
+  const originalConfig = {
+    ...workspace.config,
+    client: {
+      ...client,
+      text: async (url: URL) =>
+        url.pathname === "/docs/install"
+          ? `<!doctype html><main><article><h1>Install</h1>
+              <p>Read the documentation.</p><img src="/old.png" alt="Allowed">
+            </article></main>`
+          : client.text(url),
+    },
+  };
+  await prepareMirror(originalConfig);
+  await completeTranslations(workspace);
+  await applyMirror(originalConfig);
+  const [oldAsset] = await readdir(workspace.config.assetRoot);
+
+  const updatedConfig = {
+    ...originalConfig,
+    client: {
+      ...originalConfig.client,
+      text: async (url: URL) =>
+        url.pathname === "/docs/install"
+          ? `<!doctype html><main><article><h1>Install</h1>
+              <p>Read the documentation.</p><img src="/new.png" alt="Allowed">
+            </article></main>`
+          : client.text(url),
+      bytes: async (url: URL) =>
+        url.pathname === "/new.png"
+          ? {
+              body: new Uint8Array([1, 2, 3, 4]),
+              contentType: "image/png",
+            }
+          : client.bytes(url),
+    },
+  };
+  await prepareMirror(updatedConfig);
+  await completeTranslations(workspace);
+  const [newAsset] = await readdir(
+    join(workspace.config.stagingRoot, "assets"),
+  );
+
+  await applyMirror(updatedConfig);
+
+  await expect(
+    stat(join(workspace.config.assetRoot, oldAsset!)),
+  ).rejects.toMatchObject({ code: "ENOENT" });
+  await expect(readdir(workspace.config.assetRoot)).resolves.toEqual([
+    newAsset,
+  ]);
+});
+
 test("check rejects an unreferenced asset before running the build", async () => {
   const workspace = await fixtureWorkspace();
   await prepareMirror(workspace.config);

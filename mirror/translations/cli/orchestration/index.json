@@ -51,8 +51,8 @@
       "translated": "터미널 핸들은 직접 오케스트레이션 메시지의 주소입니다. 그룹 주소도 지원됩니다."
     },
     "/docs/cli/orchestration/:code:see-who-can-work:1": {
-      "sourceHash": "6a414b06ea70cc3e7203c5f6d083e673bf4b90b9269cdb383a16f1bf036ab4cc",
-      "translated": "````\nORCA_PROTECTED_0001\n````"
+      "sourceHash": "5c1e9e48f6bb4f48c7317bc53111708fa889e97368353fb32301f87a7a7f8ec4",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/orchestration/:paragraph:see-who-can-work:1": {
       "sourceHash": "fe276a87247940ab3e6574563466649cdd63174ff1e507582bbe4ca9ae20d560",

@@ -1,7 +1,7 @@
 ---
 title: "오케스트레이션"
 sourceUrl: https://www.onorca.dev/docs/cli/orchestration
-checkedAt: "2026-07-13T09:05:36.078Z"
+checkedAt: "2026-07-14T04:54:05.418Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/reference/
 next: /orca-docs-ko/docs/cli/automations/
@@ -44,13 +44,15 @@ orca orchestration inbox --limit 20 --json
 
 터미널 핸들은 직접 오케스트레이션 메시지의 주소입니다. 그룹 주소도 지원됩니다.
 
-````
+```
 orca orchestration send --to @all --subject "Heads up" --body "Pausing dispatches for a review." --json
 orca orchestration send --to @idle --subject "Anyone free?" --json
 orca orchestration send --to @codex --subject "Codex agents only" --json
+orca orchestration send --to @cursor --subject "Cursor agents only" --json
+orca orchestration send --to @grok --subject "Grok agents only" --json
 orca orchestration send --to @droid --subject "Droid agents only" --json
 orca orchestration send --to @worktree:<worktreeId> --subject "Worktree update" --json
-````
+```
 
 PowerShell에서는 `--to "@all"`과 같은 그룹 주소를 인용하세요.
 

@@ -47,8 +47,8 @@
       "translated": "둥지를 나눕니다. 왼쪽에는 에이전트 터미널, 오른쪽 상단에는 차이점 보기, 오른쪽 하단에는 브라우저 탭이 모두 한 번에 있을 수 있습니다."
     },
     "/docs/model/tabs-panes-splits/:figure:split-panes:0": {
-      "sourceHash": "586a9f59246673e652def028a72144be132945ab022a0e799f8813fbedc8eea6",
-      "translated": "![모든 탭 유형은 다른 탭 유형과 분할될 수 있습니다. 에이전트 터미널, 차이점, 브라우저, 편집기, PR 보기는 모두 하나의 창 트리에 공존합니다.](ORCA_PROTECTED_0001)\n\n모든 탭 유형은 다른 탭 유형과 분할될 수 있습니다. 상담원 터미널, 차이점, 브라우저, 편집기, PR 보기가 모두 하나의 창 트리에 공존합니다."
+      "sourceHash": "99c51d5920cead018388f7d81f185cf38ab652f78ea7320e58f5af5a93799496",
+      "translated": "![모든 탭 유형은 다른 모든 탭 유형과 함께 분할할 수 있으며 에이전트 터미널, diff, 브라우저, 편집기, PR 보기가 하나의 창 트리에 함께 표시됩니다.](ORCA_PROTECTED_0001)\n\n모든 탭 유형은 다른 모든 탭 유형과 함께 분할할 수 있으며 에이전트 터미널, diff, 브라우저, 편집기, PR 보기가 하나의 창 트리에 함께 표시됩니다."
     },
     "/docs/model/tabs-panes-splits/:paragraph:split-panes:2": {
       "sourceHash": "1799c15f4b308e30e37bbeebc621c605e46207bb11a5ee28db040d4ac90660f5",

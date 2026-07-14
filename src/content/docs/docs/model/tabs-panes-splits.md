@@ -1,7 +1,7 @@
 ---
 title: "탭, 창 및 분할 레이아웃"
 sourceUrl: https://www.onorca.dev/docs/model/tabs-panes-splits
-checkedAt: "2026-07-13T09:05:36.078Z"
+checkedAt: "2026-07-14T04:54:05.418Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/worktrees/
 next: /orca-docs-ko/docs/model/agents-sessions/
@@ -37,9 +37,9 @@ Orca의 창 시스템은 컨텍스트를 잃지 않고 여러 에이전트의 �
 
 둥지를 나눕니다. 왼쪽에는 에이전트 터미널, 오른쪽 상단에는 차이점 보기, 오른쪽 하단에는 브라우저 탭이 모두 한 번에 있을 수 있습니다.
 
-![모든 탭 유형은 다른 탭 유형과 분할될 수 있습니다. 에이전트 터미널, 차이점, 브라우저, 편집기, PR 보기는 모두 하나의 창 트리에 공존합니다.](/orca-docs-ko/assets/mirror/50c261f4d1dd24f19fc03cf01a9560e94d09e9f783cfdd03eab93ed21917ec7a.png)
+![모든 탭 유형은 다른 모든 탭 유형과 함께 분할할 수 있으며 에이전트 터미널, diff, 브라우저, 편집기, PR 보기가 하나의 창 트리에 함께 표시됩니다.](/orca-docs-ko/assets/mirror/10dd46b44c9e2bdf4975660d982218e4c0f629c0fbdaf73bacefebaf55612e04.webp)
 
-모든 탭 유형은 다른 탭 유형과 분할될 수 있습니다. 상담원 터미널, 차이점, 브라우저, 편집기, PR 보기가 모두 하나의 창 트리에 공존합니다.
+모든 탭 유형은 다른 모든 탭 유형과 함께 분할할 수 있으며 에이전트 터미널, diff, 브라우저, 편집기, PR 보기가 하나의 창 트리에 함께 표시됩니다.
 
 터미널 탭은 탭 내부에서 분할될 수도 있습니다. `Split terminal right`(터미널을 오른쪽으로 분할) 또는 `Split terminal down`(터미널을 아래로 분할)하려면 터미널 탭 메뉴를 사용하거나 오른쪽으로 분할하려면 활성 터미널 창 헤더에 있는 분할 버튼을 사용하세요.
 

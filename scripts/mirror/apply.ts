@@ -395,6 +395,11 @@ const applyMirrorUnlocked = async (
   }
 
   const nextManifestPages = Object.values(snapshot.plan.nextManifest.pages);
+  const expectedAssets = nextManifestPages
+    .flatMap((page) => page.images)
+    .flatMap((image) =>
+      image.localPath === null ? [] : [basename(image.localPath)],
+    );
   const committedPaths = nextManifestPages.map((page) => page.mirrorPath);
   const transitionalPages = [
     ...Object.values(currentManifest.pages),
@@ -463,6 +468,25 @@ const applyMirrorUnlocked = async (
     if (await pathExists(stagedAssets)) {
       await cp(stagedAssets, temporaryAssets, { recursive: true });
     }
+    const expectedAssetSet = new Set(expectedAssets);
+    const staleAssets = Object.values(currentManifest.pages)
+      .flatMap((page) => page.images)
+      .flatMap((image) =>
+        image.localPath === null ? [] : [basename(image.localPath)],
+      )
+      .filter((filename) => !expectedAssetSet.has(filename));
+    await Promise.all(
+      [...new Set(staleAssets)].map((filename) =>
+        rm(
+          resolveWithin(
+            temporaryAssets,
+            join(temporaryAssets, filename),
+            `stale asset path for ${filename}`,
+          ),
+          { force: true },
+        ),
+      ),
+    );
 
     for (const mirrorPath of transitionalPaths) {
       await Promise.all([
@@ -551,11 +575,6 @@ const applyMirrorUnlocked = async (
         ),
       ]),
     );
-    const expectedAssets = nextManifestPages
-      .flatMap((page) => page.images)
-      .flatMap((image) =>
-        image.localPath === null ? [] : [basename(image.localPath)],
-      );
     await assertExactInventory(
       "Asset",
       temporaryAssets,

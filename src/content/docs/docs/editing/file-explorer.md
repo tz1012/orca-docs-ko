@@ -1,7 +1,7 @@
 ---
 title: "파일 탐색기 및 외부 드래그-드롭"
 sourceUrl: https://www.onorca.dev/docs/editing/file-explorer
-checkedAt: "2026-07-13T09:05:36.078Z"
+checkedAt: "2026-07-14T04:54:05.418Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/viewers/
 next: /orca-docs-ko/docs/browser/overview/

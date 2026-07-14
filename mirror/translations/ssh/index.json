@@ -74,6 +74,10 @@
       "sourceHash": "ebea57ab7b609f4b5c04f534073e79ed35cd63c27e1b20353e0453441622e9b4",
       "translated": "SSH 작업 트리의 파일 탐색기에서 파일을 마우스 오른쪽 버튼으로 클릭하고 `Download`(다운로드)를 선택하여 노트북에 복사합니다. ORCA_PROTECTED_0001은 기본 저장 대화 상자를 열어 저장 위치를 ​​선택할 수 있도록 합니다. 이는 데스크톱 전용 작업입니다. 웹 클라이언트는 Electron의 저장 대화 상자에 의존하기 때문에 다운로드를 노출하지 않습니다."
     },
+    "/docs/ssh/:paragraph:downloading-remote-files:1": {
+      "sourceHash": "081c69499e87b122389a908a8bcb5fdba2917c8ea45de0f0bc3e85da34b782a6",
+      "translated": "SSH 대상이 시스템 SSH를 사용하는 경우 ORCA_PROTECTED_0001은 별도의 동기화 도구 없이 동일한 공급자를 통해 파일을 전송합니다. 다운로드는 파일에만 사용할 수 있으므로 디렉터리는 먼저 압축하거나 터미널에서 복사해야 합니다."
+    },
     "/docs/ssh/:heading:port-forwarding:0": {
       "sourceHash": "cbb923c4f1af6e793423bd1055ca2df4c9fa5392b9532c3d5ba05db813b67f76",
       "translated": "## 포트 포워딩"

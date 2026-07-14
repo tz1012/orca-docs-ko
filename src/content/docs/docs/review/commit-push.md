@@ -1,7 +1,7 @@
 ---
 title: "Orca에서 커밋 및 푸시"
 sourceUrl: https://www.onorca.dev/docs/review/commit-push
-checkedAt: "2026-07-13T09:05:36.078Z"
+checkedAt: "2026-07-14T04:54:05.418Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/attribution/
 next: /orca-docs-ko/docs/review/github/

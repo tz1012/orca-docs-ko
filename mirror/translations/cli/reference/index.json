@@ -51,8 +51,8 @@
       "translated": "````\nORCA_PROTECTED_0001\n````"
     },
     "/docs/cli/reference/:paragraph:selectors:1": {
-      "sourceHash": "f063846d25405c9fff47e716726c0a404ddf2572c88e984bc8203505d39017a4",
-      "translated": "`ORCA_PROTECTED_0001` 및 `ORCA_PROTECTED_0002`는 셸의 현재 디렉터리 또는 터미널 컨텍스트에서 바깥쪽 ORCA_PROTECTED_0003 관리 작업 트리를 확인합니다. 대상 작업 트리 외부에서 실행될 수 있는 스크립트에서 명시적 선택기를 사용하십시오."
+      "sourceHash": "30594917e17317660a628c3bcafd4e8b0bdbe23d574920583f30d0ab7d5bfaf8",
+      "translated": "`ORCA_PROTECTED_0001` 및 `ORCA_PROTECTED_0002`는 셸의 현재 디렉터리나 터미널 컨텍스트를 기준으로 이를 포함하는 ORCA_PROTECTED_0003 관리 작업 트리로 해석됩니다. 대상 작업 트리 외부에서 실행될 수 있는 스크립트에서는 명시적 선택기를 사용합니다. 원격 런타임에서는 로컬 셸의 현재 디렉터리가 런타임 호스트에 존재하지 않을 수 있으므로 `ORCA_PROTECTED_0004` 또는 `ORCA_PROTECTED_0005`와 같은 전체 서버 측 선택기를 사용하는 것이 좋습니다."
     },
     "/docs/cli/reference/:heading:runtime-commands:0": {
       "sourceHash": "173f67b66091bda5996e57dbf91045ea144a4e222b0bafaf3e5207700c7eb43a",
