@@ -22,6 +22,10 @@
       "sourceHash": "96176a030477c37dae40179df7241f92ae9735ca2dcc2acafe936a930e3d4f81",
       "translated": "터미널은 단순한 탭입니다. [탭, 창 및 분할 레이아웃](ORCA_PROTECTED_0001)을 참조하세요. 터미널 창을 분할하면 두 개의 셸이 나란히 제공됩니다."
     },
+    "/docs/terminal/:paragraph:panes-tabs:1": {
+      "sourceHash": "948cf965e5fbc2324e632c2bc59dfb50df1043216271e95beb6dc3615ffe26e4",
+      "translated": "에이전트 터미널 탭에는 에이전트 ID와 실시간 상태(작업 중, 입력 대기 중, 완료 또는 완료 후 미확인)가 함께 표시됩니다."
+    },
     "/docs/terminal/:heading:search:0": {
       "sourceHash": "62c53ea4911e0c798f817b7767cc46f15ba8aef089fe3921b0d7adee26e954a1",
       "translated": "## 검색"

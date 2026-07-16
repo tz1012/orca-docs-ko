@@ -19,16 +19,16 @@
       "translated": "![ORCA_PROTECTED_0001 모바일 — 상담원 상태, 스크롤백 및 휴대전화를 통한 빠른 응답.](ORCA_PROTECTED_0002)\n\nORCA_PROTECTED_0003 모바일 — 상담원 상태, 스크롤백 및 전화기를 통한 빠른 응답."
     },
     "/docs/mobile/:aside:mobile-companion:0": {
-      "sourceHash": "228c7ae7275f36fd1f2b2d1b8dbbb5f3e68607e84f38b0b4e8a09d6841052b0e",
-      "translated": "베타\n\n모바일 컴패니언은 베타 버전입니다. [App Store](ORCA_PROTECTED_0001)에서 iOS를 설치하거나, ​​[TestFlight 미리보기 채널](ORCA_PROTECTED_0002)에 가입하거나, [현재 APK 0.0.27](ORCA_PROTECTED_0003)에서 Android를 설치하세요."
+      "sourceHash": "47b070ac6da08f2e4dc642ad96553bd4d4ef06f873a4a8aa978de2a4f1d2b2df",
+      "translated": "베타\n\n모바일 컴패니언은 베타입니다. [App Store](ORCA_PROTECTED_0001)에서 iOS를 설치하거나, [TestFlight 미리보기 채널](ORCA_PROTECTED_0002)에 참여하거나, [현재 APK 0.0.31](ORCA_PROTECTED_0003)에서 Android를 설치합니다."
     },
     "/docs/mobile/:heading:what-you-can-do-from-mobile:0": {
       "sourceHash": "6b898c2b338d338615017ae7609521db174b0dc7437c980580647e0a58e4d9f0",
       "translated": "## 모바일에서 할 수 있는 일"
     },
     "/docs/mobile/:list:what-you-can-do-from-mobile:0": {
-      "sourceHash": "1e6f82590f55260d23372107e33841902e9424c5cb6429e99aa3b1a9a8c80a07",
-      "translated": "- 모든 작업 트리, 해당 에이전트 및 현재 상태(작업/완료/입력 대기)를 확인하세요. 모바일은 연결된 모든 호스트(로컬 데스크톱 및 원격 ORCA_PROTECTED_0001 서버)의 작업 트리를 단일 보기에 나열하므로 호스트 간 전환 시 장치 변경이 필요하지 않습니다.\n- 깊게 중첩된 경로를 포함하여 모바일에서 작업 공간의 전체 파일 트리를 탐색하므로 데스크탑을 기다리지 않고 어떤 파일로든 이동할 수 있습니다.\n- 최근 터미널 스크롤백을 수화하여 상담원이 수행하거나 요청한 내용을 읽을 수 있습니다.\n- 모바일 단말기 보기에서 텍스트를 선택하고, 복사하고, 붙여넣습니다. 선택하려면 길게 누르고, 답장에 다시 붙여넣으려면 시트를 공유하세요.\n- `ORCA_PROTECTED_0002` 및 `ORCA_PROTECTED_0003`을 포함하여 휴대폰 키보드에서 어색한 키에 대해 터미널 액세서리 행을 사용하거나, 입력한 각 문자가 활성 터미널로 바로 이동해야 하는 경우 `Live`(실시간)로 전환하세요.\n- 상담원이 입력 대기 중일 때 짧은 답장(`ORCA_PROTECTED_0004`, `ORCA_PROTECTED_0005`, 자유 텍스트)을 보내거나, 사진이나 파일을 첨부하거나, 마이크를 탭하여 응답을 받아쓰세요. `Live`(실시간) 모드에서는 Return 키를 누르지 않고도 받아쓰기 텍스트가 활성 터미널에 삽입됩니다.\n- 휴대폰에서 반응형 페이지를 확인해야 하는 경우 `Web`(웹) 또는 `Mobile`(모바일) 보기에서 브라우저 세션을 엽니다.\n- 작업 트리에 대한 오픈 소스 제어를 통해 변경된 파일을 검토하고, 스테이지 또는 언스테이징하고, 휴대폰에서 커밋할 수 있습니다.\n- 활성 에이전트 계정을 전환하고 이동 중에도 사용량/비율 제한 상태를 확인하세요.\n- 에이전트가 완료되면 [데스크톱 알림](ORCA_PROTECTED_0006)을 미러링하여 푸시 알림을 받습니다."
+      "sourceHash": "837ab22bd7ab910d8fc0ed4a94d27dcc8b02f7830f6f2af49937f176332295c8",
+      "translated": "- 모든 작업 트리와 해당 에이전트, 현재 상태(작업 중/완료/입력 대기)를 확인합니다. 모바일은 연결된 모든 호스트(로컬 데스크톱과 원격 ORCA_PROTECTED_0001 서버)의 작업 트리를 한 화면에 표시하므로 장치를 바꾸지 않고 호스트 사이를 전환할 수 있습니다.\n- 깊게 중첩된 경로를 포함하여 작업 공간의 전체 파일 트리를 모바일에서 탐색하고, 데스크톱을 기다리지 않고 원하는 파일로 이동합니다.\n- 최근 터미널 스크롤백을 불러와 에이전트가 수행하거나 요청한 내용을 확인합니다.\n- 모바일 터미널 보기에서 텍스트를 선택하고 복사하여 붙여넣습니다. 길게 눌러 선택하고 공유 시트를 통해 답변에 다시 붙여넣습니다.\n- `ORCA_PROTECTED_0002` 및 `ORCA_PROTECTED_0003`처럼 휴대폰 키보드에서 입력하기 불편한 키는 터미널 보조 키 행을 사용합니다. 입력하는 각 문자를 활성 터미널로 바로 보내려면 `Live`(실시간)로 전환합니다.\n- 에이전트가 입력을 기다릴 때 짧은 답변(`ORCA_PROTECTED_0004`, `ORCA_PROTECTED_0005`, 자유 텍스트)을 보내거나 사진 또는 파일을 첨부하고, 마이크를 탭해 응답을 받아씁니다. `Live`(실시간) 모드에서는 Return 키를 대신 누르지 않고 받아쓴 텍스트만 활성 터미널에 삽입합니다.\n- 휴대폰에서 반응형 페이지를 확인해야 할 때 `Web`(웹) 또는 `Mobile`(모바일) 보기로 브라우저 세션을 엽니다.\n- 작업 트리의 `Source Control`(소스 제어)을 열어 변경된 파일을 검토하고 스테이징하거나 스테이징 해제하며, 휴대폰에서 커밋합니다.\n- 활성 에이전트 계정을 전환하고 이동 중에도 사용량과 속도 제한 상태를 확인합니다.\n- 데스크톱과 동일한 Smart 소스 모드인 `Smart`(스마트), `ORCA_PROTECTED_0006`, `ORCA_PROTECTED_0007`, `GitLab`, `Branch`(브랜치), `Name`(이름)을 사용하여 모바일에서 작업 공간을 만듭니다.\n- 에이전트가 완료되면 [데스크톱 알림](ORCA_PROTECTED_0008)을 미러링한 푸시 알림을 받습니다."
     },
     "/docs/mobile/:paragraph:what-you-can-do-from-mobile:0": {
       "sourceHash": "7d17c070369ff13c325d1304f93b94b8435c00199fc3a0408cff68ff7f5f1883",
@@ -51,8 +51,16 @@
       "translated": "## 계정 전환기"
     },
     "/docs/mobile/:paragraph:account-switcher:0": {
-      "sourceHash": "61f64582af0c080d83a42bf8e7e220a740764da363bc03a32a73319098050d79",
-      "translated": "모바일 앱은 비활성 계정에 대한 인라인 사용을 포함하여 데스크톱 상태 표시줄과 동일한 계정 전환기를 노출합니다. 여기에서 전환하면 페어링된 데스크톱이 켜집니다."
+      "sourceHash": "609b06969d47ee54bb864434400fba1752e4cc38b05f6b0ade1b6072ce2d370b",
+      "translated": "모바일 앱은 비활성 계정의 사용량도 인라인으로 보여 주는, 데스크톱 상태 표시줄과 동일한 계정 전환기를 제공합니다. 공급자가 세션 또는 주간 사용량의 재설정 타임스탬프를 보고하면 계정 화면에 재설정까지 남은 시간이 표시됩니다. 여기에서 계정을 전환하면 페어링된 데스크톱에서도 전환됩니다."
+    },
+    "/docs/mobile/:heading:create-a-workspace:0": {
+      "sourceHash": "7ea073356d5678f8d7645465d762818f9609f89769b119a4bcf720c7d30c7d34",
+      "translated": "## 작업 공간 만들기"
+    },
+    "/docs/mobile/:paragraph:create-a-workspace:0": {
+      "sourceHash": "c945d15a6c3cab39b43eb81cc9b5c5d0b9961fa3ef7251cb83803551134d686a",
+      "translated": "모바일 홈 화면에서 `Create Workspace`(작업 공간 만들기)를 열고 소스 모드를 선택합니다. `Smart`(스마트)는 지원되는 작업 공급자와 브랜치를 모두 검색하며, 공급자별 모드는 생성 범위를 ORCA_PROTECTED_0001, ORCA_PROTECTED_0002, GitLab, 특정 브랜치 또는 일반 작업 공간 이름으로 좁힙니다. 소스를 선택한 후 `Advanced`(고급)에서 이름과 브랜치 설정을 조정하고 페어링된 데스크톱에 작업 공간을 만듭니다."
     },
     "/docs/mobile/:heading:source-control-on-mobile:0": {
       "sourceHash": "9e0650f80cbc46fce5959aaa44675b214de28cf5ae0600dd6ead7291260fe96f",

@@ -1,7 +1,7 @@
 ---
 title: "Orca 기술 레지스트리 및 MCP"
 sourceUrl: https://www.onorca.dev/docs/cli/skills
-checkedAt: "2026-07-14T04:54:05.418Z"
+checkedAt: "2026-07-16T01:03:39.973Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/worktree-checkpoints/
 next: /orca-docs-ko/docs/mobile/
@@ -34,6 +34,18 @@ npx skills add https://github.com/stablyai/orca --skill orca-cli
 ````
 
 설치 후 에이전트에는 작업 트리, 터미널 및 브라우저 등 모든 Orca CLI 명령을 설명하는 `SKILL.md`이 있습니다.
+
+## Orca CLI에서 가이드 읽기
+
+Orca CLI를 사용할 수 있다면 번들 가이드 명령을 사용하여 해당 Orca 버전에 맞는 스킬 텍스트를 읽습니다:
+
+```
+orca skills list
+orca skills get orca-cli
+orca skills get orchestration --full
+```
+
+에이전트가 자동화를 위해 결정적인 출력이 필요한 경우 두 명령 중 하나에 `--json`을 추가합니다. `skills show`는 `skills get`의 별칭으로도 사용할 수 있습니다.
 
 ## 오케스트레이션
 

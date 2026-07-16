@@ -1,7 +1,7 @@
 ---
 title: "리치 마크다운 편집기"
 sourceUrl: https://www.onorca.dev/docs/editing/markdown
-checkedAt: "2026-07-14T04:54:05.418Z"
+checkedAt: "2026-07-16T01:03:39.973Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/monaco/
 next: /orca-docs-ko/docs/editing/viewers/
@@ -37,7 +37,7 @@ Orca의 풍부한 편집기에서 마크다운을 검토할 때 원시 마크다
 
 ## 머리말
 
-YAML 및 TOML 머리말은 기본적으로 렌더링된 편집기에서 숨겨지므로 에이전트가 생성한 문서와 정적 사이트 게시물은 메타데이터 펜스 없이 더 깔끔하게 읽을 수 있습니다. 편집기의 `More actions`(추가 작업)(`…`) 메뉴를 열고 보거나 편집해야 할 경우 `Show front matter`(머리말 표시)를 선택하세요. 동일한 메뉴를 사용하면 다시 `Hide front matter`(Hide 머리글)로 전환됩니다. 토글은 파일별로 이루어지므로 한 문서에 표시해도 나머지 문서에는 표시되지 않습니다.
+YAML 및 TOML 프런트매터는 기본적으로 리치 편집기와 렌더링된 미리 보기에 표시되므로 문서와 정적 사이트 게시물은 원시 마크다운으로 전환하지 않아도 메타데이터를 보여 줍니다. 본문만 보려면 편집기의 `More actions`(추가 작업)(`…`) 메뉴를 열고 `Hide front matter`(프런트매터 숨기기)를 선택합니다. 같은 메뉴에서 `Show front matter`(프런트매터 표시)를 선택하면 다시 표시됩니다. 이 설정은 파일별로 적용되므로 한 문서에서 숨겨도 다른 문서에는 영향을 주지 않습니다.
 
 ## 목차
 

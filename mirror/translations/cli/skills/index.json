@@ -101,6 +101,22 @@
     "/docs/cli/skills/:paragraph:mcp-servers:0": {
       "sourceHash": "1018f79b6940e7cc5ae71d415689fdc7ad5fa1c4178f56b697afc8a681426ba1",
       "translated": "MCP(모델 컨텍스트 프로토콜) 서버는 외부 도구를 호환 가능한 에이전트에 노출합니다. [설정 → 통합 → MCP](ORCA_PROTECTED_0001)에서 MCP 엔드포인트를 등록합니다. 이러한 도구는 MCP를 지원하는 에이전트 CLI 내부에 나타납니다."
+    },
+    "/docs/cli/skills/:heading:read-the-guides-from-the-orca-cli:0": {
+      "sourceHash": "3922a8a009428a53cd52a76905ce7c5a10544cf8548759fd07e8af0830af8d50",
+      "translated": "## ORCA_PROTECTED_0001 CLI에서 가이드 읽기"
+    },
+    "/docs/cli/skills/:paragraph:read-the-guides-from-the-orca-cli:0": {
+      "sourceHash": "a7bbec601c79506fb62a38dee2418e33a0be0c2e5a9c7d3a065ff44b2964cdac",
+      "translated": "ORCA_PROTECTED_0001 CLI를 사용할 수 있다면 번들 가이드 명령을 사용하여 해당 ORCA_PROTECTED_0002 버전에 맞는 스킬 텍스트를 읽습니다:"
+    },
+    "/docs/cli/skills/:code:read-the-guides-from-the-orca-cli:0": {
+      "sourceHash": "84a5a4443ade5452ea6e0789cb97d73c94ededbfb71acd75098b74c446ec1947",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/skills/:paragraph:read-the-guides-from-the-orca-cli:1": {
+      "sourceHash": "1c4ed5c6b582c6e0b2c29abcf7c48a78001593311b2bfd3b0f68c2b7ef61476b",
+      "translated": "에이전트가 자동화를 위해 결정적인 출력이 필요한 경우 두 명령 중 하나에 `ORCA_PROTECTED_0001`을 추가합니다. `ORCA_PROTECTED_0002`는 `ORCA_PROTECTED_0003`의 별칭으로도 사용할 수 있습니다."
     }
   }
 }

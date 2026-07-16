@@ -35,8 +35,8 @@
       "translated": "결과는 다음과 같습니다:"
     },
     "/docs/model/quick-open/:list:worktree-jump-palette-cmd-j:0": {
-      "sourceHash": "3a247662dfd30f74386aab214d8afe7dfe0c64e4f62c67abe9adad1b9b74b26c",
-      "translated": "- `Recent Worktrees`(최근 작업 트리) — 마지막 포커스를 기준으로 정렬된 빈 쿼리가 있는 상단 섹션으로, 목록을 계속 검색할 수 있도록 제한되어 있습니다.\n- 프로젝트 및 저장소 그룹을 통해 이름을 기준으로 사이드바 섹션으로 이동할 수 있습니다.\n- 입력을 시작하면 모든 작업 트리가 저장소별로 그룹화됩니다.\n- 열려 있는 모든 탭은 먼저 현재 작업 트리로 범위가 지정되고 그 다음에는 전체적으로 범위가 지정됩니다."
+      "sourceHash": "85bfa978c525d6e133bbcfcc6824ef4cb45972d9fd5dfd2511191960bb1a1514",
+      "translated": "- `Recent Worktrees`(최근 작업 트리) — 검색어가 비어 있을 때 표시되는 최상단 섹션입니다. 마지막으로 포커스한 순서로 정렬되며 목록을 쉽게 훑어볼 수 있도록 항목 수가 제한됩니다.\n- 프로젝트와 저장소 그룹을 통해 이름으로 사이드바 섹션으로 이동합니다.\n- 입력을 시작하면 모든 작업 트리가 저장소별로 그룹화됩니다.\n- 리뷰 메타데이터가 이미 있으면 캐시된 ORCA_PROTECTED_0001 PR 제목 또는 번호(`ORCA_PROTECTED_0002`)와 캐시된 GitLab 병합 요청 제목 또는 번호(`ORCA_PROTECTED_0003`)로 작업 트리를 찾습니다.\n- 열려 있는 모든 탭이 먼저 현재 작업 트리 범위로, 그다음 전체 범위로 표시됩니다."
     },
     "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:2": {
       "sourceHash": "200516872fa414ddb981df64cdaf5dde553c8696788217c66e0fa74fe57de8e3",

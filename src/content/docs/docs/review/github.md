@@ -1,7 +1,7 @@
 ---
 title: "호스팅된 리뷰, 문제 및 조치"
 sourceUrl: https://www.onorca.dev/docs/review/github
-checkedAt: "2026-07-14T04:54:05.418Z"
+checkedAt: "2026-07-16T01:03:39.973Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/commit-push/
 next: /orca-docs-ko/docs/review/linear/
@@ -23,12 +23,13 @@ GitHub 통합 — 작업 트리를 떠나지 않고도 PR을 열고, 확인하�
 
 ## 리뷰
 
-- 작업 트리가 푸시되면 소스 제어 패널에서 호스팅된 리뷰를 엽니다. 만들기 전에 기본 브랜치, 제목, 설명 및 초안 상태를 확인하세요.
-- 링크된 리뷰가 사이드바에 상태와 함께 표시되므로 지점이 아직 열려 있는지, 병합되었는지, 닫혀 있는지 알 수 있습니다.
-- Orca에 연결된 PR/MR에 대한 URL이 있는 경우 분기 컨텍스트 행에 간략한 `Open review page in browser`(브라우저에서 검토 페이지 열기) 링크가 표시됩니다. 내부 PR 보기를 열지 않고도 한 번의 클릭으로 GitHub, GitLab, Bitbucket, Azure DevOps 또는 Gitea의 검토로 이동합니다.
-- GitHub 풀 요청의 경우 사이드바의 PR 작업 메뉴를 사용하여 리뷰 링크를 복사하거나, 리뷰를 닫거나, 상태 변경을 확인한 후 다시 엽니다.
-- GitHub 확인, 리뷰 및 댓글은 PR 탭에서 인라인으로 열립니다. GitLab 병합 요청 및 문제는 동일한 검토 화면에서 열립니다.
-- GitHub 풀 요청에 실패한 확인이 있는 경우 PR 보기에서 `Fix broken checks`(깨진 확인 수정)을 사용하여 실패한 확인 이름과 링크를 에이전트에 전달합니다.
+- 작업 트리를 푸시한 후 `Source Control`(소스 제어) 패널에서 호스팅된 리뷰를 엽니다. 리뷰를 만들기 전에 기준 브랜치, 제목, 설명 및 초안 상태를 확인합니다.
+- 연결된 리뷰는 상태와 함께 사이드바에 표시되므로 브랜치가 열려 있는지, 병합되었는지 또는 닫혔는지 확인할 수 있습니다.
+- Orca에 연결된 PR/MR의 URL이 있으면 브랜치 컨텍스트 행에 간결한 `Open review page in browser`(브라우저에서 리뷰 페이지 열기) 링크가 표시됩니다. 내부 PR 보기를 열지 않고 클릭 한 번으로 GitHub, GitLab, Bitbucket, Azure DevOps 또는 Gitea의 리뷰로 이동합니다.
+- GitHub 풀 리퀘스트에서는 사이드바의 PR 작업 메뉴를 사용하여 리뷰 링크를 복사하거나 리뷰를 닫고, 상태 변경을 확인한 후 다시 엽니다.
+- GitHub 검사, 리뷰 및 댓글은 PR 탭에서 인라인으로 열립니다. GitLab 병합 요청과 이슈도 동일한 리뷰 화면에서 열립니다.
+- `Checks`(검사) 패널에서는 루트 댓글뿐 아니라 리뷰 스레드의 모든 댓글에 답변할 수 있습니다.
+- GitHub 풀 리퀘스트의 검사가 실패하면 PR 보기에서 `Fix broken checks`(실패한 검사 수정)를 사용하여 실패한 검사 이름과 링크를 에이전트에 전달합니다.
 
 ### 자동 병합
 
