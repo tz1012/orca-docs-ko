@@ -23,8 +23,8 @@
       "translated": "## ORCA_PROTECTED_0001을 사용해야 하는 경우"
     },
     "/docs/:list:when-to-use-orca:0": {
-      "sourceHash": "f8aa9fd58eed2778a941a0c5e3e748cbda28dfd24f655eeba6bafeeb1859e4f8",
-      "translated": "- 세 명의 에이전트가 동일한 버그를 동시에 시도하고 승자를 선택하기를 원합니다.\n- AI가 생성한 차이점을 배송하기 전에 진지하게 검토하고 싶습니다.\n- ORCA_PROTECTED_0001, ORCA_PROTECTED_0002 또는 ORCA_PROTECTED_0003에 대해 이미 비용을 지불했으며 이를 한 곳에서 관리하기를 원합니다.\n- IDE를 포기하지 않고 SSH를 통해 에이전트가 원격으로 실행되기를 원합니다."
+      "sourceHash": "24d29dd4eae6ee2bf6799b4954d9376cfe24d217f9f9a9e33265771c2e30ede6",
+      "translated": "- 세 명의 에이전트가 같은 버그를 병렬로 해결하게 한 뒤 가장 좋은 결과를 선택하려고 합니다.\n- AI가 생성한 diff를 배포하기 전에 꼼꼼하게 검토하려고 합니다.\n- 이미 ORCA_PROTECTED_0001, ORCA_PROTECTED_0002 또는 ORCA_PROTECTED_0003을 구독하고 있으며, 이를 한곳에서 오케스트레이션하려고 합니다.\n- IDE를 포기하지 않으면서 SSH, 자체 호스팅 ORCA_PROTECTED_0004 서버 또는 주문형 VM에서 에이전트를 원격으로 실행하려고 합니다."
     },
     "/docs/:heading:who-its-for:0": {
       "sourceHash": "fdac1ccdd6b31854767291831ce75f713935329ed17284aac10e9741fda50743",
@@ -39,12 +39,12 @@
       "translated": "## ORCA_PROTECTED_0001이 아닌 것"
     },
     "/docs/:list:what-orca-is-not:0": {
-      "sourceHash": "b94c681b697680e5d2de831b1b69cdc42225a8788fbb397a50d403353fe0f145",
-      "translated": "- **모델이 아닙니다.** ORCA_PROTECTED_0001은 이미 사용하고 있는 에이전트를 실행합니다. 자체 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003 또는 ORCA_PROTECTED_0004 구독을 가져오세요.\n- **git 대체가 아닙니다.** 모든 작업 트리는 실제 git 작업 트리입니다. 원할 때마다 `ORCA_PROTECTED_0005`를 사용하여 일반 git을 사용할 수 있습니다.\n- **클라우드 전용이 아닙니다.** ORCA_PROTECTED_0006은 로컬에서 실행됩니다. 원격 에이전트는 SSH를 통해 귀하가 소유한 컴퓨터로 이동합니다."
+      "sourceHash": "774ed34338f39eb0b993891794a7bdd79c9024cc269d1509c6f8fa6d3c128369",
+      "translated": "- **모델이 아닙니다.** ORCA_PROTECTED_0001은 이미 사용 중인 에이전트를 실행합니다. 기존 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003 또는 ORCA_PROTECTED_0004 구독을 그대로 사용합니다.\n- **git을 대체하지 않습니다.** 모든 작업 트리는 실제 git 작업 트리입니다. 언제든 해당 디렉터리로 `ORCA_PROTECTED_0005`한 뒤 일반 git을 사용할 수 있습니다.\n- **호스팅 VPS 제품이 아닙니다.** ORCA_PROTECTED_0006은 기본적으로 데스크톱에서 실행됩니다. 원격 컴퓨팅에는 사용자가 제어하는 시스템과 클라우드 계정을 사용합니다. [SSH 대상](ORCA_PROTECTED_0007), [자체 호스팅 ORCA_PROTECTED_0008 서버](ORCA_PROTECTED_0009) 또는 [작업 공간별 환경](ORCA_PROTECTED_0010)을 사용할 수 있습니다."
     },
     "/docs/:aside:what-orca-is-not:0": {
-      "sourceHash": "f12c976cb310721a8e50a7b14df2bbe4f64a20cafff47c7e379e3430313f4077",
-      "translated": "다음 단계\n\n[설치](ORCA_PROTECTED_0001)로 이동한 다음 이 문서에서 가장 중요한 단일 페이지인 [첫 번째 3개 에이전트 세션](ORCA_PROTECTED_0002)을 살펴보세요."
+      "sourceHash": "41818d41ec68b1093cd2ec0b90c5e76faf82182217c703099aa5f1bf067b4b25",
+      "translated": "다음 단계\n\n[설치](ORCA_PROTECTED_0001)로 이동한 다음, 이 문서에서 가장 중요한 단일 페이지인 [첫 3개 에이전트 세션](ORCA_PROTECTED_0002)을 따라 합니다. 노트북 밖에서 에이전트를 실행할 준비가 되면 [ORCA_PROTECTED_0003 실행 방식](ORCA_PROTECTED_0004)부터 살펴봅니다."
     }
   }
 }

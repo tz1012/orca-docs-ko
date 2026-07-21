@@ -79,8 +79,16 @@
       "translated": "## 다음 단계"
     },
     "/docs/review/github/:list:next-steps:0": {
-      "sourceHash": "5159e2ba39ca88275742867cfa464fb8b24dfeb7914e3360c34a5b3bb3ee374d",
-      "translated": "- [ORCA_PROTECTED_0001에서 커밋 및 푸시](ORCA_PROTECTED_0002) - 단계 변경, 분기 푸시, 호스팅된 검토 생성.\n- [ORCA_PROTECTED_0003 항목 서랍](ORCA_PROTECTED_0004) - 작업 소스가 git 공급자 외부에 있는 경우 ORCA_PROTECTED_0005를 사용합니다."
+      "sourceHash": "4c411f166ba4e55fde1310499a138f62f9376363ae19bc47a1a0b931bc78b3c6",
+      "translated": "- [ORCA_PROTECTED_0001에서 커밋 및 푸시](ORCA_PROTECTED_0002) — 변경 사항을 스테이징하고 브랜치를 푸시한 다음 호스팅 검토를 만듭니다.\n- [ORCA_PROTECTED_0003 항목 서랍](ORCA_PROTECTED_0004) — 작업 소스가 git 공급자 외부에 있을 때 ORCA_PROTECTED_0005를 사용합니다.\n- [ORCA_PROTECTED_0006 오류 문제 해결](ORCA_PROTECTED_0007) — 속도 제한, 인증 및 `ORCA_PROTECTED_0008` 실패를 다룹니다."
+    },
+    "/docs/review/github/:heading:troubleshooting:0": {
+      "sourceHash": "659a188b36f9c3262a28539e24c345df4edc9657f59b116b0a1d9887cf2e28e0",
+      "translated": "## 문제 해결"
+    },
+    "/docs/review/github/:paragraph:troubleshooting:0": {
+      "sourceHash": "4acd087798c09db4e9ca3dcc9f616db35575dff25464f48161fe8713c1ea704b",
+      "translated": "속도 제한, `ORCA_PROTECTED_0001` 인증, 권한 또는 네트워크 문제로 PR 상태, 검사 또는 Tasks가 갱신되지 않으면 **[ORCA_PROTECTED_0002 오류 문제 해결](ORCA_PROTECTED_0003)**을 참조합니다."
     }
   }
 }

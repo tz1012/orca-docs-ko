@@ -1,9 +1,9 @@
 ---
 title: "SSH 작업 트리"
 sourceUrl: https://www.onorca.dev/docs/ssh
-checkedAt: "2026-07-16T01:03:39.973Z"
+checkedAt: "2026-07-21T05:58:45.755Z"
 editUrl: false
-prev: /orca-docs-ko/docs/terminal/
+prev: /orca-docs-ko/docs/ways-to-run/
 next: /orca-docs-ko/docs/remote-servers/
 translationNotice:
   title: "비공식 한국어 번역"
@@ -12,6 +12,10 @@ translationNotice:
 ---
 
 Orca은 SSH를 통해 원격 시스템에서 에이전트를 구동할 수 있습니다. 이는 장기 실행 빌드, GPU 상자 또는 노트북이 작업을 실행하기에 적합하지 않은 모든 환경에 유용합니다.
+
+네 가지 실행 모드 중 하나
+
+SSH는 원격 컴퓨팅 환경에서 에이전트를 실행하는 한 가지 방법입니다. 로컬, 자체 호스팅 서버 및 임시 VM 방식은 [Orca 실행 방식](/orca-docs-ko/docs/ways-to-run/)을 참조합니다.
 
 ![SSH 원격 작업공간 — 에이전트는 원격 호스트에서 실행되고 편집기 및 차이점은 로컬로 유지됩니다.](/orca-docs-ko/assets/mirror/7927caeb8acdb148029bd23edc29d2f97400d39ef3df292650577242909158f3.jpg)
 

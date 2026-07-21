@@ -1,7 +1,7 @@
 ---
 title: "첫 번째 에이전트 3인 세션"
 sourceUrl: https://www.onorca.dev/docs/first-session
-checkedAt: "2026-07-16T01:03:39.973Z"
+checkedAt: "2026-07-21T05:58:45.755Z"
 editUrl: false
 prev: /orca-docs-ko/docs/install/
 next: /orca-docs-ko/docs/model/worktrees/

@@ -1,7 +1,7 @@
 ---
 title: "SSH를 통해 원격 컴퓨터에서 작업"
 sourceUrl: https://www.onorca.dev/docs/recipes/remote-worktrees
-checkedAt: "2026-07-16T01:03:39.973Z"
+checkedAt: "2026-07-21T05:58:45.755Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/design-mode-fix/
 next: /orca-docs-ko/docs/settings/
@@ -11,7 +11,7 @@ translationNotice:
   rights: "원본 문서와 이미지의 권리는 Lovecast Inc. 및 각 권리자에게 있습니다."
 ---
 
-더 강력한 개발 상자, GPU 호스트, 클라우드 샌드박스 등 SSH 대상에 Orca을 지정하면 로컬 작업 트리처럼 느껴집니다. 동일한 편집기, 동일한 차이점 보기, 동일한 에이전트, 다른 컴퓨팅. 원격 저장소 *또는* 임의의 폴더만 열 수 있습니다.
+Orca을 더 강력한 개발 시스템, GPU 호스트, 클라우드 샌드박스 등 원하는 SSH 대상에 연결하면 로컬 작업 트리처럼 사용할 수 있습니다. 편집기, diff 보기 및 에이전트는 동일하고 컴퓨팅 환경만 달라집니다. 원격 저장소뿐 아니라 임의의 폴더도 열 수 있습니다. 로컬, SSH, 서버 및 임시 VM 모드 전체는 [Orca 실행 방식](/orca-docs-ko/docs/ways-to-run/)을 참조합니다.
 
 ## 설정
 

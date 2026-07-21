@@ -1,7 +1,7 @@
 ---
 title: "Orca이란 무엇입니까?"
 sourceUrl: https://www.onorca.dev/docs
-checkedAt: "2026-07-16T01:03:39.973Z"
+checkedAt: "2026-07-21T05:58:45.755Z"
 editUrl: false
 prev: false
 next: /orca-docs-ko/docs/install/
@@ -21,10 +21,10 @@ Orca 기본 창: 작업 트리의 사이드바, 에이전트 터미널이 있는
 
 ## Orca을 사용해야 하는 경우
 
-- 세 명의 에이전트가 동일한 버그를 동시에 시도하고 승자를 선택하기를 원합니다.
-- AI가 생성한 차이점을 배송하기 전에 진지하게 검토하고 싶습니다.
-- Claude Code, Codex 또는 Cursor CLI에 대해 이미 비용을 지불했으며 이를 한 곳에서 관리하기를 원합니다.
-- IDE를 포기하지 않고 SSH를 통해 에이전트가 원격으로 실행되기를 원합니다.
+- 세 명의 에이전트가 같은 버그를 병렬로 해결하게 한 뒤 가장 좋은 결과를 선택하려고 합니다.
+- AI가 생성한 diff를 배포하기 전에 꼼꼼하게 검토하려고 합니다.
+- 이미 Claude Code, Codex 또는 Cursor CLI을 구독하고 있으며, 이를 한곳에서 오케스트레이션하려고 합니다.
+- IDE를 포기하지 않으면서 SSH, 자체 호스팅 Orca 서버 또는 주문형 VM에서 에이전트를 원격으로 실행하려고 합니다.
 
 ## 누구를 위한 것인가
 
@@ -32,10 +32,10 @@ Orca은 이미 생활용 코드를 작성하고 AI를 대체 수단이 아닌 �
 
 ## Orca이 아닌 것
 
-- **모델이 아닙니다.** Orca은 이미 사용하고 있는 에이전트를 실행합니다. 자체 Claude, Codex 또는 OpenCode 구독을 가져오세요.
-- **git 대체가 아닙니다.** 모든 작업 트리는 실제 git 작업 트리입니다. 원할 때마다 `cd`를 사용하여 일반 git을 사용할 수 있습니다.
-- **클라우드 전용이 아닙니다.** Orca은 로컬에서 실행됩니다. 원격 에이전트는 SSH를 통해 귀하가 소유한 컴퓨터로 이동합니다.
+- **모델이 아닙니다.** Orca은 이미 사용 중인 에이전트를 실행합니다. 기존 Claude, Codex 또는 OpenCode 구독을 그대로 사용합니다.
+- **git을 대체하지 않습니다.** 모든 작업 트리는 실제 git 작업 트리입니다. 언제든 해당 디렉터리로 `cd`한 뒤 일반 git을 사용할 수 있습니다.
+- **호스팅 VPS 제품이 아닙니다.** Orca은 기본적으로 데스크톱에서 실행됩니다. 원격 컴퓨팅에는 사용자가 제어하는 시스템과 클라우드 계정을 사용합니다. [SSH 대상](/orca-docs-ko/docs/ssh/), [자체 호스팅 Orca 서버](/orca-docs-ko/docs/remote-servers/) 또는 [작업 공간별 환경](/orca-docs-ko/docs/ways-to-run/#4-per-workspace-environments-ephemeral-vms)을 사용할 수 있습니다.
 
 다음 단계
 
-[설치](/orca-docs-ko/docs/install/)로 이동한 다음 이 문서에서 가장 중요한 단일 페이지인 [첫 번째 3개 에이전트 세션](/orca-docs-ko/docs/first-session/)을 살펴보세요.
+[설치](/orca-docs-ko/docs/install/)로 이동한 다음, 이 문서에서 가장 중요한 단일 페이지인 [첫 3개 에이전트 세션](/orca-docs-ko/docs/first-session/)을 따라 합니다. 노트북 밖에서 에이전트를 실행할 준비가 되면 [Orca 실행 방식](/orca-docs-ko/docs/ways-to-run/)부터 살펴봅니다.

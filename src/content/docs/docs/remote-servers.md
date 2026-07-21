@@ -1,7 +1,7 @@
 ---
 title: "원격 Orca 서버"
 sourceUrl: https://www.onorca.dev/docs/remote-servers
-checkedAt: "2026-07-16T01:03:39.973Z"
+checkedAt: "2026-07-21T05:58:45.755Z"
 editUrl: false
 prev: /orca-docs-ko/docs/ssh/
 next: /orca-docs-ko/docs/cli/overview/
@@ -207,15 +207,17 @@ Server B service
 
 ## SSH를 대신 사용해야 하는 경우
 
-차이점은 Orca 런타임 및 상태가 어디에 있는지입니다.
+로컬, SSH, 서버 및 임시 VM 옵션 전체는 [Orca 실행 방식](/orca-docs-ko/docs/ways-to-run/)을 참조합니다.
 
-[SSH 작업 트리](/orca-docs-ko/docs/ssh/)를 사용하면 노트북의 Orca가 런타임을 소유하고 SSH를 통해 원격 시스템에 연결하여 개별 터미널이나 작업 트리를 실행합니다. 원격 머신은 주로 실행 대상입니다.
+차이는 Orca 런타임과 상태가 어디에 위치하는지입니다.
 
-원격 Orca 서버를 사용하면 원격 시스템이 자체 Orca 런타임을 실행합니다. 원격 시스템은 작업 트리, 터미널, 탭 및 에이전트 세션을 소유하고 랩톱은 해당 공유 런타임에 연결됩니다.
+[SSH 작업 트리](/orca-docs-ko/docs/ssh/)를 사용하면 노트북의 Orca이 런타임을 소유하고, SSH로 원격 시스템에 연결해 개별 터미널이나 작업 트리를 실행합니다. 원격 시스템은 주로 실행 대상 역할을 합니다.
 
-노트북 Orca만 원격 시스템에서 작업을 시작하고 관리해야 하는 경우 SSH 작업 트리를 사용하세요. 원격 시스템이 랩탑, 브라우저 클라이언트, 모바일 클라이언트 또는 백엔드 자동화가 모두 상호 작용할 수 있는 공유 Orca 관리 세션을 호스팅해야 하는 경우 원격 Orca 서버를 사용하십시오.
+원격 Orca 서버를 사용하면 원격 시스템이 자체 Orca 런타임을 실행합니다. 원격 시스템이 작업 트리, 터미널, 탭 및 에이전트 세션을 소유하며, 노트북은 이 공유 런타임에 연결됩니다.
 
-백엔드가 서버에 SSH를 통해 `codex`을 직접 실행하는 경우 Orca는 이에 대해 Orca 관리 세션으로 인식할 필요가 없습니다. 백엔드가 서버에 SSH를 연결하고 `orca terminal create`를 실행하는 경우 어쨌든 서버에는 원격 Orca 서버 모델인 Orca 런타임이 필요합니다.
+노트북의 Orca만 원격 시스템에서 작업을 시작하고 관리하면 되는 경우 SSH 작업 트리를 사용합니다. 노트북, 브라우저 클라이언트, 모바일 클라이언트 또는 백엔드 자동화가 모두 상호 작용할 수 있는 공유 Orca 관리 세션을 원격 시스템에서 호스팅해야 한다면 원격 Orca 서버를 사용합니다.
+
+백엔드가 서버에 SSH로 접속해 `codex`를 직접 실행하면 Orca이 이를 Orca 관리 세션으로 인식한다고 보장할 수 없습니다. 백엔드가 서버에 SSH로 접속해 `orca terminal create`를 실행한다면 서버에는 어차피 Orca 런타임이 필요하며, 이것이 원격 Orca 서버 모델입니다.
 
 ## 문제 해결
 
@@ -253,5 +255,6 @@ CLI 명령이 원격 환경을 대상으로 하는 경우 호출자의 현재 �
 
 ## 다음 단계
 
-- 런타임 명령 예는 [Orca CLI 참조](/orca-docs-ko/docs/cli/reference/)를 읽어보세요.
-- 로컬 데스크톱 런타임에 연결된 SSH 작업 트리에는 [SSH 작업 트리](/orca-docs-ko/docs/ssh/)를 사용합니다.
+- 모든 실행 모드의 개요인 [Orca 실행 방식](/orca-docs-ko/docs/ways-to-run/)을 읽습니다.
+- 런타임 명령 예제는 [Orca CLI 참조](/orca-docs-ko/docs/cli/reference/)를 읽습니다.
+- 로컬 데스크톱 런타임에 연결된 상태를 유지하는 SSH 작업 트리에는 [SSH 작업 트리](/orca-docs-ko/docs/ssh/)를 사용합니다.

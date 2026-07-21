@@ -1,10 +1,10 @@
 ---
 title: "터미널"
 sourceUrl: https://www.onorca.dev/docs/terminal
-checkedAt: "2026-07-16T01:03:39.973Z"
+checkedAt: "2026-07-21T05:58:45.755Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/profiles/
-next: /orca-docs-ko/docs/ssh/
+next: /orca-docs-ko/docs/ways-to-run/
 translationNotice:
   title: "비공식 한국어 번역"
   message: "이 문서는 ORCA 공식 문서의 비공식 한국어 번역입니다. 내용이 다를 경우 원문이 우선합니다."

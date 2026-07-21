@@ -1,0 +1,222 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/github-errors",
+  "mirrorPath": "/docs/github-errors/",
+  "entries": {
+    "/docs/github-errors/:heading:troubleshooting-github-errors:0": {
+      "sourceHash": "070d2ca591fdcc1d8a403f14061a71b61f11ede83519c9212615394a5f955598",
+      "translated": "# ORCA_PROTECTED_0001 오류 문제 해결"
+    },
+    "/docs/github-errors/:paragraph:troubleshooting-github-errors:0": {
+      "sourceHash": "628de495340d57ccfe75628e2169743465025c4469b45f339cebdb8a5ac40e31",
+      "translated": "ORCA_PROTECTED_0002의 PR 검사, Tasks 및 `Source Control`(소스 제어)에서 발생하는 속도 제한, 인증 실패 및 기타 ORCA_PROTECTED_0001 CLI 오류를 진단합니다."
+    },
+    "/docs/github-errors/:paragraph:troubleshooting-github-errors:1": {
+      "sourceHash": "a12806e2b2c7dc9c27070a32f84558454b63d2b8ce538821ad9306957d77b88a",
+      "translated": "ORCA_PROTECTED_0001은 사용자의 시스템 또는 원격 ORCA_PROTECTED_0005 호스트에 설치된 **ORCA_PROTECTED_0003 CLI(`ORCA_PROTECTED_0004`)**를 통해 ORCA_PROTECTED_0002과 통신합니다. PR 상태, 검사, 이슈 또는 Tasks가 갱신되지 않는 원인은 대부분 ORCA_PROTECTED_0006 인증, 권한 또는 API 속도 제한이며, PR 패널 자체의 문제인 경우는 드뭅니다."
+    },
+    "/docs/github-errors/:paragraph:troubleshooting-github-errors:2": {
+      "sourceHash": "efeee86099194cff9f15aec8f05a545ad7fb39384c687c87d60b9976908c75e3",
+      "translated": "이 페이지에서는 자주 발생하는 오류와 해결 방법을 설명합니다."
+    },
+    "/docs/github-errors/:heading:quick-triage:0": {
+      "sourceHash": "181e9ecaf08eba022440cba3b664f38cbc5256d619b5092b026eb8c2a4276406",
+      "translated": "## 빠른 분류"
+    },
+    "/docs/github-errors/:table:quick-triage:0": {
+      "sourceHash": "f293615cff534a1c2cc0861829cc0dbfc9b40b097020be276fa04a678f330f3c",
+      "translated": "| 표시되는 내용 | 가능한 원인 | 먼저 시도할 작업 |\n| --- | --- | --- |\n| ‘ORCA_PROTECTED_0001 is rate-limiting requests’ / ‘rate limit exceeded (core)’ | 사용자에게 할당된 ORCA_PROTECTED_0002 REST(core) 할당량 소진 | 재설정까지 기다리고 추가 `ORCA_PROTECTED_0003`, 에이전트 및 ORCA_PROTECTED_0004 사용을 중지한 뒤 [`Settings → Git → ORCA_PROTECTED_0005 API Budget`(설정 → Git → GitHub API 예산)](ORCA_PROTECTED_0006)을 확인합니다. |\n| ‘ORCA_PROTECTED_0007 authentication is unavailable’ / `ORCA_PROTECTED_0008` 프롬프트 | `ORCA_PROTECTED_0009`에 로그인하지 않았거나 토큰이 만료됐거나 `ORCA_PROTECTED_0010`이 잘못됨 | `ORCA_PROTECTED_0011`을 실행한 다음 `ORCA_PROTECTED_0012`을 실행합니다. |\n| ‘ORCA_PROTECTED_0013 did not allow access’ / 속도 제한이 아닌 HTTP 403 | 필요한 범위가 없거나 저장소 접근 권한이 없음 | `ORCA_PROTECTED_0014` 범위로 다시 인증하고 필요한 조직 SSO도 승인한 뒤, 브라우저에서 PR을 열 수 있는지 확인합니다. |\n| ‘repository is unavailable’ / HTTP 404 | 잘못된 원격 저장소, 비공개 저장소 접근 권한 없음 또는 저장소 이름 변경 | `ORCA_PROTECTED_0015`와 브라우저 접근 권한을 확인합니다. |\n| ‘ORCA_PROTECTED_0016 is unreachable’ / 시간 초과 | 네트워크, 프록시, VPN 또는 ORCA_PROTECTED_0017 장애 | [githubstatus.com](ORCA_PROTECTED_0018)을 확인하고 VPN을 끈 상태에서 다시 시도합니다. |\n| ‘ORCA_PROTECTED_0019 CLI is unavailable’ | ORCA_PROTECTED_0022이 사용하는 ORCA_PROTECTED_0021에 `ORCA_PROTECTED_0020`가 없음 | `ORCA_PROTECTED_0023`를 설치하고 ORCA_PROTECTED_0024을 다시 시작합니다. |"
+    },
+    "/docs/github-errors/:heading:rate-limits-most-common:0": {
+      "sourceHash": "659b225e7e49f6d281a0911bbf15d7ae8a3fc18cb6123d739817a2d789c6a7d0",
+      "translated": "## 속도 제한(가장 흔한 원인)"
+    },
+    "/docs/github-errors/:paragraph:rate-limits-most-common:0": {
+      "sourceHash": "eb61fbd6caaed047cdc53daa6dec7ce4c557230344b036f87499c3fe4d487c1a",
+      "translated": "ORCA_PROTECTED_0001은 **인증된 사용자**마다 공유 시간당 할당량을 제공합니다. 해당 계정을 사용하는 **모든 도구가 같은 할당량을 공유합니다**. ORCA_PROTECTED_0002, 터미널의 `ORCA_PROTECTED_0003`, `ORCA_PROTECTED_0005`를 호출하는 ORCA_PROTECTED_0004 에이전트, CI 스크립트, 브라우저 확장 프로그램 및 기타 앱이 모두 포함됩니다."
+    },
+    "/docs/github-errors/:heading:buckets-orca-cares-about:0": {
+      "sourceHash": "864f2eb519d6462540ff8bd7b00a5327ded1efdaf10565279efd3186f622f1a5",
+      "translated": "### ORCA_PROTECTED_0001이 사용하는 할당량 버킷"
+    },
+    "/docs/github-errors/:table:buckets-orca-cares-about:0": {
+      "sourceHash": "fe5a60c03128c5cdf353cc9951d53879fa78e391bd030d6775c19702ff137538",
+      "translated": "| 버킷 | 적용 대상 | 일반적인 제한(인증된 사용자) |\n| --- | --- | --- |\n| **REST(core)** | 대부분의 ORCA_PROTECTED_0001 호출(`ORCA_PROTECTED_0002`, 검사 메타데이터 및 여러 REST 엔드포인트) | 시간당 5,000회 |\n| **GraphQL** | ORCA_PROTECTED_0003 및 일부 상세 PR 쿼리 | 시간당 5,000포인트 |\n| **Search** | 검색 기반 목록 | 분당 30회 |"
+    },
+    "/docs/github-errors/:paragraph:buckets-orca-cares-about:0": {
+      "sourceHash": "a340111f2da3e9ce0a1f958e1247e2accacbe54fe773ccc387ec4ddf95a2ffd3",
+      "translated": "주요 버킷이 소진되면 ORCA_PROTECTED_0001은 `ORCA_PROTECTED_0002`과 같은 메시지가 포함된 HTTP **403**을 반환합니다. ORCA_PROTECTED_0003은 이를 속도 제한으로 분류하고 가능하면 마지막으로 확인된 PR 상태를 유지하며, 한 번의 제한이 대량 실패로 이어지지 않도록 잠시 **추가 `ORCA_PROTECTED_0004` 호출 생성을 중지합니다**."
+    },
+    "/docs/github-errors/:heading:why-settings-can-look-ok-while-the-pr-panel-is-blocked:0": {
+      "sourceHash": "5a020e3aa1554a20c02069399d84269c1932e8db16e007983125533abf234326",
+      "translated": "### PR 패널이 차단됐는데도 설정이 ‘정상’으로 보일 수 있는 이유"
+    },
+    "/docs/github-errors/:paragraph:why-settings-can-look-ok-while-the-pr-panel-is-blocked:0": {
+      "sourceHash": "9a8118807d364cd30060ea5910b88e0044e7c7d9a9a32f9bf7771aae6e5dfe6a",
+      "translated": "**`Settings → Git → ORCA_PROTECTED_0001 API Budget`(설정 → Git → GitHub API 예산)**은 ORCA_PROTECTED_0002의 특수 `ORCA_PROTECTED_0003` 엔드포인트를 읽습니다. 이 확인 요청은 속도 제한 집계에서 **제외**되므로, 같은 사용자의 실제 REST 호출이 이미 `ORCA_PROTECTED_0004`을 반환하는 상황에서도 남은 할당량이 있다고 표시될 수 있습니다."
+    },
+    "/docs/github-errors/:paragraph:why-settings-can-look-ok-while-the-pr-panel-is-blocked:1": {
+      "sourceHash": "bb9b7ca04f5fe274838a2884f3a9a1a51fc0f50b26cb2119868f72b4e58ff062",
+      "translated": "두 결과가 다르면 다음 순서로 신뢰합니다."
+    },
+    "/docs/github-errors/:list:why-settings-can-look-ok-while-the-pr-panel-is-blocked:0": {
+      "sourceHash": "f2c9133b3c623f20daf4e36f7acb66a2a960398c3dee670deb3101a02da66b15",
+      "translated": "1. **PR 또는 `Checks`(검사) 패널에 표시된 오류**(실시간 요청 실패)\n2. 아래의 실제 CLI 확인\n3. 설정의 예산 수치(유용하지만 확인 전용 요청의 결과)"
+    },
+    "/docs/github-errors/:paragraph:why-settings-can-look-ok-while-the-pr-panel-is-blocked:2": {
+      "sourceHash": "5308adc554b88e964114be998ced4914fd2e21e657d7df918fbf97957f7674d7",
+      "translated": "**`ORCA_PROTECTED_0001 API Budget`(GitHub API 예산)**을 `Accounts`(계정) 아래의 **ORCA_PROTECTED_0002, ORCA_PROTECTED_0003 및 ORCA_PROTECTED_0004 사용량**과 혼동하지 마세요. 계정 아래의 사용량은 AI 공급자 제한이며 ORCA_PROTECTED_0005 REST 할당량이 아닙니다."
+    },
+    "/docs/github-errors/:heading:confirm-a-rate-limit-from-a-terminal:0": {
+      "sourceHash": "d4630c36b0084146c9f62f50cc07386754d5a5a2538b61d60cb3e36641881740",
+      "translated": "### 터미널에서 속도 제한 확인"
+    },
+    "/docs/github-errors/:code:confirm-a-rate-limit-from-a-terminal:0": {
+      "sourceHash": "02ed795ef1bcfc14a70f472e64549fe71d988c38860d90a9186584fd18875d59",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/github-errors/:paragraph:confirm-a-rate-limit-from-a-terminal:0": {
+      "sourceHash": "85cd05642f866b7ee29bc06d3cc7ef9736eb70f39b6721227591dd40f10c338b",
+      "translated": "`ORCA_PROTECTED_0001`가 `ORCA_PROTECTED_0002` 및 `ORCA_PROTECTED_0003`과 함께 **403**을 반환하면 `ORCA_PROTECTED_0004` 시각(Unix epoch 초)까지 해당 계정의 REST 사용이 차단됩니다."
+    },
+    "/docs/github-errors/:heading:what-usually-burns-the-quota:0": {
+      "sourceHash": "9ba6b9f5fea8a37074ed5712f883f6d3e2314dfe6d69fdc2545b001372715ca9",
+      "translated": "### 일반적인 할당량 소진 원인"
+    },
+    "/docs/github-errors/:list:what-usually-burns-the-quota:0": {
+      "sourceHash": "c62c1d04227d2ff1fbd33f2cdc0b6120efdb16ff61db5ee5f9980a62bad50518",
+      "translated": "- 여러 ORCA_PROTECTED_0001 창이나 electron-dev 빌드를 동시에 열어 둡니다. 각 인스턴스가 PR 또는 Tasks를 갱신할 수 있습니다.\n- 에이전트가 `ORCA_PROTECTED_0002`를 자동화해 ORCA_PROTECTED_0003 할당, 검사 폴링 또는 대량 GraphQL 작업을 수행합니다.\n- PR 패널을 갱신하면서 Tasks 또는 여러 저장소에 대량으로 작업을 분산합니다.\n- 다른 앱이 같은 ORCA_PROTECTED_0004 사용자 토큰을 사용합니다."
+    },
+    "/docs/github-errors/:heading:what-to-do:0": {
+      "sourceHash": "ca5c90d482b2286afe77983fb800011b8aca72e342630426e943b2fd6c74597e",
+      "translated": "### 해결 방법"
+    },
+    "/docs/github-errors/:list:what-to-do:0": {
+      "sourceHash": "3e7f8b9e1f2d5cb52346d2c87d59364e5661948678b6a50b1023d7065ed6f208",
+      "translated": "1. 오류 또는 `ORCA_PROTECTED_0001`에 표시된 시간당 재설정 시각까지 **기다립니다**.\n2. **동시에 실행되는 ORCA_PROTECTED_0002 클라이언트를 줄입니다.** 추가 ORCA_PROTECTED_0003 인스턴스를 종료하고 대량 `ORCA_PROTECTED_0004` 자동화를 일시 중지합니다.\n3. 제한된 동안 PR 패널에서 갱신을 반복하지 않습니다. ORCA_PROTECTED_0005은 이미 호출 빈도를 낮추고 있습니다.\n4. 스크립트에서는 GraphQL 요청을 일괄 처리합니다. 개인 계정으로 대규모 집합의 PR을 하나씩 순회하며 REST를 호출하지 않습니다.\n5. 재설정 후에도 PR 갱신이 실패하면 다음 섹션에 따라 인증을 다시 확인합니다."
+    },
+    "/docs/github-errors/:heading:authentication-problems:0": {
+      "sourceHash": "6826934f8493c97a47492072459bb5dbf869e7a0cc539036b9f854b5059bfa21",
+      "translated": "## 인증 문제"
+    },
+    "/docs/github-errors/:paragraph:authentication-problems:0": {
+      "sourceHash": "0321578ac9ae529728004f0261bdc31dbe272b5b313feadec4707b9194f659f0",
+      "translated": "ORCA_PROTECTED_0001은 해당 호스트에서 `ORCA_PROTECTED_0002`가 사용하는 인증 정보를 그대로 사용합니다."
+    },
+    "/docs/github-errors/:heading:check-status:0": {
+      "sourceHash": "7f59077369f2fd3a55705412b5694340b0da0db905e2098e3ec8deb933becf13",
+      "translated": "### 상태 확인"
+    },
+    "/docs/github-errors/:code:check-status:0": {
+      "sourceHash": "f4e30045977bc74b718783623ef494181af837ffd7f5a1d2f39b8a580f6ed9c2",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/github-errors/:paragraph:check-status:0": {
+      "sourceHash": "d332808b20b51e8236ace059431bcc872a005212f8412144ca22fec0b85f7696",
+      "translated": "정상적인 출력은 로그인 상태이고 토큰이 유효하며 `ORCA_PROTECTED_0001`가 사용자의 로그인 이름을 반환합니다."
+    },
+    "/docs/github-errors/:heading:common-footguns:0": {
+      "sourceHash": "4921cd16d19b5e8928fb67d9d370a2460447e1d6f2b27a27b9462b8609b7c947",
+      "translated": "### 흔히 놓치는 문제"
+    },
+    "/docs/github-errors/:paragraph:common-footguns:0": {
+      "sourceHash": "c294c10a89957745b0e3af9307c32138df01431aa8deb883cc4bd1299640b258",
+      "translated": "**셸 프로필의 `ORCA_PROTECTED_0001` 또는 `ORCA_PROTECTED_0002`**  \n`ORCA_PROTECTED_0004` 또는 `ORCA_PROTECTED_0005`에서 `ORCA_PROTECTED_0003` 같은 값을 내보내면 `ORCA_PROTECTED_0006`는 키링보다 해당 값을 우선합니다. 오래됐거나 잘못된 환경 변수 토큰은 이해하기 어려운 인증 또는 속도 제한 동작을 유발합니다. 환경 변수를 해제하고 다시 로그인합니다."
+    },
+    "/docs/github-errors/:code:common-footguns:0": {
+      "sourceHash": "1ce697ac08eda8793b607e1c6b623f04ee723bbf1abc059201001dd3e9d353ad",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/github-errors/:paragraph:common-footguns:1": {
+      "sourceHash": "4f89edd83331f0fd40353552c86b94ba304f2f26a60ad90183bec30556eedfba",
+      "translated": "**만료되거나 취소된 토큰**  \n`ORCA_PROTECTED_0001`에 토큰이 유효하지 않다고 표시될 수 있습니다. `ORCA_PROTECTED_0002` 또는 `ORCA_PROTECTED_0003`을 실행하고 새 자격 증명을 사용하도록 ORCA_PROTECTED_0004을 다시 시작합니다."
+    },
+    "/docs/github-errors/:paragraph:common-footguns:2": {
+      "sourceHash": "539f67b79bce8d539fe6a961e2f611d3518c00749ed47bb55bc5ade9d35698dc",
+      "translated": "**조직 SAML SSO**  \n비공개 조직 저장소는 토큰에 대한 SSO 승인이 필요할 수 있습니다. ORCA_PROTECTED_0001 토큰 설정에서 조직의 SSO 승인 링크를 연 다음 다시 시도합니다."
+    },
+    "/docs/github-errors/:paragraph:common-footguns:3": {
+      "sourceHash": "da434af70743e2e22f89f5a6094a671d5686f2391176149c4de083cddd2561ab",
+      "translated": "**원격 또는 SSH 작업 트리**  \nORCA_PROTECTED_0001 인증은 **호스트별**입니다. 노트북에서 로그인해도 원격 시스템의 `ORCA_PROTECTED_0002`에 로그인되지 않습니다. 호스트에 SSH로 접속해 그곳에서 `ORCA_PROTECTED_0003`을 실행하거나, 해당 환경에 대한 ORCA_PROTECTED_0004의 원격 서버 ORCA_PROTECTED_0005 예산 보기를 사용합니다."
+    },
+    "/docs/github-errors/:heading:permission-and-repository-errors:0": {
+      "sourceHash": "6dbb736ee54eff63e651e2cef45168abdc22bf2ca93fa4a78350383f0670c0f9",
+      "translated": "## 권한 및 저장소 오류"
+    },
+    "/docs/github-errors/:table:permission-and-repository-errors:0": {
+      "sourceHash": "df9dfe9a210754743aead087d25cb33498cc529e1d893ec6079bf51ade8a9768",
+      "translated": "| 증상 | 의미 |\n| --- | --- |\n| ‘rate limit’ 메시지가 없는 HTTP 403 | 토큰에 필요한 범위가 없거나 리소스를 볼 권한이 없습니다. |\n| HTTP 404 / ‘could not resolve to a Repository’ | 저장소가 없거나 이름이 바뀌었거나 이 토큰에서 보이지 않습니다. |\n| ‘resource not accessible by integration’ | ORCA_PROTECTED_0001 유형으로 해당 작업을 수행할 수 없습니다. |"
+    },
+    "/docs/github-errors/:paragraph:permission-and-repository-errors:0": {
+      "sourceHash": "f70f0edad7c1750b74fcdb9a851e3ce9f3b84b8e63d7e02033fac3779822a8a9",
+      "translated": "해결 방법:"
+    },
+    "/docs/github-errors/:list:permission-and-repository-errors:0": {
+      "sourceHash": "2f19c657c9bef1c5b1dd1ee073f6d10fefa3a98cb8dac3ee37357f3faf743b86",
+      "translated": "- `ORCA_PROTECTED_0002`과 같은 사용자로 로그인한 브라우저에서 ORCA_PROTECTED_0001을 열 수 있는지 확인합니다.\n- `ORCA_PROTECTED_0003`를 포함하는 클래식 범위로 다시 인증합니다. 해당 기능을 사용한다면 `ORCA_PROTECTED_0004` 및 `ORCA_PROTECTED_0005`도 포함합니다.\n- ORCA_PROTECTED_0006 Enterprise에서는 `ORCA_PROTECTED_0007`가 해당 호스트 이름에 인증되어 있는지 확인합니다(`ORCA_PROTECTED_0008`)."
+    },
+    "/docs/github-errors/:heading:network-and-github-outages:0": {
+      "sourceHash": "df0f575c9fa87f87797766a335559b533214ca5f107fc14a7145a70d4b50bfc7",
+      "translated": "## 네트워크 및 ORCA_PROTECTED_0001 장애"
+    },
+    "/docs/github-errors/:paragraph:network-and-github-outages:0": {
+      "sourceHash": "d6d2405c75671fe4eff5451bf3599e1e2143412e9b7d76f67d204980e3093438",
+      "translated": "시간 초과, ‘could not resolve host’ 또는 ‘ORCA_PROTECTED_0001 is unreachable’ 메시지는 연결 문제를 의미합니다."
+    },
+    "/docs/github-errors/:list:network-and-github-outages:0": {
+      "sourceHash": "aae173a7aa2a6bfcbe51fafbfa1c5f6dace40ce04b9649dbeecdc1e7b57ea682",
+      "translated": "- [ORCA_PROTECTED_0001 상태](ORCA_PROTECTED_0002)를 확인합니다.\n- VPN 또는 회사 프록시를 끄고 시도합니다.\n- 원격 호스트에서는 `ORCA_PROTECTED_0003`로 나가는 HTTPS 연결이 작동하는지 확인합니다."
+    },
+    "/docs/github-errors/:heading:github-cli-missing:0": {
+      "sourceHash": "d847a72b04e34f88038349f4fbcef543febcfecc8b2ea483652635146e984044",
+      "translated": "## ORCA_PROTECTED_0001 CLI 누락"
+    },
+    "/docs/github-errors/:paragraph:github-cli-missing:0": {
+      "sourceHash": "0887611e1506223f65382a13e1e0678f14d17313e87ddeb3c1941dfb1a7556c8",
+      "translated": "ORCA_PROTECTED_0001에서 ORCA_PROTECTED_0002 CLI를 사용할 수 없다고 표시하는 경우:"
+    },
+    "/docs/github-errors/:list:github-cli-missing:0": {
+      "sourceHash": "15e2aec4af0b3aaa2a4f05ac6113036aab53ccbcc131056f11180996ccfe7267",
+      "translated": "1. [`ORCA_PROTECTED_0001`](ORCA_PROTECTED_0002)를 설치합니다.\n2. 일반 터미널에서 `ORCA_PROTECTED_0003`가 작동하는지 확인합니다.\n3. ORCA_PROTECTED_0004을 완전히 종료한 뒤 다시 열어 ORCA_PROTECTED_0005를 일치시킵니다.\n4. Windows에서는 ORCA_PROTECTED_0006이 실행되는 환경과 같은 환경에 설치합니다(WSL 또는 네이티브)."
+    },
+    "/docs/github-errors/:heading:how-orca-behaves-when-github-fails:0": {
+      "sourceHash": "f162565557ba2e3bbe9a3938e894ec5e0cd9cd89802bb64ec9435653e5610781",
+      "translated": "## ORCA_PROTECTED_0002 실패 시 ORCA_PROTECTED_0001의 동작"
+    },
+    "/docs/github-errors/:list:how-orca-behaves-when-github-fails:0": {
+      "sourceHash": "a58d05df1eda12a0258199681b0cc2a80f3fc037ef622b80c79d5097d1b01a32",
+      "translated": "- **속도 제한 또는 장애:** PR 및 `Checks`(검사) 패널은 UI를 비우는 대신 **마지막으로 확인된 상태**와 짧은 배너를 표시합니다.\n- **심각한 인증 또는 권한 실패:** 로그인 또는 접근 권한을 수정하라는 명확한 빈 상태 또는 배너 문구를 표시합니다.\n- **회로 차단기:** 주요 속도 제한 403이 발생하면 ORCA_PROTECTED_0001은 앱의 반응성을 유지하고 상황을 악화시키지 않도록 해당 버킷(`ORCA_PROTECTED_0003`, `ORCA_PROTECTED_0004` 또는 `ORCA_PROTECTED_0005`)에 대한 새 `ORCA_PROTECTED_0002` 프로세스 생성을 잠시 거부합니다."
+    },
+    "/docs/github-errors/:heading:check-github-api-budget-in-orca:0": {
+      "sourceHash": "f70fe957413d71fecee6f82816dbd8d705d6c1412b98c550544be42139947e2a",
+      "translated": "## ORCA_PROTECTED_0002에서 ORCA_PROTECTED_0001 API 예산 확인"
+    },
+    "/docs/github-errors/:paragraph:check-github-api-budget-in-orca:0": {
+      "sourceHash": "56bef59bac6577682130495284ec642487c229eb812fc0e97163adb889ec0190",
+      "translated": "**[`Settings → Git`(설정 → Git)](ORCA_PROTECTED_0001)**을 열고 **`ORCA_PROTECTED_0002 API Budget`(GitHub API 예산)**을 찾습니다."
+    },
+    "/docs/github-errors/:list:check-github-api-budget-in-orca:0": {
+      "sourceHash": "34403d30ed83a20e2ef783d0359b4bf33c9f245617273731a2820fd4260c66de",
+      "translated": "- ORCA_PROTECTED_0001의 확인 요청에서 반환한 **REST, Search 및 GraphQL** 남은 횟수\n- 제한 재설정을 기다린 뒤 새로 고침\n- 원격 ORCA_PROTECTED_0002 서버에서는 **서버 소유** `ORCA_PROTECTED_0003` ID에 대한 원격 고급 예산 보기를 사용합니다. 로컬 설정에는 데스크톱 클라이언트만 표시됩니다."
+    },
+    "/docs/github-errors/:heading:still-stuck:0": {
+      "sourceHash": "2895afdf352a7d2c97dfdf6baf7c4bcb9d0ce070b83a2039d9532cf11a68988a",
+      "translated": "## 그래도 해결되지 않는 경우"
+    },
+    "/docs/github-errors/:list:still-stuck:0": {
+      "sourceHash": "798c24dfa7145681b3a9b7cf46cfb7ac663c12811ff422375058f1479baaf0b7",
+      "translated": "1. ORCA_PROTECTED_0004이 사용하는 것과 같은 ORCA_PROTECTED_0003에서 `ORCA_PROTECTED_0001` 또는 `ORCA_PROTECTED_0002`을 실행해 터미널에서 한 번 재현합니다.\n2. **`Help → Open Logs`(도움말 → 로그 열기)**에서 로그를 수집합니다.\n3. 분류된 오류 문구(비밀 정보 제외), 민감 정보를 가린 `ORCA_PROTECTED_0005` 출력 및 터미널의 `ORCA_PROTECTED_0006`도 같은 방식으로 실패하는지를 포함해 이슈를 등록합니다."
+    },
+    "/docs/github-errors/:list:still-stuck:1": {
+      "sourceHash": "d620b3b5fd79dc2771bbccc55e27253f91fcdb1c4101ca22b57cccbd572eaef2",
+      "translated": "- [ORCA_PROTECTED_0001 이슈](ORCA_PROTECTED_0002)\n- [Discord](ORCA_PROTECTED_0003)"
+    },
+    "/docs/github-errors/:heading:related:0": {
+      "sourceHash": "630a5d69a70931054a3387840411306fb495280bfa0b3554006321cccbae0d00",
+      "translated": "## 관련 문서"
+    },
+    "/docs/github-errors/:list:related:0": {
+      "sourceHash": "b49b8e4a08e3bf00558193e1535cfaadb06a7217adb40ba217a52b76b31e6c5e",
+      "translated": "- [호스팅 검토, 이슈 및 Actions](ORCA_PROTECTED_0001) — ORCA_PROTECTED_0002에 의존하는 PR 및 `Checks`(검사) 기능\n- [설정 참조](ORCA_PROTECTED_0003) — `Integrations`(통합) 및 `Git` 창\n- [사용량 및 속도 제한 추적](ORCA_PROTECTED_0004) — ORCA_PROTECTED_0006 API가 아닌 AI 공급자 제한(ORCA_PROTECTED_0005)\n- [문제 해결 및 FAQ](ORCA_PROTECTED_0007) — 일반적인 ORCA_PROTECTED_0008 문제"
+    }
+  }
+}

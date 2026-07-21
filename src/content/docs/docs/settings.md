@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-07-16T01:03:39.973Z"
+checkedAt: "2026-07-21T05:58:45.755Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -31,10 +31,11 @@ translationNotice:
 
 ## 힘내
 
-- 기본 기본 참조 확인자.
-- 서명 옵션을 커밋합니다.
-- 외부 Git 도구용 편집기입니다.
-- 작업에서 분기 자동 이름 바꾸기 - 에이전트가 작업을 시작한 후 Orca 생성 생물 분기의 이름을 바꿉니다.
+- 기본 베이스 ref 확인 방식입니다.
+- 커밋 서명 옵션입니다.
+- 외부 git 도구용 편집기입니다.
+- `Auto-Rename Branch From Work`(작업에 따라 브랜치 자동 이름 변경) — 에이전트가 작업을 시작한 뒤 Orca이 생성한 동물 이름 브랜치의 이름을 변경합니다.
+- **`GitHub API Budget`(GitHub API 예산)** — 로컬 `gh` CLI에서 확인한 REST(core), Search, GraphQL의 남은 할당량입니다. PR 검사나 Tasks 갱신이 중단됐을 때 유용합니다. 수치는 정상인데 GitHub이 실시간 호출을 계속 제한한다면 [GitHub 오류 문제 해결](/orca-docs-ko/docs/github-errors/)을 참조합니다.
 
 ## 터미널
 
@@ -108,7 +109,8 @@ translationNotice:
 
 ## 실험적
 
-- [활동 페이지](/orca-docs-ko/docs/activity/) — 에이전트 이벤트에 대한 Slack 스타일 작업 트리 피드입니다.
-- 컴팩트 작업 트리 카드 — 레이아웃이 아직 실험적인 동안 사이드바에서 중복되는 두 번째 줄을 숨깁니다.
+- [Activity Page](/orca-docs-ko/docs/activity/) — 에이전트 이벤트를 보여 주는 Slack 스타일 작업 트리 피드입니다.
+- `Compact worktree cards`(간결한 작업 트리 카드) — 레이아웃이 아직 실험 단계인 동안 사이드바에서 중복되는 두 번째 줄을 숨깁니다.
 - [에이전트 최대 절전 모드](/orca-docs-ko/docs/agents/hibernation/) — 유휴 백그라운드 에이전트를 일시 중지하고 다시 열 때 자동으로 재개합니다.
-- 기능은 아직 안정적이지 않습니다. 동작이 변경될 수 있습니다.
+- **`Per-Workspace Environments`(작업 공간별 환경)** — 저장소가 소유하는 주문형 환경(클라우드 샌드박스, VM 또는 로컬 Docker)을 위한 설정 제어와 작업 공간 **`Run on`(실행 위치)** 대상을 표시합니다. [Orca 실행 방식](/orca-docs-ko/docs/ways-to-run/#4-per-workspace-environments-ephemeral-vms)을 참조합니다.
+- 아직 안정화되지 않은 기능으로, 동작이 변경될 수 있습니다.

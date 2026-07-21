@@ -1,7 +1,7 @@
 ---
 title: "호스팅된 리뷰, 문제 및 조치"
 sourceUrl: https://www.onorca.dev/docs/review/github
-checkedAt: "2026-07-16T01:03:39.973Z"
+checkedAt: "2026-07-21T05:58:45.755Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/commit-push/
 next: /orca-docs-ko/docs/review/linear/
@@ -53,7 +53,12 @@ GitLab 리포지토리의 경우 서랍에는 선택한 프로젝트의 미해�
 
 Orca은 `Tasks`(작업) 사이드바 항목 아래에 전체 GitHub 프로젝트 보기를 표시합니다. 저장소 전체에서 프로젝트 카드를 찾아보고, 소스 저장소별로 필터링하고, 풀 요청 초안 상태를 확인하고, 모든 카드에서 작업 트리를 생성합니다.
 
+## 문제 해결
+
+속도 제한, `gh` 인증, 권한 또는 네트워크 문제로 PR 상태, 검사 또는 Tasks가 갱신되지 않으면 **[GitHub 오류 문제 해결](/orca-docs-ko/docs/github-errors/)**을 참조합니다.
+
 ## 다음 단계
 
-- [Orca에서 커밋 및 푸시](/orca-docs-ko/docs/review/commit-push/) - 단계 변경, 분기 푸시, 호스팅된 검토 생성.
-- [Linear 항목 서랍](/orca-docs-ko/docs/review/linear/) - 작업 소스가 git 공급자 외부에 있는 경우 Linear를 사용합니다.
+- [Orca에서 커밋 및 푸시](/orca-docs-ko/docs/review/commit-push/) — 변경 사항을 스테이징하고 브랜치를 푸시한 다음 호스팅 검토를 만듭니다.
+- [Linear 항목 서랍](/orca-docs-ko/docs/review/linear/) — 작업 소스가 git 공급자 외부에 있을 때 Linear를 사용합니다.
+- [GitHub 오류 문제 해결](/orca-docs-ko/docs/github-errors/) — 속도 제한, 인증 및 `gh` 실패를 다룹니다.

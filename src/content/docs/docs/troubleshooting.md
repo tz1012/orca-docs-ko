@@ -1,10 +1,10 @@
 ---
 title: "문제 해결 및 FAQ"
 sourceUrl: https://www.onorca.dev/docs/troubleshooting
-checkedAt: "2026-07-16T01:03:39.973Z"
+checkedAt: "2026-07-21T05:58:45.755Z"
 editUrl: false
 prev: /orca-docs-ko/docs/telemetry/
-next: false
+next: /orca-docs-ko/docs/github-errors/
 translationNotice:
   title: "비공식 한국어 번역"
   message: "이 문서는 ORCA 공식 문서의 비공식 한국어 번역입니다. 내용이 다를 경우 원문이 우선합니다."
@@ -39,6 +39,18 @@ translationNotice:
 
 - 적극적으로 사용하지 않는 작업 트리를 닫습니다. 각 작업 트리는 파일 감시자를 활성 상태로 유지합니다.
 - 많은 브라우저 탭이 있는 분할 레이아웃은 RAM을 가장 많이 사용하므로 필요하지 않은 브라우저를 닫습니다.
+
+## GitHub PR 패널, 검사 및 Tasks 오류
+
+속도 제한, 잘못된 `gh` 인증, 누락된 범위 및 저장소 접근 문제는 모두 `Source Control`(소스 제어)과 `PR Checks`(PR 검사) 패널에 표시됩니다. 전체 오류 분류표와 설정의 **`GitHub API Budget`(GitHub API 예산)** 수치가 정상인데도 REST가 차단될 수 있는 이유는 **[GitHub 오류 문제 해결](/orca-docs-ko/docs/github-errors/)**을 참조합니다.
+
+빠른 확인:
+
+```
+gh auth status -h github.com
+gh api user
+gh api rate_limit --jq '.resources.core'
+```
 
 ## 로그
 

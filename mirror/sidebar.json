@@ -115,6 +115,10 @@
         "slug": "docs/first-session"
       },
       {
+        "label": "GitHub 오류 문제 해결",
+        "slug": "docs/github-errors"
+      },
+      {
         "label": "설치",
         "slug": "docs/install"
       },
@@ -217,6 +221,10 @@
       {
         "label": "문제 해결 및 FAQ",
         "slug": "docs/troubleshooting"
+      },
+      {
+        "label": "Orca 실행 방식",
+        "slug": "docs/ways-to-run"
       }
     ]
   }
