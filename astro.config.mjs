@@ -13,6 +13,16 @@ export default defineConfig({
     defaultLocale: "root",
     locales: { root: { label: "한국어", lang: "ko" } },
     sidebar,
+    head: [
+      {
+        tag: "script",
+        attrs: {
+          defer: true,
+          "data-goatcounter": "https://orca-docs-ko.goatcounter.com/count",
+          src: "//gc.zgo.at/count.js",
+        },
+      },
+    ],
     components: {
       PageTitle: "./src/components/PageTitle.astro",
       DraftContentNotice: "./src/components/DraftContentNotice.astro"
