@@ -1,7 +1,7 @@
 ---
 title: "디자인 모드"
 sourceUrl: https://www.onorca.dev/docs/browser/design-mode
-checkedAt: "2026-07-21T05:58:45.755Z"
+checkedAt: "2026-07-24T01:03:34.310Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/overview/
 next: /orca-docs-ko/docs/browser/profiles/

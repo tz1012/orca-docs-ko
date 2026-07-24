@@ -1,7 +1,7 @@
 ---
 title: "동일한 작업으로 세 명의 에이전트와 경쟁하세요"
 sourceUrl: https://www.onorca.dev/docs/recipes/parallel-agents
-checkedAt: "2026-07-21T05:58:45.755Z"
+checkedAt: "2026-07-24T01:03:34.310Z"
 editUrl: false
 prev: /orca-docs-ko/docs/activity/
 next: /orca-docs-ko/docs/recipes/review-ai-diff/
