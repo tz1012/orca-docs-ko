@@ -1,7 +1,7 @@
 ---
 title: "모바일 동반자"
 sourceUrl: https://www.onorca.dev/docs/mobile
-checkedAt: "2026-07-24T01:03:34.310Z"
+checkedAt: "2026-07-28T07:12:33.480Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/skills/
 next: /orca-docs-ko/docs/notifications/

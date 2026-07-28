@@ -7,16 +7,16 @@
       "translated": "# 원격 ORCA_PROTECTED_0001 서버"
     },
     "/docs/remote-servers/:paragraph:remote-orca-servers:0": {
-      "sourceHash": "1fddfc8a12498b984043a5a3f1c962da34742201952e00130acd0faf8f193c81",
-      "translated": "다른 컴퓨터에서 ORCA_PROTECTED_0001을 실행하고 데스크톱이나 브라우저 클라이언트에서 연결하세요."
+      "sourceHash": "28b17f2c17ee6ba75cae3733a5934f24f8de3e5b6df7be2ee97f8b26a2379ba2",
+      "translated": "다른 컴퓨터에서 ORCA_PROTECTED_0001을 계속 실행하고 노트북에서 연결합니다."
     },
     "/docs/remote-servers/:paragraph:remote-orca-servers:1": {
-      "sourceHash": "87ab847d9017a69361df4e2bfc2776b29e60809cac706b58708a1dc11bd681bd",
-      "translated": "원격 ORCA_PROTECTED_0001 서버를 사용하면 한 시스템이 ORCA_PROTECTED_0002 런타임을 실행하는 동안 다른 ORCA_PROTECTED_0003 클라이언트가 이에 연결할 수 있습니다. 개발 상자, GPU 호스트 또는 Always-On 서버가 프로젝트, 작업 트리, 터미널, 탭, 공급자 확인 및 에이전트 세션을 소유해야 하는 경우 이를 사용합니다."
+      "sourceHash": "93666d01ca64ecad0e03a010fcab0d004ffe3d68108b6a26a0c4702a184f2be9",
+      "translated": "원격 ORCA_PROTECTED_0001 서버를 사용하면 한 컴퓨터가 작업을 수행하고 다른 컴퓨터가 UI를 제공합니다. 서버에는 프로젝트, 작업 트리, 터미널, 탭, 공급자 계정 및 에이전트 세션이 유지됩니다. 노트북은 실행 중인 해당 ORCA_PROTECTED_0002 인스턴스에 연결됩니다."
     },
     "/docs/remote-servers/:aside:remote-orca-servers:0": {
-      "sourceHash": "97cbc2d06d5aae40ce73409523a2e13fc33d28bd0b49ed1c96cd1e0df42d1087",
-      "translated": "베타\n\n원격 ORCA_PROTECTED_0001 서버는 베타 버전입니다. 서버와 클라이언트는 LAN, Tailscale, SSH 전달 또는 터널과 같이 제어하는 ​​네트워크 경로를 통해 서로 연결할 수 있어야 합니다."
+      "sourceHash": "54637b8cad8571ea98f1862f2a4269d63b6c268d3888deb4b7f47a073d73f0b4",
+      "translated": "베타\n\n원격 ORCA_PROTECTED_0001 서버는 베타 기능입니다. 서버와 클라이언트는 동일한 Tailscale tailnet이나 LAN처럼 사용자가 제어하는 비공개 네트워크 경로에 두어야 합니다."
     },
     "/docs/remote-servers/:heading:mental-model:0": {
       "sourceHash": "de5ec1d1b4b12b9ceca82c34349dc9d7cdf27028fd0318184792dff97a90a58b",
@@ -343,12 +343,256 @@
       "translated": "## 다음 단계"
     },
     "/docs/remote-servers/:list:next-steps:0": {
-      "sourceHash": "825a6aa3bc170c9be21031a0ce39dcbcbea3b2cf7b9aed73ad9a9af6d1f96e48",
-      "translated": "- 모든 실행 모드의 개요인 [ORCA_PROTECTED_0001 실행 방식](ORCA_PROTECTED_0002)을 읽습니다.\n- 런타임 명령 예제는 [ORCA_PROTECTED_0003 CLI 참조](ORCA_PROTECTED_0004)를 읽습니다.\n- 로컬 데스크톱 런타임에 연결된 상태를 유지하는 SSH 작업 트리에는 [SSH 작업 트리](ORCA_PROTECTED_0005)를 사용합니다."
+      "sourceHash": "e3475246ff5a3496a09eb76d6ece145b82f05b85f6bcb83064617a73dd895481",
+      "translated": "-   [ORCA_PROTECTED_0001 실행 방식](ORCA_PROTECTED_0002)에서 모든 실행 모드를 비교합니다.\n-   [SSH 작업 트리](ORCA_PROTECTED_0003)는 노트북이 ORCA_PROTECTED_0004 런타임을 소유해야 할 때 사용합니다.\n-   [ORCA_PROTECTED_0005 CLI 참조](ORCA_PROTECTED_0006)에서 `ORCA_PROTECTED_0007` 플래그와 자동화 명령을 확인합니다."
     },
     "/docs/remote-servers/:paragraph:when-to-use-ssh-instead:5": {
       "sourceHash": "7984ecd05437858bac15cc9a85110bc8010871ea330aa502315642ee0c0fe1e1",
       "translated": "백엔드가 서버에 SSH로 접속해 `ORCA_PROTECTED_0001`를 직접 실행하면 ORCA_PROTECTED_0002이 이를 ORCA_PROTECTED_0003 관리 세션으로 인식한다고 보장할 수 없습니다. 백엔드가 서버에 SSH로 접속해 `ORCA_PROTECTED_0004`를 실행한다면 서버에는 어차피 ORCA_PROTECTED_0005 런타임이 필요하며, 이것이 원격 ORCA_PROTECTED_0006 서버 모델입니다."
+    },
+    "/docs/remote-servers/:paragraph:remote-orca-servers:2": {
+      "sourceHash": "73f0d9c000e54605fb380f3102b3124e8e7ec1052f28935fb6fd3a3a5bf31d8d",
+      "translated": "가장 간단한 설정은 두 컴퓨터에 ORCA_PROTECTED_0001 데스크톱 앱을 설치하고 [Tailscale](ORCA_PROTECTED_0002)을 통해 연결하는 것입니다. 이 방식에서는 `ORCA_PROTECTED_0003`을 실행할 필요가 없습니다."
+    },
+    "/docs/remote-servers/:heading:what-runs-where:0": {
+      "sourceHash": "67c6e3e91d0f1d45e3849d08390476bbf89cdbb12d8093ea574fa73bd5182ac4",
+      "translated": "## 구성 요소별 실행 위치"
+    },
+    "/docs/remote-servers/:code:what-runs-where:0": {
+      "sourceHash": "0e7ab2ff3b29c2e7da8958cef575a7e936638740917eb3889ee2cfd7e93206bf",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/remote-servers/:paragraph:what-runs-where:0": {
+      "sourceHash": "23b9105f1e809239888f2e5e18c565c1f9429a4949a338e8e085e7805e2f6f63",
+      "translated": "**서버 컴퓨터**에 ORCA_PROTECTED_0001, ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, `ORCA_PROTECTED_0004` 및 사용할 공급자 CLI를 설치하고 인증합니다. 노트북의 로그인 정보가 서버로 자동 이전되지는 않습니다."
+    },
+    "/docs/remote-servers/:heading:recommended-desktop-app-tailscale:0": {
+      "sourceHash": "a74c01558f5b973a25a3c0f8a13ecf3930ea22b08415cf6fa886446001669d73",
+      "translated": "## 권장 방식: 데스크톱 앱 + Tailscale"
+    },
+    "/docs/remote-servers/:paragraph:recommended-desktop-app-tailscale:0": {
+      "sourceHash": "9ee724b1a70988791bab58c87d100f7d7e0be12bde95851b4f2a16dd1d8de15e",
+      "translated": "다음 항목이 필요합니다."
+    },
+    "/docs/remote-servers/:list:recommended-desktop-app-tailscale:0": {
+      "sourceHash": "63b631e32577943e4c5a82018ad24b3441ea3cd31710e9bf44397011be5644b4",
+      "translated": "-   두 컴퓨터 모두에 ORCA_PROTECTED_0001이 설치되어 있고 최신 상태여야 합니다.\n-   두 컴퓨터 모두에 Tailscale이 설치되어 있어야 합니다.\n-   두 컴퓨터 모두 동일한 tailnet에 로그인되어 있어야 합니다.\n-   서버 컴퓨터가 절전 상태가 아니고 온라인이며 ORCA_PROTECTED_0002을 실행 중이어야 합니다."
+    },
+    "/docs/remote-servers/:paragraph:recommended-desktop-app-tailscale:1": {
+      "sourceHash": "0e8b88a1e4853e1e4e58e7a944da0c0306f5938dc65aa8186e3f1d4ff7a3124f",
+      "translated": "Tailscale은 일반적으로 `ORCA_PROTECTED_0001`으로 시작하는 비공개 주소를 서버에 할당합니다. ORCA_PROTECTED_0002은 연결 주소 선택기에 이 주소를 가장 먼저 표시합니다."
+    },
+    "/docs/remote-servers/:heading:1-create-an-access-link-on-the-server:0": {
+      "sourceHash": "7939e971ac86dea41d4380005df6be44e530462de4ac6d08324e52190ce2309c",
+      "translated": "### 1\\. 서버에서 액세스 링크 만들기"
+    },
+    "/docs/remote-servers/:paragraph:1-create-an-access-link-on-the-server:0": {
+      "sourceHash": "f4fb9221df42af48c4f2e039074c066c7c0f7e6609764be05b4ec2689b6f1b75",
+      "translated": "세션을 계속 실행할 컴퓨터에서 다음을 수행합니다."
+    },
+    "/docs/remote-servers/:list:1-create-an-access-link-on-the-server:0": {
+      "sourceHash": "bf0d2f9132359a975b072eb67bbf36741c82ba8d273e771dd9d827d5cdf37778",
+      "translated": "1.  ORCA_PROTECTED_0001 데스크톱 앱을 엽니다.\n2.  **`Settings → Remote ORCA_PROTECTED_0002 Servers`(설정 → 원격 Orca 서버)**를 엽니다.\n3.  **`Advertise this app as a server`(이 앱을 서버로 알리기)** 아래에서 **`New Link`(새 링크)**를 클릭합니다.\n4.  **`Connection address`(연결 주소)**에서 Tailscale 주소를 선택합니다. 일반적으로 `ORCA_PROTECTED_0003`과 같은 형식입니다.\n5.  **`Generate Access Link`(액세스 링크 생성)**를 클릭합니다.\n6.  **`Pair another ORCA_PROTECTED_0004 client`(다른 Orca 클라이언트 페어링)** 아래의 링크를 복사합니다."
+    },
+    "/docs/remote-servers/:paragraph:1-create-an-access-link-on-the-server:1": {
+      "sourceHash": "a53020b5620b66e85ebeca39df2a75f95a2b5275764d82a2f46f773a33e07fd7",
+      "translated": "Tailscale 주소가 없으면 Tailscale이 연결되어 있는지 확인하고 **`Connection address`(연결 주소)** 옆의 새로 고침 버튼을 클릭합니다."
+    },
+    "/docs/remote-servers/:figure:1-create-an-access-link-on-the-server:0": {
+      "sourceHash": "8f5fb31a915f97337bf7d70f4bb98697e1256bb40cd3dc7648ba60de81da26f6",
+      "translated": "![서버에서 Tailscale 주소를 선택하고 액세스 링크를 생성한 다음 일부가 가려진 페어링 URL을 복사합니다. 나중에 권한을 취소할 수 있습니다.](ORCA_PROTECTED_0001)\n\n서버에서 Tailscale 주소를 선택하고 액세스 링크를 생성한 다음 일부가 가려진 페어링 URL을 복사합니다. 나중에 권한을 취소할 수 있습니다."
+    },
+    "/docs/remote-servers/:aside:1-create-an-access-link-on-the-server:0": {
+      "sourceHash": "ea44ed049d4aa01849a56ac0ee070d6b462559682ca4bcc951d8127699ed9dbf",
+      "translated": "액세스 링크를 비공개로 유지합니다\n\n페어링 URL은 이 ORCA_PROTECTED_0001 런타임에 대한 액세스 권한을 부여합니다. 비밀번호처럼 취급하고 페어링하려는 클라이언트에만 전송합니다."
+    },
+    "/docs/remote-servers/:heading:2-add-the-server-on-your-laptop:0": {
+      "sourceHash": "2a74bc013b375a338c3bde59e1de6b28777a80daf471122f5891eee7c49e2818",
+      "translated": "### 2\\. 노트북에 서버 추가하기"
+    },
+    "/docs/remote-servers/:paragraph:2-add-the-server-on-your-laptop:0": {
+      "sourceHash": "660e603e664b1f48247b80235856c83816de4eb35c9d97fc67c75caf96cd02b0",
+      "translated": "클라이언트로 사용할 컴퓨터에서 다음을 수행합니다."
+    },
+    "/docs/remote-servers/:list:2-add-the-server-on-your-laptop:0": {
+      "sourceHash": "8cf75e24010a5d8769d2cb53ec3fd032541b235b407ce8261d6163c594e6198c",
+      "translated": "1.  **`Settings → Remote ORCA_PROTECTED_0001 Servers`(설정 → 원격 Orca 서버)**를 엽니다.\n2.  **`Add Server`(서버 추가)**를 클릭합니다.\n3.  `ORCA_PROTECTED_0002`처럼 알아보기 쉬운 이름을 입력합니다.\n4.  서버에서 받은 액세스 링크를 붙여 넣습니다.\n5.  **`Add Server`(서버 추가)**를 클릭합니다.\n6.  저장된 서버에 **`Disconnected`(연결 끊김)**가 표시되면 **`Connect`(연결)**를 클릭합니다."
+    },
+    "/docs/remote-servers/:figure:2-add-the-server-on-your-laptop:0": {
+      "sourceHash": "4e6fcca398eaa0c1ebb826d9d43be95c1fc092b11db4ba2f642127567267d36d",
+      "translated": "![클라이언트에서 서버 이름을 지정하고 액세스 링크를 붙여 넣은 다음 서버를 추가합니다. 이 예시에서는 페어링 코드 일부가 가려져 있습니다.](ORCA_PROTECTED_0001)\n\n클라이언트에서 서버 이름을 지정하고 액세스 링크를 붙여 넣은 다음 서버를 추가합니다. 이 예시에서는 페어링 코드 일부가 가려져 있습니다."
+    },
+    "/docs/remote-servers/:paragraph:2-add-the-server-on-your-laptop:1": {
+      "sourceHash": "5a2bccb1849868748fa9a84fb081a0011f4677569cf4c10bc14e771fc6149d6b",
+      "translated": "서버를 추가해도 모든 새 프로젝트가 강제로 해당 서버를 사용하지는 않으며 서버 정보만 저장됩니다. 서버를 통해 라우팅되는 프로젝트, 터미널, 공급자 확인 및 브라우저나 모바일 인계에서 해당 서버를 기본값으로 사용하려는 경우에만 **`Advanced → Active Server`(고급 → 활성 서버)**를 엽니다."
+    },
+    "/docs/remote-servers/:heading:use-the-remote-server:0": {
+      "sourceHash": "26ef0ce469df06c0b4a659941925ff0c8b8ae0d88d004223f7c0378551ed4196",
+      "translated": "## 원격 서버 사용하기"
+    },
+    "/docs/remote-servers/:paragraph:use-the-remote-server:0": {
+      "sourceHash": "3b8076bce16abd98c8e439cef48c11668ef168fb6b9b4aed54bca6d9015a451e",
+      "translated": "서버에 **`Connected`(연결됨)**가 표시되면 서버 또는 서버의 프로젝트 중 하나를 선택하고 평소처럼 ORCA_PROTECTED_0001을 사용합니다. 터미널, 에이전트 프로세스, 파일, 작업 트리 및 세션 상태는 서버 컴퓨터에 있습니다."
+    },
+    "/docs/remote-servers/:paragraph:use-the-remote-server:1": {
+      "sourceHash": "b7c8f75b254873c20dcc6a56de2986e2de15c6bdfe1d7dc04b26020eec60497a",
+      "translated": "즉, 다음과 같이 동작합니다."
+    },
+    "/docs/remote-servers/:list:use-the-remote-server:0": {
+      "sourceHash": "5912e85eff54103e08d58908419f557646f9303177b024f91c17b5e1bff11e22",
+      "translated": "-   클라이언트 노트북이 절전 상태가 되거나 연결이 끊겨도 에이전트는 계속 실행됩니다.\n-   서버에는 해당 에이전트가 사용하는 저장소, 도구 및 자격 증명이 필요합니다.\n-   서버는 절전 상태가 아니어야 하며 tailnet에 계속 연결되어 있어야 합니다.\n-   클라이언트를 다시 연결하면 서버가 소유한 상태로 돌아갑니다."
+    },
+    "/docs/remote-servers/:heading:access-and-security:0": {
+      "sourceHash": "3afbf5655474d660c7decaa1bac8479d835bec7f871ccf9c162162f6b3c74ea4",
+      "translated": "## 액세스 및 보안"
+    },
+    "/docs/remote-servers/:paragraph:access-and-security:0": {
+      "sourceHash": "5472576bc6d37d81965d52bd9bd81611d79c4efed111e3196d8dfeb834a1d1c6",
+      "translated": "ORCA_PROTECTED_0001은 페어링된 클라이언트마다 별도로 취소할 수 있는 토큰을 만듭니다. 서버에서는 **`Shared Server Access`(공유 서버 액세스)** 아래에 이러한 토큰이 표시됩니다."
+    },
+    "/docs/remote-servers/:list:access-and-security:0": {
+      "sourceHash": "ace8847b68c2ee2bbe9e0bc175e09ca0944a352978ffbf7700639732de3dc3fe",
+      "translated": "-   권한 옆의 휴지통 버튼을 클릭하면 권한이 취소됩니다. 해당 권한을 사용하는 활성 클라이언트의 연결은 즉시 끊깁니다.\n-   새 링크를 생성하면 이전의 **사용하지 않은** 링크가 대체됩니다. 이미 페어링된 클라이언트의 권한은 직접 취소할 때까지 유지됩니다.\n-   Tailscale ACL 또는 권한의 범위를 설정에서 허용하는 만큼 좁게 유지합니다.\n-   ORCA_PROTECTED_0001 포트를 공용 인터넷으로 직접 전달하지 않습니다. Tailscale, WireGuard, 신뢰할 수 있는 LAN, SSH 전달 또는 인증된 터널을 사용합니다.\n-   다른 컴퓨터에서는 `ORCA_PROTECTED_0002`를 선택하지 않습니다. 이 주소는 서버 자체에서만 작동합니다."
+    },
+    "/docs/remote-servers/:heading:alternative-orca-serve:0": {
+      "sourceHash": "98baf9e734d0d37a1ddd484c08bc62f67d4d4abda21eb4c331ecd292bdb75144",
+      "translated": "## 대안: `ORCA_PROTECTED_0001`"
+    },
+    "/docs/remote-servers/:paragraph:alternative-orca-serve:0": {
+      "sourceHash": "cc7094facb361c9fa788f3fd3ace2d08443e3edc3df66c45ca4f028265817243",
+      "translated": "헤드리스 Linux 서버나 서비스에서 관리하는 VM처럼 호스트를 데스크톱 창 없이 실행해야 할 때는 `ORCA_PROTECTED_0001`을 사용합니다. 로그인 상태로 둘 수 있는 MacBook이나 데스크톱에서는 위의 앱 내 설정이 더 간단합니다."
+    },
+    "/docs/remote-servers/:paragraph:alternative-orca-serve:1": {
+      "sourceHash": "5e74327ec2e49916390e374c17c36b8820b27e35566adca9e91ae7c183c5188f",
+      "translated": "서버에 ORCA_PROTECTED_0001과 번들 CLI를 설치한 후 다음 명령을 실행합니다."
+    },
+    "/docs/remote-servers/:code:alternative-orca-serve:0": {
+      "sourceHash": "b39fe2cb5c2b987006b6a9500e8b25f41d3fbec465148af068c82efa7f3effc5",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/remote-servers/:paragraph:alternative-orca-serve:2": {
+      "sourceHash": "652744a2ab28954bbafd780fd76c15c2bd557594532f907f10ead1989727af95",
+      "translated": "예를 들면 다음과 같습니다."
+    },
+    "/docs/remote-servers/:code:alternative-orca-serve:1": {
+      "sourceHash": "8481aee7ed236b92ceffe3d316e048a395086697abaf85e2a832f116ea1c3303",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/remote-servers/:paragraph:alternative-orca-serve:3": {
+      "sourceHash": "97d59ec267f59257f895a96d4ac1a2927429a09f23602d4f85ef5d5c5c5c504c",
+      "translated": "이 명령은 다음 작업을 수행합니다."
+    },
+    "/docs/remote-servers/:list:alternative-orca-serve:0": {
+      "sourceHash": "1b1561b700660d420756407fd54a68adf464672ad281be1e01f199ff724c2d75",
+      "translated": "-   데스크톱 창을 열지 않고 ORCA_PROTECTED_0001 런타임을 시작합니다.\n-   `ORCA_PROTECTED_0002`을 누를 때까지 포그라운드에서 실행됩니다.\n-   바인딩된 엔드포인트와 런타임 페어링 URL을 출력합니다.\n-   `ORCA_PROTECTED_0003`은 클라이언트가 연결할 주소를 지정하는 용도로만 사용합니다."
+    },
+    "/docs/remote-servers/:paragraph:alternative-orca-serve:4": {
+      "sourceHash": "11daed569e06b6e59a377c065cb3a5f5eb441dd96dd667f88775f991292fcf18",
+      "translated": "출력된 페어링 URL을 클라이언트의 **`Settings → Remote ORCA_PROTECTED_0001 Servers → Add Server`(설정 → 원격 Orca 서버 → 서버 추가)**에 붙여 넣습니다."
+    },
+    "/docs/remote-servers/:paragraph:alternative-orca-serve:5": {
+      "sourceHash": "d659989664653338e363748c1099fe867289c4e10bb10f99522668af3cf5fd76",
+      "translated": "방화벽, 터널 또는 서비스 정의에 고정 포트가 필요하면 `ORCA_PROTECTED_0001`을 추가합니다."
+    },
+    "/docs/remote-servers/:code:alternative-orca-serve:2": {
+      "sourceHash": "564e6604bc03aa1bf10204b3b23f2933c96c0f6670aa0a621d47788c03551da2",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/remote-servers/:paragraph:alternative-orca-serve:6": {
+      "sourceHash": "38c3c4ab1f071f4725cc4be6bec7fda78b5e2a8b0bd099f67de92ceaba3e0234",
+      "translated": "한 번에 하나의 호스트 모드만 사용합니다. ORCA_PROTECTED_0001 데스크톱 앱이 이미 해당 컴퓨터를 공유하고 있다면 같은 설정에 두 번째 `ORCA_PROTECTED_0002` 프로세스를 시작하지 않습니다."
+    },
+    "/docs/remote-servers/:heading:mobile-from-a-headless-server:0": {
+      "sourceHash": "25f997ffe8df85a80a2804b77eba72902b6e9a9a86b7473b1f6c784534f9773c",
+      "translated": "### 헤드리스 서버에서 모바일 연결하기"
+    },
+    "/docs/remote-servers/:paragraph:mobile-from-a-headless-server:0": {
+      "sourceHash": "8573e60e77da098597018fa5341f951a800efdff5b597f275c8399249dfdc838",
+      "translated": "ORCA_PROTECTED_0001 모바일 앱에서는 모바일 범위로 제한된 QR 코드와 링크를 요청합니다."
+    },
+    "/docs/remote-servers/:code:mobile-from-a-headless-server:0": {
+      "sourceHash": "7fd3067973303b7b4e7bf165f02e3e8a618c5cf947b8e4ebd6b658abe47b3747",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/remote-servers/:paragraph:mobile-from-a-headless-server:1": {
+      "sourceHash": "e46cedd15bd34739cc6115bccf72440ec813fb7bb6f939a087ed30b89bd878b1",
+      "translated": "휴대전화를 동일한 tailnet에 연결한 상태에서 ORCA_PROTECTED_0001 Mobile을 열고 **`Pair`(페어링)**를 선택한 다음 터미널의 QR 코드를 스캔하거나 출력된 링크를 붙여 넣습니다."
+    },
+    "/docs/remote-servers/:heading:desktop-app-or-orca-serve:0": {
+      "sourceHash": "9a1056c3f4b42009f1e3d1874b434ed0f1e897ed460e60bcd6e22bfd537a19a7",
+      "translated": "## 데스크톱 앱과 `ORCA_PROTECTED_0001` 중 선택하기"
+    },
+    "/docs/remote-servers/:table:desktop-app-or-orca-serve:0": {
+      "sourceHash": "c2dc9dfaf2edd72c0f53a148b055e75a27753b591da33d9d4203253e7d34f131",
+      "translated": "|  | 서버의 데스크톱 앱 | `ORCA_PROTECTED_0001` |\n| --- | --- | --- |\n| 적합한 용도 | 이전에 사용하던 노트북, Mac mini 또는 데스크톱 | 헤드리스 Linux 시스템, VM 또는 관리형 서비스 |\n| 설정 | 설정 화면과 버튼 | 터미널 명령 및 서비스 구성 |\n| 서버 창 | 열림 | 없음 |\n| 액세스 링크 | **`New Link`(새 링크) → `Generate Access Link`(액세스 링크 생성)** | 터미널에 출력됨 |\n| 실행 기간 | 데스크톱 앱이 실행되는 동안 | 포그라운드 프로세스 또는 서비스가 실행되는 동안 |"
+    },
+    "/docs/remote-servers/:heading:remote-orca-server-or-ssh:0": {
+      "sourceHash": "ea47c3ff86d1155c9cfaafdad173f44702ab4dff4771f74224bac1d590ba8b32",
+      "translated": "## 원격 ORCA_PROTECTED_0001 서버와 SSH 중 선택하기"
+    },
+    "/docs/remote-servers/:paragraph:remote-orca-server-or-ssh:0": {
+      "sourceHash": "f442e956fd4d2c8f0ce746964875449411a3428cd8ff9aeea45a93d1116b31e3",
+      "translated": "[SSH 작업 트리](ORCA_PROTECTED_0001)는 노트북의 ORCA_PROTECTED_0002이 런타임을 소유하고 다른 컴퓨터는 선택한 작업 트리와 터미널을 실행하는 용도로만 사용해야 할 때 사용합니다."
+    },
+    "/docs/remote-servers/:paragraph:remote-orca-server-or-ssh:1": {
+      "sourceHash": "51936df06808e7e8abda6c12712f383f48f9e0c38f6c08285b40843cabeb3ed1",
+      "translated": "원격 ORCA_PROTECTED_0001 서버는 다른 컴퓨터가 전체 ORCA_PROTECTED_0002 런타임을 소유하고 데스크톱, 브라우저, 모바일 또는 자동화 클라이언트가 공유할 세션을 유지해야 할 때 사용합니다."
+    },
+    "/docs/remote-servers/:paragraph:remote-orca-server-or-ssh:2": {
+      "sourceHash": "7857b0ca92950d9e6d51dfa679d7c762f78e27a228f4b16d749fff5d9363e889",
+      "translated": "전체 비교는 [ORCA_PROTECTED_0001 실행 방식](ORCA_PROTECTED_0002)을 참조합니다."
+    },
+    "/docs/remote-servers/:heading:the-tailscale-address-is-not-listed:0": {
+      "sourceHash": "4aa0ee79f6df04b852cd407bd87228e19e6c38ed00aa7bc8865258be37bdd7dc",
+      "translated": "### Tailscale 주소가 목록에 없습니다"
+    },
+    "/docs/remote-servers/:paragraph:the-tailscale-address-is-not-listed:0": {
+      "sourceHash": "a85ac0cb6af97599da4a015eff9f79587af1772d5e0059d3199a343e4a3d9930",
+      "translated": "서버에서 Tailscale이 연결되어 있는지 확인한 다음 **`Connection address`(연결 주소)** 옆의 새로 고침 버튼을 클릭합니다. 두 컴퓨터 모두 동일한 tailnet에 로그인되어 있어야 합니다. Tailscale IPv4 주소는 일반적으로 `ORCA_PROTECTED_0001`으로 시작합니다."
+    },
+    "/docs/remote-servers/:heading:the-server-is-disconnected:0": {
+      "sourceHash": "5c4cbefedc27a845d60ae84492d6acdc1c9e782d4b1753d0b506e161bd28b88d",
+      "translated": "### 서버 연결이 끊겼습니다"
+    },
+    "/docs/remote-servers/:paragraph:the-server-is-disconnected:0": {
+      "sourceHash": "5d86aeb532bf5d7b7d2e78398b2ed4a01dec53836cd5fd8709db8afaaa184297",
+      "translated": "서버 컴퓨터가 절전 상태가 아니고 ORCA_PROTECTED_0001이 계속 실행 중이며 Tailscale에서 두 장치가 모두 온라인으로 표시되는지 확인합니다. 한 장치에서 다른 장치에 연결할 수 없다면 tailnet ACL 또는 권한을 확인합니다."
+    },
+    "/docs/remote-servers/:paragraph:the-server-is-disconnected:1": {
+      "sourceHash": "afb2118da1daa01ca24d10e4f5e7c20d520dbb20143fb0eb9dd42dec95672477",
+      "translated": "서버 행에 호환되지 않는 프로토콜 버전이 표시되면 두 컴퓨터의 ORCA_PROTECTED_0001을 모두 업데이트합니다."
+    },
+    "/docs/remote-servers/:heading:the-access-link-was-shared-with-the-wrong-person:0": {
+      "sourceHash": "6a4ef8ecec3637472f12e9edddf154f6698a719b7fdaada3bf8c6207c88e5c68",
+      "translated": "### 액세스 링크를 잘못된 사람과 공유했습니다"
+    },
+    "/docs/remote-servers/:paragraph:the-access-link-was-shared-with-the-wrong-person:0": {
+      "sourceHash": "959b5743171a76d3488503b23009be7138ccb19f771c1684d97047b8787e20fa",
+      "translated": "서버에서 **`Settings → Remote ORCA_PROTECTED_0001 Servers → Shared Server Access`(설정 → 원격 Orca 서버 → 공유 서버 액세스)**를 열고 해당 권한을 취소합니다. 올바른 클라이언트용 새 링크를 생성합니다."
+    },
+    "/docs/remote-servers/:heading:the-server-cannot-find-an-agent-cli:0": {
+      "sourceHash": "1b26ec05662451ce83685cc9193f2a28cecaeb02931d50cc66d33cc56e0413fe",
+      "translated": "### 서버에서 에이전트 CLI를 찾을 수 없습니다"
+    },
+    "/docs/remote-servers/:paragraph:the-server-cannot-find-an-agent-cli:0": {
+      "sourceHash": "0ddf1c301bc14bedff52c194d158fb113ab829fac4dfca80dc251c3d433e97af",
+      "translated": "서버 컴퓨터에 해당 CLI를 설치하고 인증합니다. 원격 세션은 클라이언트가 아니라 서버의 `ORCA_PROTECTED_0001`, 홈 디렉터리 및 자격 증명을 사용합니다."
+    },
+    "/docs/remote-servers/:heading:orca-serve-advertises-the-wrong-address:0": {
+      "sourceHash": "5392a0d317a5283844b932597e50935665f0e493264bf010af4cf814ffc0e845",
+      "translated": "### `ORCA_PROTECTED_0001`이 잘못된 주소를 알립니다"
+    },
+    "/docs/remote-servers/:paragraph:orca-serve-advertises-the-wrong-address:0": {
+      "sourceHash": "f58a95d7ee4a89ea9363136ef381925da814a0fab82a2e1f5834ed3672c65ab7",
+      "translated": "명령을 중지한 후 클라이언트가 연결할 수 있는 주소로 다시 시작합니다."
+    },
+    "/docs/remote-servers/:code:orca-serve-advertises-the-wrong-address:0": {
+      "sourceHash": "9f1713c573960815dda6713260c0c1b447270bdb216214f48ac2db50bb37b36b",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/remote-servers/:paragraph:orca-serve-advertises-the-wrong-address:1": {
+      "sourceHash": "20281078df8d4091538ab715db3eaa0a194ab1fc0fc8444ec9bbcaeb0dd64fe4",
+      "translated": "원격 클라이언트에는 와일드카드 주소나 `ORCA_PROTECTED_0001`을 사용하지 않습니다."
     }
   }
 }
