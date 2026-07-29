@@ -15,8 +15,8 @@
       "translated": "## 자동 줄 바꿈"
     },
     "/docs/editing/monaco/:paragraph:word-wrap:0": {
-      "sourceHash": "db5e9861c2320714039224ec84fe4e058234b5480d10a4bdb29d7880e7e375e1",
-      "translated": "파일 편집기는 기본적으로 긴 줄을 자동으로 바꿉니다. 소스 파일을 가로로 스크롤하려면 [`Settings → General → Editor`(설정 → 일반 → 편집기)](ORCA_PROTECTED_0001)에서 `Editor Word Wrap`(편집기 자동 줄 바꿈)을 끕니다. 이 설정은 diff 편집기에만 적용되는 `Diff Word Wrap`(diff 자동 줄 바꿈)과 별개입니다."
+      "sourceHash": "f35e0463cbe0bacc9b6abafebe4629f2a1cc31c35afcb2b77196a18e6c33750c",
+      "translated": "파일 편집기는 기본적으로 긴 줄을 줄 바꿈합니다. 편집기 탭의 **⋯** 메뉴에서 **`Word Wrap`(자동 줄 바꿈)**을 전환하거나, `ORCA_PROTECTED_0001`을 누르거나(VS Code와 동일하며 [`Settings`(설정) → `Shortcuts`(바로 가기)](ORCA_PROTECTED_0002)에서 다시 매핑할 수 있음), [`Settings`(설정) → `General`(일반) → `Editor Word Wrap`(편집기 자동 줄 바꿈)](ORCA_PROTECTED_0003)에서 기본값을 설정합니다. 이 설정은 diff 편집기에만 영향을 주는 **`Diff Word Wrap`(diff 자동 줄 바꿈)**과 별개입니다."
     },
     "/docs/editing/monaco/:heading:autosave:0": {
       "sourceHash": "81a867e0ee77b97cb443ad720d26e1be0774a44f43fb75953d96ab85bdf11378",
@@ -31,8 +31,8 @@
       "translated": "## 다중 커서, 이동, 찾기"
     },
     "/docs/editing/monaco/:list:multi-cursor-go-to-find:0": {
-      "sourceHash": "17582d3915184cdd4fd05c770b25d488bda5602e9fefe897d76532510428701f",
-      "translated": "- `ORCA_PROTECTED_0001` — 다음 항목을 선택합니다.\n- `ORCA_PROTECTED_0002` / `ORCA_PROTECTED_0003` — 파일 찾기 / 작업 트리 찾기.\n- `ORCA_PROTECTED_0004` — 정의로 이동합니다(언어 확장에서 지원되는 경우)."
+      "sourceHash": "c076a672bc0fc223c0476c2df598df3ca2f52f84957b4778c42dce9157145d97",
+      "translated": "-   `ORCA_PROTECTED_0001` — 다음 일치 항목을 선택합니다.\n-   `ORCA_PROTECTED_0002` / `ORCA_PROTECTED_0003` — 파일 찾기/작업 트리 찾기를 실행합니다. 텍스트가 선택되어 있으면 파일 찾기에서 현재 선택 영역을 검색 상자의 초기값으로 사용합니다.\n-   `ORCA_PROTECTED_0004` — 언어 확장이 지원하는 경우 정의로 이동합니다."
     },
     "/docs/editing/monaco/:heading:changes-view-mode:0": {
       "sourceHash": "12a882cb418f32e5f3aca360fce395a71becbe58dc4bc40ec9e0ede71dbb56c4",
@@ -55,8 +55,8 @@
       "translated": "## 사용자 정의 편집기 글꼴"
     },
     "/docs/editing/monaco/:paragraph:custom-editor-font:0": {
-      "sourceHash": "9d1c684b587f4f38e16128affa33a0b4605e24c76d1856f1044b8674aab4d058",
-      "translated": "[설정 → 모양 → 편집기 글꼴](ORCA_PROTECTED_0001)에서 편집기에 설치된 글꼴을 선택합니다. UI 글꼴과 독립적입니다."
+      "sourceHash": "53d09f2cd1f977bf56874234046b9afca0b6dacb580029c1af1f41a776f038cc",
+      "translated": "기본적으로 편집기와 diff 보기는 터미널과 동일한 글꼴을 사용합니다. 이 연결을 유지하려면 [`Settings`(설정) → `Appearance`(모양)](ORCA_PROTECTED_0001)에서 **`Editor Font Family`(편집기 글꼴 패밀리)**를 비워 둡니다. 글꼴을 설정하면 편집기에만 적용되며 UI 글꼴은 별도로 유지됩니다."
     },
     "/docs/editing/monaco/:heading:language-support:0": {
       "sourceHash": "5d5487026604d8f740a708836e42db30d5f1cffab47758d928c36bcf4bfbfd54",

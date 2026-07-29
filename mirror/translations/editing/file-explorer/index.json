@@ -23,8 +23,8 @@
       "translated": "## Git 상태"
     },
     "/docs/editing/file-explorer/:paragraph:git-status:0": {
-      "sourceHash": "8cc580435c184256b09c83634af28e0bfd4168fcf71a726890ed94e9c7e1ab6a",
-      "translated": "파일은 git 상태(추적되지 않음, 수정됨, 준비됨, 무시됨)에 따라 색상이 지정됩니다. 일반적인 작업(폐기, 스테이지, 이름 바꾸기)을 마우스 오른쪽 버튼으로 클릭합니다."
+      "sourceHash": "9ad1ebc13a40b5944a8327216b045974fa7cf8c522ceed130ad7a3915e17b84f",
+      "translated": "파일은 추적되지 않음, 수정됨, 스테이징됨, 무시됨과 같은 Git 상태에 따라 색상이 지정됩니다. 마우스 오른쪽 버튼을 클릭하면 변경 취소, 스테이징, 이름 변경, **`Copy Path`(경로 복사)** 및 **`Copy Relative Path`(상대 경로 복사)** 같은 일반 작업을 사용할 수 있습니다(기본값은 `ORCA_PROTECTED_0001` / `ORCA_PROTECTED_0002`이며 다시 매핑할 수 있습니다)."
     },
     "/docs/editing/file-explorer/:paragraph:git-status:1": {
       "sourceHash": "1dc372eb4109b97df0ded75fc7b1a0c629d730b77c978c34603cd1526a3625c8",
@@ -45,6 +45,14 @@
     "/docs/editing/file-explorer/:list:next-steps:0": {
       "sourceHash": "c324810a41d025bf03286220fba0221ec4766f1076fd5e4394cb2c2758a7b061",
       "translated": "- [모나코 편집기 및 자동 저장](ORCA_PROTECTED_0001) — 필요한 일치 항목을 찾은 후 파일을 편집하세요.\n- [Diff 뷰어](ORCA_PROTECTED_0002) - 에이전트나 편집자가 변경한 내용을 검토하세요."
+    },
+    "/docs/editing/file-explorer/:heading:download-ssh-remote:0": {
+      "sourceHash": "f87a53425d2b54c7870708b1982eea6c7417267bbc562c31d1947eb2882cae9b",
+      "translated": "## 다운로드(SSH/원격)"
+    },
+    "/docs/editing/file-explorer/:paragraph:download-ssh-remote:0": {
+      "sourceHash": "170d57121608174b18987fe49c1e553bea44292ca1bb7c5eaf50fea572f3c1fc",
+      "translated": "데스크톱 앱에서 원격 파일을 마우스 오른쪽 버튼으로 클릭한 후 **`Download`(다운로드)**를 선택하거나, 연결이 재귀 전송을 지원하는 경우 원격 폴더에서 **`Download Folder`(폴더 다운로드)**를 선택합니다. ORCA_PROTECTED_0001가 네이티브 ORCA_PROTECTED_0002 대화 상자를 엽니다. 웹 클라이언트에서는 사용할 수 없으며 로컬 작업 트리에는 이 작업이 표시되지 않습니다."
     }
   }
 }

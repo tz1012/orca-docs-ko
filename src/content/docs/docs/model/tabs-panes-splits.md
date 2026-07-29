@@ -1,7 +1,7 @@
 ---
 title: "탭, 창 및 분할 레이아웃"
 sourceUrl: https://www.onorca.dev/docs/model/tabs-panes-splits
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/worktrees/
 next: /orca-docs-ko/docs/model/agents-sessions/
@@ -27,6 +27,18 @@ Orca의 창 시스템은 컨텍스트를 잃지 않고 여러 에이전트의 �
 - 탭을 다른 그룹으로 드래그하여 이동하세요.
 - macOS에서는 `Cmd+Option+W`, Windows/Linux에서는 `Ctrl+Alt+W`를 사용하여 활성 작업 트리의 모든 편집기 파일 탭을 닫습니다.
 - 활성 탭 색상 막대는 어느 창에 초점이 맞춰져 있는지 표시합니다.
+
+### 탭 전환
+
+**새로 설치한 환경**의 기본 키 조합은 다음과 같습니다.
+
+| 작업 | macOS | Linux/Windows |
+| --- | --- | --- |
+| 다음/이전 탭(모든 유형) | `Cmd+Shift+]` / `Cmd+Shift+[` | `Ctrl+Shift+]` / `Ctrl+Shift+[` |
+| 다음/이전 탭(동일한 유형) | `Cmd+Option+]` / `Cmd+Option+[` | `Ctrl+Alt+]` / `Ctrl+Alt+[` |
+| 최근 사용한 이전 탭 | `Ctrl+Tab` | `Ctrl+Tab` |
+
+[`Settings`(설정) → `Shortcuts`(바로 가기)](/orca-docs-ko/docs/settings/)에서 다시 매핑할 수 있습니다. 기존 설치는 사용자 지정 재정의를 `~/.orca/keybindings.json`에 유지합니다.
 
 ## 분할 창
 

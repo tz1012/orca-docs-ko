@@ -1,7 +1,7 @@
 ---
 title: "문제 해결 및 FAQ"
 sourceUrl: https://www.onorca.dev/docs/troubleshooting
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/telemetry/
 next: /orca-docs-ko/docs/github-errors/
@@ -29,7 +29,28 @@ translationNotice:
 
 ## Orca CLI에 "명령을 찾을 수 없습니다"라고 표시됩니다.
 
-[설정 → 실험 → CLI](/orca-docs-ko/docs/settings/)에서 CLI를 등록합니다. macOS에서는 `~/.local/bin`에 shim을 설치합니다. 쉘의 `PATH`에 있는지 확인하세요.
+[`Settings`(설정) → `General`(일반) → `Orca CLI`](/orca-docs-ko/docs/settings/)에서 CLI를 등록합니다. macOS에서는 `~/.local/bin`에 심을 설치하므로 해당 경로가 셸의 `PATH`에 포함되어 있는지 확인합니다.
+
+## SSH는 연결되지만 원격 터미널이 실패하는 경우
+
+-   원격에 Node가 설치되어 있고 최초 릴레이 설치를 위한 네트워크 액세스가 가능한지 확인합니다.
+-   Linux에서 터미널이 전혀 생성되지 않으면 C/C++ 도구 체인인 make, g++/clang++, python3을 설치합니다([SSH 작업 트리](/orca-docs-ko/docs/ssh/) 참조).
+-   도구를 설치한 후 Orca가 네이티브 모듈을 다시 설치할 수 있도록 다시 연결합니다.
+
+## SSH 파일은 작동하지만 `Download Folder`(폴더 다운로드)는 작동하지 않는 경우
+
+폴더 다운로드에는 재귀 SFTP 전송이 필요합니다. 시스템 SSH 전용 연결에서는 파일 다운로드만 작동할 수도 있습니다. 대안으로 터미널에서 `tar`/`scp`를 사용합니다.
+
+## `Open in VS Code`(VS Code에서 열기)가 비활성화되었거나 로컬 전용인 경우
+
+-   Remote Orca Server 활성 런타임이 아니라 SSH 작업 트리를 사용합니다.
+-   `Open-in`(다음에서 열기) 명령을 Cursor 또는 인수가 여러 개인 셸 명령이 아니라 VS Code/Insiders로 설정합니다.
+-   호스트가 제거된 경우 SSH 대상을 새로 고칩니다.
+
+## Kerberos 로그인이 실패하는 경우
+
+-   `klist`에 호스트 영역의 유효한 티켓이 표시되는지 확인합니다.
+-   OpenSSH 구성에서 해당 호스트의 `GSSAPIAuthentication yes`를 확인한 다음 `Settings`(설정) → `SSH`에서 대상을 다시 가져오거나 다시 테스트합니다.
 
 ## 브라우저에 `browser_no_tab`이라고 표시됩니다.
 

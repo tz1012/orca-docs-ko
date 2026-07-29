@@ -1,7 +1,7 @@
 ---
 title: "설치"
 sourceUrl: https://www.onorca.dev/docs/install
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/
 next: /orca-docs-ko/docs/first-session/
@@ -47,10 +47,15 @@ brew install --cask stablyai/orca/orca
 
 Orca은 기본적으로 자동 업데이트되어 `stable`(안정) 채널을 추적합니다. 안정적인 릴리스는 심사를 거칩니다. `RC (release candidate)`(RC(출시 후보)) 빌드는 새로운 기능을 먼저 출시하며 대개 매일 출시됩니다.
 
-RC 채널에는 앱 내 선택 기능이 없습니다. RC 빌드를 가져오려면 다음 중 하나를 수행하세요.
+RC 채널을 항상 사용하도록 설정하는 앱 내 옵션은 없습니다. **`Check for Updates`(업데이트 확인)**([`Settings`(설정) → `General`(일반) → `Updates`(업데이트)](/orca-docs-ko/docs/settings/) 또는 앱/`Help`(도움말) 메뉴)를 보조 키와 함께 클릭하면 다음과 같이 동작합니다.
 
-- Shift 키를 누른 채 `Check for Updates`(업데이트 확인)([설정 → 일반 → 업데이트](/orca-docs-ko/docs/settings/) 또는 앱/도움말 메뉴)을 클릭하세요. 해당 단일 확인에는 시험판이 포함됩니다.
-- 또는 [GitHub 릴리스 페이지](https://github.com/stablyai/orca/releases)에서 직접 빌드를 다운로드하세요.
+| 보조 키 | 효과 |
+| --- | --- |
+| **Shift+클릭** | 최신 **RC** 시험판을 포함합니다. |
+| **Cmd+클릭**(macOS) / **Ctrl+클릭**(Windows/Linux) | 최신 **perf**\-tagged 시험판을 포함합니다. |
+| **Option+클릭**(macOS만 해당) | Orca의 호환성 검사를 통과한 **검증된 로컬 macOS 빌드**를 선택합니다. |
+
+[GitHub 릴리스 페이지](https://github.com/stablyai/orca/releases)에서 원하는 빌드를 직접 다운로드할 수도 있습니다.
 
 현재 업데이트가 마음에 들지 않음
 

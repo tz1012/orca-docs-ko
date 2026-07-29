@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 개요"
 sourceUrl: https://www.onorca.dev/docs/cli/overview
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/remote-servers/
 next: /orca-docs-ko/docs/cli/reference/
@@ -15,7 +15,7 @@ Orca CLI를 사용하여 터미널에서 Orca를 스크립팅하고, 작업 트�
 
 Orca CLI는 모든 셸에서 실행 중인 Orca 편집기를 스크립팅하기 위한 `orca` 명령줄 인터페이스입니다. 이를 사용하여 작업 트리를 생성 및 검사하고, 에이전트 터미널을 구동하고, 파일 및 차이점을 열고, 내장 브라우저를 자동화하고, 예약된 자동화를 실행하고, 스크립트 또는 AI 에이전트에서 Orca 기본 도구를 제어합니다.
 
-데스크톱 앱과 함께 제공됩니다. [설정 → 실험 → CLI](/orca-docs-ko/docs/settings/)에 등록하세요.
+데스크톱 앱에 포함되어 있으며 [`Settings`(설정) → `General`(일반) → `Orca CLI`](/orca-docs-ko/docs/settings/)에서 등록합니다.
 
 에이전트는 다음을 사용하여 일치하는 Orca CLI 기술을 설치할 수 있습니다.
 

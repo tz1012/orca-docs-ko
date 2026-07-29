@@ -53,6 +53,22 @@
     "/docs/cli/worktree-checkpoints/:paragraph:reading-before-writing:1": {
       "sourceHash": "397205cf5ad27afaa634dc58ea20332121b6464223583328e5eff5e0e3256540",
       "translated": "아직 유효한 것을 보존하고, 오래된 것을 삭제하고, 업데이트를 엮으세요."
+    },
+    "/docs/cli/worktree-checkpoints/:heading:card-status-optional:0": {
+      "sourceHash": "a3fa543d540b5bca93ceadbb2291097a787488c893a88055ae5da4f3c73b90fa",
+      "translated": "## 카드 상태(선택 사항)"
+    },
+    "/docs/cli/worktree-checkpoints/:paragraph:card-status-optional:0": {
+      "sourceHash": "8a100a06c215afd53eb8e60a6592e708147c6580383af665322fd521f0540058",
+      "translated": "자유 텍스트 댓글과 함께 단계가 바뀔 때 작업 공간 카드 상태를 설정합니다."
+    },
+    "/docs/cli/worktree-checkpoints/:code:card-status-optional:0": {
+      "sourceHash": "7d2234d406ef0c24f11ffa062c2d06752e4a33696be6d416b12ede76b30bf8b5",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/worktree-checkpoints/:paragraph:card-status-optional:1": {
+      "sourceHash": "f9a9d57e71fe38d6362c49ca67333e16677dc89166fc370f22798050e0338750",
+      "translated": "상태: `ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002`, `ORCA_PROTECTED_0003`, `ORCA_PROTECTED_0004` 또는 작업 공간에서 사용하는 사용자 지정 ID"
     }
   }
 }

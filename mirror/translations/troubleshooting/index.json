@@ -35,8 +35,8 @@
       "translated": "## ORCA_PROTECTED_0001 CLI에 \"명령을 찾을 수 없습니다\"라고 표시됩니다."
     },
     "/docs/troubleshooting/:paragraph:orca-cli-says-command-not-found:0": {
-      "sourceHash": "13253475e436822087405d44ecc966486179637709f5906ae7cb2672c103628d",
-      "translated": "[설정 → 실험 → CLI](ORCA_PROTECTED_0001)에서 CLI를 등록합니다. macOS에서는 `ORCA_PROTECTED_0002`에 shim을 설치합니다. 쉘의 `ORCA_PROTECTED_0003`에 있는지 확인하세요."
+      "sourceHash": "c2ed0304df449fd2b5f43bf49f9a66b8a4fad0cae40a1459aec99e425b80ca4f",
+      "translated": "[`Settings`(설정) → `General`(일반) → `ORCA_PROTECTED_0001 CLI`](ORCA_PROTECTED_0002)에서 CLI를 등록합니다. macOS에서는 `ORCA_PROTECTED_0003`에 심을 설치하므로 해당 경로가 셸의 `ORCA_PROTECTED_0004`에 포함되어 있는지 확인합니다."
     },
     "/docs/troubleshooting/:heading:browser-says-browser-no-tab:0": {
       "sourceHash": "86dc791d7e993518f5e6d4b29e826f3091a48700982a29966ab3e42eb431795a",
@@ -85,6 +85,38 @@
     "/docs/troubleshooting/:code:github-pr-panel-checks-tasks-errors:0": {
       "sourceHash": "623dd9bce7c489fe40a5c282d0f8c3a4d7ee66f54d26b2d2f87b40e0b7ca741b",
       "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/troubleshooting/:heading:ssh-connects-but-remote-terminals-fail:0": {
+      "sourceHash": "f5524b5b4fc0265d00e55dc17edbe10d1b07d79339f46b6a04c28082a31db486",
+      "translated": "## SSH는 연결되지만 원격 터미널이 실패하는 경우"
+    },
+    "/docs/troubleshooting/:list:ssh-connects-but-remote-terminals-fail:0": {
+      "sourceHash": "823f39a5fcc45109e22535d84e32f5244f879e8a7ee3949f73cb8a27a66020c6",
+      "translated": "-   원격에 Node가 설치되어 있고 최초 릴레이 설치를 위한 네트워크 액세스가 가능한지 확인합니다.\n-   Linux에서 터미널이 전혀 생성되지 않으면 ORCA_PROTECTED_0001++ 도구 체인인 make, g++ORCA_PROTECTED_0002, python3을 설치합니다([SSH 작업 트리](ORCA_PROTECTED_0003) 참조).\n-   도구를 설치한 후 ORCA_PROTECTED_0004가 네이티브 모듈을 다시 설치할 수 있도록 다시 연결합니다."
+    },
+    "/docs/troubleshooting/:heading:ssh-works-for-files-but-not-download-folder:0": {
+      "sourceHash": "e189c7f049e8e02e04562d29c0e1915293d2222af0575180fd90c20a949eee37",
+      "translated": "## SSH 파일은 작동하지만 `Download Folder`(폴더 다운로드)는 작동하지 않는 경우"
+    },
+    "/docs/troubleshooting/:paragraph:ssh-works-for-files-but-not-download-folder:0": {
+      "sourceHash": "9edda20746cfadb6a9a5c59a13e6dd612f88ebeabf9ef72e2c6cd9dcf7b134f6",
+      "translated": "폴더 다운로드에는 재귀 SFTP 전송이 필요합니다. 시스템 SSH 전용 연결에서는 파일 다운로드만 작동할 수도 있습니다. 대안으로 터미널에서 `ORCA_PROTECTED_0001`/`ORCA_PROTECTED_0002`를 사용합니다."
+    },
+    "/docs/troubleshooting/:heading:open-in-vs-code-is-disabled-or-local-only:0": {
+      "sourceHash": "0dc018b3de9b0f9bb84f21a60d3450afadc0566cb1cbe84b1fdaf14fcdd880ef",
+      "translated": "## `Open in VS Code`(VS Code에서 열기)가 비활성화되었거나 로컬 전용인 경우"
+    },
+    "/docs/troubleshooting/:list:open-in-vs-code-is-disabled-or-local-only:0": {
+      "sourceHash": "aec64e3a0284f73d6a2db9c7566e7aa257e6a15e7a2a1c75bc8e46adbd76826b",
+      "translated": "-   Remote ORCA_PROTECTED_0001 Server 활성 런타임이 아니라 SSH 작업 트리를 사용합니다.\n-   `Open-in`(다음에서 열기) 명령을 ORCA_PROTECTED_0002 또는 인수가 여러 개인 셸 명령이 아니라 VS Code/Insiders로 설정합니다.\n-   호스트가 제거된 경우 SSH 대상을 새로 고칩니다."
+    },
+    "/docs/troubleshooting/:heading:kerberos-login-fails:0": {
+      "sourceHash": "1686e51ba640366689c14dd464340f79697a8932d782d57be2350e3d1f861c5d",
+      "translated": "## Kerberos 로그인이 실패하는 경우"
+    },
+    "/docs/troubleshooting/:list:kerberos-login-fails:0": {
+      "sourceHash": "e9d02ec0c9740c07b34fecb77351f323754091a842deba98ec1a8130f79af825",
+      "translated": "-   `ORCA_PROTECTED_0001`에 호스트 영역의 유효한 티켓이 표시되는지 확인합니다.\n-   OpenSSH 구성에서 해당 호스트의 `ORCA_PROTECTED_0002`를 확인한 다음 `Settings`(설정) → `SSH`에서 대상을 다시 가져오거나 다시 테스트합니다."
     }
   }
 }

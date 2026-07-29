@@ -69,6 +69,22 @@
     "/docs/model/tabs-panes-splits/:paragraph:tab-groups-across-worktrees:0": {
       "sourceHash": "8ca19886c5ba0285d6396c7283f89b1c156217a7fc6fd6a626a94152e38c65a9",
       "translated": "각 작업 트리는 자체 탭 레이아웃을 소유합니다. 작업 트리를 전환하면 전체 창 트리가 교체됩니다. 즉, 브라우저 탭, 터미널 및 차이점이 떠난 그대로 다시 나타납니다."
+    },
+    "/docs/model/tabs-panes-splits/:heading:switching-tabs:0": {
+      "sourceHash": "0888d9d6b93168ef4d1e8d105ce85dd78d19dd7a2bea036b33c211b56395f96e",
+      "translated": "### 탭 전환"
+    },
+    "/docs/model/tabs-panes-splits/:paragraph:switching-tabs:0": {
+      "sourceHash": "d3db3d7d76dcb5a991e391e3f24adabcf93e05ed5d06dd0be5ec09f1fbe4c190",
+      "translated": "**새로 설치한 환경**의 기본 키 조합은 다음과 같습니다."
+    },
+    "/docs/model/tabs-panes-splits/:table:switching-tabs:0": {
+      "sourceHash": "033ba78c16101be9b522b9e0ab775eb27df9a24265df5a352651442f9fadaee7",
+      "translated": "| 작업 | macOS | Linux/Windows |\n| --- | --- | --- |\n| 다음/이전 탭(모든 유형) | `ORCA_PROTECTED_0001` / `ORCA_PROTECTED_0002` | `ORCA_PROTECTED_0003` / `ORCA_PROTECTED_0004` |\n| 다음/이전 탭(동일한 유형) | `ORCA_PROTECTED_0005` / `ORCA_PROTECTED_0006` | `ORCA_PROTECTED_0007` / `ORCA_PROTECTED_0008` |\n| 최근 사용한 이전 탭 | `ORCA_PROTECTED_0009` | `ORCA_PROTECTED_0010` |"
+    },
+    "/docs/model/tabs-panes-splits/:paragraph:switching-tabs:1": {
+      "sourceHash": "cbd5bf177294dfc3b9ea8828b545e335d8ad6f759e825326064b1379c48034d5",
+      "translated": "[`Settings`(설정) → `Shortcuts`(바로 가기)](ORCA_PROTECTED_0001)에서 다시 매핑할 수 있습니다. 기존 설치는 사용자 지정 재정의를 `ORCA_PROTECTED_0002`에 유지합니다."
     }
   }
 }

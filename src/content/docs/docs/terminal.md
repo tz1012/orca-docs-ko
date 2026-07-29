@@ -1,7 +1,7 @@
 ---
 title: "터미널"
 sourceUrl: https://www.onorca.dev/docs/terminal
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/profiles/
 next: /orca-docs-ko/docs/ways-to-run/
@@ -22,6 +22,12 @@ Ghostty 스타일 터미널 — 처음 시작할 때 Ghostty 테마, 글꼴 및 
 터미널은 단순한 탭입니다. [탭, 창 및 분할 레이아웃](/orca-docs-ko/docs/model/tabs-panes-splits/)을 참조하세요. 터미널 창을 분할하면 두 개의 셸이 나란히 제공됩니다.
 
 에이전트 터미널 탭에는 에이전트 ID와 실시간 상태(작업 중, 입력 대기 중, 완료 또는 완료 후 미확인)가 함께 표시됩니다.
+
+## TUI 클립보드(OSC 52)
+
+많은 터미널 UI(Zellij, tmux, Neovim, fzf, Grok)는 OS 클립보드 API 대신 **OSC 52**를 통해 복사합니다. Orca는 이러한 쓰기를 **기본적으로** 허용하므로 copy-from-remote/TUI가 SSH에서도 로컬과 동일하게 동작합니다.
+
+전환 위치: [`Settings`(설정) → `Terminal`(터미널) → `Allow TUI Clipboard Writes (OSC 52)`(TUI 클립보드 쓰기 허용)](/orca-docs-ko/docs/settings/)
 
 ## 검색
 

@@ -1,0 +1,50 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/agents/native-chat",
+  "mirrorPath": "/docs/agents/native-chat/",
+  "entries": {
+    "/docs/agents/native-chat/:heading:chat-ui-native-chat:0": {
+      "sourceHash": "c5c005ee8eee2f39beddc5dfb5e289b399edff27c934bbe95abda970911b0eab",
+      "translated": "# 채팅 UI(네이티브 채팅)"
+    },
+    "/docs/agents/native-chat/:paragraph:chat-ui-native-chat:0": {
+      "sourceHash": "cde0d4c9b67097f2a77dcbedf2dc64591736ed30a3cc0695f83aa2361f49548c",
+      "translated": "지원되는 에이전트 터미널 위에 선택적으로 제공되는 채팅 인터페이스로, 스킬, 모델 선택기 및 대화 기록 보기를 지원합니다."
+    },
+    "/docs/agents/native-chat/:paragraph:chat-ui-native-chat:1": {
+      "sourceHash": "b6db4d060a1757b59301f537c652e900cb501a231dfe7f931f37acc7c0f76ba8",
+      "translated": "채팅 UI는 지원되는 에이전트 터미널 세션 위에 계층으로 제공되는 실험적 보기입니다. 터미널이 계속 기준 정보이며, 채팅 UI는 동일한 PTY를 위한 구조화된 대화 기록과 작성기입니다."
+    },
+    "/docs/agents/native-chat/:heading:enable:0": {
+      "sourceHash": "4fe368d6a2c35a1e623685bc079c2fe8351cd96e46c7675b32d77d7c6551d046",
+      "translated": "## 활성화"
+    },
+    "/docs/agents/native-chat/:list:enable:0": {
+      "sourceHash": "da0ae3bd2adf6358eb26746003288987027d9cd0e0b146f33c810afaf95115b1",
+      "translated": "1.  **`Settings`(설정) → `Experimental`(실험) → `Chat UI`(채팅 UI)**를 엽니다.\n2.  **`Chat UI`(채팅 UI)**를 켭니다.\n3.  선택적으로 **`Default view`(기본 보기)**를 **`Chat UI`(채팅 UI)**로 설정하여 지원되는 새 에이전트 탭이 채팅으로 열리게 합니다. TUI를 먼저 열려면 **`Terminal`(터미널)**을 유지합니다."
+    },
+    "/docs/agents/native-chat/:paragraph:enable:0": {
+      "sourceHash": "fc0980d47675ad899f4316fe3caed5004366c5d3e82e754c4536e9e8fb3bf124",
+      "translated": "활성화한 후 에이전트 창에서 `Chat UI`(채팅 UI) ↔ 터미널을 전환합니다."
+    },
+    "/docs/agents/native-chat/:heading:composer:0": {
+      "sourceHash": "acb7913b4f3a9a875a78eb74076c4229c73e62d31882458900cd1036e83110c1",
+      "translated": "## 작성기"
+    },
+    "/docs/agents/native-chat/:list:composer:0": {
+      "sourceHash": "afd51e7fb844e7ee3b0452079f40e48c80d31cdd60c84704c0398e4f74aa4af8",
+      "translated": "-   메시지를 입력해 전송하거나 진행 중인 턴을 중지합니다. 호스트가 지원하면 ORCA_PROTECTED_0001을 첨부합니다.\n-   슬래시 명령과 검색된 **스킬**을 사용하려면 `ORCA_PROTECTED_0002`를 입력합니다(가능한 경우 에이전트별로 필터링됩니다).\n-   에이전트가 제공하는 경우 **`model`(모델)** 및 옵션 필(사고 수준, 모드, 에이전트별 세션 옵션)을 사용합니다. 값은 실행 중인 CLI에 전달되며 일부 옵션은 세션이 시작된 후에만 적용됩니다."
+    },
+    "/docs/agents/native-chat/:heading:availability:0": {
+      "sourceHash": "f14bae779153290e344c1fa3df19de4ac8fe80e8cde7f7df907ff691007d0ed9",
+      "translated": "## 제공 범위"
+    },
+    "/docs/agents/native-chat/:paragraph:availability:0": {
+      "sourceHash": "a22302735525f0b1750a9af5d788d3bd08a11c98fa93c7f91df97483e3a64061",
+      "translated": "채팅 UI는 지원되는 로컬 에이전트 세션용 데스크톱 앱에서 제공됩니다. [모바일 컴패니언](ORCA_PROTECTED_0001)은 동일하게 페어링된 세션에 채팅 형식의 대화 기록 패턴을 재사용합니다."
+    },
+    "/docs/agents/native-chat/:aside:availability:0": {
+      "sourceHash": "97747bd1ce35687a5b810d872e098f2c90805271fba2dda9d6fad2df9ce9cf51",
+      "translated": "실험적 기능\n\n대화 기록의 충실도, 스트리밍 및 터미널과의 기능 일치는 계속 조정 중입니다. ORCA_PROTECTED_0001의 모든 세부 정보가 필요하면 원시 TUI를 사용하는 것이 좋습니다."
+    }
+  }
+}

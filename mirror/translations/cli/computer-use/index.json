@@ -47,8 +47,8 @@
       "translated": "````\nORCA_PROTECTED_0001\n````"
     },
     "/docs/cli/computer-use/:paragraph:snapshot-act-snapshot:1": {
-      "sourceHash": "a769ac6f322666d93ad03b38491870ac7643029a51dd0e007b18dfe196f84e69",
-      "translated": "요소 인덱스의 범위는 최신 `ORCA_PROTECTED_0001` 결과로 지정됩니다. 탐색, 포커스 변경, 스크롤 또는 앱 다시 렌더링 후 인덱스를 재사용하기 전에 상태를 새로 고칩니다."
+      "sourceHash": "19a277329ec62583b7a5e3ef8aa304744399ef03088ff6062741948ee2481dc7",
+      "translated": "요소 인덱스는 최신 `ORCA_PROTECTED_0001` 결과에만 적용되며 **연속적이지 않을 수 있습니다**. `ORCA_PROTECTED_0002` 출력에서는 `ORCA_PROTECTED_0003`에서 트리를 읽습니다. `ORCA_PROTECTED_0004`를 보고 인덱스를 만들어 내지 않습니다. 탐색, 포커스 변경, 스크롤 또는 앱 다시 렌더링 후에는 인덱스를 재사용하기 전에 상태를 새로 고칩니다."
     },
     "/docs/cli/computer-use/:heading:selecting-an-app:0": {
       "sourceHash": "b1db4340470c06ae048ec3fb9077b061c0a3afc7f5a7d18635cd75007fcf60d7",
@@ -125,6 +125,26 @@
     "/docs/cli/computer-use/:list:next-steps:0": {
       "sourceHash": "aa4d54b19ad2dee9577b1528712271f5d62d5731ad8e9ab2765e68c000a17f79",
       "translated": "- [ORCA_PROTECTED_0001 CLI 개요](ORCA_PROTECTED_0002) - 나머지 CLI 표면(작업 트리, 터미널, 브라우저).\n- [기술 레지스트리 및 MCP](ORCA_PROTECTED_0003) — 이 CLI를 에이전트에 배포합니다."
+    },
+    "/docs/cli/computer-use/:heading:multi-window-apps:0": {
+      "sourceHash": "66fb60b275531bd847140fbaf3c0464d4edf1446b931f0a1dc1219f654a25ddb",
+      "translated": "## 다중 창 앱"
+    },
+    "/docs/cli/computer-use/:code:multi-window-apps:0": {
+      "sourceHash": "98513880c0467f3d37f511c35b167cdc318ab01c252834034750425b10981cf8",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/computer-use/:paragraph:multi-window-apps:0": {
+      "sourceHash": "e370fe4ffb4169653729d16f9eb1c5b116d385b56d3168f7c1f610912130be04",
+      "translated": "목록의 ID가 `ORCA_PROTECTED_0002`가 아니면 안정적인 `ORCA_PROTECTED_0001`을 우선 사용하고, 그렇지 않으면 `ORCA_PROTECTED_0003`을 사용합니다."
+    },
+    "/docs/cli/computer-use/:paragraph:available-actions:1": {
+      "sourceHash": "bd05d431bf8c341ede8ba3abebf0d55911fb454c609ffeacc2fadba6d88864c5",
+      "translated": "접근성 대상으로 지정할 수 없으면 좌표를 신중하게 대안으로 사용합니다."
+    },
+    "/docs/cli/computer-use/:code:available-actions:1": {
+      "sourceHash": "87ff0832edee2bfcfa0ff98d1a44b021f50968667d00c84a21e686edaa4c9983",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
     }
   }
 }

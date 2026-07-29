@@ -97,6 +97,42 @@
     "/docs/cli/automations/:list:next-steps:0": {
       "sourceHash": "0b25fee4d00cdadab6b15525020998f18e9b49fb7e070b478181bce5b36d01e6",
       "translated": "- [ORCA_PROTECTED_0001 CLI 개요](ORCA_PROTECTED_0002) - 작업 트리, 터미널 및 브라우저 제어에 대한 나머지 CLI 화면을 확인하세요.\n- [기술 레지스트리 및 MCP](ORCA_PROTECTED_0003) — 에이전트가 동일한 명령을 호출할 수 있도록 ORCA_PROTECTED_0004 CLI 기술을 설치합니다."
+    },
+    "/docs/cli/automations/:heading:precheck-before-a-run:0": {
+      "sourceHash": "9bb4fc455df72a92661ecc20a3abf2cfdd4bde6cf5a4bed537fcd971902687ae",
+      "translated": "## 실행 전 사전 검사"
+    },
+    "/docs/cli/automations/:paragraph:precheck-before-a-run:0": {
+      "sourceHash": "971294da557aa5b0dfa8a58f41a1d7947bb6cac5650d8cc560fa2302932e265e",
+      "translated": "비용이 적은 셸 탐색이 실패하면 예약된 작업을 건너뜁니다. 0이 아닌 종료 코드는 건너뛴 실행으로 기록됩니다."
+    },
+    "/docs/cli/automations/:code:precheck-before-a-run:0": {
+      "sourceHash": "c531782615e33e00ae058980de450d1fbef6781b8c97dca9d6728d14a6c512ff",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/automations/:heading:project-host-setup-targets:0": {
+      "sourceHash": "3a8aaa264d68aaabcb4270bf47e9d147f46d7c2e109d812c3dda84af248a6fe6",
+      "translated": "## 프로젝트 호스트/설정 대상"
+    },
+    "/docs/cli/automations/:paragraph:project-host-setup-targets:0": {
+      "sourceHash": "06886d922b6775a10012caf98656444438e2f4ad1bb648e6c3d066f037b11544",
+      "translated": "자동화를 `ORCA_PROTECTED_0001` / `ORCA_PROTECTED_0002`에서만 실행하지 않고 특정 프로젝트 호스트 설정에서 실행해야 하는 경우 다음을 사용합니다."
+    },
+    "/docs/cli/automations/:code:project-host-setup-targets:0": {
+      "sourceHash": "7f7866c9fe3183c5da3181ba594130219ea5e5d0121024e029ebf14ed9cbf247",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/automations/:paragraph:project-host-setup-targets:1": {
+      "sourceHash": "196b742bd3d441426761edac162a8adcc7f71c94598717d338072f4ae905c61e",
+      "translated": "설정 ID가 이미 있으면 `ORCA_PROTECTED_0001`을 사용합니다. 선택적 `ORCA_PROTECTED_0002`는 ORCA_PROTECTED_0003 데이터를 ORCA_PROTECTED_0004에 고정합니다. 지우려면 편집 시 `ORCA_PROTECTED_0005`를 전달합니다."
+    },
+    "/docs/cli/automations/:heading:missed-run-grace:0": {
+      "sourceHash": "600ffdcadaf6e62b2e393a5f779eca8335f4ff36d83794fca3667e2da18418d4",
+      "translated": "## 누락된 실행의 유예 시간"
+    },
+    "/docs/cli/automations/:code:missed-run-grace:0": {
+      "sourceHash": "94478f4c23a45233740f0a5a63894483a5d3c367d5ec53cc01c1cff9aa6a7dea",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
     }
   }
 }

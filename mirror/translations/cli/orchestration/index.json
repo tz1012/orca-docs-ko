@@ -7,28 +7,28 @@
       "translated": "# 오케스트레이션"
     },
     "/docs/cli/orchestration/:paragraph:orchestration:0": {
-      "sourceHash": "8c30683cd482f06ed6e50bd6dd8252761670f09f8b11366ec2a9fc8f85b2a203",
-      "translated": "메시지, 작업, 디스패치 및 결정 게이트를 사용하여 여러 ORCA_PROTECTED_0001 에이전트 터미널을 조정합니다."
+      "sourceHash": "cf3b5a1cce3277089658ea0436d9d628b05e929d22bba02255abc00da054ff21",
+      "translated": "실행, 작업, 감독되는 워커, 메시지 및 결정 게이트를 사용하여 에이전트를 조정합니다."
     },
     "/docs/cli/orchestration/:paragraph:orchestration:1": {
-      "sourceHash": "eabb31eb6445e43819d167b81c5824d9210f3cfd4ee2b77553ec3ddc0ce47657",
-      "translated": "오케스트레이션은 다중 에이전트 작업을 위한 ORCA_PROTECTED_0001의 구조화된 조정 계층입니다. 상담원에게 공유된 받은 편지함, 작업 기록, 파견 상태, 작업자 완료 메시지 및 결정 게이트를 제공하므로 코디네이터는 작업을 진행하고 완료된 내용을 알 수 있습니다."
+      "sourceHash": "0a65493e392c1a50dc103d310fa0a72e61d1692a144884504731d8b529d4c413",
+      "translated": "오케스트레이션은 ORCA_PROTECTED_0001의 구조화된 다중 에이전트 계층으로, **실행**(네임스페이스 + 코디네이터 받은 편지함), **작업**, **디스패치**, 감독되는 **워커**, 메시지 및 결정 게이트로 구성됩니다."
     },
     "/docs/cli/orchestration/:paragraph:orchestration:2": {
-      "sourceHash": "91253d5719701d3b80e3229530638071ceed1cd9a2283fadf8abba433da06146",
-      "translated": "조정 상태가 중요한 경우 오케스트레이션을 사용하세요. 일회용 터미널 입력의 경우 `ORCA_PROTECTED_0001`을 사용하세요. 소유권, 종속성 또는 작업자 완료로 추적된 작업의 경우 `ORCA_PROTECTED_0002`를 사용하세요."
+      "sourceHash": "4814473c8318d6e7abb4942ec2696f398fc4e08194467bb1ce15bea5228e559f",
+      "translated": "소유권, 완료 추적 또는 DAG가 필요할 때 사용합니다. 일회성 프롬프트에는 `ORCA_PROTECTED_0001`을 사용합니다. 감독 없이 소유권 전체를 인계하려면 `ORCA_PROTECTED_0003` 스킬의 ORCA_PROTECTED_0002 명령을 사용합니다."
     },
     "/docs/cli/orchestration/:aside:orchestration:0": {
-      "sourceHash": "099d4668e834b827f3661d7916bf09168bdf701a5c3384117f7187c76b3c91ba",
-      "translated": "실험적\n\n이 명령을 사용하기 전에 설정 -> 실험에서 오케스트레이션을 활성화하세요. CLI는 실행 중인 ORCA_PROTECTED_0001 런타임과 통신하므로 `ORCA_PROTECTED_0002`가 먼저 성공해야 합니다."
+      "sourceHash": "3fdbb24225ee1a6578ca2916fe7d98c8478049531fa4068633fa1abd0932f2ad",
+      "translated": "실험적 기능\n\n이 명령을 사용하기 전에 `Settings`(설정) → `Experimental`(실험)에서 오케스트레이션을 활성화합니다. CLI는 실행 중인 ORCA_PROTECTED_0001 런타임과 통신하므로 먼저 `ORCA_PROTECTED_0002`가 성공해야 합니다."
     },
     "/docs/cli/orchestration/:heading:core-model:0": {
       "sourceHash": "143cc632d0e64de15b35b23486a81c4272531faa0a1ae1f3cf53774da77461dc",
       "translated": "## 핵심 모델"
     },
     "/docs/cli/orchestration/:list:core-model:0": {
-      "sourceHash": "1fc415637edfd146a531f8d64cdbd7fb1e6a655e93f87b75d77874cb0b100ca9",
-      "translated": "- `Message`(메시지): `ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002`, `ORCA_PROTECTED_0003`, `ORCA_PROTECTED_0004`, `ORCA_PROTECTED_0005` 또는 `ORCA_PROTECTED_0006`과 같은 유형의 영구 터미널 간 메모입니다.\n- `Task`(작업): 사양, 종속성 및 상태가 포함된 작업 항목: `ORCA_PROTECTED_0007`, `ORCA_PROTECTED_0008`, `ORCA_PROTECTED_0009`, `ORCA_PROTECTED_0010`, `ORCA_PROTECTED_0011` 또는 `ORCA_PROTECTED_0012`.\n- `Dispatch`(디스패치): 터미널에 작업을 할당합니다. 새로운 디스패치 컨텍스트를 사용하여 작업을 재시도할 수 있습니다.\n- `Decision gate`(결정 게이트): 해결될 때까지 작업을 차단하는 코디네이터 소유의 질문입니다."
+      "sourceHash": "0a949823c1f205c5137e017797105de24d61f8b1742999eaac397f84f0c48344",
+      "translated": "-   **실행** — 지속되는 네임스페이스와 기본 받은 편지함입니다. 워커를 예약하거나 배치하지 않습니다.\n-   **작업** — 명세, 의존성 및 `ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002`, `ORCA_PROTECTED_0003`, `ORCA_PROTECTED_0004`, `ORCA_PROTECTED_0005`, `ORCA_PROTECTED_0006` 중 하나의 상태가 있는 작업 항목입니다.\n-   **디스패치** — 터미널에서 작업을 한 번 시도하는 단위이며 `ORCA_PROTECTED_0007` / 하트비트 수명 주기를 관리합니다.\n-   **메시지** — 받은 편지함 메일(`ORCA_PROTECTED_0008`, `ORCA_PROTECTED_0009`, `ORCA_PROTECTED_0010`, `ORCA_PROTECTED_0011`, `ORCA_PROTECTED_0012`, `ORCA_PROTECTED_0013` 등)입니다.\n-   **결정 게이트** — 해결될 때까지 작업을 차단하는 코디네이터 소유 질문입니다."
     },
     "/docs/cli/orchestration/:paragraph:core-model:0": {
       "sourceHash": "db2074dcb410a43daac4d7b6d1d0411aca3ff74ddfee036fe635b71b7a15478d",
@@ -135,20 +135,20 @@
       "translated": "## 근로자 계약"
     },
     "/docs/cli/orchestration/:paragraph:worker-contract:0": {
-      "sourceHash": "b5e4e58dfab25b47ef0340f617efe43cb1385f71007e6138383a1d662ed6f72e",
-      "translated": "파견된 근로자는 코디네이터와 통신하는 방법을 알려주는 서문을 받습니다. 중요한 규칙은 다음과 같습니다."
+      "sourceHash": "050fed94fd280231db33bbbaae5ea970898060aefe3d71435d477227a7c2eee0",
+      "translated": "디스패치된 워커는 코디네이터와 통신하는 방법을 안내하는 서문을 받습니다."
     },
     "/docs/cli/orchestration/:list:worker-contract:0": {
-      "sourceHash": "932065c6d7bdb239c28de5458a31e0c3b4a01e8ea470c6db093c67fcf98b5985",
-      "translated": "- 실패하더라도 `ORCA_PROTECTED_0001`을 정확히 한 번만 보냅니다.\n- 간단한 `ORCA_PROTECTED_0002` 요약(수행된 작업, 발견된 작업, 남은 작업)을 포함합니다.\n- 오래된 재시도가 잘못된 디스패치를 ​​완료할 수 없도록 작업 ID와 디스패치 ID를 모두 포함합니다.\n- 장기간 활성 작업 중에 `ORCA_PROTECTED_0003` 메시지를 보냅니다.\n- 질문을 차단하려면 로컬 TUI 프롬프트 대신 `ORCA_PROTECTED_0004`를 사용하세요."
+      "sourceHash": "45770174b62f87f0c45fd558690da11bbdb242bbc6c1f21d6443622836c06f36",
+      "translated": "-   실패한 경우에도 `ORCA_PROTECTED_0002`와 함께 `ORCA_PROTECTED_0001`을 정확히 한 번 보냅니다.\n-   수행한 내용, 발견한 내용 및 남은 내용을 담은 짧은 `ORCA_PROTECTED_0003` 요약을 포함합니다.\n-   오래된 재시도가 잘못된 디스패치를 완료하지 않도록 작업 ID와 디스패치 ID를 모두 포함합니다.\n-   활성 작업이 오래 걸리면 `ORCA_PROTECTED_0004` 메시지를 보냅니다.\n-   차단 질문에는 로컬 TUI 프롬프트 대신 `ORCA_PROTECTED_0005`를 사용합니다."
     },
     "/docs/cli/orchestration/:paragraph:worker-contract:1": {
-      "sourceHash": "4a2e217f847e40d215c39b7a14b7f32e590cf781ddc6284fd78fe67fe02acb3c",
-      "translated": "구조화된 페이로드 플래그를 사용하면 PowerShell 및 셸 인용이 더 쉬워집니다."
+      "sourceHash": "bc5e58b267a30d5e587781a8d09acd158bb5b2d20e869b400a98911e7370bb95",
+      "translated": "`ORCA_PROTECTED_0001`을 사용하면 `ORCA_PROTECTED_0002`가 단일 JSON 객체를 출력하므로 워커가 이를 `ORCA_PROTECTED_0003`으로 파이프할 수 있습니다."
     },
     "/docs/cli/orchestration/:code:worker-contract:0": {
-      "sourceHash": "628b4d2e3027485b825cc32df6f867099cbd476233f11d9f08f28a724a075ce1",
-      "translated": "````\nORCA_PROTECTED_0001\n````"
+      "sourceHash": "443eb725b763ce579b5ce226854ad68ab9344ee0ea26d70c48a04adcd6166c4c",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/orchestration/:paragraph:worker-contract:2": {
       "sourceHash": "eb58c9cd2289f98626e81436853259d6fcbf4ddb99b71d5be16f99d74d7317ec",
@@ -215,20 +215,20 @@
       "translated": "## 복구"
     },
     "/docs/cli/orchestration/:paragraph:recovery:0": {
-      "sourceHash": "2d81cab9de636fc6b4bddcffdcda58a44868c5e41857d6d4e92183c224d422bb",
-      "translated": "미리보기 파견 컨텍스트:"
+      "sourceHash": "c6f666149f7b48fd0b7d59390407d0bedf56792e6ed7bd6e0138d18537c1a2d5",
+      "translated": "오케스트레이션 상태를 의도적으로 포기할 때만 초기화합니다."
     },
     "/docs/cli/orchestration/:code:recovery:0": {
-      "sourceHash": "bd9fd728ccc945218e900a6e6d1161b310086f25fa250687ae23bfbd7033363c",
-      "translated": "````\nORCA_PROTECTED_0001\n````"
+      "sourceHash": "829fe0b52f3d18a72112afe2bdee7b1bfed728d68692333299b7503f033e338a",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/orchestration/:paragraph:recovery:1": {
-      "sourceHash": "9c3e1fbb28ac4ea1cb564ce02771a50ed1485cb9eb1c517f22a8a67ae476441a",
-      "translated": "작업을 수동으로 업데이트합니다."
+      "sourceHash": "504b8b1f18f63b8e3444cff2cc2f1cf29b1f4f8530e3a4c6ee4ca9ac2351a4bd",
+      "translated": "`ORCA_PROTECTED_0001`은 런타임 전역 오케스트레이션 상태에 영향을 줍니다. 의도한 정리 작업이 아니라면 다른 코디네이터가 활성 상태일 때 실행하지 않습니다."
     },
     "/docs/cli/orchestration/:code:recovery:1": {
-      "sourceHash": "ea0b49d7c9c6bf13b4b1ad1aa10607661b2a5aa66ae00efce266e911a0520d90",
-      "translated": "````\nORCA_PROTECTED_0001\n````"
+      "sourceHash": "34bbe17f53f482232a7b533e2850486086cababf8b44e8c063610b99852e6a32",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/orchestration/:paragraph:recovery:2": {
       "sourceHash": "c6f666149f7b48fd0b7d59390407d0bedf56792e6ed7bd6e0138d18537c1a2d5",
@@ -251,12 +251,100 @@
       "translated": "감시 중인 에이전트에게 간단한 프롬프트를 표시하려면 `ORCA_PROTECTED_0001`을 사용하세요."
     },
     "/docs/cli/orchestration/:paragraph:choosing-the-right-command:1": {
-      "sourceHash": "da78e956f421211434ac58072cdff546261323ad7b4a26163d8c34d5d81eef4a",
-      "translated": "작업자가 `ORCA_PROTECTED_0002`를 보고하고, 코디네이터를 통해 질문하고, 작업 ID로 추적해야 하는 경우 `ORCA_PROTECTED_0001`을 사용하세요."
+      "sourceHash": "d0032da88da450c5a94dbaf966782fd51b87ffd261711d225d59972e4449a5b1",
+      "translated": "워커가 `ORCA_PROTECTED_0003`을 보고하고 코디네이터를 통해 질문하며 작업 ID로 추적되어야 하면 `ORCA_PROTECTED_0001` 또는 `ORCA_PROTECTED_0002`를 사용합니다."
     },
     "/docs/cli/orchestration/:paragraph:choosing-the-right-command:2": {
-      "sourceHash": "dc52f3b6359e0bc34715c83c059f681d5b219f2765a30ed2cad5e9b9583dcd54",
-      "translated": "ORCA_PROTECTED_0002가 코디네이터 루프를 관리하고 사용 가능한 작업자 터미널에 준비된 작업을 파견하도록 하려면 `ORCA_PROTECTED_0001`을 사용하세요."
+      "sourceHash": "eb53e0657c65895ee15cde3ce9d1aefff12e3def268116209db91721257c02f5",
+      "translated": "지속되는 실행 네임스페이스와 감독되는 다중 에이전트 루프가 필요하면 사용 중단된 `ORCA_PROTECTED_0002` 명령이 아니라 `ORCA_PROTECTED_0001` + 작업 + 워커를 사용합니다."
+    },
+    "/docs/cli/orchestration/:aside:orchestration:1": {
+      "sourceHash": "8a70617cde5b3b6758d4919e63bdbdacd6d51005519b590ed8c788cc8234a12a",
+      "translated": "이전 명령 사용 중단\n\n`ORCA_PROTECTED_0001` 및 `ORCA_PROTECTED_0002`와 `ORCA_PROTECTED_0003` / `ORCA_PROTECTED_0004`는 **아무런 효과도 수행하지 않습니다**. 이 명령은 `ORCA_PROTECTED_0005`를 안내하는 복구 텍스트를 반환합니다. 아래의 실행 + 워커 시작 흐름을 사용합니다."
+    },
+    "/docs/cli/orchestration/:heading:preferred-supervised-loop:0": {
+      "sourceHash": "91d306d3585ff355a01137eb83a808c49e3529cb1a098838e23ac73932e86bb2",
+      "translated": "## 권장 감독 루프"
+    },
+    "/docs/cli/orchestration/:code:preferred-supervised-loop:0": {
+      "sourceHash": "a6a82388982ad61f68b845b31de2386f8260154d5adfaefc36d55b108c1f787a",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/orchestration/:paragraph:preferred-supervised-loop:0": {
+      "sourceHash": "5e3cf1dcad9ffe0beb8a74284a8d47ed2f8452f679a8e76f1cd2dfa14d711a8d",
+      "translated": "완료를 기다립니다. Delivery의 모든 메시지를 처리한 다음 확인합니다."
+    },
+    "/docs/cli/orchestration/:code:preferred-supervised-loop:1": {
+      "sourceHash": "ddfb5cd10ad694d6877b36de7d318ee193a4527679fe8c53d28448155cdba65e",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/orchestration/:paragraph:preferred-supervised-loop:1": {
+      "sourceHash": "d3b1fa43fae6699d5d0f4dc83cb5312d2940b6d287d394605cc5fd8a14988ac6",
+      "translated": "워커 완료 시 워커 창에서 주입된 ID를 포함하여 다음을 실행합니다."
+    },
+    "/docs/cli/orchestration/:code:preferred-supervised-loop:2": {
+      "sourceHash": "fcdaf1c76c8853272aea7fef5b272cea10b7e7696e3929e9a1b2e372b2192ae6",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/orchestration/:paragraph:preferred-supervised-loop:2": {
+      "sourceHash": "554ce7c15895940c77e0ff3421462894655bd94346640b1b1e8ba6d2ae5ffead",
+      "translated": "`ORCA_PROTECTED_0001`에는 `ORCA_PROTECTED_0002`가 필요합니다."
+    },
+    "/docs/cli/orchestration/:paragraph:preferred-supervised-loop:3": {
+      "sourceHash": "d7e4e86911cc6c2d6a9ba5cebf8dfa2e3b8c3e3ce07ba27d3d5014cab283541c",
+      "translated": "검사/복구 명령은 다음과 같습니다."
+    },
+    "/docs/cli/orchestration/:code:preferred-supervised-loop:3": {
+      "sourceHash": "6226de7afaa7b029091b23d36dff0dbeebfc76c18e7aa15c8df236b015f623a5",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/orchestration/:heading:federated-workers-optional:0": {
+      "sourceHash": "93265d7553b69d85f281a9298589d546cf81a76c3c11956c13961853699c9310",
+      "translated": "## 연합 워커(선택 사항)"
+    },
+    "/docs/cli/orchestration/:code:federated-workers-optional:0": {
+      "sourceHash": "d1e52903efd354062638debeb4d39125410b1fb9319058941d8533b4ba0802d6",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/orchestration/:paragraph:federated-workers-optional:0": {
+      "sourceHash": "7e85a8f391e2a2356631bfec4006ab2d3551541d28ece48c4171e096bd572216",
+      "translated": "이후 명령은 디스패치 ID로 라우팅되므로 `ORCA_PROTECTED_0001`을 반복하지 않습니다."
+    },
+    "/docs/cli/orchestration/:heading:low-level-dispatch-custom-topology:0": {
+      "sourceHash": "485bdf2cbf43b406236a871b41824a82a2ee11f5be935b6f62003fbbb810ce86",
+      "translated": "## 저수준 디스패치(사용자 지정 토폴로지)"
+    },
+    "/docs/cli/orchestration/:code:low-level-dispatch-custom-topology:0": {
+      "sourceHash": "8e0d52d578aa373f4d7c37eda97fcff36458771627bafdcb210760bb6f2cf580",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/orchestration/:heading:messaging-notes:0": {
+      "sourceHash": "10c0611fad53bed8c365daae865f826dd859cee95320a2a71d3f5e5b25f8217e",
+      "translated": "## 메시징 참고 사항"
+    },
+    "/docs/cli/orchestration/:list:messaging-notes:0": {
+      "sourceHash": "df660e0fdeda1b71a35285421eadbc15f00528364f04aa63e7f14d503f69b30f",
+      "translated": "-   기본 `ORCA_PROTECTED_0001`은 바인딩된 실행에서 확인되지 않은 가장 오래된 Delivery(FIFO)입니다. `ORCA_PROTECTED_0002`가 될 때까지 재생합니다.\n-   `ORCA_PROTECTED_0003` / `ORCA_PROTECTED_0004`는 메일을 소비하지 않습니다.\n-   그룹 주소: `ORCA_PROTECTED_0005`, `ORCA_PROTECTED_0006`, `ORCA_PROTECTED_0007`, `ORCA_PROTECTED_0008`, `ORCA_PROTECTED_0009`, `ORCA_PROTECTED_0010`, `ORCA_PROTECTED_0011`, `ORCA_PROTECTED_0012`, `ORCA_PROTECTED_0013`, `ORCA_PROTECTED_0014`이며 `ORCA_PROTECTED_0015` / 하트비트에는 절대 사용하지 않습니다.\n-   PowerShell 그룹 주소는 `ORCA_PROTECTED_0016`처럼 따옴표로 묶습니다."
+    },
+    "/docs/cli/orchestration/:code:messaging-notes:0": {
+      "sourceHash": "1bb13ef3d44f8e4cdc7e87881f137bac126af4e1c0c4eacf9d0b1eccc0fecc07",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/orchestration/:paragraph:messaging-notes:0": {
+      "sourceHash": "07d33bc33ae411478417c7e77cee8a1caa8dfd5297a2d3dcbf08b0c5856b2ea7",
+      "translated": "대기가 활성화된 동안 CLI는 15초마다 작은 JSON 하트비트 줄을 stderr에 내보냅니다. stdout에는 최종 명령 결과만 유지됩니다."
+    },
+    "/docs/cli/orchestration/:heading:full-guide:0": {
+      "sourceHash": "dc06a9db7659f687fedeef4397dcec620e72dc9a15f4fa63bf2c17d54ac00fc8",
+      "translated": "## 전체 가이드"
+    },
+    "/docs/cli/orchestration/:paragraph:full-guide:0": {
+      "sourceHash": "9c321ea9c9a2513987eb9151ba6385d16dea2a80a29ac51c4e1ae2bd5589f382",
+      "translated": "명령 플래그는 앱과 함께 변경됩니다. 설치 후 에이전트는 다음을 실행해야 합니다."
+    },
+    "/docs/cli/orchestration/:code:full-guide:0": {
+      "sourceHash": "f37226c7a843746a1de9f62485bfe277938dd18b8a8733ab9ba50d031601f480",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
     }
   }
 }

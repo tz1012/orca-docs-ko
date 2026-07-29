@@ -1,7 +1,7 @@
 ---
 title: "AI 차이점에 주석 달기"
 sourceUrl: https://www.onorca.dev/docs/review/annotate-ai-diff
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/diff-viewer/
 next: /orca-docs-ko/docs/review/attribution/
@@ -29,6 +29,8 @@ AI Diff에 주석 달기 — diff 라인에 고정된 인라인 댓글
 ## 배치 보내기
 
 검토가 완료되면 차이점 상단에 있는 `Send to agent`(상담원에게 보내기)를 클릭하세요. Orca은 모든 설명이 줄에 고정된 단일 프롬프트를 구성한 다음 작업 트리의 사용 가능한 에이전트에 대한 `Send notes to`(메모 보내기) 메뉴를 엽니다. 변경 사항을 수정해야 하는 에이전트를 선택하거나 동일한 메뉴에서 새 에이전트를 시작하세요.
+
+**`Send Review Notes to Agent`(에이전트에 검토 메모 보내기)**는 다른 키 조합과 충돌하지 않도록 기본적으로 키가 할당되어 있지 않습니다. [`Settings`(설정) → `Shortcuts`(바로 가기)](/orca-docs-ko/docs/settings/)에서 할당하면 편집기에 포커스가 있을 때도 키보드로 보내기 메뉴를 열 수 있습니다.
 
 ## 왜 배치인가?
 

@@ -1,7 +1,7 @@
 ---
 title: "작업트리별 브라우저"
 sourceUrl: https://www.onorca.dev/docs/browser/overview
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/file-explorer/
 next: /orca-docs-ko/docs/browser/design-mode/
@@ -32,6 +32,12 @@ translationNotice:
 ![영구 세션이 포함된 작업 트리별 브라우저 탭 - 한 번의 클릭으로 Chrome 또는 Edge에서 쿠키를 가져와 로그인 상태를 유지할 수 있습니다.](/orca-docs-ko/assets/mirror/46a59e38451d06e4b06df457f9f4f2449cbd1b46ad06906c7073f414e463be28.jpg)
 
 지속적인 세션이 포함된 작업트리별 브라우저 탭 - 한 번의 클릭으로 Chrome 또는 Edge에서 쿠키를 가져와 로그인 상태를 유지할 수 있습니다.
+
+## 링크 라우팅
+
+[`Settings`(설정) → `Browser`(브라우저) → `Link Routing`(링크 라우팅)](/orca-docs-ko/docs/settings/)에서 터미널, Markdown 및 편집기의 http(s) 링크를 Orca의 작업 트리별 브라우저로 열지 시스템 브라우저로 열지 선택합니다.
+
+링크가 Orca에서 열리도록 설정한 경우 플랫폼 보조 키와 Shift를 함께 눌러 시스템 브라우저로 강제로 열 수 있습니다. macOS에서는 `⇧⌘-click`, Windows/Linux에서는 `Shift+Ctrl+click`을 사용합니다.
 
 ## 다운로드
 

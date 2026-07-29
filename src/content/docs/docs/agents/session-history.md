@@ -1,9 +1,9 @@
 ---
 title: "에이전트 세션 기록"
 sourceUrl: https://www.onorca.dev/docs/agents/session-history
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
-prev: /orca-docs-ko/docs/agents/codex-hot-swap/
+prev: /orca-docs-ko/docs/agents/native-chat/
 next: /orca-docs-ko/docs/agents/hibernation/
 translationNotice:
   title: "비공식 한국어 번역"
@@ -44,11 +44,14 @@ Orca은 지원 에이전트 CLI가 남긴 온디스크 세션 기록을 스캔�
 
 세션 행을 클릭하면 세부 정보(작업 디렉터리, 분기, 모델, 메시지 수, 총 토큰, 원래 요청 및 최신 대화 차례)가 열립니다. 활성화된 세션 행을 작업 공간으로 끌어서 재개할 수도 있습니다. 행의 작업에서 다음을 수행할 수 있습니다.
 
-- `Resume`(재개) — 세션의 `cwd`에서 새 터미널을 열고 에이전트의 재개 명령(예: `claude --resume <id>`, `codex resume <id>`, `cursor-agent --resume <id>`, `acli rovodev run --restore <id>`)을 실행합니다. Codex 세션은 원래 세션이 1을 설정하면 `CODEX_HOME`도 다시 내보냅니다.
-- `Copy resume command`(재개 명령 복사) — 외부 터미널에서 사용할 수 있도록 동일한 셸 명령을 클립보드에 복사합니다.
-- `Copy session ID`(세션 ID 복사) / `Copy log path`(로그 경로 복사) — 스크립트를 작성하거나 버그 보고서에 기록을 첨부하는 데 사용됩니다.
-- `Open log`(로그 열기) / `Reveal log`(로그 공개) — Orca에서 원시 기록 파일을 열거나 OS 파일 관리자에서 해당 파일로 이동합니다.
-- `Open cwd`(작업 디렉터리 열기) — 세션의 작업 디렉터리를 작업 공간으로 엽니다.
+-   **`Resume`(재개)** — 세션의 `cwd`에서 새 터미널을 열고 에이전트의 재개 명령(예: `claude --resume <id>`, `codex resume <id>`, `pi --session <session_file>`, `cursor-agent --resume <id>`, `acli rovodev run --restore <id>`)을 실행합니다. 원래 세션에서 `CODEX_HOME`을 설정한 경우 Codex 세션은 이를 다시 내보냅니다.
+
+Pi는 단순 세션 ID가 아니라 후크에서 보고한 디스크상의 세션 파일(`--session <path>`)에서 재개합니다. 해당 파일이 없으면 세션 ID가 있더라도 그 행에서 `Resume`(재개)을 사용할 수 없습니다.
+
+-   **`Copy resume command`(재개 명령 복사)** — 외부 터미널에서 사용할 수 있도록 동일한 셸 명령을 클립보드에 복사합니다.
+-   **`Copy session ID`(세션 ID 복사)** / **`Copy log path`(로그 경로 복사)** — 스크립팅하거나 버그 보고서에 대화 기록을 첨부할 때 사용합니다.
+-   **`Open log`(로그 열기)** / **`Reveal log`(로그 위치 표시)** — Orca에서 원시 대화 기록 파일을 열거나 OS 파일 관리자에서 해당 위치로 이동합니다.
+-   **`Open cwd`(현재 작업 디렉터리 열기)** — 세션의 작업 디렉터리를 작업 공간으로 엽니다.
 
 이력서에는 로컬 작업 공간이 필요합니다
 

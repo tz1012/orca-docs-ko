@@ -1,7 +1,7 @@
 ---
 title: "SSH 작업 트리"
 sourceUrl: https://www.onorca.dev/docs/ssh
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/ways-to-run/
 next: /orca-docs-ko/docs/remote-servers/
@@ -52,11 +52,45 @@ SSH 원격 작업 공간 — 에이전트는 원격 호스트에서 실행되고
 
 데스크톱 앱을 닫아도 더 이상 원격 PTY 세션이 종료되지 않습니다. 원격 터미널 세션은 원격 호스트에서 실행되는 릴레이를 통해 임대되므로 랩톱에서 Orca을 종료해도 유지됩니다. 앱을 다시 열고 대상에 다시 연결하면 임대된 PTY가 스크롤백이 그대로 유지된 상태로 `attached`(연결됨) 상태로 해당 탭에 복원됩니다. 짧은 유예 기간(기본적으로 5분, 대상별로 구성 가능)은 분리된 세션을 해제하기 전에 빠른 재연결을 완료할 수 있는 릴레이 시간을 제공합니다.
 
-## 원격 파일 다운로드 중
+## 원격 파일 및 폴더 다운로드
 
-SSH 작업 트리의 파일 탐색기에서 파일을 마우스 오른쪽 버튼으로 클릭하고 `Download`(다운로드)를 선택하여 노트북에 복사합니다. Orca은 기본 저장 대화 상자를 열어 저장 위치를 ​​선택할 수 있도록 합니다. 이는 데스크톱 전용 작업입니다. 웹 클라이언트는 Electron의 저장 대화 상자에 의존하기 때문에 다운로드를 노출하지 않습니다.
+SSH 작업 트리 파일 탐색기에서 마우스 오른쪽 버튼을 클릭합니다.
 
-SSH 대상이 시스템 SSH를 사용하는 경우 Orca은 별도의 동기화 도구 없이 동일한 공급자를 통해 파일을 전송합니다. 다운로드는 파일에만 사용할 수 있으므로 디렉터리는 먼저 압축하거나 터미널에서 복사해야 합니다.
+-   **`File`(파일)** → **`Download`(다운로드)** — 네이티브 저장 대화 상자를 열고 파일을 노트북에 복사합니다.
+-   **`Folder`(폴더)** → **`Download Folder`(폴더 다운로드)** — 선택한 폴더에 재귀적으로 다운로드합니다(데스크톱만 해당).
+
+Orca는 연결과 동일한 SSH 전송 경로를 사용합니다. 폴더 다운로드는 연결에서 재귀 폴더 전송(일반적으로 전체 SFTP)을 지원한다고 알릴 때만 표시됩니다. 시스템 OpenSSH 전용 전송을 유지하는 연결은 **파일**을 다운로드할 수 있어도 **`Download Folder`(폴더 다운로드)**가 표시되지 않을 수 있습니다.
+
+이 작업은 데스크톱 전용입니다. Electron의 저장 대화 상자를 사용하므로 웹 클라이언트에는 `Download`(다운로드)가 제공되지 않습니다.
+
+## VS Code에서 원격 작업 공간 열기
+
+SSH 작업 트리에서 구성한 앱이 VS Code 또는 VS Code Insiders(`code` / `code-insiders` 또는 해당 실행기의 직접 경로)이면 작업 트리 메뉴의 **`Open in`(다음에서 열기)** 목록에서 원격 경로를 VS Code Remote-SSH에 전달할 수 있습니다.
+
+1.  **`Settings`(설정) → `General`(일반) → `Open in menu`(다음에서 열기 메뉴)**를 구성하여 VS Code가 목록에 표시되게 합니다(사전 설정 또는 사용자 지정 명령).
+2.  SSH 작업 트리를 마우스 오른쪽 버튼으로 클릭하거나 작업 트리 더보기 메뉴를 사용하여 **`Open in`(다음에서 열기) → `VS Code`**를 선택합니다.
+3.  Orca가 해당 호스트와 작업 트리 경로(`--remote ssh-remote+<host> <path>`)에 대해 Remote-SSH를 사용하여 VS Code를 실행합니다. 메뉴 항목에 **`Remote SSH`** 배지가 표시될 수 있습니다.
+
+**이 원격 경로에서는 지원되지 않음:** Cursor, Zed, 복합 셸 명령 또는 **Remote Orca Server** 활성 런타임을 통한 열기는 지원되지 않으며 **`Local only`(로컬 전용)**로 유지됩니다. Finder/Explorer 항목은 로컬 경로에만 사용합니다.
+
+## Kerberos/GSSAPI
+
+OpenSSH 구성의 호스트에 `GSSAPIAuthentication yes`가 설정되어 있으면 Orca는 해당 대상에 **시스템 OpenSSH** 전송을 우선 사용합니다(내장 ssh2 클라이언트는 GSSAPI를 지원하지 않음). 연결하기 전에 유효한 Kerberos 티켓(`kinit` / 조직의 SSO)을 유지합니다. 수동 대상도 시스템 SSH를 사용하도록 구성하면 GSSAPI를 활성화할 수 있습니다.
+
+구성에서 가져온 호스트에 별도의 `Kerberos mode`(Kerberos 모드) 스위치를 켤 필요는 없습니다. 가져오기/`ssh -G`가 플래그를 전달합니다.
+
+## C/C++ 도구 체인이 없는 Linux 호스트
+
+처음 연결할 때 Orca는 원격에 작은 릴레이를 설치합니다. 원격 터미널에는 네이티브 `node-pty` 모듈이 필요합니다. Linux 패키지는 호스트에서 컴파일되는 경우가 많고, macOS/Windows 릴레이는 미리 빌드된 바이너리를 사용합니다.
+
+원격에 **make**, **C++ 컴파일러**, **python3**가 없더라도 Orca는 **파일, Git 및 편집기** 연결을 완료하지만, 빌드 도구를 설치할 때까지 **원격 터미널은 작동하지 않습니다**. Orca에 다음과 같은 설치 안내가 표시될 수 있습니다.
+
+-   Debian/Ubuntu 설치: `sudo apt-get install -y build-essential python3`
+-   Fedora/RHEL 설치: `sudo dnf install -y make gcc gcc-c++ python3`
+-   Alpine 설치: `sudo apk add build-base python3`
+-   Arch 설치: `sudo pacman -S --needed base-devel python`
+
+도구를 설치한 다음 릴레이가 네이티브 모듈을 설치할 수 있도록 다시 연결합니다.
 
 ## 포트 포워딩
 

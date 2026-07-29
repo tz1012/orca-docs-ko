@@ -45,6 +45,22 @@
     "/docs/agents/codex-hot-swap/:paragraph:claude-code-accounts:0": {
       "sourceHash": "19ab738d8d523828ca9cb8e2ae506784d632866e96d0b505f5b6c834cd266b2d",
       "translated": "ORCA_PROTECTED_0001 계정 전환기는 동일하게 작동합니다. 즉, 다른 데이터 디렉터리(`ORCA_PROTECTED_0002`), 동일한 UX입니다."
+    },
+    "/docs/agents/codex-hot-swap/:heading:system-default:0": {
+      "sourceHash": "e770dc5d7d2d9421f85d65fbc61ab87989f4a4015beb4dbef1a69640df75261c",
+      "translated": "## 시스템 기본값"
+    },
+    "/docs/agents/codex-hot-swap/:paragraph:system-default:0": {
+      "sourceHash": "70d0ad3386981405f3738f488df5a7f39277336e86946174a1fcb4127bd123ba",
+      "translated": "**`System default`(시스템 기본값)** 행은 `ORCA_PROTECTED_0002` 아래에 있는 현재 호스트 ORCA_PROTECTED_0001 로그인입니다. ORCA_PROTECTED_0003에서 추가한 관리형 계정은 이 로그인을 다시 쓰지 않고 격리된 홈에서 실행됩니다. 실행을 ORCA_PROTECTED_0005 외부 터미널의 `ORCA_PROTECTED_0004`와 일치시키려면 `System default`(시스템 기본값)를 선택합니다."
+    },
+    "/docs/agents/codex-hot-swap/:heading:when-config-edits-seem-ignored:0": {
+      "sourceHash": "20735e79527aba2fbefe82ff46db71ab0e430ae52536247be0ab43a5fb06e26e",
+      "translated": "## 구성 변경 사항이 무시되는 것처럼 보이는 경우"
+    },
+    "/docs/agents/codex-hot-swap/:paragraph:when-config-edits-seem-ignored:0": {
+      "sourceHash": "ee3a59d31fb88a09391844815bec78ac9a34ea2bc783439c5e26bd8b2b6997c8",
+      "translated": "관리형 ORCA_PROTECTED_0001 계정의 경우 ORCA_PROTECTED_0002는 실제 `ORCA_PROTECTED_0003`의 설정을 활성 런타임 홈에 미러링합니다. 원본 파일이 없거나 비어 있거나(예: 클라우드 동기화가 아직 다운로드 중인 경우) 읽을 수 없으면 `Accounts`(계정)에 경고가 표시됩니다. ORCA_PROTECTED_0004는 원본이 다시 정상화될 때까지 **마지막으로 동기화에 성공한** 설정을 유지합니다. 배너에 표시된 경로의 파일을 수정한 다음 다시 실행하거나 계정을 다시 선택합니다."
     }
   }
 }

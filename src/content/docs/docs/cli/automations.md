@@ -1,7 +1,7 @@
 ---
 title: "예약된 자동화"
 sourceUrl: https://www.onorca.dev/docs/cli/automations
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/orchestration/
 next: /orca-docs-ko/docs/cli/computer-use/
@@ -46,6 +46,47 @@ orca automations create \
 ````
 
 두 대상 플래그를 모두 생략하면 Orca은 가능한 경우 현재 셸 디렉터리에서 바깥쪽 작업 트리를 확인합니다.
+
+## 실행 전 사전 검사
+
+비용이 적은 셸 탐색이 실패하면 예약된 작업을 건너뜁니다. 0이 아닌 종료 코드는 건너뛴 실행으로 기록됩니다.
+
+```
+orca automations create \
+  --name "PR review" \
+  --trigger hourly \
+  --precheck "gh pr list --json number -q .[0].number" \
+  --prompt "Review requested PRs" \
+  --provider codex \
+  --repo my-repo \
+  --disabled \
+  --json
+```
+
+## 프로젝트 호스트/설정 대상
+
+자동화를 `--repo` / `--workspace`에서만 실행하지 않고 특정 프로젝트 호스트 설정에서 실행해야 하는 경우 다음을 사용합니다.
+
+```
+orca automations create \
+  --name "Remote triage" \
+  --trigger daily \
+  --time 09:00 \
+  --prompt "Triage open issues" \
+  --provider claude \
+  --project <projectId> \
+  --host <hostId> \
+  --disabled \
+  --json
+```
+
+설정 ID가 이미 있으면 `--project-host-setup <id>`을 사용합니다. 선택적 `--source-context '<json>'`는 task/provider 데이터를 host/account에 고정합니다. 지우려면 편집 시 `null`를 전달합니다.
+
+## 누락된 실행의 유예 시간
+
+```
+orca automations edit <automationId> --missed-run-grace-minutes 30 --json
+```
 
 ## 기존 자동화 세션 재사용
 

@@ -41,6 +41,14 @@
     "/docs/review/diff-viewer/:list:keyboard-shortcuts:0": {
       "sourceHash": "ea2445af713002f78fdc3634589866c6db602e06e06fa44fe8d503f4ac06f739",
       "translated": "- `ORCA_PROTECTED_0001` / `ORCA_PROTECTED_0002` — 다음/이전 변경 파일로 이동합니다.\n- `ORCA_PROTECTED_0003` / `ORCA_PROTECTED_0004` — 다음/이전 변경 구간으로 이동합니다.\n- `ORCA_PROTECTED_0005` / `ORCA_PROTECTED_0006` — 활성 편집기의 다음/이전 변경 사항으로 이동합니다.\n- `ORCA_PROTECTED_0007` — 커서가 있는 변경 구간을 스테이징합니다.\n- `ORCA_PROTECTED_0008` — 댓글 작성을 시작합니다([`Annotate AI Diff`(AI diff 주석 달기)](ORCA_PROTECTED_0009))."
+    },
+    "/docs/review/diff-viewer/:heading:file-tree:0": {
+      "sourceHash": "aceedb736f84987f31a7bf06bd129b938e216ebe1060b90081bc005b82bac0fd",
+      "translated": "## 파일 트리"
+    },
+    "/docs/review/diff-viewer/:paragraph:file-tree:0": {
+      "sourceHash": "ceedac6faa46e6c1d7c30c39d4f9b15cac5ef493991aa90fbed7f95322fef2e2",
+      "translated": "통합 diff에서는 헝크 옆에 접을 수 있는 파일 트리를 표시할 수 있습니다. 트리의 크기 조절 핸들을 드래그하거나 핸들에서 화살표 키를 사용하여 너비를 설정합니다. Shift를 누르면 조절 단위가 커지며, 크기는 세션 간에 기억됩니다. 통합 diff 도구 모음에서 트리를 접거나 표시할 수 있습니다."
     }
   }
 }

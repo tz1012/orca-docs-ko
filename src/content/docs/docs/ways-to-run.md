@@ -1,7 +1,7 @@
 ---
 title: "Orca 실행 방식"
 sourceUrl: https://www.onorca.dev/docs/ways-to-run
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/terminal/
 next: /orca-docs-ko/docs/ssh/
@@ -50,11 +50,11 @@ Orca을 더 강력한 Mac mini, Linux VPS, GPU 시스템, SSH를 지원하는 �
 
 **설정 개요:**
 
-1. [`Settings → SSH`(설정 → SSH)](/orca-docs-ko/docs/settings/)에서 호스트를 추가합니다.
-2. 연결을 테스트합니다. 저장소 작업 트리를 사용하려면 호스트에서 git을 사용할 수 있어야 합니다.
-3. 작업 트리를 만들고 **`Run on`(실행 위치)**에서 SSH 대상을 선택합니다.
+1.  [`Settings`(설정) → `SSH`](/orca-docs-ko/docs/settings/)에서 호스트를 추가합니다.
+2.  연결을 테스트합니다. 저장소 작업 트리를 사용하려면 호스트에 Git이 설치되어 있어야 합니다.
+3.  작업 트리를 만들고 **`Run on`(실행 위치)**에서 SSH 대상을 선택합니다. 자동 완성 목록에는 준비된 호스트가 표시되며, 연결되었지만 이 프로젝트에 아직 설정되지 않은 호스트는 선택할 수 없는 **`setup-needed`(설정 필요)** 행으로 표시됩니다.
 
-자세한 내용은 [SSH 작업 트리](/orca-docs-ko/docs/ssh/)와 [SSH를 통해 원격 시스템에서 작업](/orca-docs-ko/docs/recipes/remote-worktrees/) 레시피를 참조합니다.
+SSH 작업 트리는 VS Code Remote-SSH에서 열 수 있고, SFTP가 허용하면 원격 폴더를 다운로드할 수 있으며, 원격에서 터미널 네이티브를 컴파일할 수 없는 경우에도 files/git에서 계속 사용할 수 있습니다(셸을 사용하려면 빌드 도구를 설치합니다). 자세한 내용은 [SSH 작업 트리](/orca-docs-ko/docs/ssh/) 및 [SSH를 통해 원격 머신에서 작업](/orca-docs-ko/docs/recipes/remote-worktrees/) 레시피를 참조합니다.
 
 ## 3\. 원격 Orca 서버
 

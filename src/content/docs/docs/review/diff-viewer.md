@@ -1,7 +1,7 @@
 ---
 title: "차이점 뷰어"
 sourceUrl: https://www.onorca.dev/docs/review/diff-viewer
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/hooks-memory/
 next: /orca-docs-ko/docs/review/annotate-ai-diff/
@@ -28,6 +28,10 @@ diff는 기본적으로 작업 트리의 시작 참조에 대한 변경 사항�
 ## 단어 줄 바꿈
 
 diff 단어 줄 바꿈이 켜져 있으면 긴 줄이 제자리에 배치되므로 넓은 diff는 가로 스크롤 없이 위에서 아래로 읽혀집니다. 기본적으로 꺼져 있습니다. diff 편집기 헤더의 `⋯`(더보기) 작업 메뉴에서 `Word Wrap`(자동 줄 바꿈)을 전환하거나 `Settings → General → Diff Word Wrap`(설정 → 일반 → Diff 단어 줄 바꿈)에서 전역 기본값을 설정합니다. 두 컨트롤 모두 동일한 설정을 공유합니다. 즉, 편집기에서 전환하면 모든 위치에서 반전됩니다.
+
+## 파일 트리
+
+통합 diff에서는 헝크 옆에 접을 수 있는 파일 트리를 표시할 수 있습니다. 트리의 크기 조절 핸들을 드래그하거나 핸들에서 화살표 키를 사용하여 너비를 설정합니다. Shift를 누르면 조절 단위가 커지며, 크기는 세션 간에 기억됩니다. 통합 diff 도구 모음에서 트리를 접거나 표시할 수 있습니다.
 
 ## 키보드 단축키
 

@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 참조"
 sourceUrl: https://www.onorca.dev/docs/cli/reference
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/overview/
 next: /orca-docs-ko/docs/cli/orchestration/
@@ -202,23 +202,42 @@ orca emulator shutdown --worktree active --json
 
 ## Linear 연동
 
-`orca linear` 하위 명령은 연결된 Linear 작업공간을 스크립트 및 에이전트에 노출합니다. 읽기 명령은 JSON 티켓 컨텍스트를 반환합니다. 쓰기 명령은 상태를 변경합니다. 작업 트리에 연결된 Linear 문제(있는 경우)는 `--current`를 통해 도달할 수 있습니다.
+`orca linear` 인터페이스는 에이전트가 `orca-linear` 스킬을 통해 사용합니다(이전 설치 이름 `linear-tickets`도 계속 작동함). `--json`를 우선 사용합니다. 연결된 작업 트리는 `--current`로 확인합니다.
 
-읽기:
+### 읽기
 
-````
+```
 orca linear issue --current --full --json
-orca linear issue ENG-123 --comments --children --json
+orca linear issue ENG-123 --comments --children --relations --activity --json
 orca linear search "auth bug" --workspace all --json
-orca linear list --json
+orca linear list --filter assigned --limit 10 --json
+orca linear list-issues --team ENG --state started --assignee me --json
+orca linear list-issues --query auth --updated-at -P7D --cursor <cursor> --workspace <id> --json
 orca linear team list --json
-orca linear team states --team <key|id> --json
-orca linear team labels --team <key|id> --json
-````
+orca linear team states --team ENG --json
+orca linear team labels --team ENG --json
+orca linear project list --query launch --json
+```
 
-쓰다:
+`--full`은 댓글, 하위 항목, 첨부 파일, 관계 및 활동을 확장합니다. 섹션 플래그(`--comments`, `--children`, `--attachments`, `--relations`, `--activity`)는 개별적으로 작동합니다.
 
-````
+### MCP 형식 쓰기
+
+```
+# Create or update (omit id/--current to create; requires --team and --title on create)
+orca linear save-issue --team ENG --title "Fix auth" --priority high --json
+orca linear save-issue ENG-123 --state "In Progress" --assignee me --json
+orca linear save-issue --current --project null --due-date null --json
+
+orca linear relation add ENG-1 --related ENG-2 --type blocks --json
+orca linear relation remove ENG-1 --related ENG-2 --type related --json
+```
+
+`save-issue` 레이블은 전체 레이블 집합을 **대체**합니다(Linear MCP의 `save_issue` 의미 체계). 리터럴 `null`는 담당자, 추정치, 기한, 프로젝트 또는 상위 항목을 지웁니다.
+
+### 필드 도우미(계속 유효함)
+
+```
 orca linear status set --current --to "In Progress" --json
 orca linear assignee set --current --me --json
 orca linear priority set ENG-123 --to high --json
@@ -228,9 +247,9 @@ orca linear label add --current --label backend --json
 orca linear comment add --current --body "Investigating regression" --json
 orca linear attach --current --url https://example.com/repro --title "Repro" --json
 orca linear create --title "Flaky login test" --team ENG --priority high --json
-````
+```
 
-여러 개의 연결된 작업공간 간 라우팅을 위한 `--workspace <id>`를 포함하여 전체 플래그 목록을 보려면 `orca linear <command> --help`을 실행하세요. 스크립트가 Orca에 연결된 작업 트리 외부에서 실행될 수 있는 경우 명시적인 문제 ID(예: `ENG-123`)를 전달하세요. `--current`는 작업 트리가 Linear 문제에 연결된 경우에만 해결되기 때문입니다.
+버전이 일치하는 목록을 확인하려면 `orca linear --help` 또는 `orca skills get orca-linear`를 실행합니다. Orca에 연결된 작업 트리 외부에서 스크립트가 실행될 수 있으면 명시적인 이슈 ID(예: `ENG-123`)를 전달합니다.
 
 ## 자동화, 환경 및 후크
 

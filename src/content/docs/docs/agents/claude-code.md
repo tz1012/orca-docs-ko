@@ -1,7 +1,7 @@
 ---
 title: "Orca의 Claude Code"
 sourceUrl: https://www.onorca.dev/docs/agents/claude-code
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/supported/
 next: /orca-docs-ko/docs/agents/glm-agent/
@@ -30,6 +30,10 @@ Orca은 로컬 `~/.claude` 사용 상태를 읽고 상태 표시줄에 현재 �
 ## 계정 핫스왑
 
 Orca은 여러 Claude 계정을 지원하며 Codex 흐름과 일치하도록 한 번의 클릭으로 계정 간에 전환할 수 있습니다. 계정 전환은 라이브 Claude 세션이 실행 중인 경우에도 작동합니다. Orca는 진행 중인 스위치를 가드 뒤에 보유하므로 중복된 인증 새로 고침이 트리거되지 않습니다. [핫스왑 Codex 계정](/orca-docs-ko/docs/agents/codex-hot-swap/)을 참조하세요. Claude 흐름은 모양이 동일합니다.
+
+## 하위 에이전트와 팀
+
+백그라운드 하위 에이전트와 Agent Teams 팀원은 작업 트리 에이전트 목록과 [에이전트 대시보드](/orca-docs-ko/docs/model/agents-sessions/#agent-dashboard)에서 리드 에이전트 아래의 펼칠 수 있는 하위 행으로 표시될 수 있습니다. 하위 에이전트를 선택하면 리드 터미널에 포커스가 맞춰집니다.
 
 ## 후크 및 메모리
 

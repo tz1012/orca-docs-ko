@@ -43,6 +43,10 @@
         "slug": "docs/agents/hooks-memory"
       },
       {
+        "label": "채팅 UI(네이티브 채팅)",
+        "slug": "docs/agents/native-chat"
+      },
+      {
         "label": "에이전트 세션 기록",
         "slug": "docs/agents/session-history"
       },

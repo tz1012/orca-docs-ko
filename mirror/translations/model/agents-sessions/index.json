@@ -39,12 +39,12 @@
       "translated": "## 상담원 대시보드"
     },
     "/docs/model/agents-sessions/:paragraph:agent-dashboard:0": {
-      "sourceHash": "8305870e3c1f1bc1c517416f26082ca467b001d5cc302edea6f1d3f03b695f0a",
-      "translated": "사이드바의 각 작업 트리 카드는 동일한 색상의 상태 점으로 에이전트 세션을 인라인하므로 카드를 확장하지 않고도 모든 작업 트리의 모든 에이전트를 한 눈에 볼 수 있습니다. 행은 볼 때까지 굵게 유지되며 사이드바 상태 오버레이는 먼저 주의가 필요한 작업 트리를 표시합니다."
+      "sourceHash": "ec0cc81f7fcafb5d50b6797a24fbc62dc42d5401bca2b2b2ff5146c195abcf31",
+      "translated": "**`Settings`(설정) → `Experimental`(실험) → `Agent Dashboard`(에이전트 대시보드)**를 켭니다. ORCA_PROTECTED_0001는 왼쪽 사이드바에 **`Agent Dashboard`(에이전트 대시보드)** 항목을 추가합니다. 이 항목은 작업 트리 전체의 에이전트를 **`Needs You`(사용자 확인 필요)**, **`Working`(작업 중)**, **`Idle`(유휴)**의 세 열로 보여 주는 칸반입니다."
     },
     "/docs/model/agents-sessions/:paragraph:agent-dashboard:1": {
-      "sourceHash": "81d9b9146bd1f90860a031a0c70588f9c687ab0e1f8dd16536a40860beaafca6",
-      "translated": "대시보드는 기본적으로 켜져 있습니다. 토글이 없습니다. 상태 점이 표시되지 않으면 해당 세션의 에이전트 CLI가 ORCA_PROTECTED_0001이 인식하는 OSC 제목을 내보내지 않는 것입니다. 바이너리를 직접 입력하는 대신 에이전트 콤보 상자를 통해 시작하십시오."
+      "sourceHash": "d3a17425882705b77a4a8ae75b4e5a0e35fa4dae32b17729417462d8a0866d14",
+      "translated": "실험적 보드를 꺼도 작업 트리 카드에는 동일한 기호와 함께 에이전트 행이 인라인으로 표시됩니다. 상태 표시기가 보이지 않으면 해당 세션의 에이전트 CLI를 ORCA_PROTECTED_0001가 인식하지 못하는 것입니다. 바이너리를 직접 입력하지 말고 에이전트 콤보 상자를 통해 시작합니다."
     },
     "/docs/model/agents-sessions/:heading:launch-defaults:0": {
       "sourceHash": "1dff4aef5b202c50e97db92fcd9b5af9bca40f468e63d1f7856788ed3c4563e6",
@@ -77,6 +77,26 @@
     "/docs/model/agents-sessions/:aside:session-lifecycle:0": {
       "sourceHash": "a9456da7b7b739894cfd5f6267aade49dbfa546fd9312b9c8507b9154045f4a0",
       "translated": "정확한 탐지 규칙은 [ORCA_PROTECTED_0002 CLI](ORCA_PROTECTED_0003)의 `ORCA_PROTECTED_0001` 명령을 참조하세요."
+    },
+    "/docs/model/agents-sessions/:heading:state-indicators:0": {
+      "sourceHash": "5cae1f7f9b9fcae990b5862835d4b9d4cc6585b0116dee27314694338f7a15c6",
+      "translated": "## 상태 표시기"
+    },
+    "/docs/model/agents-sessions/:paragraph:state-indicators:0": {
+      "sourceHash": "dd5a953a558e39bfcabb68bde39d1a886eaa1e34052b2a17b764aa54d400e2c1",
+      "translated": "에이전트 탭과 작업 트리 행은 다음과 같은 공통 상태 기호를 사용합니다."
+    },
+    "/docs/model/agents-sessions/:list:state-indicators:0": {
+      "sourceHash": "48c90606bc45f55038cdf167409c5d36da7abc09a48caa03812e71608ea811d3",
+      "translated": "-   **회전 표시기** — 작업 중\n-   **황색 물음표** — 사용자를 기다리는 중(권한/입력 필요)이며, 사이드바의 `Needs You`(사용자 확인 필요) 수도 동일한 기호를 사용합니다.\n-   **에메랄드색 체크 표시**(대시보드) 또는 **에메랄드색 점**(사이드바) — 완료/조용히 활성 상태\n-   **빨간색 점** — 차단됨, 중단됨 또는 실패\n-   **회색 점** — 유휴 상태\n-   **표시기 없음** — 인식된 에이전트 CLI가 아닌 일반 셸"
+    },
+    "/docs/model/agents-sessions/:paragraph:state-indicators:1": {
+      "sourceHash": "1a267597e6decd81bd9f1e3e252b2710be56941f17495ffc4aec699d0059d893",
+      "translated": "상태는 터미널의 OSC 제목 시퀀스와 에이전트 후크에서 감지하며, ORCA_PROTECTED_0001, ORCA_PROTECTED_0002 및 여러 다른 에이전트가 이를 내보냅니다."
+    },
+    "/docs/model/agents-sessions/:list:agent-dashboard:0": {
+      "sourceHash": "68f15bd3f1ff3eb7d9118141312c3eef255dae1aa4ac4343dd0d83c4d4422763",
+      "translated": "-   **`Open as`(열기 방식)** — 사이드바 옆의 **`In-window`(창 내부)** 보드 또는 별도 창의 **`Pop-out`(분리 창)**으로 엽니다.\n-   사용할 수 있으면 카드에 세션 **대화 이름**(변경한 이름, 생성된 제목 또는 에이전트 세션 제목)을 사용하고, 그렇지 않으면 작업 트리 이름을 사용합니다.\n-   **`Needs You`(사용자 확인 필요)** 카드는 황색으로 표시되며 대기 중인 질문 요약을 보여 줄 수 있고, **완료** 카드는 녹색으로 표시됩니다.\n-   카드를 클릭하면 해당 에이전트의 실행 중인 터미널을 ORCA_PROTECTED_0001합니다.\n-   중첩된 ORCA_PROTECTED_0002 하위 에이전트는 상위 행 아래에 펼칠 수 있는 하위 항목으로 표시될 수 있습니다."
     }
   }
 }

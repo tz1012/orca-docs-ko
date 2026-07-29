@@ -1,7 +1,7 @@
 ---
 title: "리치 마크다운 편집기"
 sourceUrl: https://www.onorca.dev/docs/editing/markdown
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/monaco/
 next: /orca-docs-ko/docs/editing/viewers/
@@ -21,7 +21,7 @@ translationNotice:
 
 슬래시 메뉴(제목, 목록, 코드 블록, 설명선, 이미지, 인어 다이어그램, 토글 블록)를 열려면 빈 줄에 `/`을 입력하세요.
 
-축소 가능한 메모에는 `/toggle-text`을 사용하고, 전환 요약을 최상위 제목처럼 읽어야 하는 경우에는 `/toggle-h1`를 사용하세요. Orca은 둘 다 이식 가능한 `<details>` / `<summary>` 마크다운으로 저장하므로 파일은 여전히 ​​Orca 외부에서 미리 볼 수 있습니다.
+접을 수 있는 메모에는 `/toggle-text`을 사용하고, 토글 요약을 제목 수준처럼 표시하려면 `/toggle-h1` … `/toggle-h5`을 사용합니다. Orca는 토글을 이식 가능한 `<details>` / `<summary>` Markdown으로 저장하므로 Orca 외부에서도 파일을 미리 볼 수 있습니다.
 
 ## 내부 링크
 
@@ -34,6 +34,8 @@ translationNotice:
 ## 주석 검토
 
 Orca의 풍부한 편집기에서 마크다운을 검토할 때 원시 마크다운으로 다시 전환하지 않고도 렌더링된 텍스트를 선택하여 주석을 추가하세요. Orca는 선택한 소스 범위에 연결된 메모를 유지하므로 렌더링된 문서를 계속 편집하는 동안 설명을 표시할 수 있습니다.
+
+**`Add Review Note`(검토 메모 추가)**는 다시 매핑할 수 있는 바로 가기입니다([`Settings`(설정) → `Shortcuts`(바로 가기)](/orca-docs-ko/docs/settings/)의 기본값은 `Cmd+Shift+A` / `Ctrl+Shift+A`입니다).
 
 ## 머리말
 

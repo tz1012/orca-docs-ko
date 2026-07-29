@@ -1,7 +1,7 @@
 ---
 title: "모나코 편집기 및 자동 저장"
 sourceUrl: https://www.onorca.dev/docs/editing/monaco
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/jira/
 next: /orca-docs-ko/docs/editing/markdown/
@@ -19,9 +19,9 @@ Orca의 코드 편집기는 VS Code가 사용하는 것과 동일한 편집기�
 
 ## 다중 커서, 이동, 찾기
 
-- `Cmd-D` — 다음 항목을 선택합니다.
-- `Cmd-F` / `Cmd-Shift-F` — 파일 찾기 / 작업 트리 찾기.
-- `Cmd-Click` — 정의로 이동합니다(언어 확장에서 지원되는 경우).
+-   `Cmd-D` — 다음 일치 항목을 선택합니다.
+-   `Cmd-F` / `Cmd-Shift-F` — 파일 찾기/작업 트리 찾기를 실행합니다. 텍스트가 선택되어 있으면 파일 찾기에서 현재 선택 영역을 검색 상자의 초기값으로 사용합니다.
+-   `Cmd-Click` — 언어 확장이 지원하는 경우 정의로 이동합니다.
 
 ## 보기 모드 변경
 
@@ -29,7 +29,7 @@ Orca의 코드 편집기는 VS Code가 사용하는 것과 동일한 편집기�
 
 ## 자동 줄 바꿈
 
-파일 편집기는 기본적으로 긴 줄을 자동으로 바꿉니다. 소스 파일을 가로로 스크롤하려면 [`Settings → General → Editor`(설정 → 일반 → 편집기)](/orca-docs-ko/docs/settings/)에서 `Editor Word Wrap`(편집기 자동 줄 바꿈)을 끕니다. 이 설정은 diff 편집기에만 적용되는 `Diff Word Wrap`(diff 자동 줄 바꿈)과 별개입니다.
+파일 편집기는 기본적으로 긴 줄을 줄 바꿈합니다. 편집기 탭의 **⋯** 메뉴에서 **`Word Wrap`(자동 줄 바꿈)**을 전환하거나, `Alt+Z`을 누르거나(VS Code와 동일하며 [`Settings`(설정) → `Shortcuts`(바로 가기)](/orca-docs-ko/docs/settings/)에서 다시 매핑할 수 있음), [`Settings`(설정) → `General`(일반) → `Editor Word Wrap`(편집기 자동 줄 바꿈)](/orca-docs-ko/docs/settings/)에서 기본값을 설정합니다. 이 설정은 diff 편집기에만 영향을 주는 **`Diff Word Wrap`(diff 자동 줄 바꿈)**과 별개입니다.
 
 ## 미니맵
 
@@ -37,7 +37,7 @@ Orca의 코드 편집기는 VS Code가 사용하는 것과 동일한 편집기�
 
 ## 사용자 정의 편집기 글꼴
 
-[설정 → 모양 → 편집기 글꼴](/orca-docs-ko/docs/settings/)에서 편집기에 설치된 글꼴을 선택합니다. UI 글꼴과 독립적입니다.
+기본적으로 편집기와 diff 보기는 터미널과 동일한 글꼴을 사용합니다. 이 연결을 유지하려면 [`Settings`(설정) → `Appearance`(모양)](/orca-docs-ko/docs/settings/)에서 **`Editor Font Family`(편집기 글꼴 패밀리)**를 비워 둡니다. 글꼴을 설정하면 편집기에만 적용되며 UI 글꼴은 별도로 유지됩니다.
 
 ## 언어 지원
 

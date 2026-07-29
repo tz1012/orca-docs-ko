@@ -1,7 +1,7 @@
 ---
 title: "에이전트 최대 절전 모드"
 sourceUrl: https://www.onorca.dev/docs/agents/hibernation
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/session-history/
 next: /orca-docs-ko/docs/agents/usage-tracking/
@@ -23,12 +23,12 @@ Orca이 유휴 백그라운드 에이전트 터미널을 일시 중지하고 작
 
 Orca은 다음 `all`(모두) 해당하는 경우에만 에이전트 터미널을 최대 절전 모드로 전환합니다.
 
-- 에이전트는 `done`(완료) 상태입니다. 마지막 차례를 마쳤으며 입력을 기다리고 있지 않습니다.
-- 터미널이 활성 작업 트리 또는 현재 전경 터미널을 렌더링하는 작업 트리에 없습니다.
-- 에이전트가 완료된 이후 키 입력을 받지 못했습니다.
-- 에이전트가 [재개 가능한 세션](/orca-docs-ko/docs/agents/session-history/): Claude, Codex, Gemini, Antigravity, OpenCode, Droid 또는 Grok을 포함하는 에이전트입니다.
-- 구성된 유휴 기간(기본값 30분) 이상 동안 유휴 상태였습니다.
-- 현재 단말기를 구동하고 있는 모바일 세션이 없습니다.
+-   에이전트가 **완료** 상태입니다. 즉, 마지막 턴을 마쳤으며 입력을 기다리고 있지 않습니다.
+-   터미널이 활성 작업 트리 또는 현재 포그라운드 터미널을 렌더링하는 작업 트리에 있지 않습니다.
+-   에이전트가 완료된 후 키 입력을 받지 않았습니다.
+-   에이전트가 [재개 가능한 세션](/orca-docs-ko/docs/agents/session-history/)을 지원하는 Claude, Codex, Gemini, Antigravity, OpenCode, Pi, MiMo Code, Droid, Grok, Devin 또는 OMP 중 하나입니다.
+-   구성된 유휴 시간(기본값 30분) 이상 유휴 상태였습니다.
+-   현재 터미널을 제어하는 모바일 세션이 없습니다.
 
 검사에 실패한 터미널은 계속 실행됩니다. 작업 트리에 에이전트 창이 여러 개 있는 경우 하나의 단위로 함께 최대 절전 모드로 전환되므로 부분적으로 일시 중지된 작업 트리는 배송되지 않습니다.
 
@@ -56,7 +56,7 @@ Orca은 다음 `all`(모두) 해당하는 경우에만 에이전트 터미널을
 
 ## 제한사항
 
-나열된 재개 가능한 에이전트만 최대 절전 모드로 전환됩니다. Cursor CLI, Hermes, Pi, Copilot 및 기타 재개할 수 없는 터미널은 계속 실행 중입니다.
+목록에 있는 재개 가능한 에이전트만 최대 절전 모드로 전환됩니다. Cursor CLI, Hermes, Copilot, Trae 및 재개할 수 없는 다른 터미널은 계속 실행됩니다.
 
 ## 다음 단계
 

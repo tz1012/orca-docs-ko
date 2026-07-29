@@ -57,6 +57,30 @@
     "/docs/agents/codex/:paragraph:codex-on-windows-wsl:0": {
       "sourceHash": "43503b2b806d6edd511fea8a77f231ce23db34f20ee076ee9b21e8d2eea445e7",
       "translated": "Windows에서 ORCA_PROTECTED_0001은 호스트 설치 또는 WSL 배포판에서 ORCA_PROTECTED_0002를 실행할 수 있습니다. 계정 전환기에서 WSL 호스팅 ORCA_PROTECTED_0003 계정 추가 — ORCA_PROTECTED_0004는 distro(`ORCA_PROTECTED_0005` 아래) 내부에 격리된 계정 홈을 생성하고 인증 읽기를 위한 `ORCA_PROTECTED_0006` 경로로 호스트에 다시 매핑하며 선택한 배포판을 통해 시작, 핫스왑 및 속도 제한 가져오기를 라우팅합니다. ORCA_PROTECTED_0007이 대상 배포판에 설치되지 않은 경우 바이너리가 누락된 배포판을 알려주는 실행 가능한 메시지와 함께 `Add account`(계정 추가) 대화 상자가 실패합니다."
+    },
+    "/docs/agents/codex/:heading:system-default-vs-extra-accounts:0": {
+      "sourceHash": "195a837c7e493ef811117330967c8343bba4c7cd463b07137703fef0e4eda625",
+      "translated": "## 시스템 기본 계정과 추가 계정"
+    },
+    "/docs/agents/codex/:paragraph:system-default-vs-extra-accounts:0": {
+      "sourceHash": "60628db04bf9eb4582ecd82b891e13abcbc4ac99e22d6029d49a7d0cf273feb6",
+      "translated": "**`System default`(시스템 기본값)**는 실제 `ORCA_PROTECTED_0001` 로그인을 사용합니다(ORCA_PROTECTED_0003 외부에서 별도로 실행한 `ORCA_PROTECTED_0002`가 사용하는 것과 동일한 홈입니다). ORCA_PROTECTED_0004가 관리하는 추가 계정은 ORCA_PROTECTED_0005의 계정 데이터 아래에 각각 전용 홈을 두므로 자격 증명과 롤아웃이 격리됩니다. 새 ORCA_PROTECTED_0006 실행은 활성 계정을 따르지만, 이미 실행 중인 세션은 다시 시작할 때까지 시작할 때 사용한 홈을 유지합니다."
+    },
+    "/docs/agents/codex/:heading:nested-task-subagents:0": {
+      "sourceHash": "6325504dc98025cacf5a86682c5f33506e6686d68ef6d583339ad94e22de0e72",
+      "translated": "## 중첩된 Task 하위 에이전트"
+    },
+    "/docs/agents/codex/:paragraph:nested-task-subagents:0": {
+      "sourceHash": "f4d1e988c836545a61dff8c0420401946a0307f3066ae286b7ef71bb277bd148",
+      "translated": "ORCA_PROTECTED_0001가 Task 하위 에이전트를 생성하면 ORCA_PROTECTED_0002는 작업 트리 에이전트 목록과 [에이전트 대시보드](ORCA_PROTECTED_0003)에서 이를 상위 에이전트 아래의 하위 행으로 표시할 수 있습니다. 펼침 화살표를 열어 각 하위 에이전트를 확인할 수 있으며, 하위 에이전트를 클릭하면 상위 터미널에 포커스가 맞춰집니다(하위 에이전트에는 별도 창이 할당되지 않습니다)."
+    },
+    "/docs/agents/codex/:heading:continue-in-a-new-session:0": {
+      "sourceHash": "b8810378e4d9ef1b72e0a6c7982404a06da15132f3afb34b9ef606c488334942",
+      "translated": "## 새 세션에서 `ORCA_PROTECTED_0001`(계속)"
+    },
+    "/docs/agents/codex/:paragraph:continue-in-a-new-session:0": {
+      "sourceHash": "1c238ece160a1f61c389d19397332a4bc70c0a126f3e79a569795b23a96de03c",
+      "translated": "에이전트 터미널의 헤더나 컨텍스트 메뉴에서 **`ORCA_PROTECTED_0001 in New Session…`(새 세션에서 계속)**을 선택합니다. ORCA_PROTECTED_0002는 동일하거나 다른 CLI로 새 에이전트 세션을 시작하고 이전 기록 또는 캡처한 컨텍스트에서 범위를 제한한 인계 프롬프트를 주입합니다. 원래 세션은 그대로 유지되며, 이는 `ORCA_PROTECTED_0003`이 아닙니다."
     }
   }
 }

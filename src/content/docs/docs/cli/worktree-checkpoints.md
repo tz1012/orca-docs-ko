@@ -1,7 +1,7 @@
 ---
 title: "워크트리 체크포인트"
 sourceUrl: https://www.onorca.dev/docs/cli/worktree-checkpoints
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/computer-use/
 next: /orca-docs-ko/docs/cli/skills/
@@ -18,6 +18,19 @@ translationNotice:
 ````
 orca worktree set --worktree active --comment "reproduced auth failure; testing credential-chain fix" --json
 ````
+
+## 카드 상태(선택 사항)
+
+자유 텍스트 댓글과 함께 단계가 바뀔 때 작업 공간 카드 상태를 설정합니다.
+
+```
+orca worktree set --worktree active \
+  --comment "fix implemented; running integration tests" \
+  --workspace-status in-progress \
+  --json
+```
+
+상태: `todo`, `in-progress`, `in-review`, `completed` 또는 작업 공간에서 사용하는 사용자 지정 ID
 
 ## 좋은 체크포인트 순간들
 

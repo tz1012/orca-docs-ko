@@ -49,6 +49,14 @@
     "/docs/agents/claude-code/:paragraph:hooks-memory:0": {
       "sourceHash": "b5b52883f24eea894c3de8c2e15e0b87b4a93dc0f2ab89b8db2ea3fb30078df1",
       "translated": "ORCA_PROTECTED_0001은 저장소별 후크 및 메모리 파일을 지원합니다. ORCA_PROTECTED_0002는 [에이전트 후크 및 메모리](ORCA_PROTECTED_0003) 아래에 이를 표시합니다."
+    },
+    "/docs/agents/claude-code/:heading:subagents-and-teams:0": {
+      "sourceHash": "3d2ae3eb2023d850cc11d97a4d701c6d5b2896bb6af5b836caab2025b207c72f",
+      "translated": "## 하위 에이전트와 팀"
+    },
+    "/docs/agents/claude-code/:paragraph:subagents-and-teams:0": {
+      "sourceHash": "e152fd0ca986111bd8c79a6c83a356eb25a94a6130c2e112a97c4288470fab84",
+      "translated": "백그라운드 하위 에이전트와 Agent Teams 팀원은 작업 트리 에이전트 목록과 [에이전트 대시보드](ORCA_PROTECTED_0001)에서 리드 에이전트 아래의 펼칠 수 있는 하위 행으로 표시될 수 있습니다. 하위 에이전트를 선택하면 리드 터미널에 포커스가 맞춰집니다."
     }
   }
 }

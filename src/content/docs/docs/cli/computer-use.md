@@ -1,7 +1,7 @@
 ---
 title: "컴퓨터 사용"
 sourceUrl: https://www.onorca.dev/docs/cli/computer-use
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/automations/
 next: /orca-docs-ko/docs/cli/worktree-checkpoints/
@@ -41,7 +41,17 @@ orca computer get-app-state --app com.spotify.client --json
 orca computer click --app com.spotify.client --element-index 42 --json
 ````
 
-요소 인덱스의 범위는 최신 `get-app-state` 결과로 지정됩니다. 탐색, 포커스 변경, 스크롤 또는 앱 다시 렌더링 후 인덱스를 재사용하기 전에 상태를 새로 고칩니다.
+요소 인덱스는 최신 `get-app-state` 결과에만 적용되며 **연속적이지 않을 수 있습니다**. `--json` 출력에서는 `result.snapshot.treeText`에서 트리를 읽습니다. `elementCount`를 보고 인덱스를 만들어 내지 않습니다. 탐색, 포커스 변경, 스크롤 또는 앱 다시 렌더링 후에는 인덱스를 재사용하기 전에 상태를 새로 고칩니다.
+
+## 다중 창 앱
+
+```
+orca computer list-windows --app com.microsoft.edgemac --json
+orca computer get-app-state --app com.microsoft.edgemac --window-id <id> --json
+orca computer click --app com.microsoft.edgemac --window-id <id> --element-index 12 --json
+```
+
+목록의 ID가 `none`가 아니면 안정적인 `--window-id`을 우선 사용하고, 그렇지 않으면 `--window-index`을 사용합니다.
 
 ## 앱 선택
 
@@ -68,6 +78,13 @@ orca computer perform-secondary-action --app <app> --element-index <i> --action 
 ````
 
 원시 `type-text` 또는 `press-key`보다 의미 체계 작업(`click`, `set-value`, `perform-secondary-action`)을 선호합니다. 이는 접근성 요소를 직접 대상으로 하며 키보드 입력이 수행하지 않는 포커스 변경에도 유지됩니다.
+
+접근성 대상으로 지정할 수 없으면 좌표를 신중하게 대안으로 사용합니다.
+
+```
+orca computer click --app com.apple.Safari --x 120 --y 340 --json
+orca computer drag --app <app> --from-element-index 3 --to-element-index 9 --json
+```
 
 ## 민감한 입력
 

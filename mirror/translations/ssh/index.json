@@ -89,6 +89,74 @@
     "/docs/ssh/:aside:ssh-worktrees:0": {
       "sourceHash": "03641fefc1a187570249524f8d609835d67b2e681914c387459d85a9520a06e5",
       "translated": "네 가지 실행 모드 중 하나\n\nSSH는 원격 컴퓨팅 환경에서 에이전트를 실행하는 한 가지 방법입니다. 로컬, 자체 호스팅 서버 및 임시 VM 방식은 [ORCA_PROTECTED_0001 실행 방식](ORCA_PROTECTED_0002)을 참조합니다."
+    },
+    "/docs/ssh/:heading:downloading-remote-files-and-folders:0": {
+      "sourceHash": "a1cdb203235623279094f26f8b5f3899c236b05d79f6ff1a86d8d26da39df6ba",
+      "translated": "## 원격 파일 및 폴더 다운로드"
+    },
+    "/docs/ssh/:paragraph:downloading-remote-files-and-folders:0": {
+      "sourceHash": "fb3652d83c41b570066b2394a799e264b049f2c63cc7952875844fe36b78ff5f",
+      "translated": "SSH 작업 트리 파일 탐색기에서 마우스 오른쪽 버튼을 클릭합니다."
+    },
+    "/docs/ssh/:list:downloading-remote-files-and-folders:0": {
+      "sourceHash": "115bdf3ab12cec2158417d671c99f4543d4fbc9869e639d2297d07cd169db122",
+      "translated": "-   **`File`(파일)** → **`Download`(다운로드)** — 네이티브 저장 대화 상자를 열고 파일을 노트북에 복사합니다.\n-   **`Folder`(폴더)** → **`Download Folder`(폴더 다운로드)** — 선택한 폴더에 재귀적으로 다운로드합니다(데스크톱만 해당)."
+    },
+    "/docs/ssh/:paragraph:downloading-remote-files-and-folders:1": {
+      "sourceHash": "cd9a87a943dacc3e71aff65cf340fd349da2b997da8d3c7ee82b4891a66494fc",
+      "translated": "ORCA_PROTECTED_0001는 연결과 동일한 SSH 전송 경로를 사용합니다. 폴더 다운로드는 연결에서 재귀 폴더 전송(일반적으로 전체 SFTP)을 지원한다고 알릴 때만 표시됩니다. 시스템 OpenSSH 전용 전송을 유지하는 연결은 **파일**을 다운로드할 수 있어도 **`Download Folder`(폴더 다운로드)**가 표시되지 않을 수 있습니다."
+    },
+    "/docs/ssh/:paragraph:downloading-remote-files-and-folders:2": {
+      "sourceHash": "135138ce0bccd2ceff4ba392f596a77dc271a0f3689ba5105b3ae4b0337d2978",
+      "translated": "이 작업은 데스크톱 전용입니다. Electron의 저장 대화 상자를 사용하므로 웹 클라이언트에는 `Download`(다운로드)가 제공되지 않습니다."
+    },
+    "/docs/ssh/:heading:open-a-remote-workspace-in-vs-code:0": {
+      "sourceHash": "26bc804d59e8f5d0fac06c1df532afd86afe166909a1ee32a010b5b2495ea3af",
+      "translated": "## VS Code에서 원격 작업 공간 열기"
+    },
+    "/docs/ssh/:paragraph:open-a-remote-workspace-in-vs-code:0": {
+      "sourceHash": "5c33359feb81309f4792dafe5c87fd369a93ecaa77dbde644b47305542a45afc",
+      "translated": "SSH 작업 트리에서 구성한 앱이 VS Code 또는 VS Code Insiders(`ORCA_PROTECTED_0001` / `ORCA_PROTECTED_0002` 또는 해당 실행기의 직접 경로)이면 작업 트리 메뉴의 **`Open in`(다음에서 열기)** 목록에서 원격 경로를 VS Code Remote-SSH에 전달할 수 있습니다."
+    },
+    "/docs/ssh/:list:open-a-remote-workspace-in-vs-code:0": {
+      "sourceHash": "a5351d72066d5c5d629587b517cd608360f39d45696aa2c481a72ac5b9cdcb3f",
+      "translated": "1.  **`Settings`(설정) → `General`(일반) → `Open in menu`(다음에서 열기 메뉴)**를 구성하여 VS Code가 목록에 표시되게 합니다(사전 설정 또는 사용자 지정 명령).\n2.  SSH 작업 트리를 마우스 오른쪽 버튼으로 클릭하거나 작업 트리 더보기 메뉴를 사용하여 **`Open in`(다음에서 열기) → `VS Code`**를 선택합니다.\n3.  ORCA_PROTECTED_0001가 해당 호스트와 작업 트리 경로(`ORCA_PROTECTED_0002`)에 대해 Remote-SSH를 사용하여 VS Code를 실행합니다. 메뉴 항목에 **`Remote SSH`** 배지가 표시될 수 있습니다."
+    },
+    "/docs/ssh/:paragraph:open-a-remote-workspace-in-vs-code:1": {
+      "sourceHash": "e97fb5fa25717f4d0dc7ca22720f6111fe3d651ffb9bc3b1e1d98b47d12152e5",
+      "translated": "**이 원격 경로에서는 지원되지 않음:** ORCA_PROTECTED_0001, Zed, 복합 셸 명령 또는 **Remote ORCA_PROTECTED_0002 Server** 활성 런타임을 통한 열기는 지원되지 않으며 **`Local only`(로컬 전용)**로 유지됩니다. ORCA_PROTECTED_0003 항목은 로컬 경로에만 사용합니다."
+    },
+    "/docs/ssh/:heading:kerberos-gssapi:0": {
+      "sourceHash": "a39abac1ac2269b74726f3dcf96fc6f6f5a0b3299d67a4ed36d91d62f897f000",
+      "translated": "## Kerberos/GSSAPI"
+    },
+    "/docs/ssh/:paragraph:kerberos-gssapi:0": {
+      "sourceHash": "52c1f93c33b22dd562fe07037e004ca9612b944389c6d554be5949c85e7a72c8",
+      "translated": "OpenSSH 구성의 호스트에 `ORCA_PROTECTED_0001`가 설정되어 있으면 ORCA_PROTECTED_0002는 해당 대상에 **시스템 OpenSSH** 전송을 우선 사용합니다(내장 ssh2 클라이언트는 GSSAPI를 지원하지 않음). 연결하기 전에 유효한 Kerberos 티켓(`ORCA_PROTECTED_0003` / 조직의 SSO)을 유지합니다. 수동 대상도 시스템 SSH를 사용하도록 구성하면 GSSAPI를 활성화할 수 있습니다."
+    },
+    "/docs/ssh/:paragraph:kerberos-gssapi:1": {
+      "sourceHash": "32a61269d5f9483807eb9ef0a09a3c84ef588a940eafed56724da02141c2af8f",
+      "translated": "구성에서 가져온 호스트에 별도의 `Kerberos mode`(Kerberos 모드) 스위치를 켤 필요는 없습니다. 가져오기/`ORCA_PROTECTED_0001`가 플래그를 전달합니다."
+    },
+    "/docs/ssh/:heading:linux-hosts-without-a-cc-toolchain:0": {
+      "sourceHash": "144c7bd87076c47490131286ba1d742fac8bfcebb10098dcd98b517c778cb7ae",
+      "translated": "## ORCA_PROTECTED_0001++ 도구 체인이 없는 Linux 호스트"
+    },
+    "/docs/ssh/:paragraph:linux-hosts-without-a-cc-toolchain:0": {
+      "sourceHash": "1f85a47523e192e7a2dad5a394da3a32c7ee64851d22a622b2c145265012f3db",
+      "translated": "처음 연결할 때 ORCA_PROTECTED_0001는 원격에 작은 릴레이를 설치합니다. 원격 터미널에는 네이티브 `ORCA_PROTECTED_0002` 모듈이 필요합니다. Linux 패키지는 호스트에서 컴파일되는 경우가 많고, ORCA_PROTECTED_0003 릴레이는 미리 빌드된 바이너리를 사용합니다."
+    },
+    "/docs/ssh/:paragraph:linux-hosts-without-a-cc-toolchain:1": {
+      "sourceHash": "15582b86d132a94c1f5abf81cadd5bb8a005414bdb5112c7e112ff2a4a917007",
+      "translated": "원격에 **make**, **C++ 컴파일러**, **python3**가 없더라도 ORCA_PROTECTED_0001는 **파일, Git 및 편집기** 연결을 완료하지만, 빌드 도구를 설치할 때까지 **원격 터미널은 작동하지 않습니다**. ORCA_PROTECTED_0002에 다음과 같은 설치 안내가 표시될 수 있습니다."
+    },
+    "/docs/ssh/:list:linux-hosts-without-a-cc-toolchain:0": {
+      "sourceHash": "a250232df307156eb154c6c76744e1e06a55141aba2973ec66bc52563062c3fc",
+      "translated": "-   ORCA_PROTECTED_0001 설치: `ORCA_PROTECTED_0002`\n-   ORCA_PROTECTED_0003 설치: `ORCA_PROTECTED_0004`\n-   Alpine 설치: `ORCA_PROTECTED_0005`\n-   Arch 설치: `ORCA_PROTECTED_0006`"
+    },
+    "/docs/ssh/:paragraph:linux-hosts-without-a-cc-toolchain:2": {
+      "sourceHash": "a52ee768e55f0cdeb142d3db0b63f955f7263f5bbd38446f0c553066b54e4025",
+      "translated": "도구를 설치한 다음 릴레이가 네이티브 모듈을 설치할 수 있도록 다시 연결합니다."
     }
   }
 }

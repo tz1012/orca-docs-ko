@@ -69,6 +69,18 @@
     "/docs/browser/overview/:list:next-steps:0": {
       "sourceHash": "c32f85d404bd52241eb75368688b0b58483998456c9964d90362f4a9b4b6bb78",
       "translated": "- [디자인 모드](ORCA_PROTECTED_0001) — 브라우저를 포인터-코드 피드백 루프로 전환합니다.\n- [브라우저 사용 프로필](ORCA_PROTECTED_0002) — 특정 로그인, 쿠키 jar 또는 사용자 에이전트를 사용하여 브라우저를 실행합니다."
+    },
+    "/docs/browser/overview/:heading:link-routing:0": {
+      "sourceHash": "e9262b9664b10fdae919c35af726943e72e40da9eca64fb859f43bb76db78fe8",
+      "translated": "## 링크 라우팅"
+    },
+    "/docs/browser/overview/:paragraph:link-routing:0": {
+      "sourceHash": "843acae5113e4f18921c742ba552333d75aeb075fdc6f34119df33f7a68fb2b6",
+      "translated": "[`Settings`(설정) → `Browser`(브라우저) → `Link Routing`(링크 라우팅)](ORCA_PROTECTED_0001)에서 터미널, Markdown 및 편집기의 http(s) 링크를 ORCA_PROTECTED_0002의 작업 트리별 브라우저로 열지 시스템 브라우저로 열지 선택합니다."
+    },
+    "/docs/browser/overview/:paragraph:link-routing:1": {
+      "sourceHash": "ba7f0e66903a0e0546c71e69aaa9ca4882c6472132678527168170a646d4dd71",
+      "translated": "링크가 ORCA_PROTECTED_0001에서 열리도록 설정한 경우 플랫폼 보조 키와 Shift를 함께 눌러 시스템 브라우저로 강제로 열 수 있습니다. macOS에서는 `ORCA_PROTECTED_0002`, Windows/Linux에서는 `ORCA_PROTECTED_0003`을 사용합니다."
     }
   }
 }

@@ -1,7 +1,7 @@
 ---
 title: "파일 탐색기 및 외부 드래그-드롭"
 sourceUrl: https://www.onorca.dev/docs/editing/file-explorer
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/viewers/
 next: /orca-docs-ko/docs/browser/overview/
@@ -22,9 +22,13 @@ translationNotice:
 
 ## Git 상태
 
-파일은 git 상태(추적되지 않음, 수정됨, 준비됨, 무시됨)에 따라 색상이 지정됩니다. 일반적인 작업(폐기, 스테이지, 이름 바꾸기)을 마우스 오른쪽 버튼으로 클릭합니다.
+파일은 추적되지 않음, 수정됨, 스테이징됨, 무시됨과 같은 Git 상태에 따라 색상이 지정됩니다. 마우스 오른쪽 버튼을 클릭하면 변경 취소, 스테이징, 이름 변경, **`Copy Path`(경로 복사)** 및 **`Copy Relative Path`(상대 경로 복사)** 같은 일반 작업을 사용할 수 있습니다(기본값은 `Cmd+Option+Shift+C` / `Ctrl+Alt+Shift+C`이며 다시 매핑할 수 있습니다).
 
 단일 파일을 마우스 오른쪽 버튼으로 클릭하고 `Copy`(복사)를 선택하여 파일 자체를 OS 클립보드에 배치합니다. SSH 작업 트리의 경우 Orca은 먼저 원격 파일을 로컬로 준비한 다음 해당 준비된 파일 참조를 클립보드에 씁니다. 원격 폴더는 제외됩니다.
+
+## 다운로드(SSH/원격)
+
+데스크톱 앱에서 원격 파일을 마우스 오른쪽 버튼으로 클릭한 후 **`Download`(다운로드)**를 선택하거나, 연결이 재귀 전송을 지원하는 경우 원격 폴더에서 **`Download Folder`(폴더 다운로드)**를 선택합니다. Orca가 네이티브 save/folder 대화 상자를 엽니다. 웹 클라이언트에서는 사용할 수 없으며 로컬 작업 트리에는 이 작업이 표시되지 않습니다.
 
 ## 폴더 검색
 

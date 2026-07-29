@@ -129,6 +129,18 @@
     "/docs/terminal/:paragraph:quick-commands:1": {
       "sourceHash": "7b56cad836d60d247e01e953b3b4450ff8b5abb19bc5bdbca790688ce6bd2682",
       "translated": "각 명령에는 레이블, 명령 텍스트 및 범위가 있습니다. 모든 곳에 적용되는 명령의 경우 `Global`(전역)을 사용하고, 특정 저장소의 작업 트리에만 명령을 표시하려면 `Project`(프로젝트)를 사용하세요. 탭 표시줄 버튼은 새로운 터미널 탭을 열고 명령을 실행합니다. 터미널 상황에 맞는 메뉴는 현재 터미널에 명령을 삽입할 수 있습니다."
+    },
+    "/docs/terminal/:heading:tui-clipboard-osc-52:0": {
+      "sourceHash": "aa3cf6a5d02d5938582d595bc4d9d0458a7c7c0877685db95cd288560f9e740e",
+      "translated": "## TUI 클립보드(OSC 52)"
+    },
+    "/docs/terminal/:paragraph:tui-clipboard-osc-52:0": {
+      "sourceHash": "97481cf4875b9454ba1375ecfb486cfbcea599bc2f98760a4609e0960db60480",
+      "translated": "많은 터미널 UI(Zellij, tmux, Neovim, fzf, ORCA_PROTECTED_0001)는 OS 클립보드 API 대신 **OSC 52**를 통해 복사합니다. ORCA_PROTECTED_0002는 이러한 쓰기를 **기본적으로** 허용하므로 ORCA_PROTECTED_0003가 SSH에서도 로컬과 동일하게 동작합니다."
+    },
+    "/docs/terminal/:paragraph:tui-clipboard-osc-52:1": {
+      "sourceHash": "464118e0ed3287bf8945be93f973a3155856aa8c34f634801d72074d295cb965",
+      "translated": "전환 위치: [`Settings`(설정) → `Terminal`(터미널) → `Allow TUI Clipboard Writes (OSC 52)`(TUI 클립보드 쓰기 허용)](ORCA_PROTECTED_0001)"
     }
   }
 }

@@ -1,10 +1,10 @@
 ---
 title: "핫스왑 Codex 계정"
 sourceUrl: https://www.onorca.dev/docs/agents/codex-hot-swap
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/custom-cli/
-next: /orca-docs-ko/docs/agents/session-history/
+next: /orca-docs-ko/docs/agents/native-chat/
 translationNotice:
   title: "비공식 한국어 번역"
   message: "이 문서는 ORCA 공식 문서의 비공식 한국어 번역입니다. 내용이 다를 경우 원문이 우선합니다."
@@ -27,6 +27,14 @@ translationNotice:
 ## 계정 교환
 
 상태 표시줄에서 Codex 칩을 클릭하여 계정 전환기를 엽니다. 계정을 선택하세요. 이후에 시작된 새로운 Codex 세션은 이를 사용합니다. 이미 실행 중인 세션은 다시 시작될 때까지 원래 계정을 유지합니다.
+
+## 시스템 기본값
+
+**`System default`(시스템 기본값)** 행은 `~/.codex` 아래에 있는 현재 호스트 Codex 로그인입니다. Orca에서 추가한 관리형 계정은 이 로그인을 다시 쓰지 않고 격리된 홈에서 실행됩니다. 실행을 Orca 외부 터미널의 `codex`와 일치시키려면 `System default`(시스템 기본값)를 선택합니다.
+
+## 구성 변경 사항이 무시되는 것처럼 보이는 경우
+
+관리형 Codex 계정의 경우 Orca는 실제 `~/.codex/config.toml`의 설정을 활성 런타임 홈에 미러링합니다. 원본 파일이 없거나 비어 있거나(예: 클라우드 동기화가 아직 다운로드 중인 경우) 읽을 수 없으면 `Accounts`(계정)에 경고가 표시됩니다. Codex는 원본이 다시 정상화될 때까지 **마지막으로 동기화에 성공한** 설정을 유지합니다. 배너에 표시된 경로의 파일을 수정한 다음 다시 실행하거나 계정을 다시 선택합니다.
 
 ## 규칙 및 주의 사항
 

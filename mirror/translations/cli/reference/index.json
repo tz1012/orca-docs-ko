@@ -211,8 +211,8 @@
       "translated": "## ORCA_PROTECTED_0001 연동"
     },
     "/docs/cli/reference/:paragraph:linear:0": {
-      "sourceHash": "ff018f0f70d9f1a39d4f9c1cbfd472758fa773cba112a2aae1f7cbe3d6a4d927",
-      "translated": "`ORCA_PROTECTED_0001` 하위 명령은 연결된 ORCA_PROTECTED_0002 작업공간을 스크립트 및 에이전트에 노출합니다. 읽기 명령은 JSON 티켓 컨텍스트를 반환합니다. 쓰기 명령은 상태를 변경합니다. 작업 트리에 연결된 ORCA_PROTECTED_0003 문제(있는 경우)는 `ORCA_PROTECTED_0004`를 통해 도달할 수 있습니다."
+      "sourceHash": "2900485ebc70d41e17d47db881dd2f72f52d892109328d77da3e5bc312dfa7cf",
+      "translated": "`ORCA_PROTECTED_0001` 인터페이스는 에이전트가 `ORCA_PROTECTED_0002` 스킬을 통해 사용합니다(이전 설치 이름 `ORCA_PROTECTED_0003`도 계속 작동함). `ORCA_PROTECTED_0004`를 우선 사용합니다. 연결된 작업 트리는 `ORCA_PROTECTED_0005`로 확인합니다."
     },
     "/docs/cli/reference/:paragraph:linear:1": {
       "sourceHash": "7cdc77838b2f3453f3fab2099cc69a736afa234567d7641afcfa864a0fb0f60b",
@@ -269,6 +269,42 @@
     "/docs/cli/reference/:list:agent-habits:0": {
       "sourceHash": "f42569f3e054e8066f5a3e9759ae90f2f69c59bfef9a38729ea1369a5b20b62b",
       "translated": "- 자동화 및 에이전트 호출에는 `ORCA_PROTECTED_0001`을 선호합니다.\n- UI 레이블을 구문 분석하는 것보다 선택기를 선호합니다.\n- 다음 입력이 확실하지 않은 한 입력을 보내기 전에 터미널 상태를 읽습니다.\n- 진행 체크포인트에 작업 트리 설명을 사용합니다. [작업 트리 체크포인트](ORCA_PROTECTED_0002)를 참조하세요.\n- 추적된 다중 에이전트 파견을 위해 임시 터미널 프롬프트 대신 [오케스트레이션](ORCA_PROTECTED_0003)을 사용합니다."
+    },
+    "/docs/cli/reference/:heading:read:0": {
+      "sourceHash": "90868fa2b8134b98eed19793d09d25bd6acac0cc65d4602bc8c4218715b53305",
+      "translated": "### 읽기"
+    },
+    "/docs/cli/reference/:code:read:0": {
+      "sourceHash": "a659447c8c8327c25a419b6addc5fce30d27b5d5771b57a14db9b70dc9b2f8e9",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/reference/:paragraph:read:0": {
+      "sourceHash": "e5291e5393e666ea7d2f2439c5ba209ae38c03de0195ce486329db7fa3985672",
+      "translated": "`ORCA_PROTECTED_0001`은 댓글, 하위 항목, 첨부 파일, 관계 및 활동을 확장합니다. 섹션 플래그(`ORCA_PROTECTED_0002`, `ORCA_PROTECTED_0003`, `ORCA_PROTECTED_0004`, `ORCA_PROTECTED_0005`, `ORCA_PROTECTED_0006`)는 개별적으로 작동합니다."
+    },
+    "/docs/cli/reference/:heading:mcp-style-write:0": {
+      "sourceHash": "814611e6ef5400db4c7d58f206dd7816ca54384097e50067af5b6a0129f3fced",
+      "translated": "### MCP 형식 쓰기"
+    },
+    "/docs/cli/reference/:code:mcp-style-write:0": {
+      "sourceHash": "8e111d310c04e5648f506fd8595646c9008cbca13bb74d2b6aac21be5986b4f5",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/reference/:paragraph:mcp-style-write:0": {
+      "sourceHash": "1065317075d2286dd86199364257eb9b8d6d89674db4eea38ecb54d66dd8f8bb",
+      "translated": "`ORCA_PROTECTED_0001` 레이블은 전체 레이블 집합을 **대체**합니다(ORCA_PROTECTED_0002 MCP의 `ORCA_PROTECTED_0003` 의미 체계). 리터럴 `ORCA_PROTECTED_0004`는 담당자, 추정치, 기한, 프로젝트 또는 상위 항목을 지웁니다."
+    },
+    "/docs/cli/reference/:heading:field-helpers-still-valid:0": {
+      "sourceHash": "a0a294203ed168295b23b33929bd3b417548f777c2eb4e575b6944cb3e059d24",
+      "translated": "### 필드 도우미(계속 유효함)"
+    },
+    "/docs/cli/reference/:code:field-helpers-still-valid:0": {
+      "sourceHash": "91e4e4fda1f4091fe912b99b73313a315ea66b222d14958af49f3995d0700528",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/reference/:paragraph:field-helpers-still-valid:0": {
+      "sourceHash": "d59283829a9e397337f0797157aa79591c8408af6df001a0b87a608f85bf963a",
+      "translated": "버전이 일치하는 목록을 확인하려면 `ORCA_PROTECTED_0001` 또는 `ORCA_PROTECTED_0002`를 실행합니다. ORCA_PROTECTED_0004에 연결된 작업 트리 외부에서 스크립트가 실행될 수 있으면 명시적인 이슈 ID(예: `ORCA_PROTECTED_0003`)를 전달합니다."
     }
   }
 }

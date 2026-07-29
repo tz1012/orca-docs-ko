@@ -59,8 +59,8 @@
       "translated": "기본적으로 ORCA_PROTECTED_0001은 사용자가 입력한 작업공간 이름이나 연결된 ORCA_PROTECTED_0002 PR, ORCA_PROTECTED_0003 문제 또는 작업공간이 생성될 때 GitLab MR에서 새 작업 트리의 분기 이름을 파생합니다. 대신 명시적인 분기 이름을 설정하려면 `Create Worktree`(작업 트리 만들기) 대화 상자에서 `Advanced`(고급) 서랍을 확장하고 `Branch name`(브랜치 이름) 필드(자리 표시자 `ORCA_PROTECTED_0004`)에 입력하세요."
     },
     "/docs/model/worktrees/:paragraph:naming-the-branch:1": {
-      "sourceHash": "8635d609ae06fc7405aebf304fae203ad8362368daacc4c2173d47f090cd1ce5",
-      "translated": "분기 이름 필드는 입력된 작업 영역 이름이나 기본 분기에서 생성하는 경우에만 제공됩니다. 작업공간이 추적된 작업 항목에 연결되면 분기는 해당 항목에서 파생됩니다. 링크된 ORCA_PROTECTED_0001 PR은 제출 시 분기를 다시 해결하기도 합니다. 따라서 ORCA_PROTECTED_0002는 자동으로 무시되는 재정의를 피하기 위해 필드를 숨깁니다."
+      "sourceHash": "6ba036edbd3e1968f0d30c9f4db972d5a90c0f38ceff0bdd4b6193b3bdf3a665",
+      "translated": "**ORCA_PROTECTED_0001 이슈**에서 만들면 ORCA_PROTECTED_0004가 브랜치 이름을 제공하는 경우 ORCA_PROTECTED_0002는 이슈 제목을 슬러그로만 변환하지 않고 ORCA_PROTECTED_0003가 해당 이슈에 지정한 브랜치 이름을 재정의 값으로 사용합니다. 이는 ORCA_PROTECTED_0005가 UI에서 제안하는 이름과 같습니다."
     },
     "/docs/model/worktrees/:heading:sidebar-layout:0": {
       "sourceHash": "3e3dd8410ab7fdebcb1a10423107d99bd6dc9b21d41a8160790a5ab858e42274",
@@ -71,20 +71,20 @@
       "translated": "사이드바는 기본적으로 `project`(프로젝트)별로 작업 트리를 그룹화합니다. 최상위 행은 프로젝트(프로젝트 1개 = git repo 1개 또는 관련 클러스터)이며 현재 작업 중인 작업 트리로 확장됩니다. 헤더에는 자체 필터 입력(전역 검색과 별개)이 있으므로 사이드바를 떠나지 않고도 목록 범위를 좁힐 수 있습니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:1": {
-      "sourceHash": "dfe72ca58d0403dcfd1e926e5488797fe16a89c8374d925a6762c6da1b96a221",
-      "translated": "여러 Git 저장소가 포함된 상위 폴더를 추가하면 ORCA_PROTECTED_0001은 선택한 저장소를 별도로 가져오거나 하나의 프로젝트 그룹으로 그룹화할 수 있습니다."
+      "sourceHash": "eb2fd940a42feaa7336d9fa61b5341adb9fcddea7f17796bb4bf7eaaab01b585",
+      "translated": "사이드바 헤더의 필터 메뉴에서는 다음 항목을 숨길 수 있습니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:2": {
-      "sourceHash": "a1677fa4f263a2cb506fa38c0bbf991907bdc6ef4119e7995fd5c869617413a1",
-      "translated": "사이드바 상단에 있는 `Search`(검색) 버튼을 누르면 [Worktree Jump Palette](ORCA_PROTECTED_0001) (`ORCA_PROTECTED_0002`)가 열립니다. 탐색을 위해 키보드에 기대지 않는 사용자를 위한 동일한 표면, 클릭 기반입니다. 상태 표시줄에는 에이전트 활동이 인라인으로 표시됩니다. 읽지 않은 작업 트리는 배지가 붙지 않고 굵은 글씨로 표시됩니다."
+      "sourceHash": "6f589505dc8a976c149d15facdb740200d5bc12b5615b7c7f89c1fa647b9bcb3",
+      "translated": "활성 필터 수가 필터 컨트롤에 표시되며 **`Clear`(지우기)**는 켜져 있는 필터만 초기화합니다. 텍스트 검색과 [작업 트리 점프 팔레트](ORCA_PROTECTED_0001)(`ORCA_PROTECTED_0002`)에서는 검색어를 입력하면 이 필터로만 숨겨진 작업 공간도 계속 찾을 수 있습니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:3": {
-      "sourceHash": "b4f294c2c7154f23e22dabd5a154f3a7aa42576defc0c3032048115d3a510f90",
-      "translated": "작업 트리를 프로젝트 상단에 고정하여 장기 실행 작업을 계속 볼 수 있으며, 작업 트리를 마우스 오른쪽 버튼으로 클릭하면 보관/휴면/삭제 작업이 표시됩니다. 다중 선택에 작업 트리를 추가하려면 `ORCA_PROTECTED_0001`(ORCA_PROTECTED_0003의 `ORCA_PROTECTED_0002`)을 누른 채 클릭하고, 연속 범위를 선택하려면 `ORCA_PROTECTED_0004`를 길게 누릅니다. 선택한 작업 트리를 마우스 오른쪽 버튼으로 클릭하면 선택 항목의 모든 작업 트리에 작업이 적용됩니다. Repo 행 자체는 드래그로 재정렬할 수 있습니다."
+      "sourceHash": "dfe72ca58d0403dcfd1e926e5488797fe16a89c8374d925a6762c6da1b96a221",
+      "translated": "여러 Git 저장소가 들어 있는 상위 폴더를 추가하면 ORCA_PROTECTED_0001는 선택한 저장소를 각각 가져오거나 하나의 프로젝트 그룹 아래에 묶을 수 있습니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:4": {
-      "sourceHash": "a081940712c9350033f2cdcd9883ee40d693684015940f817be22237df1f4e84",
-      "translated": "인라인 이름을 바꾸려면 사이드바에서 작업 트리 제목을 두 번 클릭합니다. 카드의 다른 곳을 두 번 클릭해도 전체 편집 대화 상자가 열립니다."
+      "sourceHash": "a1677fa4f263a2cb506fa38c0bbf991907bdc6ef4119e7995fd5c869617413a1",
+      "translated": "사이드바 위쪽의 **`Search`(검색)** 버튼은 [작업 트리 점프 팔레트](ORCA_PROTECTED_0001)(`ORCA_PROTECTED_0002`)를 엽니다. 키보드 탐색을 주로 사용하지 않는 사용자가 클릭으로 열 수 있는 동일한 화면입니다. 상태 표시줄에는 에이전트 활동이 인라인으로 표시되며, 읽지 않은 작업 트리는 배지 대신 굵게 표시됩니다."
     },
     "/docs/model/worktrees/:heading:multi-repo-project-groups-folder-workspaces:0": {
       "sourceHash": "7663df7a86330bd081d81770e54fa457d8c06348fefae684d29b919b58b3e46d",
@@ -117,6 +117,74 @@
     "/docs/model/worktrees/:aside:using-plain-git:0": {
       "sourceHash": "bf834e6525771c025c139c165dafc5155b96ea59ac96a26c69501035017fd8d1",
       "translated": "CLI에서 `ORCA_PROTECTED_0001`을 실행하면 ORCA_PROTECTED_0002는 다음에 해당 저장소를 새로 고칠 때 자체 상태를 확인하고 정리합니다."
+    },
+    "/docs/model/worktrees/:heading:shared-directories-gitignored-files:0": {
+      "sourceHash": "92f896f0d4d4fd358a4e005b95a4468cd59412aaf65941ace24bc3371cdbe2d5",
+      "translated": "## 공유 디렉터리와 Git에서 무시하는 파일"
+    },
+    "/docs/model/worktrees/:paragraph:shared-directories-gitignored-files:0": {
+      "sourceHash": "536c97575b24ff4ec8ce842e215c4027a4771c3d07a649b16c7b1d38d2084167",
+      "translated": "새 작업 트리는 깨끗한 체크아웃입니다. Git에서 무시하는 경로에 있는 의존성, 캐시 및 로컬 비밀 값은 다시 만들기 전까지 존재하지 않습니다."
+    },
+    "/docs/model/worktrees/:paragraph:shared-directories-gitignored-files:1": {
+      "sourceHash": "1189c4c853c4e46f080af28e2e811ea92ec02626b368f9e4866b7e41f57b059a",
+      "translated": "ORCA_PROTECTED_0001는 다음 세 가지 상호 보완적인 방식으로 이 공백을 채웁니다."
+    },
+    "/docs/model/worktrees/:list:shared-directories-gitignored-files:0": {
+      "sourceHash": "b976abd9d25d712957a64211ab0f1f78f51c922756bf655a8b33bbcc117b3cdf",
+      "translated": "1.  **`Worktree Shared Paths`(작업 트리 공유 경로)**(저장소별, `Settings`(설정) → `Repository`(저장소)) — 기본 체크아웃의 경로를 각 새 작업 트리에 생성합니다. 가능한 경우 macOS에서는 APFS 복제 복사를 사용하고, 그 외에는 심볼릭 링크를 사용합니다.\n2.  **`ORCA_PROTECTED_0001`의 `ORCA_PROTECTED_0002`** — 같은 방식으로 공유할 **Git에서 무시하는 디렉터리**의 저장소 커밋 목록입니다(복사가 아니라 ORCA_PROTECTED_0003). `ORCA_PROTECTED_0004` 또는 `ORCA_PROTECTED_0005`처럼 크고 다시 빌드할 수 있는 트리에 사용합니다. 항목은 기본 체크아웃에 디렉터리로 존재하고 **동시에** Git에서 무시되어야 하며, 추적 중이거나 없는 경로는 건너뜁니다.\n3.  **저장소 루트의 `ORCA_PROTECTED_0006`** — 각 새 작업 트리에 심볼릭 링크가 아닌 **복사본으로 넣을 Git에서 무시하는 파일 또는 디렉터리** 목록이며, 각 작업 트리가 자체 복사본을 소유합니다. 일반적인 항목으로 `ORCA_PROTECTED_0007`, `ORCA_PROTECTED_0008` 아래의 로컬 구성이 있습니다. 빈 줄과 `ORCA_PROTECTED_0009` 주석을 허용합니다. 현재는 **리터럴** 경로만 지원하며 글로브와 부정 패턴은 경고와 함께 건너뜁니다. 추적 중이거나 없거나 Git에서 무시되지 않는 경로는 복사하지 않습니다."
+    },
+    "/docs/model/worktrees/:paragraph:shared-directories-gitignored-files:2": {
+      "sourceHash": "4e836b3a3e6bfee7600ec7d1f3602b0e3457dec5df0a91d90c57dd1f015408e5",
+      "translated": "`ORCA_PROTECTED_0001` 공유 디렉터리는 사용자별 `Worktree Shared Paths`(작업 트리 공유 경로) 목록에 **추가되며**, 이를 대체하지 않습니다. 이미 ORCA_PROTECTED_0002된 경로는 `ORCA_PROTECTED_0003`에서 다시 복사하지 않습니다."
+    },
+    "/docs/model/worktrees/:code:shared-directories-gitignored-files:0": {
+      "sourceHash": "c52eb959ca85359e62de5e9b57e71d53c637839c76bc5bd3e2f7696e7c606c5d",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/model/worktrees/:code:shared-directories-gitignored-files:1": {
+      "sourceHash": "0cdf6d911cc1f8933935b565f0a303036552dc79ffc089b96bd2d892bfc1aa38",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/model/worktrees/:heading:create-dialog-project-and-run-on:0": {
+      "sourceHash": "e24b9992b86bc55707f2fdced5383848c4b0762888b42942f59077f88c23dea2",
+      "translated": "## 만들기 대화 상자: 프로젝트와 실행 위치"
+    },
+    "/docs/model/worktrees/:paragraph:create-dialog-project-and-run-on:0": {
+      "sourceHash": "a4e7e76f793cdcb3d064e5452f497c7151276388bf297c2245e0661a6f6e3c48",
+      "translated": "`Create Workspace`(작업 공간 만들기) 대화 상자는 **`Project`(프로젝트)**와 **`Run on`(실행 위치)**에 자동 완성 콤보 상자를 사용합니다."
+    },
+    "/docs/model/worktrees/:list:create-dialog-project-and-run-on:0": {
+      "sourceHash": "8247db081c17154f037c48c0c9529a7b490ea1bcdcd37c47b72f648d544f9217",
+      "translated": "-   입력하여 필터링하고 Enter를 누르면 선택 대기 중인 행을 확정합니다.\n-   **`Project`(프로젝트)**에서는 **`Add a new project`(새 프로젝트 추가)**가 항상 아래쪽에 고정됩니다. 아직 프로젝트가 없는 설치 환경에서도 만들기 흐름이 막히지 않습니다.\n-   **`Run on`(실행 위치)**에는 준비된 호스트와 레시피뿐 아니라 해당 머신에 프로젝트 설정이 아직 필요한 호스트도 표시됩니다. 설정 필요 행에는 *`Project not set up on this host`(이 호스트에 프로젝트가 설정되지 않음)* 같은 세부 정보가 표시되며 준비되기 전까지 선택할 수 없습니다. 연결이 끊긴 SSH/원격 호스트는 실행 대상으로 선택하지 않고도 **`Connect`(연결)**를 제공할 수 있습니다. SSH 또는 Remote ORCA_PROTECTED_0001 Server 대상에서는 **`Add host`(호스트 추가)**가 고정되어 표시됩니다."
+    },
+    "/docs/model/worktrees/:paragraph:create-dialog-project-and-run-on:1": {
+      "sourceHash": "f20a249078c4b8039310d795d5cab606a21e86d5c90f02dffa8fd0ef048349cb",
+      "translated": "[ORCA_PROTECTED_0001 실행 방법](ORCA_PROTECTED_0002)을 참조합니다."
+    },
+    "/docs/model/worktrees/:heading:emoji-workspace-names:0": {
+      "sourceHash": "980730d288ec6624ebe2008184f1f8ade539a6e207a1ed346041351a417c4e20",
+      "translated": "## 이모지가 포함된 작업 공간 이름"
+    },
+    "/docs/model/worktrees/:paragraph:emoji-workspace-names:0": {
+      "sourceHash": "3912f38e9d7a1ff46767950ccafa98cfca152097883139b2cb73a2005ab257f0",
+      "translated": "작업 공간 이름 필드에 Slack 형식의 단축 코드(`ORCA_PROTECTED_0001`)를 입력하고 단축 코드 제안 팝오버에서 선택할 수 있습니다. 표시 이름에는 이모지가 유지되지만, ORCA_PROTECTED_0002가 Git 브랜치 이름을 만들 때는 알려진 이모지를 읽을 수 있는 단축 코드로 다시 씁니다(예: 🚀 → `ORCA_PROTECTED_0003`). 점프 팔레트 검색은 이 단축 코드에서 파생된 부분으로 이모지 이름의 작업 공간을 찾습니다."
+    },
+    "/docs/model/worktrees/:paragraph:naming-the-branch:2": {
+      "sourceHash": "8635d609ae06fc7405aebf304fae203ad8362368daacc4c2173d47f090cd1ce5",
+      "translated": "`Branch name`(브랜치 이름) 필드는 입력한 작업 공간 이름이나 기준 브랜치에서 만들 때만 제공됩니다. 작업 공간이 추적 중인 작업 항목에 연결되면 브랜치는 해당 항목에서 파생됩니다. 연결된 ORCA_PROTECTED_0001 PR은 제출 시 브랜치를 다시 확인하기도 하므로, ORCA_PROTECTED_0002는 조용히 무시되는 재정의를 방지하기 위해 필드를 숨깁니다."
+    },
+    "/docs/model/worktrees/:list:sidebar-layout:0": {
+      "sourceHash": "6eb2539ed1d0a11dadcee327ffc6eda4d9a06da5f9a1240b0e8ea21b53dc9faf",
+      "translated": "-   **`Sleeping`(절전 중)** 작업 공간\n-   **`Default branch`(기본 브랜치)** 작업 공간(기본 체크아웃 행)\n-   **`Automation-created`(자동화에서 생성됨)** 작업 공간\n-   **`CLI-created`(CLI에서 생성됨)** 작업 공간 — `ORCA_PROTECTED_0001`을 통해 생성됨(카드에 마우스를 올리면 **ORCA_PROTECTED_0002 CLI** 출처 세부 정보가 표시됨)\n-   **`Detached HEAD`(분리된 HEAD)** 작업 공간 — 브랜치가 아닌 커밋에 있는 체크아웃"
+    },
+    "/docs/model/worktrees/:paragraph:sidebar-layout:5": {
+      "sourceHash": "b4f294c2c7154f23e22dabd5a154f3a7aa42576defc0c3032048115d3a510f90",
+      "translated": "장기 작업을 계속 표시하려면 작업 트리를 프로젝트 맨 위에 고정할 수 있으며, 작업 트리를 마우스 오른쪽 버튼으로 클릭하면 보관/절전/삭제 작업이 표시됩니다. 클릭할 때 `ORCA_PROTECTED_0001`(ORCA_PROTECTED_0003에서는 `ORCA_PROTECTED_0002`)을 누르면 작업 트리를 다중 선택에 추가하고, `ORCA_PROTECTED_0004`를 누르면 연속 범위를 선택합니다. 선택된 작업 트리 중 하나를 마우스 오른쪽 버튼으로 클릭하면 선택한 모든 작업 트리에 작업이 적용됩니다. 저장소 행 자체는 드래그하여 순서를 바꿀 수 있습니다."
+    },
+    "/docs/model/worktrees/:paragraph:sidebar-layout:6": {
+      "sourceHash": "a081940712c9350033f2cdcd9883ee40d693684015940f817be22237df1f4e84",
+      "translated": "사이드바에서 작업 트리 제목을 두 번 클릭하면 인라인으로 이름을 바꿀 수 있습니다. 카드의 다른 곳을 두 번 클릭하면 이전처럼 전체 편집 대화 상자가 열립니다."
     }
   }
 }

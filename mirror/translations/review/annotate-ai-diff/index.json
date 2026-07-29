@@ -49,6 +49,10 @@
     "/docs/review/annotate-ai-diff/:list:reply-resolve-re-review:0": {
       "sourceHash": "b3ec21fd506c470cf3f5250d8218864e36115628565c1f5d4df2dc8777f0165f",
       "translated": "- 상담원이 수정한 후에도 댓글은 고정되어 있습니다. 이를 사용하여 수정 사항을 확인하세요.\n- 스레드를 축소하려면 `Resolve`(해결)을 클릭하세요.\n- `Send`(보내기)를 다시 누르면 해결되지 않은 댓글은 다음 일괄 처리에 포함됩니다."
+    },
+    "/docs/review/annotate-ai-diff/:paragraph:send-the-batch:1": {
+      "sourceHash": "a908f3a2932860b2ed41fdc4bff2b3a818661339b8ba45e186fd43b56cff3000",
+      "translated": "**`Send Review Notes to Agent`(에이전트에 검토 메모 보내기)**는 다른 키 조합과 충돌하지 않도록 기본적으로 키가 할당되어 있지 않습니다. [`Settings`(설정) → `Shortcuts`(바로 가기)](ORCA_PROTECTED_0001)에서 할당하면 편집기에 포커스가 있을 때도 키보드로 보내기 메뉴를 열 수 있습니다."
     }
   }
 }

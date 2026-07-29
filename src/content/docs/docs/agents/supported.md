@@ -1,7 +1,7 @@
 ---
 title: "지원되는 에이전트"
 sourceUrl: https://www.onorca.dev/docs/agents/supported
-checkedAt: "2026-07-28T07:12:33.480Z"
+checkedAt: "2026-07-29T01:03:00.276Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/quick-open/
 next: /orca-docs-ko/docs/agents/claude-code/
@@ -23,11 +23,11 @@ Orca은 새로운 실행에 대해 지원되는 각 CLI의 권한 우회 플래�
 
 한 에이전트에 대한 프롬프트만 복원하려면 설정에서 해당 에이전트의 기본 인수 또는 환경을 편집하세요. Orca은 비어 있지 않은 사용자 정의 값을 명시적 재정의로 처리하고 해당 에이전트를 향후 권한 모드 마이그레이션에서 제외합니다.
 
-| 에이전트 | 메모 | 문서 |
+| 에이전트 | 참고 | 문서 |
 | --- | --- | --- |
-| Claude Code | 심층 통합: 사용법, 핫스왑, 후크 | [Anthropic](https://docs.anthropic.com/claude/docs/claude-code) |
-| Claude Agent Teams | 기본적으로 비활성화됨 — 설정 → 에이전트에서 각 팀원의 기본 창을 사용하여 `orca claude-teams`를 통해 실행하도록 활성화 | [Anthropic](https://code.claude.com/docs/agent-teams) |
-| Codex | 심층 통합: 사용량, 핫스왑 | [OpenAI](https://github.com/openai/codex) |
+| Claude Code | 심층 통합: 사용량, 빠른 전환, 후크 | [Anthropic](https://docs.anthropic.com/claude/docs/claude-code) |
+| Claude Agent Teams | 기본적으로 비활성화됨 — `Settings`(설정) → `Agents`(에이전트)에서 활성화하면 `orca claude-teams`로 실행하며 각 팀원에게 네이티브 창을 제공합니다 | [Anthropic](https://code.claude.com/docs/agent-teams) |
+| Codex | 심층 통합: 사용량, 빠른 전환 | [OpenAI](https://github.com/openai/codex) |
 | Grok | 자동 설정 | [xAI](https://x.ai/cli) |
 | GitHub Copilot CLI | 자동 설정 | [GitHub](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli) |
 | OpenCode | 자동 설정, 상태 | [OpenCode](https://opencode.ai/docs/cli/) |
@@ -50,13 +50,14 @@ Orca은 새로운 실행에 대해 지원되는 각 CLI의 권한 우회 플래�
 | Continue | 자동 설정 | [Continue](https://docs.continue.dev/guides/cli) |
 | Cursor CLI | 심층 통합 | [Cursor](https://cursor.com/cli) |
 | Devin | 자동 설정 | [Devin](https://devin.ai/cli) |
-| Droid(Factory) | 자동 설정, 후크, 상태 | [Factory](https://docs.factory.ai/cli/getting-started/quickstart) |
+| Droid (Factory) | 자동 설정, 후크, 상태 | [Factory](https://docs.factory.ai/cli/getting-started/quickstart) |
 | Kimi | 자동 설정 | [Moonshot](https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html) |
 | Mistral Vibe | 자동 설정 | [Mistral](https://github.com/mistralai/mistral-vibe) |
-| MiniMax | 자동 설정, 사용량 추적, 속도 제한 추적 | [MiniMax](https://www.minimax.chat/) |
+| MiniMax | 자동 설정, 사용량 추적, 사용 한도 추적 | [MiniMax](https://www.minimax.chat/) |
 | Qwen Code | 설치된 `qwen` 실행 파일을 통한 자동 설정 | [Qwen](https://github.com/QwenLM/qwen-code) |
 | Rovo Dev | 자동 설정 | [Atlassian](https://support.atlassian.com/rovo/docs/install-and-run-rovo-dev-cli-on-your-device/) |
 | Hermes | 자동 설정 | [Nous](https://hermes-agent.nousresearch.com/docs/) |
 | OpenClaw | 자동 설정 | [OpenClaw](https://github.com/openclaw/openclaw) |
+| Trae | `traecli`(TRAE CN CLI)을 통한 자동 설정 | [Trae](https://www.trae.ai/) |
 
 이 목록에 없는 내용은 [사용자 지정 CLI 에이전트 추가](/orca-docs-ko/docs/agents/custom-cli/)를 참조하세요.
