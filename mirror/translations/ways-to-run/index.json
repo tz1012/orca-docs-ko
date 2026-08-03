@@ -23,8 +23,8 @@
       "translated": "## 한눈에 보기"
     },
     "/docs/ways-to-run/:table:at-a-glance:0": {
-      "sourceHash": "8b70498214ad7bb58931c83e782abf42b3520100b8cb3f98141422855501f357",
-      "translated": "| 모드 | 파일 및 에이전트 위치 | 시스템 소유자 | 적합한 용도 |\n| --- | --- | --- | --- |\n| **로컬** | 사용자의 데스크톱 | 사용자 | 일상적인 코딩, 빠른 반복 작업 |\n| **SSH 대상** | SSH로 연결하는 원격 호스트 | 사용자 또는 팀 | 개발 시스템, GPU 호스트, 상시 실행 VPS |\n| **원격 ORCA_PROTECTED_0001 서버** | ORCA_PROTECTED_0002 데스크톱 또는 `ORCA_PROTECTED_0003`을 실행하는 시스템 | 사용자 또는 팀 | 영구 공유 런타임, 모바일, 자동화 |\n| **작업 공간별 환경** | 작업 공간마다 생성되는 일회용 ORCA_PROTECTED_0004 | 사용자의 클라우드 계정(공급자 직접 준비) | 격리된 임시 에이전트 컴퓨팅 |"
+      "sourceHash": "25896f88d480869436f8cd6debbab04144f9c340b2a457bf19594dac1a6f6868",
+      "translated": "| 모드 | 파일 및 에이전트 위치 | 시스템 소유자 | 적합한 용도 |\n| --- | --- | --- | --- |\n| **로컬** | 사용자의 데스크톱 | 사용자 | 일상적인 코딩, 빠른 반복 작업 |\n| **SSH 대상** | SSH로 연결하는 원격 호스트 | 사용자 또는 팀 | 개발 시스템, GPU 호스트, 상시 실행 VPS |\n| **원격 ORCA_PROTECTED_0001 서버** | ORCA_PROTECTED_0002 데스크톱 또는 `ORCA_PROTECTED_0003`을 실행하는 시스템 | 사용자 또는 팀 | 영구 공유 런타임, 모바일, 자동화 |\n| **Cloud VM / 작업 공간별 환경** | 작업 공간마다 생성되는 일회용 ORCA_PROTECTED_0004 | 사용자의 클라우드 계정(공급자 직접 준비) | 격리된 임시 에이전트 컴퓨팅 |"
     },
     "/docs/ways-to-run/:paragraph:at-a-glance:0": {
       "sourceHash": "8dd59f437bba4e42d527ac3b0d21678d2a681bfec23bbdc4a63345a3b8189a94",
@@ -151,8 +151,8 @@
       "translated": "## 선택 방법"
     },
     "/docs/ways-to-run/:list:how-to-choose:0": {
-      "sourceHash": "ac15c7ea2b05cf3182b065d203eb8044719c3043c32fd84bdd3f720d5094c3a2",
-      "translated": "- 노트북 성능이 충분하고 에이전트 실행 시간이 짧다면 **로컬**을 사용합니다.\n- 이미 VPS나 개발 시스템이 있고 두 번째 ORCA_PROTECTED_0001 런타임을 설치하지 않은 채 그곳에서 에이전트를 실행하려면 **SSH**를 사용합니다.\n- 모바일, 브라우저 및 자동화에서 사용할 상시 실행 ORCA_PROTECTED_0003 런타임 하나가 필요하면 **원격 ORCA_PROTECTED_0002 서버**를 사용합니다.\n- 각 작업에 작업 트리와 함께 폐기되는 새로운 레시피 기반 샌드박스가 필요하면 **작업 공간별 환경**을 사용합니다."
+      "sourceHash": "d4886228efb4cfc1059bd07193af6c98799a733ece942399430d9a5fcbe80bc6",
+      "translated": "-   노트북 성능이 충분하고 에이전트 실행 시간이 짧다면 **로컬**을 사용합니다.\n-   이미 VPS나 개발 시스템이 있고 두 번째 ORCA_PROTECTED_0001 런타임을 설치하지 않은 채 그곳에서 에이전트를 실행하려면 **SSH**를 사용합니다.\n-   **원격 ORCA_PROTECTED_0002 서버**는 모바일, 브라우저 및 자동화에서 사용할 상시 실행 ORCA_PROTECTED_0003 런타임 하나가 필요할 때 사용합니다.\n-   각 작업에 작업 트리와 함께 폐기되는 새로운 레시피 기반 샌드박스가 필요하면 **Cloud VM / 작업 공간별 환경**을 사용합니다."
     },
     "/docs/ways-to-run/:paragraph:how-to-choose:0": {
       "sourceHash": "1f0047884f8004896143ffac0ca6e82b25627c7732b4f2ce26c0a9c90fb9a05c",
@@ -197,6 +197,46 @@
     "/docs/ways-to-run/:paragraph:3-remote-orca-servers:4": {
       "sourceHash": "ddb01fbeb518432a9cb14bfbb46858ee976de0412a3d6f7db6c1166dc562cadd",
       "translated": "자세한 내용은 [원격 ORCA_PROTECTED_0001 서버](ORCA_PROTECTED_0002)를 참조합니다."
+    },
+    "/docs/ways-to-run/:heading:4-cloud-vms-per-workspace-environments:0": {
+      "sourceHash": "68c15041f2869e6795b6493de1cbb85bca82486fbb180804597ee56bb6db46f8",
+      "translated": "## 4\\. Cloud VM(작업 공간별 환경)"
+    },
+    "/docs/ways-to-run/:paragraph:4-cloud-vms-per-workspace-environments:0": {
+      "sourceHash": "b472558f00d114adbd58f98971577dc5e75951ddee2fd46ad4f425d918fac127",
+      "translated": "각 작업 트리는 저장소에 체크인된 **레시피**(`ORCA_PROTECTED_0001`과 수명 주기 스크립트)를 사용해 클라우드 샌드박스, VM 또는 로컬 Docker 컨테이너 같은 자체 주문형 환경을 시작할 수 있습니다. 생성할 때 환경을 시작하고 ORCA_PROTECTED_0002 작업으로 종료합니다. ORCA_PROTECTED_0003은 얇은 래퍼일 뿐이며 공급자 계정, 이미지 및 요금 청구는 사용자가 계속 소유합니다."
+    },
+    "/docs/ways-to-run/:paragraph:4-cloud-vms-per-workspace-environments:1": {
+      "sourceHash": "178618c71cc047b9926d664488c635177b451654b65c6cb1fd3248fd1a6a3c24",
+      "translated": "제품 UI에서는 [**`Settings → Experimental`(설정 → 실험 기능)**](ORCA_PROTECTED_0001) 아래에 이 기능이 **`Cloud VM`(클라우드 VM)**으로 표시됩니다. 레시피는 계속 작업 공간별 환경을 생성합니다."
+    },
+    "/docs/ways-to-run/:paragraph:4-cloud-vms-per-workspace-environments:2": {
+      "sourceHash": "d1d834848206487b488dfe9f55cf2a8e43943030a3695f29882df73a284ae94d",
+      "translated": "현재 연결할 수 있는 공급자로는 Vercel Sandbox, Fly, Modal, 일반 SSH 호스트 및 로컬 Docker 등이 있습니다. 연결 방식은 **ORCA_PROTECTED_0001 서버**(레시피가 `ORCA_PROTECTED_0002`를 시작하고 페어링 URL을 반환) 또는 **SSH**(레시피가 ORCA_PROTECTED_0003이 연결할 세부 정보를 반환)입니다."
+    },
+    "/docs/ways-to-run/:figure:4-cloud-vms-per-workspace-environments:0": {
+      "sourceHash": "2eecde8f65071660925382515ed45111854175d65dad49b13a43c7e150958ca6",
+      "translated": "![`Settings → Experimental → Cloud VM`(설정 → 실험 기능 → 클라우드 VM) — 스킬을 활성화한 다음 에이전트가 저장소용 레시피를 설정하게 합니다.](ORCA_PROTECTED_0001)\n\n`Settings → Experimental → Cloud VM`(설정 → 실험 기능 → 클라우드 VM) — 스킬을 활성화한 다음 에이전트가 저장소용 레시피를 설정하게 합니다."
+    },
+    "/docs/ways-to-run/:paragraph:4-cloud-vms-per-workspace-environments:3": {
+      "sourceHash": "a979ec3eadc0ed12ae59f3b4195d6acc3cb383500c2d809e5248a5fb0b7e364d",
+      "translated": "**적합한 경우:** 작업별로 깔끔하게 격리된 환경, 일회용 컴퓨팅 또는 모든 에이전트가 시작할 때 사용하는 표준 환경이 필요한 경우입니다."
+    },
+    "/docs/ways-to-run/:paragraph:4-cloud-vms-per-workspace-environments:4": {
+      "sourceHash": "1382509de83c0eba9fd17ffa05c6c244bb950708aa07e10b121ba9b6556a2c3a",
+      "translated": "**설정 개요:**"
+    },
+    "/docs/ways-to-run/:list:4-cloud-vms-per-workspace-environments:0": {
+      "sourceHash": "98544fdcc9fc81f1799b06ce1f6a8cadbbe9a968b95786880d4ec5e5a192586f",
+      "translated": "1.  [`Settings → Experimental`(설정 → 실험 기능)](ORCA_PROTECTED_0001)에서 **`Cloud VM`(클라우드 VM)**을 활성화합니다. 이 창에는 간단한 **`Create a Cloud VM`(Cloud VM 생성)** 가이드와 ORCA_PROTECTED_0002 컨트롤이 있습니다.\n    \n2.  필요한 경우 Cloud VM / 작업 공간별 환경 스킬을 ORCA_PROTECTED_0003합니다.\n    \n3.  원하는 작업 공간에서 에이전트에게 다음과 같이 요청합니다.\n    \n    ORCA_PROTECTED_0004\n    ORCA_PROTECTED_0005\n    ORCA_PROTECTED_0006\n    \n4.  스킬이 사전 요구 사항 → 기본 스냅샷 → 에이전트 인증 → `ORCA_PROTECTED_0007` 레시피 → doctor 검증 순서로 안내합니다.\n    \n5.  **`Recipes`(레시피)** 아래에 레시피가 표시되면 작업 트리를 만들고 **`Run on`(실행 위치)**에서 해당 레시피를 선택합니다."
+    },
+    "/docs/ways-to-run/:paragraph:4-cloud-vms-per-workspace-environments:5": {
+      "sourceHash": "5ec6f30dd42ea1067f38346ae81d7f2e5e442753c0848596df6b7fcaba756ff8",
+      "translated": "`ORCA_PROTECTED_0001` 항목이 프로젝트의 **기본** `ORCA_PROTECTED_0002` 체크아웃에 있어야 작업 공간 생성 시 레시피가 표시됩니다. 기능 브랜치에만 있으면 표시되지 않습니다. 스크립트를 반복 개발하는 동안에는 어느 브랜치에서든 doctor와 실제 프로비저닝을 실행할 수 있습니다."
+    },
+    "/docs/ways-to-run/:aside:4-cloud-vms-per-workspace-environments:0": {
+      "sourceHash": "e3f4be944de75a72856aeea56d80e2c979c57a05720aeaa710da40812d7fee0d",
+      "translated": "클라우드 직접 준비 — ORCA_PROTECTED_0001 VPS가 아닙니다\n\nCloud VM은 ORCA_PROTECTED_0002이 호스팅하는 VPS를 제공하지 않습니다. 공급자를 직접 준비하고 해당 공급자에게 비용을 지불합니다. ORCA_PROTECTED_0003은 사용자의 ORCA_PROTECTED_0004 스크립트를 실행하고 스크립트가 출력하는 페어링 URL 또는 SSH 세부 정보로 연결합니다."
     }
   }
 }

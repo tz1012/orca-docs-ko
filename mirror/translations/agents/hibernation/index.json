@@ -27,8 +27,8 @@
       "translated": "ORCA_PROTECTED_0001은 다음 `all`(모두) 해당하는 경우에만 에이전트 터미널을 최대 절전 모드로 전환합니다."
     },
     "/docs/agents/hibernation/:list:what-gets-hibernated:0": {
-      "sourceHash": "942d3cd4934fc01da8fecc5342fe8f0001c66e6f33b374eddbcbe3695112855f",
-      "translated": "-   에이전트가 **완료** 상태입니다. 즉, 마지막 턴을 마쳤으며 입력을 기다리고 있지 않습니다.\n-   터미널이 활성 작업 트리 또는 현재 포그라운드 터미널을 렌더링하는 작업 트리에 있지 않습니다.\n-   에이전트가 완료된 후 키 입력을 받지 않았습니다.\n-   에이전트가 [재개 가능한 세션](ORCA_PROTECTED_0001)을 지원하는 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, ORCA_PROTECTED_0004, ORCA_PROTECTED_0005, ORCA_PROTECTED_0006, ORCA_PROTECTED_0007, MiMo Code, ORCA_PROTECTED_0008, ORCA_PROTECTED_0009, ORCA_PROTECTED_0010 또는 ORCA_PROTECTED_0011 중 하나입니다.\n-   구성된 유휴 시간(기본값 30분) 이상 유휴 상태였습니다.\n-   현재 터미널을 제어하는 모바일 세션이 없습니다."
+      "sourceHash": "07c31b4310ae5729f63121ee03cef45f007b45539ada5fad5f0285e05905843d",
+      "translated": "-   에이전트가 **`done`(완료)** 상태입니다. 즉, 마지막 턴을 마쳤고 입력을 기다리고 있지 않습니다.\n-   터미널이 활성 작업 트리나 현재 포그라운드 터미널을 렌더링하는 작업 트리에 속하지 않습니다.\n-   에이전트가 완료된 뒤 키 입력을 받지 않았습니다.\n-   에이전트가 [재개 가능한 세션](ORCA_PROTECTED_0001)을 지원하는 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, ORCA_PROTECTED_0004, ORCA_PROTECTED_0005, ORCA_PROTECTED_0006, ORCA_PROTECTED_0007, MiMo Code, ORCA_PROTECTED_0008, ORCA_PROTECTED_0009, ORCA_PROTECTED_0010 또는 ORCA_PROTECTED_0011 중 하나입니다.\n-   구성된 유휴 시간(기본값 30분) 이상 유휴 상태였습니다.\n-   현재 터미널을 제어하는 모바일 세션이 없습니다.\n-   아직 확정되지 않은 [오케스트레이션](ORCA_PROTECTED_0012) Dispatch(`ORCA_PROTECTED_0013`, `ORCA_PROTECTED_0014` 또는 알 수 없음)가 없습니다. 런타임에서 `ORCA_PROTECTED_0015`, `ORCA_PROTECTED_0016` 또는 `ORCA_PROTECTED_0017` 상태를 확인하면 다시 절전할 수 있습니다.\n-   창에 활성 하위 에이전트/팀원 명단이 남아 있지 않습니다. 하위 에이전트가 계속 연결되어 있으면 공급자의 \"완료\" 상태만으로는 충분하지 않습니다."
     },
     "/docs/agents/hibernation/:paragraph:what-gets-hibernated:1": {
       "sourceHash": "2abbfb203adc9937e87779c179ced0b2acb9d46b72bc08ca23ed4aa37f5b59cc",
@@ -89,6 +89,10 @@
     "/docs/agents/hibernation/:list:next-steps:0": {
       "sourceHash": "eaa93bf9eb231f19041fab81098e86aa4f05d25c8abedba5289c4d66aaf1784b",
       "translated": "- [에이전트 세션 기록](ORCA_PROTECTED_0001) — ORCA_PROTECTED_0002가 최대 절전 모드로 전환되지 않은 세션을 포함하여 이전 세션을 수동으로 재개합니다.\n- [ORCA_PROTECTED_0003 계정 핫스왑](ORCA_PROTECTED_0004) — 최대 절전 모드와 함께 작동하는 세션을 다시 시작하지 않고 활성 ORCA_PROTECTED_0005 로그인을 교환합니다."
+    },
+    "/docs/agents/hibernation/:paragraph:what-gets-hibernated:2": {
+      "sourceHash": "80b6ac06bdf9397067cf540a4b708afacd73779dd82426acd4865d286cb575ad",
+      "translated": "사이드바에서 작업 트리를 수동으로 절전할 수도 있습니다. 중첩된 하위 작업 트리가 있으면 **`Sleep with Descendants`(하위 항목과 함께 절전)**를 사용할 수 있습니다. [작업 트리](ORCA_PROTECTED_0001)를 참조합니다."
     }
   }
 }

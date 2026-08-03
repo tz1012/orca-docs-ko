@@ -1,7 +1,7 @@
 ---
 title: "원격 Orca 서버"
 sourceUrl: https://www.onorca.dev/docs/remote-servers
-checkedAt: "2026-07-29T01:03:00.276Z"
+checkedAt: "2026-08-03T07:35:41.401Z"
 editUrl: false
 prev: /orca-docs-ko/docs/ssh/
 next: /orca-docs-ko/docs/cli/overview/
@@ -35,6 +35,21 @@ Server computer · Orca server
 ```
 
 **서버 컴퓨터**에 Codex, Claude Code, OpenCode, `git` 및 사용할 공급자 CLI를 설치하고 인증합니다. 노트북의 로그인 정보가 서버로 자동 이전되지는 않습니다.
+
+헤드리스 `orca serve` 호스트에서는 서버 셸에서 관리형 Claude/Codex 계정을 등록합니다. 원격 클라이언트에서는 **`Add account`(계정 추가)**가 비활성화됩니다.
+
+```
+orca account add --agent claude
+orca account add --agent codex
+orca account list
+```
+
+`Settings`(설정) UI 없이 에이전트 스킬을 설치하거나 새로 고칩니다.
+
+```
+orca skills install --skill orca-cli --skill orchestration
+orca skills update --all
+```
 
 ## 권장 방식: 데스크톱 앱 + Tailscale
 

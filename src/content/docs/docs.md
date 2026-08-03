@@ -1,7 +1,7 @@
 ---
 title: "Orca이란 무엇입니까?"
 sourceUrl: https://www.onorca.dev/docs
-checkedAt: "2026-07-29T01:03:00.276Z"
+checkedAt: "2026-08-03T07:35:41.401Z"
 editUrl: false
 prev: false
 next: /orca-docs-ko/docs/install/
@@ -32,9 +32,9 @@ Orca은 이미 생활용 코드를 작성하고 AI를 대체 수단이 아닌 �
 
 ## Orca이 아닌 것
 
-- **모델이 아닙니다.** Orca은 이미 사용 중인 에이전트를 실행합니다. 기존 Claude, Codex 또는 OpenCode 구독을 그대로 사용합니다.
-- **git을 대체하지 않습니다.** 모든 작업 트리는 실제 git 작업 트리입니다. 언제든 해당 디렉터리로 `cd`한 뒤 일반 git을 사용할 수 있습니다.
-- **호스팅 VPS 제품이 아닙니다.** Orca은 기본적으로 데스크톱에서 실행됩니다. 원격 컴퓨팅에는 사용자가 제어하는 시스템과 클라우드 계정을 사용합니다. [SSH 대상](/orca-docs-ko/docs/ssh/), [자체 호스팅 Orca 서버](/orca-docs-ko/docs/remote-servers/) 또는 [작업 공간별 환경](/orca-docs-ko/docs/ways-to-run/#4-per-workspace-environments-ephemeral-vms)을 사용할 수 있습니다.
+-   **모델이 아닙니다.** Orca은 이미 사용 중인 에이전트를 실행합니다. Claude, Codex 또는 OpenCode 구독은 사용자가 준비합니다.
+-   **git을 대체하지 않습니다.** 모든 작업 트리는 실제 git 작업 트리입니다. 언제든 해당 디렉터리로 `cd`한 뒤 일반 git을 사용할 수 있습니다.
+-   **호스팅형 VPS 제품이 아닙니다.** Orca은 기본적으로 데스크톱에서 실행됩니다. 원격 컴퓨팅에는 사용자가 제어하는 시스템과 클라우드 계정, 즉 [SSH 대상](/orca-docs-ko/docs/ssh/), [자체 호스팅 Orca 서버](/orca-docs-ko/docs/remote-servers/) 또는 [Cloud VM / 작업 공간별 환경](/orca-docs-ko/docs/ways-to-run/#4-cloud-vms-per-workspace-environments)을 사용합니다.
 
 다음 단계
 

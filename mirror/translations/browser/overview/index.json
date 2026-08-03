@@ -79,8 +79,16 @@
       "translated": "[`Settings`(설정) → `Browser`(브라우저) → `Link Routing`(링크 라우팅)](ORCA_PROTECTED_0001)에서 터미널, Markdown 및 편집기의 http(s) 링크를 ORCA_PROTECTED_0002의 작업 트리별 브라우저로 열지 시스템 브라우저로 열지 선택합니다."
     },
     "/docs/browser/overview/:paragraph:link-routing:1": {
-      "sourceHash": "ba7f0e66903a0e0546c71e69aaa9ca4882c6472132678527168170a646d4dd71",
-      "translated": "링크가 ORCA_PROTECTED_0001에서 열리도록 설정한 경우 플랫폼 보조 키와 Shift를 함께 눌러 시스템 브라우저로 강제로 열 수 있습니다. macOS에서는 `ORCA_PROTECTED_0002`, Windows/Linux에서는 `ORCA_PROTECTED_0003`을 사용합니다."
+      "sourceHash": "5b2217f51c272e1f8ea3137ecf89231b5cc86c0eeb1e36934276bd73c07679bf",
+      "translated": "중첩된 **`Hold Shift…`(Shift 키 누르기…)** 토글은 플랫폼 수정 키(macOS에서는 `ORCA_PROTECTED_0001`, Windows/Linux에서는 `ORCA_PROTECTED_0002`)를 사용한 한 번의 클릭에 대해 기본 동작을 반대로 전환합니다."
+    },
+    "/docs/browser/overview/:list:link-routing:0": {
+      "sourceHash": "8a1dd027d129de96ee690ea7baebc760b3ada8f36c90e765158e578cf2dc67a1",
+      "translated": "-   링크가 **ORCA_PROTECTED_0001**에서 열리도록 설정된 경우 수정 키를 사용하면 해당 링크 하나를 시스템 브라우저로 보냅니다.\n-   링크가 **시스템 브라우저**에서 열리도록 설정된 경우 토글을 켜면 수정 키를 사용한 링크 하나가 ORCA_PROTECTED_0002의 내장 브라우저에서 대신 열립니다. 일반 클릭은 계속 시스템 브라우저에서 열립니다."
+    },
+    "/docs/browser/overview/:paragraph:link-routing:2": {
+      "sourceHash": "3b8f0cfb7f996fd53c821cd33ab51ef8c5293d21f3b34c190f5b90ae7fb4a0f2",
+      "translated": "ORCA_PROTECTED_0001 소스는 수정 키를 사용해도 ORCA_PROTECTED_0002 브라우저 내부에서 열리지 않습니다."
     }
   }
 }

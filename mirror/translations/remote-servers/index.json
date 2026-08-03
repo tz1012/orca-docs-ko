@@ -593,6 +593,22 @@
     "/docs/remote-servers/:paragraph:orca-serve-advertises-the-wrong-address:1": {
       "sourceHash": "20281078df8d4091538ab715db3eaa0a194ab1fc0fc8444ec9bbcaeb0dd64fe4",
       "translated": "원격 클라이언트에는 와일드카드 주소나 `ORCA_PROTECTED_0001`을 사용하지 않습니다."
+    },
+    "/docs/remote-servers/:paragraph:what-runs-where:1": {
+      "sourceHash": "b8fa50dd3c755093bdc0a913a3b09edfa64eaeb8ac2011f12f3743b0d37485ad",
+      "translated": "헤드리스 `ORCA_PROTECTED_0001` 호스트에서는 서버 셸에서 관리형 ORCA_PROTECTED_0002 계정을 등록합니다. 원격 클라이언트에서는 **`Add account`(계정 추가)**가 비활성화됩니다."
+    },
+    "/docs/remote-servers/:code:what-runs-where:1": {
+      "sourceHash": "f57afc4d7ea447927ea9d75f6d9597a751ae42f4936efbaf2a44ec535f951adc",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/remote-servers/:paragraph:what-runs-where:2": {
+      "sourceHash": "8429a5951d15112d93a778a541163fe4acc9ed9e3ea935ab392a00e121ade392",
+      "translated": "`Settings`(설정) UI 없이 에이전트 스킬을 설치하거나 새로 고칩니다."
+    },
+    "/docs/remote-servers/:code:what-runs-where:2": {
+      "sourceHash": "f79ef3d96a645cf80daf13ea159f39238ff5c9160c9fa4158b3893755a1cfa59",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
     }
   }
 }

@@ -1,7 +1,7 @@
 ---
 title: "문제 해결 및 FAQ"
 sourceUrl: https://www.onorca.dev/docs/troubleshooting
-checkedAt: "2026-07-29T01:03:00.276Z"
+checkedAt: "2026-08-03T07:35:41.401Z"
 editUrl: false
 prev: /orca-docs-ko/docs/telemetry/
 next: /orca-docs-ko/docs/github-errors/
@@ -79,5 +79,6 @@ gh api rate_limit --jq '.resources.core'
 
 ## 문제 보고
 
-- [GitHub 문제](https://github.com/stablyai/orca/issues) — 버그 및 기능 요청.
-- [Discord](https://discord.gg/fzjDKHxv8Q) — 실시간 도움을 드립니다.
+-   앱 내 **`Help → Send Feedback`(도움말 → 피드백 보내기)** — 대화 상자에 스크린샷을 붙여 넣거나 끌어다 놓고, 이미지 파일을 선택할 수도 있습니다. 제출하기 전에 썸네일이 표시됩니다. 버그를 재현하기 어려우면 [로그](/orca-docs-ko/docs/troubleshooting/#logs)를 첨부합니다.
+-   [GitHub Issues](https://github.com/stablyai/orca/issues) — 버그 및 기능 요청을 등록합니다.
+-   [Discord](https://discord.gg/fzjDKHxv8Q) — 실시간 도움을 받습니다.

@@ -1,7 +1,7 @@
 ---
 title: "에이전트 최대 절전 모드"
 sourceUrl: https://www.onorca.dev/docs/agents/hibernation
-checkedAt: "2026-07-29T01:03:00.276Z"
+checkedAt: "2026-08-03T07:35:41.401Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/session-history/
 next: /orca-docs-ko/docs/agents/usage-tracking/
@@ -23,14 +23,18 @@ Orca이 유휴 백그라운드 에이전트 터미널을 일시 중지하고 작
 
 Orca은 다음 `all`(모두) 해당하는 경우에만 에이전트 터미널을 최대 절전 모드로 전환합니다.
 
--   에이전트가 **완료** 상태입니다. 즉, 마지막 턴을 마쳤으며 입력을 기다리고 있지 않습니다.
--   터미널이 활성 작업 트리 또는 현재 포그라운드 터미널을 렌더링하는 작업 트리에 있지 않습니다.
--   에이전트가 완료된 후 키 입력을 받지 않았습니다.
+-   에이전트가 **`done`(완료)** 상태입니다. 즉, 마지막 턴을 마쳤고 입력을 기다리고 있지 않습니다.
+-   터미널이 활성 작업 트리나 현재 포그라운드 터미널을 렌더링하는 작업 트리에 속하지 않습니다.
+-   에이전트가 완료된 뒤 키 입력을 받지 않았습니다.
 -   에이전트가 [재개 가능한 세션](/orca-docs-ko/docs/agents/session-history/)을 지원하는 Claude, Codex, Gemini, Antigravity, OpenCode, Pi, MiMo Code, Droid, Grok, Devin 또는 OMP 중 하나입니다.
 -   구성된 유휴 시간(기본값 30분) 이상 유휴 상태였습니다.
 -   현재 터미널을 제어하는 모바일 세션이 없습니다.
+-   아직 확정되지 않은 [오케스트레이션](/orca-docs-ko/docs/cli/orchestration/) Dispatch(`pending`, `dispatched` 또는 알 수 없음)가 없습니다. 런타임에서 `completed`, `failed` 또는 `circuit_broken` 상태를 확인하면 다시 절전할 수 있습니다.
+-   창에 활성 하위 에이전트/팀원 명단이 남아 있지 않습니다. 하위 에이전트가 계속 연결되어 있으면 공급자의 "완료" 상태만으로는 충분하지 않습니다.
 
 검사에 실패한 터미널은 계속 실행됩니다. 작업 트리에 에이전트 창이 여러 개 있는 경우 하나의 단위로 함께 최대 절전 모드로 전환되므로 부분적으로 일시 중지된 작업 트리는 배송되지 않습니다.
+
+사이드바에서 작업 트리를 수동으로 절전할 수도 있습니다. 중첩된 하위 작업 트리가 있으면 **`Sleep with Descendants`(하위 항목과 함께 절전)**를 사용할 수 있습니다. [작업 트리](/orca-docs-ko/docs/model/worktrees/)를 참조합니다.
 
 ## 유휴 창 조정
 

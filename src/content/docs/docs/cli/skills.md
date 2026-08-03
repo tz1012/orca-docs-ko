@@ -1,7 +1,7 @@
 ---
 title: "Orca 기술 레지스트리 및 MCP"
 sourceUrl: https://www.onorca.dev/docs/cli/skills
-checkedAt: "2026-07-29T01:03:00.276Z"
+checkedAt: "2026-08-03T07:35:41.401Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/worktree-checkpoints/
 next: /orca-docs-ko/docs/mobile/
@@ -50,17 +50,34 @@ orca skills get orca-linear --json
 
 Orca에 전역 설치 버전보다 최신 스킬 패키지가 포함되어 있으면 앱에서 다음 작업을 수행할 수 있습니다.
 
--   **`update available`(업데이트 가능)** 알림을 표시합니다.
--   앱 내 대화 상자에서 **`npx skills update <names> --global`**을 실행합니다(터미널 불필요).
--   설치된 스킬의 **`Settings`(설정) → `Agents`(에이전트)**에 최신 상태를 표시합니다(전역 설치 경로).
+-   **`Update available`(업데이트 사용 가능)** 알림을 표시합니다. 업데이터가 안전하게 다시 쓸 수 없는 위치의 복사본이 오래된 경우 **`Needs attention`(확인 필요)**도 표시합니다.
+-   **`Update skills`(스킬 업데이트)**를 열어 설치 위치와 건너뛴 이유를 확인한 다음, **`npx --yes skills update <names> --global -y`**을 헤드리스로 실행합니다. 내장 터미널은 사용하지 않습니다.
+-   실행은 **백그라운드**에서 계속됩니다. 대화 상자를 닫아도 취소되지 않습니다. 상태 표시줄 영역에는 진행 상태가 표시됩니다. 실행 중에는 스피너, 성공 직후에는 잠시 확인 표시, 조치 전까지는 지속적인 실패 상태가 표시됩니다. 이 영역을 클릭하면 대화 상자가 다시 열립니다.
+-   설치된 스킬의 최신 상태를 **`Settings → Agents`(설정 → 에이전트)**에 표시합니다. 스킬 행을 검토해야 하는 경우 **`Details`(세부 정보)**도 표시됩니다.
 
-수동으로 실행하는 동등한 명령은 다음과 같습니다.
+수동으로 실행하는 동등한 명령은 다음과 같습니다. 데스크톱 `Settings`(설정)에도 동일한 `npx` 형식이 표시됩니다.
 
 ```
 npx skills update orca-cli orchestration computer-use --global
 ```
 
-Orca에서 앱 내 업데이트 기능을 제공하면 앱에서 검색한 동일한 전역 설치 위치를 다시 쓸 수 있도록 해당 기능을 우선 사용합니다.
+`Settings`(설정) UI가 없는 헤드리스 호스트(SSH, 컨테이너, CI, `orca serve`)에서는 로컬 CLI 래퍼를 사용합니다. 이 래퍼는 동일한 `npx` 명령을 확인하고 비대화형 플래그를 추가하며, 실행 중인 Orca 런타임이 **필요하지 않습니다**.
+
+```
+orca skills install                                      # list installable names
+orca skills install --skill orca-cli --skill orchestration
+orca skills install --skill orca-cli --agent claude-code,codex
+orca skills install --all --dry-run
+orca skills update --all
+orca skills update --skill orca-cli --dry-run
+```
+
+-   기본 범위는 **전역**(`--global`)입니다. 현재 프로젝트에만 적용하려면 `--local`를 전달합니다.
+-   `install`은 Orca이 호스트에서 감지한 에이전트와 공유 `.agents/skills` 디렉터리를 대상으로 합니다. 대상 에이전트를 지정하려면 `--agent <name>[,<name>…]` 또는 `--agent universal`을 사용합니다. 감지된 에이전트가 없으면 `--agent`가 필요합니다.
+-   `update`는 이미 설치된 스킬만 새로 고칩니다.
+-   `--dry-run`은 확인된 명령을 출력합니다. `--json`은 목록 표시 또는 `--dry-run`와 함께 사용할 때만 유효합니다.
+
+Orca이 앱 내 업데이터를 제공하면 앱에서 검사한 동일한 전역 설치 위치가 다시 작성되도록 이 업데이터를 사용하는 것이 좋습니다. **`Skipped`(건너뜀)**로 표시된 행에는 해당 스킬을 자동으로 업데이트할 수 없는 이유(예: 소스 등록 누락)가 설명되어 있습니다. 설치 위치를 수정한 뒤 다시 확인합니다.
 
 ## orca-cli
 
@@ -116,7 +133,11 @@ adb로 연결된 Android AVDs/devices에서 list/boot, tap/swipe/type, 하드웨
 npx skills add https://github.com/stablyai/orca --skill orca-per-workspace-env --global
 ```
 
-`orca.yaml`에서 작업 공간별 환경 레시피를 설정하거나 디버깅할 때 사용합니다. [Orca 실행 방법](/orca-docs-ko/docs/ways-to-run/#4-per-workspace-environments-ephemeral-vms)을 참조합니다.
+`orca.yaml`에서 작업 공간별 환경 레시피를 설정하거나 디버그할 때 사용합니다. [Orca 실행 방식](/orca-docs-ko/docs/ways-to-run/#4-cloud-vms-per-workspace-environments)을 참조합니다.
+
+## 검색 소스
+
+Orca의 스킬 UI는 Claude, Codex, Agent Skills 및 **OMP**(`~/.omp/agent/skills`)의 설치된 스킬 홈을 검사하므로 해당 위치에 배치된 스킬은 수동 심볼릭 링크 없이 표시됩니다.
 
 ## 나만의 스킬 추가
 

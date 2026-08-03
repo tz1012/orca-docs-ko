@@ -1,7 +1,7 @@
 ---
 title: "Orca 실행 방식"
 sourceUrl: https://www.onorca.dev/docs/ways-to-run
-checkedAt: "2026-07-29T01:03:00.276Z"
+checkedAt: "2026-08-03T07:35:41.401Z"
 editUrl: false
 prev: /orca-docs-ko/docs/terminal/
 next: /orca-docs-ko/docs/ssh/
@@ -24,7 +24,7 @@ Orca은 노트북에만 제한되지 않습니다. 모든 작업 트리는 현�
 | **로컬** | 사용자의 데스크톱 | 사용자 | 일상적인 코딩, 빠른 반복 작업 |
 | **SSH 대상** | SSH로 연결하는 원격 호스트 | 사용자 또는 팀 | 개발 시스템, GPU 호스트, 상시 실행 VPS |
 | **원격 Orca 서버** | Orca 데스크톱 또는 `orca serve`을 실행하는 시스템 | 사용자 또는 팀 | 영구 공유 런타임, 모바일, 자동화 |
-| **작업 공간별 환경** | 작업 공간마다 생성되는 일회용 VM/sandbox | 사용자의 클라우드 계정(공급자 직접 준비) | 격리된 임시 에이전트 컴퓨팅 |
+| **Cloud VM / 작업 공간별 환경** | 작업 공간마다 생성되는 일회용 VM/sandbox | 사용자의 클라우드 계정(공급자 직접 준비) | 격리된 임시 에이전트 컴퓨팅 |
 
 Orca은 관리형 VPS 호스팅을 **판매하지 않습니다**. 원격 모드는 항상 사용자가 제어하는 시스템과 클라우드 계정을 사용합니다.
 
@@ -85,46 +85,48 @@ orca serve --pairing-address <reachable-tailscale-ip-or-hostname>
 | 다중 클라이언트 | 노트북 한 대가 호스트를 제어합니다. | 노트북, 웹, 모바일 및 자동화가 동일한 런타임을 공유할 수 있습니다. |
 | 일반적인 설정 | SSH 구성을 가져오고 **`Run on`(실행 위치)**을 선택합니다. | 서버 앱을 공유하거나 `orca serve`을 실행한 다음 URL로 페어링합니다. |
 
-## 4\. 작업 공간별 환경(임시 VM)
+## 4\. Cloud VM(작업 공간별 환경)
 
-각 작업 트리는 저장소에 체크인된 **레시피**(`orca.yaml`과 수명 주기 스크립트)를 사용해 클라우드 샌드박스, VM 또는 로컬 Docker 컨테이너 같은 자체 주문형 환경을 시작할 수 있습니다. 생성할 때 환경을 시작하고 suspend/resume/destroy 작업으로 종료합니다. Orca은 얇은 래퍼일 뿐이며, 공급자 계정, 이미지 및 요금 청구는 사용자가 계속 소유합니다.
+각 작업 트리는 저장소에 체크인된 **레시피**(`orca.yaml`과 수명 주기 스크립트)를 사용해 클라우드 샌드박스, VM 또는 로컬 Docker 컨테이너 같은 자체 주문형 환경을 시작할 수 있습니다. 생성할 때 환경을 시작하고 suspend/resume/destroy 작업으로 종료합니다. Orca은 얇은 래퍼일 뿐이며 공급자 계정, 이미지 및 요금 청구는 사용자가 계속 소유합니다.
+
+제품 UI에서는 [**`Settings → Experimental`(설정 → 실험 기능)**](/orca-docs-ko/docs/settings/) 아래에 이 기능이 **`Cloud VM`(클라우드 VM)**으로 표시됩니다. 레시피는 계속 작업 공간별 환경을 생성합니다.
 
 현재 연결할 수 있는 공급자로는 Vercel Sandbox, Fly, Modal, 일반 SSH 호스트 및 로컬 Docker 등이 있습니다. 연결 방식은 **Orca 서버**(레시피가 `orca serve`를 시작하고 페어링 URL을 반환) 또는 **SSH**(레시피가 Orca이 연결할 세부 정보를 반환)입니다.
 
-![`Settings → Experimental → Per-Workspace Environments`(설정 → 실험 기능 → 작업 공간별 환경) — 스킬을 활성화한 다음 에이전트가 저장소용 레시피를 설정하게 합니다.](/orca-docs-ko/assets/mirror/61bcfdee2072d9b58c7235717e9f8ac55dd41cef98ffa9fb94bcfcda3f3801ca.png)
+![`Settings → Experimental → Cloud VM`(설정 → 실험 기능 → 클라우드 VM) — 스킬을 활성화한 다음 에이전트가 저장소용 레시피를 설정하게 합니다.](/orca-docs-ko/assets/mirror/61bcfdee2072d9b58c7235717e9f8ac55dd41cef98ffa9fb94bcfcda3f3801ca.png)
 
-`Settings → Experimental → Per-Workspace Environments`(설정 → 실험 기능 → 작업 공간별 환경) — 스킬을 활성화한 다음 에이전트가 저장소용 레시피를 설정하게 합니다.
+`Settings → Experimental → Cloud VM`(설정 → 실험 기능 → 클라우드 VM) — 스킬을 활성화한 다음 에이전트가 저장소용 레시피를 설정하게 합니다.
 
 **적합한 경우:** 작업별로 깔끔하게 격리된 환경, 일회용 컴퓨팅 또는 모든 에이전트가 시작할 때 사용하는 표준 환경이 필요한 경우입니다.
 
 **설정 개요:**
 
-1. [`Settings → Experimental`(설정 → 실험 기능)](/orca-docs-ko/docs/settings/)에서 **`Per-Workspace Environments`(작업 공간별 환경)**를 활성화합니다.
+1.  [`Settings → Experimental`(설정 → 실험 기능)](/orca-docs-ko/docs/settings/)에서 **`Cloud VM`(클라우드 VM)**을 활성화합니다. 이 창에는 간단한 **`Create a Cloud VM`(Cloud VM 생성)** 가이드와 recipe/runtime 컨트롤이 있습니다.
     
-2. 필요한 경우 **`Per-Workspace Environments`(작업 공간별 환경)** 스킬을 Install/update합니다.
+2.  필요한 경우 Cloud VM / 작업 공간별 환경 스킬을 Install/update합니다.
     
-3. 원하는 작업 공간에서 에이전트에게 다음과 같이 요청합니다.
+3.  원하는 작업 공간에서 에이전트에게 다음과 같이 요청합니다.
     
     ```
     Use the orca-per-workspace-env skill to set up a per-workspace environment for this repo.
     ```
     
-4. 스킬이 사전 요구 사항 → 기본 스냅샷 → 에이전트 인증 → `orca.yaml` 레시피 → doctor 검증 순서로 안내합니다.
+4.  스킬이 사전 요구 사항 → 기본 스냅샷 → 에이전트 인증 → `orca.yaml` 레시피 → doctor 검증 순서로 안내합니다.
     
-5. **`Recipes`(레시피)** 아래에 레시피가 표시되면 작업 트리를 만들고 **`Run on`(실행 위치)**에서 해당 레시피를 선택합니다.
+5.  **`Recipes`(레시피)** 아래에 레시피가 표시되면 작업 트리를 만들고 **`Run on`(실행 위치)**에서 해당 레시피를 선택합니다.
 
-프로젝트의 `orca.yaml` **기본** 체크아웃에 `environmentRecipes` 항목이 있어야 작업 공간 생성 시 레시피가 표시됩니다. 기능 브랜치에만 있으면 표시되지 않습니다. 스크립트를 반복 개발하는 동안에는 어느 브랜치에서든 doctor와 실제 프로비저닝을 실행할 수 있습니다.
+`environmentRecipes` 항목이 프로젝트의 **기본** `orca.yaml` 체크아웃에 있어야 작업 공간 생성 시 레시피가 표시됩니다. 기능 브랜치에만 있으면 표시되지 않습니다. 스크립트를 반복 개발하는 동안에는 어느 브랜치에서든 doctor와 실제 프로비저닝을 실행할 수 있습니다.
 
 클라우드 직접 준비 — Orca VPS가 아닙니다
 
-작업 공간별 환경은 Orca이 호스팅하는 VPS를 제공하지 않습니다. 공급자를 직접 준비하고 해당 공급자에게 비용을 지불합니다. Orca은 사용자의 create/suspend/resume/destroy 스크립트를 실행하고 스크립트가 출력하는 페어링 URL 또는 SSH 세부 정보로 연결합니다.
+Cloud VM은 Orca이 호스팅하는 VPS를 제공하지 않습니다. 공급자를 직접 준비하고 해당 공급자에게 비용을 지불합니다. Orca은 사용자의 create/suspend/resume/destroy 스크립트를 실행하고 스크립트가 출력하는 페어링 URL 또는 SSH 세부 정보로 연결합니다.
 
 ## 선택 방법
 
-- 노트북 성능이 충분하고 에이전트 실행 시간이 짧다면 **로컬**을 사용합니다.
-- 이미 VPS나 개발 시스템이 있고 두 번째 Orca 런타임을 설치하지 않은 채 그곳에서 에이전트를 실행하려면 **SSH**를 사용합니다.
-- 모바일, 브라우저 및 자동화에서 사용할 상시 실행 Orca 런타임 하나가 필요하면 **원격 Orca 서버**를 사용합니다.
-- 각 작업에 작업 트리와 함께 폐기되는 새로운 레시피 기반 샌드박스가 필요하면 **작업 공간별 환경**을 사용합니다.
+-   노트북 성능이 충분하고 에이전트 실행 시간이 짧다면 **로컬**을 사용합니다.
+-   이미 VPS나 개발 시스템이 있고 두 번째 Orca 런타임을 설치하지 않은 채 그곳에서 에이전트를 실행하려면 **SSH**를 사용합니다.
+-   **원격 Orca 서버**는 모바일, 브라우저 및 자동화에서 사용할 상시 실행 Orca 런타임 하나가 필요할 때 사용합니다.
+-   각 작업에 작업 트리와 함께 폐기되는 새로운 레시피 기반 샌드박스가 필요하면 **Cloud VM / 작업 공간별 환경**을 사용합니다.
 
 한 설치에서 여러 모드를 혼합할 수 있습니다. 빠른 편집에는 로컬 작업 트리를, GPU 시스템에는 SSH를, CI와 유사한 격리에는 레시피를 사용할 수 있습니다.
 

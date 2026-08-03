@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 참조"
 sourceUrl: https://www.onorca.dev/docs/cli/reference
-checkedAt: "2026-07-29T01:03:00.276Z"
+checkedAt: "2026-08-03T07:35:41.401Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/overview/
 next: /orca-docs-ko/docs/cli/orchestration/
@@ -250,6 +250,33 @@ orca linear create --title "Flaky login test" --team ENG --priority high --json
 ```
 
 버전이 일치하는 목록을 확인하려면 `orca linear --help` 또는 `orca skills get orca-linear`를 실행합니다. Orca에 연결된 작업 트리 외부에서 스크립트가 실행될 수 있으면 명시적인 이슈 ID(예: `ENG-123`)를 전달합니다.
+
+## 스킬(로컬, 런타임 불필요)
+
+데스크톱 `Settings`(설정) UI 없이 번들 가이드 목록을 확인하고, 버전에 맞는 가이드를 출력하거나 하이브리드 스킬 패키지를 install/update합니다.
+
+```
+orca skills list
+orca skills get orca-cli
+orca skills get orchestration --full
+orca skills install --skill orca-cli --skill orchestration
+orca skills install --all --dry-run
+orca skills update --all
+```
+
+`install` / `update`는 `Settings`(설정)에서 사용하는 것과 동일한 `npx skills` 명령을 셸에서 실행합니다. Orca 런타임에는 연결하지 않습니다. [Orca 스킬](/orca-docs-ko/docs/cli/skills/#keep-skills-up-to-date)을 참조합니다.
+
+## 계정(호스트 로컬 런타임)
+
+Orca을 실행하는 헤드리스 호스트(`orca serve` 또는 데스크톱 앱)에서 원격 클라이언트가 **`Add account`(계정 추가)**를 사용할 수 없는 경우(원격 런타임 범위에서는 해당 버튼이 비활성화됨) 관리형 Claude/Codex 계정을 추가합니다.
+
+```
+orca account list
+orca account add                 # Claude by default
+orca account add --agent codex
+```
+
+`account add`는 호스트의 **현재** 터미널에서 `claude login` / `codex login`을 실행한 다음, 수집한 자격 증명을 로컬 런타임에 등록합니다. Codex는 기기 인증을 사용하므로 다른 시스템의 브라우저에서 인증을 완료할 수 있습니다. 클라이언트 전용 원격 세션을 통하지 말고 계정을 소유하는 시스템에서 이 명령을 실행합니다.
 
 ## 자동화, 환경 및 후크
 

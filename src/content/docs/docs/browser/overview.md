@@ -1,7 +1,7 @@
 ---
 title: "작업트리별 브라우저"
 sourceUrl: https://www.onorca.dev/docs/browser/overview
-checkedAt: "2026-07-29T01:03:00.276Z"
+checkedAt: "2026-08-03T07:35:41.401Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/file-explorer/
 next: /orca-docs-ko/docs/browser/design-mode/
@@ -37,7 +37,12 @@ translationNotice:
 
 [`Settings`(설정) → `Browser`(브라우저) → `Link Routing`(링크 라우팅)](/orca-docs-ko/docs/settings/)에서 터미널, Markdown 및 편집기의 http(s) 링크를 Orca의 작업 트리별 브라우저로 열지 시스템 브라우저로 열지 선택합니다.
 
-링크가 Orca에서 열리도록 설정한 경우 플랫폼 보조 키와 Shift를 함께 눌러 시스템 브라우저로 강제로 열 수 있습니다. macOS에서는 `⇧⌘-click`, Windows/Linux에서는 `Shift+Ctrl+click`을 사용합니다.
+중첩된 **`Hold Shift…`(Shift 키 누르기…)** 토글은 플랫폼 수정 키(macOS에서는 `⇧⌘-click`, Windows/Linux에서는 `Shift+Ctrl+click`)를 사용한 한 번의 클릭에 대해 기본 동작을 반대로 전환합니다.
+
+-   링크가 **Orca**에서 열리도록 설정된 경우 수정 키를 사용하면 해당 링크 하나를 시스템 브라우저로 보냅니다.
+-   링크가 **시스템 브라우저**에서 열리도록 설정된 경우 토글을 켜면 수정 키를 사용한 링크 하나가 Orca의 내장 브라우저에서 대신 열립니다. 일반 클릭은 계속 시스템 브라우저에서 열립니다.
+
+Remote/SSH 소스는 수정 키를 사용해도 Orca 브라우저 내부에서 열리지 않습니다.
 
 ## 다운로드
 

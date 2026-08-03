@@ -1,7 +1,7 @@
 ---
 title: "리치 마크다운 편집기"
 sourceUrl: https://www.onorca.dev/docs/editing/markdown
-checkedAt: "2026-07-29T01:03:00.276Z"
+checkedAt: "2026-08-03T07:35:41.401Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/monaco/
 next: /orca-docs-ko/docs/editing/viewers/
@@ -40,6 +40,17 @@ Orca의 풍부한 편집기에서 마크다운을 검토할 때 원시 마크다
 ## 머리말
 
 YAML 및 TOML 프런트매터는 기본적으로 리치 편집기와 렌더링된 미리 보기에 표시되므로 문서와 정적 사이트 게시물은 원시 마크다운으로 전환하지 않아도 메타데이터를 보여 줍니다. 본문만 보려면 편집기의 `More actions`(추가 작업)(`…`) 메뉴를 열고 `Hide front matter`(프런트매터 숨기기)를 선택합니다. 같은 메뉴에서 `Show front matter`(프런트매터 표시)를 선택하면 다시 표시됩니다. 이 설정은 파일별로 적용되므로 한 문서에서 숨겨도 다른 문서에는 영향을 주지 않습니다.
+
+## 표
+
+리치 마크다운 표에서는 다음 키를 사용할 수 있습니다.
+
+| 키 | 동작 |
+| --- | --- |
+| **`Tab`(탭)** / **`Shift-Tab`(Shift+Tab)** | 다음/이전 셀로 이동합니다. 마지막 셀에서 Tab을 누르면 행을 삽입합니다. |
+| **`Enter`(Enter)** | 아래 셀로 이동합니다. 마지막 행에서는 행을 추가합니다. |
+| 완전히 빈 행에서 **`Backspace`(백스페이스)** | 행을 삭제합니다. 마지막 행이면 표 전체를 삭제합니다. |
+| 행에 내용이 남아 있는 상태에서 빈 셀의 **`Backspace`(백스페이스)** | 이전 셀로 이동합니다. |
 
 ## 목차
 

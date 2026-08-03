@@ -157,6 +157,14 @@
     "/docs/ssh/:paragraph:linux-hosts-without-a-cc-toolchain:2": {
       "sourceHash": "a52ee768e55f0cdeb142d3db0b63f955f7263f5bbd38446f0c553066b54e4025",
       "translated": "도구를 설치한 다음 릴레이가 네이티브 모듈을 설치할 수 있도록 다시 연결합니다."
+    },
+    "/docs/ssh/:heading:fido2-security-keys:0": {
+      "sourceHash": "a6fa949583172a26ae157ab42e99971e2e9ea8fe7b5618d55461615129ed42da",
+      "translated": "## FIDO2 / 보안 키"
+    },
+    "/docs/ssh/:paragraph:fido2-security-keys:0": {
+      "sourceHash": "08115fc63e939816c05e1f04ebcefec2c7e2d270ac113e8c84f5c57f3b88330c",
+      "translated": "하드웨어 기반 OpenSSH ID(`ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002`, 에이전트 기반 보안 키 포함)도 내장 ssh2 클라이언트 대신 **시스템 OpenSSH**를 사용합니다. ORCA_PROTECTED_0003은 ID 파일에서 키 유형을 감지하고 연결을 OS OpenSSH 바이너리에 넘기므로 터치/PIN 프롬프트가 평소처럼 작동합니다. 일반 Ed25519, ECDSA 및 RSA 키는 내장 전송 방식을 계속 사용합니다. 시스템에서 OpenSSH를 사용할 수 없으면 이를 설치해 `ORCA_PROTECTED_0004`에 추가하거나 일반적인 ORCA_PROTECTED_0005 위치에 배치할 때까지 해당 FIDO2 대상에서 인증할 수 없습니다."
     }
   }
 }

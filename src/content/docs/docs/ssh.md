@@ -1,7 +1,7 @@
 ---
 title: "SSH 작업 트리"
 sourceUrl: https://www.onorca.dev/docs/ssh
-checkedAt: "2026-07-29T01:03:00.276Z"
+checkedAt: "2026-08-03T07:35:41.401Z"
 editUrl: false
 prev: /orca-docs-ko/docs/ways-to-run/
 next: /orca-docs-ko/docs/remote-servers/
@@ -78,6 +78,10 @@ SSH 작업 트리에서 구성한 앱이 VS Code 또는 VS Code Insiders(`code` 
 OpenSSH 구성의 호스트에 `GSSAPIAuthentication yes`가 설정되어 있으면 Orca는 해당 대상에 **시스템 OpenSSH** 전송을 우선 사용합니다(내장 ssh2 클라이언트는 GSSAPI를 지원하지 않음). 연결하기 전에 유효한 Kerberos 티켓(`kinit` / 조직의 SSO)을 유지합니다. 수동 대상도 시스템 SSH를 사용하도록 구성하면 GSSAPI를 활성화할 수 있습니다.
 
 구성에서 가져온 호스트에 별도의 `Kerberos mode`(Kerberos 모드) 스위치를 켤 필요는 없습니다. 가져오기/`ssh -G`가 플래그를 전달합니다.
+
+## FIDO2 / 보안 키
+
+하드웨어 기반 OpenSSH ID(`ed25519-sk`, `ecdsa-sk`, 에이전트 기반 보안 키 포함)도 내장 ssh2 클라이언트 대신 **시스템 OpenSSH**를 사용합니다. Orca은 ID 파일에서 키 유형을 감지하고 연결을 OS OpenSSH 바이너리에 넘기므로 터치/PIN 프롬프트가 평소처럼 작동합니다. 일반 Ed25519, ECDSA 및 RSA 키는 내장 전송 방식을 계속 사용합니다. 시스템에서 OpenSSH를 사용할 수 없으면 이를 설치해 `PATH`에 추가하거나 일반적인 Windows/macOS/Linux 위치에 배치할 때까지 해당 FIDO2 대상에서 인증할 수 없습니다.
 
 ## C/C++ 도구 체인이 없는 Linux 호스트
 

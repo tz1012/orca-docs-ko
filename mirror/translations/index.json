@@ -39,8 +39,8 @@
       "translated": "## ORCA_PROTECTED_0001이 아닌 것"
     },
     "/docs/:list:what-orca-is-not:0": {
-      "sourceHash": "774ed34338f39eb0b993891794a7bdd79c9024cc269d1509c6f8fa6d3c128369",
-      "translated": "- **모델이 아닙니다.** ORCA_PROTECTED_0001은 이미 사용 중인 에이전트를 실행합니다. 기존 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003 또는 ORCA_PROTECTED_0004 구독을 그대로 사용합니다.\n- **git을 대체하지 않습니다.** 모든 작업 트리는 실제 git 작업 트리입니다. 언제든 해당 디렉터리로 `ORCA_PROTECTED_0005`한 뒤 일반 git을 사용할 수 있습니다.\n- **호스팅 VPS 제품이 아닙니다.** ORCA_PROTECTED_0006은 기본적으로 데스크톱에서 실행됩니다. 원격 컴퓨팅에는 사용자가 제어하는 시스템과 클라우드 계정을 사용합니다. [SSH 대상](ORCA_PROTECTED_0007), [자체 호스팅 ORCA_PROTECTED_0008 서버](ORCA_PROTECTED_0009) 또는 [작업 공간별 환경](ORCA_PROTECTED_0010)을 사용할 수 있습니다."
+      "sourceHash": "18169ac12a1a7fe86d2722c76e50db8fcf20d40dedd6f60cfcf699ae130c208a",
+      "translated": "-   **모델이 아닙니다.** ORCA_PROTECTED_0001은 이미 사용 중인 에이전트를 실행합니다. ORCA_PROTECTED_0002, ORCA_PROTECTED_0003 또는 ORCA_PROTECTED_0004 구독은 사용자가 준비합니다.\n-   **git을 대체하지 않습니다.** 모든 작업 트리는 실제 git 작업 트리입니다. 언제든 해당 디렉터리로 `ORCA_PROTECTED_0005`한 뒤 일반 git을 사용할 수 있습니다.\n-   **호스팅형 VPS 제품이 아닙니다.** ORCA_PROTECTED_0006은 기본적으로 데스크톱에서 실행됩니다. 원격 컴퓨팅에는 사용자가 제어하는 시스템과 클라우드 계정, 즉 [SSH 대상](ORCA_PROTECTED_0007), [자체 호스팅 ORCA_PROTECTED_0008 서버](ORCA_PROTECTED_0009) 또는 [Cloud VM / 작업 공간별 환경](ORCA_PROTECTED_0010)을 사용합니다."
     },
     "/docs/:aside:what-orca-is-not:0": {
       "sourceHash": "41818d41ec68b1093cd2ec0b90c5e76faf82182217c703099aa5f1bf067b4b25",

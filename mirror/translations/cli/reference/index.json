@@ -305,6 +305,38 @@
     "/docs/cli/reference/:paragraph:field-helpers-still-valid:0": {
       "sourceHash": "d59283829a9e397337f0797157aa79591c8408af6df001a0b87a608f85bf963a",
       "translated": "버전이 일치하는 목록을 확인하려면 `ORCA_PROTECTED_0001` 또는 `ORCA_PROTECTED_0002`를 실행합니다. ORCA_PROTECTED_0004에 연결된 작업 트리 외부에서 스크립트가 실행될 수 있으면 명시적인 이슈 ID(예: `ORCA_PROTECTED_0003`)를 전달합니다."
+    },
+    "/docs/cli/reference/:heading:skills-local-no-runtime-required:0": {
+      "sourceHash": "88c9bfb01dd8022b2ff8dee859abe54117642fb2cac1e4e8c57aa175c8a0c57a",
+      "translated": "## 스킬(로컬, 런타임 불필요)"
+    },
+    "/docs/cli/reference/:paragraph:skills-local-no-runtime-required:0": {
+      "sourceHash": "835eb64701af63605e10c5ad1d0f444f960bee570cf21d63defa3974c05e6ad8",
+      "translated": "데스크톱 `Settings`(설정) UI 없이 번들 가이드 목록을 확인하고, 버전에 맞는 가이드를 출력하거나 하이브리드 스킬 패키지를 ORCA_PROTECTED_0001합니다."
+    },
+    "/docs/cli/reference/:code:skills-local-no-runtime-required:0": {
+      "sourceHash": "adeb02a8bb4cfbf816fe6ad5d27926d1f054c26df61aa100194633a139d6e45a",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/reference/:paragraph:skills-local-no-runtime-required:1": {
+      "sourceHash": "052368e1b808cbe85f5fff9b2eb169685f8afff89afab63df4b26ea381b78631",
+      "translated": "`ORCA_PROTECTED_0001` / `ORCA_PROTECTED_0002`는 `Settings`(설정)에서 사용하는 것과 동일한 `ORCA_PROTECTED_0003` 명령을 셸에서 실행합니다. ORCA_PROTECTED_0004 런타임에는 연결하지 않습니다. [ORCA_PROTECTED_0005 스킬](ORCA_PROTECTED_0006)을 참조합니다."
+    },
+    "/docs/cli/reference/:heading:account-host-local-runtime:0": {
+      "sourceHash": "3a3cdbe9de9c21d3bb884b1a7221760c4139ef2ddf69fa28a80f51f8b4c5c4c6",
+      "translated": "## 계정(호스트 로컬 런타임)"
+    },
+    "/docs/cli/reference/:paragraph:account-host-local-runtime:0": {
+      "sourceHash": "6318082e5043f7257a0693f1e220824407e3311db26cdc7e32d076e1b6fce9f6",
+      "translated": "ORCA_PROTECTED_0001을 실행하는 헤드리스 호스트(`ORCA_PROTECTED_0002` 또는 데스크톱 앱)에서 원격 클라이언트가 **`Add account`(계정 추가)**를 사용할 수 없는 경우(원격 런타임 범위에서는 해당 버튼이 비활성화됨) 관리형 ORCA_PROTECTED_0003 계정을 추가합니다."
+    },
+    "/docs/cli/reference/:code:account-host-local-runtime:0": {
+      "sourceHash": "858b7689fbe2ffac78187bef62c538b7cc2a5e7ea456f8502316178d5adffaf0",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/reference/:paragraph:account-host-local-runtime:1": {
+      "sourceHash": "047eb7a0e7cff5ef0ad7ce43b7db6f63eaf4e143b4d29e6b6cd5399f576fe605",
+      "translated": "`ORCA_PROTECTED_0001`는 호스트의 **현재** 터미널에서 `ORCA_PROTECTED_0002` / `ORCA_PROTECTED_0003`을 실행한 다음, 수집한 자격 증명을 로컬 런타임에 등록합니다. ORCA_PROTECTED_0004는 기기 인증을 사용하므로 다른 시스템의 브라우저에서 인증을 완료할 수 있습니다. 클라이언트 전용 원격 세션을 통하지 말고 계정을 소유하는 시스템에서 이 명령을 실행합니다."
     }
   }
 }

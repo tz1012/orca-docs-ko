@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 개요"
 sourceUrl: https://www.onorca.dev/docs/cli/overview
-checkedAt: "2026-07-29T01:03:00.276Z"
+checkedAt: "2026-08-03T07:35:41.401Z"
 editUrl: false
 prev: /orca-docs-ko/docs/remote-servers/
 next: /orca-docs-ko/docs/cli/reference/
@@ -19,11 +19,13 @@ Orca CLI는 모든 셸에서 실행 중인 Orca 편집기를 스크립팅하기 
 
 에이전트는 다음을 사용하여 일치하는 Orca CLI 기술을 설치할 수 있습니다.
 
-````
+```
 npx skills add https://github.com/stablyai/orca --skill orca-cli
-````
+# headless / no Settings UI:
+orca skills install --skill orca-cli
+```
 
-설치 가능한 모든 Orca 스킬은 [스킬 레지스트리 및 MCP](/orca-docs-ko/docs/cli/skills/)를 참조하세요.
+[스킬 레지스트리 및 MCP](/orca-docs-ko/docs/cli/skills/)에서 설치할 수 있는 모든 Orca 스킬과 `orca skills install` / `orca skills update` 사용법을 확인합니다.
 
 ![Orca CLI — 모든 셸에서 작업 트리, 터미널 및 내장 브라우저 구동](/orca-docs-ko/assets/mirror/88450513fdc1327a1819317c9a012ccc3f0cad28b6921ee9a78c4c2ad8a4a1c0.jpg)
 

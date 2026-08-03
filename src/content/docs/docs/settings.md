@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-07-29T01:03:00.276Z"
+checkedAt: "2026-08-03T07:35:41.401Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -63,20 +63,20 @@ translationNotice:
 
 ## 에이전트
 
--   감지된 에이전트와 사용자 지정 에이전트를 포함한 설치된 에이전트를 관리합니다.
+-   설치된 에이전트(감지된 에이전트와 사용자 지정 에이전트)를 표시합니다.
 -   감지된 에이전트를 활성화하거나 비활성화하여 실행 메뉴에 사용할 CLI만 표시합니다.
--   `Agent Permissions`(에이전트 권한) — 사용자 지정하지 않은 에이전트에서 CLI 권한 프롬프트를 줄이려면 **`Yolo`**를 선택하고, 각 에이전트의 자체 승인 흐름을 유지하려면 **`Manual`(수동)**을 선택합니다.
--   Claude 및 Codex 계정 목록을 관리합니다.
--   에이전트별 시작 후크를 설정합니다.
--   **`Skill freshness`(스킬 최신 상태)** — 설치된 Orca 스킬에 `Up to date`(최신) / `Update available`(업데이트 가능)이 표시될 수 있습니다. 터미널을 열지 않고 전역 스킬을 새로 고치려면 대화 상자에서 **`Update`(업데이트)**를 사용합니다.
+-   `Agent Permissions`(에이전트 권한)에서 CLI 권한 프롬프트를 줄이려면 **`Yolo`(자동 승인)**를 선택하고, 사용자 지정하지 않은 에이전트가 자체 승인 흐름을 유지하도록 하려면 **`Manual`(수동)**을 선택합니다.
+-   Claude 및 Codex 계정 목록을 표시합니다.
+-   에이전트별 시작 훅을 설정합니다.
+-   **`Skill freshness`(스킬 최신 상태)** — `Agents`(에이전트) 창과 스킬 카드는 전체 상태를 계속 표시합니다. 사이드바 탐색에는 조치가 필요한 스킬만 배지가 표시됩니다(**`Update available`(업데이트 사용 가능)**, **`Needs attention`(확인 필요)**/검토). 정상, 로딩 중 및 설치되지 않은 선택 항목에는 배지가 표시되지 않습니다. 대화 상자의 **`Update`(업데이트)**를 사용하면 터미널 없이 전역 스킬을 백그라운드에서 새로 고칩니다. 진행 상태는 상태 표시줄에 나타나며 대화 상자를 닫아도 실행은 취소되지 않습니다. [Orca 스킬](/orca-docs-ko/docs/cli/skills/#keep-skills-up-to-date)을 참조합니다.
 
 ## 브라우저
 
--   프로필([브라우저 사용 프로필](/orca-docs-ko/docs/browser/profiles/) 참조)을 관리합니다.
--   `Default Zoom`(기본 확대/축소) — 새로 연 브라우저 탭에 적용할 확대 수준입니다. Cmd+휠로 조정한 탭별 설정은 별도로 기억됩니다.
--   Design Mode 기본값을 설정합니다.
--   개발자 도구를 선택적으로 활성화합니다.
--   **`Link Routing`(링크 라우팅)** — 터미널, Markdown 및 편집기의 http(s) 링크를 Orca의 브라우저에서 엽니다. `⇧⌘-click`(macOS) / `Shift+Ctrl+click`(Windows/Linux)를 사용하면 항상 시스템 브라우저에서 엽니다.
+-   프로필([브라우저 사용 프로필](/orca-docs-ko/docs/browser/profiles/) 참조)을 설정합니다.
+-   `Default Zoom`(기본 확대/축소) — 새로 연 브라우저 탭에 적용할 확대/축소 수준입니다. `Cmd-wheel`(Cmd+휠)로 탭별로 조정한 값은 별도로 기억됩니다.
+-   `Design Mode`(디자인 모드) 기본값을 설정합니다.
+-   `Devtools`(개발자 도구) 사용 여부를 설정합니다.
+-   **`Link Routing`(링크 라우팅)** — 터미널, 마크다운 및 편집기의 http(s) 링크를 Orca 브라우저 또는 시스템 브라우저에서 엽니다. 중첩된 **`Hold Shift…`(Shift 키 누르기…)** 옵션은 한 번의 클릭에 대해 이 기본 동작을 반대로 전환합니다(`⇧⌘-click` / `Shift+Ctrl+click`). [작업 트리별 브라우저](/orca-docs-ko/docs/browser/overview/#link-routing)를 참조합니다.
 
 ## 통합
 
@@ -152,10 +152,10 @@ translationNotice:
 
 ## 실험적
 
--   [활동 페이지](/orca-docs-ko/docs/activity/) — 에이전트 이벤트를 위한 Slack 형식의 작업 트리 피드입니다.
--   간결한 작업 트리 카드 — 레이아웃이 아직 실험적인 동안 사이드바에서 중복되는 두 번째 줄을 숨깁니다.
+-   [Activity Page](/orca-docs-ko/docs/activity/) — 에이전트 이벤트를 보여 주는 Slack 스타일 작업 트리 피드입니다.
+-   `Compact worktree cards`(간결한 작업 트리 카드) — 레이아웃이 실험 단계인 동안 사이드바의 중복된 두 번째 줄을 숨깁니다.
 -   [에이전트 최대 절전 모드](/orca-docs-ko/docs/agents/hibernation/) — 유휴 백그라운드 에이전트를 일시 중지하고 다시 열 때 자동으로 재개합니다.
--   **`Agent Dashboard`(에이전트 대시보드)** — `Needs You`(사용자 확인 필요) / `Working`(작업 중) / `Idle`(유휴) 에이전트를 보여 주는 칸반이며 창 내부 또는 분리 창으로 엽니다. [에이전트와 세션](/orca-docs-ko/docs/model/agents-sessions/#agent-dashboard)을 참조합니다.
--   **`Chat UI`(채팅 UI)** — 지원되는 에이전트 터미널의 선택적 채팅 인터페이스입니다. [채팅 UI](/orca-docs-ko/docs/agents/native-chat/)를 참조합니다.
--   **`Per-Workspace Environments`(작업 공간별 환경)** — 저장소가 소유한 주문형 환경(클라우드 샌드박스, VM 또는 로컬 Docker)의 설정 컨트롤과 작업 공간 **`Run on`(실행 위치)** 대상을 표시합니다. [Orca 실행 방법](/orca-docs-ko/docs/ways-to-run/#4-per-workspace-environments-ephemeral-vms)을 참조합니다.
--   아직 안정화되지 않은 기능이므로 동작이 변경될 수 있습니다.
+-   **`Agent Dashboard`(에이전트 대시보드)** — `Needs You`(확인 필요), `Working`(작업 중), `Done`(완료) 에이전트와 선택적 `Idle`(유휴) 에이전트를 보여 주는 칸반입니다. 검색과 project/workspace/PR 필터를 제공하며 창 내부 또는 팝아웃으로 열 수 있습니다. [에이전트 및 세션](/orca-docs-ko/docs/model/agents-sessions/#agent-dashboard)을 참조합니다.
+-   **`Chat UI`(채팅 UI)** — 지원되는 에이전트 터미널에서 선택적으로 사용하는 채팅 화면입니다. [채팅 UI](/orca-docs-ko/docs/agents/native-chat/)를 참조합니다.
+-   **`Cloud VM`(클라우드 VM)** — 저장소에서 관리하는 주문형 환경(클라우드 샌드박스, VM 또는 로컬 Docker)의 설정 컨트롤과 작업 공간 **`Run on`(실행 위치)** 대상을 표시합니다. 설정 가이드와 레시피 설치는 이 실험 기능 토글 아래에 있습니다. [Orca 실행 방식](/orca-docs-ko/docs/ways-to-run/#4-cloud-vms-per-workspace-environments)을 참조합니다.
+-   아직 안정화되지 않은 기능은 동작이 변경될 수 있습니다.

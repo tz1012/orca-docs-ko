@@ -23,12 +23,12 @@
       "translated": "에이전트는 다음을 사용하여 일치하는 ORCA_PROTECTED_0001 CLI 기술을 설치할 수 있습니다."
     },
     "/docs/cli/overview/:code:orca-cli-overview:0": {
-      "sourceHash": "e62cd1b17f951d7070a9123a7cc80e84e1d9e5655622f5f09a514e9fab83a4ad",
-      "translated": "````\nORCA_PROTECTED_0001\n````"
+      "sourceHash": "7d4cafa1bd2c2fa84da93e8806e2f10ec9b882f65d5eee0c48353e817e8f4f03",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/overview/:paragraph:orca-cli-overview:4": {
-      "sourceHash": "a05d23bb8f98e041270fdb6d91dea6ea9bedaf4633b2dcc2f7f34e12f1d7b2c5",
-      "translated": "설치 가능한 모든 ORCA_PROTECTED_0002 스킬은 [스킬 레지스트리 및 MCP](ORCA_PROTECTED_0001)를 참조하세요."
+      "sourceHash": "552067621865331bdb5663fe24bc7d2f1c31dbf794e57c75397d0f3c2be49733",
+      "translated": "[스킬 레지스트리 및 MCP](ORCA_PROTECTED_0001)에서 설치할 수 있는 모든 ORCA_PROTECTED_0002 스킬과 `ORCA_PROTECTED_0003` / `ORCA_PROTECTED_0004` 사용법을 확인합니다."
     },
     "/docs/cli/overview/:figure:orca-cli-overview:0": {
       "sourceHash": "00025dd7fb41dd56908f4b4d3597902f1722981b383babb634017982978c2491",

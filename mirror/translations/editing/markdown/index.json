@@ -69,6 +69,18 @@
     "/docs/editing/markdown/:paragraph:review-annotations:1": {
       "sourceHash": "41cd058fdc5812fed48793d611fe5277387dc96362097f52ce6a54d65477d8f3",
       "translated": "**`Add Review Note`(검토 메모 추가)**는 다시 매핑할 수 있는 바로 가기입니다([`Settings`(설정) → `Shortcuts`(바로 가기)](ORCA_PROTECTED_0003)의 기본값은 `ORCA_PROTECTED_0001` / `ORCA_PROTECTED_0002`입니다)."
+    },
+    "/docs/editing/markdown/:heading:tables:0": {
+      "sourceHash": "0d3b2b75400e2fab76bfc79574c28528faac895dcbc361996cdbc8fd55bca7cc",
+      "translated": "## 표"
+    },
+    "/docs/editing/markdown/:paragraph:tables:0": {
+      "sourceHash": "62ff206820a03d2af28e229bab5504c09a75585c2b74629f58451d3532ae5f07",
+      "translated": "리치 마크다운 표에서는 다음 키를 사용할 수 있습니다."
+    },
+    "/docs/editing/markdown/:table:tables:0": {
+      "sourceHash": "7a2809166df2eba51d222ddfdca496aef44f26aaa90d2434f3940b168d8910c5",
+      "translated": "| 키 | 동작 |\n| --- | --- |\n| **`Tab`(탭)** / **`Shift-Tab`(Shift+Tab)** | 다음/이전 셀로 이동합니다. 마지막 셀에서 Tab을 누르면 행을 삽입합니다. |\n| **`Enter`(Enter)** | 아래 셀로 이동합니다. 마지막 행에서는 행을 추가합니다. |\n| 완전히 빈 행에서 **`Backspace`(백스페이스)** | 행을 삭제합니다. 마지막 행이면 표 전체를 삭제합니다. |\n| 행에 내용이 남아 있는 상태에서 빈 셀의 **`Backspace`(백스페이스)** | 이전 셀로 이동합니다. |"
     }
   }
 }
