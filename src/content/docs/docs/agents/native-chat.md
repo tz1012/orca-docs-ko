@@ -1,7 +1,7 @@
 ---
 title: "채팅 UI(네이티브 채팅)"
 sourceUrl: https://www.onorca.dev/docs/agents/native-chat
-checkedAt: "2026-08-03T07:35:41.401Z"
+checkedAt: "2026-08-04T03:02:33.909Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/codex-hot-swap/
 next: /orca-docs-ko/docs/agents/session-history/

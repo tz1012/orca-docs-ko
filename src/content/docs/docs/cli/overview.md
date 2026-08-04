@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 개요"
 sourceUrl: https://www.onorca.dev/docs/cli/overview
-checkedAt: "2026-08-03T07:35:41.401Z"
+checkedAt: "2026-08-04T03:02:33.909Z"
 editUrl: false
 prev: /orca-docs-ko/docs/remote-servers/
 next: /orca-docs-ko/docs/cli/reference/

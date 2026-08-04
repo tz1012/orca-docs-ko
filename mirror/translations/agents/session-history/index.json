@@ -51,16 +51,16 @@
       "translated": "보기 옵션 메뉴(검색 상자 옆)는 검색할 에이전트와 정렬 및 그룹화를 제어합니다."
     },
     "/docs/agents/session-history/:list:view-options:0": {
-      "sourceHash": "ca0fc777d0233f5c3a192f2d7b37172dd54fc6f24085d2913aa27ae738c91e16",
-      "translated": "- `Agents`(에이전트) — 개별 CLI를 켜거나 끕니다(ORCA_PROTECTED_0001, ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, ORCA_PROTECTED_0004, ORCA_PROTECTED_0005, ORCA_PROTECTED_0006, ORCA_PROTECTED_0007, ORCA_PROTECTED_0008, ORCA_PROTECTED_0009, ORCA_PROTECTED_0010, ORCA_PROTECTED_0011, ORCA_PROTECTED_0012). 비활성화된 에이전트는 검사 중에 건너뜁니다.\n- `Sort`(정렬) — `ORCA_PROTECTED_0013` 또는 `ORCA_PROTECTED_0014`.\n- `Group`(그룹) — `ORCA_PROTECTED_0015`, `ORCA_PROTECTED_0016`(`ORCA_PROTECTED_0017`당 제목 하나) 또는 `ORCA_PROTECTED_0018`(CLI당 제목 하나).\n- `Hide empty sessions`(빈 세션 숨기기) — 녹음된 메시지가 없는 세션을 삭제합니다."
+      "sourceHash": "a25ead8be41dc5bea0cf2a606350f2cf70fe6350a0d18a6cfbc3d69edd192a6f",
+      "translated": "-   **`Agents`(에이전트)** — 개별 CLI를 켜거나 끕니다(ORCA_PROTECTED_0001, ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, ORCA_PROTECTED_0004, ORCA_PROTECTED_0005, ORCA_PROTECTED_0006, ORCA_PROTECTED_0007, ORCA_PROTECTED_0008, ORCA_PROTECTED_0009, ORCA_PROTECTED_0010, ORCA_PROTECTED_0011, ORCA_PROTECTED_0012, ORCA_PROTECTED_0013, ORCA_PROTECTED_0014, ORCA_PROTECTED_0015, ORCA_PROTECTED_0016). 비활성화된 에이전트는 검사 중 건너뜁니다. 모든 에이전트를 한 번에 전환하려면 `Agents`(에이전트) 헤더에서 **`Select all`(모두 선택)** / **`Clear`(지우기)**를 사용합니다. **`Clear`(지우기)**는 선택을 모두 해제하므로 긴 목록을 하나씩 해제하지 않고 필요한 CLI만 켤 수 있습니다. 아무것도 선택하지 않으면 일반적인 빈 필터 메시지 대신 **`No agents selected`(선택된 에이전트 없음)**가 표시됩니다.\n-   **`Sort`(정렬)** — `ORCA_PROTECTED_0017` 또는 `ORCA_PROTECTED_0018`입니다.\n-   **`Group`(그룹)** — `ORCA_PROTECTED_0019`, `ORCA_PROTECTED_0020`(`ORCA_PROTECTED_0021`당 제목 하나) 또는 `ORCA_PROTECTED_0022`(CLI당 제목 하나)입니다.\n-   **`Hide empty sessions`(빈 세션 숨기기)** — 기록된 메시지가 0개인 세션을 숨깁니다."
     },
     "/docs/agents/session-history/:heading:resume-a-session:0": {
       "sourceHash": "c2de38e7a185b425ef2ae4e0956aa9e6e8ce88455586a56b76c8f13645db0a38",
       "translated": "## 세션 재개"
     },
     "/docs/agents/session-history/:paragraph:resume-a-session:0": {
-      "sourceHash": "29756d9737ffac95bf2ec484283f8e91c5aaaca2e2e23efe50ce70557ebd9704",
-      "translated": "세션 행을 클릭하면 세부 정보(작업 디렉터리, 분기, 모델, 메시지 수, 총 토큰, 원래 요청 및 최신 대화 차례)가 열립니다. 활성화된 세션 행을 작업 공간으로 끌어서 재개할 수도 있습니다. 행의 작업에서 다음을 수행할 수 있습니다."
+      "sourceHash": "9f2ee074ba1a19e160236eda6b18e0d8775fed8713d0b257b877225952551065",
+      "translated": "세션 행을 클릭하면 작업 디렉터리, 브랜치, 모델, 메시지 수, **`First prompt`(첫 번째 프롬프트)**, 최신 대화 차례 등 세부 정보가 열립니다. 세부 정보를 펼치면 **`First prompt`(첫 번째 프롬프트)**가 대화 기록에서 잘리지 않은 첫 사용자 메시지를 불러옵니다(목록 행에는 검색용 짧은 미리 보기만 유지됩니다). 해당 카드의 **`Copy`(복사)**를 사용하면 전체 요청을 클립보드에 넣을 수 있어 로그를 다시 열지 않고도 긴 프롬프트를 재사용할 때 유용합니다. 활성화된 세션 행을 작업 공간으로 끌어 재개할 수도 있습니다. 행의 작업에서 다음을 수행할 수 있습니다."
     },
     "/docs/agents/session-history/:list:resume-a-session:0": {
       "sourceHash": "0a14f29fe1a48a1e5c5436637711f3c93c800a24bb43912450be1db51721a899",

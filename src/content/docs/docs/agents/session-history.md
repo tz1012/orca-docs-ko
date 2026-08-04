@@ -1,7 +1,7 @@
 ---
 title: "에이전트 세션 기록"
 sourceUrl: https://www.onorca.dev/docs/agents/session-history
-checkedAt: "2026-08-03T07:35:41.401Z"
+checkedAt: "2026-08-04T03:02:33.909Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/native-chat/
 next: /orca-docs-ko/docs/agents/hibernation/
@@ -35,14 +35,14 @@ Orca은 지원 에이전트 CLI가 남긴 온디스크 세션 기록을 스캔�
 
 보기 옵션 메뉴(검색 상자 옆)는 검색할 에이전트와 정렬 및 그룹화를 제어합니다.
 
-- `Agents`(에이전트) — 개별 CLI를 켜거나 끕니다(Claude, Codex, Cursor, Gemini, Hermes, Pi, Copilot, OpenCode, Grok, OpenClaw, Droid, Rovo Dev). 비활성화된 에이전트는 검사 중에 건너뜁니다.
-- `Sort`(정렬) — `Last updated` 또는 `Created`.
-- `Group`(그룹) — `Project`, `Folder`(`cwd`당 제목 하나) 또는 `Agent`(CLI당 제목 하나).
-- `Hide empty sessions`(빈 세션 숨기기) — 녹음된 메시지가 없는 세션을 삭제합니다.
+-   **`Agents`(에이전트)** — 개별 CLI를 켜거나 끕니다(Claude, Codex, Hermes, Pi, OMP, Cursor, Gemini, Antigravity, Rovo Dev, Copilot, OpenCode, Grok, OpenClaw, Devin, Droid, Kimi). 비활성화된 에이전트는 검사 중 건너뜁니다. 모든 에이전트를 한 번에 전환하려면 `Agents`(에이전트) 헤더에서 **`Select all`(모두 선택)** / **`Clear`(지우기)**를 사용합니다. **`Clear`(지우기)**는 선택을 모두 해제하므로 긴 목록을 하나씩 해제하지 않고 필요한 CLI만 켤 수 있습니다. 아무것도 선택하지 않으면 일반적인 빈 필터 메시지 대신 **`No agents selected`(선택된 에이전트 없음)**가 표시됩니다.
+-   **`Sort`(정렬)** — `Last updated` 또는 `Created`입니다.
+-   **`Group`(그룹)** — `Project`, `Folder`(`cwd`당 제목 하나) 또는 `Agent`(CLI당 제목 하나)입니다.
+-   **`Hide empty sessions`(빈 세션 숨기기)** — 기록된 메시지가 0개인 세션을 숨깁니다.
 
 ## 세션 재개
 
-세션 행을 클릭하면 세부 정보(작업 디렉터리, 분기, 모델, 메시지 수, 총 토큰, 원래 요청 및 최신 대화 차례)가 열립니다. 활성화된 세션 행을 작업 공간으로 끌어서 재개할 수도 있습니다. 행의 작업에서 다음을 수행할 수 있습니다.
+세션 행을 클릭하면 작업 디렉터리, 브랜치, 모델, 메시지 수, **`First prompt`(첫 번째 프롬프트)**, 최신 대화 차례 등 세부 정보가 열립니다. 세부 정보를 펼치면 **`First prompt`(첫 번째 프롬프트)**가 대화 기록에서 잘리지 않은 첫 사용자 메시지를 불러옵니다(목록 행에는 검색용 짧은 미리 보기만 유지됩니다). 해당 카드의 **`Copy`(복사)**를 사용하면 전체 요청을 클립보드에 넣을 수 있어 로그를 다시 열지 않고도 긴 프롬프트를 재사용할 때 유용합니다. 활성화된 세션 행을 작업 공간으로 끌어 재개할 수도 있습니다. 행의 작업에서 다음을 수행할 수 있습니다.
 
 -   **`Resume`(재개)** — 세션의 `cwd`에서 새 터미널을 열고 에이전트의 재개 명령(예: `claude --resume <id>`, `codex resume <id>`, `pi --session <session_file>`, `cursor-agent --resume <id>`, `acli rovodev run --restore <id>`)을 실행합니다. 원래 세션에서 `CODEX_HOME`을 설정한 경우 Codex 세션은 이를 다시 내보냅니다.
 

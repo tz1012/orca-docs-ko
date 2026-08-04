@@ -1,7 +1,7 @@
 ---
 title: "작업트리별 브라우저"
 sourceUrl: https://www.onorca.dev/docs/browser/overview
-checkedAt: "2026-08-03T07:35:41.401Z"
+checkedAt: "2026-08-04T03:02:33.909Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/file-explorer/
 next: /orca-docs-ko/docs/browser/design-mode/

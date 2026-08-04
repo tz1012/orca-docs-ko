@@ -1,7 +1,7 @@
 ---
 title: "디자인 모드의 UI 버그 수정"
 sourceUrl: https://www.onorca.dev/docs/recipes/design-mode-fix
-checkedAt: "2026-08-03T07:35:41.401Z"
+checkedAt: "2026-08-04T03:02:33.909Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/jump-worktrees/
 next: /orca-docs-ko/docs/recipes/remote-worktrees/

@@ -1,7 +1,7 @@
 ---
 title: "Orca의 Claude Code"
 sourceUrl: https://www.onorca.dev/docs/agents/claude-code
-checkedAt: "2026-08-03T07:35:41.401Z"
+checkedAt: "2026-08-04T03:02:33.909Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/supported/
 next: /orca-docs-ko/docs/agents/glm-agent/

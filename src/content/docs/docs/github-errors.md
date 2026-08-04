@@ -1,7 +1,7 @@
 ---
 title: "GitHub 오류 문제 해결"
 sourceUrl: https://www.onorca.dev/docs/github-errors
-checkedAt: "2026-08-03T07:35:41.401Z"
+checkedAt: "2026-08-04T03:02:33.909Z"
 editUrl: false
 prev: /orca-docs-ko/docs/troubleshooting/
 next: false
