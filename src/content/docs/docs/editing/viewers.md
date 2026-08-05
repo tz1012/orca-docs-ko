@@ -1,7 +1,7 @@
 ---
 title: "인어, PDF 및 이미지 뷰어"
 sourceUrl: https://www.onorca.dev/docs/editing/viewers
-checkedAt: "2026-08-04T03:02:33.909Z"
+checkedAt: "2026-08-05T01:03:39.454Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/markdown/
 next: /orca-docs-ko/docs/editing/file-explorer/
@@ -19,7 +19,7 @@ Orca에는 대부분의 저장소에 표시되는 형식에 대한 내장 뷰어
 
 ## PDF
 
-스크롤, 확대/축소 및 텍스트 선택. 저장소에 체크인된 디자인 문서에 유용합니다.
+스크롤, 확대/축소 및 텍스트 선택을 지원합니다. 저장소에 체크인된 디자인 문서를 볼 때 유용합니다. PDF 탭에서 다른 곳으로 전환했다가 돌아오면(같은 세션에서 탭을 닫았다 다시 여는 경우 포함) 페이지와 페이지 내 중간 오프셋까지 스크롤 위치가 복원되므로 이전에 보던 위치로 돌아갑니다. 위치 정보는 세션 동안만 유지되며 Orca을 다시 시작하면 지워집니다.
 
 ## 이미지
 

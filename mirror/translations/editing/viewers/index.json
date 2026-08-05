@@ -23,8 +23,8 @@
       "translated": "## PDF"
     },
     "/docs/editing/viewers/:paragraph:pdf:0": {
-      "sourceHash": "34df853a1f80f4a4cae71aeff64f8d65dfb4bc71721c08f574f2f48c4720083c",
-      "translated": "스크롤, 확대/축소 및 텍스트 선택. 저장소에 체크인된 디자인 문서에 유용합니다."
+      "sourceHash": "93bdf8b0a438ac8035488b482d90cc19c1874842942db4a6c3467897152df764",
+      "translated": "스크롤, 확대/축소 및 텍스트 선택을 지원합니다. 저장소에 체크인된 디자인 문서를 볼 때 유용합니다. PDF 탭에서 다른 곳으로 전환했다가 돌아오면(같은 세션에서 탭을 닫았다 다시 여는 경우 포함) 페이지와 페이지 내 중간 오프셋까지 스크롤 위치가 복원되므로 이전에 보던 위치로 돌아갑니다. 위치 정보는 세션 동안만 유지되며 ORCA_PROTECTED_0001을 다시 시작하면 지워집니다."
     },
     "/docs/editing/viewers/:heading:images:0": {
       "sourceHash": "a543e293c615aa544f0eddfe7c2a5ce1621376987585e646f7a54eb3d6e4a5f6",

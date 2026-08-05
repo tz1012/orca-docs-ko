@@ -19,8 +19,8 @@
       "translated": "## SSH 대상 추가"
     },
     "/docs/ssh/:list:add-an-ssh-target:0": {
-      "sourceHash": "60d95e81c040721ee41dd6e0af5da8b71e519dbf8d360a1e842bf1c816ad5952",
-      "translated": "1. [설정 → SSH](ORCA_PROTECTED_0001)를 엽니다.\n2. 대상(호스트, 사용자, 포트, 선택적 ID 파일)을 추가합니다. ORCA_PROTECTED_0002는 또한 `ORCA_PROTECTED_0003` 지시문에서 참조하는 파일을 포함하여 OpenSSH 구성 파일에서 호스트를 가져옵니다.\n3. 키가 암호로 보호된 경우 ORCA_PROTECTED_0004가 처음으로 메시지를 표시합니다.\n4. `Test`(테스트)를 클릭하여 연결을 확인합니다."
+      "sourceHash": "71c7e50530abc2af0bb591bb48a81aeac27282bac31a828fd537ae6d1ac7654d",
+      "translated": "1.  [`Settings → SSH`(설정 → SSH)](ORCA_PROTECTED_0001)를 엽니다.\n2.  **`Add Target`(대상 추가)**을 클릭합니다. 호스트 양식은 목록 아래의 인라인 영역이 아니라 모달로 열리므로 호스트 목록이 길어도 `Host`(호스트), `Advanced`(고급) 및 `Save`(저장)에 접근할 수 있습니다. 편집할 때도 같은 대화 상자를 사용하며 대상 레이블과 `ORCA_PROTECTED_0002`를 함께 표시합니다.\n3.  호스트, 사용자, 포트 및 선택적 ID 파일을 입력합니다. ORCA_PROTECTED_0003는 `ORCA_PROTECTED_0004` 지시문에서 참조하는 파일을 포함하여 OpenSSH 구성 파일에서 호스트를 가져오기도 합니다.\n4.  키가 암호로 보호된 경우 ORCA_PROTECTED_0005가 처음 사용할 때 입력을 요청합니다.\n5.  **`Test`(테스트)**를 클릭하여 연결을 확인한 다음 **`Save`(저장)**를 클릭합니다."
     },
     "/docs/ssh/:heading:use-a-target:0": {
       "sourceHash": "6276e8b6ed84037268084625ae6b9f841dc19520c8f32daff3c404ee8aecf9de",
@@ -165,6 +165,10 @@
     "/docs/ssh/:paragraph:fido2-security-keys:0": {
       "sourceHash": "08115fc63e939816c05e1f04ebcefec2c7e2d270ac113e8c84f5c57f3b88330c",
       "translated": "하드웨어 기반 OpenSSH ID(`ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002`, 에이전트 기반 보안 키 포함)도 내장 ssh2 클라이언트 대신 **시스템 OpenSSH**를 사용합니다. ORCA_PROTECTED_0003은 ID 파일에서 키 유형을 감지하고 연결을 OS OpenSSH 바이너리에 넘기므로 터치/PIN 프롬프트가 평소처럼 작동합니다. 일반 Ed25519, ECDSA 및 RSA 키는 내장 전송 방식을 계속 사용합니다. 시스템에서 OpenSSH를 사용할 수 없으면 이를 설치해 `ORCA_PROTECTED_0004`에 추가하거나 일반적인 ORCA_PROTECTED_0005 위치에 배치할 때까지 해당 FIDO2 대상에서 인증할 수 없습니다."
+    },
+    "/docs/ssh/:paragraph:add-an-ssh-target:0": {
+      "sourceHash": "208ac6cebb577e1270bd41c6ee00929dab5ef20ecdc99eee6ce2d487e9b62566",
+      "translated": "변경 사항이 있는 ORCA_PROTECTED_0001 양식은 바깥쪽 클릭을 무시하므로 실수로 다른 곳을 클릭해도 입력한 필드가 사라지지 않습니다. 입력 내용을 버리려면 `Escape`(Esc 키), `Cancel`(취소) 또는 ×를 사용합니다."
     }
   }
 }

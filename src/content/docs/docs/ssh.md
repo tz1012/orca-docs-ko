@@ -1,7 +1,7 @@
 ---
 title: "SSH 작업 트리"
 sourceUrl: https://www.onorca.dev/docs/ssh
-checkedAt: "2026-08-04T03:02:33.909Z"
+checkedAt: "2026-08-05T01:03:39.454Z"
 editUrl: false
 prev: /orca-docs-ko/docs/ways-to-run/
 next: /orca-docs-ko/docs/remote-servers/
@@ -23,10 +23,13 @@ SSH 원격 작업 공간 — 에이전트는 원격 호스트에서 실행되고
 
 ## SSH 대상 추가
 
-1. [설정 → SSH](/orca-docs-ko/docs/settings/)를 엽니다.
-2. 대상(호스트, 사용자, 포트, 선택적 ID 파일)을 추가합니다. Orca는 또한 `Include` 지시문에서 참조하는 파일을 포함하여 OpenSSH 구성 파일에서 호스트를 가져옵니다.
-3. 키가 암호로 보호된 경우 Orca가 처음으로 메시지를 표시합니다.
-4. `Test`(테스트)를 클릭하여 연결을 확인합니다.
+1.  [`Settings → SSH`(설정 → SSH)](/orca-docs-ko/docs/settings/)를 엽니다.
+2.  **`Add Target`(대상 추가)**을 클릭합니다. 호스트 양식은 목록 아래의 인라인 영역이 아니라 모달로 열리므로 호스트 목록이 길어도 `Host`(호스트), `Advanced`(고급) 및 `Save`(저장)에 접근할 수 있습니다. 편집할 때도 같은 대화 상자를 사용하며 대상 레이블과 `user@host:port`를 함께 표시합니다.
+3.  호스트, 사용자, 포트 및 선택적 ID 파일을 입력합니다. Orca는 `Include` 지시문에서 참조하는 파일을 포함하여 OpenSSH 구성 파일에서 호스트를 가져오기도 합니다.
+4.  키가 암호로 보호된 경우 Orca가 처음 사용할 때 입력을 요청합니다.
+5.  **`Test`(테스트)**를 클릭하여 연결을 확인한 다음 **`Save`(저장)**를 클릭합니다.
+
+변경 사항이 있는 add/edit 양식은 바깥쪽 클릭을 무시하므로 실수로 다른 곳을 클릭해도 입력한 필드가 사라지지 않습니다. 입력 내용을 버리려면 `Escape`(Esc 키), `Cancel`(취소) 또는 ×를 사용합니다.
 
 ## 타겟을 사용하세요
 

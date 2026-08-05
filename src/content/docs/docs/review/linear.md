@@ -1,7 +1,7 @@
 ---
 title: "Linear 항목 서랍"
 sourceUrl: https://www.onorca.dev/docs/review/linear
-checkedAt: "2026-08-04T03:02:33.909Z"
+checkedAt: "2026-08-05T01:03:39.454Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/github/
 next: /orca-docs-ko/docs/review/jira/
@@ -25,6 +25,7 @@ Linear은 작업 서랍의 호스팅 리뷰 제공자 옆에 있습니다. GitHu
 -   Linear 이슈에서 작업 트리를 만들면 이름이 미리 채워지고 이슈 ID가 연결됩니다. Linear가 이슈의 브랜치 이름을 제공하면 Orca는 제목 슬러그만 사용하지 않고 해당 이름을 작업 트리 브랜치로 사용합니다(Linear가 제안하는 이름과 동일). 이슈 세부 정보 메뉴에서 **`Copy suggested branch name`(제안 브랜치 이름 복사)**을 사용할 수 있습니다.
 -   이슈 세부 정보 보기를 열면 상태, 담당자, 우선순위, 레이블 및 추정치 같은 필드를 업데이트할 수 있습니다. 우선순위는 Linear의 자체 우선순위 아이콘으로 렌더링되어 서랍과 Linear 화면이 일치합니다.
 -   Linear 이슈에서 에이전트를 실행하면 Orca은 이슈 설명, 댓글 및 하위 이슈에 포함된 인라인 이미지와 미디어를 프롬프트 컨텍스트에 포함합니다. 스크린샷을 직접 붙여 넣지 않아도 에이전트가 목업이나 버그 재현을 확인할 수 있습니다.
+-   **`New Linear issue`(새 Linear 이슈)** 및 **`New Linear project`(새 Linear 프로젝트)** 대화 상자를 실수로 닫더라도—`Escape`(Esc 키), `Cancel`(취소), 바깥쪽 클릭 또는 닫기—title/description(프로젝트의 경우 이름, 요약 및 개요 포함)을 유지합니다. 같은 앱 세션에서 대화 상자를 다시 열면 텍스트가 복원됩니다. 초안은 생성에 성공하면 지워지며 앱을 다시 시작한 뒤에는 유지되지 않습니다. Team/project 선택기는 평소처럼 대화 상자를 열 때의 기본값을 사용합니다.
 -   긴 목록은 **`Load more`(더 불러오기)** 작업으로 페이지를 나눕니다. 프로젝트의 이슈가 초기 서랍에 표시할 수 있는 수보다 많을 때 유용합니다.
 -   Orca는 저장소별로 마지막으로 사용한 작업 소스(GitHub, Linear 또는 Jira)를 기억합니다.
 

@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-08-04T03:02:33.909Z"
+checkedAt: "2026-08-05T01:03:39.454Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -96,8 +96,9 @@ translationNotice:
 ## 음성
 
 -   **`Enable Voice Dictation`(음성 받아쓰기 활성화)** — 마이크 권한이 필요하며 macOS에서는 `Privacy & Security`(개인정보 보호 및 보안)가 열릴 수 있습니다.
+-   **`Microphone`(마이크)** — 받아쓰기에 사용할 입력 장치를 선택합니다. 기본값은 시스템 마이크입니다. 운영체제 기본 장치를 사용하지 않으려면 헤드셋 같은 특정 장치를 선택합니다. 선택한 마이크의 연결이 끊겼거나 장치를 찾을 수 없으면 Orca은 시스템 기본값으로 대체하고 작업을 방해하지 않는 알림을 표시합니다.
 -   **`Dictation mode`(받아쓰기 모드)** — **`Toggle`(전환)**(바로 가기를 눌러 start/stop) 또는 **`Hold`(누르고 있기)**(말하는 동안 바로 가기를 누름)을 선택합니다.
--   **`Speech Model`(음성 모델)** — 온디바이스 모델을 download/select하거나 API 키를 붙여 넣은 후 클라우드 OpenAI 모델을 사용합니다.
+-   **`Speech Model`(음성 모델)** — 온디바이스 모델은 download/select 방식으로 사용하거나 API 키를 붙여 넣은 후 클라우드 OpenAI 모델을 사용합니다.
     -   **Parakeet TDT v3**(권장) — 유럽의 여러 언어를 지원하며 오프라인으로 작동합니다.
     -   **Parakeet TDT v2** — 영어를 지원하며 더 빠릅니다.
     -   **Zipformer** 제품군 — 중국어+영어 이중 언어 스트리밍, 스트리밍 EN/ZH, 한국어용 **Zipformer Streaming KO**
@@ -106,7 +107,7 @@ translationNotice:
     -   **SenseVoice** — 언어 자동 감지와 함께 중국어/영어/일본어/한국어/광둥어 지원
     -   **Whisper Tiny** — 90개 이상의 언어를 지원하지만 정확도가 더 낮습니다.
     -   **GPT-4o mini / GPT-4o Transcribe** — 클라우드 모델이며 같은 창에 OpenAI 키가 필요합니다.
--   듣는 동안 **`Listening…`(듣는 중)** 필에 **`Stop`(중지)** 컨트롤이 표시됩니다. 전환 모드에서는 도구 설명에 받아쓰기 바로 가기도 표시됩니다.
+-   듣는 동안 **`Listening…`(듣는 중)** 알약 모양 배지에 **`Stop`(중지)** 컨트롤이 표시됩니다. 전환 모드에서는 도구 설명에 받아쓰기 바로 가기도 표시됩니다.
 
 ## SSH
 
