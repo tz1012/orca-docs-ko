@@ -1,7 +1,7 @@
 ---
 title: "원격 Orca 서버"
 sourceUrl: https://www.onorca.dev/docs/remote-servers
-checkedAt: "2026-08-05T01:03:39.454Z"
+checkedAt: "2026-08-06T01:01:54.172Z"
 editUrl: false
 prev: /orca-docs-ko/docs/ssh/
 next: /orca-docs-ko/docs/cli/overview/
@@ -110,6 +110,7 @@ Tailscale 주소가 없으면 Tailscale이 연결되어 있는지 확인하고 *
 -   서버에는 해당 에이전트가 사용하는 저장소, 도구 및 자격 증명이 필요합니다.
 -   서버는 절전 상태가 아니어야 하며 tailnet에 계속 연결되어 있어야 합니다.
 -   클라이언트를 다시 연결하면 서버가 소유한 상태로 돌아갑니다.
+-   서버에서 삭제한 프로젝트는 페어링된 모든 클라이언트의 사이드바에서도 사라지며 영구적인 유령 행이 남지 않습니다.
 
 ## 액세스 및 보안
 

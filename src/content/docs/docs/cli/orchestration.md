@@ -1,7 +1,7 @@
 ---
 title: "오케스트레이션"
 sourceUrl: https://www.onorca.dev/docs/cli/orchestration
-checkedAt: "2026-08-05T01:03:39.454Z"
+checkedAt: "2026-08-06T01:01:54.172Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/reference/
 next: /orca-docs-ko/docs/cli/automations/
@@ -76,9 +76,16 @@ orca orchestration send \
 orca orchestration worker-show --dispatch <dispatchId> --json
 orca orchestration worker-read --dispatch <dispatchId> --limit 50 --json
 orca orchestration worker-stop --dispatch <dispatchId> --json
+# After an accepted worker_done: reuse the same terminal for a follow-up Dispatch, or release it
+# (archives inspectable output, then closes only that coordinator-owned agent terminal):
+orca orchestration worker-release --dispatch <dispatchId> --json
+# Keep a settled worker live for debugging when the user asked to retain it:
+orca orchestration worker-retain --dispatch <dispatchId> --json
 # retry placement is explicit — --retry-of does not inherit --on/worktree:
 orca orchestration worker-start --task <taskId> --retry-of <dispatchId> --worktree current --agent codex --json
 ```
+
+완료된 워커 터미널을 출력을 다시 읽기 위한 용도로만 열어 두지 말고, `worker-read`은 `worker-release` 뒤에 사용합니다. 범용 `terminal close`은 릴리스가 `release_pending` 또는 `release_unknown`를 반환할 때 대체 수단으로 사용하지 말고, 처리 결과에 지정된 복구 작업을 따릅니다.
 
 ## 연합 워커(선택 사항)
 

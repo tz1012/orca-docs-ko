@@ -39,12 +39,20 @@
       "translated": "## 제공 범위"
     },
     "/docs/agents/native-chat/:paragraph:availability:0": {
-      "sourceHash": "a22302735525f0b1750a9af5d788d3bd08a11c98fa93c7f91df97483e3a64061",
-      "translated": "채팅 UI는 지원되는 로컬 에이전트 세션용 데스크톱 앱에서 제공됩니다. [모바일 컴패니언](ORCA_PROTECTED_0001)은 동일하게 페어링된 세션에 채팅 형식의 대화 기록 패턴을 재사용합니다."
+      "sourceHash": "e92ca8aa55c0b2f3b7d4ddefc40559dc4a4da1d490470c76100cf5b62fdb6181",
+      "translated": "`Chat UI`(채팅 UI)는 지원되는 로컬 및 원격(페어링된 서버) 에이전트 세션용으로 데스크톱에서 제공됩니다. [모바일 컴패니언](ORCA_PROTECTED_0001)은 동일하게 페어링된 세션에 채팅 형식의 대화 기록 패턴을 재사용합니다."
     },
     "/docs/agents/native-chat/:aside:availability:0": {
       "sourceHash": "97747bd1ce35687a5b810d872e098f2c90805271fba2dda9d6fad2df9ce9cf51",
       "translated": "실험적 기능\n\n대화 기록의 충실도, 스트리밍 및 터미널과의 기능 일치는 계속 조정 중입니다. ORCA_PROTECTED_0001의 모든 세부 정보가 필요하면 원시 TUI를 사용하는 것이 좋습니다."
+    },
+    "/docs/agents/native-chat/:heading:questions-from-the-agent:0": {
+      "sourceHash": "b4d750cb4091ef00aff59a5b9559b6eb564463678039ba8be51b1376b041d444",
+      "translated": "## 에이전트의 질문"
+    },
+    "/docs/agents/native-chat/:paragraph:questions-from-the-agent:0": {
+      "sourceHash": "4a0c36acffe739b7913deaa69b626567e1308298cfc52308cbb631189335ae15",
+      "translated": "ORCA_PROTECTED_0001가 **`AskUserQuestion`(사용자에게 질문)** 또는 이와 유사한 구조화된 ORCA_PROTECTED_0002 카드를 표시하면, `Chat UI`(채팅 UI)는 이를 접힌 도구 호출로 취급하지 않고 대화 기록에 질문 카드를 렌더링하여 작성기에서 답변할 수 있게 해야 합니다. 이는 로컬 창뿐 아니라 페어링된 [원격 ORCA_PROTECTED_0003 서버](ORCA_PROTECTED_0004) 또는 헤드리스 호스트에서 실행되는 에이전트에도 적용됩니다."
     }
   }
 }

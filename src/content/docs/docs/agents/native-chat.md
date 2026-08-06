@@ -1,7 +1,7 @@
 ---
 title: "채팅 UI(네이티브 채팅)"
 sourceUrl: https://www.onorca.dev/docs/agents/native-chat
-checkedAt: "2026-08-05T01:03:39.454Z"
+checkedAt: "2026-08-06T01:01:54.172Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/codex-hot-swap/
 next: /orca-docs-ko/docs/agents/session-history/
@@ -29,9 +29,13 @@ translationNotice:
 -   슬래시 명령과 검색된 **스킬**을 보려면 `/`을 입력합니다. 가능한 경우 에이전트별로 필터링됩니다.
 -   에이전트가 제공하는 경우 **`model`(모델)** 및 옵션 칩(사고 수준, 모드, 에이전트별 세션 옵션)을 사용합니다. **에이전트 프로세스가 시작되기 전에는** 작성기에 최초 시작 시 적용되는 시작 옵션 초안이 표시될 수 있습니다. 세션이 활성화된 뒤에는 실행 중인 턴에만 영향을 주는 칩이 세션 준비가 끝날 때까지 비활성화되거나 라벨이 표시됩니다. 활성 값은 해당 탭의 CLI로 전달됩니다.
 
+## 에이전트의 질문
+
+Claude가 **`AskUserQuestion`(사용자에게 질문)** 또는 이와 유사한 구조화된 permission/question 카드를 표시하면, `Chat UI`(채팅 UI)는 이를 접힌 도구 호출로 취급하지 않고 대화 기록에 질문 카드를 렌더링하여 작성기에서 답변할 수 있게 해야 합니다. 이는 로컬 창뿐 아니라 페어링된 [원격 Orca 서버](/orca-docs-ko/docs/remote-servers/) 또는 헤드리스 호스트에서 실행되는 에이전트에도 적용됩니다.
+
 ## 제공 범위
 
-채팅 UI는 지원되는 로컬 에이전트 세션용 데스크톱 앱에서 제공됩니다. [모바일 컴패니언](/orca-docs-ko/docs/mobile/)은 동일하게 페어링된 세션에 채팅 형식의 대화 기록 패턴을 재사용합니다.
+`Chat UI`(채팅 UI)는 지원되는 로컬 및 원격(페어링된 서버) 에이전트 세션용으로 데스크톱에서 제공됩니다. [모바일 컴패니언](/orca-docs-ko/docs/mobile/)은 동일하게 페어링된 세션에 채팅 형식의 대화 기록 패턴을 재사용합니다.
 
 실험적 기능
 

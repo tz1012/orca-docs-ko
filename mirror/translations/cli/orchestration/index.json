@@ -295,7 +295,7 @@
       "translated": "검사/복구 명령은 다음과 같습니다."
     },
     "/docs/cli/orchestration/:code:preferred-supervised-loop:3": {
-      "sourceHash": "6226de7afaa7b029091b23d36dff0dbeebfc76c18e7aa15c8df236b015f623a5",
+      "sourceHash": "7171dd4157242032e466ea803ff199088f10b91631e7f83f3fdd6d69a23d62ad",
       "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/orchestration/:heading:federated-workers-optional:0": {
@@ -345,6 +345,10 @@
     "/docs/cli/orchestration/:code:full-guide:0": {
       "sourceHash": "f37226c7a843746a1de9f62485bfe277938dd18b8a8733ab9ba50d031601f480",
       "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/orchestration/:paragraph:preferred-supervised-loop:4": {
+      "sourceHash": "0f9f61e41b0c9aca2529b2a454eb4264e2b77b11672679feb2c24627c841477a",
+      "translated": "완료된 워커 터미널을 출력을 다시 읽기 위한 용도로만 열어 두지 말고, `ORCA_PROTECTED_0001`은 `ORCA_PROTECTED_0002` 뒤에 사용합니다. 범용 `ORCA_PROTECTED_0003`은 릴리스가 `ORCA_PROTECTED_0004` 또는 `ORCA_PROTECTED_0005`를 반환할 때 대체 수단으로 사용하지 말고, 처리 결과에 지정된 복구 작업을 따릅니다."
     }
   }
 }

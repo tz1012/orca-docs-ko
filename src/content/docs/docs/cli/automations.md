@@ -1,7 +1,7 @@
 ---
 title: "예약된 자동화"
 sourceUrl: https://www.onorca.dev/docs/cli/automations
-checkedAt: "2026-08-05T01:03:39.454Z"
+checkedAt: "2026-08-06T01:01:54.172Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/orchestration/
 next: /orca-docs-ko/docs/cli/computer-use/
@@ -115,7 +115,9 @@ orca automations show <automationId> --json
 orca automations edit <automationId> --enabled --json
 ````
 
-이름, 프롬프트, 공급자, 대상, 일정 또는 활성화된 상태를 변경하려면 `edit`을 사용하세요. `remove`는 자동화 및 실행 기록을 삭제합니다.
+데스크톱 자동화 목록에 일정이 많으면 검색 필드를 사용하여 **`name`(이름)**, **`project`(프로젝트)** 또는 **`prompt`(프롬프트)** 텍스트로 필터링합니다.
+
+이름, 프롬프트, 공급자, 대상, 일정 또는 활성화 상태를 변경하려면 `edit`을 사용합니다. `remove`는 자동화와 실행 기록을 삭제합니다.
 
 ## 요청 시 실행
 

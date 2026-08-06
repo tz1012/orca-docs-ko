@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-08-05T01:03:39.454Z"
+checkedAt: "2026-08-06T01:01:54.172Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -132,11 +132,11 @@ translationNotice:
 
 ## 저장소
 
--   저장소별 기준 참조와 후크를 설정합니다.
+-   저장소별 기준 ref와 후크를 설정합니다.
 -   작업 트리를 만들 때 명령을 자동 실행합니다.
--   사이드바의 저장소 아이콘으로 아이콘, 이모지, 업로드 이미지, 웹사이트 파비콘 또는 GitHub 아바타를 선택한 다음 사전 설정 또는 사용자 지정 16진수 배지 색상을 선택합니다.
--   커밋 메시지, 풀 리퀘스트 세부 정보 및 브랜치 이름의 소스 제어 AI 재정의를 설정합니다.
--   **`Worktree Shared Paths`(작업 트리 공유 경로)** — 기본 체크아웃의 Git에서 무시하는 경로를 각 새 작업 트리에 생성합니다. 가능한 경우 macOS에서는 APFS 복제 복사를 사용하고, 그 외에는 심볼릭 링크를 사용합니다. `orca.yaml`의 저장소 커밋 `worktree.sharedDirectories` 및 `.worktreeinclude`를 보완합니다([작업 트리](/orca-docs-ko/docs/model/worktrees/) 참조).
+-   사이드바의 저장소 아이콘으로 아이콘, 전체 검색이 가능한 이모지 선택기, 업로드 이미지, 웹사이트 파비콘 또는 GitHub 아바타를 선택한 다음 사전 설정 또는 사용자 지정 16진수 배지 색상을 선택합니다.
+-   커밋 메시지, 풀 리퀘스트 세부 정보 및 브랜치 이름에 대한 `Source Control AI`(소스 제어 AI) 재정의를 설정합니다.
+-   **`Worktree Shared Paths`(작업 트리 공유 경로)** — 기본 체크아웃에서 Git이 무시하는 경로를 각 새 작업 트리에 구체화합니다. 가능한 경우 macOS에서는 APFS 복제 복사를 사용하고, 그 외에는 심볼릭 링크를 사용합니다. 저장소에 커밋된 `worktree.sharedDirectories`(`orca.yaml`)와 `.worktreeinclude`를 보완합니다([작업 트리](/orca-docs-ko/docs/model/worktrees/) 참조).
 
 ## 플로팅 작업 공간
 

@@ -71,8 +71,8 @@
       "translated": "````\nORCA_PROTECTED_0001\n````"
     },
     "/docs/cli/automations/:paragraph:review-and-enable:1": {
-      "sourceHash": "e9af02ebfeef91a4903030f2a8ea1c1dfe07462842ff8196b6fbe0ece5436810",
-      "translated": "이름, 프롬프트, 공급자, 대상, 일정 또는 활성화된 상태를 변경하려면 `ORCA_PROTECTED_0001`을 사용하세요. `ORCA_PROTECTED_0002`는 자동화 및 실행 기록을 삭제합니다."
+      "sourceHash": "55d5526eb5ac4342e263174078381a9337d034c2345c64881ab628c06210acae",
+      "translated": "데스크톱 자동화 목록에 일정이 많으면 검색 필드를 사용하여 **`name`(이름)**, **`project`(프로젝트)** 또는 **`prompt`(프롬프트)** 텍스트로 필터링합니다."
     },
     "/docs/cli/automations/:heading:run-on-demand:0": {
       "sourceHash": "4e26eb1bbae61dd483457fd5ea577bf2db1e4885bd102da0e98e000aad636697",
@@ -133,6 +133,10 @@
     "/docs/cli/automations/:code:missed-run-grace:0": {
       "sourceHash": "94478f4c23a45233740f0a5a63894483a5d3c367d5ec53cc01c1cff9aa6a7dea",
       "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/automations/:paragraph:review-and-enable:2": {
+      "sourceHash": "e9af02ebfeef91a4903030f2a8ea1c1dfe07462842ff8196b6fbe0ece5436810",
+      "translated": "이름, 프롬프트, 공급자, 대상, 일정 또는 활성화 상태를 변경하려면 `ORCA_PROTECTED_0001`을 사용합니다. `ORCA_PROTECTED_0002`는 자동화와 실행 기록을 삭제합니다."
     }
   }
 }

@@ -91,8 +91,8 @@
       "translated": "- [에이전트 세션 기록](ORCA_PROTECTED_0001) — ORCA_PROTECTED_0002가 최대 절전 모드로 전환되지 않은 세션을 포함하여 이전 세션을 수동으로 재개합니다.\n- [ORCA_PROTECTED_0003 계정 핫스왑](ORCA_PROTECTED_0004) — 최대 절전 모드와 함께 작동하는 세션을 다시 시작하지 않고 활성 ORCA_PROTECTED_0005 로그인을 교환합니다."
     },
     "/docs/agents/hibernation/:paragraph:what-gets-hibernated:2": {
-      "sourceHash": "80b6ac06bdf9397067cf540a4b708afacd73779dd82426acd4865d286cb575ad",
-      "translated": "사이드바에서 작업 트리를 수동으로 절전할 수도 있습니다. 중첩된 하위 작업 트리가 있으면 **`Sleep with Descendants`(하위 항목과 함께 절전)**를 사용할 수 있습니다. [작업 트리](ORCA_PROTECTED_0001)를 참조합니다."
+      "sourceHash": "8f3eb9411185fba272432ccfc2ac8a1cf1076aa94483d9f490f4f3d8febb11c1",
+      "translated": "사이드바에서 작업 트리를 수동으로 절전할 수도 있습니다. 중첩된 하위 작업 트리가 있으면 **`Sleep with Descendants`(하위 항목과 함께 절전)**를 사용할 수 있습니다. [작업 트리](ORCA_PROTECTED_0001)를 참조합니다. 수동 절전은 다시 시작할 수 있는 **`finished`(완료됨)** 및 **`interrupted`(중단됨)** 세션을 유지하므로 작업 트리를 다시 열 때 동일한 재개 플래그로 다시 실행할 수 있습니다. 창이 더 이상 실시간 상태가 아니라는 이유만으로 해당 세션 기록을 지우지 않습니다."
     }
   }
 }

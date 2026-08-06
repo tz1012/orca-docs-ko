@@ -175,8 +175,8 @@
       "translated": "`Branch name`(브랜치 이름) 필드는 입력한 작업 공간 이름이나 기준 브랜치에서 만들 때만 제공됩니다. 작업 공간이 추적 중인 작업 항목에 연결되면 브랜치는 해당 항목에서 파생됩니다. 연결된 ORCA_PROTECTED_0001 PR은 제출 시 브랜치를 다시 확인하기도 하므로, ORCA_PROTECTED_0002는 조용히 무시되는 재정의를 방지하기 위해 필드를 숨깁니다."
     },
     "/docs/model/worktrees/:list:sidebar-layout:0": {
-      "sourceHash": "6eb2539ed1d0a11dadcee327ffc6eda4d9a06da5f9a1240b0e8ea21b53dc9faf",
-      "translated": "-   **`Sleeping`(절전 중)** 작업 공간\n-   **`Default branch`(기본 브랜치)** 작업 공간(기본 체크아웃 행)\n-   **`Automation-created`(자동화에서 생성됨)** 작업 공간\n-   **`CLI-created`(CLI에서 생성됨)** 작업 공간 — `ORCA_PROTECTED_0001`을 통해 생성됨(카드에 마우스를 올리면 **ORCA_PROTECTED_0002 CLI** 출처 세부 정보가 표시됨)\n-   **`Detached HEAD`(분리된 HEAD)** 작업 공간 — 브랜치가 아닌 커밋에 있는 체크아웃"
+      "sourceHash": "060ba3dc4b77a2b316841339b592e1261c344eb3d6129d4eb8145311a661073d",
+      "translated": "-   **`Sleeping`(절전 중)** 작업 공간 — 이 필터에서도 각 프로젝트의 **`entry-point / main`(진입점/기본)** 작업 공간이 계속 표시되어 해당 체크아웃이 유휴 상태일 때 프로젝트 행이 사라지지 않습니다.\n-   **`Except default branch`(기본 브랜치 제외)**(**`Hide sleeping`(절전 중인 항목 숨기기)**이 켜진 동안만) — 절전 중인 항목을 정리할 때 기본 브랜치 작업 공간을 계속 표시합니다. 절전 중인 작업 공간이 이미 표시되는 경우 이 하위 옵션은 숨겨집니다.\n-   **`Default branch`(기본 브랜치)** 작업 공간(기본 체크아웃 행)\n-   **`Automation-created`(자동화에서 생성됨)** 작업 공간\n-   **`CLI-created`(CLI에서 생성됨)** 작업 공간 — `ORCA_PROTECTED_0001`을 통해 생성됩니다(카드에 마우스를 올리면 **ORCA_PROTECTED_0002 CLI** 출처 세부 정보가 표시됩니다).\n-   **`Detached HEAD`(분리된 HEAD)** 작업 공간 — 브랜치가 아닌 커밋에 있는 체크아웃"
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:5": {
       "sourceHash": "b4f294c2c7154f23e22dabd5a154f3a7aa42576defc0c3032048115d3a510f90",
@@ -203,8 +203,8 @@
       "translated": "[ORCA_PROTECTED_0001 실행 방식](ORCA_PROTECTED_0002)을 참조합니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:7": {
-      "sourceHash": "a081940712c9350033f2cdcd9883ee40d693684015940f817be22237df1f4e84",
-      "translated": "사이드바에서 작업 트리 제목을 두 번 클릭하면 인라인으로 이름을 변경할 수 있습니다. 카드의 다른 위치를 두 번 클릭하면 기존처럼 전체 편집 대화 상자가 열립니다."
+      "sourceHash": "7062fea6299eedce682be963a084e7d81188cd424f3f3fdb465001aefee31d3e",
+      "translated": "사이드바에서 작업 트리 제목을 두 번 클릭하면 인라인으로 이름을 변경할 수 있습니다. 카드의 다른 위치를 두 번 클릭하면 기존처럼 전체 편집 대화 상자가 열립니다. **`Edit Worktree Details`(작업 트리 세부 정보 편집)**에서 이슈 필드는 **ORCA_PROTECTED_0001** 또는 **ORCA_PROTECTED_0002**를 허용합니다(필드의 칩을 사용하며 URL을 붙여넣으면 자동으로 감지합니다). 작업 공간마다 하나의 이슈만 연결할 수 있으며, 공급자를 변경하거나 필드를 지우면 이전 연결이 해제됩니다. 호스트 연결이 끊긴 SSH 작업 공간에서는 카드 제목 행에 인라인 재연결 컨트롤이 표시될 수 있습니다([SSH 작업 트리](ORCA_PROTECTED_0003) 참조)."
     }
   }
 }

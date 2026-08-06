@@ -1,7 +1,7 @@
 ---
 title: "에이전트 최대 절전 모드"
 sourceUrl: https://www.onorca.dev/docs/agents/hibernation
-checkedAt: "2026-08-05T01:03:39.454Z"
+checkedAt: "2026-08-06T01:01:54.172Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/session-history/
 next: /orca-docs-ko/docs/agents/usage-tracking/
@@ -34,7 +34,7 @@ Orca은 다음 `all`(모두) 해당하는 경우에만 에이전트 터미널을
 
 검사에 실패한 터미널은 계속 실행됩니다. 작업 트리에 에이전트 창이 여러 개 있는 경우 하나의 단위로 함께 최대 절전 모드로 전환되므로 부분적으로 일시 중지된 작업 트리는 배송되지 않습니다.
 
-사이드바에서 작업 트리를 수동으로 절전할 수도 있습니다. 중첩된 하위 작업 트리가 있으면 **`Sleep with Descendants`(하위 항목과 함께 절전)**를 사용할 수 있습니다. [작업 트리](/orca-docs-ko/docs/model/worktrees/)를 참조합니다.
+사이드바에서 작업 트리를 수동으로 절전할 수도 있습니다. 중첩된 하위 작업 트리가 있으면 **`Sleep with Descendants`(하위 항목과 함께 절전)**를 사용할 수 있습니다. [작업 트리](/orca-docs-ko/docs/model/worktrees/)를 참조합니다. 수동 절전은 다시 시작할 수 있는 **`finished`(완료됨)** 및 **`interrupted`(중단됨)** 세션을 유지하므로 작업 트리를 다시 열 때 동일한 재개 플래그로 다시 실행할 수 있습니다. 창이 더 이상 실시간 상태가 아니라는 이유만으로 해당 세션 기록을 지우지 않습니다.
 
 ## 유휴 창 조정
 
