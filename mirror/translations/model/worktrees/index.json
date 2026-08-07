@@ -71,12 +71,12 @@
       "translated": "사이드바는 기본적으로 `project`(프로젝트)별로 작업 트리를 그룹화합니다. 최상위 행은 프로젝트(프로젝트 1개 = git repo 1개 또는 관련 클러스터)이며 현재 작업 중인 작업 트리로 확장됩니다. 헤더에는 자체 필터 입력(전역 검색과 별개)이 있으므로 사이드바를 떠나지 않고도 목록 범위를 좁힐 수 있습니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:1": {
-      "sourceHash": "eb2fd940a42feaa7336d9fa61b5341adb9fcddea7f17796bb4bf7eaaab01b585",
-      "translated": "사이드바 헤더의 필터 메뉴에서는 다음 항목을 숨길 수 있습니다."
+      "sourceHash": "6a614710dc683e8616494550b64fc9731aeea717bfac33eb81823e8adf739ed1",
+      "translated": "사이드바 헤더의 필터 메뉴는 호스트와 프로젝트 범위를 공통 **`Show`(표시)** 섹션 아래에 묶습니다. 이 섹션에는 **`Hosts`(호스트)** 및 프로젝트를 위한 하위 메뉴 행이 있으며, 그 뒤에 숨김 토글이 표시됩니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:2": {
-      "sourceHash": "6f589505dc8a976c149d15facdb740200d5bc12b5615b7c7f89c1fa647b9bcb3",
-      "translated": "활성 필터 수가 필터 컨트롤에 표시되며 **`Clear`(지우기)**는 켜져 있는 필터만 초기화합니다. 텍스트 검색과 [작업 트리 점프 팔레트](ORCA_PROTECTED_0001)(`ORCA_PROTECTED_0002`)에서는 검색어를 입력하면 이 필터로만 숨겨진 작업 공간도 계속 찾을 수 있습니다."
+      "sourceHash": "118b067f7508eb2672991cbed22973de6f78757c7cba47f33cc4143f5a47f1d8",
+      "translated": "활성 필터 수가 필터 컨트롤에 표시되며 **`Clear`(지우기)**는 켜져 있는 필터만 초기화합니다. 텍스트 검색과 [작업 트리 점프 팔레트](ORCA_PROTECTED_0001)(`ORCA_PROTECTED_0002`)에서는 검색어를 입력하면 이 필터로만 숨겨진 작업 공간도 계속 찾을 수 있습니다. 점프 팔레트에는 **`Tab`(Tab 키)**으로 여는 자체 ORCA_PROTECTED_0003 필터도 있습니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:3": {
       "sourceHash": "dfe72ca58d0403dcfd1e926e5488797fe16a89c8374d925a6762c6da1b96a221",

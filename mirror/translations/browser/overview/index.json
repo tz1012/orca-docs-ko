@@ -19,8 +19,8 @@
       "translated": "## 컨트롤"
     },
     "/docs/browser/overview/:list:controls:0": {
-      "sourceHash": "564521d8b8908e39f6b2fe27c618b77258ce284d072bea9ee442b19c3c7d9d78",
-      "translated": "- 기록 및 퍼지 URL 완성 기능이 있는 주소 표시줄.\n- 뒤로/앞으로/새로고침/중지.\n- `ORCA_PROTECTED_0001` — 페이지에서 찾습니다.\n- `ORCA_PROTECTED_0002` — 이 작업 트리로 범위가 지정된 새 탭입니다.\n- `ORCA_PROTECTED_0003` — 마지막으로 닫은 탭을 다시 엽니다."
+      "sourceHash": "c4e3a3107a92122f46140e568dbb04c26e239e3978350f00da9f001fd958e122",
+      "translated": "-   기록 및 퍼지 URL 완성 기능이 있는 주소 표시줄입니다.\n-   뒤로/앞으로/새로고침/중지 컨트롤입니다. 새로고침 컨트롤 위에 마우스를 올리면 일반 새로고침 단축키가 표시됩니다. 마우스 오른쪽 버튼으로 클릭하거나 길게 누르면 **`Reload`(새로고침)** 및 **`Hard Reload`(강력 새로고침)**와 각 단축키가 표시됩니다. 강력 새로고침은 로컬 프런트엔드 자산을 반복 수정할 때 캐시를 우회합니다.\n-   `ORCA_PROTECTED_0001` — 페이지에서 찾습니다.\n-   `ORCA_PROTECTED_0002` — 이 작업 트리로 범위가 지정된 새 탭을 엽니다.\n-   `ORCA_PROTECTED_0003` — 마지막으로 닫은 탭을 다시 엽니다."
     },
     "/docs/browser/overview/:heading:worktree-scoping:0": {
       "sourceHash": "5662d881ef5bd89dd3b99a62a1cdbd96e1f26f85cb458485d9c19364b1206bba",

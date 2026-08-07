@@ -43,8 +43,8 @@
       "translated": "## 문제"
     },
     "/docs/review/github/:paragraph:issues:0": {
-      "sourceHash": "74d5535f325c68ab1ebfca2d9d937c4f40f525328d50c150eafaeaba9d5ad9fc",
-      "translated": "이슈 서랍을 사용하면 ORCA_PROTECTED_0002 내에서 ORCA_PROTECTED_0001 및 GitLab 이슈를 찾아보고 필터링하고 편집할 수 있습니다. 이슈에서 작업 트리를 생성하면 작업 이름이 미리 채워지고 둘이 연결되어 리뷰가 작업에 계속 연결됩니다."
+      "sourceHash": "be9eb0681a0e6a43a761c641b5671538360f72f7269d6660969fad1e5d322cda",
+      "translated": "이슈 서랍을 사용하면 ORCA_PROTECTED_0001 및 GitLab 이슈를 ORCA_PROTECTED_0002 내에서 찾아보고 필터링하고 편집할 수 있습니다. ORCA_PROTECTED_0003 이슈 또는 PR에서 작업 트리를 만들면 백그라운드에서 조용히 생성하지 않고 대화형 작업 공간 작성기가 열립니다. 따라서 이슈 명령 자동화, SSH 대상 및 폴더 작업 공간이 다른 생성 경로와 같은 방식으로 작동합니다. 작성기는 작업 이름을 미리 채우고 이슈를 연결하므로 검토가 작업에 계속 연결됩니다."
     },
     "/docs/review/github/:paragraph:issues:1": {
       "sourceHash": "c5098a0a78e25a67fe2b4a9c088287da91c1ae6835153e31b5684a54695b770f",

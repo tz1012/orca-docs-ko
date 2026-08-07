@@ -39,12 +39,12 @@
       "translated": "## 페어링"
     },
     "/docs/mobile/:list:pairing:0": {
-      "sourceHash": "3028550a5833777d00792c3e3fb80d921dfd425ec67938b20ecdd03cce073654",
-      "translated": "1. 데스크톱의 계정/상태 메뉴에서 ORCA_PROTECTED_0001의 페어링 흐름을 엽니다. ORCA_PROTECTED_0002는 일회성 페어링 코드를 표시합니다.\n2. 모바일에서 ORCA_PROTECTED_0003 컴패니언 앱을 열고 `Pair`(페어링)을 선택한 다음 코드를 붙여넣습니다. (데스크톱에서 딥링크를 따라 모바일 페어링 화면으로 직접 이동할 수도 있습니다.)\n3. 페어링 교환은 데스크톱과 휴대폰 간에 직접 이루어집니다. ORCA_PROTECTED_0004는 페어링된 전화기에 대해 결과 장치 토큰을 사용합니다."
+      "sourceHash": "98aa81720fa7ee8dbe4e5ed1c3a5bbb408b7a0f1d49bb1fe1657979f584f7cf2",
+      "translated": "1. 데스크톱의 계정/상태 메뉴에서 ORCA_PROTECTED_0001의 페어링 흐름을 엽니다. ORCA_PROTECTED_0002는 일회성 페어링 코드를 표시합니다.\n2. 모바일에서 ORCA_PROTECTED_0003 컴패니언 앱을 열고 **`Pair`(페어링)**를 선택한 다음 코드를 붙여넣습니다. 데스크톱에서 딥 링크를 따라 모바일 페어링 화면으로 직접 이동할 수도 있습니다.\n3. 사용할 수 있으면 ORCA_PROTECTED_0004 Relay를 통한 페어링을 우선 사용합니다. 로그인은 Relay에만 필요합니다. Relay에서는 로컬 네트워크 주소 선택기를 선택적으로 사용할 수 있으며, LAN 고속 경로를 사용하려면 펼칩니다. LAN 페어링에는 계속 주소가 필요합니다.\n4. 페어링 교환을 통해 해당 휴대전화의 장치 토큰이 설정됩니다. 선택한 경로에서 데스크톱에 연결할 수 있는 상태를 유지합니다."
     },
     "/docs/mobile/:paragraph:pairing:0": {
-      "sourceHash": "9422243b54663aa890deba93ba395dfb389bfabe466f95f9ea4a1515ac202de4",
-      "translated": "데스크톱 앱을 닫으면 연결이 끊어지며 클라우드 릴레이가 없습니다. 데스크톱을 다시 열면 전화기가 자동으로 다시 연결됩니다."
+      "sourceHash": "baa1ea413cb8bfcbcc611b2eb8f6f8e0b744f68e4a3b6b54688836f55e544d0e",
+      "translated": "데스크톱 앱을 닫으면 다시 열 때까지 ORCA_PROTECTED_0001 세션 연결이 끊어집니다. Relay 기반 페어링은 데스크톱의 Relay 연결을 따르므로 호스트가 오프라인 상태가 되면 데스크톱을 다시 엽니다."
     },
     "/docs/mobile/:heading:account-switcher:0": {
       "sourceHash": "172714fe3b5ae43c52a77bd88f0efeae84b181bce3a2eb9d9756edc834f58656",
@@ -111,8 +111,8 @@
       "translated": "채팅을 지원하는 에이전트(ORCA_PROTECTED_0001, ORCA_PROTECTED_0002 및 ORCA_PROTECTED_0003가 인식하는 기타 에이전트)의 경우 모바일은 원시 터미널 대신 **`Chat UI`(채팅 UI)**에서 세션을 열 수 있습니다. 읽기 쉬운 대화 기록, 작성기, ORCA_PROTECTED_0005 및 이미지 첨부를 제공하는 데스크톱의 [채팅 UI](ORCA_PROTECTED_0004)와 같은 개념입니다."
     },
     "/docs/mobile/:list:chat-ui:0": {
-      "sourceHash": "de7666be009902633f9e0b85c12a38b572da51ee89faca19b11c182f38164517",
-      "translated": "-   **기기 기본값** — 처음 실행할 때 모바일에서 이 휴대전화의 세션 열기 방식을 묻습니다. 나중에 **`Settings`(설정) → `Chat UI`(채팅 UI) → `Open sessions in Chat UI`(채팅 UI에서 세션 열기)**에서 변경합니다. 채팅 UI를 선택하기 전까지 기본값은 터미널입니다.\n-   **세션별 설정** — 세션 탭을 길게 누르고 **`Switch to chat view`(채팅 보기로 전환)** 또는 **`Switch to terminal view`(터미널 보기로 전환)**를 선택합니다. 이 재정의는 기기 기본값을 변경하지 않고 해당 탭에 유지됩니다.\n-   **작성기** — 답변을 입력하고 `ORCA_PROTECTED_0001`으로 작업 공간 파일을 멘션하며 일반적인 `ORCA_PROTECTED_0002` 명령(`ORCA_PROTECTED_0003`, `ORCA_PROTECTED_0004`, `ORCA_PROTECTED_0005`, …)을 사용하고 사진을 첨부하거나 받아씁니다. 첨부 이미지는 제거 가능한 썸네일로 표시되고 전송할 때 함께 전달되며 이미지만 보낼 수도 있습니다.\n-   **에이전트는 계속 데스크톱에서 소유** — 채팅 UI는 별도 클라우드 에이전트가 아니라 페어링된 데스크톱 세션을 보여 주는 보기입니다."
+      "sourceHash": "c47c0cb1608141a92d7c411553feba99f2677e3990de7a6d37f02aada1589244",
+      "translated": "-   **`Device default`(기기 기본값)** — 처음 실행할 때 모바일에서 이 휴대전화의 세션 열기 방식을 묻습니다. 나중에 **`Settings`(설정) → `Chat UI`(채팅 UI) → `Open sessions in Chat UI`(채팅 UI에서 세션 열기)**에서 변경합니다. 채팅 UI를 선택하기 전까지 기본값은 터미널입니다.\n-   **`Per-session`(세션별 설정)** — 세션 탭을 길게 누르고 **`Switch to chat view`(채팅 보기로 전환)** 또는 **`Switch to terminal view`(터미널 보기로 전환)**를 선택합니다. 이 재정의는 기기 기본값을 변경하지 않고 해당 탭에 유지됩니다.\n-   **`Composer`(작성기)** — 답변을 입력하고 `ORCA_PROTECTED_0001`으로 작업 공간 파일을 멘션하며 공유 카탈로그에서 에이전트에 맞는 `ORCA_PROTECTED_0002` 슬래시 명령을 사용합니다. 카탈로그에는 설명과 함께 ORCA_PROTECTED_0003 및 ORCA_PROTECTED_0004 명령 집합이 구분되어 표시됩니다. 사진을 첨부하거나 받아쓰기를 사용할 수도 있습니다. 첨부 이미지는 제거 가능한 썸네일로 표시되고 전송할 때 함께 전달되며, 이미지만 보내거나 여러 이미지를 첨부할 수도 있습니다.\n-   **`Model and session options`(모델 및 세션 옵션)** — 작성기에는 현재 모델과 세션 옵션을 위한 칩 행이 표시됩니다. 칩을 탭하면 원시 터미널로 전환하지 않고도 모델이나 옵션을 선택할 수 있으며, ORCA_PROTECTED_0005 모델을 직접 선택하는 기능도 포함됩니다.\n-   **데스크톱이 계속 에이전트를 소유함** — 채팅 UI는 별도 클라우드 에이전트가 아니라 페어링된 데스크톱 세션을 보여 주는 보기입니다."
     },
     "/docs/mobile/:heading:quick-commands:0": {
       "sourceHash": "7f51496625f0d8029771dc6731fb4d0946fdd0c122c211235e9d8f48eb114869",

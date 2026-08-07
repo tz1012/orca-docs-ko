@@ -1,7 +1,7 @@
 ---
 title: "리치 마크다운 편집기"
 sourceUrl: https://www.onorca.dev/docs/editing/markdown
-checkedAt: "2026-08-06T01:01:54.172Z"
+checkedAt: "2026-08-07T01:03:10.072Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/monaco/
 next: /orca-docs-ko/docs/editing/viewers/
@@ -51,6 +51,8 @@ YAML 및 TOML 프런트매터는 기본적으로 리치 편집기와 렌더링�
 | **`Enter`(Enter)** | 아래 셀로 이동합니다. 마지막 행에서는 행을 추가합니다. |
 | 완전히 빈 행에서 **`Backspace`(백스페이스)** | 행을 삭제합니다. 마지막 행이면 표 전체를 삭제합니다. |
 | 행에 내용이 남아 있는 상태에서 빈 셀의 **`Backspace`(백스페이스)** | 이전 셀로 이동합니다. |
+
+캐럿이 표 안에 있으면 리치 편집기 툴바에 행과 열을 한 번에 insert/delete하는 컨트롤이 표시됩니다. 표 셀을 마우스 오른쪽 버튼으로 클릭하면 컨텍스트 메뉴에서 같은 구조 변경 명령을 사용할 수 있습니다. **`Table`(표)** 하위 메뉴는 대상이 표 셀일 때만 표시됩니다.
 
 ## 목차
 

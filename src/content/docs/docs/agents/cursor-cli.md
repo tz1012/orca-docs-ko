@@ -1,7 +1,7 @@
 ---
 title: "Orca의 Cursor CLI"
 sourceUrl: https://www.onorca.dev/docs/agents/cursor-cli
-checkedAt: "2026-08-06T01:01:54.172Z"
+checkedAt: "2026-08-07T01:03:10.072Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/codex/
 next: /orca-docs-ko/docs/agents/custom-cli/

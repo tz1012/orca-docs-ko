@@ -1,7 +1,7 @@
 ---
 title: "호스팅된 리뷰, 문제 및 조치"
 sourceUrl: https://www.onorca.dev/docs/review/github
-checkedAt: "2026-08-06T01:01:54.172Z"
+checkedAt: "2026-08-07T01:03:10.072Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/commit-push/
 next: /orca-docs-ko/docs/review/linear/
@@ -39,7 +39,7 @@ GitHub 통합 — 작업 트리를 떠나지 않고도 PR을 열고, 확인하�
 
 ## 문제
 
-이슈 서랍을 사용하면 Orca 내에서 GitHub 및 GitLab 이슈를 찾아보고 필터링하고 편집할 수 있습니다. 이슈에서 작업 트리를 생성하면 작업 이름이 미리 채워지고 둘이 연결되어 리뷰가 작업에 계속 연결됩니다.
+이슈 서랍을 사용하면 GitHub 및 GitLab 이슈를 Orca 내에서 찾아보고 필터링하고 편집할 수 있습니다. GitHub 이슈 또는 PR에서 작업 트리를 만들면 백그라운드에서 조용히 생성하지 않고 대화형 작업 공간 작성기가 열립니다. 따라서 이슈 명령 자동화, SSH 대상 및 폴더 작업 공간이 다른 생성 경로와 같은 방식으로 작동합니다. 작성기는 작업 이름을 미리 채우고 이슈를 연결하므로 검토가 작업에 계속 연결됩니다.
 
 GitHub 문제의 경우 세부 정보 대화 상자에는 코멘트를 타임라인 이벤트(할당, 멘션, 상호 참조, 상태 변경 및 프로젝트 열 이동)와 인터리브하는 `Activity`(활동) 섹션이 있으므로 Orca를 떠나지 않고도 전체 기록을 볼 수 있습니다.
 

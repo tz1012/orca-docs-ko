@@ -1,7 +1,7 @@
 ---
 title: "브라우저 사용 프로필"
 sourceUrl: https://www.onorca.dev/docs/browser/profiles
-checkedAt: "2026-08-06T01:01:54.172Z"
+checkedAt: "2026-08-07T01:03:10.072Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/design-mode/
 next: /orca-docs-ko/docs/terminal/
@@ -15,9 +15,12 @@ translationNotice:
 
 ## 프로필 만들기
 
-1. [설정 → 브라우저 → 프로필](/orca-docs-ko/docs/settings/)을 엽니다.
-2. `Add profile`(프로필 추가)를 클릭하고 이름을 지정합니다.
-3. 선택적으로 쿠키, 사용자 에이전트 및 뷰포트 크기를 시드합니다.
+1. [`Settings`(설정) → `Browser`(브라우저) → `Profiles`(프로필)](/orca-docs-ko/docs/settings/)을 엽니다.
+2. **`Add profile`(프로필 추가)**을 클릭하고 이름을 지정합니다.
+3. 선택적으로 쿠키, 사용자 에이전트 및 뷰포트 크기를 초기값으로 설정합니다.
+4. Orca의 기본 Chrome 형식 사용자 에이전트를 거부하는 사이트(일부 Google 로그인 흐름 등)에서는 위장하지 않고 **`native Electron user agent`(기본 Electron 사용자 에이전트)**를 유지하는 프로필을 만듭니다. 기본 프로필은 Cloudflare와의 폭넓은 호환성을 위해 정리된 Chrome 사용자 에이전트를 계속 사용합니다.
+
+브라우저 설정을 스크립트로 구성할 때는 CLI에서 `orca tab profile create --no-ua-spoof`을 사용하여 사용자 에이전트를 위장하지 않는 프로필을 만들 수도 있습니다.
 
 ## 프로필 사용
 

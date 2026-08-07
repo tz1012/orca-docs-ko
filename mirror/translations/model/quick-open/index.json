@@ -31,20 +31,24 @@
       "translated": "한 번의 검색으로 모든 작업 트리와 모든 탭을 뛰어넘을 수 있습니다. 빈 입력의 자리 표시자는 *ORCA_PROTECTED_0001*을 읽습니다. 그에 따라 절반 및 ORCA_PROTECTED_0002 필터를 입력합니다. 입력을 시작하면 사이드바의 현재 필터에 의해 숨겨지더라도 보관되지 않은 작업 트리가 검색에 포함됩니다."
     },
     "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:1": {
-      "sourceHash": "09aae57770e753b827c38326369e48066c7c08cf6146a6f64cc93651d24a724f",
-      "translated": "결과는 다음과 같습니다:"
+      "sourceHash": "5fc56f5db0acd561e5b9c5e12d41a47d58aeaddb785ac0faca716bdc7c50645f",
+      "translated": "팔레트에서 **`Tab`(Tab 키)**을 누르면 호스트 및 프로젝트 필터 메뉴가 열립니다. 선택한 호스트와 프로젝트에 따라 결과 범위가 좁아지고, 선택 항목은 하나씩 제거할 수 있는 칩으로 표시됩니다. 팔레트를 닫으면 필터가 지워지므로 다음에 열 때는 범위가 지정되지 않습니다."
     },
     "/docs/model/quick-open/:list:worktree-jump-palette-cmd-j:0": {
       "sourceHash": "85bfa978c525d6e133bbcfcc6824ef4cb45972d9fd5dfd2511191960bb1a1514",
       "translated": "- `Recent Worktrees`(최근 작업 트리) — 검색어가 비어 있을 때 표시되는 최상단 섹션입니다. 마지막으로 포커스한 순서로 정렬되며 목록을 쉽게 훑어볼 수 있도록 항목 수가 제한됩니다.\n- 프로젝트와 저장소 그룹을 통해 이름으로 사이드바 섹션으로 이동합니다.\n- 입력을 시작하면 모든 작업 트리가 저장소별로 그룹화됩니다.\n- 리뷰 메타데이터가 이미 있으면 캐시된 ORCA_PROTECTED_0001 PR 제목 또는 번호(`ORCA_PROTECTED_0002`)와 캐시된 GitLab 병합 요청 제목 또는 번호(`ORCA_PROTECTED_0003`)로 작업 트리를 찾습니다.\n- 열려 있는 모든 탭이 먼저 현재 작업 트리 범위로, 그다음 전체 범위로 표시됩니다."
     },
     "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:2": {
-      "sourceHash": "200516872fa414ddb981df64cdaf5dde553c8696788217c66e0fa74fe57de8e3",
-      "translated": "작업 트리에서 Shift-Enter를 누르면 현재 창을 바꾸는 대신 새 분할에서 열립니다."
+      "sourceHash": "09aae57770e753b827c38326369e48066c7c08cf6146a6f64cc93651d24a724f",
+      "translated": "결과에는 다음이 포함됩니다."
     },
     "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:3": {
+      "sourceHash": "200516872fa414ddb981df64cdaf5dde553c8696788217c66e0fa74fe57de8e3",
+      "translated": "작업 트리에서 `Shift-Enter`를 누르면 현재 창을 바꾸는 대신 새 분할 창에서 엽니다."
+    },
+    "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:4": {
       "sourceHash": "a528ea4e44978e507c738dd4f61a69e7d001152b0b0370bf3028300c81644011",
-      "translated": "쿼리가 기존 작업 트리와 일치하지 않는 경우 팔레트는 입력된 텍스트를 이름으로 사용하여 `Create worktree`(작업 트리 만들기) 행을 제공합니다. 기존 경기가 먼저 선택된 상태로 유지되므로 실제 결과가 나올 때 Enter 키를 누르면 계속해서 이동합니다."
+      "translated": "검색어가 기존 작업 트리와 일치하지 않으면 팔레트에 입력한 텍스트를 이름으로 사용하는 **`Create worktree`(작업 트리 만들기)** 행이 표시됩니다. 기존 일치 항목이 먼저 선택된 상태로 유지되므로 실제 결과가 있을 때 `Enter`를 누르면 계속 해당 항목으로 이동합니다."
     },
     "/docs/model/quick-open/:aside:worktree-jump-palette-cmd-j:0": {
       "sourceHash": "bc7ae636351da95811436427340d53009419997beddd9b144abd51f4592f261b",

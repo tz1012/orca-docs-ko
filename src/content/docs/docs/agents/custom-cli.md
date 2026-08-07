@@ -1,7 +1,7 @@
 ---
 title: "사용자 정의 CLI 에이전트 추가"
 sourceUrl: https://www.onorca.dev/docs/agents/custom-cli
-checkedAt: "2026-08-06T01:01:54.172Z"
+checkedAt: "2026-08-07T01:03:10.072Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/cursor-cli/
 next: /orca-docs-ko/docs/agents/codex-hot-swap/

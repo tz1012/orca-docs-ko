@@ -1,7 +1,7 @@
 ---
 title: "작업트리별 브라우저"
 sourceUrl: https://www.onorca.dev/docs/browser/overview
-checkedAt: "2026-08-06T01:01:54.172Z"
+checkedAt: "2026-08-07T01:03:10.072Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/file-explorer/
 next: /orca-docs-ko/docs/browser/design-mode/
@@ -19,11 +19,11 @@ translationNotice:
 
 ## 컨트롤
 
-- 기록 및 퍼지 URL 완성 기능이 있는 주소 표시줄.
-- 뒤로/앞으로/새로고침/중지.
-- `Cmd-F` — 페이지에서 찾습니다.
-- `Cmd-T` — 이 작업 트리로 범위가 지정된 새 탭입니다.
-- `Cmd-Shift-T` — 마지막으로 닫은 탭을 다시 엽니다.
+-   기록 및 퍼지 URL 완성 기능이 있는 주소 표시줄입니다.
+-   뒤로/앞으로/새로고침/중지 컨트롤입니다. 새로고침 컨트롤 위에 마우스를 올리면 일반 새로고침 단축키가 표시됩니다. 마우스 오른쪽 버튼으로 클릭하거나 길게 누르면 **`Reload`(새로고침)** 및 **`Hard Reload`(강력 새로고침)**와 각 단축키가 표시됩니다. 강력 새로고침은 로컬 프런트엔드 자산을 반복 수정할 때 캐시를 우회합니다.
+-   `Cmd-F` — 페이지에서 찾습니다.
+-   `Cmd-T` — 이 작업 트리로 범위가 지정된 새 탭을 엽니다.
+-   `Cmd-Shift-T` — 마지막으로 닫은 탭을 다시 엽니다.
 
 ## 작업 트리 범위 지정
 

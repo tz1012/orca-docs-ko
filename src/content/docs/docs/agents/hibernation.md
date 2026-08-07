@@ -1,7 +1,7 @@
 ---
 title: "에이전트 최대 절전 모드"
 sourceUrl: https://www.onorca.dev/docs/agents/hibernation
-checkedAt: "2026-08-06T01:01:54.172Z"
+checkedAt: "2026-08-07T01:03:10.072Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/session-history/
 next: /orca-docs-ko/docs/agents/usage-tracking/

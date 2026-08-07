@@ -78,6 +78,10 @@
       "sourceHash": "62ff206820a03d2af28e229bab5504c09a75585c2b74629f58451d3532ae5f07",
       "translated": "리치 마크다운 표에서는 다음 키를 사용할 수 있습니다."
     },
+    "/docs/editing/markdown/:paragraph:tables:1": {
+      "sourceHash": "426e5d120989743b4ad881b9fb837496cccfe760f436ec7251cd727779bae991",
+      "translated": "캐럿이 표 안에 있으면 리치 편집기 툴바에 행과 열을 한 번에 ORCA_PROTECTED_0001하는 컨트롤이 표시됩니다. 표 셀을 마우스 오른쪽 버튼으로 클릭하면 컨텍스트 메뉴에서 같은 구조 변경 명령을 사용할 수 있습니다. **`Table`(표)** 하위 메뉴는 대상이 표 셀일 때만 표시됩니다."
+    },
     "/docs/editing/markdown/:table:tables:0": {
       "sourceHash": "7a2809166df2eba51d222ddfdca496aef44f26aaa90d2434f3940b168d8910c5",
       "translated": "| 키 | 동작 |\n| --- | --- |\n| **`Tab`(탭)** / **`Shift-Tab`(Shift+Tab)** | 다음/이전 셀로 이동합니다. 마지막 셀에서 Tab을 누르면 행을 삽입합니다. |\n| **`Enter`(Enter)** | 아래 셀로 이동합니다. 마지막 행에서는 행을 추가합니다. |\n| 완전히 빈 행에서 **`Backspace`(백스페이스)** | 행을 삭제합니다. 마지막 행이면 표 전체를 삭제합니다. |\n| 행에 내용이 남아 있는 상태에서 빈 셀의 **`Backspace`(백스페이스)** | 이전 셀로 이동합니다. |"

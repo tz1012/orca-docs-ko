@@ -1,7 +1,7 @@
 ---
 title: "탭, 창 및 분할 레이아웃"
 sourceUrl: https://www.onorca.dev/docs/model/tabs-panes-splits
-checkedAt: "2026-08-06T01:01:54.172Z"
+checkedAt: "2026-08-07T01:03:10.072Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/worktrees/
 next: /orca-docs-ko/docs/model/agents-sessions/
