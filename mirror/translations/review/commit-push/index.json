@@ -83,8 +83,8 @@
       "translated": "사이드바 `Source Control`(소스 제어) 패널은 현재 보기를 벗어나지 않고도 파일 준비 및 삭제, 커밋 메시지 작성, `Commit`(커밋), `Push`(푸시), `Pull`(풀) 또는 `Sync`(동기화) 실행과 같은 동일한 작업을 원클릭 작업으로 표시합니다. 경로에 ASCII가 아닌 문자가 포함된 경우에도 경로는 UTF-8로 렌더링됩니다."
     },
     "/docs/review/commit-push/:paragraph:source-control-panel:1": {
-      "sourceHash": "fb99452ae5b62ad5332aa7152e0f04e23917b9f239c319e9817bc738e23698e6",
-      "translated": "상단의 브랜치 컨텍스트 행에는 현재 브랜치(또는 분리된 HEAD)가 비교 기준(`ORCA_PROTECTED_0001`) 위에 쌓여 표시되므로 **`Create PR`(PR 만들기)** 및 원격 작업을 사용할 때도 현재 브랜치를 항상 확인할 수 있습니다. 브랜치에 사용할 수 있는 병합 기준점이 있으면 간결한 칩에 해당 분기점 대비 추가·삭제된 전체 줄 수가 표시됩니다. 이는 ORCA_PROTECTED_0002 영역의 합계가 아니라 하나의 범위 차이입니다. 긴 브랜치 이름은 칩을 가리지 않도록 잘립니다."
+      "sourceHash": "f9390b9abc2487f3b51d20ceaddcb558d2aff04d2d4c6b075c6df00c5e3f48b7",
+      "translated": "상단의 브랜치 컨텍스트 행에는 현재 브랜치(또는 분리된 HEAD)가 비교 기준(`ORCA_PROTECTED_0001`) 위에 쌓여 표시되므로 **`Create PR`(PR 만들기)** 및 원격 작업을 사용할 때도 현재 브랜치를 항상 확인할 수 있습니다. 브랜치에 사용할 수 있는 병합 기준점이 있으면 간결한 칩에 해당 분기점 대비 추가·삭제된 전체 줄 수가 표시됩니다. 이는 ORCA_PROTECTED_0002 영역의 합계가 아니라 하나의 범위 차이입니다. 호스트에서 구분 정보를 제공하면 칩에 마우스를 올려 **`Code breakdown`(코드 분석)**을 확인할 수 있습니다. **`Source`(소스)**, **`Tests`(테스트)** 및 0이 아닐 때만 표시되는 **`Generated`(생성됨)**으로 나뉘며, 콘텐츠 분석이 아니라 경로 휴리스틱만 사용합니다. 긴 브랜치 이름은 칩을 가리지 않도록 잘립니다."
     },
     "/docs/review/commit-push/:paragraph:source-control-panel:2": {
       "sourceHash": "275538ff824dad6f47ff7f1ea511a6b9898fdec4ead6bc1361b896b5bab774bb",

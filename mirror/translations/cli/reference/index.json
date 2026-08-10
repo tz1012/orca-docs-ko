@@ -147,8 +147,8 @@
       "translated": "스냅샷 -> 작업 -> 스냅샷 루프를 사용하세요."
     },
     "/docs/cli/reference/:code:built-in-browser:0": {
-      "sourceHash": "a5a8839f49e95eae7ac342e9986a1e8fc6ad2ecf16a11591e06b8d5ca5505759",
-      "translated": "````\nORCA_PROTECTED_0001\n````"
+      "sourceHash": "3ee41f834413c8452606d6aa2ff9dcd4e8e66b40e843c6d085fbaa1e50968500",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/reference/:paragraph:built-in-browser:2": {
       "sourceHash": "0812fedf4e29fe7c5d05b6489c4d5d8285d074e583689bfec1953854ce4eeabc",

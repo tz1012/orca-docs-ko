@@ -122,6 +122,10 @@
       "sourceHash": "017dee31e7d52b8e5572129e14eec7cac2d7f722d98a94a6b4655b7764c4f0bc",
       "translated": "1. [설정 -> 에이전트](ORCA_PROTECTED_0001)를 엽니다.\n2. `Add custom agent`(사용자 지정 에이전트 추가)를 클릭합니다.\n3. 하네스 바이너리 또는 실행 명령에서 ORCA_PROTECTED_0002를 지정합니다.\n4. 저장한 다음 작업 트리의 에이전트 선택기에서 시작합니다."
     },
+    "/docs/agents/glm-agent/:paragraph:openclaw:6": {
+      "sourceHash": "1505103917efd4f339cbce69eddc07e862378b05246c0657f3928177445c2f5b",
+      "translated": "핵심 규칙은 간단합니다. 하네스가 ORCA_PROTECTED_0001 설정을 저장하는 위치에서 GLM-5.2를 구성한 다음, ORCA_PROTECTED_0002가 올바른 작업 트리에서 해당 하네스를 실행하도록 합니다."
+    },
     "/docs/agents/glm-agent/:paragraph:add-any-other-glm-52-harness:1": {
       "sourceHash": "1505103917efd4f339cbce69eddc07e862378b05246c0657f3928177445c2f5b",
       "translated": "핵심 규칙은 간단합니다. 하네스가 ORCA_PROTECTED_0001 설정을 저장할 때마다 GLM-5.2를 구성한 다음 ORCA_PROTECTED_0002가 올바른 작업 트리에서 해당 하네스를 시작하도록 합니다."

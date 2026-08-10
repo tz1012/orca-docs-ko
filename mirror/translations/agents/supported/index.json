@@ -7,8 +7,8 @@
       "translated": "# 지원되는 에이전트"
     },
     "/docs/agents/supported/:paragraph:supported-agents:0": {
-      "sourceHash": "d631717e9c9f264a68ddcedb29fec4c5296eb160c8d654dd3e4ff038e7fc3722",
-      "translated": "모든 에이전트 ORCA_PROTECTED_0001은 기본적으로 제공되며 직접 추가하는 방법도 있습니다."
+      "sourceHash": "1bc6d926dd1928db839e6202f817836e78a2e10e4a984ea20a023b1e4ba28588",
+      "translated": "ORCA_PROTECTED_0001가 기본으로 제공하는 모든 에이전트입니다."
     },
     "/docs/agents/supported/:paragraph:supported-agents:1": {
       "sourceHash": "bd69dd5d72eaef56e2e6ce16d0a975988a60a73c6f89a335fef1a13f8e92aa45",

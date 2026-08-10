@@ -27,10 +27,6 @@
         "slug": "docs/agents/cursor-cli"
       },
       {
-        "label": "사용자 정의 CLI 에이전트 추가",
-        "slug": "docs/agents/custom-cli"
-      },
-      {
         "label": "Orca ADE에서 GLM-5.2를 사용하는 방법",
         "slug": "docs/agents/glm-agent"
       },

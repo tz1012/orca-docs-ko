@@ -1,7 +1,7 @@
 ---
 title: "호스팅된 리뷰, 문제 및 조치"
 sourceUrl: https://www.onorca.dev/docs/review/github
-checkedAt: "2026-08-07T01:03:10.072Z"
+checkedAt: "2026-08-10T01:02:47.329Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/commit-push/
 next: /orca-docs-ko/docs/review/linear/
@@ -29,7 +29,7 @@ GitHub 통합 — 작업 트리를 떠나지 않고도 PR을 열고, 확인하�
 -   Orca에 연결된 PR/MR의 URL이 있으면 브랜치 컨텍스트 행에 **`Open review page in browser`(브라우저에서 검토 페이지 열기)** 링크가 간결하게 표시됩니다. 한 번 클릭하면 내부 PR 보기를 열지 않고 GitHub, GitLab, Bitbucket, Azure DevOps 또는 Gitea의 검토로 이동합니다.
 -   GitHub 풀 리퀘스트에서는 사이드바의 PR 작업 메뉴를 사용하여 검토 링크를 복사하거나, 검토를 닫거나, 상태 변경을 확인한 후 다시 엽니다.
 -   GitHub 검사, 검토 및 댓글은 PR 탭에서 인라인으로 열리며, GitLab 병합 요청과 이슈도 동일한 검토 화면에서 열립니다.
--   GitLab 파이프라인에서는 **`Checks`(검사)** 사이드 패널의 작업을 펼치면 해당 작업의 추적 로그를 사용할 수 있을 때 불러옵니다. GitHub 검사 세부 정보가 열리는 것과 같은 위치이므로 실패한 작업이 `no inline details`(인라인 세부 정보 없음) 스텁으로 막히지 않습니다.
+-   GitLab 파이프라인에서는 **`Checks`(검사)** 사이드 패널에 최상위 작업뿐 아니라 브리지 및 하위 파이프라인 작업도 포함됩니다. 작업을 펼치면 해당 작업의 추적 로그를 사용할 수 있을 때 불러옵니다. GitHub 검사 세부 정보가 열리는 것과 같은 위치이므로 실패한 작업이 `no inline details`(인라인 세부 정보 없음) 스텁으로 막히지 않습니다.
 -   `Checks`(검사) 패널에서는 루트 댓글뿐 아니라 검토 스레드의 모든 댓글에 답글을 달 수 있습니다.
 -   GitHub 풀 리퀘스트의 검사가 실패하면 PR 보기의 **`Fix broken checks`(실패한 검사 수정)**를 사용하여 실패한 검사 이름과 링크를 에이전트에 전달합니다.
 

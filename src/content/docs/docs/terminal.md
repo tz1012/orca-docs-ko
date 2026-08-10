@@ -1,7 +1,7 @@
 ---
 title: "터미널"
 sourceUrl: https://www.onorca.dev/docs/terminal
-checkedAt: "2026-08-07T01:03:10.072Z"
+checkedAt: "2026-08-10T01:02:47.329Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/profiles/
 next: /orca-docs-ko/docs/ways-to-run/
@@ -21,7 +21,7 @@ Ghostty 스타일 터미널 — 처음 시작할 때 Ghostty 테마, 글꼴 및 
 
 터미널은 단순한 탭입니다. [탭, 창 및 분할 레이아웃](/orca-docs-ko/docs/model/tabs-panes-splits/)을 참조하세요. 터미널 창을 분할하면 두 개의 셸이 나란히 제공됩니다.
 
-에이전트 터미널 탭에는 에이전트 ID와 실시간 상태(작업 중, 입력 대기 중, 완료 또는 완료 후 미확인)가 함께 표시됩니다.
+에이전트 터미널 탭에는 에이전트 ID와 실시간 상태(작업 중, 입력 대기 중, 완료 또는 완료 후 미확인)가 함께 표시됩니다. Claude 및 Codex의 경우 Orca가 해당 창을 세션에 연결할 수 있으면 탭 제목에 **`AI Vault conversation name`(AI Vault 대화 이름)**(사용자 지정 제목/스레드 이름)도 표시할 수 있습니다. 수동으로 바꾼 이름이 항상 우선합니다.
 
 ## TUI 클립보드(OSC 52)
 

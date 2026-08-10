@@ -1,10 +1,10 @@
 ---
 title: "Orca의 Cursor CLI"
 sourceUrl: https://www.onorca.dev/docs/agents/cursor-cli
-checkedAt: "2026-08-07T01:03:10.072Z"
+checkedAt: "2026-08-10T01:02:47.329Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/codex/
-next: /orca-docs-ko/docs/agents/custom-cli/
+next: /orca-docs-ko/docs/agents/codex-hot-swap/
 translationNotice:
   title: "비공식 한국어 번역"
   message: "이 문서는 ORCA 공식 문서의 비공식 한국어 번역입니다. 내용이 다를 경우 원문이 우선합니다."

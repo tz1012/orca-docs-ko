@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 개요"
 sourceUrl: https://www.onorca.dev/docs/cli/overview
-checkedAt: "2026-08-07T01:03:10.072Z"
+checkedAt: "2026-08-10T01:02:47.329Z"
 editUrl: false
 prev: /orca-docs-ko/docs/remote-servers/
 next: /orca-docs-ko/docs/cli/reference/
@@ -87,13 +87,13 @@ orca file open-changed --mode both
 
 CLI는 또한 스냅샷-상호작용-재스냅샷 루프를 사용하여 내장 브라우저를 구동합니다.
 
-````
+```
 orca goto --url https://example.com --json
 orca snapshot --json     # returns refs like @e1, @e3
 orca click --element @e3 --json
-orca fill --element @e1 --value "user@example.com" --json
+orca fill --element @e1 --value "[email protected]" --json
 orca screenshot --json
-````
+```
 
 반응형 브라우저 검사를 위해 활성 탭을 명명된 장치 프로필로 전환합니다.
 

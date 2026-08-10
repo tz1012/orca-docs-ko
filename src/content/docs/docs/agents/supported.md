@@ -1,7 +1,7 @@
 ---
 title: "지원되는 에이전트"
 sourceUrl: https://www.onorca.dev/docs/agents/supported
-checkedAt: "2026-08-07T01:03:10.072Z"
+checkedAt: "2026-08-10T01:02:47.329Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/quick-open/
 next: /orca-docs-ko/docs/agents/claude-code/
@@ -11,7 +11,7 @@ translationNotice:
   rights: "원본 문서와 이미지의 권리는 Lovecast Inc. 및 각 권리자에게 있습니다."
 ---
 
-모든 에이전트 Orca은 기본적으로 제공되며 직접 추가하는 방법도 있습니다.
+Orca가 기본으로 제공하는 모든 에이전트입니다.
 
 Orca은 `any CLI agent`(모든 CLI 에이전트)와 함께 작동합니다. 에이전트 콤보 상자는 터미널에서 프로세스를 시작하기만 합니다. 다음은 원클릭 launch/setup를 통해 내장 에이전트 선택기에 사전 구성되어 제공됩니다. 지원되는 경우 더 깊은 후크, 상태, 사용 추적 및 계정 전환이 표시됩니다.
 
@@ -59,5 +59,3 @@ Orca은 새로운 실행에 대해 지원되는 각 CLI의 권한 우회 플래�
 | Hermes | 자동 설정 | [Nous](https://hermes-agent.nousresearch.com/docs/) |
 | OpenClaw | 자동 설정 | [OpenClaw](https://github.com/openclaw/openclaw) |
 | Trae | `traecli`(TRAE CN CLI)을 통한 자동 설정 | [Trae](https://www.trae.ai/) |
-
-이 목록에 없는 내용은 [사용자 지정 CLI 에이전트 추가](/orca-docs-ko/docs/agents/custom-cli/)를 참조하세요.

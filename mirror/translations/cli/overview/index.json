@@ -107,8 +107,8 @@
       "translated": "CLI는 또한 스냅샷-상호작용-재스냅샷 루프를 사용하여 내장 브라우저를 구동합니다."
     },
     "/docs/cli/overview/:code:browser-automation:0": {
-      "sourceHash": "5d4ce983b3232839ee23cbd024dcb354dc338bea86de92fdceb71194d76f733b",
-      "translated": "````\nORCA_PROTECTED_0001\n````"
+      "sourceHash": "4b1677e8af044c22623b6714a1207ad9146ddc52830d9278485e8819b7f0e7a1",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/overview/:paragraph:browser-automation:1": {
       "sourceHash": "f898eb4e9e511df126440e71310d3a323712c700bfc9dc9d92af3f21ff10e34e",

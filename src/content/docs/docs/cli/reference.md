@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 참조"
 sourceUrl: https://www.onorca.dev/docs/cli/reference
-checkedAt: "2026-08-07T01:03:10.072Z"
+checkedAt: "2026-08-10T01:02:47.329Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/overview/
 next: /orca-docs-ko/docs/cli/orchestration/
@@ -134,14 +134,14 @@ orca file open-changed --mode both --worktree active --json
 
 스냅샷 -> 작업 -> 스냅샷 루프를 사용하세요.
 
-````
+```
 orca goto --url http://localhost:3000 --worktree active --json
 orca snapshot --worktree active --json
 orca click --element @e3 --worktree active --json
-orca fill --element @e1 --value "user@example.com" --worktree active --json
+orca fill --element @e1 --value "[email protected]" --worktree active --json
 orca wait --text "Welcome" --worktree active --json
 orca screenshot --worktree active --json
-````
+```
 
 `@e3`과 같은 참조는 `snapshot`에서 나옵니다. 탐색, 탭 전환, 페이지를 변경하는 클릭 및 오래된 참조 오류 후에 다시 스냅샷을 찍습니다.
 

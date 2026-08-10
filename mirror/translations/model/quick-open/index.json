@@ -19,8 +19,16 @@
       "translated": "## 빠른 열기(Cmd-P)"
     },
     "/docs/model/quick-open/:paragraph:quick-open-cmd-p:0": {
-      "sourceHash": "2298659186125613e7a25dd6ca5616af7d7687f5721b63f23fed85fa66f48056",
-      "translated": "현재 작업 트리로 범위가 지정된 파일 검색입니다. 조각을 입력하세요. ORCA_PROTECTED_0001은 최근성과 일치 점수를 기준으로 순위를 매기고 새 편집기 탭에서 파일을 엽니다. Gitignored 파일은 결과에 포함됩니다. 일치 항목을 추적한 후 두 번째 패스로 표시되므로 자주 빠르게 여는 파일(빌드 출력, 환경 파일)은 목록 상단을 오염시키지 않고 계속 접근할 수 있습니다."
+      "sourceHash": "a13852e894eff7c97be51042b048e2e9b2a2d316aac9f8566295b8d4b368d26b",
+      "translated": "현재 작업 트리로 범위가 지정된 파일 검색입니다. 일부 텍스트를 입력하면 ORCA_PROTECTED_0001이 최근성과 일치 점수를 기준으로 순위를 매기고 새 편집기 탭에서 파일을 엽니다. 결과 행에는 **파일 이름**이 먼저 표시되고 공간이 부족하면 상위 디렉터리가 잘립니다. 마우스를 올리면 전체 경로가 표시됩니다. Gitignored 파일도 결과에 포함되며, 추적된 일치 항목 다음의 두 번째 단계에서 표시됩니다. 따라서 자주 빠르게 여는 파일(빌드 출력, 환경 파일)에 계속 접근할 수 있으면서 목록 상단은 복잡해지지 않습니다."
+    },
+    "/docs/model/quick-open/:heading:new-tab-omnibox:0": {
+      "sourceHash": "fc514896c9a2bdac53a1ca50fb052b31c568ed0e88c64b1f3826d7ee795865c5",
+      "translated": "## 새 탭 옴니박스(+)"
+    },
+    "/docs/model/quick-open/:paragraph:new-tab-omnibox:0": {
+      "sourceHash": "ccb26641d8b1ac74b1a4aaf699220be2255dce8bc0eb7ab298de2c7ee3747d73",
+      "translated": "탭 표시줄의 **+** 옴니박스는 **열린 탭**, 파일, URL 및 에이전트를 한 필드에서 검색합니다(자리 표시자: *`Search open tabs, files, URLs, agents…`(열린 탭, 파일, URL, 에이전트 검색…)*). 파일 행은 빠른 열기와 동일하게 파일 이름을 먼저 표시합니다. 이미 열린 편집기 탭과 일치하면 중복 파일 결과보다 해당 탭을 우선하므로, 파일을 두 번째로 열지 않고 열린 버퍼로 이동합니다."
     },
     "/docs/model/quick-open/:heading:worktree-jump-palette-cmd-j:0": {
       "sourceHash": "3ca42c5735eb626c7046209fa9af1758d65a28149a79f89385abd86e7fd4983f",
@@ -35,18 +43,22 @@
       "translated": "팔레트에서 **`Tab`(Tab 키)**을 누르면 호스트 및 프로젝트 필터 메뉴가 열립니다. 선택한 호스트와 프로젝트에 따라 결과 범위가 좁아지고, 선택 항목은 하나씩 제거할 수 있는 칩으로 표시됩니다. 팔레트를 닫으면 필터가 지워지므로 다음에 열 때는 범위가 지정되지 않습니다."
     },
     "/docs/model/quick-open/:list:worktree-jump-palette-cmd-j:0": {
-      "sourceHash": "85bfa978c525d6e133bbcfcc6824ef4cb45972d9fd5dfd2511191960bb1a1514",
-      "translated": "- `Recent Worktrees`(최근 작업 트리) — 검색어가 비어 있을 때 표시되는 최상단 섹션입니다. 마지막으로 포커스한 순서로 정렬되며 목록을 쉽게 훑어볼 수 있도록 항목 수가 제한됩니다.\n- 프로젝트와 저장소 그룹을 통해 이름으로 사이드바 섹션으로 이동합니다.\n- 입력을 시작하면 모든 작업 트리가 저장소별로 그룹화됩니다.\n- 리뷰 메타데이터가 이미 있으면 캐시된 ORCA_PROTECTED_0001 PR 제목 또는 번호(`ORCA_PROTECTED_0002`)와 캐시된 GitLab 병합 요청 제목 또는 번호(`ORCA_PROTECTED_0003`)로 작업 트리를 찾습니다.\n- 열려 있는 모든 탭이 먼저 현재 작업 트리 범위로, 그다음 전체 범위로 표시됩니다."
+      "sourceHash": "d3a247d518bfe78785913b2b18501075dcb2b63db487dc7fb37f77755277d54c",
+      "translated": "-   **`Recent Chats & Terminals`(최근 채팅 및 터미널)** — 검색어가 비어 있으면 최근 ORCA_PROTECTED_0001 세션을 활동 순서에 따라 최대 6개 표시합니다. 확인 필요, 완료, 유휴 순으로 정렬됩니다. 숫자 바로 가기(macOS의 `ORCA_PROTECTED_0002`–`ORCA_PROTECTED_0003`, Windows/Linux의 `ORCA_PROTECTED_0004`–`ORCA_PROTECTED_0005`)를 누르면 해당 행으로 바로 이동합니다. 팔레트가 열리면 순서가 고정되어 포인터 아래에서 행이 바뀌지 않습니다.\n-   **`Recent Worktrees`(최근 작업 트리)** — 검색어가 비어 있을 때 다음으로 표시되는 섹션입니다. 마지막 포커스 순서로 정렬되며 목록을 쉽게 훑어볼 수 있도록 항목 수가 제한됩니다.\n-   프로젝트와 저장소 그룹을 통해 이름으로 사이드바 섹션으로 이동합니다.\n-   입력을 시작하면 모든 작업 트리가 저장소별로 그룹화됩니다.\n-   리뷰 메타데이터가 이미 있으면 캐시된 ORCA_PROTECTED_0006 PR 제목 또는 번호(`ORCA_PROTECTED_0007`)와 캐시된 GitLab 병합 요청 제목 또는 번호(`ORCA_PROTECTED_0008`)로 작업 트리를 찾습니다.\n-   열려 있는 모든 탭이 먼저 현재 작업 트리 범위로, 그다음 전체 범위로 표시됩니다. `ORCA_PROTECTED_0009` 또는 `ORCA_PROTECTED_0010` 같은 유형 별칭도 행 레이블을 복잡하게 만들지 않으면서 해당 탭 유형과 계속 일치합니다."
     },
     "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:2": {
       "sourceHash": "09aae57770e753b827c38326369e48066c7c08cf6146a6f64cc93651d24a724f",
       "translated": "결과에는 다음이 포함됩니다."
     },
     "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:3": {
+      "sourceHash": "8a18255122eeccbe8bc8f6d1ed3d517d64d5d640a8c4dc121c58532a8fe74e73",
+      "translated": "입력한 검색어가 열린 탭과 작업 트리에 **모두** 일치하면, 팔레트는 어느 주요 목록도 묻히지 않도록 각 섹션의 짧은 미리 보기를 번갈아 표시합니다(*`N more — scroll or keep typing`(N개 더 있음 — 스크롤하거나 계속 입력)* 안내 포함). 한 섹션에만 결과가 있으면 고정된 상한까지 전체 목록을 유지합니다."
+    },
+    "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:4": {
       "sourceHash": "200516872fa414ddb981df64cdaf5dde553c8696788217c66e0fa74fe57de8e3",
       "translated": "작업 트리에서 `Shift-Enter`를 누르면 현재 창을 바꾸는 대신 새 분할 창에서 엽니다."
     },
-    "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:4": {
+    "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:5": {
       "sourceHash": "a528ea4e44978e507c738dd4f61a69e7d001152b0b0370bf3028300c81644011",
       "translated": "검색어가 기존 작업 트리와 일치하지 않으면 팔레트에 입력한 텍스트를 이름으로 사용하는 **`Create worktree`(작업 트리 만들기)** 행이 표시됩니다. 기존 일치 항목이 먼저 선택된 상태로 유지되므로 실제 결과가 있을 때 `Enter`를 누르면 계속 해당 항목으로 이동합니다."
     },

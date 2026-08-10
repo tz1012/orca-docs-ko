@@ -1,7 +1,7 @@
 ---
 title: "Orca ADE에서 GLM-5.2를 사용하는 방법"
 sourceUrl: https://www.onorca.dev/docs/agents/glm-agent
-checkedAt: "2026-08-07T01:03:10.072Z"
+checkedAt: "2026-08-10T01:02:47.329Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/claude-code/
 next: /orca-docs-ko/docs/agents/codex/
@@ -116,13 +116,4 @@ openclaw gateway restart
 
 그런 다음 Orca에서 OpenClaw을 실행하거나 Orca 터미널에서 `openclaw tui`을 실행하여 GLM-5.2가 활성화되어 있는지 확인하세요.
 
-## 다른 GLM-5.2 하네스 추가
-
-하네스가 아직 Orca에 내장되지 않은 경우 이를 사용자 정의 CLI 에이전트로 추가합니다.
-
-1. [설정 -> 에이전트](/orca-docs-ko/docs/settings/)를 엽니다.
-2. `Add custom agent`(사용자 지정 에이전트 추가)를 클릭합니다.
-3. 하네스 바이너리 또는 실행 명령에서 Orca를 지정합니다.
-4. 저장한 다음 작업 트리의 에이전트 선택기에서 시작합니다.
-
-핵심 규칙은 간단합니다. 하네스가 provider/model 설정을 저장할 때마다 GLM-5.2를 구성한 다음 Orca가 올바른 작업 트리에서 해당 하네스를 시작하도록 합니다.
+핵심 규칙은 간단합니다. 하네스가 provider/model 설정을 저장하는 위치에서 GLM-5.2를 구성한 다음, Orca가 올바른 작업 트리에서 해당 하네스를 실행하도록 합니다.

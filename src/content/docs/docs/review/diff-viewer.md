@@ -1,7 +1,7 @@
 ---
 title: "차이점 뷰어"
 sourceUrl: https://www.onorca.dev/docs/review/diff-viewer
-checkedAt: "2026-08-07T01:03:10.072Z"
+checkedAt: "2026-08-10T01:02:47.329Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/hooks-memory/
 next: /orca-docs-ko/docs/review/annotate-ai-diff/
@@ -15,11 +15,12 @@ Orca의 diff 뷰어는 AI 생성 코드를 잠깐 살펴보는 것이 아니라 
 
 ## 기능
 
-- 스테이지된 파일, 스테이지되지 않은 파일, 추적되지 않은 모든 파일에 대한 `Combined diff`(결합된 diff).
-- 양쪽 `Line numbers`(줄 번호), 전환 가능.
-- `Image diffs`(이미지 차이) — 바이너리 이미지에 대한 병렬, 스와이프 및 어니언 스킨 모드.
-- 3방향 보기 및 인라인 해결 기능을 갖춘 `Merge-conflict UI`(병합 충돌 UI).
-- `Staging by hunk or line`(덩어리 또는 줄별 스테이징) — `git add -p`과 동일하지만 시각적입니다.
+-   스테이징된 파일, 스테이징되지 않은 파일 및 추적되지 않은 모든 파일의 **`Combined diff`(결합된 차이)**를 표시합니다.
+-   양쪽의 **`Line numbers`(줄 번호)**를 표시하며 전환할 수 있습니다.
+-   **`Image diffs`(이미지 차이)**는 바이너리 이미지를 나란히 보기, 스와이프 및 어니언 스킨 모드로 표시합니다.
+-   **`HTML preview`(HTML 미리 보기)**는 **`View all`(모두 보기)** / 결합된 차이에서 작업 트리에 여전히 존재하는 HTML 섹션의 항상 표시되는 파일 열기 컨트롤 옆에 **`Open Preview to the Side`(옆에서 미리 보기 열기)**(눈 모양)를 표시합니다. 미리 보기는 작업 트리의 HTML을 측면 브라우저 분할 창에서 엽니다. 삭제된 HTML 및 커밋 전용 결합 화면에는 눈 모양이 표시되지 않습니다.
+-   **`Merge-conflict UI`(병합 충돌 UI)**는 3방향 보기와 인라인 해결 기능을 제공합니다.
+-   **`Staging by hunk or line`(덩어리 또는 줄별 스테이징)**은 `git add -p`과 동일한 작업을 시각적으로 수행합니다.
 
 ## 범위 지정
 

@@ -1,7 +1,7 @@
 ---
 title: "오케스트레이션"
 sourceUrl: https://www.onorca.dev/docs/cli/orchestration
-checkedAt: "2026-08-07T01:03:10.072Z"
+checkedAt: "2026-08-10T01:02:47.329Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/reference/
 next: /orca-docs-ko/docs/cli/automations/
@@ -45,7 +45,11 @@ orca orchestration task-create --spec "Audit billing settings for mobile layout"
 orca orchestration worker-start --task <taskId> --worktree current --agent codex --json
 # or new worktree:
 orca orchestration worker-start --task <taskId> --worktree new-child --name billing-audit --agent codex --setup run --json
+# optional per-worker model / effort (Claude, Codex, Cursor only; not with --terminal):
+orca orchestration worker-start --task <taskId> --worktree current --agent claude --model <opaque-model-id> --effort high --json
 ```
+
+`--model`은 Claude, Codex 및 Cursor의 불투명한 공급자 모델 ID를 받습니다. `--effort`에는 `--model`이 필요하며, 해당 agent/model이 그 수준을 지원할 때만 적용됩니다. 두 플래그 모두 기존 창을 재사용하는 `--terminal`과 함께 사용할 수 없습니다. 재정의는 해당 실행에만 적용되며 시작 처리 결과의 `launch.requested` / `launch.effective` 아래에 표시됩니다. 연합 실행에는 실행 환경 설정 지원을 알리는 워커 호스트가 필요합니다.
 
 완료를 기다립니다. Delivery의 모든 메시지를 처리한 다음 확인합니다.
 
