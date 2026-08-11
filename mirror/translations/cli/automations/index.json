@@ -71,8 +71,8 @@
       "translated": "````\nORCA_PROTECTED_0001\n````"
     },
     "/docs/cli/automations/:paragraph:review-and-enable:1": {
-      "sourceHash": "55d5526eb5ac4342e263174078381a9337d034c2345c64881ab628c06210acae",
-      "translated": "데스크톱 자동화 목록에 일정이 많으면 검색 필드를 사용하여 **`name`(이름)**, **`project`(프로젝트)** 또는 **`prompt`(프롬프트)** 텍스트로 필터링합니다."
+      "sourceHash": "b7dffcd06c659344f0f715ada16eba662b1b23b2a26d78dd201556dc51ae7485",
+      "translated": "데스크톱 자동화 목록에 일정이 많으면 검색 필드를 사용하여 **`name`(이름)**, **`project`(프로젝트)** 또는 **`prompt`(프롬프트)** 텍스트로 필터링합니다. SSH 호스트에 저장된 외부 자동화는 해당 호스트의 연결이 끊겨도 삭제를 포함하여 관리할 수 있는 작업으로 계속 표시됩니다. 일정을 제거하기 위해 활성 SSH 세션을 유지할 필요가 없습니다."
     },
     "/docs/cli/automations/:heading:run-on-demand:0": {
       "sourceHash": "4e26eb1bbae61dd483457fd5ea577bf2db1e4885bd102da0e98e000aad636697",

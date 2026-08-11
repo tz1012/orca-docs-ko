@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 개요"
 sourceUrl: https://www.onorca.dev/docs/cli/overview
-checkedAt: "2026-08-10T01:02:47.329Z"
+checkedAt: "2026-08-11T01:01:52.326Z"
 editUrl: false
 prev: /orca-docs-ko/docs/remote-servers/
 next: /orca-docs-ko/docs/cli/reference/
@@ -13,7 +13,7 @@ translationNotice:
 
 Orca CLI를 사용하여 터미널에서 Orca를 스크립팅하고, 작업 트리를 관리하고, 에이전트 터미널을 제어하고, 내장 브라우저를 자동화하고, 에이전트 기술을 설치하십시오.
 
-Orca CLI는 모든 셸에서 실행 중인 Orca 편집기를 스크립팅하기 위한 `orca` 명령줄 인터페이스입니다. 이를 사용하여 작업 트리를 생성 및 검사하고, 에이전트 터미널을 구동하고, 파일 및 차이점을 열고, 내장 브라우저를 자동화하고, 예약된 자동화를 실행하고, 스크립트 또는 AI 에이전트에서 Orca 기본 도구를 제어합니다.
+Orca CLI는 `orca` 명령줄 인터페이스로, 모든 셸에서 실행 중인 Orca 편집기를 스크립팅합니다. 이를 사용하여 작업 트리를 생성 및 검사하고, 에이전트 터미널을 구동하고, 파일과 차이점을 열고, 내장 브라우저를 자동화하고, 예약된 자동화를 실행하고, HTML/Markdown 아티팩트를 공유하고, 스크립트 또는 AI 에이전트에서 Orca 기본 도구를 제어합니다.
 
 데스크톱 앱에 포함되어 있으며 [`Settings`(설정) → `General`(일반) → `Orca CLI`](/orca-docs-ko/docs/settings/)에서 등록합니다.
 
@@ -82,6 +82,10 @@ orca file open-changed --mode both
 ## 예약된 자동화
 
 셸에서 예약된 Orca 작업을 생성, 검사, 실행 및 제거하려면 `orca automations`을 사용하세요. 저장소 또는 기존 작업 트리에 대해 반복 프롬프트를 실행하려면 [예약된 자동화](/orca-docs-ko/docs/cli/automations/)로 시작하세요.
+
+## 아티팩트
+
+로그인한 Orca 계정을 통해 HTML 또는 Markdown을 공개 보기 링크로 공유합니다(`orca artifacts share|update|list|delete`). 게시 기능은 `Settings → Artifacts`(설정 → 아티팩트)에서 **명시적으로 활성화**해야 합니다. 명령 세부 정보는 [`CLI reference → Artifacts`(CLI 참조 → 아티팩트)](/orca-docs-ko/docs/cli/reference/#artifacts)를 참조합니다.
 
 ## 브라우저 자동화
 

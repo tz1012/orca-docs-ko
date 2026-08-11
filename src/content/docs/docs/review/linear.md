@@ -1,7 +1,7 @@
 ---
 title: "Linear 항목 서랍"
 sourceUrl: https://www.onorca.dev/docs/review/linear
-checkedAt: "2026-08-10T01:02:47.329Z"
+checkedAt: "2026-08-11T01:01:52.326Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/github/
 next: /orca-docs-ko/docs/review/jira/
@@ -29,6 +29,7 @@ Linear은 작업 서랍의 호스팅 리뷰 제공자 옆에 있습니다. GitHu
 -   Linear 이슈에서 에이전트를 실행하면 Orca는 이슈 설명, 댓글 및 하위 이슈에 포함된 인라인 이미지와 미디어를 프롬프트 컨텍스트에 포함합니다. 스크린샷을 직접 붙여넣지 않아도 에이전트가 목업이나 버그 재현을 확인할 수 있습니다.
 -   **`New Linear issue`(새 Linear 이슈)** 및 **`New Linear project`(새 Linear 프로젝트)** 대화 상자를 실수로 닫더라도(`Escape`(Esc 키), `Cancel`(취소), 바깥쪽 클릭 또는 닫기) title/description을 유지합니다. 프로젝트의 경우 이름, 요약 및 개요도 유지합니다. 같은 앱 세션에서 대화 상자를 다시 열면 텍스트가 복원됩니다. 초안은 생성에 성공하면 지워지며 앱을 다시 시작한 뒤에는 유지되지 않습니다. Team/project 선택기는 평소처럼 대화 상자를 열 때의 기본값을 사용합니다.
 -   긴 목록은 **`Load more`(더 불러오기)** 작업으로 페이지를 나눕니다. 프로젝트의 이슈가 초기 서랍에 표시할 수 있는 수보다 많을 때 유용합니다.
+-   목록/보드 보기, 그룹화, 정렬, 표시 열 및 속성 필터 같은 레이아웃 선택은 앱을 다시 시작해도 유지됩니다. 속성 필터는 **Linear 작업 공간별로** 저장되므로 작업 공간을 전환해도 다른 작업 공간의 필터 조건이 적용되지 않습니다.
 -   Orca는 저장소별로 마지막으로 사용한 작업 소스(GitHub, Linear 또는 Jira)를 기억합니다.
 
 Linear 상태 동기화(작업 트리가 생성될 때 문제를 "진행 중"으로 이동)는 팀별로 선택됩니다.

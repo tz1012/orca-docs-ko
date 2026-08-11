@@ -1,7 +1,7 @@
 ---
 title: "에이전트 후크 및 메모리"
 sourceUrl: https://www.onorca.dev/docs/agents/hooks-memory
-checkedAt: "2026-08-10T01:02:47.329Z"
+checkedAt: "2026-08-11T01:01:52.326Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/usage-tracking/
 next: /orca-docs-ko/docs/review/diff-viewer/
@@ -24,6 +24,10 @@ Orca은 각 저장소의 `.claude/` 및 `.codex/` 구성을 읽습니다. Orca�
 ## 메모리 파일
 
 Claude의 `CLAUDE.md` 및 Codex의 `AGENTS.md`(repo 루트 또는 중첩)는 단독으로 남겨지며 에이전트에 속합니다. Orca는 다른 파일과 마찬가지로 파일 탐색기에 해당 파일을 표시하므로 인라인으로 편집할 수 있습니다.
+
+## 에이전트 상태 훅
+
+`Settings → Agents → Agent status hooks`(설정 → 에이전트 → 에이전트 상태 훅)에서는 작업 중/대기 중/완료 상태를 UI에 보고하는 Orca 관리 훅을 제어합니다. 이 설정을 끄면 관리되는 훅이 제거되고 재설치도 중단되며, 다시 켜면 **Orca를 다시 시작하지 않고도** 훅이 복원됩니다. Windows에서는 WSL 훅 릴레이에도 동일한 실시간 설정이 적용됩니다. 동일한 CLI 명령은 `orca agent hooks status|on|off --json`입니다.
 
 ## 재시작에서 살아남기
 

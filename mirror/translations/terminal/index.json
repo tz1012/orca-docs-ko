@@ -2,6 +2,10 @@
   "sourceUrl": "https://www.onorca.dev/docs/terminal",
   "mirrorPath": "/docs/terminal/",
   "entries": {
+    "/docs/terminal/:paragraph:quick-commands:2": {
+      "sourceHash": "b6d5e7166bd383223ead3cf6b21bc2464597b7a6968f6756abb714c952bee38d",
+      "translated": "페어링된 [Remote ORCA_PROTECTED_0001 Server(원격 서버)](ORCA_PROTECTED_0002) 또는 다른 실행 호스트를 사용할 때 선택기는 **로컬 및 원격** 컬렉션을 나란히 표시하고 호스트별 레이블을 붙일 수 있습니다. 예를 들어 *`Local Mac`(로컬 Mac)* 및 *ORCA_PROTECTED_0003 `Server`(서버)*로 표시됩니다. **`Saved on`(저장 위치)**은 명령이 저장된 위치이며, 명령을 실행하면 호출한 터미널 또는 작업 공간에서 계속 실행됩니다. 따라서 클라이언트 소유 명령도 원격 작업 트리 안에서 실행할 수 있습니다. 다중 호스트 `Quick Commands`(빠른 명령)를 알리지 않는 이전 서버에서는 로컬 전용 목록으로 대체됩니다."
+    },
     "/docs/terminal/:heading:terminal:0": {
       "sourceHash": "44998d279b181823ba74796a31748b126c92ead6e0d61edca43cf606c1a69fe5",
       "translated": "# 터미널"
@@ -103,8 +107,8 @@
       "translated": "![키티 키보드 프로토콜을 통한 기본 키 바인딩 — Shift+Enter 및 친구들은 독립형 터미널에서와 똑같이 에이전트 CLI에 도달합니다.](ORCA_PROTECTED_0001)\n\n키티 키보드 프로토콜을 통한 기본 키 바인딩 - Shift+Enter 및 친구들은 독립형 터미널에서와 똑같이 에이전트 CLI에 도달합니다."
     },
     "/docs/terminal/:paragraph:native-key-bindings:1": {
-      "sourceHash": "1ee95421e2df7536c3ea74a40d5dd2dc58ee6a39e0cb007de72bfa636802e626",
-      "translated": "macOS의 일본어 JIS 키보드의 경우 물리적 엔 키가 터미널 세션에서 백슬래시를 보내도록 하려면 `Settings → Terminal → JIS Yen (¥) to Backslash (\\\\)`(설정 → 터미널 → JIS 엔(\\)에서 백슬래시(\\\\))를 활성화합니다."
+      "sourceHash": "f3e45e2bdb655d8214274597890f91863ad674b4d54727c855865572e0598495",
+      "translated": "macOS의 일본어 JIS 키보드에서 물리적 엔 키가 터미널 세션에 백슬래시를 보내도록 하려면 `Settings → Terminal → JIS Yen (¥) to Backslash (\\\\)`(설정 → 터미널 → JIS 엔(¥)을 백슬래시(\\\\)로 변환)를 활성화합니다. macOS 한국어 키보드에서는 한국어 입력 소스가 활성화된 동안 물리적 원 키가 백틱을 보내도록 `Settings → Terminal → Korean Won (₩) to Backquote`(설정 → 터미널 → 한국 원(₩)을 백쿼트로 변환)를 활성화합니다. Markdown 코드 펜스와 셸 인용을 입력할 때 키보드 레이아웃을 전환하지 않아도 됩니다."
     },
     "/docs/terminal/:heading:floating-terminal:0": {
       "sourceHash": "5e8b31707b265cc8810c26c99c6d1392d60ca17743e7a5b48f5ca4b890bce9f4",

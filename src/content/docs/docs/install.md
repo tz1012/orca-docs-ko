@@ -1,7 +1,7 @@
 ---
 title: "설치"
 sourceUrl: https://www.onorca.dev/docs/install
-checkedAt: "2026-08-10T01:02:47.329Z"
+checkedAt: "2026-08-11T01:01:52.326Z"
 editUrl: false
 prev: /orca-docs-ko/docs/
 next: /orca-docs-ko/docs/first-session/

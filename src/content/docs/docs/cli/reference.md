@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 참조"
 sourceUrl: https://www.onorca.dev/docs/cli/reference
-checkedAt: "2026-08-10T01:02:47.329Z"
+checkedAt: "2026-08-11T01:01:52.326Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/overview/
 next: /orca-docs-ko/docs/cli/orchestration/
@@ -277,6 +277,27 @@ orca account add --agent codex
 ```
 
 `account add`는 호스트의 **현재** 터미널에서 `claude login` / `codex login`을 실행한 다음, 수집한 자격 증명을 로컬 런타임에 등록합니다. Codex는 기기 인증을 사용하므로 다른 시스템의 브라우저에서 인증을 완료할 수 있습니다. 클라이언트 전용 원격 세션을 통하지 말고 계정을 소유하는 시스템에서 이 명령을 실행합니다.
+
+## 아티팩트
+
+로그인한 Orca 계정을 통해 HTML 또는 Markdown을 게시합니다. 공개 링크를 보는 데는 로그인이 필요하지 않지만 create/list/update/delete 작업에는 로그인이 필요합니다. **게시 기능은 기본적으로 꺼져 있으며**, 사용자가 기기에서 **`Settings → Artifacts → Allow publishing public artifact links`(설정 → 아티팩트 → 공개 아티팩트 링크 게시 허용)**를 활성화해야 합니다. 이 설정을 허용하는 CLI 플래그는 없습니다. 게시 기능을 끈 뒤에도 링크를 감사하거나 취소할 수 있도록 `list`, `unshare`, `delete`는 계속 사용할 수 있습니다.
+
+```
+orca artifacts share ./report.html --json
+orca artifacts share ./notes.md --json
+orca artifacts update ./notes.md --json
+orca artifacts unshare ./notes.md --json
+orca artifacts list --json
+orca artifacts list --cursor <cursor> --json
+orca artifacts delete <id> --json
+```
+
+-   허용되는 파일 형식은 `.html`, `.htm`, `.md`, `.markdown`입니다.
+-   `share`는 편집 토큰을 활성 Orca 프로필에 저장하며 출력하지 않습니다. `update`과 `unshare`은 파일을 처음 공유한 것과 같은 로컬 경로 및 프로필을 기준으로 대상을 찾습니다.
+-   `list`는 페이지를 나누며(`nextCursor` → `--cursor`), `delete`는 `list`에서 확인한 아티팩트 ID를 사용하므로 원본 파일이 필요하지 않습니다.
+-   상대 경로 HTML 자산은 업로드되지 않으므로 자체 완결형 HTML 또는 절대 자산 URL을 공유합니다.
+-   허용되지 않은 publish/update 작업은 `artifact_sharing_disabled` 오류로 실패합니다. 재시도하지 말고 설정을 수정합니다.
+-   데스크톱에서는 로컬 HTML 또는 Markdown 파일을 열고 **`Share as artifact`(아티팩트로 공유)**를 사용하거나, 사이드바의 **`Artifacts`(아티팩트)** 페이지에서 링크를 관리합니다.
 
 ## 자동화, 환경 및 후크
 

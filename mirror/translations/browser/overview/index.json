@@ -2,6 +2,14 @@
   "sourceUrl": "https://www.onorca.dev/docs/browser/overview",
   "mirrorPath": "/docs/browser/overview/",
   "entries": {
+    "/docs/browser/overview/:heading:share-as-artifact:0": {
+      "sourceHash": "fe8a9e2282e5d4abf65615f2b18f3bc921f85e7cf789f220709dad1b5e92bf81",
+      "translated": "## 아티팩트로 공유"
+    },
+    "/docs/browser/overview/:paragraph:share-as-artifact:0": {
+      "sourceHash": "6c60a09a3c5184a7edcd592b1278efcafd346e493f7357ff34f426cbf9cba0b6",
+      "translated": "작업 트리 브라우저에서 연 로컬 HTML 파일은 도구 모음의 **`Share as artifact`(아티팩트로 공유)**를 사용하여 로그인한 ORCA_PROTECTED_0001 계정을 통해 공개 보기 링크를 만들 수 있습니다. Markdown과 동일한 명시적 활성화 설정 및 관리 화면을 사용합니다. 상대 경로 HTML 자산은 업로드되지 않으므로 자체 완결형 파일을 공유하거나 절대 자산 URL을 사용합니다. [`Settings → Artifacts`(설정 → 아티팩트)](ORCA_PROTECTED_0002) 및 [`CLI reference → Artifacts`(CLI 참조 → 아티팩트)](ORCA_PROTECTED_0003)를 참조합니다."
+    },
     "/docs/browser/overview/:heading:per-worktree-browser:0": {
       "sourceHash": "9149195f34a4be9e94fa0e9652c88322ffc9e2644bb2b1973d2ab41cbe440021",
       "translated": "# 작업트리별 브라우저"

@@ -2,6 +2,14 @@
   "sourceUrl": "https://www.onorca.dev/docs/editing/markdown",
   "mirrorPath": "/docs/editing/markdown/",
   "entries": {
+    "/docs/editing/markdown/:heading:share-as-artifact:0": {
+      "sourceHash": "fe8a9e2282e5d4abf65615f2b18f3bc921f85e7cf789f220709dad1b5e92bf81",
+      "translated": "## 아티팩트로 공유"
+    },
+    "/docs/editing/markdown/:paragraph:share-as-artifact:0": {
+      "sourceHash": "80360fc783be713074a6f30e332fcc5567b9dc5f1617d140a9e71548a96edd9f",
+      "translated": "편집기 헤더에서 **`Share as artifact`(아티팩트로 공유)**를 사용하면 열린 Markdown 파일을 로그인한 ORCA_PROTECTED_0001 계정을 통해 공개 보기 링크로 게시합니다. 기본적으로 꺼져 있는 **`Settings → Artifacts → Allow publishing public artifact links`(설정 → 아티팩트 → 공개 아티팩트 링크 게시 허용)**를 활성화해야 합니다. ORCA_PROTECTED_0002에 매핑이 남아 있으면 다시 게시할 때 같은 링크가 업데이트됩니다. 사이드바의 **`Artifacts`(아티팩트)** 페이지에서 링크를 관리하거나 삭제합니다. 에이전트와 스크립트에서는 `ORCA_PROTECTED_0003`을 사용할 수 있습니다. [`CLI reference → Artifacts`(CLI 참조 → 아티팩트)](ORCA_PROTECTED_0004)를 참조합니다."
+    },
     "/docs/editing/markdown/:heading:rich-markdown-editor:0": {
       "sourceHash": "dda96c692ecfd2515166ab9678cbf137299388734d6a1910619f0944c2bcaa43",
       "translated": "# 리치 마크다운 편집기"

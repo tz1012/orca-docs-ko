@@ -2,6 +2,14 @@
   "sourceUrl": "https://www.onorca.dev/docs/settings",
   "mirrorPath": "/docs/settings/",
   "entries": {
+    "/docs/settings/:heading:artifacts:0": {
+      "sourceHash": "dedb0699f13ed6192ddda112a026ffdda14538f25106b60da909618a3f5e2a04",
+      "translated": "## 아티팩트"
+    },
+    "/docs/settings/:list:artifacts:0": {
+      "sourceHash": "468d61c121ea75e38231ab2a32c73897e88c8efa151a6150463ada1f700d38e0",
+      "translated": "-   **ORCA_PROTECTED_0001 `account`(계정)** — 파일을 게시하고 관리하려면 로그인합니다. ORCA_PROTECTED_0002 Relay와 같은 계정 계열을 사용합니다.\n-   **`Allow publishing public artifact links`(공개 아티팩트 링크 게시 허용)** — **기본적으로 꺼져 있습니다**. 기기 전체에 적용되는 설정으로, 켜면 사용자, 에이전트 및 이 컴퓨터의 `ORCA_PROTECTED_0003` CLI가 ORCA_PROTECTED_0004을 업로드하고 공개 보기 링크를 만들 수 있습니다. 설정을 꺼도 기존 링크는 삭제되지 않습니다.\n-   **`Show Artifacts`(아티팩트 표시)**/사이드바 바로 가기 — `Artifacts`(아티팩트) 목록을 열어 계정 소유 링크를 검색하고, 미리 보고, 복사하거나 삭제합니다.\n-   **`Ask Before Deleting Artifacts`(아티팩트 삭제 전 확인)** — 공개 링크를 끊기 전에 선택적으로 확인합니다.\n-   열린 로컬 HTML 페이지나 Markdown 편집기에서 **`Share as artifact`(아티팩트로 공유)**를 사용하거나 `ORCA_PROTECTED_0005`을 통해 공유합니다. [CLI reference → Artifacts(CLI 참조 → 아티팩트)](ORCA_PROTECTED_0006)를 참조합니다."
+    },
     "/docs/settings/:heading:settings-reference:0": {
       "sourceHash": "db1ec37fb568b721b3f74e9fbaa1227a1d50de56bafee128b2b3567c3bb5b9b9",
       "translated": "# 설정 참고"
@@ -39,24 +47,24 @@
       "translated": "## 터미널"
     },
     "/docs/settings/:list:terminal:0": {
-      "sourceHash": "bec0cebf4ec4575aebfcd2aac3a54e217f56a5355cd0aff2a0c2d167e1908d50",
-      "translated": "-   글꼴, 테마, 커서 스타일, 여백을 설정합니다.\n-   Ghostty 설정을 가져옵니다.\n-   Warp 테마 가져오기 — **`Import themes from Warp`(Warp에서 테마 가져오기)**를 사용하여 Warp YAML 테마를 가져오거나(OS별 Warp 테마 폴더를 자동 검색), Warp 형식 테마 파일이 있는 임의의 폴더에는 **`Import from YAML`(YAML에서 가져오기)**을 사용합니다.\n-   macOS 일본어 키보드에서 JIS 엔 기호(¥)를 백슬래시(\\)로 변환합니다.\n-   Windows 기본 셸(PowerShell 또는 CMD)을 설정합니다.\n-   **`Allow TUI Clipboard Writes (OSC 52)`(TUI 클립보드 쓰기 허용)** — **기본적으로 켜져 있습니다**. Zellij, tmux, Neovim, fzf, ORCA_PROTECTED_0001 및 유사 도구가 SSH 연결을 포함하여 PTY를 통해 시스템 클립보드에 쓸 수 있게 합니다. 이전의 제한된 동작을 선호하면 끕니다."
+      "sourceHash": "0ac292323c3b46e619eab68bf56e7e93cdb1ea48448997b19267e62d1563643e",
+      "translated": "-   글꼴, 테마, 커서 스타일, 여백을 설정합니다.\n-   Ghostty 설정을 가져옵니다.\n-   Warp 테마 가져오기 — **`Import themes from Warp`(Warp에서 테마 가져오기)**를 사용하여 Warp YAML 테마를 가져오거나(OS별 Warp 테마 폴더를 자동 검색), Warp 형식 테마 파일이 있는 임의의 폴더에는 **`Import from YAML`(YAML에서 가져오기)**을 사용합니다.\n-   macOS 일본어 키보드에서 `JIS Yen (¥) to Backslash (\\\\)`(JIS 엔(¥)을 백슬래시(\\\\)로 변환)을 설정합니다.\n-   macOS 한국어 키보드에서 `Korean Won (₩) to Backquote`(한국 원(₩)을 백쿼트로 변환)를 설정합니다. 한국어 입력 소스가 선택되어 있을 때 백틱을 전송합니다.\n-   Windows 기본 셸(PowerShell 또는 CMD)을 설정합니다.\n-   **`Allow TUI Clipboard Writes (OSC 52)`(TUI 클립보드 쓰기 허용)** — **기본적으로 켜져 있습니다**. Zellij, tmux, Neovim, fzf, ORCA_PROTECTED_0001 및 유사 도구가 SSH 연결을 포함하여 PTY를 통해 시스템 클립보드에 쓸 수 있게 합니다. 이전의 제한된 동작을 선호하면 끕니다."
     },
     "/docs/settings/:heading:quick-commands:0": {
       "sourceHash": "7f51496625f0d8029771dc6731fb4d0946fdd0c122c211235e9d8f48eb114869",
       "translated": "## 빠른 명령"
     },
     "/docs/settings/:list:quick-commands:0": {
-      "sourceHash": "ff0ebc404473cf31eecf50cd86c12078953fe477d5e10a608b69ee15996cd37a",
-      "translated": "-   전역 또는 프로젝트 범위로 저장된 터미널 명령과 에이전트 프롬프트 사전 설정입니다.\n-   명령 목록을 검토하고 편집하기 위한 범위 필터입니다. 동일한 목록이 [모바일 컴패니언](ORCA_PROTECTED_0001)과 동기화됩니다."
+      "sourceHash": "7a114bc3f805518a38548ad2fcbabcfb40c33f4611e90ec65acb6af1a44afce2",
+      "translated": "-   전역 또는 프로젝트 범위로 저장된 터미널 명령과 에이전트 프롬프트 사전 설정입니다.\n-   명령 목록을 검토하고 편집하기 위한 범위 필터입니다. 동일한 목록이 [모바일 컴패니언](ORCA_PROTECTED_0001)과 동기화됩니다.\n-   원격 또는 다중 호스트 환경에서는 명령을 소유한 ORCA_PROTECTED_0002 호스트별로 그룹화하고 **`Saved on`(저장 위치)**을 표시합니다. 호스트 소유권은 ORCA_PROTECTED_0003 범위 및 명령 실행 위치와 별개입니다. [Terminal → Quick Commands(터미널 → 빠른 명령)](ORCA_PROTECTED_0004)를 참조합니다."
     },
     "/docs/settings/:heading:agents:0": {
       "sourceHash": "a37ac4f1a2b23183e0de43bf4db0c3d0cb431295272096a38195239684c4af32",
       "translated": "## 에이전트"
     },
     "/docs/settings/:list:agents:0": {
-      "sourceHash": "8cb45f5a4a4fc37779c4096dfbb3219bc7678c463468f819080814c4ba4c238a",
-      "translated": "-   **`Installed agents`(설치된 에이전트)** — 활성화하거나 비활성화할 수 있는 감지된 CLI를 표시합니다.\n-   감지된 에이전트를 활성화하거나 비활성화하여 실행 메뉴에 사용할 CLI만 표시합니다.\n-   `Agent Permissions`(에이전트 권한)에서 CLI 권한 프롬프트를 줄이려면 **`Yolo`(자동 승인)**를 선택하고, 사용자 지정하지 않은 에이전트가 자체 승인 흐름을 유지하도록 하려면 **`Manual`(수동)**을 선택합니다.\n-   ORCA_PROTECTED_0001 및 ORCA_PROTECTED_0002 계정 목록을 표시합니다.\n-   에이전트별 시작 훅을 설정합니다.\n-   **`Skill freshness`(스킬 최신 상태)** — `Agents`(에이전트) 창과 스킬 카드는 전체 상태를 계속 표시합니다. 사이드바 탐색에는 조치가 필요한 스킬만 배지가 표시됩니다(**`Update available`(업데이트 사용 가능)**, **`Needs attention`(확인 필요)**/검토). 정상, 로딩 중 및 설치되지 않은 선택 항목에는 배지가 표시되지 않습니다. 대화 상자의 **`Update`(업데이트)**를 사용하면 터미널 없이 전역 스킬을 백그라운드에서 새로 고칩니다. 진행 상태는 상태 표시줄에 나타나며 대화 상자를 닫아도 실행은 취소되지 않습니다. [ORCA_PROTECTED_0003 스킬](ORCA_PROTECTED_0004)을 참조합니다."
+      "sourceHash": "c5cf48b58798e461427f15e69dee0b8b5b017072f280813817b1dba15a42018e",
+      "translated": "-   **`Installed agents`(설치된 에이전트)** — 활성화하거나 비활성화할 수 있는 감지된 CLI를 표시합니다.\n-   감지된 에이전트를 활성화하거나 비활성화하여 실행 메뉴에 사용할 CLI만 표시합니다.\n-   `Agent Permissions`(에이전트 권한)에서 CLI 권한 프롬프트를 줄이려면 **`Yolo`(자동 승인)**를 선택하고, 사용자 지정하지 않은 에이전트가 자체 승인 흐름을 유지하도록 하려면 **`Manual`(수동)**을 선택합니다.\n-   ORCA_PROTECTED_0001 및 ORCA_PROTECTED_0002 계정 목록을 표시합니다.\n-   에이전트별 시작 훅을 설정합니다.\n-   **`Agent status hooks`(에이전트 상태 훅)** — ORCA_PROTECTED_0003에 작업 중/대기 중/완료 상태를 표시합니다. Windows WSL 훅 릴레이를 포함하여 앱을 다시 시작하지 않아도 토글이 적용됩니다. CLI 명령은 `ORCA_PROTECTED_0004`입니다.\n-   **`Skill freshness`(스킬 최신 상태)** — `Agents`(에이전트) 창과 스킬 카드는 전체 상태를 계속 표시합니다. 사이드바 탐색에는 조치가 필요한 스킬만 배지가 표시됩니다(**`Update available`(업데이트 사용 가능)**, **`Needs attention`(확인 필요)**/검토). 정상, 로딩 중 및 설치되지 않은 선택 항목에는 배지가 표시되지 않습니다. 대화 상자의 **`Update`(업데이트)**를 사용하면 터미널 없이 전역 스킬을 백그라운드에서 새로 고칩니다. 진행 상태는 상태 표시줄에 나타나며 대화 상자를 닫아도 실행은 취소되지 않습니다. [ORCA_PROTECTED_0005 스킬](ORCA_PROTECTED_0006)을 참조합니다."
     },
     "/docs/settings/:heading:browser:0": {
       "sourceHash": "95a058f2b170aabffed924f660283440f59cd254aa02c672b25c420bd0d4cae2",

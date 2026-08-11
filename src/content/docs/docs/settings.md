@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-08-10T01:02:47.329Z"
+checkedAt: "2026-08-11T01:01:52.326Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -52,7 +52,8 @@ translationNotice:
 -   글꼴, 테마, 커서 스타일, 여백을 설정합니다.
 -   Ghostty 설정을 가져옵니다.
 -   Warp 테마 가져오기 — **`Import themes from Warp`(Warp에서 테마 가져오기)**를 사용하여 Warp YAML 테마를 가져오거나(OS별 Warp 테마 폴더를 자동 검색), Warp 형식 테마 파일이 있는 임의의 폴더에는 **`Import from YAML`(YAML에서 가져오기)**을 사용합니다.
--   macOS 일본어 키보드에서 JIS 엔 기호(¥)를 백슬래시(\)로 변환합니다.
+-   macOS 일본어 키보드에서 `JIS Yen (¥) to Backslash (\\)`(JIS 엔(¥)을 백슬래시(\\)로 변환)을 설정합니다.
+-   macOS 한국어 키보드에서 `Korean Won (₩) to Backquote`(한국 원(₩)을 백쿼트로 변환)를 설정합니다. 한국어 입력 소스가 선택되어 있을 때 백틱을 전송합니다.
 -   Windows 기본 셸(PowerShell 또는 CMD)을 설정합니다.
 -   **`Allow TUI Clipboard Writes (OSC 52)`(TUI 클립보드 쓰기 허용)** — **기본적으로 켜져 있습니다**. Zellij, tmux, Neovim, fzf, Grok 및 유사 도구가 SSH 연결을 포함하여 PTY를 통해 시스템 클립보드에 쓸 수 있게 합니다. 이전의 제한된 동작을 선호하면 끕니다.
 
@@ -60,6 +61,7 @@ translationNotice:
 
 -   전역 또는 프로젝트 범위로 저장된 터미널 명령과 에이전트 프롬프트 사전 설정입니다.
 -   명령 목록을 검토하고 편집하기 위한 범위 필터입니다. 동일한 목록이 [모바일 컴패니언](/orca-docs-ko/docs/mobile/)과 동기화됩니다.
+-   원격 또는 다중 호스트 환경에서는 명령을 소유한 Orca 호스트별로 그룹화하고 **`Saved on`(저장 위치)**을 표시합니다. 호스트 소유권은 Global/Project 범위 및 명령 실행 위치와 별개입니다. [Terminal → Quick Commands(터미널 → 빠른 명령)](/orca-docs-ko/docs/terminal/#quick-commands)를 참조합니다.
 
 ## 에이전트
 
@@ -68,6 +70,7 @@ translationNotice:
 -   `Agent Permissions`(에이전트 권한)에서 CLI 권한 프롬프트를 줄이려면 **`Yolo`(자동 승인)**를 선택하고, 사용자 지정하지 않은 에이전트가 자체 승인 흐름을 유지하도록 하려면 **`Manual`(수동)**을 선택합니다.
 -   Claude 및 Codex 계정 목록을 표시합니다.
 -   에이전트별 시작 훅을 설정합니다.
+-   **`Agent status hooks`(에이전트 상태 훅)** — Orca에 작업 중/대기 중/완료 상태를 표시합니다. Windows WSL 훅 릴레이를 포함하여 앱을 다시 시작하지 않아도 토글이 적용됩니다. CLI 명령은 `orca agent hooks on|off|status`입니다.
 -   **`Skill freshness`(스킬 최신 상태)** — `Agents`(에이전트) 창과 스킬 카드는 전체 상태를 계속 표시합니다. 사이드바 탐색에는 조치가 필요한 스킬만 배지가 표시됩니다(**`Update available`(업데이트 사용 가능)**, **`Needs attention`(확인 필요)**/검토). 정상, 로딩 중 및 설치되지 않은 선택 항목에는 배지가 표시되지 않습니다. 대화 상자의 **`Update`(업데이트)**를 사용하면 터미널 없이 전역 스킬을 백그라운드에서 새로 고칩니다. 진행 상태는 상태 표시줄에 나타나며 대화 상자를 닫아도 실행은 취소되지 않습니다. [Orca 스킬](/orca-docs-ko/docs/cli/skills/#keep-skills-up-to-date)을 참조합니다.
 
 ## 브라우저
@@ -77,6 +80,14 @@ translationNotice:
 -   `Design Mode`(디자인 모드) 기본값을 설정합니다.
 -   `Devtools`(개발자 도구) 사용 여부를 설정합니다.
 -   **`Link Routing`(링크 라우팅)** — 터미널, 마크다운 및 편집기의 http(s) 링크를 Orca 브라우저 또는 시스템 브라우저에서 엽니다. 중첩된 **`Hold Shift…`(Shift 키 누르기…)** 옵션은 한 번의 클릭에 대해 이 기본 동작을 반대로 전환합니다(`⇧⌘-click` / `Shift+Ctrl+click`). [작업 트리별 브라우저](/orca-docs-ko/docs/browser/overview/#link-routing)를 참조합니다.
+
+## 아티팩트
+
+-   **Orca `account`(계정)** — 파일을 게시하고 관리하려면 로그인합니다. Orca Relay와 같은 계정 계열을 사용합니다.
+-   **`Allow publishing public artifact links`(공개 아티팩트 링크 게시 허용)** — **기본적으로 꺼져 있습니다**. 기기 전체에 적용되는 설정으로, 켜면 사용자, 에이전트 및 이 컴퓨터의 `orca` CLI가 HTML/Markdown을 업로드하고 공개 보기 링크를 만들 수 있습니다. 설정을 꺼도 기존 링크는 삭제되지 않습니다.
+-   **`Show Artifacts`(아티팩트 표시)**/사이드바 바로 가기 — `Artifacts`(아티팩트) 목록을 열어 계정 소유 링크를 검색하고, 미리 보고, 복사하거나 삭제합니다.
+-   **`Ask Before Deleting Artifacts`(아티팩트 삭제 전 확인)** — 공개 링크를 끊기 전에 선택적으로 확인합니다.
+-   열린 로컬 HTML 페이지나 Markdown 편집기에서 **`Share as artifact`(아티팩트로 공유)**를 사용하거나 `orca artifacts …`을 통해 공유합니다. [CLI reference → Artifacts(CLI 참조 → 아티팩트)](/orca-docs-ko/docs/cli/reference/#artifacts)를 참조합니다.
 
 ## 통합
 

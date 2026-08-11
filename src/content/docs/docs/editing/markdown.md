@@ -1,7 +1,7 @@
 ---
 title: "리치 마크다운 편집기"
 sourceUrl: https://www.onorca.dev/docs/editing/markdown
-checkedAt: "2026-08-10T01:02:47.329Z"
+checkedAt: "2026-08-11T01:01:52.326Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/monaco/
 next: /orca-docs-ko/docs/editing/viewers/
@@ -57,3 +57,7 @@ YAML 및 TOML 프런트매터는 기본적으로 리치 편집기와 렌더링�
 ## 목차
 
 긴 문서의 경우 편집기 헤더에 있는 `Table of Contents`(목차) 버튼(트리 아이콘)을 클릭하면 편집기 왼쪽에 고정된 제목 개요가 열립니다. 제목을 클릭하면 해당 제목으로 이동합니다. 축소 및 확장 컨트롤은 깊게 중첩된 섹션을 읽을 수 있도록 유지합니다. 리치 모드와 미리보기 모드에서 사용할 수 있습니다.
+
+## 아티팩트로 공유
+
+편집기 헤더에서 **`Share as artifact`(아티팩트로 공유)**를 사용하면 열린 Markdown 파일을 로그인한 Orca 계정을 통해 공개 보기 링크로 게시합니다. 기본적으로 꺼져 있는 **`Settings → Artifacts → Allow publishing public artifact links`(설정 → 아티팩트 → 공개 아티팩트 링크 게시 허용)**를 활성화해야 합니다. Orca에 매핑이 남아 있으면 다시 게시할 때 같은 링크가 업데이트됩니다. 사이드바의 **`Artifacts`(아티팩트)** 페이지에서 링크를 관리하거나 삭제합니다. 에이전트와 스크립트에서는 `orca artifacts share|update|list|delete`을 사용할 수 있습니다. [`CLI reference → Artifacts`(CLI 참조 → 아티팩트)](/orca-docs-ko/docs/cli/reference/#artifacts)를 참조합니다.

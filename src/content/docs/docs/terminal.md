@@ -1,7 +1,7 @@
 ---
 title: "터미널"
 sourceUrl: https://www.onorca.dev/docs/terminal
-checkedAt: "2026-08-10T01:02:47.329Z"
+checkedAt: "2026-08-11T01:01:52.326Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/profiles/
 next: /orca-docs-ko/docs/ways-to-run/
@@ -73,7 +73,7 @@ Orca은 키티 키보드 프로토콜을 광고하므로 터미널 앱은 실제
 
 키티 키보드 프로토콜을 통한 기본 키 바인딩 - Shift+Enter 및 친구들은 독립형 터미널에서와 똑같이 에이전트 CLI에 도달합니다.
 
-macOS의 일본어 JIS 키보드의 경우 물리적 엔 키가 터미널 세션에서 백슬래시를 보내도록 하려면 `Settings → Terminal → JIS Yen (¥) to Backslash (\\)`(설정 → 터미널 → JIS 엔(\)에서 백슬래시(\\))를 활성화합니다.
+macOS의 일본어 JIS 키보드에서 물리적 엔 키가 터미널 세션에 백슬래시를 보내도록 하려면 `Settings → Terminal → JIS Yen (¥) to Backslash (\\)`(설정 → 터미널 → JIS 엔(¥)을 백슬래시(\\)로 변환)를 활성화합니다. macOS 한국어 키보드에서는 한국어 입력 소스가 활성화된 동안 물리적 원 키가 백틱을 보내도록 `Settings → Terminal → Korean Won (₩) to Backquote`(설정 → 터미널 → 한국 원(₩)을 백쿼트로 변환)를 활성화합니다. Markdown 코드 펜스와 셸 인용을 입력할 때 키보드 레이아웃을 전환하지 않아도 됩니다.
 
 ## 플로팅 터미널
 
@@ -89,3 +89,5 @@ macOS의 일본어 JIS 키보드의 경우 물리적 엔 키가 터미널 세션
 빠른 명령은 `npm run dev`, `pnpm test` 또는 프로젝트별 설정 스크립트와 같이 자주 실행하는 터미널 명령을 저장합니다. 또한 Claude 및 Codex와 같은 시작 시간 프롬프트 에이전트에 대해 재사용 가능한 에이전트 프롬프트를 저장할 수도 있습니다. `Settings → Quick Commands`(설정 → 빠른 명령) 또는 탭 표시줄의 `Add command`(명령 추가) 버튼에서 생성한 다음 작업 트리 탭 표시줄의 빠른 명령 분할 버튼 또는 터미널 컨텍스트 메뉴에서 실행합니다.
 
 각 명령에는 레이블, 명령 텍스트 및 범위가 있습니다. 모든 곳에 적용되는 명령의 경우 `Global`(전역)을 사용하고, 특정 저장소의 작업 트리에만 명령을 표시하려면 `Project`(프로젝트)를 사용하세요. 탭 표시줄 버튼은 새로운 터미널 탭을 열고 명령을 실행합니다. 터미널 상황에 맞는 메뉴는 현재 터미널에 명령을 삽입할 수 있습니다.
+
+페어링된 [Remote Orca Server(원격 서버)](/orca-docs-ko/docs/remote-servers/) 또는 다른 실행 호스트를 사용할 때 선택기는 **로컬 및 원격** 컬렉션을 나란히 표시하고 호스트별 레이블을 붙일 수 있습니다. 예를 들어 *`Local Mac`(로컬 Mac)* 및 *Orca `Server`(서버)*로 표시됩니다. **`Saved on`(저장 위치)**은 명령이 저장된 위치이며, 명령을 실행하면 호출한 터미널 또는 작업 공간에서 계속 실행됩니다. 따라서 클라이언트 소유 명령도 원격 작업 트리 안에서 실행할 수 있습니다. 다중 호스트 `Quick Commands`(빠른 명령)를 알리지 않는 이전 서버에서는 로컬 전용 목록으로 대체됩니다.
