@@ -1,7 +1,7 @@
 ---
 title: "Orca 실행 방식"
 sourceUrl: https://www.onorca.dev/docs/ways-to-run
-checkedAt: "2026-08-11T01:01:52.326Z"
+checkedAt: "2026-08-13T01:02:43.994Z"
 editUrl: false
 prev: /orca-docs-ko/docs/terminal/
 next: /orca-docs-ko/docs/ssh/

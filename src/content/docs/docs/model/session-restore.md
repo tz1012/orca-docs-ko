@@ -1,7 +1,7 @@
 ---
 title: "세션 복원"
 sourceUrl: https://www.onorca.dev/docs/model/session-restore
-checkedAt: "2026-08-11T01:01:52.326Z"
+checkedAt: "2026-08-13T01:02:43.994Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/agents-sessions/
 next: /orca-docs-ko/docs/model/quick-open/

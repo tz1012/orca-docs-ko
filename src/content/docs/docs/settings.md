@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-08-11T01:01:52.326Z"
+checkedAt: "2026-08-13T01:02:43.994Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -53,7 +53,6 @@ translationNotice:
 -   Ghostty 설정을 가져옵니다.
 -   Warp 테마 가져오기 — **`Import themes from Warp`(Warp에서 테마 가져오기)**를 사용하여 Warp YAML 테마를 가져오거나(OS별 Warp 테마 폴더를 자동 검색), Warp 형식 테마 파일이 있는 임의의 폴더에는 **`Import from YAML`(YAML에서 가져오기)**을 사용합니다.
 -   macOS 일본어 키보드에서 `JIS Yen (¥) to Backslash (\\)`(JIS 엔(¥)을 백슬래시(\\)로 변환)을 설정합니다.
--   macOS 한국어 키보드에서 `Korean Won (₩) to Backquote`(한국 원(₩)을 백쿼트로 변환)를 설정합니다. 한국어 입력 소스가 선택되어 있을 때 백틱을 전송합니다.
 -   Windows 기본 셸(PowerShell 또는 CMD)을 설정합니다.
 -   **`Allow TUI Clipboard Writes (OSC 52)`(TUI 클립보드 쓰기 허용)** — **기본적으로 켜져 있습니다**. Zellij, tmux, Neovim, fzf, Grok 및 유사 도구가 SSH 연결을 포함하여 PTY를 통해 시스템 클립보드에 쓸 수 있게 합니다. 이전의 제한된 동작을 선호하면 끕니다.
 

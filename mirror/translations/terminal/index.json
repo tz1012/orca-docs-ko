@@ -107,8 +107,8 @@
       "translated": "![키티 키보드 프로토콜을 통한 기본 키 바인딩 — Shift+Enter 및 친구들은 독립형 터미널에서와 똑같이 에이전트 CLI에 도달합니다.](ORCA_PROTECTED_0001)\n\n키티 키보드 프로토콜을 통한 기본 키 바인딩 - Shift+Enter 및 친구들은 독립형 터미널에서와 똑같이 에이전트 CLI에 도달합니다."
     },
     "/docs/terminal/:paragraph:native-key-bindings:1": {
-      "sourceHash": "f3e45e2bdb655d8214274597890f91863ad674b4d54727c855865572e0598495",
-      "translated": "macOS의 일본어 JIS 키보드에서 물리적 엔 키가 터미널 세션에 백슬래시를 보내도록 하려면 `Settings → Terminal → JIS Yen (¥) to Backslash (\\\\)`(설정 → 터미널 → JIS 엔(¥)을 백슬래시(\\\\)로 변환)를 활성화합니다. macOS 한국어 키보드에서는 한국어 입력 소스가 활성화된 동안 물리적 원 키가 백틱을 보내도록 `Settings → Terminal → Korean Won (₩) to Backquote`(설정 → 터미널 → 한국 원(₩)을 백쿼트로 변환)를 활성화합니다. Markdown 코드 펜스와 셸 인용을 입력할 때 키보드 레이아웃을 전환하지 않아도 됩니다."
+      "sourceHash": "1ee95421e2df7536c3ea74a40d5dd2dc58ee6a39e0cb007de72bfa636802e626",
+      "translated": "macOS의 일본어 JIS 키보드에서 물리적 엔 키가 터미널 세션에 백슬래시를 보내도록 하려면 `Settings → Terminal → JIS Yen (¥) to Backslash (\\\\)`(설정 → 터미널 → JIS 엔(¥)을 백슬래시(\\\\)로 변환)를 활성화합니다."
     },
     "/docs/terminal/:heading:floating-terminal:0": {
       "sourceHash": "5e8b31707b265cc8810c26c99c6d1392d60ca17743e7a5b48f5ca4b890bce9f4",

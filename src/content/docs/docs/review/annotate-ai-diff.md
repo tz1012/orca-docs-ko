@@ -1,7 +1,7 @@
 ---
 title: "AI 차이점에 주석 달기"
 sourceUrl: https://www.onorca.dev/docs/review/annotate-ai-diff
-checkedAt: "2026-08-11T01:01:52.326Z"
+checkedAt: "2026-08-13T01:02:43.994Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/diff-viewer/
 next: /orca-docs-ko/docs/review/attribution/

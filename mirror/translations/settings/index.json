@@ -47,8 +47,8 @@
       "translated": "## 터미널"
     },
     "/docs/settings/:list:terminal:0": {
-      "sourceHash": "0ac292323c3b46e619eab68bf56e7e93cdb1ea48448997b19267e62d1563643e",
-      "translated": "-   글꼴, 테마, 커서 스타일, 여백을 설정합니다.\n-   Ghostty 설정을 가져옵니다.\n-   Warp 테마 가져오기 — **`Import themes from Warp`(Warp에서 테마 가져오기)**를 사용하여 Warp YAML 테마를 가져오거나(OS별 Warp 테마 폴더를 자동 검색), Warp 형식 테마 파일이 있는 임의의 폴더에는 **`Import from YAML`(YAML에서 가져오기)**을 사용합니다.\n-   macOS 일본어 키보드에서 `JIS Yen (¥) to Backslash (\\\\)`(JIS 엔(¥)을 백슬래시(\\\\)로 변환)을 설정합니다.\n-   macOS 한국어 키보드에서 `Korean Won (₩) to Backquote`(한국 원(₩)을 백쿼트로 변환)를 설정합니다. 한국어 입력 소스가 선택되어 있을 때 백틱을 전송합니다.\n-   Windows 기본 셸(PowerShell 또는 CMD)을 설정합니다.\n-   **`Allow TUI Clipboard Writes (OSC 52)`(TUI 클립보드 쓰기 허용)** — **기본적으로 켜져 있습니다**. Zellij, tmux, Neovim, fzf, ORCA_PROTECTED_0001 및 유사 도구가 SSH 연결을 포함하여 PTY를 통해 시스템 클립보드에 쓸 수 있게 합니다. 이전의 제한된 동작을 선호하면 끕니다."
+      "sourceHash": "bec0cebf4ec4575aebfcd2aac3a54e217f56a5355cd0aff2a0c2d167e1908d50",
+      "translated": "-   글꼴, 테마, 커서 스타일, 여백을 설정합니다.\n-   Ghostty 설정을 가져옵니다.\n-   Warp 테마 가져오기 — **`Import themes from Warp`(Warp에서 테마 가져오기)**를 사용하여 Warp YAML 테마를 가져오거나(OS별 Warp 테마 폴더를 자동 검색), Warp 형식 테마 파일이 있는 임의의 폴더에는 **`Import from YAML`(YAML에서 가져오기)**을 사용합니다.\n-   macOS 일본어 키보드에서 `JIS Yen (¥) to Backslash (\\\\)`(JIS 엔(¥)을 백슬래시(\\\\)로 변환)을 설정합니다.\n-   Windows 기본 셸(PowerShell 또는 CMD)을 설정합니다.\n-   **`Allow TUI Clipboard Writes (OSC 52)`(TUI 클립보드 쓰기 허용)** — **기본적으로 켜져 있습니다**. Zellij, tmux, Neovim, fzf, ORCA_PROTECTED_0001 및 유사 도구가 SSH 연결을 포함하여 PTY를 통해 시스템 클립보드에 쓸 수 있게 합니다. 이전의 제한된 동작을 선호하면 끕니다."
     },
     "/docs/settings/:heading:quick-commands:0": {
       "sourceHash": "7f51496625f0d8029771dc6731fb4d0946fdd0c122c211235e9d8f48eb114869",

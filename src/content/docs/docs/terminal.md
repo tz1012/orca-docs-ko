@@ -1,7 +1,7 @@
 ---
 title: "터미널"
 sourceUrl: https://www.onorca.dev/docs/terminal
-checkedAt: "2026-08-11T01:01:52.326Z"
+checkedAt: "2026-08-13T01:02:43.994Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/profiles/
 next: /orca-docs-ko/docs/ways-to-run/
@@ -73,7 +73,7 @@ Orca은 키티 키보드 프로토콜을 광고하므로 터미널 앱은 실제
 
 키티 키보드 프로토콜을 통한 기본 키 바인딩 - Shift+Enter 및 친구들은 독립형 터미널에서와 똑같이 에이전트 CLI에 도달합니다.
 
-macOS의 일본어 JIS 키보드에서 물리적 엔 키가 터미널 세션에 백슬래시를 보내도록 하려면 `Settings → Terminal → JIS Yen (¥) to Backslash (\\)`(설정 → 터미널 → JIS 엔(¥)을 백슬래시(\\)로 변환)를 활성화합니다. macOS 한국어 키보드에서는 한국어 입력 소스가 활성화된 동안 물리적 원 키가 백틱을 보내도록 `Settings → Terminal → Korean Won (₩) to Backquote`(설정 → 터미널 → 한국 원(₩)을 백쿼트로 변환)를 활성화합니다. Markdown 코드 펜스와 셸 인용을 입력할 때 키보드 레이아웃을 전환하지 않아도 됩니다.
+macOS의 일본어 JIS 키보드에서 물리적 엔 키가 터미널 세션에 백슬래시를 보내도록 하려면 `Settings → Terminal → JIS Yen (¥) to Backslash (\\)`(설정 → 터미널 → JIS 엔(¥)을 백슬래시(\\)로 변환)를 활성화합니다.
 
 ## 플로팅 터미널
 

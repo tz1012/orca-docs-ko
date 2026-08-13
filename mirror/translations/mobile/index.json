@@ -19,8 +19,8 @@
       "translated": "![ORCA_PROTECTED_0001 모바일 — 상담원 상태, 스크롤백 및 휴대전화를 통한 빠른 응답.](ORCA_PROTECTED_0002)\n\nORCA_PROTECTED_0003 모바일 — 상담원 상태, 스크롤백 및 전화기를 통한 빠른 응답."
     },
     "/docs/mobile/:aside:mobile-companion:0": {
-      "sourceHash": "27b3529fd4fd819c2d60e0a4512916416194a2be90aea5a4b0a81a7a0a92cb37",
-      "translated": "베타\n\n모바일 컴패니언은 베타 버전입니다. [App Store](ORCA_PROTECTED_0001)에서 iOS를 설치하거나, [TestFlight 미리 보기 채널](ORCA_PROTECTED_0002)에 참여하거나, [현재 APK 0.0.37](ORCA_PROTECTED_0003)에서 Android를 설치합니다."
+      "sourceHash": "bc8089fa4134215b7a73e0f8ebea8f5e6b361b200a9a29b9b7b462b7818613ec",
+      "translated": "베타\n\n모바일 컴패니언은 베타 버전입니다. [App Store](ORCA_PROTECTED_0001)에서 iOS를 설치하거나, [TestFlight 미리 보기 채널](ORCA_PROTECTED_0002)에 참여하거나, [현재 APK 0.0.42](ORCA_PROTECTED_0003)에서 Android를 설치합니다."
     },
     "/docs/mobile/:heading:what-you-can-do-from-mobile:0": {
       "sourceHash": "6b898c2b338d338615017ae7609521db174b0dc7437c980580647e0a58e4d9f0",

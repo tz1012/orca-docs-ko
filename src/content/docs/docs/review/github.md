@@ -1,7 +1,7 @@
 ---
 title: "호스팅된 리뷰, 문제 및 조치"
 sourceUrl: https://www.onorca.dev/docs/review/github
-checkedAt: "2026-08-11T01:01:52.326Z"
+checkedAt: "2026-08-13T01:02:43.994Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/commit-push/
 next: /orca-docs-ko/docs/review/linear/
@@ -36,6 +36,12 @@ GitHub 통합 — 작업 트리를 떠나지 않고도 PR을 열고, 확인하�
 ### 자동 병합
 
 열려 있는 GitHub PR의 경우 PR 보기의 병합 버튼이 `Enable auto-merge`(자동 병합 활성화)를 제공하므로 GitHub는 요구 사항(검사, 필수 검토)이 통과되면 자동으로 분기를 병합합니다. 병합 방법은 저장소의 기본값을 따르며 `Squash and merge`(스쿼시 후 병합), `Create merge commit`(병합 커밋 만들기) 또는 `Rebase and merge`(리베이스 후 병합) 중 하나입니다. 저장소에서 허용하지 않는 방법은 표시되지 않습니다. 보류 중인 자동 병합을 취소하려면 동일한 컨트롤에서 `Disable auto-merge`(자동 병합 비활성화)를 사용하세요. 기본 분기가 GitHub의 병합 대기열을 사용하는 경우 동일한 컨트롤은 `Merge when ready`(준비 시 병합)을 읽고 대신 PR을 대기열에 추가합니다. PR GitHub 보고서가 초안, 마감, 충돌 또는 불안정으로 보고되고 자동 병합을 허용하지 않는 저장소의 경우 자동 병합 제어가 숨겨집니다. 이 경우 수동 병합 작업만 표시됩니다.
+
+### 스택형 풀 리퀘스트
+
+GitHub가 풀 리퀘스트를 **스택**의 일부로 등록하면 PR 사이드바에 접을 수 있는 **`Stack #N`(스택 #N)** 맵이 표시됩니다. 이 맵에는 스택 내 현재 위치, 스택 크기, 스택 기준 브랜치가 나옵니다. 펼치면 순서대로 정렬된 레이어와 상태(`open`(열림), `draft`(초안), `checks pending/failed`(검사 보류/실패), `review needed`(검토 필요), `conflicts`(충돌), `merged`(병합됨), `closed`(닫힘))를 볼 수 있습니다. 레이어를 클릭하면 Orca에서 해당 PR이 열립니다.
+
+스택 인식 병합은 단일 PR 병합 레이블을 **`Merge through #N · M PRs`(#N까지 병합 · PR M개)**로 바꿉니다. 저장소에서 병합 대기열을 사용하는 경우에는 **`Queue through #N · M PRs`(#N까지 대기열에 추가 · PR M개)**로 바뀝니다. 이 작업은 현재 PR과 스택에서 그 아래에 있는 모든 PR에 적용됩니다. 스택 메타데이터가 완전하면 확인 화면에 포함되는 PR 번호가 나열됩니다. 원자적 스택 병합은 실패 시 아무것도 병합하지 않습니다. 레이어 하나라도 병합할 수 없으면 모든 레이어를 병합하지 않습니다. GitHub에 등록된 스택 메타데이터가 없는 일반 종속 PR 체인은 기존의 단일 PR 병합 흐름을 유지합니다. GitLab 병합 요청은 변경되지 않습니다.
 
 ## 문제
 
