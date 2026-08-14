@@ -1,7 +1,7 @@
 ---
 title: "원격 Orca 서버"
 sourceUrl: https://www.onorca.dev/docs/remote-servers
-checkedAt: "2026-08-13T01:02:43.994Z"
+checkedAt: "2026-08-14T01:08:16.788Z"
 editUrl: false
 prev: /orca-docs-ko/docs/ssh/
 next: /orca-docs-ko/docs/cli/overview/
@@ -103,6 +103,8 @@ Tailscale 주소가 없으면 Tailscale이 연결되어 있는지 확인하고 *
 ## 원격 서버 사용하기
 
 서버에 **`Connected`(연결됨)**가 표시되면 서버 또는 서버의 프로젝트 중 하나를 선택하고 평소처럼 Orca을 사용합니다. 터미널, 에이전트 프로세스, 파일, 작업 트리 및 세션 상태는 서버 컴퓨터에 있습니다.
+
+여러 페어링 클라이언트가 해당 서버를 공유하면 사이드바 필터에서 **`Hide other-client workspaces`(다른 클라이언트의 작업 공간 숨기기)**를 제공하여 이 기기가 직접 만든 작업 공간만 표시할 수 있습니다. [Worktrees → Sidebar layout(작업 트리 → 사이드바 레이아웃)](/orca-docs-ko/docs/model/worktrees/#sidebar-layout)을 참조합니다.
 
 즉, 다음과 같이 동작합니다.
 

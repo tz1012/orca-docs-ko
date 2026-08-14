@@ -1,7 +1,7 @@
 ---
 title: "지원되는 에이전트"
 sourceUrl: https://www.onorca.dev/docs/agents/supported
-checkedAt: "2026-08-13T01:02:43.994Z"
+checkedAt: "2026-08-14T01:08:16.788Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/quick-open/
 next: /orca-docs-ko/docs/agents/claude-code/
@@ -33,6 +33,7 @@ Orca은 새로운 실행에 대해 지원되는 각 CLI의 권한 우회 플래�
 | OpenCode | 자동 설정, 상태 | [OpenCode](https://opencode.ai/docs/cli/) |
 | Pi | 자동 설정, 후크, 상태 | [Pi](https://pi.dev/) |
 | OMP | 자동 설정, 후크, 상태 | [OMP](https://omp.sh/) |
+| Prime Agent | 자동 설정, 후크, 상태, 세션 기록 | [Prime Intellect](https://github.com/PrimeIntellect-ai/prime-agent) |
 | Gemini | 자동 설정 | [Google](https://github.com/google-gemini/gemini-cli) |
 | Antigravity | 자동 설정, 후크, 상태 | [Google](https://antigravity.google/docs/cli-overview) |
 | Ante | 자동 설정, 상태 | [Ante](https://github.com/AntigmaLabs/ante-preview) |

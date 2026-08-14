@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-08-13T01:02:43.994Z"
+checkedAt: "2026-08-14T01:08:16.788Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -58,7 +58,7 @@ translationNotice:
 
 ## 빠른 명령
 
--   전역 또는 프로젝트 범위로 저장된 터미널 명령과 에이전트 프롬프트 사전 설정입니다.
+-   전역 또는 프로젝트 범위로 저장된 터미널 명령과 에이전트 프롬프트 사전 설정입니다. 각 행에는 명령 본문용 복사 컨트롤이 있습니다.
 -   명령 목록을 검토하고 편집하기 위한 범위 필터입니다. 동일한 목록이 [모바일 컴패니언](/orca-docs-ko/docs/mobile/)과 동기화됩니다.
 -   원격 또는 다중 호스트 환경에서는 명령을 소유한 Orca 호스트별로 그룹화하고 **`Saved on`(저장 위치)**을 표시합니다. 호스트 소유권은 Global/Project 범위 및 명령 실행 위치와 별개입니다. [Terminal → Quick Commands(터미널 → 빠른 명령)](/orca-docs-ko/docs/terminal/#quick-commands)를 참조합니다.
 
@@ -70,6 +70,7 @@ translationNotice:
 -   Claude 및 Codex 계정 목록을 표시합니다.
 -   에이전트별 시작 훅을 설정합니다.
 -   **`Agent status hooks`(에이전트 상태 훅)** — Orca에 작업 중/대기 중/완료 상태를 표시합니다. Windows WSL 훅 릴레이를 포함하여 앱을 다시 시작하지 않아도 토글이 적용됩니다. CLI 명령은 `orca agent hooks on|off|status`입니다.
+-   **`Keep computer awake`(컴퓨터 절전 방지)** — **`On`(켜짐)**은 계속 절전을 방지하고, **`Agent`(에이전트)**는 에이전트가 작업하는 동안 절전을 방지하며, **`Off`(꺼짐)**는 이 기능을 끕니다. 데스크톱 상태 표시줄에도 커피 아이콘과 함께 동일한 **`Caffeinate`(절전 방지)** 컨트롤이 있습니다. 페어링된 웹 클라이언트에서는 숨겨집니다.
 -   **`Skill freshness`(스킬 최신 상태)** — `Agents`(에이전트) 창과 스킬 카드는 전체 상태를 계속 표시합니다. 사이드바 탐색에는 조치가 필요한 스킬만 배지가 표시됩니다(**`Update available`(업데이트 사용 가능)**, **`Needs attention`(확인 필요)**/검토). 정상, 로딩 중 및 설치되지 않은 선택 항목에는 배지가 표시되지 않습니다. 대화 상자의 **`Update`(업데이트)**를 사용하면 터미널 없이 전역 스킬을 백그라운드에서 새로 고칩니다. 진행 상태는 상태 표시줄에 나타나며 대화 상자를 닫아도 실행은 취소되지 않습니다. [Orca 스킬](/orca-docs-ko/docs/cli/skills/#keep-skills-up-to-date)을 참조합니다.
 
 ## 브라우저
@@ -79,6 +80,8 @@ translationNotice:
 -   `Design Mode`(디자인 모드) 기본값을 설정합니다.
 -   `Devtools`(개발자 도구) 사용 여부를 설정합니다.
 -   **`Link Routing`(링크 라우팅)** — 터미널, 마크다운 및 편집기의 http(s) 링크를 Orca 브라우저 또는 시스템 브라우저에서 엽니다. 중첩된 **`Hold Shift…`(Shift 키 누르기…)** 옵션은 한 번의 클릭에 대해 이 기본 동작을 반대로 전환합니다(`⇧⌘-click` / `Shift+Ctrl+click`). [작업 트리별 브라우저](/orca-docs-ko/docs/browser/overview/#link-routing)를 참조합니다.
+-   **`Show terminal link actions`(터미널 링크 작업 표시)** — **기본적으로 켜져 있습니다**. 터미널 링크를 일반 클릭하면 간결한 작업 팝오버가 열립니다. 이 옵션을 끄면 `⌘`\-click / `Ctrl`\-click가 필요합니다. [Terminal → Link actions(터미널 → 링크 작업)](/orca-docs-ko/docs/terminal/#link-actions)을 참조합니다.
+-   **`Default Search Engine`(기본 검색 엔진)** — 브라우저 주소 표시줄이나 [새 탭 옴니박스](/orca-docs-ko/docs/model/quick-open/#new-tab-omnibox)에 URL이 아닌 텍스트를 입력할 때 사용합니다.
 
 ## 아티팩트
 

@@ -435,8 +435,8 @@
       "translated": "서버에 **`Connected`(연결됨)**가 표시되면 서버 또는 서버의 프로젝트 중 하나를 선택하고 평소처럼 ORCA_PROTECTED_0001을 사용합니다. 터미널, 에이전트 프로세스, 파일, 작업 트리 및 세션 상태는 서버 컴퓨터에 있습니다."
     },
     "/docs/remote-servers/:paragraph:use-the-remote-server:1": {
-      "sourceHash": "b7c8f75b254873c20dcc6a56de2986e2de15c6bdfe1d7dc04b26020eec60497a",
-      "translated": "즉, 다음과 같이 동작합니다."
+      "sourceHash": "d8961c745cf2d0750d55f0fe2b9e53e8ae60cad7f18d88448f93f9fabeddda73",
+      "translated": "여러 페어링 클라이언트가 해당 서버를 공유하면 사이드바 필터에서 **`Hide other-client workspaces`(다른 클라이언트의 작업 공간 숨기기)**를 제공하여 이 기기가 직접 만든 작업 공간만 표시할 수 있습니다. [Worktrees → Sidebar layout(작업 트리 → 사이드바 레이아웃)](ORCA_PROTECTED_0001)을 참조합니다."
     },
     "/docs/remote-servers/:list:use-the-remote-server:0": {
       "sourceHash": "9ace3fa94fb87248b6efd3a14dce8e274ecfc77a85bdb3c99924cb866618ffd8",
@@ -609,6 +609,10 @@
     "/docs/remote-servers/:code:what-runs-where:2": {
       "sourceHash": "f79ef3d96a645cf80daf13ea159f39238ff5c9160c9fa4158b3893755a1cfa59",
       "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/remote-servers/:paragraph:use-the-remote-server:2": {
+      "sourceHash": "b7c8f75b254873c20dcc6a56de2986e2de15c6bdfe1d7dc04b26020eec60497a",
+      "translated": "즉, 다음과 같이 동작합니다."
     }
   }
 }

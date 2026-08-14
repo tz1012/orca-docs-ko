@@ -1,7 +1,7 @@
 ---
 title: "터미널"
 sourceUrl: https://www.onorca.dev/docs/terminal
-checkedAt: "2026-08-13T01:02:43.994Z"
+checkedAt: "2026-08-14T01:08:16.788Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/profiles/
 next: /orca-docs-ko/docs/ways-to-run/
@@ -32,6 +32,12 @@ Ghostty 스타일 터미널 — 처음 시작할 때 Ghostty 테마, 글꼴 및 
 ## 검색
 
 `Cmd-F`은 스크롤백에서 찾기를 엽니다. 일치 강조 표시, 대소문자, 정규식 및 일치 탐색이 모두 지원됩니다.
+
+## 링크 작업
+
+터미널 링크(HTTP/OSC 8 URL, 파일 경로, 작업 공간, 터미널 또는 작업 핸들)를 일반 클릭하면 즉시 이동하지 않고 간결한 작업 팝오버가 열립니다. 로컬 웹 링크의 팝오버에는 **`Orca Browser`(Orca 브라우저)**와 **`System Browser`(시스템 브라우저)**가 표시되며, 원격 링크는 계속 시스템 브라우저에서만 열립니다. `Cmd`\-click(macOS) / `Ctrl`\-click(Windows/Linux)는 계속 직접 열고, `Shift+Cmd` / `Shift+Ctrl`\-click는 계속 [링크 라우팅](/orca-docs-ko/docs/browser/overview/#link-routing)의 대체 동작을 사용합니다.
+
+[**`Settings`(설정) → `Browser`(브라우저) → `Show terminal link actions`(터미널 링크 작업 표시)**](/orca-docs-ko/docs/settings/)에서 팝오버를 끕니다. 팝오버를 끄면 링크를 열 때 수정 키를 누른 채 클릭해야 합니다.
 
 ## 터미널 컨텍스트 복사
 
@@ -88,6 +94,6 @@ macOS의 일본어 JIS 키보드에서 물리적 엔 키가 터미널 세션에 
 
 빠른 명령은 `npm run dev`, `pnpm test` 또는 프로젝트별 설정 스크립트와 같이 자주 실행하는 터미널 명령을 저장합니다. 또한 Claude 및 Codex와 같은 시작 시간 프롬프트 에이전트에 대해 재사용 가능한 에이전트 프롬프트를 저장할 수도 있습니다. `Settings → Quick Commands`(설정 → 빠른 명령) 또는 탭 표시줄의 `Add command`(명령 추가) 버튼에서 생성한 다음 작업 트리 탭 표시줄의 빠른 명령 분할 버튼 또는 터미널 컨텍스트 메뉴에서 실행합니다.
 
-각 명령에는 레이블, 명령 텍스트 및 범위가 있습니다. 모든 곳에 적용되는 명령의 경우 `Global`(전역)을 사용하고, 특정 저장소의 작업 트리에만 명령을 표시하려면 `Project`(프로젝트)를 사용하세요. 탭 표시줄 버튼은 새로운 터미널 탭을 열고 명령을 실행합니다. 터미널 상황에 맞는 메뉴는 현재 터미널에 명령을 삽입할 수 있습니다.
+각 명령에는 레이블, 명령 텍스트 및 범위가 있습니다. 모든 곳에 적용되는 명령에는 **`Global`(전역)**을 사용하고, 특정 저장소의 작업 트리에만 명령을 표시하려면 **`Project`(프로젝트)**를 사용합니다. 탭 표시줄 버튼은 새 터미널 탭을 열고 명령을 실행하며, 터미널 컨텍스트 메뉴에서는 현재 터미널에 명령을 삽입할 수 있습니다. 명령 행의 복사 컨트롤(`Settings`(설정) 목록, 탭 표시줄 메뉴 또는 [모바일 `Quick Commands`(빠른 명령)](/orca-docs-ko/docs/mobile/#quick-commands))을 사용하면 명령 본문을 클립보드에 넣습니다.
 
 페어링된 [Remote Orca Server(원격 서버)](/orca-docs-ko/docs/remote-servers/) 또는 다른 실행 호스트를 사용할 때 선택기는 **로컬 및 원격** 컬렉션을 나란히 표시하고 호스트별 레이블을 붙일 수 있습니다. 예를 들어 *`Local Mac`(로컬 Mac)* 및 *Orca `Server`(서버)*로 표시됩니다. **`Saved on`(저장 위치)**은 명령이 저장된 위치이며, 명령을 실행하면 호출한 터미널 또는 작업 공간에서 계속 실행됩니다. 따라서 클라이언트 소유 명령도 원격 작업 트리 안에서 실행할 수 있습니다. 다중 호스트 `Quick Commands`(빠른 명령)를 알리지 않는 이전 서버에서는 로컬 전용 목록으로 대체됩니다.

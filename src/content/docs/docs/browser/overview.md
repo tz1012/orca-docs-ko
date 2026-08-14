@@ -1,7 +1,7 @@
 ---
 title: "작업트리별 브라우저"
 sourceUrl: https://www.onorca.dev/docs/browser/overview
-checkedAt: "2026-08-13T01:02:43.994Z"
+checkedAt: "2026-08-14T01:08:16.788Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/file-explorer/
 next: /orca-docs-ko/docs/browser/design-mode/
@@ -19,7 +19,7 @@ translationNotice:
 
 ## 컨트롤
 
--   기록 및 퍼지 URL 완성 기능이 있는 주소 표시줄입니다.
+-   기록 및 퍼지 URL 완성 기능이 있는 주소 표시줄입니다. URL이 아닌 텍스트는 [**`Default Search Engine`(기본 검색 엔진)**](/orca-docs-ko/docs/settings/), 즉 [새 탭 옴니박스](/orca-docs-ko/docs/model/quick-open/#new-tab-omnibox)와 동일한 엔진으로 검색합니다. **+** 필드에서 검색을 강제하려면 검색어 앞에 `?`을 붙입니다.
 -   뒤로/앞으로/새로고침/중지 컨트롤입니다. 새로고침 컨트롤 위에 마우스를 올리면 일반 새로고침 단축키가 표시됩니다. 마우스 오른쪽 버튼으로 클릭하거나 길게 누르면 **`Reload`(새로고침)** 및 **`Hard Reload`(강력 새로고침)**와 각 단축키가 표시됩니다. 강력 새로고침은 로컬 프런트엔드 자산을 반복 수정할 때 캐시를 우회합니다.
 -   `Cmd-F` — 페이지에서 찾습니다.
 -   `Cmd-T` — 이 작업 트리로 범위가 지정된 새 탭을 엽니다.
@@ -42,7 +42,7 @@ translationNotice:
 -   링크가 **Orca**에서 열리도록 설정된 경우 수정 키를 사용하면 해당 링크 하나를 시스템 브라우저로 보냅니다.
 -   링크가 **시스템 브라우저**에서 열리도록 설정된 경우 토글을 켜면 수정 키를 사용한 링크 하나가 Orca의 내장 브라우저에서 대신 열립니다. 일반 클릭은 계속 시스템 브라우저에서 열립니다.
 
-Remote/SSH 소스는 수정 키를 사용해도 Orca 브라우저 내부에서 열리지 않습니다.
+Remote/SSH 소스는 수정 키를 사용해도 Orca 브라우저 내부에서 열리지 않습니다. 터미널 링크에는 **`Orca Browser`(Orca 브라우저)** / **`System Browser`(시스템 브라우저)** 클릭 팝오버도 표시될 수 있습니다. [Terminal → Link actions(터미널 → 링크 작업)](/orca-docs-ko/docs/terminal/#link-actions)을 참조합니다.
 
 ## 다운로드
 

@@ -1,7 +1,7 @@
 ---
 title: "모바일 동반자"
 sourceUrl: https://www.onorca.dev/docs/mobile
-checkedAt: "2026-08-13T01:02:43.994Z"
+checkedAt: "2026-08-14T01:08:16.788Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/skills/
 next: /orca-docs-ko/docs/notifications/
@@ -69,6 +69,7 @@ Orca 모바일 — 상담원 상태, 스크롤백 및 전화기를 통한 빠른
 
 -   **`Terminal Command`(터미널 명령)** — 새 탭에 셸 명령을 붙여 넣거나 실행합니다. 먼저 편집할 수 있도록 선택적으로 Enter를 누르지 않을 수 있습니다.
 -   **`Agent Prompt`(에이전트 프롬프트)** — 저장된 프롬프트 본문으로 선택한 에이전트를 엽니다.
+-   행의 복사 컨트롤로 명령 본문을 클립보드에 복사합니다. 본문이 비어 있으면 이 컨트롤은 비활성화됩니다.
 -   명령 범위를 전역 또는 현재 프로젝트로 지정합니다. 시트에서 추가, 편집 및 삭제하며 데스크톱 호스트가 공유 목록 한도를 적용합니다.
 
 페어링된 데스크톱이 너무 오래된 버전이면 데스크톱을 업데이트할 때까지 실행기가 비활성화됩니다.

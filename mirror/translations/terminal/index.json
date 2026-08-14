@@ -131,8 +131,8 @@
       "translated": "빠른 명령은 `ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002` 또는 프로젝트별 설정 스크립트와 같이 자주 실행하는 터미널 명령을 저장합니다. 또한 ORCA_PROTECTED_0003 및 ORCA_PROTECTED_0004와 같은 시작 시간 프롬프트 에이전트에 대해 재사용 가능한 에이전트 프롬프트를 저장할 수도 있습니다. `Settings → Quick Commands`(설정 → 빠른 명령) 또는 탭 표시줄의 `Add command`(명령 추가) 버튼에서 생성한 다음 작업 트리 탭 표시줄의 빠른 명령 분할 버튼 또는 터미널 컨텍스트 메뉴에서 실행합니다."
     },
     "/docs/terminal/:paragraph:quick-commands:1": {
-      "sourceHash": "7b56cad836d60d247e01e953b3b4450ff8b5abb19bc5bdbca790688ce6bd2682",
-      "translated": "각 명령에는 레이블, 명령 텍스트 및 범위가 있습니다. 모든 곳에 적용되는 명령의 경우 `Global`(전역)을 사용하고, 특정 저장소의 작업 트리에만 명령을 표시하려면 `Project`(프로젝트)를 사용하세요. 탭 표시줄 버튼은 새로운 터미널 탭을 열고 명령을 실행합니다. 터미널 상황에 맞는 메뉴는 현재 터미널에 명령을 삽입할 수 있습니다."
+      "sourceHash": "7ef172a7c30b100ddf5491b16b97b8007d05a57f3a3d1195ea5da4aa976bd82f",
+      "translated": "각 명령에는 레이블, 명령 텍스트 및 범위가 있습니다. 모든 곳에 적용되는 명령에는 **`Global`(전역)**을 사용하고, 특정 저장소의 작업 트리에만 명령을 표시하려면 **`Project`(프로젝트)**를 사용합니다. 탭 표시줄 버튼은 새 터미널 탭을 열고 명령을 실행하며, 터미널 컨텍스트 메뉴에서는 현재 터미널에 명령을 삽입할 수 있습니다. 명령 행의 복사 컨트롤(`Settings`(설정) 목록, 탭 표시줄 메뉴 또는 [모바일 `Quick Commands`(빠른 명령)](ORCA_PROTECTED_0001))을 사용하면 명령 본문을 클립보드에 넣습니다."
     },
     "/docs/terminal/:heading:tui-clipboard-osc-52:0": {
       "sourceHash": "aa3cf6a5d02d5938582d595bc4d9d0458a7c7c0877685db95cd288560f9e740e",
@@ -145,6 +145,18 @@
     "/docs/terminal/:paragraph:tui-clipboard-osc-52:1": {
       "sourceHash": "464118e0ed3287bf8945be93f973a3155856aa8c34f634801d72074d295cb965",
       "translated": "전환 위치: [`Settings`(설정) → `Terminal`(터미널) → `Allow TUI Clipboard Writes (OSC 52)`(TUI 클립보드 쓰기 허용)](ORCA_PROTECTED_0001)"
+    },
+    "/docs/terminal/:heading:link-actions:0": {
+      "sourceHash": "84d1591aa49d5830ff8f13f6ee39cc0c58bf121642fe3b89bed1920b52d3f4a1",
+      "translated": "## 링크 작업"
+    },
+    "/docs/terminal/:paragraph:link-actions:0": {
+      "sourceHash": "b65c5fa4fe74dac19b9543280154a1e606757a2fce59815ed11dd011c5b7d6b3",
+      "translated": "터미널 링크(ORCA_PROTECTED_0001 8 URL, 파일 경로, 작업 공간, 터미널 또는 작업 핸들)를 일반 클릭하면 즉시 이동하지 않고 간결한 작업 팝오버가 열립니다. 로컬 웹 링크의 팝오버에는 **`ORCA_PROTECTED_0002 Browser`(Orca 브라우저)**와 **`System Browser`(시스템 브라우저)**가 표시되며, 원격 링크는 계속 시스템 브라우저에서만 열립니다. `ORCA_PROTECTED_0003`\\ORCA_PROTECTED_0004(macOS) / `ORCA_PROTECTED_0005`\\ORCA_PROTECTED_0006(Windows/Linux)는 계속 직접 열고, `ORCA_PROTECTED_0007` / `ORCA_PROTECTED_0008`\\ORCA_PROTECTED_0009는 계속 [링크 라우팅](ORCA_PROTECTED_0010)의 대체 동작을 사용합니다."
+    },
+    "/docs/terminal/:paragraph:link-actions:1": {
+      "sourceHash": "74ff2feeef062b06ab759e715fe83475ad7e6f69a2b8f416385c5cc1d1420def",
+      "translated": "[**`Settings`(설정) → `Browser`(브라우저) → `Show terminal link actions`(터미널 링크 작업 표시)**](ORCA_PROTECTED_0001)에서 팝오버를 끕니다. 팝오버를 끄면 링크를 열 때 수정 키를 누른 채 클릭해야 합니다."
     }
   }
 }

@@ -1,7 +1,7 @@
 ---
 title: "호스팅된 리뷰, 문제 및 조치"
 sourceUrl: https://www.onorca.dev/docs/review/github
-checkedAt: "2026-08-13T01:02:43.994Z"
+checkedAt: "2026-08-14T01:08:16.788Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/commit-push/
 next: /orca-docs-ko/docs/review/linear/
@@ -31,6 +31,7 @@ GitHub 통합 — 작업 트리를 떠나지 않고도 PR을 열고, 확인하�
 -   GitHub 검사, 검토 및 댓글은 PR 탭에서 인라인으로 열리며, GitLab 병합 요청과 이슈도 동일한 검토 화면에서 열립니다.
 -   GitLab 파이프라인에서는 **`Checks`(검사)** 사이드 패널에 최상위 작업뿐 아니라 브리지 및 하위 파이프라인 작업도 포함됩니다. 작업을 펼치면 해당 작업의 추적 로그를 사용할 수 있을 때 불러옵니다. GitHub 검사 세부 정보가 열리는 것과 같은 위치이므로 실패한 작업이 `no inline details`(인라인 세부 정보 없음) 스텁으로 막히지 않습니다.
 -   `Checks`(검사) 패널에서는 루트 댓글뿐 아니라 검토 스레드의 모든 댓글에 답글을 달 수 있습니다.
+-   GitHub PR 대화 댓글과 인라인 검토 스레드 댓글에는 GitHub의 8가지 반응(👍 👎 😄 😕 ❤️ 🎉 🚀 👀)과 일치하는 반응 선택기가 있습니다. 기존 칩은 토글로 동작합니다. GitLab 댓글은 변경되지 않습니다.
 -   GitHub 풀 리퀘스트의 검사가 실패하면 PR 보기의 **`Fix broken checks`(실패한 검사 수정)**를 사용하여 실패한 검사 이름과 링크를 에이전트에 전달합니다.
 
 ### 자동 병합

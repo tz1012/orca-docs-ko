@@ -123,8 +123,8 @@
       "translated": "작업 트리 세션에서 세션 탭 표시줄의 새 터미널 옆에 있는 **`Quick Commands`(빠른 명령)**를 엽니다. 명령은 데스크톱과 동일한 저장 목록이며 양방향으로 동기화됩니다."
     },
     "/docs/mobile/:list:quick-commands:0": {
-      "sourceHash": "51d0cffeb3c114f9bad5a7df0e113981b61a23d8aaeece7c5a66161b2b72c8d5",
-      "translated": "-   **`Terminal Command`(터미널 명령)** — 새 탭에 셸 명령을 붙여 넣거나 실행합니다. 먼저 편집할 수 있도록 선택적으로 Enter를 누르지 않을 수 있습니다.\n-   **`Agent Prompt`(에이전트 프롬프트)** — 저장된 프롬프트 본문으로 선택한 에이전트를 엽니다.\n-   명령 범위를 전역 또는 현재 프로젝트로 지정합니다. 시트에서 추가, 편집 및 삭제하며 데스크톱 호스트가 공유 목록 한도를 적용합니다."
+      "sourceHash": "5575271f07e52996bbce77007252b26f9b80d853d7033e4fa60acb9875825a9e",
+      "translated": "-   **`Terminal Command`(터미널 명령)** — 새 탭에 셸 명령을 붙여 넣거나 실행합니다. 먼저 편집할 수 있도록 선택적으로 Enter를 누르지 않을 수 있습니다.\n-   **`Agent Prompt`(에이전트 프롬프트)** — 저장된 프롬프트 본문으로 선택한 에이전트를 엽니다.\n-   행의 복사 컨트롤로 명령 본문을 클립보드에 복사합니다. 본문이 비어 있으면 이 컨트롤은 비활성화됩니다.\n-   명령 범위를 전역 또는 현재 프로젝트로 지정합니다. 시트에서 추가, 편집 및 삭제하며 데스크톱 호스트가 공유 목록 한도를 적용합니다."
     },
     "/docs/mobile/:paragraph:quick-commands:1": {
       "sourceHash": "a5eaafca21d6679d1ff0113ec91e3b439f29388614cdec196bb02f9ffdc522b9",
