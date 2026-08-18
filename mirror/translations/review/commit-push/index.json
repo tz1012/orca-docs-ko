@@ -43,8 +43,8 @@
       "translated": "## 호스팅된 리뷰 열기"
     },
     "/docs/review/commit-push/:paragraph:open-a-hosted-review:0": {
-      "sourceHash": "cd2c9b35d1e42f404cc22c57dae3bb058b56113ea565998fab43882270c83a7d",
-      "translated": "브랜치가 푸시된 후 소스 제어 패널의 호스팅된 검토 작업을 사용하여 풀 요청 또는 병합 요청을 생성합니다. 제출하기 전에 기본 분기, 제목, 설명 및 초안 상태를 확인하세요."
+      "sourceHash": "1acea1a3d4deca66b8b15dc5751659c0ee5221af1c4541e432522652787acd15",
+      "translated": "브랜치를 푸시한 뒤 `Source Control`(소스 제어) 패널의 호스팅 검토 작업을 사용하여 풀 리퀘스트 또는 병합 요청을 만듭니다. 제출하기 전에 기준 브랜치, 제목, 설명, 초안 상태를 확인합니다. Bitbucket Cloud에서는 같은 작성기에서 풀 리퀘스트를 만들 수 있습니다. 초안 PR을 지원하지 않으므로 `Draft`(초안)는 숨겨집니다. ORCA_PROTECTED_0001의 경우 선택한 기준 브랜치에 열린 PR이 이미 있으면 **`Stack this PR above #N`(이 PR을 #N 위에 스택)**을 사용할 수 있습니다. [스택형 풀 리퀘스트](ORCA_PROTECTED_0002)를 참조합니다."
     },
     "/docs/review/commit-push/:paragraph:open-a-hosted-review:1": {
       "sourceHash": "ab327c8fe3364d58002021833b35925fc828c6fcc723de91a9945418720752ab",

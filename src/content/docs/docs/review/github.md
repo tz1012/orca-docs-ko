@@ -1,7 +1,7 @@
 ---
 title: "호스팅된 리뷰, 문제 및 조치"
 sourceUrl: https://www.onorca.dev/docs/review/github
-checkedAt: "2026-08-14T01:08:16.788Z"
+checkedAt: "2026-08-18T00:27:24.492Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/commit-push/
 next: /orca-docs-ko/docs/review/linear/
@@ -19,19 +19,22 @@ GitHub 통합 — 작업 트리를 떠나지 않고도 PR을 열고, 확인하�
 
 ## 공급자 연결
 
-[설정 → 통합](/orca-docs-ko/docs/settings/)에서 저장소가 사용하는 공급자를 연결하세요. GitHub는 가장 심층적인 작업 및 문제 지원을 제공합니다. GitLab 병합 요청 및 문제는 동일한 작업 트리 검토 흐름을 사용합니다. Bitbucket, Azure DevOps 및 Gitea 풀 요청은 GitHub 및 GitLab과 함께 작업 트리 사이드바와 검사 패널에 표시됩니다. 작업 트리 생성 흐름은 푸시하기 전에 원격 충돌이 있는지 확인합니다.
+[`Settings → Integrations`(설정 → 통합)](/orca-docs-ko/docs/settings/)에서 저장소가 사용하는 공급자를 연결합니다. GitHub는 Actions와 이슈를 가장 폭넓게 지원하며, GitLab 병합 요청과 이슈도 같은 작업 트리 검토 흐름을 사용합니다.
+
+Bitbucket Cloud는 같은 창에서 앱 내 연결을 지원합니다. **`Connect`(연결)**를 선택한 뒤 **`Email & API token`(이메일 및 API 토큰)** 또는 **`Access token`(액세스 토큰)**을 사용합니다. Orca는 자격 증명을 저장하기 전에 검증하며 `Source Control`(소스 제어)에서 풀 리퀘스트를 만들 수 있습니다. Bitbucket Cloud는 초안 PR을 지원하지 않으므로 작성기에서 `Draft`(초안) 토글을 숨깁니다. `ORCA_BITBUCKET_*` 환경 변수는 저장된 자격 증명보다 계속 우선합니다. Azure DevOps와 Gitea 풀 리퀘스트는 GitHub, GitLab, Bitbucket과 함께 작업 트리 사이드바와 `Checks`(검사) 패널에 표시됩니다. 작업 트리 생성 흐름은 푸시하기 전에 원격 충돌 여부를 확인합니다.
 
 ## 리뷰
 
--   작업 트리를 푸시한 후 `Source Control`(소스 제어) 패널에서 호스팅된 검토를 엽니다. 만들기 전에 기준 브랜치, 제목, 설명 및 초안 상태를 확인합니다.
--   호스팅된 검토를 만들거나 여는 동안 `Source Control`(소스 제어)의 브랜치 컨텍스트 행에 현재 브랜치가 계속 표시되므로 `Create PR`(PR 만들기) 작업이 브랜치 레이블을 대체하지 않습니다.
--   연결된 검토는 사이드바에 상태와 함께 표시되어 브랜치가 열림, 병합됨 또는 닫힘 상태인지 알 수 있습니다.
--   Orca에 연결된 PR/MR의 URL이 있으면 브랜치 컨텍스트 행에 **`Open review page in browser`(브라우저에서 검토 페이지 열기)** 링크가 간결하게 표시됩니다. 한 번 클릭하면 내부 PR 보기를 열지 않고 GitHub, GitLab, Bitbucket, Azure DevOps 또는 Gitea의 검토로 이동합니다.
--   GitHub 풀 리퀘스트에서는 사이드바의 PR 작업 메뉴를 사용하여 검토 링크를 복사하거나, 검토를 닫거나, 상태 변경을 확인한 후 다시 엽니다.
--   GitHub 검사, 검토 및 댓글은 PR 탭에서 인라인으로 열리며, GitLab 병합 요청과 이슈도 동일한 검토 화면에서 열립니다.
--   GitLab 파이프라인에서는 **`Checks`(검사)** 사이드 패널에 최상위 작업뿐 아니라 브리지 및 하위 파이프라인 작업도 포함됩니다. 작업을 펼치면 해당 작업의 추적 로그를 사용할 수 있을 때 불러옵니다. GitHub 검사 세부 정보가 열리는 것과 같은 위치이므로 실패한 작업이 `no inline details`(인라인 세부 정보 없음) 스텁으로 막히지 않습니다.
+-   작업 트리를 푸시한 뒤 `Source Control`(소스 제어) 패널에서 호스팅 검토를 엽니다. 만들기 전에 기준 브랜치, 제목, 설명, 초안 상태를 확인합니다.
+-   호스팅 검토를 만들거나 여는 동안 `Source Control`(소스 제어)의 브랜치 컨텍스트 행에 현재 브랜치가 계속 표시되므로 `Create PR`(PR 만들기) 작업이 브랜치 레이블을 대체하지 않습니다.
+-   연결된 검토는 사이드바에 상태와 함께 표시되므로 브랜치가 아직 `open`(열림), `merged`(병합됨), `closed`(닫힘) 중 어떤 상태인지 알 수 있습니다.
+-   Orca에 연결된 PR/MR의 URL이 있으면 브랜치 컨텍스트 행에 간결한 **`Open review page in browser`(브라우저에서 검토 페이지 열기)** 링크가 표시됩니다. 한 번 클릭하면 내부 PR 보기를 열지 않고 GitHub, GitLab, Bitbucket, Azure DevOps 또는 Gitea의 검토로 이동합니다.
+-   GitHub 풀 리퀘스트에서는 사이드바의 PR 작업 메뉴를 사용하여 검토 링크를 복사하거나, 검토를 닫거나, 상태 변경을 확인한 뒤 다시 엽니다.
+-   GitHub 검사, 검토, 댓글은 PR 탭에서 인라인으로 열리며, GitLab 병합 요청과 이슈도 같은 검토 화면에서 열립니다.
+-   GitLab 파이프라인에서는 **`Checks`(검사)** 사이드 패널에 최상위 작업뿐 아니라 브리지 및 하위 파이프라인 작업도 포함됩니다. 작업을 펼치면 사용할 수 있는 경우 해당 작업의 추적 로그를 불러옵니다. GitHub 검사 세부 정보가 열리는 곳과 같으므로 실패한 작업이 `no inline details`(인라인 세부 정보 없음) 스텁에서 막히지 않습니다.
 -   `Checks`(검사) 패널에서는 루트 댓글뿐 아니라 검토 스레드의 모든 댓글에 답글을 달 수 있습니다.
 -   GitHub PR 대화 댓글과 인라인 검토 스레드 댓글에는 GitHub의 8가지 반응(👍 👎 😄 😕 ❤️ 🎉 🚀 👀)과 일치하는 반응 선택기가 있습니다. 기존 칩은 토글로 동작합니다. GitLab 댓글은 변경되지 않습니다.
+-   그룹화된 PR 댓글 섹션은 최신순으로 정렬되므로 새 답글이 달린 스레드가 맨 위로 올라옵니다. `Timeline`(타임라인) 탭은 계속 오래된순으로 정렬됩니다.
 -   GitHub 풀 리퀘스트의 검사가 실패하면 PR 보기의 **`Fix broken checks`(실패한 검사 수정)**를 사용하여 실패한 검사 이름과 링크를 에이전트에 전달합니다.
 
 ### 자동 병합
@@ -40,7 +43,9 @@ GitHub 통합 — 작업 트리를 떠나지 않고도 PR을 열고, 확인하�
 
 ### 스택형 풀 리퀘스트
 
-GitHub가 풀 리퀘스트를 **스택**의 일부로 등록하면 PR 사이드바에 접을 수 있는 **`Stack #N`(스택 #N)** 맵이 표시됩니다. 이 맵에는 스택 내 현재 위치, 스택 크기, 스택 기준 브랜치가 나옵니다. 펼치면 순서대로 정렬된 레이어와 상태(`open`(열림), `draft`(초안), `checks pending/failed`(검사 보류/실패), `review needed`(검토 필요), `conflicts`(충돌), `merged`(병합됨), `closed`(닫힘))를 볼 수 있습니다. 레이어를 클릭하면 Orca에서 해당 PR이 열립니다.
+선택한 기준 브랜치에 열린 PR이 이미 있는 GitHub 풀 리퀘스트를 만들면 작성기에 **`Stack this PR above #N`(이 PR을 #N 위에 스택)** 옵션이 표시됩니다. 이 옵션을 선택하면 GitHub 스택을 만들거나 상위 PR의 기존 스택을 확장하고 제출 레이블을 **`Create PR in stack`(스택에 PR 만들기)**으로 바꿉니다. 상황에 따라 **`Create draft PR in stack`(스택에 초안 PR 만들기)** 또는 **`Push & Create PR in stack`(푸시하고 스택에 PR 만들기)**으로 표시됩니다. 작은 미리 보기에는 상위 PR과 새 브랜치가 표시됩니다. 이 옵션은 GitHub 전용이며 실행 호스트가 스택 생성을 지원할 때만 표시됩니다. GitLab 병합 요청과 Bitbucket 풀 리퀘스트는 계속 개별 PR 생성 방식을 사용합니다.
+
+GitHub가 풀 리퀘스트를 **`stack`(스택)**의 일부로 등록하면 PR 사이드바에 접을 수 있는 **`Stack #N`(스택 #N)** 맵이 표시됩니다. 이 맵에는 스택 내 현재 위치, 스택 크기, 스택 기준 브랜치가 표시됩니다. 펼치면 순서대로 정렬된 레이어와 상태(`open`(열림), `draft`(초안), `checks pending/failed`(검사 보류/실패), `review needed`(검토 필요), `conflicts`(충돌), `merged`(병합됨), `closed`(닫힘))를 볼 수 있습니다. 레이어를 클릭하면 Orca에서 해당 PR이 열립니다.
 
 스택 인식 병합은 단일 PR 병합 레이블을 **`Merge through #N · M PRs`(#N까지 병합 · PR M개)**로 바꿉니다. 저장소에서 병합 대기열을 사용하는 경우에는 **`Queue through #N · M PRs`(#N까지 대기열에 추가 · PR M개)**로 바뀝니다. 이 작업은 현재 PR과 스택에서 그 아래에 있는 모든 PR에 적용됩니다. 스택 메타데이터가 완전하면 확인 화면에 포함되는 PR 번호가 나열됩니다. 원자적 스택 병합은 실패 시 아무것도 병합하지 않습니다. 레이어 하나라도 병합할 수 없으면 모든 레이어를 병합하지 않습니다. GitHub에 등록된 스택 메타데이터가 없는 일반 종속 PR 체인은 기존의 단일 PR 병합 흐름을 유지합니다. GitLab 병합 요청은 변경되지 않습니다.
 

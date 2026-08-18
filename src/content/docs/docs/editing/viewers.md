@@ -1,7 +1,7 @@
 ---
 title: "인어, PDF 및 이미지 뷰어"
 sourceUrl: https://www.onorca.dev/docs/editing/viewers
-checkedAt: "2026-08-14T01:08:16.788Z"
+checkedAt: "2026-08-18T00:27:24.492Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/markdown/
 next: /orca-docs-ko/docs/editing/file-explorer/

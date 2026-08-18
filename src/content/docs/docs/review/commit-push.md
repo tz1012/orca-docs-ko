@@ -1,7 +1,7 @@
 ---
 title: "Orca에서 커밋 및 푸시"
 sourceUrl: https://www.onorca.dev/docs/review/commit-push
-checkedAt: "2026-08-14T01:08:16.788Z"
+checkedAt: "2026-08-18T00:27:24.492Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/attribution/
 next: /orca-docs-ko/docs/review/github/
@@ -31,7 +31,7 @@ Orca을 종료하지 않고도 검토를 커밋하고 푸시하고 열 수 있�
 
 ## 호스팅된 리뷰 열기
 
-브랜치가 푸시된 후 소스 제어 패널의 호스팅된 검토 작업을 사용하여 풀 요청 또는 병합 요청을 생성합니다. 제출하기 전에 기본 분기, 제목, 설명 및 초안 상태를 확인하세요.
+브랜치를 푸시한 뒤 `Source Control`(소스 제어) 패널의 호스팅 검토 작업을 사용하여 풀 리퀘스트 또는 병합 요청을 만듭니다. 제출하기 전에 기준 브랜치, 제목, 설명, 초안 상태를 확인합니다. Bitbucket Cloud에서는 같은 작성기에서 풀 리퀘스트를 만들 수 있습니다. 초안 PR을 지원하지 않으므로 `Draft`(초안)는 숨겨집니다. GitHub의 경우 선택한 기준 브랜치에 열린 PR이 이미 있으면 **`Stack this PR above #N`(이 PR을 #N 위에 스택)**을 사용할 수 있습니다. [스택형 풀 리퀘스트](/orca-docs-ko/docs/review/github/#stacked-pull-requests)를 참조합니다.
 
 Orca이 PR 만들기 흐름의 일부로 후속 커밋을 실행해야 하고 해당 커밋이 실패하는 경우(후크가 이를 거부하거나 작업 트리가 커밋할 수 없는 상태인 경우) 컨텍스트 없이 패널로 다시 돌아가는 대신 대화 상자에 후크 출력 및 다음 단계 버튼이 포함된 자세한 실패 요약이 표시됩니다. 요약에서 `Fix with AI`(AI로 수정)를 사용하여 오류를 에이전트에 전달하거나 직접 해결하고 다시 실행하세요.
 

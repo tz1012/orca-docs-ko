@@ -1,7 +1,7 @@
 ---
 title: "AI 차이점을 한 줄씩 검토합니다."
 sourceUrl: https://www.onorca.dev/docs/recipes/review-ai-diff
-checkedAt: "2026-08-14T01:08:16.788Z"
+checkedAt: "2026-08-18T00:27:24.492Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/parallel-agents/
 next: /orca-docs-ko/docs/recipes/jump-worktrees/

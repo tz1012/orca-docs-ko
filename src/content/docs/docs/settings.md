@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-08-14T01:08:16.788Z"
+checkedAt: "2026-08-18T00:27:24.492Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -93,11 +93,12 @@ translationNotice:
 
 ## 통합
 
--   GitHub OAuth
--   Linear API 토큰
+-   GitHub OAuth.
+-   Linear API 토큰.
 -   Jira — Cloud(이메일 + API 토큰) 또는 자체 호스팅 Server/Data Center(PAT 또는 username/password)를 연결합니다. [Jira 항목 서랍](/orca-docs-ko/docs/review/jira/)을 참조합니다.
--   MiniMax — MiniMax CLI의 로컬 사용량 및 사용 한도 추적을 활성화하려면 `platform.minimax.io/console/usage`에서 가져온 MiniMax 세션 쿠키를 붙여 넣습니다. 선택적인 그룹 ID 및 사용 모델 필드는 쿠키에서 선택한 기본값을 재정의합니다.
--   MCP 서버
+-   Bitbucket Cloud — **`Connect`(연결)**에서 기본값인 **`Email & API token`(이메일 및 API 토큰)** 또는 **`Access token`(액세스 토큰)**을 사용합니다. Orca는 자격 증명을 저장하기 전에 검증합니다. `ORCA_BITBUCKET_*` 환경 변수가 우선하며 `Connect`(연결)/`Disconnect`(연결 해제)를 숨깁니다. 저장된 자격 증명은 이 컴퓨터에만 보관됩니다. [원격 Orca 서버](/orca-docs-ko/docs/remote-servers/)에서는 대신 서버에 환경 변수를 설정합니다. [호스팅 검토](/orca-docs-ko/docs/review/github/)를 참조합니다.
+-   MiniMax — MiniMax 세션 쿠키(`platform.minimax.io/console/usage`에서 가져옴)를 붙여 넣어 MiniMax CLI의 로컬 사용량과 사용 한도 추적을 활성화합니다. 선택적인 그룹 ID와 사용 모델 필드는 쿠키에서 선택한 기본값을 재정의합니다.
+-   MCP 서버.
 
 ## 알림
 
@@ -136,10 +137,11 @@ translationNotice:
 
 ## 단축키
 
--   모든 키 바인딩을 다시 매핑할 수 있는 전체 키맵입니다.
+-   `Full keymap`(전체 키맵) — 모든 키 바인딩을 다시 매핑할 수 있습니다.
 -   `Toggle Sleeping Workspaces`(절전 작업 공간 전환)는 기본적으로 키가 할당되지 않습니다. 사이드바의 절전 작업 트리 필터를 직접 전환하려면 여기서 할당합니다.
--   모든 편집기 탭 닫기의 기본값은 macOS에서 `Cmd+Option+W`, Windows/Linux에서 `Ctrl+Alt+W`입니다.
--   **탭 탐색 기본값(새 설치):** 모든 유형을 가로지르는 next/previous 탭은 `Cmd+Shift+]` / `Cmd+Shift+[`(Linux/Windows에서는 Ctrl)입니다. 동일 유형의 next/previous은 `Cmd+Option+]` / `Cmd+Option+[`입니다. 최근 사용한 이전 탭은 `Ctrl+Tab`입니다. 기존 설치는 사용자 지정 재정의를 `~/.orca/keybindings.json`에 유지합니다.
+-   **`Toggle Workspace Board`(작업 공간 보드 전환)**는 기본적으로 키가 할당되지 않습니다. 하나의 단축키로 `Workspace Board`(작업 공간 보드)를 열거나 닫으려면 여기서 할당합니다. 기존 `workspace.openBoard` 바인딩도 계속 작동합니다.
+-   `Close all editor tabs`(모든 편집기 탭 닫기)의 기본값은 macOS에서 `Cmd+Option+W`, Windows/Linux에서 `Ctrl+Alt+W`입니다.
+-   **`Tab navigation defaults (new installs)`(탭 탐색 기본값(새 설치)):** **모든 유형**을 가로지르는 next/previous 탭은 `Cmd+Shift+]` / `Cmd+Shift+[`(Linux/Windows에서는 Ctrl)입니다. 같은 유형 내 next/previous은 `Cmd+Option+]` / `Cmd+Option+[`입니다. 최근 사용한 이전 탭은 `Ctrl+Tab`입니다. 기존 설치는 사용자 지정 재정의를 `~/.orca/keybindings.json`에 유지합니다.
 -   **`Add Review Note`(검토 메모 추가)**의 기본값은 `Cmd+Shift+A`(macOS) / `Ctrl+Shift+A`(Windows/Linux)이며 다시 매핑할 수 있습니다.
 -   **`Send Review Notes to Agent`(에이전트에 검토 메모 보내기)**는 기본적으로 키가 할당되지 않습니다. 마우스를 사용하지 않고 활성 작업 트리의 diff 메모 보내기 메뉴를 열려면 여기서 할당합니다.
 

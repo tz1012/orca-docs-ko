@@ -1,7 +1,7 @@
 ---
 title: "터미널"
 sourceUrl: https://www.onorca.dev/docs/terminal
-checkedAt: "2026-08-14T01:08:16.788Z"
+checkedAt: "2026-08-18T00:27:24.492Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/profiles/
 next: /orca-docs-ko/docs/ways-to-run/
@@ -35,7 +35,7 @@ Ghostty 스타일 터미널 — 처음 시작할 때 Ghostty 테마, 글꼴 및 
 
 ## 링크 작업
 
-터미널 링크(HTTP/OSC 8 URL, 파일 경로, 작업 공간, 터미널 또는 작업 핸들)를 일반 클릭하면 즉시 이동하지 않고 간결한 작업 팝오버가 열립니다. 로컬 웹 링크의 팝오버에는 **`Orca Browser`(Orca 브라우저)**와 **`System Browser`(시스템 브라우저)**가 표시되며, 원격 링크는 계속 시스템 브라우저에서만 열립니다. `Cmd`\-click(macOS) / `Ctrl`\-click(Windows/Linux)는 계속 직접 열고, `Shift+Cmd` / `Shift+Ctrl`\-click는 계속 [링크 라우팅](/orca-docs-ko/docs/browser/overview/#link-routing)의 대체 동작을 사용합니다.
+터미널 링크(HTTP/OSC 8 URL, 파일 경로, 작업 공간, 터미널 또는 작업 핸들)를 일반 클릭하면 즉시 이동하는 대신 간결한 작업 팝오버가 열립니다. 로컬 웹 링크의 팝오버에는 **`Orca Browser`(Orca 브라우저)**와 **`System Browser`(시스템 브라우저)**가 표시되며, 원격 링크는 계속 시스템 브라우저에서만 열립니다. 웹 링크에는 **`Copy link`(링크 복사)**도 표시됩니다. 이 작업은 팝오버를 닫지 않고 숨겨진 OSC 8 대상을 포함해 해석된 URL을 복사하며, 파일과 작업 공간 대상은 변경하지 않습니다. `Cmd`\-click(macOS) / `Ctrl`\-click(Windows/Linux)는 계속 직접 열고, `Shift+Cmd` / `Shift+Ctrl`\-click는 계속 [링크 라우팅](/orca-docs-ko/docs/browser/overview/#link-routing)의 대체 동작을 사용합니다.
 
 [**`Settings`(설정) → `Browser`(브라우저) → `Show terminal link actions`(터미널 링크 작업 표시)**](/orca-docs-ko/docs/settings/)에서 팝오버를 끕니다. 팝오버를 끄면 링크를 열 때 수정 키를 누른 채 클릭해야 합니다.
 

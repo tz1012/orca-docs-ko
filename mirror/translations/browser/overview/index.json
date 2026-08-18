@@ -39,8 +39,8 @@
       "translated": "탭은 작업 트리별로 필터링됩니다. 작업 트리를 전환하면 해당 작업 트리의 브라우저 탭과 스크롤 위치가 복원됩니다."
     },
     "/docs/browser/overview/:figure:worktree-scoping:0": {
-      "sourceHash": "cd0c6872d8df95a143b14dd100f6821b36a2d2e44d3a0f4f7463080c7ae308e7",
-      "translated": "![영구 세션이 포함된 작업 트리별 브라우저 탭 - 한 번의 클릭으로 Chrome 또는 Edge에서 쿠키를 가져와 로그인 상태를 유지할 수 있습니다.](ORCA_PROTECTED_0001)\n\n지속적인 세션이 포함된 작업트리별 브라우저 탭 - 한 번의 클릭으로 Chrome 또는 Edge에서 쿠키를 가져와 로그인 상태를 유지할 수 있습니다."
+      "sourceHash": "cdc5e551cc392b0e00f71457759dd68adc500161d12bcc9303787856edde521d",
+      "translated": "![세션이 유지되는 작업 트리별 브라우저 탭 — 클릭 한 번으로 Chrome 또는 Edge의 쿠키를 가져옵니다. ORCA_PROTECTED_0001 로그인은 가져오지 않으며, ORCA_PROTECTED_0002 로그인은 ORCA_PROTECTED_0003에서 직접 진행합니다.](ORCA_PROTECTED_0004)\n\n세션이 유지되는 작업 트리별 브라우저 탭 — 클릭 한 번으로 Chrome 또는 Edge의 쿠키를 가져옵니다. ORCA_PROTECTED_0005 로그인은 가져오지 않으며, ORCA_PROTECTED_0006 로그인은 ORCA_PROTECTED_0007에서 직접 진행합니다."
     },
     "/docs/browser/overview/:heading:downloads:0": {
       "sourceHash": "0bac185a36911b278b8e545ff230c7914fee3a11725d0bf4af915ceb916d1a2b",

@@ -135,6 +135,10 @@
       "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/automations/:paragraph:review-and-enable:2": {
+      "sourceHash": "6685b1f13678a2ba9de0d47cc47bc7be736f2162a8959698c38558009b79a0fa",
+      "translated": "**`Filters`(필터)**를 사용하여 **`Enabled`(활성화됨)** 또는 **`Paused`(일시 중지됨)** 상태나 마지막 실행 결과인 **`Failed`(실패)**, **`Succeeded`(성공)**, **`Never ran`(실행 기록 없음)**으로 목록을 좁힙니다. 표에는 각 자동화의 마지막 실행 결과와 상대 시간이 표시됩니다. **`Name`(이름)** 또는 **`Last run`(마지막 실행)** 열을 클릭하여 정렬합니다. 이름은 사전순으로 정렬되며, 마지막 실행은 기본적으로 최신순으로 정렬됩니다."
+    },
+    "/docs/cli/automations/:paragraph:review-and-enable:3": {
       "sourceHash": "e9af02ebfeef91a4903030f2a8ea1c1dfe07462842ff8196b6fbe0ece5436810",
       "translated": "이름, 프롬프트, 공급자, 대상, 일정 또는 활성화 상태를 변경하려면 `ORCA_PROTECTED_0001`을 사용합니다. `ORCA_PROTECTED_0002`는 자동화와 실행 기록을 삭제합니다."
     }

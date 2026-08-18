@@ -151,8 +151,8 @@
       "translated": "## 링크 작업"
     },
     "/docs/terminal/:paragraph:link-actions:0": {
-      "sourceHash": "b65c5fa4fe74dac19b9543280154a1e606757a2fce59815ed11dd011c5b7d6b3",
-      "translated": "터미널 링크(ORCA_PROTECTED_0001 8 URL, 파일 경로, 작업 공간, 터미널 또는 작업 핸들)를 일반 클릭하면 즉시 이동하지 않고 간결한 작업 팝오버가 열립니다. 로컬 웹 링크의 팝오버에는 **`ORCA_PROTECTED_0002 Browser`(Orca 브라우저)**와 **`System Browser`(시스템 브라우저)**가 표시되며, 원격 링크는 계속 시스템 브라우저에서만 열립니다. `ORCA_PROTECTED_0003`\\ORCA_PROTECTED_0004(macOS) / `ORCA_PROTECTED_0005`\\ORCA_PROTECTED_0006(Windows/Linux)는 계속 직접 열고, `ORCA_PROTECTED_0007` / `ORCA_PROTECTED_0008`\\ORCA_PROTECTED_0009는 계속 [링크 라우팅](ORCA_PROTECTED_0010)의 대체 동작을 사용합니다."
+      "sourceHash": "4fc1a4e1b815309e843bc4beabbeffffe6a00a7d1f7c693a94e3d92ba3b3fdc7",
+      "translated": "터미널 링크(ORCA_PROTECTED_0001 8 URL, 파일 경로, 작업 공간, 터미널 또는 작업 핸들)를 일반 클릭하면 즉시 이동하는 대신 간결한 작업 팝오버가 열립니다. 로컬 웹 링크의 팝오버에는 **`ORCA_PROTECTED_0002 Browser`(Orca 브라우저)**와 **`System Browser`(시스템 브라우저)**가 표시되며, 원격 링크는 계속 시스템 브라우저에서만 열립니다. 웹 링크에는 **`Copy link`(링크 복사)**도 표시됩니다. 이 작업은 팝오버를 닫지 않고 숨겨진 OSC 8 대상을 포함해 해석된 URL을 복사하며, 파일과 작업 공간 대상은 변경하지 않습니다. `ORCA_PROTECTED_0003`\\ORCA_PROTECTED_0004(macOS) / `ORCA_PROTECTED_0005`\\ORCA_PROTECTED_0006(Windows/Linux)는 계속 직접 열고, `ORCA_PROTECTED_0007` / `ORCA_PROTECTED_0008`\\ORCA_PROTECTED_0009는 계속 [링크 라우팅](ORCA_PROTECTED_0010)의 대체 동작을 사용합니다."
     },
     "/docs/terminal/:paragraph:link-actions:1": {
       "sourceHash": "74ff2feeef062b06ab759e715fe83475ad7e6f69a2b8f416385c5cc1d1420def",

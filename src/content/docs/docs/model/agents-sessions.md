@@ -1,7 +1,7 @@
 ---
 title: "에이전트 및 세션"
 sourceUrl: https://www.onorca.dev/docs/model/agents-sessions
-checkedAt: "2026-08-14T01:08:16.788Z"
+checkedAt: "2026-08-18T00:27:24.492Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/tabs-panes-splits/
 next: /orca-docs-ko/docs/model/session-restore/
@@ -51,6 +51,8 @@ translationNotice:
 -   맵 상태는 보드와 동일하게 확인 필요, 작업 중, 완료 및 유휴로 표시됩니다. 에이전트를 열면 완료된 세션이 확인된 것으로 표시되어 녹색 **`Done`(완료)**에서 회색 **`Idle`(유휴)**로 이동할 수 있습니다.
 -   맵 전용 필터로 호스트 종류(로컬/SSH/WSL/원격)를 좁히고 에이전트 없는 작업 공간을 선택적으로 표시할 수 있습니다. **`Filter → Map content`(필터 → 맵 콘텐츠)** 아래에서 기본적으로 켜져 있는 **`Orchestration links`(오케스트레이션 연결선)**를 전환하여 에이전트 노드를 제거하지 않고 연결선을 숨기거나 표시합니다. 연결선을 숨기면 필터 배지 수에 포함되며, **`Clear all filters`(모든 필터 지우기)**를 사용하면 연결선이 다시 켜집니다.
 -   **창 내부** 맵에서 작업 트리 링을 마우스 오른쪽 버튼으로 클릭하면 사이드바와 같은 작업 공간 컨텍스트 메뉴가 열립니다. 로컬, SSH, 폴더 및 원격 호스트에서 사용할 수 있습니다. 팝아웃 맵 창은 기본 사이드바 저장소를 소유하지 않으므로 작업 공간 메뉴가 제한됩니다.
+
+대시보드 카드와 `Agent Map`(에이전트 맵)의 프로젝트 링에는 SSH 작업 공간과 페어링된 [원격 Orca 서버](/orca-docs-ko/docs/remote-servers/)의 호스트 배지가 표시됩니다. 배지에 마우스를 올리거나 포커스를 맞추면 **`SSH host · openclaw`(SSH 호스트 · openclaw)** 또는 **`Remote Orca host · Build Mac`(원격 호스트 · Build Mac)**처럼 저장된 호스트 이름이 표시됩니다. 로컬 작업 공간에는 호스트 배지가 표시되지 않습니다.
 
 ### 열기 방식
 

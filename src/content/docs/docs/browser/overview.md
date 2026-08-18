@@ -1,7 +1,7 @@
 ---
 title: "작업트리별 브라우저"
 sourceUrl: https://www.onorca.dev/docs/browser/overview
-checkedAt: "2026-08-14T01:08:16.788Z"
+checkedAt: "2026-08-18T00:27:24.492Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/file-explorer/
 next: /orca-docs-ko/docs/browser/design-mode/
@@ -29,9 +29,9 @@ translationNotice:
 
 탭은 작업 트리별로 필터링됩니다. 작업 트리를 전환하면 해당 작업 트리의 브라우저 탭과 스크롤 위치가 복원됩니다.
 
-![영구 세션이 포함된 작업 트리별 브라우저 탭 - 한 번의 클릭으로 Chrome 또는 Edge에서 쿠키를 가져와 로그인 상태를 유지할 수 있습니다.](/orca-docs-ko/assets/mirror/46a59e38451d06e4b06df457f9f4f2449cbd1b46ad06906c7073f414e463be28.jpg)
+![세션이 유지되는 작업 트리별 브라우저 탭 — 클릭 한 번으로 Chrome 또는 Edge의 쿠키를 가져옵니다. Google 로그인은 가져오지 않으며, Google 로그인은 Orca에서 직접 진행합니다.](/orca-docs-ko/assets/mirror/46a59e38451d06e4b06df457f9f4f2449cbd1b46ad06906c7073f414e463be28.jpg)
 
-지속적인 세션이 포함된 작업트리별 브라우저 탭 - 한 번의 클릭으로 Chrome 또는 Edge에서 쿠키를 가져와 로그인 상태를 유지할 수 있습니다.
+세션이 유지되는 작업 트리별 브라우저 탭 — 클릭 한 번으로 Chrome 또는 Edge의 쿠키를 가져옵니다. Google 로그인은 가져오지 않으며, Google 로그인은 Orca에서 직접 진행합니다.
 
 ## 링크 라우팅
 

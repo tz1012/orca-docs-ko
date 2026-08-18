@@ -1,7 +1,7 @@
 ---
 title: "에이전트 세션 기록"
 sourceUrl: https://www.onorca.dev/docs/agents/session-history
-checkedAt: "2026-08-14T01:08:16.788Z"
+checkedAt: "2026-08-18T00:27:24.492Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/native-chat/
 next: /orca-docs-ko/docs/agents/hibernation/
