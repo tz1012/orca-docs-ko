@@ -1,0 +1,42 @@
+{
+  "sourceUrl": "https://www.onorca.dev/docs/android-apk",
+  "mirrorPath": "/docs/android-apk/",
+  "entries": {
+    "/docs/android-apk/:heading:install-orca-mobile-on-android:0": {
+      "sourceHash": "60e0700c6025ab28222c19953e1cb6c685be385810e36eb46af0fd146e7f3752",
+      "translated": "# Android에 ORCA_PROTECTED_0001 모바일 설치"
+    },
+    "/docs/android-apk/:paragraph:install-orca-mobile-on-android:0": {
+      "sourceHash": "fb5baad30c076390991e4b6984c433c488ecf9af16c4fc258a59fc9114755b03",
+      "translated": "Android에 ORCA_PROTECTED_0001 모바일을 다운로드하고 설치합니다."
+    },
+    "/docs/android-apk/:heading:install-orca-mobile:0": {
+      "sourceHash": "f430067b1926b650d0d4fc3aab818666d2669d67e6737bfc485840bbf4b13d85",
+      "translated": "## ORCA_PROTECTED_0001 모바일 설치"
+    },
+    "/docs/android-apk/:list:install-orca-mobile:0": {
+      "sourceHash": "c915186766cc1c0164eccfd88bc77d79d354648ec356a833e95f533d0fe174c8",
+      "translated": "1.  Chrome이나 다른 전체 기능 브라우저에서 [ORCA_PROTECTED_0001 다운로드 페이지](ORCA_PROTECTED_0002)를 열고 **`Android`(안드로이드)**를 선택합니다.\n2.  다운로드가 완료되면 브라우저의 **`Downloads`(다운로드)** 또는 기기의 **`Files → Downloads`(파일 → 다운로드)**를 연 다음 `ORCA_PROTECTED_0003`를 탭합니다.\n3.  Android의 설치 안내를 따릅니다. 요청이 표시되면 브라우저 또는 Files 앱에만 출처를 알 수 없는 앱 설치를 허용하고, ORCA_PROTECTED_0004 설치가 끝나면 해당 권한을 다시 끕니다."
+    },
+    "/docs/android-apk/:heading:troubleshooting:0": {
+      "sourceHash": "659a188b36f9c3262a28539e24c345df4edc9657f59b116b0a1d9887cf2e28e0",
+      "translated": "## 문제 해결"
+    },
+    "/docs/android-apk/:heading:the-download-never-starts-or-never-finishes:0": {
+      "sourceHash": "ab253f591594d0509333790393f7c775abb73f8c8c728282c8a2e41b8a4ba93c",
+      "translated": "### 다운로드가 시작되지 않거나 완료되지 않음"
+    },
+    "/docs/android-apk/:list:the-download-never-starts-or-never-finishes:0": {
+      "sourceHash": "76d9581a876b64860f97086403d7118101fd5b8f210fbba6914458eb40196a6c",
+      "translated": "1.  링크가 Discord, ORCA_PROTECTED_0001 또는 다른 앱 안에서 열렸다면 **`Open in browser`(브라우저에서 열기)** / **`Open in Chrome`(Chrome에서 열기)**를 선택하거나 링크를 복사해 전체 기능 브라우저에서 엽니다.\n2.  [Android 다운로드](ORCA_PROTECTED_0002)를 다시 시작하고 완료될 때까지 기다립니다."
+    },
+    "/docs/android-apk/:heading:samsung-galaxy-auto-blocker:0": {
+      "sourceHash": "68f441c8c545d23c822fe38fde39d1214ea370a5e9437c1ed5e426e3f466704d",
+      "translated": "### Samsung Galaxy: `Auto Blocker`(자동 차단 기능)"
+    },
+    "/docs/android-apk/:paragraph:samsung-galaxy-auto-blocker:0": {
+      "sourceHash": "142ac31e24aa785330e5b5fbb6476a4572b0faf087a62b869830d151d733e775",
+      "translated": "Samsung Galaxy에서 **`Auto Blocker`(자동 차단 기능)**가 설치를 차단했다는 메시지가 표시되면 **`Settings → Security and privacy → Auto Blocker`(설정 → 보안 및 개인정보 보호 → 자동 차단 기능)**를 열어 일시적으로 끄고 ORCA_PROTECTED_0001를 설치한 다음 다시 켭니다. Play Protect는 비활성화하지 않습니다."
+    }
+  }
+}

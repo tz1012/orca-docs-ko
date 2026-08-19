@@ -55,6 +55,10 @@
         "slug": "docs/agents/usage-tracking"
       },
       {
+        "label": "Android에 Orca 모바일 설치",
+        "slug": "docs/android-apk"
+      },
+      {
         "label": "디자인 모드",
         "slug": "docs/browser/design-mode"
       },

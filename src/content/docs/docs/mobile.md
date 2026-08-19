@@ -1,10 +1,10 @@
 ---
 title: "모바일 동반자"
 sourceUrl: https://www.onorca.dev/docs/mobile
-checkedAt: "2026-08-18T00:27:24.492Z"
+checkedAt: "2026-08-19T10:12:35.332Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/skills/
-next: /orca-docs-ko/docs/notifications/
+next: /orca-docs-ko/docs/android-apk/
 translationNotice:
   title: "비공식 한국어 번역"
   message: "이 문서는 ORCA 공식 문서의 비공식 한국어 번역입니다. 내용이 다를 경우 원문이 우선합니다."
