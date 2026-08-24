@@ -1,7 +1,7 @@
 ---
 title: "브라우저 사용 프로필"
 sourceUrl: https://www.onorca.dev/docs/browser/profiles
-checkedAt: "2026-08-21T01:11:26.454Z"
+checkedAt: "2026-08-24T01:32:32.260Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/design-mode/
 next: /orca-docs-ko/docs/terminal/
@@ -24,7 +24,9 @@ translationNotice:
 
 ## 쿠키 가져오기 및 Google 로그인
 
-`Settings`(설정) 또는 브라우저 도구 모음에서 Chrome이나 Edge의 쿠키(또는 쿠키 파일)를 프로필로 가져옵니다. Google 쿠키는 제외됩니다. 가져오기 메뉴에는 **`Google logins aren't imported`(로그인은 가져오지 않음)**이 표시되고 **`Sign in to Google directly in Orca.`(직접 로그인)**이라고 안내합니다. Google 쿠키를 건너뛴 가져오기가 끝나면 가져오기를 실행한 호스트를 명시하는 별도 경고가 표시됩니다. 해당 호스트의 Orca에서 같은 프로필로 브라우저를 연 다음 로그인합니다.
+`Settings`(설정) 또는 브라우저 도구 모음에서 Chrome이나 Edge의 쿠키(또는 쿠키 파일)를 프로필로 가져옵니다. Orca는 가져오기에 포함된 도메인의 기존 쿠키만 교체하므로 같은 프로필에 있는 관련 없는 사이트의 로그인 상태는 그대로 유지됩니다. Google 쿠키는 제외됩니다. 가져오기 메뉴에는 **`Google logins aren't imported`(Google 로그인은 가져오지 않음)**가 표시되고 **`Sign in to Google directly in Orca.`(Orca에서 Google에 직접 로그인)**라고 안내합니다. Google 쿠키를 건너뛴 가져오기가 끝나면 가져오기를 실행한 호스트를 명시하는 별도 경고가 표시됩니다. 해당 호스트의 Orca에서 같은 프로필로 브라우저를 연 다음 로그인합니다.
+
+사이트에서 USB 보안 키의 검색 가능한 패스키를 요청하고 키에 여러 계정이 있으면 Orca는 로그인을 조용히 취소하는 대신 계정 선택기를 엽니다. 사용할 계정을 선택하거나 요청을 취소합니다. 운영 체제가 저장한 플랫폼 패스키는 아직 Orca에서 사용할 수 없습니다. 이 흐름은 외부 FIDO 보안 키용입니다.
 
 ## 프로필 사용
 

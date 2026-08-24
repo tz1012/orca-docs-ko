@@ -43,8 +43,12 @@
       "translated": "## 쿠키 가져오기 및 ORCA_PROTECTED_0001 로그인"
     },
     "/docs/browser/profiles/:paragraph:cookie-import-and-google-sign-in:0": {
-      "sourceHash": "74c4e6a7515f9adb413f9031b0579f29e4ea35361b2b8043adaba5c9ba81b80d",
-      "translated": "`Settings`(설정) 또는 브라우저 도구 모음에서 Chrome이나 Edge의 쿠키(또는 쿠키 파일)를 프로필로 가져옵니다. ORCA_PROTECTED_0001 쿠키는 제외됩니다. 가져오기 메뉴에는 **`ORCA_PROTECTED_0002 logins aren't imported`(로그인은 가져오지 않음)**이 표시되고 **`Sign in to ORCA_PROTECTED_0003 directly in ORCA_PROTECTED_0004.`(직접 로그인)**이라고 안내합니다. ORCA_PROTECTED_0005 쿠키를 건너뛴 가져오기가 끝나면 가져오기를 실행한 호스트를 명시하는 별도 경고가 표시됩니다. 해당 호스트의 ORCA_PROTECTED_0006에서 같은 프로필로 브라우저를 연 다음 로그인합니다."
+      "sourceHash": "8700fa655cc6a1e2d22b25d085cd7ef9a90b419980469df35537bf7d08535f3a",
+      "translated": "`Settings`(설정) 또는 브라우저 도구 모음에서 Chrome이나 Edge의 쿠키(또는 쿠키 파일)를 프로필로 가져옵니다. ORCA_PROTECTED_0001는 가져오기에 포함된 도메인의 기존 쿠키만 교체하므로 같은 프로필에 있는 관련 없는 사이트의 로그인 상태는 그대로 유지됩니다. ORCA_PROTECTED_0002 쿠키는 제외됩니다. 가져오기 메뉴에는 **`ORCA_PROTECTED_0003 logins aren't imported`(Google 로그인은 가져오지 않음)**가 표시되고 **`Sign in to ORCA_PROTECTED_0004 directly in ORCA_PROTECTED_0005.`(Orca에서 Google에 직접 로그인)**라고 안내합니다. ORCA_PROTECTED_0006 쿠키를 건너뛴 가져오기가 끝나면 가져오기를 실행한 호스트를 명시하는 별도 경고가 표시됩니다. 해당 호스트의 ORCA_PROTECTED_0007에서 같은 프로필로 브라우저를 연 다음 로그인합니다."
+    },
+    "/docs/browser/profiles/:paragraph:cookie-import-and-google-sign-in:1": {
+      "sourceHash": "5af89018965750eec2300a99cea59310b1e9b9b07605fe68a4126277a26b3c0f",
+      "translated": "사이트에서 USB 보안 키의 검색 가능한 패스키를 요청하고 키에 여러 계정이 있으면 ORCA_PROTECTED_0001는 로그인을 조용히 취소하는 대신 계정 선택기를 엽니다. 사용할 계정을 선택하거나 요청을 취소합니다. 운영 체제가 저장한 플랫폼 패스키는 아직 ORCA_PROTECTED_0002에서 사용할 수 없습니다. 이 흐름은 외부 FIDO 보안 키용입니다."
     }
   }
 }

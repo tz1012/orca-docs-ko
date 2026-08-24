@@ -1,7 +1,7 @@
 ---
 title: "작업 트리"
 sourceUrl: https://www.onorca.dev/docs/model/worktrees
-checkedAt: "2026-08-21T01:11:26.454Z"
+checkedAt: "2026-08-24T01:32:32.260Z"
 editUrl: false
 prev: /orca-docs-ko/docs/first-session/
 next: /orca-docs-ko/docs/model/tabs-panes-splits/
@@ -74,11 +74,11 @@ worktree:
 
 `Create Workspace`(작업 공간 생성) 대화 상자는 **`Project`(프로젝트)**와 **`Run on`(실행 위치)**에 자동 완성 콤보 상자를 사용합니다.
 
--   입력하여 필터링하고 `Enter`(Enter)를 누르면 선택된 행을 확정합니다.
+-   입력하여 필터링하고 `Enter`(Enter 키)를 누르면 선택된 행을 확정합니다.
 -   **`Project`(프로젝트)**는 **`Add a new project`(새 프로젝트 추가)**를 항상 맨 아래에 고정합니다. 아직 프로젝트가 없는 설치 환경에서도 생성 흐름이 막히지 않습니다.
--   **`Run on`(실행 위치)**에는 준비된 호스트와 레시피뿐 아니라 해당 시스템에서 프로젝트 설정이 아직 필요한 호스트도 표시됩니다. 설정이 필요한 행에는 *`Project not set up on this host`(이 호스트에 프로젝트가 설정되지 않음)*와 같은 세부 정보가 표시됩니다. 준비될 때까지 행은 보이지만 선택할 수 없습니다. 연결이 끊긴 SSH/원격 호스트에는 실행 대상으로 선택하지 않고 **`Connect`(연결)** 옵션을 제공할 수 있습니다. **`Add host`(호스트 추가)**는 SSH 또는 원격 Orca 서버 대상에 대해 계속 고정됩니다.
+-   **`Run on`(실행 위치)**에는 준비된 호스트와 레시피뿐 아니라 해당 시스템에서 프로젝트 설정이 아직 필요한 호스트도 표시됩니다. 설정이 필요한 호스트에서는 생성 양식을 벗어나지 않고 **`Set project location`(프로젝트 위치 설정)**을 선택한 다음 기존 checkout/folder를 찾아 선택하거나 Git 저장소를 해당 호스트에 복제합니다. Orca는 새로 준비된 위치를 선택하므로 작업 트리 생성을 계속할 수 있습니다. 연결이 끊긴 SSH/원격 호스트에는 실행 대상으로 선택하지 않고 **`Connect`(연결)** 옵션을 제공할 수 있습니다. **`Add host`(호스트 추가)**는 SSH 또는 Remote Orca Server 대상에 대해 계속 고정됩니다.
 -   **`Agent`(에이전트)** 선택기는 접힌 상태나 펼친 상태에서 생성 시 선택한 에이전트를 **`Set as default`(기본값으로 설정)**할 수 있으며 `Blank Terminal`(빈 터미널)도 포함합니다.
--   이름 필드에서 GitHub PR, Linear 이슈, GitLab MR 또는 **Jira** 이슈를 연결합니다. Jira URL을 붙여 넣거나 **`Jira`(Jira)** 모드에서 검색할 수 있습니다. 연결된 이슈는 작업 트리 카드에 표시됩니다. [Jira 항목 서랍](/orca-docs-ko/docs/review/jira/)을 참조합니다.
+-   이름 필드에서 GitHub PR, Linear 이슈, GitLab MR 또는 **`Jira`(Jira)** 이슈를 연결합니다. Jira URL을 붙여 넣거나 **`Jira`(Jira)** 모드에서 검색할 수 있습니다. 연결된 이슈는 작업 트리 카드에 표시됩니다. [Jira 항목 서랍](/orca-docs-ko/docs/review/jira/)을 참조합니다.
 
 [Orca 실행 방식](/orca-docs-ko/docs/ways-to-run/)을 참조합니다.
 

@@ -70,6 +70,22 @@
       "sourceHash": "30594917e17317660a628c3bcafd4e8b0bdbe23d574920583f30d0ab7d5bfaf8",
       "translated": "`ORCA_PROTECTED_0001` 및 `ORCA_PROTECTED_0002`는 셸의 현재 디렉터리나 터미널 컨텍스트를 기준으로 이를 포함하는 ORCA_PROTECTED_0003 관리 작업 트리로 해석됩니다. 대상 작업 트리 외부에서 실행될 수 있는 스크립트에서는 명시적 선택기를 사용합니다. 원격 런타임에서는 로컬 셸의 현재 디렉터리가 런타임 호스트에 존재하지 않을 수 있으므로 `ORCA_PROTECTED_0004` 또는 `ORCA_PROTECTED_0005`와 같은 전체 서버 측 선택기를 사용하는 것이 좋습니다."
     },
+    "/docs/cli/reference/:heading:choose-a-host:0": {
+      "sourceHash": "316b311c9291fedc52bbd0530df590142ed64e57140c351d4e08daefc926550c",
+      "translated": "## 호스트 선택"
+    },
+    "/docs/cli/reference/:paragraph:choose-a-host:0": {
+      "sourceHash": "cf872fe4d3de51a1a5de5d633079121acda9f6aa2a9d11165e038bb282e4fe2a",
+      "translated": "현재 ORCA_PROTECTED_0001 호스트가 대상으로 지정할 수 있는 모든 시스템과 각 시스템의 선택자를 나열합니다:"
+    },
+    "/docs/cli/reference/:code:choose-a-host:0": {
+      "sourceHash": "d3dd2bfbd257c21a27f1aace60aae5490354c64cd35a2afa41917daba18ea2aa",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/reference/:paragraph:choose-a-host:1": {
+      "sourceHash": "8e3bf408cc68ae7800b16b68e14fece0e9a2d473d42db7e86eead38ac922414b",
+      "translated": "결과에는 이 시스템, 등록된 [SSH 대상](ORCA_PROTECTED_0001) 및 페어링된 [Remote ORCA_PROTECTED_0002 Servers](ORCA_PROTECTED_0003)가 포함됩니다. 이 시스템에는 `ORCA_PROTECTED_0004`, SSH 대상에는 `ORCA_PROTECTED_0005`, 페어링된 서버에는 `ORCA_PROTECTED_0006`을 사용합니다. SSH 레이블과 페어링된 서버 이름도 고유하면 선택자로 해석됩니다. 이름이 충돌하면 `ORCA_PROTECTED_0007`에서 가져온 ID를 사용합니다. 시스템 이름을 잘못된 선택자에 지정하면 ORCA_PROTECTED_0008는 빈 결과를 반환하는 대신 일치하는 시스템과 사용해야 할 플래그를 알려 줍니다."
+    },
     "/docs/cli/reference/:heading:runtime-commands:0": {
       "sourceHash": "173f67b66091bda5996e57dbf91045ea144a4e222b0bafaf3e5207700c7eb43a",
       "translated": "## 런타임 명령"
@@ -123,8 +139,8 @@
       "translated": "## 터미널"
     },
     "/docs/cli/reference/:code:terminals:0": {
-      "sourceHash": "8d6c07d7c1a9a1a5a585fb1879706eebc46da2e1e322d9a958dfdce367083cb6",
-      "translated": "````\nORCA_PROTECTED_0001\n````"
+      "sourceHash": "cb606a649e80af15578199b9fc0b19a1a017b072cf2e567bce0cda985f0095a3",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/reference/:paragraph:terminals:0": {
       "sourceHash": "65f20ce72641235475e5f99bc9d6f014c5b962895d28626ab10e6738ba0d5bf7",
@@ -135,8 +151,16 @@
       "translated": "터미널 핸들\n\n터미널 핸들은 런타임 범위입니다. ORCA_PROTECTED_0001이 다시 시작되거나 명령이 오래된 터미널 핸들을 보고하는 경우 `ORCA_PROTECTED_0002`를 실행하고 핸들을 다시 획득하세요."
     },
     "/docs/cli/reference/:paragraph:terminals:1": {
-      "sourceHash": "e6c46ee7986bce07b895825d7bfe19c7b2cd4de6a7017d62c3f57dd35c6aa126",
-      "translated": "긴 출력의 경우 커서 읽기를 사용하십시오. 한 번의 읽기에서 `ORCA_PROTECTED_0001`을 저장한 다음 `ORCA_PROTECTED_0002`와 함께 다시 전달하여 새 출력만 가져옵니다."
+      "sourceHash": "1b1039707a910274b80e6d315f299372e0edb3947a46c1c6e2c113bf90e7fd9f",
+      "translated": "`ORCA_PROTECTED_0001`는 각 터미널의 `ORCA_PROTECTED_0002`를 보고하며, ORCA_PROTECTED_0003가 이를 확인할 수 있는 경우에만 포함합니다. 또한 포함된 호스트 ID와 생략된 호스트 ID가 들어 있는 결과 수준의 `ORCA_PROTECTED_0004`를 보고합니다. 호스트 ID 또는 범위가 없으면 로컬로 간주하지 말고 **확인 불가**로 취급합니다. 누락된 터미널의 실행 호스트가 `ORCA_PROTECTED_0005`에 나열된 경우에만 해당 터미널이 종료되었다는 증거가 됩니다."
+    },
+    "/docs/cli/reference/:paragraph:terminals:2": {
+      "sourceHash": "2c3a52667c26e2aef6e7cf5403c06b2043642325f37a6362eabf9cfb5c63e848",
+      "translated": "기본적으로 `ORCA_PROTECTED_0001`는 터미널 이스케이프 문자를 제거한 누적 출력 스트림을 반환합니다. 따라서 줄을 다시 그리는 프로그램은 여러 조각이 쌓인 것처럼 보일 수 있습니다. 현재 렌더링된 프레임이 필요하면 `ORCA_PROTECTED_0002`을 사용합니다. 응답의 `ORCA_PROTECTED_0003`는 `ORCA_PROTECTED_0004`, `ORCA_PROTECTED_0005` 또는 `ORCA_PROTECTED_0006`을 식별합니다. 화면 읽기에는 페이지를 이동할 기록이 없으므로 `ORCA_PROTECTED_0007`과 `ORCA_PROTECTED_0008`은 함께 사용할 수 없습니다."
+    },
+    "/docs/cli/reference/:paragraph:terminals:3": {
+      "sourceHash": "0a67d56e4fb92d13532efbf42513d147bd166171b869e735b519b3069fd05f8d",
+      "translated": "출력이 길면 커서 읽기를 사용합니다. 한 번의 스트림 읽기에서 `ORCA_PROTECTED_0001`를 저장한 다음 `ORCA_PROTECTED_0002`와 함께 다시 전달하여 새 출력만 가져옵니다."
     },
     "/docs/cli/reference/:heading:files:0": {
       "sourceHash": "c55f78cb1186e8e93dac63668e9ae9c7cd14b5a8ad73c342e7b8d95765d17d28",

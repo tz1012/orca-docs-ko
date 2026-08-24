@@ -1,7 +1,7 @@
 ---
 title: "Orca 기술 레지스트리 및 MCP"
 sourceUrl: https://www.onorca.dev/docs/cli/skills
-checkedAt: "2026-08-21T01:11:26.454Z"
+checkedAt: "2026-08-24T01:32:32.260Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/worktree-checkpoints/
 next: /orca-docs-ko/docs/mobile/
@@ -78,6 +78,21 @@ orca skills update --skill orca-cli --dry-run
 -   `--dry-run`은 확인된 명령을 출력합니다. `--json`은 목록 표시 또는 `--dry-run`와 함께 사용할 때만 유효합니다.
 
 Orca이 앱 내 업데이터를 제공하면 앱에서 검사한 동일한 전역 설치 위치가 다시 작성되도록 이 업데이터를 사용하는 것이 좋습니다. **`Skipped`(건너뜀)**로 표시된 행에는 해당 스킬을 자동으로 업데이트할 수 없는 이유(예: 소스 등록 누락)가 설명되어 있습니다. 설치 위치를 수정한 뒤 다시 확인합니다.
+
+## 호스트 간에 비공개 스킬 공유
+
+**`Skills → Share skills`(스킬 → 스킬 공유)**을 열어 하나의 스킬 또는 번들을 검색 목록에 표시되지 않고 취소 가능한 링크 하나로 게시합니다. 게시하려면 Orca 계정이 필요합니다. 게시하기 전에 포함된 파일, 스크립트, 실행 파일, 다이제스트 및 선택적 릴리스 정보를 검토합니다. 게시된 각 버전은 변경할 수 없으므로 이후의 로컬 편집 내용이 수신자가 설치하는 항목을 예고 없이 변경하지 않습니다.
+
+활성 링크가 있는 사람은 누구나 로그인하지 않고 공유된 스킬을 검사하고 설치할 수 있으므로 링크를 자격 증명처럼 취급합니다. 수신자는 정확한 버전을 검토하고 스킬 전체 또는 일부를 선택한 다음 이 컴퓨터, 페어링된 Orca 런타임, WSL 또는 SSH 호스트에서 전역 범위나 작업 공간 범위를 선택합니다. 이미 수정된 스킬의 기본값은 **`Keep local`(로컬 유지)**입니다. **`Skills → Manage installs`(스킬 → 설치 관리)**에서 Orca가 설치한 복사본을 업데이트, 롤백 또는 제거하고, **`Settings → Share Skills`(설정 → 스킬 공유)**에서 활성 링크를 복사하거나 취소합니다. 링크를 취소하면 이후 접근은 차단되지만 이미 설치된 복사본은 제거되지 않습니다.
+
+별도로 제공되며 기본적으로 꺼져 있는 **`Settings → Share Skills → Allow agents and the Orca CLI to publish skill links`(설정 → 스킬 공유 → 에이전트 및 CLI의 스킬 링크 게시 허용)** 권한을 활성화하면 에이전트가 CLI에서 명시적으로 이름을 지정한 집합을 게시할 수 있습니다:
+
+```
+orca skills installed --json
+orca skills share --skill frontend --skill testing --bundle-name "Team Toolkit" --json
+```
+
+`skills installed`는 로컬 경로를 노출하지 않는 안전한 선택자를 반환합니다. `skills share`는 정확한 검색 ID 또는 모호하지 않은 이름을 허용하며, 임의의 경로나 `--all`은 허용하지 않습니다.
 
 ## orca-cli
 

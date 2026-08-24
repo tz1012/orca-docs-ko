@@ -439,8 +439,8 @@
       "translated": "여러 페어링 클라이언트가 해당 서버를 공유하면 사이드바 필터에서 **`Hide other-client workspaces`(다른 클라이언트의 작업 공간 숨기기)**를 제공하여 이 기기가 직접 만든 작업 공간만 표시할 수 있습니다. [Worktrees → Sidebar layout(작업 트리 → 사이드바 레이아웃)](ORCA_PROTECTED_0001)을 참조합니다."
     },
     "/docs/remote-servers/:list:use-the-remote-server:0": {
-      "sourceHash": "9ace3fa94fb87248b6efd3a14dce8e274ecfc77a85bdb3c99924cb866618ffd8",
-      "translated": "-   클라이언트 노트북이 절전 상태가 되거나 연결이 끊겨도 에이전트는 계속 실행됩니다.\n-   서버에는 해당 에이전트가 사용하는 저장소, 도구 및 자격 증명이 필요합니다.\n-   서버는 절전 상태가 아니어야 하며 tailnet에 계속 연결되어 있어야 합니다.\n-   클라이언트를 다시 연결하면 서버가 소유한 상태로 돌아갑니다.\n-   서버에서 삭제한 프로젝트는 페어링된 모든 클라이언트의 사이드바에서도 사라지며 영구적인 유령 행이 남지 않습니다."
+      "sourceHash": "2fe2b8a11c591d30b5c604a30c9bf153c5fbcf34435f95a493cb55c6d16825db",
+      "translated": "-   클라이언트 노트북이 절전 상태가 되거나 연결이 끊겨도 에이전트는 계속 실행됩니다.\n-   서버에는 해당 에이전트가 사용하는 저장소, 도구 및 자격 증명이 필요합니다.\n-   서버는 절전 상태가 아니어야 하며 tailnet에 계속 연결되어 있어야 합니다.\n-   클라이언트를 다시 연결하거나 ORCA_PROTECTED_0001를 다시 열면 페어링된 탭을 중복 생성하지 않고 서버가 소유한 작업 공간, 탭 및 표시 창 상태로 돌아갑니다.\n-   서버에서 삭제한 프로젝트는 페어링된 모든 클라이언트의 사이드바에서도 사라지며 영구적인 유령 행이 남지 않습니다."
     },
     "/docs/remote-servers/:heading:access-and-security:0": {
       "sourceHash": "3afbf5655474d660c7decaa1bac8479d835bec7f871ccf9c162162f6b3c74ea4",

@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 참조"
 sourceUrl: https://www.onorca.dev/docs/cli/reference
-checkedAt: "2026-08-21T01:11:26.454Z"
+checkedAt: "2026-08-24T01:32:32.260Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/overview/
 next: /orca-docs-ko/docs/cli/orchestration/
@@ -46,6 +46,16 @@ orca worktree show --worktree issue:123 --json
 ````
 
 `active` 및 `current`는 셸의 현재 디렉터리나 터미널 컨텍스트를 기준으로 이를 포함하는 Orca 관리 작업 트리로 해석됩니다. 대상 작업 트리 외부에서 실행될 수 있는 스크립트에서는 명시적 선택기를 사용합니다. 원격 런타임에서는 로컬 셸의 현재 디렉터리가 런타임 호스트에 존재하지 않을 수 있으므로 `id:<repoId>::<absolute-worktree-path>` 또는 `path:<absolute-server-path>`와 같은 전체 서버 측 선택기를 사용하는 것이 좋습니다.
+
+## 호스트 선택
+
+현재 Orca 호스트가 대상으로 지정할 수 있는 모든 시스템과 각 시스템의 선택자를 나열합니다:
+
+```
+orca host list --json
+```
+
+결과에는 이 시스템, 등록된 [SSH 대상](/orca-docs-ko/docs/ssh/) 및 페어링된 [Remote Orca Servers](/orca-docs-ko/docs/remote-servers/)가 포함됩니다. 이 시스템에는 `--host local`, SSH 대상에는 `--host ssh:<target-id>`, 페어링된 서버에는 `--environment <server-name>`을 사용합니다. SSH 레이블과 페어링된 서버 이름도 고유하면 선택자로 해석됩니다. 이름이 충돌하면 `host list`에서 가져온 ID를 사용합니다. 시스템 이름을 잘못된 선택자에 지정하면 Orca는 빈 결과를 반환하는 대신 일치하는 시스템과 사용해야 할 플래그를 알려 줍니다.
 
 ## 런타임 명령
 
@@ -96,10 +106,11 @@ orca worktree create --name hidden-setup --setup inherit --json
 
 ## 터미널
 
-````
+```
 orca terminal list --worktree active --json
 orca terminal show --terminal <handle> --json
 orca terminal read --terminal <handle> --json
+orca terminal read --terminal <handle> --screen --json
 orca terminal read --terminal <handle> --cursor <cursor> --limit 1000 --json
 orca terminal send --terminal <handle> --text "continue" --enter --json
 orca terminal wait --terminal <handle> --for tui-idle --timeout-ms 300000 --json
@@ -108,7 +119,7 @@ orca terminal split --terminal <handle> --direction horizontal --command "npm ru
 orca terminal rename --terminal <handle> --title "runner" --json
 orca terminal switch --terminal <handle> --json
 orca terminal close --terminal <handle> --json
-````
+```
 
 현재 작업 트리의 활성 터미널을 대상으로 하려면 `--terminal`을 생략하세요. 단말기가 무엇을 기다리고 있는지 확실하지 않은 경우 보내기 전에 읽어보십시오.
 
@@ -116,7 +127,11 @@ orca terminal close --terminal <handle> --json
 
 터미널 핸들은 런타임 범위입니다. Orca이 다시 시작되거나 명령이 오래된 터미널 핸들을 보고하는 경우 `orca terminal list --json`를 실행하고 핸들을 다시 획득하세요.
 
-긴 출력의 경우 커서 읽기를 사용하십시오. 한 번의 읽기에서 `nextCursor`을 저장한 다음 `--cursor`와 함께 다시 전달하여 새 출력만 가져옵니다.
+`terminal list`는 각 터미널의 `executionHostId`를 보고하며, Orca가 이를 확인할 수 있는 경우에만 포함합니다. 또한 포함된 호스트 ID와 생략된 호스트 ID가 들어 있는 결과 수준의 `hostScope`를 보고합니다. 호스트 ID 또는 범위가 없으면 로컬로 간주하지 말고 **확인 불가**로 취급합니다. 누락된 터미널의 실행 호스트가 `hostScope.hostIds`에 나열된 경우에만 해당 터미널이 종료되었다는 증거가 됩니다.
+
+기본적으로 `terminal read`는 터미널 이스케이프 문자를 제거한 누적 출력 스트림을 반환합니다. 따라서 줄을 다시 그리는 프로그램은 여러 조각이 쌓인 것처럼 보일 수 있습니다. 현재 렌더링된 프레임이 필요하면 `--screen`을 사용합니다. 응답의 `source`는 `stream`, `screen` 또는 `screen-unavailable`을 식별합니다. 화면 읽기에는 페이지를 이동할 기록이 없으므로 `--screen`과 `--cursor`은 함께 사용할 수 없습니다.
+
+출력이 길면 커서 읽기를 사용합니다. 한 번의 스트림 읽기에서 `nextCursor`를 저장한 다음 `--cursor`와 함께 다시 전달하여 새 출력만 가져옵니다.
 
 ## 파일
 

@@ -205,6 +205,30 @@
     "/docs/cli/skills/:paragraph:discovery-sources:0": {
       "sourceHash": "854373c2459ca6065a708a869c0680a71667a92caca980256e0055d0c7684fde",
       "translated": "ORCA_PROTECTED_0001의 스킬 UI는 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, Agent Skills 및 **ORCA_PROTECTED_0004**(`ORCA_PROTECTED_0005`)의 설치된 스킬 홈을 검사하므로 해당 위치에 배치된 스킬은 수동 심볼릭 링크 없이 표시됩니다."
+    },
+    "/docs/cli/skills/:heading:share-private-skills-between-hosts:0": {
+      "sourceHash": "c0039c872fc044ba476acd56ee8effabb97ba1cc431754852e9251d6273d5e10",
+      "translated": "## 호스트 간에 비공개 스킬 공유"
+    },
+    "/docs/cli/skills/:paragraph:share-private-skills-between-hosts:0": {
+      "sourceHash": "0ca1429eb30702af4cabffd554b43bac19b2be9ca84952db94062b7de1edef3a",
+      "translated": "**`Skills → Share skills`(스킬 → 스킬 공유)**을 열어 하나의 스킬 또는 번들을 검색 목록에 표시되지 않고 취소 가능한 링크 하나로 게시합니다. 게시하려면 ORCA_PROTECTED_0001 계정이 필요합니다. 게시하기 전에 포함된 파일, 스크립트, 실행 파일, 다이제스트 및 선택적 릴리스 정보를 검토합니다. 게시된 각 버전은 변경할 수 없으므로 이후의 로컬 편집 내용이 수신자가 설치하는 항목을 예고 없이 변경하지 않습니다."
+    },
+    "/docs/cli/skills/:paragraph:share-private-skills-between-hosts:1": {
+      "sourceHash": "26ce3d4f273cabe0407ab678e585316ba9a14740f454980327e198d0a6aa5507",
+      "translated": "활성 링크가 있는 사람은 누구나 로그인하지 않고 공유된 스킬을 검사하고 설치할 수 있으므로 링크를 자격 증명처럼 취급합니다. 수신자는 정확한 버전을 검토하고 스킬 전체 또는 일부를 선택한 다음 이 컴퓨터, 페어링된 ORCA_PROTECTED_0001 런타임, WSL 또는 SSH 호스트에서 전역 범위나 작업 공간 범위를 선택합니다. 이미 수정된 스킬의 기본값은 **`Keep local`(로컬 유지)**입니다. **`Skills → Manage installs`(스킬 → 설치 관리)**에서 ORCA_PROTECTED_0002가 설치한 복사본을 업데이트, 롤백 또는 제거하고, **`Settings → Share Skills`(설정 → 스킬 공유)**에서 활성 링크를 복사하거나 취소합니다. 링크를 취소하면 이후 접근은 차단되지만 이미 설치된 복사본은 제거되지 않습니다."
+    },
+    "/docs/cli/skills/:paragraph:share-private-skills-between-hosts:2": {
+      "sourceHash": "5c00e37bf64d192f19db2ef998208f1575ac4aeb69092c4d3b8c39ebd5dc148b",
+      "translated": "별도로 제공되며 기본적으로 꺼져 있는 **`Settings → Share Skills → Allow agents and the ORCA_PROTECTED_0001 CLI to publish skill links`(설정 → 스킬 공유 → 에이전트 및 CLI의 스킬 링크 게시 허용)** 권한을 활성화하면 에이전트가 CLI에서 명시적으로 이름을 지정한 집합을 게시할 수 있습니다:"
+    },
+    "/docs/cli/skills/:code:share-private-skills-between-hosts:0": {
+      "sourceHash": "655bd1a7b1f74a41285a5da4991bf63b0eab8f35c316626907cdf161f8896848",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/skills/:paragraph:share-private-skills-between-hosts:3": {
+      "sourceHash": "d8b750e9e0952adbfe72548852d24ed70ff1733534241ae9fc9c3d50531489a1",
+      "translated": "`ORCA_PROTECTED_0001`는 로컬 경로를 노출하지 않는 안전한 선택자를 반환합니다. `ORCA_PROTECTED_0002`는 정확한 검색 ID 또는 모호하지 않은 이름을 허용하며, 임의의 경로나 `ORCA_PROTECTED_0003`은 허용하지 않습니다."
     }
   }
 }
