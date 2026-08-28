@@ -1,7 +1,7 @@
 ---
 title: "알림 및 받은 편지함"
 sourceUrl: https://www.onorca.dev/docs/notifications
-checkedAt: "2026-08-24T01:32:32.260Z"
+checkedAt: "2026-08-28T01:14:52.497Z"
 editUrl: false
 prev: /orca-docs-ko/docs/android-apk/
 next: /orca-docs-ko/docs/activity/

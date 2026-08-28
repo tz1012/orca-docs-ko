@@ -1,7 +1,7 @@
 ---
 title: "문제 해결 및 FAQ"
 sourceUrl: https://www.onorca.dev/docs/troubleshooting
-checkedAt: "2026-08-24T01:32:32.260Z"
+checkedAt: "2026-08-28T01:14:52.497Z"
 editUrl: false
 prev: /orca-docs-ko/docs/telemetry/
 next: /orca-docs-ko/docs/github-errors/

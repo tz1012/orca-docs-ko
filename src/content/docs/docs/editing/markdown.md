@@ -1,7 +1,7 @@
 ---
 title: "리치 마크다운 편집기"
 sourceUrl: https://www.onorca.dev/docs/editing/markdown
-checkedAt: "2026-08-24T01:32:32.260Z"
+checkedAt: "2026-08-28T01:14:52.497Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/monaco/
 next: /orca-docs-ko/docs/editing/viewers/

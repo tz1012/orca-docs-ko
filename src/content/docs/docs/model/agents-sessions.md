@@ -1,7 +1,7 @@
 ---
 title: "에이전트 및 세션"
 sourceUrl: https://www.onorca.dev/docs/model/agents-sessions
-checkedAt: "2026-08-24T01:32:32.260Z"
+checkedAt: "2026-08-28T01:14:52.497Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/tabs-panes-splits/
 next: /orca-docs-ko/docs/model/session-restore/
@@ -34,7 +34,9 @@ translationNotice:
 
 ## 상담원 대시보드
 
-**`Settings → Experimental → Agent Dashboard`(설정 → 실험 기능 → 에이전트 대시보드)**를 켭니다. Orca은 왼쪽 사이드바에 **`Agent Dashboard`(에이전트 대시보드)** 항목을 추가합니다. 이 항목은 여러 작업 트리의 에이전트를 보여 주는 칸반 보드와 선택적 **`Agent Map`(에이전트 맵)** 보기를 제공합니다.
+**`Settings → Experimental → Agent Dashboard`(설정 → 실험 기능 → 에이전트 대시보드)**를 켭니다. Orca에서는 왼쪽 사이드바에 **`Agent Dashboard`(에이전트 대시보드)** 항목이 추가됩니다. 이 항목은 여러 작업 트리의 에이전트를 보여 주는 칸반 보드입니다.
+
+[**`Settings → Shortcuts`(설정 → 단축키)**](/orca-docs-ko/docs/settings/#shortcuts)에서 **`Toggle Agent Dashboard`(에이전트 대시보드 전환)**에 키보드 단축키를 할당할 수 있습니다. 기본 키 바인딩은 없으며 터미널, 편집기 또는 브라우저 탭에 포커스가 있어도 작동합니다.
 
 ### 열
 
@@ -43,16 +45,7 @@ translationNotice:
 -   **`Done`(완료)** — 완료되었지만 아직 검토할 수 있는 세션입니다.
 -   **`Idle`(유휴)** — 약 30분 동안 완료를 보고하지 않은 조용한 에이전트입니다. 보드에서는 **기본적으로 숨겨집니다.** 전역 `Experimental`(실험 기능) 설정이 아니라 창 내부 또는 팝아웃 화면의 대시보드 **보드 설정** 컨트롤(톱니바퀴)에서 **`Show idle agents`(유휴 에이전트 표시)**를 활성화합니다. 창 내부 보기와 팝아웃 보기는 동기화됩니다.
 
-### 보기
-
-헤더 토글을 사용하여 **`Dashboard`(대시보드)**(칸반 열)와 **`Agent Map`(에이전트 맵)**(실험적 토폴로지 보기) 사이를 전환합니다.
-
--   작업 트리는 프로젝트 아래에 중첩되고, 에이전트는 작업 트리 링에 배치됩니다. Orca가 parent/child 작업 공간 관계를 인식하면 계보도 포함됩니다. 디스패치가 아직 활성 상태이거나 최근에 완료된 경우 오케스트레이션 상위 → 하위 연결선이 같은 작업 트리 또는 서로 다른 작업 트리의 에이전트 카드 사이에 그려집니다.
--   맵 상태는 보드와 동일하게 확인 필요, 작업 중, 완료 및 유휴로 표시됩니다. 에이전트를 열면 완료된 세션이 확인된 것으로 표시되어 녹색 **`Done`(완료)**에서 회색 **`Idle`(유휴)**로 이동할 수 있습니다.
--   맵에는 **`Needs me`(내 확인 필요)**, **`Stuck`(중단됨)**, **`Unread`(읽지 않음)** 같은 빠른 보기와 호스트, 공급자, 에이전트 상태 및 시간 필터를 제공하는 자체 필터 패널이 있습니다. 빠른 보기를 선택하면 현재 맵 필터가 교체되므로, 빠른 보기를 시작점으로 사용한 다음 세부 조건을 조정합니다. **`Map content`(맵 콘텐츠)** 아래에서 기본적으로 켜져 있는 **`Orchestration links`(오케스트레이션 연결선)**를 전환하여 에이전트 노드를 제거하지 않고 연결선을 숨기거나 표시합니다. 연결선을 숨기면 필터 배지 수에 포함되며, **`Reset`(재설정)**을 사용하면 맵 컨트롤이 복원됩니다.
--   **`in-window`(창 내부)** 맵에서 작업 트리 링을 마우스 오른쪽 버튼으로 클릭하면 사이드바와 같은 작업 공간 컨텍스트 메뉴가 열립니다. 로컬, SSH, 폴더 및 원격 호스트에서 사용할 수 있습니다. 팝아웃 맵 창은 기본 사이드바 저장소를 소유하지 않으므로 작업 공간 메뉴가 제한됩니다.
-
-대시보드 카드와 `Agent Map`(에이전트 맵)의 프로젝트 링에는 SSH 작업 공간과 페어링된 [원격 Orca 서버](/orca-docs-ko/docs/remote-servers/)의 호스트 배지가 표시됩니다. 배지에 마우스를 올리거나 포커스를 맞추면 **`SSH host · openclaw`(SSH 호스트 · openclaw)** 또는 **`Remote Orca host · Build Mac`(원격 호스트 · Build Mac)**처럼 저장된 호스트 이름이 표시됩니다. 로컬 작업 공간에는 호스트 배지가 표시되지 않습니다.
+대시보드 카드는 SSH 작업 공간과 페어링된 [원격 Orca 서버](/orca-docs-ko/docs/remote-servers/)에 호스트 배지를 표시합니다. 배지에 마우스를 올리거나 포커스를 맞추면 **`SSH host · openclaw`(SSH 호스트 · openclaw)** 또는 **`Remote Orca host · Build Mac`(원격 호스트 · Build Mac)**과 같은 저장된 호스트 이름을 볼 수 있습니다. 로컬 작업 공간에는 호스트 배지가 표시되지 않습니다.
 
 ### 열기 방식
 

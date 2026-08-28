@@ -39,12 +39,12 @@
       "translated": "## 상담원 대시보드"
     },
     "/docs/model/agents-sessions/:paragraph:agent-dashboard:0": {
-      "sourceHash": "a7fe1a104368c98b3903e1ef48d7e7e7c702eab4fc752060d2aeba9ac799884b",
-      "translated": "**`Settings → Experimental → Agent Dashboard`(설정 → 실험 기능 → 에이전트 대시보드)**를 켭니다. ORCA_PROTECTED_0001은 왼쪽 사이드바에 **`Agent Dashboard`(에이전트 대시보드)** 항목을 추가합니다. 이 항목은 여러 작업 트리의 에이전트를 보여 주는 칸반 보드와 선택적 **`Agent Map`(에이전트 맵)** 보기를 제공합니다."
+      "sourceHash": "478b8e39457e04268e8b0cccd29500c8f1be3a50ac653f7f59a6773b0045ddb6",
+      "translated": "**`Settings → Experimental → Agent Dashboard`(설정 → 실험 기능 → 에이전트 대시보드)**를 켭니다. ORCA_PROTECTED_0001에서는 왼쪽 사이드바에 **`Agent Dashboard`(에이전트 대시보드)** 항목이 추가됩니다. 이 항목은 여러 작업 트리의 에이전트를 보여 주는 칸반 보드입니다."
     },
     "/docs/model/agents-sessions/:paragraph:agent-dashboard:1": {
-      "sourceHash": "d3a17425882705b77a4a8ae75b4e5a0e35fa4dae32b17729417462d8a0866d14",
-      "translated": "실험적 보드를 꺼도 작업 트리 카드에는 동일한 기호와 함께 에이전트 행이 인라인으로 표시됩니다. 상태 표시기가 보이지 않으면 해당 세션의 에이전트 CLI를 ORCA_PROTECTED_0001가 인식하지 못하는 것입니다. 바이너리를 직접 입력하지 말고 에이전트 콤보 상자를 통해 시작합니다."
+      "sourceHash": "bfe81f789114b4092b7110aaca248d4f2248921efd3932c2341848dec8862de1",
+      "translated": "[**`Settings → Shortcuts`(설정 → 단축키)**](ORCA_PROTECTED_0001)에서 **`Toggle Agent Dashboard`(에이전트 대시보드 전환)**에 키보드 단축키를 할당할 수 있습니다. 기본 키 바인딩은 없으며 터미널, 편집기 또는 브라우저 탭에 포커스가 있어도 작동합니다."
     },
     "/docs/model/agents-sessions/:heading:launch-defaults:0": {
       "sourceHash": "1dff4aef5b202c50e97db92fcd9b5af9bca40f468e63d1f7856788ed3c4563e6",
@@ -101,6 +101,10 @@
     "/docs/model/agents-sessions/:heading:columns:0": {
       "sourceHash": "c8e7698268c2b17205dc00b3f38ba7628134f70097347f5ac4b20be02de35b3b",
       "translated": "### 열"
+    },
+    "/docs/model/agents-sessions/:paragraph:columns:0": {
+      "sourceHash": "b039ccdae883c1579d64c3b70f3977308a516170bf83275bb5cfc91e49e025c8",
+      "translated": "대시보드 카드는 SSH 작업 공간과 페어링된 [원격 ORCA_PROTECTED_0001 서버](ORCA_PROTECTED_0002)에 호스트 배지를 표시합니다. 배지에 마우스를 올리거나 포커스를 맞추면 **`SSH host · openclaw`(SSH 호스트 · openclaw)** 또는 **`Remote ORCA_PROTECTED_0003 host · Build Mac`(원격 호스트 · Build Mac)**과 같은 저장된 호스트 이름을 볼 수 있습니다. 로컬 작업 공간에는 호스트 배지가 표시되지 않습니다."
     },
     "/docs/model/agents-sessions/:list:columns:0": {
       "sourceHash": "8b650f447cedb1cd8f792a391d9cd2e08627301b16136e47dcbd4c69dbc6b795",

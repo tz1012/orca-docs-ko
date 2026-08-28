@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-08-24T01:32:32.260Z"
+checkedAt: "2026-08-28T01:14:52.497Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -168,10 +168,10 @@ translationNotice:
 
 ## 실험적
 
--   [Activity Page](/orca-docs-ko/docs/activity/) — 에이전트 이벤트를 보여 주는 Slack 스타일 작업 트리 피드입니다.
+-   [`Activity Page`(활동 페이지)](/orca-docs-ko/docs/activity/) — 에이전트 이벤트를 보여 주는 Slack 스타일 작업 트리 피드입니다.
 -   `Compact worktree cards`(간결한 작업 트리 카드) — 레이아웃이 실험 단계인 동안 사이드바의 중복된 두 번째 줄을 숨깁니다.
 -   [에이전트 최대 절전 모드](/orca-docs-ko/docs/agents/hibernation/) — 유휴 백그라운드 에이전트를 일시 중지하고 다시 열 때 자동으로 재개합니다.
--   **`Agent Dashboard`(에이전트 대시보드)** — `Needs You`(확인 필요), `Working`(작업 중), `Done`(완료) 에이전트와 선택적 `Idle`(유휴) 에이전트를 보여 주는 칸반 및 실험적 **`Agent Map`(에이전트 맵)**입니다. 검색과 project/workspace/PR 필터를 제공하며 창 내부 또는 팝아웃으로 열 수 있습니다. **`Show idle agents`(유휴 에이전트 표시)**는 이 설정이 아니라 대시보드 보드 설정 컨트롤에 있습니다. [에이전트 및 세션](/orca-docs-ko/docs/model/agents-sessions/#agent-dashboard)을 참조합니다.
+-   **`Agent Dashboard`(에이전트 대시보드)** — `Needs You`(확인 필요), `Working`(작업 중), `Done`(완료) 에이전트와 선택적 `Idle`(유휴) 에이전트를 보여 주는 칸반 보드입니다. 검색과 `project/workspace/PR`(프로젝트/작업 공간/PR) 필터를 제공하며 창 내부 또는 팝아웃으로 열 수 있습니다. **`Show idle agents`(유휴 에이전트 표시)**는 이 설정이 아니라 대시보드 보드 설정 컨트롤에 있습니다. [에이전트 및 세션](/orca-docs-ko/docs/model/agents-sessions/#agent-dashboard)을 참조합니다.
 -   **`Chat UI`(채팅 UI)** — 지원되는 에이전트 터미널에서 선택적으로 사용하는 채팅 화면입니다. [채팅 UI](/orca-docs-ko/docs/agents/native-chat/)를 참조합니다.
 -   **`Cloud VM`(클라우드 VM)** — 저장소에서 관리하는 주문형 환경(클라우드 샌드박스, VM 또는 로컬 Docker)의 설정 컨트롤과 작업 공간 **`Run on`(실행 위치)** 대상을 표시합니다. 설정 가이드와 레시피 설치는 이 실험 기능 토글 아래에 있습니다. [Orca 실행 방식](/orca-docs-ko/docs/ways-to-run/#4-cloud-vms-per-workspace-environments)을 참조합니다.
 -   아직 안정화되지 않은 기능은 동작이 변경될 수 있습니다.

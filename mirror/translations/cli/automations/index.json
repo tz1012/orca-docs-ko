@@ -139,6 +139,10 @@
       "translated": "**`Filters`(필터)**를 사용하여 **`Enabled`(활성화됨)** 또는 **`Paused`(일시 중지됨)** 상태, 마지막 실행 결과인 **`Failed`(실패)**, **`Succeeded`(성공)** 또는 **`Never ran`(실행 기록 없음)**, 하나 이상의 **`Agents`(에이전트)**를 기준으로 목록을 좁힙니다. 목록이 길면 에이전트 하위 메뉴에서 검색합니다. 활성 필터는 표 위에 개별적으로 제거할 수 있는 필로 표시됩니다. 표에는 각 자동화의 마지막 실행 결과와 상대 시간이 표시됩니다. **`Name`(이름)** 또는 **`Last run`(마지막 실행)** 열을 클릭하여 정렬합니다. 이름은 사전순으로 정렬되며, 마지막 실행은 기본적으로 최신순으로 정렬됩니다."
     },
     "/docs/cli/automations/:paragraph:review-and-enable:3": {
+      "sourceHash": "5026c55a0789433956cc25dfe1acbec21ea30a1d026834f70f532f5cad1bb624",
+      "translated": "자동화 목록이 열려 있을 때 검색 필드에 입력하고 **`ArrowUp`(위쪽 화살표)** 또는 **`ArrowDown`(아래쪽 화살표)**을 눌러 표시된 일치 행 사이에서 선택 항목을 이동합니다. 목록은 선택된 행이 보이도록 유지합니다. 보조 키와 함께 입력하거나 IME 조합 중일 때에는 일반적인 커서 동작을 유지합니다."
+    },
+    "/docs/cli/automations/:paragraph:review-and-enable:4": {
       "sourceHash": "e9af02ebfeef91a4903030f2a8ea1c1dfe07462842ff8196b6fbe0ece5436810",
       "translated": "이름, 프롬프트, 공급자, 대상, 일정 또는 활성화 상태를 변경하려면 `ORCA_PROTECTED_0001`을 사용합니다. `ORCA_PROTECTED_0002`는 자동화와 실행 기록을 삭제합니다."
     }

@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 참조"
 sourceUrl: https://www.onorca.dev/docs/cli/reference
-checkedAt: "2026-08-24T01:32:32.260Z"
+checkedAt: "2026-08-28T01:14:52.497Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/overview/
 next: /orca-docs-ko/docs/cli/orchestration/

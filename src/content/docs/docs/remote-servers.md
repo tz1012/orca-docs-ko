@@ -1,7 +1,7 @@
 ---
 title: "원격 Orca 서버"
 sourceUrl: https://www.onorca.dev/docs/remote-servers
-checkedAt: "2026-08-24T01:32:32.260Z"
+checkedAt: "2026-08-28T01:14:52.497Z"
 editUrl: false
 prev: /orca-docs-ko/docs/ssh/
 next: /orca-docs-ko/docs/cli/overview/
