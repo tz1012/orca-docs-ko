@@ -1,7 +1,7 @@
 ---
 title: "호스팅된 리뷰, 문제 및 조치"
 sourceUrl: https://www.onorca.dev/docs/review/github
-checkedAt: "2026-08-28T01:14:52.497Z"
+checkedAt: "2026-09-01T01:03:52.289Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/commit-push/
 next: /orca-docs-ko/docs/review/linear/
@@ -30,6 +30,8 @@ Bitbucket Cloud는 같은 창에서 앱 내 연결을 지원합니다. **`Connec
 -   연결된 검토는 사이드바에 상태와 함께 표시되므로 브랜치가 아직 `open`(열림), `merged`(병합됨), `closed`(닫힘) 중 어떤 상태인지 알 수 있습니다.
 -   Orca에 연결된 PR/MR의 URL이 있으면 브랜치 컨텍스트 행에 간결한 **`Open review page in browser`(브라우저에서 검토 페이지 열기)** 링크가 표시됩니다. 한 번 클릭하면 내부 PR 보기를 열지 않고 GitHub, GitLab, Bitbucket, Azure DevOps 또는 Gitea의 검토로 이동합니다.
 -   GitHub 풀 리퀘스트에서는 사이드바의 PR 작업 메뉴를 사용하여 검토 링크를 복사하거나, 검토를 닫거나, 상태 변경을 확인한 뒤 다시 엽니다.
+-   초안 GitHub 풀 리퀘스트와 GitLab 병합 요청에서는 사이드바 작업의 **`Mark ready for review`(검토 준비 완료로 표시)** 또는 **`Close`(닫기)**를 사용합니다. GitLab 작업은 Draft/WIP 상태를 제거합니다. 검토가 아직 초안이면 병합과 자동 병합을 사용할 수 없습니다.
+-   연결된 GitLab 병합 요청에서는 `Checks`(검사) 사이드바의 검토 링크 메뉴를 열고 **`Unlink MR`(MR 연결 해제)** 또는 **`Link another MR`(다른 MR 연결)**을 선택합니다.
 -   GitHub 검사, 검토, 댓글은 PR 탭에서 인라인으로 열리며, GitLab 병합 요청과 이슈도 같은 검토 화면에서 열립니다.
 -   GitLab 파이프라인에서는 **`Checks`(검사)** 사이드 패널에 최상위 작업뿐 아니라 브리지 및 하위 파이프라인 작업도 포함됩니다. 작업을 펼치면 사용할 수 있는 경우 해당 작업의 추적 로그를 불러옵니다. GitHub 검사 세부 정보가 열리는 곳과 같으므로 실패한 작업이 `no inline details`(인라인 세부 정보 없음) 스텁에서 막히지 않습니다.
 -   `Checks`(검사) 패널에서는 루트 댓글뿐 아니라 검토 스레드의 모든 댓글에 답글을 달 수 있습니다.

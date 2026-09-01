@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-08-28T01:14:52.497Z"
+checkedAt: "2026-09-01T01:03:52.289Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -79,6 +79,8 @@ translationNotice:
 -   `Default Zoom`(기본 확대/축소) — 새로 연 브라우저 탭에 적용할 확대/축소 수준입니다. `Cmd-wheel`(Cmd+휠)로 탭별로 조정한 값은 별도로 기억됩니다.
 -   `Design Mode`(디자인 모드) 기본값을 설정합니다.
 -   `Devtools`(개발자 도구) 사용 여부를 설정합니다.
+-   **`Remote server workspaces`(원격 서버 작업 공간)** — 새 페어링 런타임 브라우저 페이지를 이 데스크톱에서 렌더링하려면 **`This device`(이 기기)**를 선택하고, 서버에서 렌더링하려면 **`Server (streamed)`(서버(스트리밍))**를 선택합니다. 트래픽은 항상 원격 서버를 통과하며 선택 내용은 새 페이지에만 적용됩니다. [Per-worktree browser → Remote workspaces(작업 트리별 브라우저 → 원격 작업 공간)](/orca-docs-ko/docs/browser/overview/#remote-workspaces)를 참조합니다.
+-   **`Browse through SSH workspace hosts`(SSH 작업 공간 호스트를 통해 탐색)** — 브라우저 트래픽과 DNS를 각 작업 공간의 SSH 호스트를 통해 전송합니다. 이 기기에서 탐색하려면 이 옵션을 끕니다.
 -   **`Link Routing`(링크 라우팅)** — 터미널, 마크다운 및 편집기의 http(s) 링크를 Orca 브라우저 또는 시스템 브라우저에서 엽니다. 중첩된 **`Hold Shift…`(Shift 키 누르기…)** 옵션은 한 번의 클릭에 대해 이 기본 동작을 반대로 전환합니다(`⇧⌘-click` / `Shift+Ctrl+click`). [작업 트리별 브라우저](/orca-docs-ko/docs/browser/overview/#link-routing)를 참조합니다.
 -   **`Show terminal link actions`(터미널 링크 작업 표시)** — **기본적으로 켜져 있습니다**. 터미널 링크를 일반 클릭하면 간결한 작업 팝오버가 열립니다. 이 옵션을 끄면 `⌘`\-click / `Ctrl`\-click가 필요합니다. [Terminal → Link actions(터미널 → 링크 작업)](/orca-docs-ko/docs/terminal/#link-actions)을 참조합니다.
 -   **`Default Search Engine`(기본 검색 엔진)** — 브라우저 주소 표시줄이나 [새 탭 옴니박스](/orca-docs-ko/docs/model/quick-open/#new-tab-omnibox)에 URL이 아닌 텍스트를 입력할 때 사용합니다.
@@ -144,6 +146,7 @@ translationNotice:
 -   **`Tab navigation defaults (new installs)`(탭 탐색 기본값(새 설치)):** **모든 유형**을 가로지르는 next/previous 탭은 `Cmd+Shift+]` / `Cmd+Shift+[`(Linux/Windows에서는 Ctrl)입니다. 같은 유형 내 next/previous은 `Cmd+Option+]` / `Cmd+Option+[`입니다. 최근 사용한 이전 탭은 `Ctrl+Tab`입니다. 기존 설치는 사용자 지정 재정의를 `~/.orca/keybindings.json`에 유지합니다.
 -   **`Add Review Note`(검토 메모 추가)**의 기본값은 `Cmd+Shift+A`(macOS) / `Ctrl+Shift+A`(Windows/Linux)이며 다시 매핑할 수 있습니다.
 -   **`Send Review Notes to Agent`(에이전트에 검토 메모 보내기)**는 기본적으로 키가 할당되지 않습니다. 마우스를 사용하지 않고 활성 작업 트리의 diff 메모 보내기 메뉴를 열려면 여기서 할당합니다.
+-   **`Delete workspace`(작업 공간 삭제)**의 기본값은 macOS에서 `Cmd+Shift+Backspace`, Windows/Linux에서 `Ctrl+Shift+Backspace`입니다. 삭제하려는 사이드바 작업 공간에 마우스를 올리면 Orca가 계속 확인을 요청합니다.
 
 ## 저장소
 

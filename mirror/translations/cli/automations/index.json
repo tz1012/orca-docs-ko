@@ -2,6 +2,18 @@
   "sourceUrl": "https://www.onorca.dev/docs/cli/automations",
   "mirrorPath": "/docs/cli/automations/",
   "entries": {
+    "/docs/cli/automations/:heading:manage-automations-across-hosts:0": {
+      "sourceHash": "274f1030ffbf13dd2f42372c1d6f6000f1e5269b30e6af1baa5c83ceb52e5547",
+      "translated": "## 여러 호스트의 자동화 관리"
+    },
+    "/docs/cli/automations/:paragraph:manage-automations-across-hosts:0": {
+      "sourceHash": "01fdabf029fd5579e17931d2183377d67ddf9dfb9312960112a2b15505c6594c",
+      "translated": "데스크톱 **`Automations`(자동화)** 페이지는 이 컴퓨터와 지원되는 연결 ORCA_PROTECTED_0001 호스트의 일정을 하나의 표로 불러옵니다. **`Host`(호스트)** 열에는 각 자동화가 저장되고 예약된 위치가 표시됩니다. 하나 이상의 호스트를 표시하려면 **`Filters → Host`(필터 → 호스트)**를 사용하고, 전체를 표시하려면 **`All hosts`(모든 호스트)**로 돌아갑니다."
+    },
+    "/docs/cli/automations/:paragraph:manage-automations-across-hosts:1": {
+      "sourceHash": "55a189fc827d17011465c3be71a0d17eadfee9cea08f4d3497c3cc088476c04a",
+      "translated": "데스크톱 UI에서 자동화를 만들 때는 프로젝트를 선택하기 전에 **`Create on`(생성 위치)**에서 호스트를 선택합니다. 그러면 프로젝트 선택기에 해당 대상에서 사용할 수 있는 프로젝트가 표시됩니다. 최신 ORCA_PROTECTED_0001 서버가 필요한 연결 호스트는 선택기에서 사라지지 않고 **`Update server`(서버 업데이트)** 메시지와 함께 비활성화된 상태로 계속 표시됩니다."
+    },
     "/docs/cli/automations/:heading:scheduled-automations:0": {
       "sourceHash": "27589dd04ad7610a72cf70a2cededaa040bf505d615bd9becaa43f3cb9dfd610",
       "translated": "# 예약된 자동화"
@@ -135,8 +147,8 @@
       "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/automations/:paragraph:review-and-enable:2": {
-      "sourceHash": "227b897ef37efe74aebd3086646704a71a39477c15c804bc0cf2e76cbd54c81f",
-      "translated": "**`Filters`(필터)**를 사용하여 **`Enabled`(활성화됨)** 또는 **`Paused`(일시 중지됨)** 상태, 마지막 실행 결과인 **`Failed`(실패)**, **`Succeeded`(성공)** 또는 **`Never ran`(실행 기록 없음)**, 하나 이상의 **`Agents`(에이전트)**를 기준으로 목록을 좁힙니다. 목록이 길면 에이전트 하위 메뉴에서 검색합니다. 활성 필터는 표 위에 개별적으로 제거할 수 있는 필로 표시됩니다. 표에는 각 자동화의 마지막 실행 결과와 상대 시간이 표시됩니다. **`Name`(이름)** 또는 **`Last run`(마지막 실행)** 열을 클릭하여 정렬합니다. 이름은 사전순으로 정렬되며, 마지막 실행은 기본적으로 최신순으로 정렬됩니다."
+      "sourceHash": "63ccced25c01720977ecc21811f66bb3026cebc8cb9fcdf1da45e0289134a1f1",
+      "translated": "**`Filters`(필터)**를 사용하여 **`Host`(호스트)**, **`Enabled`(활성화됨)** 또는 **`Paused`(일시 중지됨)** 상태, 마지막 실행 결과인 **`Failed`(실패)**, **`Succeeded`(성공)** 또는 **`Never ran`(실행 기록 없음)**, 하나 이상의 **`Agents`(에이전트)**를 기준으로 목록을 좁힙니다. 목록이 길면 에이전트 하위 메뉴에서 검색합니다. 활성 필터는 표 위에 개별적으로 제거할 수 있는 필로 표시됩니다. 표에는 각 자동화의 호스트, 마지막 실행 결과 및 상대 시간이 표시됩니다. **`Name`(이름)** 또는 **`Last run`(마지막 실행)** 열을 클릭하여 정렬합니다. 이름은 사전순으로 정렬되며, 마지막 실행은 기본적으로 최신순으로 정렬됩니다."
     },
     "/docs/cli/automations/:paragraph:review-and-enable:3": {
       "sourceHash": "5026c55a0789433956cc25dfe1acbec21ea30a1d026834f70f532f5cad1bb624",

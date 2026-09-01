@@ -2,6 +2,22 @@
   "sourceUrl": "https://www.onorca.dev/docs/agents/native-chat",
   "mirrorPath": "/docs/agents/native-chat/",
   "entries": {
+    "/docs/agents/native-chat/:heading:updated-structured-chat-for-codex:0": {
+      "sourceHash": "f25d23cd446758f0a25b6abac989870d6c141ecf804e745d435f0408720d94c0",
+      "translated": "## ORCA_PROTECTED_0001용 업데이트된 구조화 채팅"
+    },
+    "/docs/agents/native-chat/:paragraph:updated-structured-chat-for-codex:0": {
+      "sourceHash": "cb8125acb047aea56aa6740959cf80a9c046fe455a6d3d9fd9b6b5d5a4e762ae",
+      "translated": "새 로컬 ORCA_PROTECTED_0001 세션의 경우 ORCA_PROTECTED_0002는 실험적인 구조화 채팅 탭도 제공합니다. 세션 상태를 ORCA_PROTECTED_0003에 유지하므로 앱을 다시 시작한 후에도 탭과 대화를 복원할 수 있습니다."
+    },
+    "/docs/agents/native-chat/:list:updated-structured-chat-for-codex:0": {
+      "sourceHash": "036bd1198877fe7a01d09e7831e23dc8cd3a3c1799b4693ca0d0f1715cbae1b9",
+      "translated": "1.  **`Settings → Experimental → Chat UI`(설정 → 실험적 기능 → 채팅 UI)**를 엽니다.\n2.  **`Chat UI`(채팅 UI)**를 켠 다음 **`Use updated structured native chat`(업데이트된 구조화 네이티브 채팅 사용)**을 켭니다.\n3.  로컬 작업 공간에서 새 **ORCA_PROTECTED_0001** 세션을 시작합니다."
+    },
+    "/docs/agents/native-chat/:paragraph:updated-structured-chat-for-codex:1": {
+      "sourceHash": "ac5d77775c9c8917776a6f5de39930bbdd57e179e87f67171ed13f1bbb04e365",
+      "translated": "업데이트된 구조화 채팅은 현재 로컬 macOS 및 Linux 세션에서만 사용할 수 있습니다. Windows, WSL, 원격 및 SSH 세션은 계속 터미널 기반 `Chat UI`(채팅 UI)를 사용합니다. 기존 터미널 세션은 계속 터미널 세션으로 유지됩니다."
+    },
     "/docs/agents/native-chat/:heading:chat-ui-native-chat:0": {
       "sourceHash": "c5c005ee8eee2f39beddc5dfb5e289b399edff27c934bbe95abda970911b0eab",
       "translated": "# 채팅 UI(네이티브 채팅)"
@@ -11,8 +27,8 @@
       "translated": "지원되는 에이전트 터미널 위에 선택적으로 제공되는 채팅 인터페이스로, 스킬, 모델 선택기 및 대화 기록 보기를 지원합니다."
     },
     "/docs/agents/native-chat/:paragraph:chat-ui-native-chat:1": {
-      "sourceHash": "d4d08bb609a3191ce3660c0f7b48adefd4b8137d077f2e56d719de6c4b1dce54",
-      "translated": "`Chat UI`(채팅 UI)는 지원되는 에이전트 터미널 세션 위에 계층으로 제공되는 실험적 보기입니다. 터미널이 계속 기준 정보이며, `Chat UI`(채팅 UI)는 동일한 PTY를 위한 구조화된 대화 기록과 작성기입니다. 대화 기록 디코딩은 **ORCA_PROTECTED_0001**, **ORCA_PROTECTED_0002**, **ORCA_PROTECTED_0003**, **ORCA_PROTECTED_0004**를 지원하며, ORCA_PROTECTED_0005 세션도 원시 터미널 전용 상태로 남지 않고 다른 세션처럼 `Chat UI`(채팅 UI)에서 열립니다."
+      "sourceHash": "026464475cc89797516ce36e880db0897b9f0ec7d8061d48641acc2ad5733fd8",
+      "translated": "`Chat UI`(채팅 UI)는 지원되는 에이전트 터미널 세션 위에 계층으로 제공되는 실험적 보기입니다. 터미널이 계속 기준 정보이며, `Chat UI`(채팅 UI)는 동일한 PTY를 위한 구조화된 대화 기록과 작성기입니다. 대화 기록 디코딩은 **ORCA_PROTECTED_0001**, **ORCA_PROTECTED_0002**, **ORCA_PROTECTED_0003**, **ORCA_PROTECTED_0004**를 지원하며, ORCA_PROTECTED_0005 세션도 원시 터미널 전용 상태로 남지 않고 다른 세션처럼 `Chat UI`(채팅 UI)에서 열립니다. 적격한 로컬 ORCA_PROTECTED_0006 세션에서는 대신 아래에서 설명하는 별도의 업데이트된 구조화 네이티브 채팅을 사용할 수 있습니다."
     },
     "/docs/agents/native-chat/:heading:enable:0": {
       "sourceHash": "4fe368d6a2c35a1e623685bc079c2fe8351cd96e46c7675b32d77d7c6551d046",

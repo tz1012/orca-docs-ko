@@ -1,7 +1,7 @@
 ---
 title: "작업트리별 브라우저"
 sourceUrl: https://www.onorca.dev/docs/browser/overview
-checkedAt: "2026-08-28T01:14:52.497Z"
+checkedAt: "2026-09-01T01:03:52.289Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/file-explorer/
 next: /orca-docs-ko/docs/browser/design-mode/
@@ -24,6 +24,7 @@ translationNotice:
 -   `Cmd-F` — 페이지에서 찾습니다.
 -   `Cmd-T` — 이 작업 트리로 범위가 지정된 새 탭을 엽니다.
 -   `Cmd-Shift-T` — 마지막으로 닫은 탭을 다시 엽니다.
+-   `target=_blank`을 사용하는 페이지 링크와 이름이 지정되지 않은 일반 팝업은 링크를 연 탭의 브라우저 프로필을 사용하여 새 Orca 탭에서 열립니다. 이름이 지정되었거나 OAuth 방식인 팝업은 계속 별도 창에서 열릴 수 있습니다.
 
 ## 작업 트리 범위 지정
 
@@ -32,6 +33,14 @@ translationNotice:
 ![세션이 유지되는 작업 트리별 브라우저 탭 — 클릭 한 번으로 Chrome 또는 Edge의 쿠키를 가져옵니다. Google 로그인은 가져오지 않으며, Google 로그인은 Orca에서 직접 진행합니다.](/orca-docs-ko/assets/mirror/46a59e38451d06e4b06df457f9f4f2449cbd1b46ad06906c7073f414e463be28.jpg)
 
 세션이 유지되는 작업 트리별 브라우저 탭 — 클릭 한 번으로 Chrome 또는 Edge의 쿠키를 가져옵니다. Google 로그인은 가져오지 않으며, Google 로그인은 Orca에서 직접 진행합니다.
+
+## 원격 작업 공간
+
+페어링된 [Remote Orca Server(원격 Orca 서버)](/orca-docs-ko/docs/remote-servers/)의 작업 공간에서는 기본적으로 새 브라우저 페이지가 이 데스크톱에서 렌더링되지만 HTTP(S), WebSocket, DNS 및 루프백 트래픽은 계속 원격 호스트를 통과합니다. 페이지의 네트워크 정체성은 바뀌지 않으며 입력, 선택 및 팝업은 이 기기의 네이티브 동작을 유지합니다. 브라우저 툴바의 호스트 표시기에 트래픽이 전달되는 위치가 표시됩니다.
+
+[**`Settings → Browser → Remote server workspaces`(설정 → 브라우저 → 원격 서버 작업 공간)**](/orca-docs-ko/docs/settings/)에서 **`This device`(이 기기)** 또는 **`Server (streamed)`(서버(스트리밍))**를 선택합니다. 선택 내용은 새 페이지에만 적용되며 이미 열린 페이지를 이동하지 않습니다. 로컬에서 렌더링되는 원격 페이지를 시작할 수 없으면 **`Reopen on server`(서버에서 다시 열기)**가 마지막 주소의 새 서버 호스팅 페이지를 엽니다. 로그인 또는 양식 상태는 달라질 수 있습니다.
+
+SSH 작업 공간에서는 **`Browse through SSH workspace hosts`(SSH 작업 공간 호스트를 통해 탐색)**가 브라우저 트래픽과 DNS를 작업 공간의 SSH 호스트로 보낼지, 이 기기로 보낼지 제어합니다. 클라이언트에서 호스팅되는 원격 페이지의 다운로드는 원격 작업 공간 호스트에 유지되며, 업로드는 페이지에 전달되기 전 그곳에 임시 저장됩니다.
 
 ## 링크 라우팅
 
@@ -42,7 +51,7 @@ translationNotice:
 -   링크가 **Orca**에서 열리도록 설정된 경우 수정 키를 사용하면 해당 링크 하나를 시스템 브라우저로 보냅니다.
 -   링크가 **시스템 브라우저**에서 열리도록 설정된 경우 토글을 켜면 수정 키를 사용한 링크 하나가 Orca의 내장 브라우저에서 대신 열립니다. 일반 클릭은 계속 시스템 브라우저에서 열립니다.
 
-Remote/SSH 소스는 수정 키를 사용해도 Orca 브라우저 내부에서 열리지 않습니다. 터미널 링크에는 **`Orca Browser`(Orca 브라우저)** / **`System Browser`(시스템 브라우저)** 클릭 팝오버도 표시될 수 있습니다. [Terminal → Link actions(터미널 → 링크 작업)](/orca-docs-ko/docs/terminal/#link-actions)을 참조합니다.
+기능이 확인된 페어링 런타임은 터미널 링크에도 동일한 Orca/system-browser 선택 항목을 제공할 수 있습니다. SSH 소유 터미널 링크와 이전 런타임의 링크는 계속 시스템 브라우저에서만 열립니다. [Terminal → Link actions(터미널 → 링크 작업)](/orca-docs-ko/docs/terminal/#link-actions)을 참조합니다.
 
 ## 다운로드
 

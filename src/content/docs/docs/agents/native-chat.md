@@ -1,7 +1,7 @@
 ---
 title: "채팅 UI(네이티브 채팅)"
 sourceUrl: https://www.onorca.dev/docs/agents/native-chat
-checkedAt: "2026-08-28T01:14:52.497Z"
+checkedAt: "2026-09-01T01:03:52.289Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/codex-hot-swap/
 next: /orca-docs-ko/docs/agents/session-history/
@@ -13,7 +13,7 @@ translationNotice:
 
 지원되는 에이전트 터미널 위에 선택적으로 제공되는 채팅 인터페이스로, 스킬, 모델 선택기 및 대화 기록 보기를 지원합니다.
 
-`Chat UI`(채팅 UI)는 지원되는 에이전트 터미널 세션 위에 계층으로 제공되는 실험적 보기입니다. 터미널이 계속 기준 정보이며, `Chat UI`(채팅 UI)는 동일한 PTY를 위한 구조화된 대화 기록과 작성기입니다. 대화 기록 디코딩은 **Claude**, **Codex**, **Grok**, **OMP**를 지원하며, OMP 세션도 원시 터미널 전용 상태로 남지 않고 다른 세션처럼 `Chat UI`(채팅 UI)에서 열립니다.
+`Chat UI`(채팅 UI)는 지원되는 에이전트 터미널 세션 위에 계층으로 제공되는 실험적 보기입니다. 터미널이 계속 기준 정보이며, `Chat UI`(채팅 UI)는 동일한 PTY를 위한 구조화된 대화 기록과 작성기입니다. 대화 기록 디코딩은 **Claude**, **Codex**, **Grok**, **OMP**를 지원하며, OMP 세션도 원시 터미널 전용 상태로 남지 않고 다른 세션처럼 `Chat UI`(채팅 UI)에서 열립니다. 적격한 로컬 Codex 세션에서는 대신 아래에서 설명하는 별도의 업데이트된 구조화 네이티브 채팅을 사용할 수 있습니다.
 
 ## 활성화
 
@@ -22,6 +22,16 @@ translationNotice:
 3.  선택적으로 **`Default view`(기본 보기)**를 **`Chat UI`(채팅 UI)**로 설정하여 지원되는 새 에이전트 탭이 채팅으로 열리게 합니다. TUI를 먼저 열려면 **`Terminal`(터미널)**을 유지합니다.
 
 활성화한 후 에이전트 창에서 `Chat UI`(채팅 UI) ↔ 터미널을 전환합니다.
+
+## Codex용 업데이트된 구조화 채팅
+
+새 로컬 Codex 세션의 경우 Orca는 실험적인 구조화 채팅 탭도 제공합니다. 세션 상태를 Orca에 유지하므로 앱을 다시 시작한 후에도 탭과 대화를 복원할 수 있습니다.
+
+1.  **`Settings → Experimental → Chat UI`(설정 → 실험적 기능 → 채팅 UI)**를 엽니다.
+2.  **`Chat UI`(채팅 UI)**를 켠 다음 **`Use updated structured native chat`(업데이트된 구조화 네이티브 채팅 사용)**을 켭니다.
+3.  로컬 작업 공간에서 새 **Codex** 세션을 시작합니다.
+
+업데이트된 구조화 채팅은 현재 로컬 macOS 및 Linux 세션에서만 사용할 수 있습니다. Windows, WSL, 원격 및 SSH 세션은 계속 터미널 기반 `Chat UI`(채팅 UI)를 사용합니다. 기존 터미널 세션은 계속 터미널 세션으로 유지됩니다.
 
 ## 작성기
 

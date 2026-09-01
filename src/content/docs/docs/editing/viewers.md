@@ -1,7 +1,7 @@
 ---
-title: "인어, PDF 및 이미지 뷰어"
+title: "HTML, Mermaid, PDF 및 이미지 뷰어"
 sourceUrl: https://www.onorca.dev/docs/editing/viewers
-checkedAt: "2026-08-28T01:14:52.497Z"
+checkedAt: "2026-09-01T01:03:52.289Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/markdown/
 next: /orca-docs-ko/docs/editing/file-explorer/
@@ -11,7 +11,15 @@ translationNotice:
   rights: "원본 문서와 이미지의 권리는 Lovecast Inc. 및 각 권리자에게 있습니다."
 ---
 
-Orca에는 대부분의 저장소에 표시되는 형식에 대한 내장 뷰어가 포함되어 있습니다.
+Orca에는 대부분의 저장소에서 자주 사용하는 형식을 위한 뷰어가 내장되어 있습니다.
+
+## HTML
+
+로컬, SSH 또는 페어링 런타임의 `.html` 파일을 **`Open in Orca Browser`(Orca 브라우저에서 열기)** 또는 **`Open Preview to the Side`(옆에 미리 보기 열기)**로 엽니다. Orca는 샌드박스 처리된 브라우저 탭에서 문서를 로컬로 렌더링하고 작업 공간의 파일 연결을 통해 파일과 상대 경로 자산을 읽으므로, 데스크톱 파일 시스템을 노출하지 않고도 원격 디자인 문서를 선명하게 표시합니다.
+
+미리 보기는 추가 폴더를 읽기 전에 권한을 요청하며, 해당 탭에는 승인한 폴더만 허용합니다. 외부 HTTP(S) 링크는 확인 후 일반 Orca 브라우저 탭에서 열리며, 문서 미리 보기 안에서는 다운로드가 비활성화됩니다. **`Preview options`(미리 보기 옵션)**에서 디스크의 내용을 다시 불러오거나, 원본 파일을 열거나, 전체 경로 또는 작업 공간 기준 상대 경로를 복사합니다.
+
+페어링 런타임에서는 HTML 파일이 작업 트리 안에 있어야 합니다. 매우 오래된 페어링 서버에서는 바이너리 자산 없이 문서가 렌더링될 수 있습니다. 원격 이미지가 불러와지지 않으면 서버를 업데이트합니다.
 
 ## 인어
 

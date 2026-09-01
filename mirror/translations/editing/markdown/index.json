@@ -2,6 +2,14 @@
   "sourceUrl": "https://www.onorca.dev/docs/editing/markdown",
   "mirrorPath": "/docs/editing/markdown/",
   "entries": {
+    "/docs/editing/markdown/:paragraph:rich-markdown-editor:1": {
+      "sourceHash": "0bf9a415f6b9968d5613bc26f1f2b2746090d8501caa8baf21abdf615ce44d3e",
+      "translated": "300 KB보다 큰 파일은 입력 반응성을 유지하기 위해 ORCA_PROTECTED_0001가 먼저 원시 편집기에서 엽니다. 해당 파일을 리치 편집기에서 사용하려면 대체 배너에서 **`Open anyway`(그래도 열기)**를 선택합니다. 이 선택은 해당 탭을 닫을 때까지 유지됩니다. 리치 편집기에서 안전하게 보존할 수 없는 Markdown 구문을 사용하는 파일은 계속 원시 편집기에서 열립니다."
+    },
+    "/docs/editing/markdown/:paragraph:tables:2": {
+      "sourceHash": "426e5d120989743b4ad881b9fb837496cccfe760f436ec7251cd727779bae991",
+      "translated": "캐럿이 표 안에 있으면 리치 편집기 툴바에 한 번의 클릭으로 실행하는 **`row and column ORCA_PROTECTED_0001`(행과 열 삽입/삭제)** 컨트롤이 표시됩니다. 표 셀을 마우스 오른쪽 버튼으로 클릭하면 컨텍스트 메뉴에서 같은 구조 변경 명령을 사용할 수 있습니다. **`Table`(표)** 하위 메뉴는 대상이 표 셀일 때만 표시됩니다."
+    },
     "/docs/editing/markdown/:heading:share-as-artifact:0": {
       "sourceHash": "fe8a9e2282e5d4abf65615f2b18f3bc921f85e7cf789f220709dad1b5e92bf81",
       "translated": "## 아티팩트로 공유"
@@ -31,8 +39,8 @@
       "translated": "슬래시 메뉴(제목, 목록, 코드 블록, 설명선, 이미지, 인어 다이어그램, 토글 블록)를 열려면 빈 줄에 `ORCA_PROTECTED_0001`을 입력하세요."
     },
     "/docs/editing/markdown/:paragraph:slash-menu:1": {
-      "sourceHash": "e916bd548d68212fe8391b0d53ca433f6ed5086b9188921f4353e231955680c7",
-      "translated": "접을 수 있는 메모에는 `ORCA_PROTECTED_0001`을 사용하고, 토글 요약을 제목 수준처럼 표시하려면 `ORCA_PROTECTED_0002` … `ORCA_PROTECTED_0003`을 사용합니다. ORCA_PROTECTED_0004는 토글을 이식 가능한 `ORCA_PROTECTED_0005` / `ORCA_PROTECTED_0006` Markdown으로 저장하므로 ORCA_PROTECTED_0007 외부에서도 파일을 미리 볼 수 있습니다."
+      "sourceHash": "39391c82d5ddbf1a50e17085a3ef3825e1f8fa60d142e4cfff64e6749a6d904b",
+      "translated": "접을 수 있는 메모에는 `ORCA_PROTECTED_0001`을 사용하고, 토글 요약을 제목 수준처럼 표시하려면 `ORCA_PROTECTED_0002` … `ORCA_PROTECTED_0003`을 사용합니다. 중첩된 토글은 그 자리에서 편집할 수 있습니다. ORCA_PROTECTED_0004는 토글을 이식 가능한 `ORCA_PROTECTED_0005` / `ORCA_PROTECTED_0006` Markdown으로 저장하므로 ORCA_PROTECTED_0007 외부에서도 파일을 미리 볼 수 있습니다."
     },
     "/docs/editing/markdown/:heading:internal-links:0": {
       "sourceHash": "c2bb452fee73a13efa278a8d03e45415468d6ec84ab90f2ed0e26950b2ff8e86",
@@ -87,8 +95,8 @@
       "translated": "리치 마크다운 표에서는 다음 키를 사용할 수 있습니다."
     },
     "/docs/editing/markdown/:paragraph:tables:1": {
-      "sourceHash": "426e5d120989743b4ad881b9fb837496cccfe760f436ec7251cd727779bae991",
-      "translated": "캐럿이 표 안에 있으면 리치 편집기 툴바에 행과 열을 한 번에 ORCA_PROTECTED_0001하는 컨트롤이 표시됩니다. 표 셀을 마우스 오른쪽 버튼으로 클릭하면 컨텍스트 메뉴에서 같은 구조 변경 명령을 사용할 수 있습니다. **`Table`(표)** 하위 메뉴는 대상이 표 셀일 때만 표시됩니다."
+      "sourceHash": "dedab21dfff49643f50b3c969396a702ed501b240e4b4de7a56e04a71390d50d",
+      "translated": "목록 항목이나 코드 블록에서 선택한 줄의 들여쓰기를 줄이려면 **`Shift-Tab`**을 사용합니다."
     },
     "/docs/editing/markdown/:table:tables:0": {
       "sourceHash": "7a2809166df2eba51d222ddfdca496aef44f26aaa90d2434f3940b168d8910c5",

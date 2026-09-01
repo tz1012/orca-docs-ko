@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-28T01:14:52.497Z",
+  "generatedAt": "2026-09-01T01:03:52.289Z",
   "pages": {
     "/docs/": {
       "sourceUrl": "https://www.onorca.dev/docs",
       "mirrorPath": "/docs/",
       "titleSegmentId": "/docs/:heading:what-is-orca:0",
       "pageHash": "07db8403e3be2945806ae14502e4d3685ea9a193d0bd843c7b642e7da806a907",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-03T02:45:33.745Z",
       "missingRuns": 0,
       "status": "active",
@@ -135,7 +135,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "a172655b9eb9d0c2de3e26543afbee5fb1b19482fcdfcdb5a2b6ced5cca28d5f",
+      "renderedContentHash": "03a0dff11391704422684dd0bbbd294e37e35ab85c1a450852c4e936f467fcfa",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/whats-new/posters/orca-split-screen.jpg",
@@ -150,8 +150,8 @@
       "mirrorPath": "/docs/activity/",
       "titleSegmentId": "/docs/activity/:heading:agents-feed:0",
       "pageHash": "1569105187953f425517f51fb0b51debea7e7094904062b116f803a14a2e5ab0",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-13T08:21:46.718Z",
       "missingRuns": 0,
       "status": "active",
@@ -266,7 +266,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "0f87c45eb923dbc82b3f9b5437ef943da8306725426467a82a113f18c92c2034",
+      "renderedContentHash": "74baad839e2d460e37dcd13949729a495f480f4b7a12f96ab77a55a866df6b13",
       "images": []
     },
     "/docs/agents/claude-code/": {
@@ -274,8 +274,8 @@
       "mirrorPath": "/docs/agents/claude-code/",
       "titleSegmentId": "/docs/agents/claude-code/:heading:claude-code-in-orca:0",
       "pageHash": "29abdadb4ca73dd46edb3a7f791c9ec808dfbe09b9f3574e97ecc3322253c912",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-29T01:17:01.981Z",
       "missingRuns": 0,
       "status": "active",
@@ -418,7 +418,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "f9c15957f83653c0bde17f99fae2cdcc097c326503a4fbca5a3fe97a0c2d714a",
+      "renderedContentHash": "e2c914654a4d73cddfbe57f9a251e7b8299113a123572a0e9d9a0d26f8e24144",
       "images": []
     },
     "/docs/agents/codex-hot-swap/": {
@@ -426,8 +426,8 @@
       "mirrorPath": "/docs/agents/codex-hot-swap/",
       "titleSegmentId": "/docs/agents/codex-hot-swap/:heading:hot-swap-codex-accounts:0",
       "pageHash": "ffad9de01b8952bab8a90a0a0d9f8bc45c14dc34aab8dba9bbba8c7c727ffefc",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-29T01:17:01.981Z",
       "missingRuns": 0,
       "status": "active",
@@ -579,7 +579,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "a1bd45d6c99761309d5c764aa5b80d0768f02ddfed98e768176e24a376d3c458",
+      "renderedContentHash": "ac3f9a3665ca1999b7685884d6f9f6145d12d68e244389a0f6c413f60c35e275",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/whats-new/posters/codex-account-switcher.jpg",
@@ -594,8 +594,8 @@
       "mirrorPath": "/docs/agents/codex/",
       "titleSegmentId": "/docs/agents/codex/:heading:codex-in-orca:0",
       "pageHash": "d1eecf23e9d796e00de1973081bf0bb9f0fc76d2796ab58e19c0555815ecced0",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-29T01:17:01.981Z",
       "missingRuns": 0,
       "status": "active",
@@ -800,7 +800,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "70a20c89f212b3118c72ab4e69765c253bfa29f9fb66baeb034f7abd6a94984c",
+      "renderedContentHash": "08331777335bc8c358310afb6d68ae8ef2bbb130275e0cee8a47622e3c085c00",
       "images": []
     },
     "/docs/agents/cursor-cli/": {
@@ -808,8 +808,8 @@
       "mirrorPath": "/docs/agents/cursor-cli/",
       "titleSegmentId": "/docs/agents/cursor-cli/:heading:cursor-cli-in-orca:0",
       "pageHash": "b03332044474c5f7ad9149f692f3fbc169853636f5a0d63f523dd4f2c498566c",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-13T08:21:46.718Z",
       "missingRuns": 0,
       "status": "active",
@@ -895,7 +895,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "1270a7b3c9a253cf9126c8d738cd767a1cf138d3c89b954d3ccc669d9688c9ce",
+      "renderedContentHash": "46eb87eb68fbdf139f0cc32c7d7426611155f4d36278e9bdbe983802872283ed",
       "images": []
     },
     "/docs/agents/glm-agent/": {
@@ -903,8 +903,8 @@
       "mirrorPath": "/docs/agents/glm-agent/",
       "titleSegmentId": "/docs/agents/glm-agent/:heading:how-to-use-glm-5-2-in-orca-ade:0",
       "pageHash": "2d8ede5d8563c9e208863aa4d6df7e6771cced41aebe334df2aadf933ca9ef7d",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-10T01:14:41.553Z",
       "missingRuns": 0,
       "status": "active",
@@ -1207,7 +1207,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "c228e01be42e705fe1aa9c53874be3b6a57678abf183a724be02b2a07e355b27",
+      "renderedContentHash": "634b88765e5093a82ea138d5d6b8cba3f56e5a5c8d487b83343b8f9e88a40e2f",
       "images": []
     },
     "/docs/agents/hibernation/": {
@@ -1215,8 +1215,8 @@
       "mirrorPath": "/docs/agents/hibernation/",
       "titleSegmentId": "/docs/agents/hibernation/:heading:agent-hibernation:0",
       "pageHash": "4d0cc3e4d7134c65707e3a8b6fa878b3475dd54fb9484cc27bc582ba7f963210",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-06T01:10:38.135Z",
       "missingRuns": 0,
       "status": "active",
@@ -1435,7 +1435,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "74aba0c12acddd05b188ac2f651cd34a3260e1e9b210436c2e7fd65e5307211b",
+      "renderedContentHash": "9a00cd61594e9eea043bb8c985f5d3a7ac8bf4c55f3606bd2f717b65790c08ae",
       "images": []
     },
     "/docs/agents/hooks-memory/": {
@@ -1443,8 +1443,8 @@
       "mirrorPath": "/docs/agents/hooks-memory/",
       "titleSegmentId": "/docs/agents/hooks-memory/:heading:agent-hooks-memory:0",
       "pageHash": "be8b40cb7d17bbcbffe6bf866968c281911093e9814aaa998ab5a2520c85d34b",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-11T01:09:44.596Z",
       "missingRuns": 0,
       "status": "active",
@@ -1575,17 +1575,17 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "e399fcf422ae0913e310d62762f8a7a6c7d089e09ac006e0d6ef4d1bc82ffaa8",
+      "renderedContentHash": "1c77de0487d685fa968bc78ce0cff6fdb7e7db57f18777de0f62514bc9dba481",
       "images": []
     },
     "/docs/agents/native-chat/": {
       "sourceUrl": "https://www.onorca.dev/docs/agents/native-chat",
       "mirrorPath": "/docs/agents/native-chat/",
       "titleSegmentId": "/docs/agents/native-chat/:heading:chat-ui-native-chat:0",
-      "pageHash": "cc9376079df64fa4c8232a2cd5da038037bc2d51e8cf2c88854bdaba0b63dab2",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
-      "translatedAt": "2026-08-21T01:05:29.185Z",
+      "pageHash": "5996e1d9fb07adf7d6b93c74fc0b9d4c69236bff608f25f7cf7ffde5ca463ece",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
+      "translatedAt": "2026-09-01T01:14:01.957Z",
       "missingRuns": 0,
       "status": "active",
       "redirectTo": null,
@@ -1596,13 +1596,17 @@
         "/docs/agents/native-chat/:heading:composer:0": "acb7913b4f3a9a875a78eb74076c4229c73e62d31882458900cd1036e83110c1",
         "/docs/agents/native-chat/:heading:enable:0": "4fe368d6a2c35a1e623685bc079c2fe8351cd96e46c7675b32d77d7c6551d046",
         "/docs/agents/native-chat/:heading:questions-from-the-agent:0": "b4d750cb4091ef00aff59a5b9559b6eb564463678039ba8be51b1376b041d444",
+        "/docs/agents/native-chat/:heading:updated-structured-chat-for-codex:0": "f25d23cd446758f0a25b6abac989870d6c141ecf804e745d435f0408720d94c0",
         "/docs/agents/native-chat/:list:composer:0": "9c9c10b26819c19dff484393b9a713bd2c7e438285a3330bf7dfd4ad4ca93978",
         "/docs/agents/native-chat/:list:enable:0": "da0ae3bd2adf6358eb26746003288987027d9cd0e0b146f33c810afaf95115b1",
+        "/docs/agents/native-chat/:list:updated-structured-chat-for-codex:0": "036bd1198877fe7a01d09e7831e23dc8cd3a3c1799b4693ca0d0f1715cbae1b9",
         "/docs/agents/native-chat/:paragraph:availability:0": "e92ca8aa55c0b2f3b7d4ddefc40559dc4a4da1d490470c76100cf5b62fdb6181",
         "/docs/agents/native-chat/:paragraph:chat-ui-native-chat:0": "cde0d4c9b67097f2a77dcbedf2dc64591736ed30a3cc0695f83aa2361f49548c",
-        "/docs/agents/native-chat/:paragraph:chat-ui-native-chat:1": "d4d08bb609a3191ce3660c0f7b48adefd4b8137d077f2e56d719de6c4b1dce54",
+        "/docs/agents/native-chat/:paragraph:chat-ui-native-chat:1": "026464475cc89797516ce36e880db0897b9f0ec7d8061d48641acc2ad5733fd8",
         "/docs/agents/native-chat/:paragraph:enable:0": "fc0980d47675ad899f4316fe3caed5004366c5d3e82e754c4536e9e8fb3bf124",
-        "/docs/agents/native-chat/:paragraph:questions-from-the-agent:0": "d0de9441e2cb5c8059702def55a07fac91c6172e9fed1191314323d79ac18510"
+        "/docs/agents/native-chat/:paragraph:questions-from-the-agent:0": "d0de9441e2cb5c8059702def55a07fac91c6172e9fed1191314323d79ac18510",
+        "/docs/agents/native-chat/:paragraph:updated-structured-chat-for-codex:0": "cb8125acb047aea56aa6740959cf80a9c046fe455a6d3d9fd9b6b5d5a4e762ae",
+        "/docs/agents/native-chat/:paragraph:updated-structured-chat-for-codex:1": "ac5d77775c9c8917776a6f5de39930bbdd57e179e87f67171ed13f1bbb04e365"
       },
       "segmentValidation": {
         "/docs/agents/native-chat/:aside:availability:0": {
@@ -1643,6 +1647,14 @@
           "protectedTokens": [],
           "requiresKorean": true
         },
+        "/docs/agents/native-chat/:heading:updated-structured-chat-for-codex:0": {
+          "kind": "heading",
+          "fencedCodeCount": 0,
+          "protectedTokens": [
+            "ORCA_PROTECTED_0001"
+          ],
+          "requiresKorean": true
+        },
         "/docs/agents/native-chat/:list:composer:0": {
           "kind": "list",
           "fencedCodeCount": 0,
@@ -1675,6 +1687,14 @@
           "protectedTokens": [],
           "requiresKorean": true
         },
+        "/docs/agents/native-chat/:list:updated-structured-chat-for-codex:0": {
+          "kind": "list",
+          "fencedCodeCount": 0,
+          "protectedTokens": [
+            "ORCA_PROTECTED_0001"
+          ],
+          "requiresKorean": true
+        },
         "/docs/agents/native-chat/:paragraph:availability:0": {
           "kind": "paragraph",
           "fencedCodeCount": 0,
@@ -1697,7 +1717,8 @@
             "ORCA_PROTECTED_0002",
             "ORCA_PROTECTED_0003",
             "ORCA_PROTECTED_0004",
-            "ORCA_PROTECTED_0005"
+            "ORCA_PROTECTED_0005",
+            "ORCA_PROTECTED_0006"
           ],
           "requiresKorean": true
         },
@@ -1717,9 +1738,25 @@
             "ORCA_PROTECTED_0004"
           ],
           "requiresKorean": true
+        },
+        "/docs/agents/native-chat/:paragraph:updated-structured-chat-for-codex:0": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
+          "protectedTokens": [
+            "ORCA_PROTECTED_0001",
+            "ORCA_PROTECTED_0002",
+            "ORCA_PROTECTED_0003"
+          ],
+          "requiresKorean": true
+        },
+        "/docs/agents/native-chat/:paragraph:updated-structured-chat-for-codex:1": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
+          "protectedTokens": [],
+          "requiresKorean": true
         }
       },
-      "renderedContentHash": "32df39a30db9216403424f51b922eca976971796f639e43b08b3f8b27456db02",
+      "renderedContentHash": "169c6f2ad0553d99f458f7da2d2496d176ac3d9dc0499e9592f7a99c35072ff5",
       "images": []
     },
     "/docs/agents/session-history/": {
@@ -1727,8 +1764,8 @@
       "mirrorPath": "/docs/agents/session-history/",
       "titleSegmentId": "/docs/agents/session-history/:heading:agent-session-history:0",
       "pageHash": "61da0f7e5a885a2150e1cfb5863fff5630382efb63af3ed21228d249f8f89f3b",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-14T01:15:56.074Z",
       "missingRuns": 0,
       "status": "active",
@@ -1970,7 +2007,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "a60609070fba613197b5166a6a9a45740e17c41c8288c822a32c31b81856b415",
+      "renderedContentHash": "5528aa9ecd08ed5d94d8e4e5523f678a85e28c8fd0f65a589d262e55b9bac71c",
       "images": []
     },
     "/docs/agents/supported/": {
@@ -1978,8 +2015,8 @@
       "mirrorPath": "/docs/agents/supported/",
       "titleSegmentId": "/docs/agents/supported/:heading:supported-agents:0",
       "pageHash": "eb9bde565e41733c2593129112d967d856e17bc9a5be14f7c014b80f0e7ef661",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-14T01:15:56.074Z",
       "missingRuns": 0,
       "status": "active",
@@ -2173,7 +2210,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "2929b7077e3160a6cf7f8108a43adcefbeda50ad3098ce88752323dcf6333a7a",
+      "renderedContentHash": "ef13e05b4d3c026fe85d00ff0f01bac359e1c3bc428e3f91a9d1e4375a46823d",
       "images": []
     },
     "/docs/agents/usage-tracking/": {
@@ -2181,8 +2218,8 @@
       "mirrorPath": "/docs/agents/usage-tracking/",
       "titleSegmentId": "/docs/agents/usage-tracking/:heading:usage-rate-limit-tracking:0",
       "pageHash": "63da68d7b6fbf035a6da9fcf8fcd3d350ac66b6aff6ff69e5529d1823601e855",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-29T01:17:01.981Z",
       "missingRuns": 0,
       "status": "active",
@@ -2338,7 +2375,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "839e3ebe35feed388df0dc5dfcf2a9a1757b95fcb4f4011ed7f2fac2aeba1784",
+      "renderedContentHash": "ab11fc8eeffeda5ca077fcc19989a493a89aada2e4d42958cf07f831544a31f2",
       "images": []
     },
     "/docs/android-apk/": {
@@ -2346,8 +2383,8 @@
       "mirrorPath": "/docs/android-apk/",
       "titleSegmentId": "/docs/android-apk/:heading:install-orca-mobile-on-android:0",
       "pageHash": "c722469c103fa4abe3f439bedea294b89a262ace01326df81ce1448f8b122112",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-19T10:08:55.000Z",
       "missingRuns": 0,
       "status": "active",
@@ -2435,7 +2472,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "7c0cbce2d0f4c5966895225e363dc61672cb72e9e26da6cb731805508233d263",
+      "renderedContentHash": "cd754476e32d96754faa15571cc36252a3f448fb36926454773f0bbba81943e3",
       "images": []
     },
     "/docs/browser/design-mode/": {
@@ -2443,8 +2480,8 @@
       "mirrorPath": "/docs/browser/design-mode/",
       "titleSegmentId": "/docs/browser/design-mode/:heading:design-mode:0",
       "pageHash": "fea906304b33c5f2ad6d34f69b59aaf65fb0aaa8044297b8b06b87f109c2b7ca",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-13T08:26:20.844Z",
       "missingRuns": 0,
       "status": "active",
@@ -2541,7 +2578,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "14e081e6129addfbe712ce34752261bc6b2e9d1223cb808668ad3ebf3a81583c",
+      "renderedContentHash": "9c13f18ee3bb19d03504e09b20d2513fcfb823472c739f9ac35b8cd96896afc3",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/whats-new/posters/orca-design-mode.jpg",
@@ -2555,10 +2592,10 @@
       "sourceUrl": "https://www.onorca.dev/docs/browser/overview",
       "mirrorPath": "/docs/browser/overview/",
       "titleSegmentId": "/docs/browser/overview/:heading:per-worktree-browser:0",
-      "pageHash": "784efdc589e5ab2433d200db27b2f8cffea30197b05980456b8fd1756e89504b",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
-      "translatedAt": "2026-08-18T00:33:27.081Z",
+      "pageHash": "ea5f8696a3d86acfb8786abfc8cafe1da83a072d85e93b755a80ecd8c3ec5980",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
+      "translatedAt": "2026-09-01T01:14:01.957Z",
       "missingRuns": 0,
       "status": "active",
       "redirectTo": null,
@@ -2572,18 +2609,22 @@
         "/docs/browser/overview/:heading:link-routing:0": "e9262b9664b10fdae919c35af726943e72e40da9eca64fb859f43bb76db78fe8",
         "/docs/browser/overview/:heading:next-steps:0": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
         "/docs/browser/overview/:heading:per-worktree-browser:0": "9149195f34a4be9e94fa0e9652c88322ffc9e2644bb2b1973d2ab41cbe440021",
+        "/docs/browser/overview/:heading:remote-workspaces:0": "560ad9f53b9d0c927b49b1fc7b415745eea1f8c66b714baee5efa4afa55c9b81",
         "/docs/browser/overview/:heading:share-as-artifact:0": "fe8a9e2282e5d4abf65615f2b18f3bc921f85e7cf789f220709dad1b5e92bf81",
         "/docs/browser/overview/:heading:viewport-size-emulation:0": "b7e9b59ac8746d805d88e02d22be051313773fdafaf2d0c22f1d11a3a46b1d56",
         "/docs/browser/overview/:heading:worktree-scoping:0": "5662d881ef5bd89dd3b99a62a1cdbd96e1f26f85cb458485d9c19364b1206bba",
-        "/docs/browser/overview/:list:controls:0": "7c23efabbc32b7a6bd318ed6ab598f1d2ca492e5dbbcdb864b80617637a4dcb8",
+        "/docs/browser/overview/:list:controls:0": "118415fdc9003eb24cac400c4b5c4312920e057f79ae2cd154e838d4793ef8ee",
         "/docs/browser/overview/:list:link-routing:0": "8a1dd027d129de96ee690ea7baebc760b3ada8f36c90e765158e578cf2dc67a1",
         "/docs/browser/overview/:list:next-steps:0": "c32f85d404bd52241eb75368688b0b58483998456c9964d90362f4a9b4b6bb78",
         "/docs/browser/overview/:paragraph:automation:0": "b3e7c7154a82b9272eeb8e4d96211faa04e8170e7e2e20a1d018f3fae3e264e3",
         "/docs/browser/overview/:paragraph:downloads:0": "0475c7012e4a5e51a5302db9cb59ff4b0945b0d122e41999948f630807cffc23",
         "/docs/browser/overview/:paragraph:link-routing:0": "843acae5113e4f18921c742ba552333d75aeb075fdc6f34119df33f7a68fb2b6",
         "/docs/browser/overview/:paragraph:link-routing:1": "5b2217f51c272e1f8ea3137ecf89231b5cc86c0eeb1e36934276bd73c07679bf",
-        "/docs/browser/overview/:paragraph:link-routing:2": "fdf9a489ade87e5ddf94c931d469db9f330429c84b75e5adb0be172172db2846",
+        "/docs/browser/overview/:paragraph:link-routing:2": "b52497012bceaec945bc241e919fdd35a7b8f017b8e8cf1cf1fb0bdceb6076ad",
         "/docs/browser/overview/:paragraph:per-worktree-browser:0": "999bbab820e3426d9ec60a597e34a601b1333dd17dec6bb14ee20d3d8416d819",
+        "/docs/browser/overview/:paragraph:remote-workspaces:0": "b56ee912981aca06ad35efc79557c28fd21f6ac1131d953e4f96566198594326",
+        "/docs/browser/overview/:paragraph:remote-workspaces:1": "55d4402bc193054b6f28a2169b08a0e9da1daf9428c8c0536d31201c5c405f88",
+        "/docs/browser/overview/:paragraph:remote-workspaces:2": "a1e8df2e0d4a82ca03f50a5cb5dde8db812a7a14e338c5ef23ea9ac652a43e8e",
         "/docs/browser/overview/:paragraph:share-as-artifact:0": "6c60a09a3c5184a7edcd592b1278efcafd346e493f7357ff34f426cbf9cba0b6",
         "/docs/browser/overview/:paragraph:viewport-size-emulation:0": "8d6b2a88f12781243821edef0983a002bc406a69ee9c40030f97a05b1b62f116",
         "/docs/browser/overview/:paragraph:worktree-scoping:0": "b3d6f674f2a75e99bc75615e5fea930f185509dc3cd51bf58509a75be9f37b75"
@@ -2657,6 +2698,12 @@
           "protectedTokens": [],
           "requiresKorean": true
         },
+        "/docs/browser/overview/:heading:remote-workspaces:0": {
+          "kind": "heading",
+          "fencedCodeCount": 0,
+          "protectedTokens": [],
+          "requiresKorean": false
+        },
         "/docs/browser/overview/:heading:share-as-artifact:0": {
           "kind": "heading",
           "fencedCodeCount": 0,
@@ -2684,7 +2731,9 @@
             "ORCA_PROTECTED_0003",
             "ORCA_PROTECTED_0004",
             "ORCA_PROTECTED_0005",
-            "ORCA_PROTECTED_0006"
+            "ORCA_PROTECTED_0006",
+            "ORCA_PROTECTED_0007",
+            "ORCA_PROTECTED_0008"
           ],
           "requiresKorean": true
         },
@@ -2747,9 +2796,7 @@
           "fencedCodeCount": 0,
           "protectedTokens": [
             "ORCA_PROTECTED_0001",
-            "ORCA_PROTECTED_0002",
-            "ORCA_PROTECTED_0003",
-            "ORCA_PROTECTED_0004"
+            "ORCA_PROTECTED_0002"
           ],
           "requiresKorean": true
         },
@@ -2759,6 +2806,29 @@
           "protectedTokens": [
             "ORCA_PROTECTED_0001"
           ],
+          "requiresKorean": true
+        },
+        "/docs/browser/overview/:paragraph:remote-workspaces:0": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
+          "protectedTokens": [
+            "ORCA_PROTECTED_0001",
+            "ORCA_PROTECTED_0002"
+          ],
+          "requiresKorean": true
+        },
+        "/docs/browser/overview/:paragraph:remote-workspaces:1": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
+          "protectedTokens": [
+            "ORCA_PROTECTED_0001"
+          ],
+          "requiresKorean": true
+        },
+        "/docs/browser/overview/:paragraph:remote-workspaces:2": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
+          "protectedTokens": [],
           "requiresKorean": true
         },
         "/docs/browser/overview/:paragraph:share-as-artifact:0": {
@@ -2787,7 +2857,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "911694fa4757678502f131cead92ef2b6f0a9d8decf67599b9c05206ea7f1bda",
+      "renderedContentHash": "a0ffc943fd4ed237df01fcc88ca00785f188bb50a20841731c2440196c4f8246",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/whats-new/posters/orca-design-mode.jpg",
@@ -2814,8 +2884,8 @@
       "mirrorPath": "/docs/browser/profiles/",
       "titleSegmentId": "/docs/browser/profiles/:heading:browser-use-profiles:0",
       "pageHash": "0c58b8e5f4ff061ee9fbfe8e9a52ce037765751e9e22fef90542c2d4973eba4a",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-24T01:38:18.981Z",
       "missingRuns": 0,
       "status": "active",
@@ -2929,17 +2999,17 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "c3fcbd4d21a3daa680d159e3a1a3dce8d1db98857f1cfb5124be98a7a300a483",
+      "renderedContentHash": "deac7559376a9dc3bbd6da5f6ca5d27ab571e9f98116420e904bd0ca3403a4d9",
       "images": []
     },
     "/docs/cli/automations/": {
       "sourceUrl": "https://www.onorca.dev/docs/cli/automations",
       "mirrorPath": "/docs/cli/automations/",
       "titleSegmentId": "/docs/cli/automations/:heading:scheduled-automations:0",
-      "pageHash": "09191af83abc4260c424c561ec958c446039d705e47ab678dd84dd0427f9a47f",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
-      "translatedAt": "2026-08-28T01:06:23.912Z",
+      "pageHash": "41964af01836430b8f859d7153f3da6c20cf7cbc52d7061a87c0bfc28ca91412",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
+      "translatedAt": "2026-09-01T01:14:01.957Z",
       "missingRuns": 0,
       "status": "active",
       "redirectTo": null,
@@ -2954,6 +3024,7 @@
         "/docs/cli/automations/:code:run-on-demand:0": "f74146452c95fd5a56ac48f03423726e8e42c6e7741dac8300d9695ac2f850e7",
         "/docs/cli/automations/:heading:choose-where-runs-happen:0": "d62a57264726eb9920a42f3aaec804ce297025509cea20898c41d926289440a3",
         "/docs/cli/automations/:heading:create-a-safe-first-automation:0": "bc6661024a669d9cabca8c5e20ca4988996dc8d8b68d02bb820b70c7146ff035",
+        "/docs/cli/automations/:heading:manage-automations-across-hosts:0": "274f1030ffbf13dd2f42372c1d6f6000f1e5269b30e6af1baa5c83ceb52e5547",
         "/docs/cli/automations/:heading:missed-run-grace:0": "600ffdcadaf6e62b2e393a5f779eca8335f4ff36d83794fca3667e2da18418d4",
         "/docs/cli/automations/:heading:next-steps:0": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",
         "/docs/cli/automations/:heading:precheck-before-a-run:0": "9bb4fc455df72a92661ecc20a3abf2cfdd4bde6cf5a4bed537fcd971902687ae",
@@ -2967,6 +3038,8 @@
         "/docs/cli/automations/:paragraph:choose-where-runs-happen:1": "9689700264bda02166f1afd87aad26ad09f019cc9c99836f2518d297749a1e9e",
         "/docs/cli/automations/:paragraph:create-a-safe-first-automation:0": "2a9ba3404014d7463225ba5077e699ea1d8d2dfd84cc9c94229f1bd2131cbc34",
         "/docs/cli/automations/:paragraph:create-a-safe-first-automation:1": "40d5caa1e1081da2d62842404ba29b9b178728afbd366128bd39b1230d74b26b",
+        "/docs/cli/automations/:paragraph:manage-automations-across-hosts:0": "01fdabf029fd5579e17931d2183377d67ddf9dfb9312960112a2b15505c6594c",
+        "/docs/cli/automations/:paragraph:manage-automations-across-hosts:1": "55a189fc827d17011465c3be71a0d17eadfee9cea08f4d3497c3cc088476c04a",
         "/docs/cli/automations/:paragraph:precheck-before-a-run:0": "971294da557aa5b0dfa8a58f41a1d7947bb6cac5650d8cc560fa2302932e265e",
         "/docs/cli/automations/:paragraph:project-host-setup-targets:0": "06886d922b6775a10012caf98656444438e2f4ad1bb648e6c3d066f037b11544",
         "/docs/cli/automations/:paragraph:project-host-setup-targets:1": "196b742bd3d441426761edac162a8adcc7f71c94598717d338072f4ae905c61e",
@@ -2974,7 +3047,7 @@
         "/docs/cli/automations/:paragraph:reuse-an-existing-automation-session:1": "3e69d739103742dd0c93036fecc592974173c986b7b56e1d4816f4138cdf7af4",
         "/docs/cli/automations/:paragraph:review-and-enable:0": "0ac056d61afddecb53844215470ae375c4d1fe316fb4dbdf47d2f7c53c212b7f",
         "/docs/cli/automations/:paragraph:review-and-enable:1": "b7dffcd06c659344f0f715ada16eba662b1b23b2a26d78dd201556dc51ae7485",
-        "/docs/cli/automations/:paragraph:review-and-enable:2": "227b897ef37efe74aebd3086646704a71a39477c15c804bc0cf2e76cbd54c81f",
+        "/docs/cli/automations/:paragraph:review-and-enable:2": "63ccced25c01720977ecc21811f66bb3026cebc8cb9fcdf1da45e0289134a1f1",
         "/docs/cli/automations/:paragraph:review-and-enable:3": "5026c55a0789433956cc25dfe1acbec21ea30a1d026834f70f532f5cad1bb624",
         "/docs/cli/automations/:paragraph:review-and-enable:4": "e9af02ebfeef91a4903030f2a8ea1c1dfe07462842ff8196b6fbe0ece5436810",
         "/docs/cli/automations/:paragraph:run-on-demand:0": "43fc4c599975178378df051f1c913c70e4459c8d1550ce84bfa8e58331ef637c",
@@ -3053,6 +3126,12 @@
           "requiresKorean": true
         },
         "/docs/cli/automations/:heading:create-a-safe-first-automation:0": {
+          "kind": "heading",
+          "fencedCodeCount": 0,
+          "protectedTokens": [],
+          "requiresKorean": true
+        },
+        "/docs/cli/automations/:heading:manage-automations-across-hosts:0": {
           "kind": "heading",
           "fencedCodeCount": 0,
           "protectedTokens": [],
@@ -3156,6 +3235,22 @@
           ],
           "requiresKorean": true
         },
+        "/docs/cli/automations/:paragraph:manage-automations-across-hosts:0": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
+          "protectedTokens": [
+            "ORCA_PROTECTED_0001"
+          ],
+          "requiresKorean": true
+        },
+        "/docs/cli/automations/:paragraph:manage-automations-across-hosts:1": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
+          "protectedTokens": [
+            "ORCA_PROTECTED_0001"
+          ],
+          "requiresKorean": true
+        },
         "/docs/cli/automations/:paragraph:precheck-before-a-run:0": {
           "kind": "paragraph",
           "fencedCodeCount": 0,
@@ -3255,7 +3350,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "f1d9ef9cb551766d1c96805b33e14d7d1a5a461d8846a84ba24e2c03453cce0d",
+      "renderedContentHash": "f709fe08eb68c6b0d4ddb9b6984979dea2da09c12fabac930cb2c50df0da6ae0",
       "images": []
     },
     "/docs/cli/computer-use/": {
@@ -3263,8 +3358,8 @@
       "mirrorPath": "/docs/cli/computer-use/",
       "titleSegmentId": "/docs/cli/computer-use/:heading:computer-use:0",
       "pageHash": "34a6fa5588c34c1c95355c8ab30e8ada6766376bb36971685a224ea15d32b473",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-29T01:17:01.981Z",
       "missingRuns": 0,
       "status": "active",
@@ -3585,7 +3680,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "545e6adcc00d9a639f64aa935d0e1cf0551a19d4e06bb0009236e00639bbe954",
+      "renderedContentHash": "0c6fa463075ddad9de8cb774e0e79e8e6e4f43e86a046759925fd4643896e646",
       "images": []
     },
     "/docs/cli/orchestration/": {
@@ -3593,8 +3688,8 @@
       "mirrorPath": "/docs/cli/orchestration/",
       "titleSegmentId": "/docs/cli/orchestration/:heading:orchestration:0",
       "pageHash": "515246ccd001d5851686c9b1536ce41f78e25164dce8f00aa4f2c3b9b7f6631b",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-10T01:14:41.553Z",
       "missingRuns": 0,
       "status": "active",
@@ -4074,7 +4169,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "05502824d1f6cd4e867780a778e2665bc8a98109dfb3fd657c29ece36ec68707",
+      "renderedContentHash": "9c4f4ffdc306e9681395d215447403f15239a9862aed9f0de89c142193ea1905",
       "images": []
     },
     "/docs/cli/overview/": {
@@ -4082,8 +4177,8 @@
       "mirrorPath": "/docs/cli/overview/",
       "titleSegmentId": "/docs/cli/overview/:heading:orca-cli-overview:0",
       "pageHash": "ca10a57ce9b2e06c9130cc2b17b2d9b7558740dad6f8a312585d85ade3415e6a",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-11T01:09:44.596Z",
       "missingRuns": 0,
       "status": "active",
@@ -4423,7 +4518,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "753bdc1a82ed74501173b69811c328d5d9ba3a854c68be8ef41c9d5eeaefda2d",
+      "renderedContentHash": "4a6cfca9d4b6e4abde7b19b38c0ebc1eed6db4a8aeca56921eab69921fd469b5",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/whats-new/posters/orca-cli-demo.jpg",
@@ -4438,8 +4533,8 @@
       "mirrorPath": "/docs/cli/reference/",
       "titleSegmentId": "/docs/cli/reference/:heading:orca-cli-reference:0",
       "pageHash": "3426b5471eb74d750c11b7263fbdc2dddad27650fb4de8d05929430110f940fe",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-24T01:38:18.981Z",
       "missingRuns": 0,
       "status": "active",
@@ -5286,17 +5381,17 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "5b77ee8d16764bcbd82dd517f8259f9b43f7e4eaf1dcde2e6b7b366ddffb9f38",
+      "renderedContentHash": "ae4b7d9f1b1c29c69b82193e23fe06a253e1e9e346d0863a8634efaa36f16d7f",
       "images": []
     },
     "/docs/cli/skills/": {
       "sourceUrl": "https://www.onorca.dev/docs/cli/skills",
       "mirrorPath": "/docs/cli/skills/",
       "titleSegmentId": "/docs/cli/skills/:heading:orca-skills-registry-mcp:0",
-      "pageHash": "ef4272d95cc60b4d43ec43a70f8edcb0b1b5c4671258760f5905ed30fb6e74b6",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
-      "translatedAt": "2026-08-24T01:38:18.981Z",
+      "pageHash": "4dfbfd3901e95f6da80e1120b95bb2ef5572745f80a099a41a6cd68f8fe820b9",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
+      "translatedAt": "2026-09-01T01:14:01.957Z",
       "missingRuns": 0,
       "status": "active",
       "redirectTo": null,
@@ -5316,6 +5411,7 @@
         "/docs/cli/skills/:heading:computer-use:0": "e06446c1f301230609c6fe8152208721cfdc259d0baa704d887c314587877fcc",
         "/docs/cli/skills/:heading:discovery-sources:0": "20776709671cc25199d4b9058364573863e4478b778474d0e04531e0a8bbcdb1",
         "/docs/cli/skills/:heading:hybrid-stubs-vs-the-live-guide:0": "f3d9311b12193e1757f43e21baceb59e8e2e9c12f558c51261057b948bec40c7",
+        "/docs/cli/skills/:heading:install-and-delete-from-the-skills-page:0": "76cf76a9f135adbffcf1c7d19d0c85aaa3cabff49de24d7b15e658ec043c70e0",
         "/docs/cli/skills/:heading:installable-orca-skills:0": "58ac6802088d90489fcaaaa39af61e987fa135a3f0a06fbecf7b15e9f397a73b",
         "/docs/cli/skills/:heading:keep-skills-up-to-date:0": "b14a0c97c78c78a18efc73f243920d18a3946560300ca21c3852b900456deed8",
         "/docs/cli/skills/:heading:mcp-servers:0": "1c994766d91d5bbbb633927177400158a1c95c2823a9332eb721f652d2ac9eb9",
@@ -5335,6 +5431,8 @@
         "/docs/cli/skills/:paragraph:discovery-sources:0": "854373c2459ca6065a708a869c0680a71667a92caca980256e0055d0c7684fde",
         "/docs/cli/skills/:paragraph:hybrid-stubs-vs-the-live-guide:0": "89b3045c6bf07937a3b6475ca1ec3da6b5c8a41bb970290affee5344f447dd07",
         "/docs/cli/skills/:paragraph:hybrid-stubs-vs-the-live-guide:1": "fe9826225e0b4513df2b256a3651ff97d11078870f5dd457a670065b393aa225",
+        "/docs/cli/skills/:paragraph:install-and-delete-from-the-skills-page:0": "1d2235c5beeb1ed2005a612f574b44940f878b811d9e0cb5cf157e08fe5044de",
+        "/docs/cli/skills/:paragraph:install-and-delete-from-the-skills-page:1": "630e18d0f088e31905ae077f436a747b5c820a821a49920c8f28b0d5509b9cee",
         "/docs/cli/skills/:paragraph:installable-orca-skills:0": "34696204180e13be1583f27379ee5bece9dbe02fae2ab2abc83f43164461d4b8",
         "/docs/cli/skills/:paragraph:keep-skills-up-to-date:0": "cff53c2d77a29a73d92d7aa90e8d0db1f2040819f3959b5bcd28b394dae0d86f",
         "/docs/cli/skills/:paragraph:keep-skills-up-to-date:1": "18d0ce805573e37bc9e36566769138137f8885b9a1f63b7e6c6546081b00478d",
@@ -5463,6 +5561,12 @@
           "requiresKorean": false
         },
         "/docs/cli/skills/:heading:hybrid-stubs-vs-the-live-guide:0": {
+          "kind": "heading",
+          "fencedCodeCount": 0,
+          "protectedTokens": [],
+          "requiresKorean": true
+        },
+        "/docs/cli/skills/:heading:install-and-delete-from-the-skills-page:0": {
           "kind": "heading",
           "fencedCodeCount": 0,
           "protectedTokens": [],
@@ -5629,6 +5733,22 @@
             "ORCA_PROTECTED_0001",
             "ORCA_PROTECTED_0002",
             "ORCA_PROTECTED_0003"
+          ],
+          "requiresKorean": true
+        },
+        "/docs/cli/skills/:paragraph:install-and-delete-from-the-skills-page:0": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
+          "protectedTokens": [
+            "ORCA_PROTECTED_0001"
+          ],
+          "requiresKorean": true
+        },
+        "/docs/cli/skills/:paragraph:install-and-delete-from-the-skills-page:1": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
+          "protectedTokens": [
+            "ORCA_PROTECTED_0001"
           ],
           "requiresKorean": true
         },
@@ -5839,7 +5959,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "bba9119236e10cd9e77233fffc7849acab88443fa8f4549e05963a46fe976407",
+      "renderedContentHash": "44f505aadaa644dbc8f20b1c82dc12ec9f3e4d98d0083c8a3e9589bf0477b31f",
       "images": []
     },
     "/docs/cli/worktree-checkpoints/": {
@@ -5847,8 +5967,8 @@
       "mirrorPath": "/docs/cli/worktree-checkpoints/",
       "titleSegmentId": "/docs/cli/worktree-checkpoints/:heading:worktree-checkpoints:0",
       "pageHash": "de1388b966f0c8a685887d01ccdcc922eaf3ac235b220990587fd272de933804",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-29T01:17:01.981Z",
       "missingRuns": 0,
       "status": "active",
@@ -5991,7 +6111,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "aee8f1e7ef7c8c9319d36ab0da7f99b6020dc98b1d31960fd74338807372877d",
+      "renderedContentHash": "463931aa925b7d9fa8d8e44392a7dea1e2091b34b012b3dd96b952b6d26463a0",
       "images": []
     },
     "/docs/editing/file-explorer/": {
@@ -5999,8 +6119,8 @@
       "mirrorPath": "/docs/editing/file-explorer/",
       "titleSegmentId": "/docs/editing/file-explorer/:heading:file-explorer-external-drag-drop:0",
       "pageHash": "c4a42e5f4ff569333c03c5df7dd5d1ddafa5ddc2ad6f9343592e421b61619f31",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-10T01:14:41.553Z",
       "missingRuns": 0,
       "status": "active",
@@ -6124,17 +6244,17 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "8c863dbe6e81cbb2ed3db750304a9bb4c80c862fd8e9ad7b1a76fc47076c718a",
+      "renderedContentHash": "ba0f238385ed269f4940d25d4ef8bfc4be481922d8687f35dfac7a29ad57b0b5",
       "images": []
     },
     "/docs/editing/markdown/": {
       "sourceUrl": "https://www.onorca.dev/docs/editing/markdown",
       "mirrorPath": "/docs/editing/markdown/",
       "titleSegmentId": "/docs/editing/markdown/:heading:rich-markdown-editor:0",
-      "pageHash": "6b83005de7dc94bb3f0ac9721e0f26849e9df1a463f171384952bb1db01c8f26",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
-      "translatedAt": "2026-08-11T01:09:44.596Z",
+      "pageHash": "11b8713e35d819a0d10820d18e9e21ecf16965c180650d787b5ba9c1a52d232c",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
+      "translatedAt": "2026-09-01T01:14:01.957Z",
       "missingRuns": 0,
       "status": "active",
       "redirectTo": null,
@@ -6154,13 +6274,15 @@
         "/docs/editing/markdown/:paragraph:review-annotations:0": "2f1bee959231c36d8305fda4691c96d2439a25ed3fd304e96cbc496766f29cee",
         "/docs/editing/markdown/:paragraph:review-annotations:1": "41cd058fdc5812fed48793d611fe5277387dc96362097f52ce6a54d65477d8f3",
         "/docs/editing/markdown/:paragraph:rich-markdown-editor:0": "8ecf706c563ad78cc7158b1671b88a1da99a152172616d0b482cb4847ca8da91",
+        "/docs/editing/markdown/:paragraph:rich-markdown-editor:1": "0bf9a415f6b9968d5613bc26f1f2b2746090d8501caa8baf21abdf615ce44d3e",
         "/docs/editing/markdown/:paragraph:search:0": "9d13bbd89042d72680456c53d6ffdfda8a4bee6e6e822dffa3dfb4aca7ebf127",
         "/docs/editing/markdown/:paragraph:share-as-artifact:0": "80360fc783be713074a6f30e332fcc5567b9dc5f1617d140a9e71548a96edd9f",
         "/docs/editing/markdown/:paragraph:slash-menu:0": "aa4f757ea7adc7cdfd6bd6b29daae1ecc3e165b7666204642acb8643efe85aa2",
-        "/docs/editing/markdown/:paragraph:slash-menu:1": "e916bd548d68212fe8391b0d53ca433f6ed5086b9188921f4353e231955680c7",
+        "/docs/editing/markdown/:paragraph:slash-menu:1": "39391c82d5ddbf1a50e17085a3ef3825e1f8fa60d142e4cfff64e6749a6d904b",
         "/docs/editing/markdown/:paragraph:table-of-contents:0": "85fc5e61b650feea674032648520824423ff8ba6cb115ab7a7443e970a2bde18",
         "/docs/editing/markdown/:paragraph:tables:0": "62ff206820a03d2af28e229bab5504c09a75585c2b74629f58451d3532ae5f07",
-        "/docs/editing/markdown/:paragraph:tables:1": "426e5d120989743b4ad881b9fb837496cccfe760f436ec7251cd727779bae991",
+        "/docs/editing/markdown/:paragraph:tables:1": "dedab21dfff49643f50b3c969396a702ed501b240e4b4de7a56e04a71390d50d",
+        "/docs/editing/markdown/:paragraph:tables:2": "426e5d120989743b4ad881b9fb837496cccfe760f436ec7251cd727779bae991",
         "/docs/editing/markdown/:table:tables:0": "7a2809166df2eba51d222ddfdca496aef44f26aaa90d2434f3940b168d8910c5"
       },
       "segmentValidation": {
@@ -6270,6 +6392,14 @@
           ],
           "requiresKorean": true
         },
+        "/docs/editing/markdown/:paragraph:rich-markdown-editor:1": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
+          "protectedTokens": [
+            "ORCA_PROTECTED_0001"
+          ],
+          "requiresKorean": true
+        },
         "/docs/editing/markdown/:paragraph:search:0": {
           "kind": "paragraph",
           "fencedCodeCount": 0,
@@ -6327,6 +6457,12 @@
         "/docs/editing/markdown/:paragraph:tables:1": {
           "kind": "paragraph",
           "fencedCodeCount": 0,
+          "protectedTokens": [],
+          "requiresKorean": true
+        },
+        "/docs/editing/markdown/:paragraph:tables:2": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
           "protectedTokens": [
             "ORCA_PROTECTED_0001"
           ],
@@ -6339,7 +6475,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "067b7d5cea8c70b82abe1254e0730b789b7e771c8be167bfeb7b75fe67f29c99",
+      "renderedContentHash": "3c73bec6b64cfa9287e0226a89cc2c7f215524054a1160b93be5cec0478aed40",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/whats-new/posters/orca-markdown-editor.jpg",
@@ -6354,8 +6490,8 @@
       "mirrorPath": "/docs/editing/monaco/",
       "titleSegmentId": "/docs/editing/monaco/:heading:monaco-editor-autosave:0",
       "pageHash": "2c6abc6577943b433ac776083e471a7fb9cbb6e3768386803b5b866dc5462967",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-29T01:17:01.981Z",
       "missingRuns": 0,
       "status": "active",
@@ -6499,32 +6635,36 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "cd3c336dd71f98d605760e7a610c4da35af87f9cbb2c36e1b3d463251cfe1677",
+      "renderedContentHash": "59dd970b8d317d757785b083aff9310e683a5820f6f9d141409bc92f5bae3f68",
       "images": []
     },
     "/docs/editing/viewers/": {
       "sourceUrl": "https://www.onorca.dev/docs/editing/viewers",
       "mirrorPath": "/docs/editing/viewers/",
-      "titleSegmentId": "/docs/editing/viewers/:heading:mermaid-pdf-image-viewers:0",
-      "pageHash": "77a6a85fe7b358f080164d5933a9a0dd2623a79983effc418e5a91cc3a63ec91",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
-      "translatedAt": "2026-08-05T01:13:33.191Z",
+      "titleSegmentId": "/docs/editing/viewers/:heading:html-mermaid-pdf-image-viewers:0",
+      "pageHash": "f1ef7521d63c74cd828b7e442d427fcf7646d689d2142bddff875b47768ef14a",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
+      "translatedAt": "2026-09-01T01:14:01.957Z",
       "missingRuns": 0,
       "status": "active",
       "redirectTo": null,
       "segmentHashes": {
         "/docs/editing/viewers/:aside:jupyter-notebooks:0": "3ca0d978838788eafeab8facdd9835edf46aff4b524dab26ca180d14ddcdbf4a",
         "/docs/editing/viewers/:heading:csv-tsv:0": "cd45db456d0e5bd74b893de9733c3587fddc2621b165d816c9c6ebb64d2d5817",
+        "/docs/editing/viewers/:heading:html-mermaid-pdf-image-viewers:0": "51f124ee6c76d74045d4690f885d2e1a8d2a204c0f5cc33ebf28b21b03705f04",
+        "/docs/editing/viewers/:heading:html:0": "e0acc3f432ecd1d67e94dfc715cef96c16e7d85a17afaae1edad91b1ab29705f",
         "/docs/editing/viewers/:heading:images:0": "a543e293c615aa544f0eddfe7c2a5ce1621376987585e646f7a54eb3d6e4a5f6",
         "/docs/editing/viewers/:heading:jupyter-notebooks:0": "cdd54213e87af4a00447b7996b4925392cc0762ec8aa8df7412202e09279e23f",
-        "/docs/editing/viewers/:heading:mermaid-pdf-image-viewers:0": "0a1dcb3416967ad61825ca75aa2cc82ce2059acc1ea2aa5f1fd0176a9744cc29",
         "/docs/editing/viewers/:heading:mermaid:0": "39c1dbaf024c42bde2a26efaeb2f4797c44bbbbbb4b36d0ea958de309182e000",
         "/docs/editing/viewers/:heading:pdf:0": "413879475ef7bb4b35cba4dbc86249396ba841ba51c45e4d2995ff52d8b3aa79",
         "/docs/editing/viewers/:paragraph:csv-tsv:0": "ac0350d5102e3d50b7314b426e5fa54ced01611c55af4192a8eca1bb37a963fd",
+        "/docs/editing/viewers/:paragraph:html-mermaid-pdf-image-viewers:0": "580f361963c3ca92c1dee824db912041e6f2b4c7d6303d5b2f550239e096234e",
+        "/docs/editing/viewers/:paragraph:html:0": "a42a3f25829a1047a1b28c2ba5bd9ca6f885fdd6c734d6172942afd0008aafb2",
+        "/docs/editing/viewers/:paragraph:html:1": "cfa1c40eeb31600d2e66f6cafe4e6958543bb2a3a3f9464a8742fc7936a273cd",
+        "/docs/editing/viewers/:paragraph:html:2": "f8c7c6fa3678653981cac7aa00f7a3a0ba048befe8f4ca5ab5d04974f02b6aa3",
         "/docs/editing/viewers/:paragraph:images:0": "72b82f97e4b4155b44dff8587ab7787ef236dc044733a6c20b228b5aa2519f99",
         "/docs/editing/viewers/:paragraph:jupyter-notebooks:0": "61b7ace70340325627e8f990d5aaf43439790cc306bb168df8dac579cfd308a9",
-        "/docs/editing/viewers/:paragraph:mermaid-pdf-image-viewers:0": "580f361963c3ca92c1dee824db912041e6f2b4c7d6303d5b2f550239e096234e",
         "/docs/editing/viewers/:paragraph:mermaid:0": "d782fc046bc6f7399dd134f0b1fa018af784f3dcac75f62a46e5731d0bbb6616",
         "/docs/editing/viewers/:paragraph:pdf:0": "93bdf8b0a438ac8035488b482d90cc19c1874842942db4a6c3467897152df764"
       },
@@ -6541,6 +6681,18 @@
           "protectedTokens": [],
           "requiresKorean": false
         },
+        "/docs/editing/viewers/:heading:html-mermaid-pdf-image-viewers:0": {
+          "kind": "heading",
+          "fencedCodeCount": 0,
+          "protectedTokens": [],
+          "requiresKorean": true
+        },
+        "/docs/editing/viewers/:heading:html:0": {
+          "kind": "heading",
+          "fencedCodeCount": 0,
+          "protectedTokens": [],
+          "requiresKorean": false
+        },
         "/docs/editing/viewers/:heading:images:0": {
           "kind": "heading",
           "fencedCodeCount": 0,
@@ -6552,12 +6704,6 @@
           "fencedCodeCount": 0,
           "protectedTokens": [],
           "requiresKorean": false
-        },
-        "/docs/editing/viewers/:heading:mermaid-pdf-image-viewers:0": {
-          "kind": "heading",
-          "fencedCodeCount": 0,
-          "protectedTokens": [],
-          "requiresKorean": true
         },
         "/docs/editing/viewers/:heading:mermaid:0": {
           "kind": "heading",
@@ -6578,6 +6724,38 @@
             "ORCA_PROTECTED_0001",
             "ORCA_PROTECTED_0002"
           ],
+          "requiresKorean": true
+        },
+        "/docs/editing/viewers/:paragraph:html-mermaid-pdf-image-viewers:0": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
+          "protectedTokens": [
+            "ORCA_PROTECTED_0001"
+          ],
+          "requiresKorean": true
+        },
+        "/docs/editing/viewers/:paragraph:html:0": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
+          "protectedTokens": [
+            "ORCA_PROTECTED_0001",
+            "ORCA_PROTECTED_0002",
+            "ORCA_PROTECTED_0003"
+          ],
+          "requiresKorean": true
+        },
+        "/docs/editing/viewers/:paragraph:html:1": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
+          "protectedTokens": [
+            "ORCA_PROTECTED_0001"
+          ],
+          "requiresKorean": true
+        },
+        "/docs/editing/viewers/:paragraph:html:2": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
+          "protectedTokens": [],
           "requiresKorean": true
         },
         "/docs/editing/viewers/:paragraph:images:0": {
@@ -6601,14 +6779,6 @@
           ],
           "requiresKorean": true
         },
-        "/docs/editing/viewers/:paragraph:mermaid-pdf-image-viewers:0": {
-          "kind": "paragraph",
-          "fencedCodeCount": 0,
-          "protectedTokens": [
-            "ORCA_PROTECTED_0001"
-          ],
-          "requiresKorean": true
-        },
         "/docs/editing/viewers/:paragraph:mermaid:0": {
           "kind": "paragraph",
           "fencedCodeCount": 0,
@@ -6627,7 +6797,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "bffc7f9fe9f821da56a39c5e7308e54e8522d0bdaf22a7024553335a083ceeef",
+      "renderedContentHash": "da0a0e16f3f3bc7d62a232ca3d2813fafc8d7e8e1aedca4c2a81b32c46132c2c",
       "images": []
     },
     "/docs/first-session/": {
@@ -6635,8 +6805,8 @@
       "mirrorPath": "/docs/first-session/",
       "titleSegmentId": "/docs/first-session/:heading:your-first-3-agent-session:0",
       "pageHash": "c1d4069733eb44755e2e04772c82b7b1618ca5cc49d448488bdc79efe9d508ff",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-13T08:26:20.844Z",
       "missingRuns": 0,
       "status": "active",
@@ -6858,7 +7028,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "729444a5fee9af63e66b80c9933657a27805b09230eec8d14dc8b003b8f71a91",
+      "renderedContentHash": "716843cd08cc69800596c67b5ee1ca2994f0f984b639863b5b9a1930a228a30a",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/whats-new/posters/orca-split-screen.jpg",
@@ -6879,8 +7049,8 @@
       "mirrorPath": "/docs/github-errors/",
       "titleSegmentId": "/docs/github-errors/:heading:troubleshooting-github-errors:0",
       "pageHash": "a7a0783f885da3033ed99e4dd5bec548cd7d51771d0c46ec4864238cc91c2050",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-21T05:59:15.780Z",
       "missingRuns": 0,
       "status": "active",
@@ -7449,7 +7619,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "c6ecf79c8961029eec3761e826534d7c9ac0001518399fa20313b96a9662a7fd",
+      "renderedContentHash": "d7b320bdbdb21ceb5b1acab660d871002837b99eb8c8b075c8a33db823db0625",
       "images": []
     },
     "/docs/install/": {
@@ -7457,8 +7627,8 @@
       "mirrorPath": "/docs/install/",
       "titleSegmentId": "/docs/install/:heading:install:0",
       "pageHash": "09a4e64c4f1ec93dc30346a8e118f758ca471ba808ebebca25428151e8b25bbd",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-29T01:17:01.981Z",
       "missingRuns": 0,
       "status": "active",
@@ -7686,22 +7856,22 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "a125926ff67dbe18d47bc8b331f6769b099194d747999108238dd8d1d5f13b50",
+      "renderedContentHash": "60cc932d427741d3b0ff9e0df8fb392c091fddde9a926b0962c426f6dda98409",
       "images": []
     },
     "/docs/mobile/": {
       "sourceUrl": "https://www.onorca.dev/docs/mobile",
       "mirrorPath": "/docs/mobile/",
       "titleSegmentId": "/docs/mobile/:heading:mobile-companion:0",
-      "pageHash": "a1bb07048a8263526b844db2e5310e6f8937106508bcafc817a6e48c56ef9f1e",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
-      "translatedAt": "2026-08-28T01:06:23.912Z",
+      "pageHash": "1dce1a17a8230bb3d58e6903483bf9dab265d4b8091780cc2478f8af32f0be71",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
+      "translatedAt": "2026-09-01T01:14:01.957Z",
       "missingRuns": 0,
       "status": "active",
       "redirectTo": null,
       "segmentHashes": {
-        "/docs/mobile/:aside:mobile-companion:0": "572aef7917fc1dffa2bfca8ad460bc3f5a251c7420d81aeef321bf609fd4f501",
+        "/docs/mobile/:aside:mobile-companion:0": "6554c554de8dbb981b19ea18fae8b8854dfa2d143af9f2d25a39d488442692a8",
         "/docs/mobile/:aside:troubleshooting:0": "9f22e6b6c05ef6289432fb87f09d426640ff71fc8ba749946530b9e41772435c",
         "/docs/mobile/:figure:mobile-companion:0": "4f5142942b06e803908d88cd1795f787de7a457b5e3fe07f73f479a06c38d795",
         "/docs/mobile/:heading:account-switcher:0": "172714fe3b5ae43c52a77bd88f0efeae84b181bce3a2eb9d9756edc834f58656",
@@ -8045,7 +8215,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "7888e045709d20ceec7f757d43dea3cb30fa5c813d73cd51b0da44aef732d407",
+      "renderedContentHash": "24bf9585bed188f356a4dbe8f1b7fc3f9ce8b263faea2c527db1778bbbf1d5a4",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/whats-new/posters/orca-mobile.jpg",
@@ -8060,8 +8230,8 @@
       "mirrorPath": "/docs/model/agents-sessions/",
       "titleSegmentId": "/docs/model/agents-sessions/:heading:agents-sessions:0",
       "pageHash": "aa3f954370f0e86beb87c7036ff50666aa27ef73b4d11f503c2671d99c197881",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-28T01:06:23.912Z",
       "missingRuns": 0,
       "status": "active",
@@ -8322,7 +8492,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "6c4323160a1a62f7adeb726b5650441b455bc9bc4c1f8c02e0a4b2c1a6e7bef6",
+      "renderedContentHash": "41cc1762e503dc0a7ba886deaec9a900d49f56f2761356b41150a0d81c1d56cb",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/whats-new/posters/agent-statuses.jpg",
@@ -8336,10 +8506,10 @@
       "sourceUrl": "https://www.onorca.dev/docs/model/quick-open",
       "mirrorPath": "/docs/model/quick-open/",
       "titleSegmentId": "/docs/model/quick-open/:heading:quick-open-jump-palette:0",
-      "pageHash": "fe28550ef4a10b222dcd17105b5f1631fc81d5543bae51a1cc0bfc09d748585e",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
-      "translatedAt": "2026-08-24T01:38:18.981Z",
+      "pageHash": "5d2fe0862ec28d275a5286b42ec2117e4e781f7d83bfdf994a0bcf5c170a65d7",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
+      "translatedAt": "2026-09-01T01:14:01.957Z",
       "missingRuns": 0,
       "status": "active",
       "redirectTo": null,
@@ -8358,7 +8528,7 @@
         "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:0": "d1a8bbb9039a2abdd41a2b7278e59f0d86e427c0efb9c766718660310a5b2cc8",
         "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:1": "5fc56f5db0acd561e5b9c5e12d41a47d58aeaddb785ac0faca716bdc7c50645f",
         "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:2": "09aae57770e753b827c38326369e48066c7c08cf6146a6f64cc93651d24a724f",
-        "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:3": "8a18255122eeccbe8bc8f6d1ed3d517d64d5d640a8c4dc121c58532a8fe74e73",
+        "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:3": "48eef49e1d0cefa826521896f3400f6a38062c89be45c672a0a63c21318c5a81",
         "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:4": "200516872fa414ddb981df64cdaf5dde553c8696788217c66e0fa74fe57de8e3",
         "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:5": "a528ea4e44978e507c738dd4f61a69e7d001152b0b0370bf3028300c81644011"
       },
@@ -8491,7 +8661,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "03171e6542687ecef21a6347f17ed335e8553f3e77a5fadcf53cec449c218b15",
+      "renderedContentHash": "c254c825635b1f3f11561928fec313e61c6eb51309f183776c85db2cc2e49d11",
       "images": []
     },
     "/docs/model/session-restore/": {
@@ -8499,8 +8669,8 @@
       "mirrorPath": "/docs/model/session-restore/",
       "titleSegmentId": "/docs/model/session-restore/:heading:session-restore:0",
       "pageHash": "9dbdb380df9c6b425ce1f97603f92879d9dd1fef4e608216bbc7489a07e645b5",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-13T08:26:20.844Z",
       "missingRuns": 0,
       "status": "active",
@@ -8661,7 +8831,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "fd26d0c2cb2ffc05b0eb26a5f13b129ea97a05aeb4211c51f2eef47fd8d41c89",
+      "renderedContentHash": "5b4c191b579487f35f23e897008c65b4045b5159ce831f71401c932511f996eb",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/whats-new/posters/session-that-survives-restart.jpg",
@@ -8676,8 +8846,8 @@
       "mirrorPath": "/docs/model/tabs-panes-splits/",
       "titleSegmentId": "/docs/model/tabs-panes-splits/:heading:tabs-panes-split-layouts:0",
       "pageHash": "3698169d355078c01f5ea9286cfec22cf8850848a1a22dbfa240e692c5529be3",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-29T01:17:01.981Z",
       "missingRuns": 0,
       "status": "active",
@@ -8859,7 +9029,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "7f24450997e34233cc193ec2217013189f329a9c4284178884a385391a8c1f7b",
+      "renderedContentHash": "9fc3b44c992acef32c805a84d6aa799a1e8d981afe9ef205a196c3520865901b",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/whats-new/posters/tab-split.jpg",
@@ -8879,10 +9049,10 @@
       "sourceUrl": "https://www.onorca.dev/docs/model/worktrees",
       "mirrorPath": "/docs/model/worktrees/",
       "titleSegmentId": "/docs/model/worktrees/:heading:worktrees:0",
-      "pageHash": "3c82ff75ad0bcab3ff701d9d0b24675ac96d8f1f25a2ec39904e946d7a2d64e5",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
-      "translatedAt": "2026-08-24T01:38:18.981Z",
+      "pageHash": "017f62bbab846be5a36474589cf86c8bda25c405be22dc1fd050dd133bedb418",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
+      "translatedAt": "2026-09-01T01:14:01.957Z",
       "missingRuns": 0,
       "status": "active",
       "redirectTo": null,
@@ -8918,8 +9088,9 @@
         "/docs/model/worktrees/:paragraph:multi-repo-project-groups-folder-workspaces:1": "8d9ed17eb7159a19710a91f5f869f71c367f23fab9676cebffbc0ed096011553",
         "/docs/model/worktrees/:paragraph:multi-repo-project-groups-folder-workspaces:2": "2c4a6dbb16501e2c4961747a529be327b7d625efa29118765652a73446be750c",
         "/docs/model/worktrees/:paragraph:naming-the-branch:0": "eb345e925960ece33af762b7a513f38652dbe1e06f265ab0a5624bcebc66357f",
-        "/docs/model/worktrees/:paragraph:naming-the-branch:1": "6ba036edbd3e1968f0d30c9f4db972d5a90c0f38ceff0bdd4b6193b3bdf3a665",
-        "/docs/model/worktrees/:paragraph:naming-the-branch:2": "8635d609ae06fc7405aebf304fae203ad8362368daacc4c2173d47f090cd1ce5",
+        "/docs/model/worktrees/:paragraph:naming-the-branch:1": "291ff5c86f9be2079c0bdc2ef2df2e334470ea17d213317aa9d1a2d1e71c5997",
+        "/docs/model/worktrees/:paragraph:naming-the-branch:2": "6ba036edbd3e1968f0d30c9f4db972d5a90c0f38ceff0bdd4b6193b3bdf3a665",
+        "/docs/model/worktrees/:paragraph:naming-the-branch:3": "8635d609ae06fc7405aebf304fae203ad8362368daacc4c2173d47f090cd1ce5",
         "/docs/model/worktrees/:paragraph:preserved-branches:0": "b1d7ba86eb27cbf34352ef48be8f6388216be18a9b73507b23b7d2aa8a683301",
         "/docs/model/worktrees/:paragraph:resource-manager-cleanup:0": "a49eca1e3956c6916b59490b6efe9b32e019d3d0573de6ca94d1aa2b10c87e44",
         "/docs/model/worktrees/:paragraph:shared-directories-gitignored-files:0": "536c97575b24ff4ec8ce842e215c4027a4771c3d07a649b16c7b1d38d2084167",
@@ -8930,7 +9101,7 @@
         "/docs/model/worktrees/:paragraph:sidebar-layout:2": "118b067f7508eb2672991cbed22973de6f78757c7cba47f33cc4143f5a47f1d8",
         "/docs/model/worktrees/:paragraph:sidebar-layout:3": "dfe72ca58d0403dcfd1e926e5488797fe16a89c8374d925a6762c6da1b96a221",
         "/docs/model/worktrees/:paragraph:sidebar-layout:4": "a1677fa4f263a2cb506fa38c0bbf991907bdc6ef4119e7995fd5c869617413a1",
-        "/docs/model/worktrees/:paragraph:sidebar-layout:5": "b4f294c2c7154f23e22dabd5a154f3a7aa42576defc0c3032048115d3a510f90",
+        "/docs/model/worktrees/:paragraph:sidebar-layout:5": "1db67e0a64a9ea117f73a8692d0346dc05c774a23263deab9bd5bac025e9e592",
         "/docs/model/worktrees/:paragraph:sidebar-layout:6": "16e24a40c3dc82698786dd479f760eab148adab4aa354abace11b969ba50e3d5",
         "/docs/model/worktrees/:paragraph:sidebar-layout:7": "7062fea6299eedce682be963a084e7d81188cd424f3f3fdb465001aefee31d3e",
         "/docs/model/worktrees/:paragraph:start-from-picker:0": "27183e7c84d08a0d26c6ae55c2bdae99e0681cd2feef04d140fc5c6dc3c9aa21",
@@ -9194,6 +9365,15 @@
           "fencedCodeCount": 0,
           "protectedTokens": [
             "ORCA_PROTECTED_0001",
+            "ORCA_PROTECTED_0002"
+          ],
+          "requiresKorean": true
+        },
+        "/docs/model/worktrees/:paragraph:naming-the-branch:2": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
+          "protectedTokens": [
+            "ORCA_PROTECTED_0001",
             "ORCA_PROTECTED_0002",
             "ORCA_PROTECTED_0003",
             "ORCA_PROTECTED_0004",
@@ -9201,7 +9381,7 @@
           ],
           "requiresKorean": true
         },
-        "/docs/model/worktrees/:paragraph:naming-the-branch:2": {
+        "/docs/model/worktrees/:paragraph:naming-the-branch:3": {
           "kind": "paragraph",
           "fencedCodeCount": 0,
           "protectedTokens": [
@@ -9294,7 +9474,9 @@
             "ORCA_PROTECTED_0001",
             "ORCA_PROTECTED_0002",
             "ORCA_PROTECTED_0003",
-            "ORCA_PROTECTED_0004"
+            "ORCA_PROTECTED_0004",
+            "ORCA_PROTECTED_0005",
+            "ORCA_PROTECTED_0006"
           ],
           "requiresKorean": true
         },
@@ -9371,7 +9553,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "96296afee73584ea962f4dea615c2ed8487754d1ee623519fcdd5cc3f2d479a8",
+      "renderedContentHash": "b9fe594ebecce299647d148287940735d9839c720e3a3ce718bd5534db78d1b6",
       "images": []
     },
     "/docs/notifications/": {
@@ -9379,8 +9561,8 @@
       "mirrorPath": "/docs/notifications/",
       "titleSegmentId": "/docs/notifications/:heading:notifications-inbox:0",
       "pageHash": "d0ecf29218664fed2454399bebfd552cdbe794175ed98099b2bfd242d0d2e6f3",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-13T08:21:46.718Z",
       "missingRuns": 0,
       "status": "active",
@@ -9505,7 +9687,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "c9f9c42ffe2fdc5369fb3e72e3f7f43ea907d54ffddba591d455e66e9c8c716e",
+      "renderedContentHash": "89e283cd64c6b24f31c1b2c69b5fca770d07629cc5d45d468903c788a9bd8678",
       "images": []
     },
     "/docs/recipes/design-mode-fix/": {
@@ -9513,8 +9695,8 @@
       "mirrorPath": "/docs/recipes/design-mode-fix/",
       "titleSegmentId": "/docs/recipes/design-mode-fix/:heading:fix-a-ui-bug-with-design-mode:0",
       "pageHash": "3325e2d6be41aa349106568af3f8ef64197cde964368adc08393aeafd7d20f34",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-13T08:21:46.718Z",
       "missingRuns": 0,
       "status": "active",
@@ -9567,7 +9749,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "2af173db62ef2782c47402820e4974abe2aa8836f9a17bbb63c117fdf84bee2c",
+      "renderedContentHash": "0057b84df20cb3ce457c04d9ee84cbe6b30f34719e452b15daf6825e48f5b1df",
       "images": []
     },
     "/docs/recipes/jump-worktrees/": {
@@ -9575,8 +9757,8 @@
       "mirrorPath": "/docs/recipes/jump-worktrees/",
       "titleSegmentId": "/docs/recipes/jump-worktrees/:heading:jump-between-10-worktrees:0",
       "pageHash": "34dc0e7fba9f33ea4e25811f102f72e3bbbd035f4dbf142e8c139fa6e743fd4d",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-07T01:11:47.911Z",
       "missingRuns": 0,
       "status": "active",
@@ -9632,7 +9814,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "7aa29ebcb24a19e6da6797d6f110752a00773f5dfeb052fe0a5653f25a9982dd",
+      "renderedContentHash": "c1ca7ff4893708a05713654bf1b038d0bea736ec12ddd2b9f75f2f6d5f240703",
       "images": []
     },
     "/docs/recipes/parallel-agents/": {
@@ -9640,8 +9822,8 @@
       "mirrorPath": "/docs/recipes/parallel-agents/",
       "titleSegmentId": "/docs/recipes/parallel-agents/:heading:race-three-agents-on-the-same-task:0",
       "pageHash": "d16663fcd6c7abaa6d71120091f9cefa7d5b1a319b8ea9c7fe5db729f05c562f",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-13T08:21:46.718Z",
       "missingRuns": 0,
       "status": "active",
@@ -9702,7 +9884,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "7be174e2d7a5985ab3c01206527f03fc299ae384c65c9d8603a067319dc88675",
+      "renderedContentHash": "ef11be00e770e00f7038100d6568cc703fb154502738df98024452c41f4dc04c",
       "images": []
     },
     "/docs/recipes/remote-worktrees/": {
@@ -9710,8 +9892,8 @@
       "mirrorPath": "/docs/recipes/remote-worktrees/",
       "titleSegmentId": "/docs/recipes/remote-worktrees/:heading:work-on-a-remote-machine-over-ssh:0",
       "pageHash": "ba17bc6de757d25c830f6bdd90fa91910c119202a32fcebfe0b79a4b6cb85761",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-21T05:59:15.780Z",
       "missingRuns": 0,
       "status": "active",
@@ -9789,7 +9971,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "5eae66da008f3d3e637eb928094db040299bd9aa5276506a8de9fc6604cd83f9",
+      "renderedContentHash": "2a2c43e5539e28335fa4afca6c9bf3f2048c363fb0cc35a92b1ee73a81659cab",
       "images": []
     },
     "/docs/recipes/review-ai-diff/": {
@@ -9797,8 +9979,8 @@
       "mirrorPath": "/docs/recipes/review-ai-diff/",
       "titleSegmentId": "/docs/recipes/review-ai-diff/:heading:review-an-ai-diff-line-by-line:0",
       "pageHash": "187ae176b8ff5b322d919aad1d2f079d7a6d8ddf682633f6c2bbca68e3be6015",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-13T08:21:46.718Z",
       "missingRuns": 0,
       "status": "active",
@@ -9840,7 +10022,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "239b7611336962f855fc25e6df9ec33a1f7699b04501bf3be1a90e1e4c2f5667",
+      "renderedContentHash": "78d2e5508b478a594ed448d0efeab864f9f407f34a2ce45c6227219cb0285b3b",
       "images": []
     },
     "/docs/remote-servers/": {
@@ -9848,8 +10030,8 @@
       "mirrorPath": "/docs/remote-servers/",
       "titleSegmentId": "/docs/remote-servers/:heading:remote-orca-servers:0",
       "pageHash": "f7c97090e76c32acd3f68c2295933be0c8613f55833c875be61bbd8d79503862",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-24T01:38:18.981Z",
       "missingRuns": 0,
       "status": "active",
@@ -10495,7 +10677,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "d861b3e31c3ffbe13fe65ea1d46b80054687318b141362b89c8f793d4f0dbdc3",
+      "renderedContentHash": "0fd48bcfcd94961b489f4a36a69441fcb3d02a142d31f54e45d989e84c34c538",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/docs/remote-server-share-desktop.png",
@@ -10516,8 +10698,8 @@
       "mirrorPath": "/docs/review/annotate-ai-diff/",
       "titleSegmentId": "/docs/review/annotate-ai-diff/:heading:annotate-ai-diff:0",
       "pageHash": "5a0193a8c1a72dda3e3c88f76ad06b8309b53799cb81c86368345bb01134bcfc",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-29T01:17:01.981Z",
       "missingRuns": 0,
       "status": "active",
@@ -10631,7 +10813,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "2bc82241f8630e13049e0d5d42f4ef2456a59d45794714a1c23042ea3d9cd115",
+      "renderedContentHash": "b3164cefa449566c8f805abdf5620be97ffe28c96593445f817f033562e7cf66",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/whats-new/posters/annotate-ai-diff.jpg",
@@ -10646,8 +10828,8 @@
       "mirrorPath": "/docs/review/attribution/",
       "titleSegmentId": "/docs/review/attribution/:heading:attribution:0",
       "pageHash": "24243d9a786bf69d4baded51ed60a2616e3cacd0cb158a97692607b7d3038db8",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-13T08:21:46.718Z",
       "missingRuns": 0,
       "status": "active",
@@ -10718,7 +10900,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "7cec1006fa5f78da2fdff9c85473b22286b589d90af1b78326425663a01c20e2",
+      "renderedContentHash": "9eed0f9f842484cf7c1894e312af0657cf73b27cc4b63ba649316ec9275c425a",
       "images": []
     },
     "/docs/review/commit-push/": {
@@ -10726,8 +10908,8 @@
       "mirrorPath": "/docs/review/commit-push/",
       "titleSegmentId": "/docs/review/commit-push/:heading:commit-push-from-orca:0",
       "pageHash": "fd2069d68be770219c4b0c7732d5b09075c1d692606584df531063226ea12a95",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-18T00:33:27.081Z",
       "missingRuns": 0,
       "status": "active",
@@ -10988,7 +11170,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "ce33a89749dc13cdab39c7f114ad1c9d43579a882d167dc4280a5704badefb41",
+      "renderedContentHash": "772db7c4d60d6db263e485baeec407c6b557b0a66f1399f740f8d694e0173838",
       "images": []
     },
     "/docs/review/diff-viewer/": {
@@ -10996,8 +11178,8 @@
       "mirrorPath": "/docs/review/diff-viewer/",
       "titleSegmentId": "/docs/review/diff-viewer/:heading:diff-viewer:0",
       "pageHash": "0bd8b031052544815f3d1ce703c3a31ba85d0f3139e7d9d8b419134619b1de40",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-10T01:14:41.553Z",
       "missingRuns": 0,
       "status": "active",
@@ -11104,17 +11286,17 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "aa084f0dd0ad387cb9b6f48486da67081db0ec0bddaa7897d3333056d6241756",
+      "renderedContentHash": "183d6f6796d318f4a23c78b537a200522de1e7087327b3659fd84b65fa7c1e70",
       "images": []
     },
     "/docs/review/github/": {
       "sourceUrl": "https://www.onorca.dev/docs/review/github",
       "mirrorPath": "/docs/review/github/",
       "titleSegmentId": "/docs/review/github/:heading:hosted-reviews-issues-actions:0",
-      "pageHash": "21696b2af64ea93a917bc4cfcf0aff03636d71c2aefe4b0b4ceeb39a93e6a513",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
-      "translatedAt": "2026-08-18T00:33:27.081Z",
+      "pageHash": "66c97d49054091a820dcb900894f6ee1dab9cfc5f2ae6ebe5326c79b3f761c2e",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
+      "translatedAt": "2026-09-01T01:14:01.957Z",
       "missingRuns": 0,
       "status": "active",
       "redirectTo": null,
@@ -11131,7 +11313,7 @@
         "/docs/review/github/:heading:tasks:0": "fd67d489c7528e070c4dbe7e6b7d2eb8ce82617196a7248b9b5dfe7d50e33d33",
         "/docs/review/github/:heading:troubleshooting:0": "659a188b36f9c3262a28539e24c345df4edc9657f59b116b0a1d9887cf2e28e0",
         "/docs/review/github/:list:next-steps:0": "4c411f166ba4e55fde1310499a138f62f9376363ae19bc47a1a0b931bc78b3c6",
-        "/docs/review/github/:list:reviews:0": "7bcd99f0ae7f3df32f3ebd5aaa5eeceb16755238e07a83c7fad70bb0bdfb85db",
+        "/docs/review/github/:list:reviews:0": "dc522379c54c714d0cce3eaee55436c7cf5d77404a85b4b129c73476a90b6b9e",
         "/docs/review/github/:paragraph:actions:0": "e036782513ce3708b6ff09cc99b02c43dc7551ddc14d3ed70727d9e80a8e6754",
         "/docs/review/github/:paragraph:auto-merge:0": "44632c7e223385d38b3a6b7d12606cc196b51867da92f04d413fe6f3d9f3e6a4",
         "/docs/review/github/:paragraph:connecting-a-provider:0": "05c44e7c02a360cb2c09a544eba309493e3100567ddfd86d65b237845f96f7e6",
@@ -11244,7 +11426,9 @@
             "ORCA_PROTECTED_0005",
             "ORCA_PROTECTED_0006",
             "ORCA_PROTECTED_0007",
-            "ORCA_PROTECTED_0008"
+            "ORCA_PROTECTED_0008",
+            "ORCA_PROTECTED_0009",
+            "ORCA_PROTECTED_0010"
           ],
           "requiresKorean": true
         },
@@ -11373,7 +11557,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "fc457d8ef2bd7dd0f2bf99233b99d5fa18e1636d9df26b46c6b6af6d53be097d",
+      "renderedContentHash": "6350120d084a27397176373109294654f966983779977e1aff8ba523dbf1cb0d",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/whats-new/posters/orca-github.jpg",
@@ -11388,8 +11572,8 @@
       "mirrorPath": "/docs/review/jira/",
       "titleSegmentId": "/docs/review/jira/:heading:jira-items-drawer:0",
       "pageHash": "d6bde671ad4da9555085f19b9378dde3c9078bf3c998f2d49bbefb44bed0bb43",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-05T01:13:33.191Z",
       "missingRuns": 0,
       "status": "active",
@@ -11563,7 +11747,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "2cbe7da6ae99ec779216ba6c0102fca22297ecca9135f2c50f08369d1107ed1a",
+      "renderedContentHash": "1d9898dfa9ea8a56f59a55c9cf6e574957ca189ec99a718d80ff3ebbff7002f5",
       "images": []
     },
     "/docs/review/linear/": {
@@ -11571,8 +11755,8 @@
       "mirrorPath": "/docs/review/linear/",
       "titleSegmentId": "/docs/review/linear/:heading:linear-items-drawer:0",
       "pageHash": "e3496cecc813de12f9c721d04a168d257a28123704a4d6c83145ba1af94bf48f",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-11T01:09:44.596Z",
       "missingRuns": 0,
       "status": "active",
@@ -11716,17 +11900,17 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "127dadc0abb4e58eac207556795c1e1e0c2e322555b6f19abee6f7a47b3b8686",
+      "renderedContentHash": "707ec28681b7956a72c0890ded0c4ee3c02d2bfc0c78937f6333539266f26fa0",
       "images": []
     },
     "/docs/settings/": {
       "sourceUrl": "https://www.onorca.dev/docs/settings",
       "mirrorPath": "/docs/settings/",
       "titleSegmentId": "/docs/settings/:heading:settings-reference:0",
-      "pageHash": "ebdcbe413d2e1296524df7c755332f70aa64010de021e3ec191bce64b74f86c2",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
-      "translatedAt": "2026-08-28T01:06:23.912Z",
+      "pageHash": "833c6c13cf62f3f985823939a595631e82e3a872bed6c85293742faaa2182697",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
+      "translatedAt": "2026-09-01T01:14:01.957Z",
       "missingRuns": 0,
       "status": "active",
       "redirectTo": null,
@@ -11753,7 +11937,7 @@
         "/docs/settings/:list:agents:0": "7ed1a00b5812736fad86d651bf2111368678106a19275bf762ad6cf9c38fafb0",
         "/docs/settings/:list:appearance:0": "cd12515710a295103eec56bc89d7627941c9e23cba5e6b239c9ba8d8549f4f5d",
         "/docs/settings/:list:artifacts:0": "468d61c121ea75e38231ab2a32c73897e88c8efa151a6150463ada1f700d38e0",
-        "/docs/settings/:list:browser:0": "561e5902c543a5e0abb30b608e450e33f9c329ec46d7822b4914bf17dd1a41e8",
+        "/docs/settings/:list:browser:0": "89fa83514dae5ed43b6d01626a73c774555f1d93bd3346a11dc68d52fb04f5b9",
         "/docs/settings/:list:experimental:0": "ae63837750576dc2c5872f55a6694dc41138e0d93d0d1eb19b3750309e8a672c",
         "/docs/settings/:list:floating-workspace:0": "2bcdf9b15ebc18b9ff379249135db0bc86e8f913320a8071cb8e77ff2534788a",
         "/docs/settings/:list:general:0": "9557afde6bca4f6cbc9da93c2fd077296c80725d02c4afeffd732a10ba2914d7",
@@ -11765,7 +11949,7 @@
         "/docs/settings/:list:quick-commands:0": "9bf00ab7a3c268e2a71b96c00c35a994786a7414c6ab1c65863478ca97fac990",
         "/docs/settings/:list:remote-orca-servers:0": "db6af176adec7db711a7586633aba45fb69df2fb3cae854f152d4e996f20d683",
         "/docs/settings/:list:repository:0": "5cba80588d7796e215f7f48d5808dd11a155897248fbee8d4ca7a68f5256ad33",
-        "/docs/settings/:list:shortcuts:0": "ab2444c2e2d32d439d9b830b09ee5195d1195bb170bd13a0e595fe4f2e9a770c",
+        "/docs/settings/:list:shortcuts:0": "da136d146de77b0f15f4904dc3da1118f12d8b17ab0cd1f7091614ad65aabd0f",
         "/docs/settings/:list:ssh:0": "225f147fe5eb65b6f5b47cc8d8d23761ac35eaaf3ceae59d8cac01ce5acf5334",
         "/docs/settings/:list:terminal:0": "bec0cebf4ec4575aebfcd2aac3a54e217f56a5355cd0aff2a0c2d167e1908d50",
         "/docs/settings/:list:voice:0": "61ed43156cb280c4fb79246f7b8e46e65314bfd3a874b8f2764a6eab31c75ec7",
@@ -11937,7 +12121,8 @@
             "ORCA_PROTECTED_0008",
             "ORCA_PROTECTED_0009",
             "ORCA_PROTECTED_0010",
-            "ORCA_PROTECTED_0011"
+            "ORCA_PROTECTED_0011",
+            "ORCA_PROTECTED_0012"
           ],
           "requiresKorean": true
         },
@@ -12075,7 +12260,10 @@
             "ORCA_PROTECTED_0011",
             "ORCA_PROTECTED_0012",
             "ORCA_PROTECTED_0013",
-            "ORCA_PROTECTED_0014"
+            "ORCA_PROTECTED_0014",
+            "ORCA_PROTECTED_0015",
+            "ORCA_PROTECTED_0016",
+            "ORCA_PROTECTED_0017"
           ],
           "requiresKorean": true
         },
@@ -12127,7 +12315,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "fc442d24361218272206744e20fb87f83e8f3fc12a3db97fee53b084598fde56",
+      "renderedContentHash": "849d7af56b1058d4d0555f312997c2978058afa7e286cf09a1cd66e953ceb3bf",
       "images": []
     },
     "/docs/ssh/": {
@@ -12135,8 +12323,8 @@
       "mirrorPath": "/docs/ssh/",
       "titleSegmentId": "/docs/ssh/:heading:ssh-worktrees:0",
       "pageHash": "9473435b8e5db10c2e873a9f6acf5d04c0745b69477c6f7d4dfe77461c731465",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-24T01:38:18.981Z",
       "missingRuns": 0,
       "status": "active",
@@ -12526,7 +12714,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "92424b936b43d1d5998a9dfedc09cc816345c2ee12410ba3a9fb3abbd4405bdd",
+      "renderedContentHash": "4498992d6ea0e848264edeb7c04fa49c024ddadeb6ab01081f3b78320dd43b8d",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/whats-new/posters/ssh-demo.jpg",
@@ -12541,8 +12729,8 @@
       "mirrorPath": "/docs/telemetry/",
       "titleSegmentId": "/docs/telemetry/:heading:privacy-telemetry:0",
       "pageHash": "6ef647d54453d52f32058a0b388ef8f8165cc775edca09aafb24cf03d5c1fa02",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-07-13T08:21:46.718Z",
       "missingRuns": 0,
       "status": "active",
@@ -12714,7 +12902,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "a5645baf1913003091accc287a459eec10e37b9a1c14c117f2faef4086fe6d13",
+      "renderedContentHash": "a18993a7488cc97738b6a84a65bc052b18d35e07d60d5083f715826922d2344e",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/docs/privacy-toggle.png",
@@ -12728,10 +12916,10 @@
       "sourceUrl": "https://www.onorca.dev/docs/terminal",
       "mirrorPath": "/docs/terminal/",
       "titleSegmentId": "/docs/terminal/:heading:terminal:0",
-      "pageHash": "8cce532323790fc68b4c0a6562286a11e98b9ee81b2f4fd1227ba72795455a08",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
-      "translatedAt": "2026-08-18T00:33:27.081Z",
+      "pageHash": "ed2cbcb3be68932f0e79c4a29d9140395a557c6148cea3f07964c4c8b0ec2895",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
+      "translatedAt": "2026-09-01T01:14:01.957Z",
       "missingRuns": 0,
       "status": "active",
       "redirectTo": null,
@@ -12757,8 +12945,9 @@
         "/docs/terminal/:paragraph:copy-terminal-context:0": "e2111ddded0b0b28da4bff1b36e9ecef60f3c86d970fd607feb23cbe51d442b0",
         "/docs/terminal/:paragraph:floating-terminal:0": "bee1fbafbef67574f408e98aa55a59b209751a2855be372fe083e629f6cd3d99",
         "/docs/terminal/:paragraph:ghostty-import:0": "7eeffe1184da4138c888f8f4c11bd5e01181283c0cd61855756298c2062c36a7",
-        "/docs/terminal/:paragraph:link-actions:0": "4fc1a4e1b815309e843bc4beabbeffffe6a00a7d1f7c693a94e3d92ba3b3fdc7",
-        "/docs/terminal/:paragraph:link-actions:1": "74ff2feeef062b06ab759e715fe83475ad7e6f69a2b8f416385c5cc1d1420def",
+        "/docs/terminal/:paragraph:link-actions:0": "1c5f5e8d50a3ad6fa67b36599603fb77b1c0d438b17d1cb92dff633a313234fd",
+        "/docs/terminal/:paragraph:link-actions:1": "0a2c783e56cbad295648d880b834e9e03390b7f82a94892113fb5eda568222c0",
+        "/docs/terminal/:paragraph:link-actions:2": "74ff2feeef062b06ab759e715fe83475ad7e6f69a2b8f416385c5cc1d1420def",
         "/docs/terminal/:paragraph:native-key-bindings:0": "fffc8ce24ada9487b4a70748aa53d392497749afeb888a8497def82b35391f98",
         "/docs/terminal/:paragraph:native-key-bindings:1": "1ee95421e2df7536c3ea74a40d5dd2dc58ee6a39e0cb007de72bfa636802e626",
         "/docs/terminal/:paragraph:panes-tabs:0": "96176a030477c37dae40179df7241f92ae9735ca2dcc2acafe936a930e3d4f81",
@@ -12946,6 +13135,16 @@
           "kind": "paragraph",
           "fencedCodeCount": 0,
           "protectedTokens": [
+            "ORCA_PROTECTED_0001",
+            "ORCA_PROTECTED_0002",
+            "ORCA_PROTECTED_0003"
+          ],
+          "requiresKorean": true
+        },
+        "/docs/terminal/:paragraph:link-actions:2": {
+          "kind": "paragraph",
+          "fencedCodeCount": 0,
+          "protectedTokens": [
             "ORCA_PROTECTED_0001"
           ],
           "requiresKorean": true
@@ -13102,7 +13301,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "d12a3c2bd39cc39ff0bc2e33ba02fe0d1bab74516d1b3d396e316eb0ee700113",
+      "renderedContentHash": "cefe13fec7c4002b1b0e45895297b89ae8544a9e40788bed612b7aa1055a5d7a",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/whats-new/posters/ghostty-style-terminal.jpg",
@@ -13123,8 +13322,8 @@
       "mirrorPath": "/docs/troubleshooting/",
       "titleSegmentId": "/docs/troubleshooting/:heading:troubleshooting-faq:0",
       "pageHash": "9d8dee170d37d51636a7682d3d5e9d4629d0386d7252c4a06102ae773860c012",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-03T02:45:33.745Z",
       "missingRuns": 0,
       "status": "active",
@@ -13387,7 +13586,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "238ebe5698a04d3a5d94558e9f51fb630538a018fddf06a9416c531f0274f500",
+      "renderedContentHash": "67d3b6769ebeaf5c598abc0deb68a1981b9a37d9c63b740f7cd39dfdf957b9b7",
       "images": []
     },
     "/docs/ways-to-run/": {
@@ -13395,8 +13594,8 @@
       "mirrorPath": "/docs/ways-to-run/",
       "titleSegmentId": "/docs/ways-to-run/:heading:ways-to-run-orca:0",
       "pageHash": "ee4c795fe2229c46d4e416620822a7794aaa9b227396bcd521db5192f4545fca",
-      "checkedAt": "2026-08-28T01:14:52.497Z",
-      "sitemapLastmod": "2026-08-28T00:08:06.854Z",
+      "checkedAt": "2026-09-01T01:03:52.289Z",
+      "sitemapLastmod": "2026-09-01T00:04:54.578Z",
       "translatedAt": "2026-08-03T02:45:33.745Z",
       "missingRuns": 0,
       "status": "active",
@@ -13800,7 +13999,7 @@
           "requiresKorean": true
         }
       },
-      "renderedContentHash": "0c7e61ccbdab61b3ce6b2d94a30989097a3d3afe33305041e41c69efb720b2b0",
+      "renderedContentHash": "1dc78282f78c8591a05a9b6d4d9ca47786bfe64a75bf9b316b5790efd01a4b05",
       "images": [
         {
           "sourceUrl": "https://www.onorca.dev/docs/ways-to-run-local-sidebar.png",

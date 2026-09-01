@@ -51,8 +51,8 @@
       "translated": "결과에는 다음이 포함됩니다."
     },
     "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:3": {
-      "sourceHash": "8a18255122eeccbe8bc8f6d1ed3d517d64d5d640a8c4dc121c58532a8fe74e73",
-      "translated": "입력한 검색어가 열린 탭과 작업 트리에 **모두** 일치하면, 팔레트는 어느 주요 목록도 묻히지 않도록 각 섹션의 짧은 미리 보기를 번갈아 표시합니다(*`N more — scroll or keep typing`(N개 더 있음 — 스크롤하거나 계속 입력)* 안내 포함). 한 섹션에만 결과가 있으면 고정된 상한까지 전체 목록을 유지합니다."
+      "sourceHash": "48eef49e1d0cefa826521896f3400f6a38062c89be45c672a0a63c21318c5a81",
+      "translated": "입력한 검색어가 열린 탭과 작업 트리에 **모두** 일치하면, 팔레트는 어느 주요 목록도 묻히지 않도록 각 섹션의 짧은 미리 보기를 번갈아 표시합니다. 섹션에 더 많은 일치 항목이 있으면 *`N more`(N개 더 있음)* 행에서 **`See more`(더 보기)**를 클릭하여 한 번에 항목 20개를 추가로 표시합니다. 검색어를 변경하면 확장된 섹션이 초기화됩니다. 한 섹션에만 결과가 있으면 고정된 상한까지 전체 목록을 유지합니다."
     },
     "/docs/model/quick-open/:paragraph:worktree-jump-palette-cmd-j:4": {
       "sourceHash": "200516872fa414ddb981df64cdaf5dde553c8696788217c66e0fa74fe57de8e3",

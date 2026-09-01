@@ -1,7 +1,7 @@
 ---
 title: "지원되는 에이전트"
 sourceUrl: https://www.onorca.dev/docs/agents/supported
-checkedAt: "2026-08-28T01:14:52.497Z"
+checkedAt: "2026-09-01T01:03:52.289Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/quick-open/
 next: /orca-docs-ko/docs/agents/claude-code/

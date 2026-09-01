@@ -2,6 +2,10 @@
   "sourceUrl": "https://www.onorca.dev/docs/model/worktrees",
   "mirrorPath": "/docs/model/worktrees/",
   "entries": {
+    "/docs/model/worktrees/:paragraph:naming-the-branch:3": {
+      "sourceHash": "8635d609ae06fc7405aebf304fae203ad8362368daacc4c2173d47f090cd1ce5",
+      "translated": "`Branch name`(브랜치 이름) 필드는 입력한 작업 공간 이름이나 기준 브랜치에서 만들 때만 제공됩니다. 작업 공간이 추적 중인 작업 항목에 연결되면 브랜치는 해당 항목에서 파생됩니다. 연결된 ORCA_PROTECTED_0001 PR은 제출 시 브랜치를 다시 확인하기도 하므로, ORCA_PROTECTED_0002는 조용히 무시되는 재정의를 방지하기 위해 필드를 숨깁니다."
+    },
     "/docs/model/worktrees/:heading:worktrees:0": {
       "sourceHash": "3e44c4f172dd654c5fc31aabfb16f2da3617074285bd845688fe5ce65f7f00ab",
       "translated": "# 작업 트리"
@@ -59,8 +63,8 @@
       "translated": "기본적으로 ORCA_PROTECTED_0001은 사용자가 입력한 작업공간 이름이나 연결된 ORCA_PROTECTED_0002 PR, ORCA_PROTECTED_0003 문제 또는 작업공간이 생성될 때 GitLab MR에서 새 작업 트리의 분기 이름을 파생합니다. 대신 명시적인 분기 이름을 설정하려면 `Create Worktree`(작업 트리 만들기) 대화 상자에서 `Advanced`(고급) 서랍을 확장하고 `Branch name`(브랜치 이름) 필드(자리 표시자 `ORCA_PROTECTED_0004`)에 입력하세요."
     },
     "/docs/model/worktrees/:paragraph:naming-the-branch:1": {
-      "sourceHash": "6ba036edbd3e1968f0d30c9f4db972d5a90c0f38ceff0bdd4b6193b3bdf3a665",
-      "translated": "**ORCA_PROTECTED_0001 이슈**에서 만들면 ORCA_PROTECTED_0004가 브랜치 이름을 제공하는 경우 ORCA_PROTECTED_0002는 이슈 제목을 슬러그로만 변환하지 않고 ORCA_PROTECTED_0003가 해당 이슈에 지정한 브랜치 이름을 재정의 값으로 사용합니다. 이는 ORCA_PROTECTED_0005가 UI에서 제안하는 이름과 같습니다."
+      "sourceHash": "291ff5c86f9be2079c0bdc2ef2df2e334470ea17d213317aa9d1a2d1e71c5997",
+      "translated": "같은 서랍에서 새 작업 공간의 **`Parent workspace`(상위 작업 공간)**로 동일한 저장소의 활성 작업 트리를 선택할 수 있습니다. 이는 ORCA_PROTECTED_0001의 사이드바에서 작업 공간을 중첩할 뿐 Git 기록이나 브랜치는 변경하지 않습니다. ORCA_PROTECTED_0002는 보관된 작업 공간과 순환 구조를 만드는 선택 항목을 제외합니다."
     },
     "/docs/model/worktrees/:heading:sidebar-layout:0": {
       "sourceHash": "3e3dd8410ab7fdebcb1a10423107d99bd6dc9b21d41a8160790a5ab858e42274",
@@ -175,16 +179,16 @@
       "translated": "작업 공간 이름 필드에 Slack 형식의 단축 코드(`ORCA_PROTECTED_0001`)를 입력하고 단축 코드 제안 팝오버에서 선택할 수 있습니다. 작업 트리를 두 번 클릭하여 이름을 바꾸거나, **`Edit Worktree Details`(작업 트리 세부 정보 편집)**에서 편집하거나, [**`Worktree Jump Palette`(작업 트리 점프 팔레트)**](ORCA_PROTECTED_0002)(`ORCA_PROTECTED_0003`)에 단축 코드를 입력할 때도 동일한 선택기를 사용할 수 있습니다. 표시 이름에는 이모지가 유지됩니다. ORCA_PROTECTED_0004가 Git 브랜치 이름을 만들 때는 알려진 이모지를 읽을 수 있는 단축 코드로 다시 씁니다(예: 🚀 → `ORCA_PROTECTED_0005`). 점프 팔레트 검색은 이 단축 코드에서 파생된 부분으로 이모지 이름의 작업 공간을 찾습니다."
     },
     "/docs/model/worktrees/:paragraph:naming-the-branch:2": {
-      "sourceHash": "8635d609ae06fc7405aebf304fae203ad8362368daacc4c2173d47f090cd1ce5",
-      "translated": "`Branch name`(브랜치 이름) 필드는 입력한 작업 공간 이름이나 기준 브랜치에서 만들 때만 제공됩니다. 작업 공간이 추적 중인 작업 항목에 연결되면 브랜치는 해당 항목에서 파생됩니다. 연결된 ORCA_PROTECTED_0001 PR은 제출 시 브랜치를 다시 확인하기도 하므로, ORCA_PROTECTED_0002는 조용히 무시되는 재정의를 방지하기 위해 필드를 숨깁니다."
+      "sourceHash": "6ba036edbd3e1968f0d30c9f4db972d5a90c0f38ceff0bdd4b6193b3bdf3a665",
+      "translated": "**ORCA_PROTECTED_0001 이슈**에서 만들면 ORCA_PROTECTED_0002는 이슈 제목만 슬러그로 변환하지 않고 ORCA_PROTECTED_0003가 해당 이슈에 지정한 브랜치 이름을 사용합니다. ORCA_PROTECTED_0004가 브랜치 이름을 제공하는 경우 이를 브랜치 재정의 값으로 사용하며, 이는 ORCA_PROTECTED_0005가 UI에서 제안하는 이름과 같습니다."
     },
     "/docs/model/worktrees/:list:sidebar-layout:0": {
       "sourceHash": "03dc3d63fbdd6900149a9fc4d8f8f8af03df95d9cb537717f78af90199e295e1",
       "translated": "-   **`Sleeping`(절전 중)** 작업 공간 — 이 필터에서도 각 프로젝트의 **`entry-point / main`(진입점/기본)** 작업 공간이 계속 표시되어 해당 체크아웃이 유휴 상태일 때 프로젝트 행이 사라지지 않습니다.\n-   **`Except default branch`(기본 브랜치 제외)**(**`Hide sleeping`(절전 중인 항목 숨기기)**이 켜진 동안만) — 절전 중인 항목을 정리할 때 기본 브랜치 작업 공간을 계속 표시합니다. 절전 중인 작업 공간이 이미 표시되는 경우 이 하위 옵션은 숨겨집니다.\n-   **`Default branch`(기본 브랜치)** 작업 공간(기본 체크아웃 행)\n-   **`Automation-created`(자동화에서 생성됨)** 작업 공간\n-   **`CLI-created`(CLI에서 생성됨)** 작업 공간 — `ORCA_PROTECTED_0001`을 통해 생성됩니다(카드에 마우스를 올리면 **`ORCA_PROTECTED_0002 CLI`(Orca CLI)** 출처 세부 정보가 표시됩니다).\n-   **`Other-client`(다른 클라이언트)** 작업 공간 — 공유 [원격 ORCA_PROTECTED_0003 서버](ORCA_PROTECTED_0004)에 다른 페어링 클라이언트가 만든 작업 공간이 있으면 **`Hide other-client workspaces`(다른 클라이언트의 작업 공간 숨기기)**가 표시됩니다. 이 옵션을 켜면 이 기기의 목록에는 여기서 만든 작업 공간만 유지됩니다. 빈 `ORCA_PROTECTED_0005` 최근 항목과 숫자 단축키에도 동일한 필터가 적용되지만, 검색어를 입력하면 숨겨진 행도 계속 찾습니다.\n-   **`Detached HEAD`(분리된 HEAD)** 작업 공간 — 브랜치가 아닌 커밋에 있는 체크아웃"
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:5": {
-      "sourceHash": "b4f294c2c7154f23e22dabd5a154f3a7aa42576defc0c3032048115d3a510f90",
-      "translated": "장기 작업을 계속 표시하려면 작업 트리를 프로젝트 맨 위에 고정할 수 있으며, 작업 트리를 마우스 오른쪽 버튼으로 클릭하면 보관/절전/삭제 작업이 표시됩니다. 클릭할 때 `ORCA_PROTECTED_0001`(ORCA_PROTECTED_0003에서는 `ORCA_PROTECTED_0002`)을 누르면 작업 트리를 다중 선택에 추가하고, `ORCA_PROTECTED_0004`를 누르면 연속 범위를 선택합니다. 선택된 작업 트리 중 하나를 마우스 오른쪽 버튼으로 클릭하면 선택한 모든 작업 트리에 작업이 적용됩니다. 저장소 행 자체는 드래그하여 순서를 바꿀 수 있습니다."
+      "sourceHash": "1db67e0a64a9ea117f73a8692d0346dc05c774a23263deab9bd5bac025e9e592",
+      "translated": "장기 작업을 계속 표시하려면 작업 트리를 프로젝트 맨 위에 고정할 수 있으며, 작업 트리를 마우스 오른쪽 버튼으로 클릭하면 보관/절전/삭제 작업이 표시됩니다. 키보드로 삭제를 시작하려면 작업 트리 또는 폴더 작업 공간에 마우스를 올리고 macOS에서는 `ORCA_PROTECTED_0001`, Windows/Linux에서는 `ORCA_PROTECTED_0002`를 누릅니다. 일반 확인 대화 상자는 계속 표시됩니다. 클릭할 때 `ORCA_PROTECTED_0003`을 누릅니다(ORCA_PROTECTED_0004는 ORCA_PROTECTED_0005에서 사용합니다). 그러면 작업 트리가 다중 선택에 추가됩니다. `ORCA_PROTECTED_0006`를 누르면 연속 범위를 선택합니다. 선택된 작업 트리 중 하나를 마우스 오른쪽 버튼으로 클릭하면 선택한 모든 작업 트리에 작업이 적용됩니다. 저장소 행 자체는 드래그하여 순서를 바꿀 수 있습니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:6": {
       "sourceHash": "16e24a40c3dc82698786dd479f760eab148adab4aa354abace11b969ba50e3d5",
