@@ -1,7 +1,7 @@
 ---
 title: "작업트리별 브라우저"
 sourceUrl: https://www.onorca.dev/docs/browser/overview
-checkedAt: "2026-09-01T01:03:52.289Z"
+checkedAt: "2026-09-02T01:04:12.540Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/file-explorer/
 next: /orca-docs-ko/docs/browser/design-mode/
@@ -25,6 +25,7 @@ translationNotice:
 -   `Cmd-T` — 이 작업 트리로 범위가 지정된 새 탭을 엽니다.
 -   `Cmd-Shift-T` — 마지막으로 닫은 탭을 다시 엽니다.
 -   `target=_blank`을 사용하는 페이지 링크와 이름이 지정되지 않은 일반 팝업은 링크를 연 탭의 브라우저 프로필을 사용하여 새 Orca 탭에서 열립니다. 이름이 지정되었거나 OAuth 방식인 팝업은 계속 별도 창에서 열릴 수 있습니다.
+-   HTML 미리 보기의 주소 표시줄에는 문서 경로가 표시됩니다. 웹 URL을 입력하면 해당 미리 보기가 그 자리에서 브라우저 탭으로 전환되고, 브라우저 탭에 작업 공간의 HTML 경로를 입력하면 다시 미리 보기로 전환됩니다. 탭에 중간 탐색 기록이 없으면 **`Back`(뒤로)**을 사용해 전환 이전 상태로 돌아갑니다.
 
 ## 작업 트리 범위 지정
 
@@ -51,7 +52,7 @@ SSH 작업 공간에서는 **`Browse through SSH workspace hosts`(SSH 작업 공
 -   링크가 **Orca**에서 열리도록 설정된 경우 수정 키를 사용하면 해당 링크 하나를 시스템 브라우저로 보냅니다.
 -   링크가 **시스템 브라우저**에서 열리도록 설정된 경우 토글을 켜면 수정 키를 사용한 링크 하나가 Orca의 내장 브라우저에서 대신 열립니다. 일반 클릭은 계속 시스템 브라우저에서 열립니다.
 
-기능이 확인된 페어링 런타임은 터미널 링크에도 동일한 Orca/system-browser 선택 항목을 제공할 수 있습니다. SSH 소유 터미널 링크와 이전 런타임의 링크는 계속 시스템 브라우저에서만 열립니다. [Terminal → Link actions(터미널 → 링크 작업)](/orca-docs-ko/docs/terminal/#link-actions)을 참조합니다.
+기능이 확인된 페어링 런타임 또는 적격 SSH 작업 공간은 터미널 링크에도 동일한 Orca/system-browser 선택 항목을 제공할 수 있습니다. 이전 런타임에서 보낸 링크는 계속 시스템 브라우저에서만 열립니다. [Terminal → Link actions(터미널 → 링크 작업)](/orca-docs-ko/docs/terminal/#link-actions)을 참조합니다.
 
 ## 다운로드
 

@@ -1,7 +1,7 @@
 ---
 title: "터미널"
 sourceUrl: https://www.onorca.dev/docs/terminal
-checkedAt: "2026-09-01T01:03:52.289Z"
+checkedAt: "2026-09-02T01:04:12.540Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/profiles/
 next: /orca-docs-ko/docs/ways-to-run/
@@ -35,7 +35,7 @@ Ghostty 스타일 터미널 — 처음 시작할 때 Ghostty 테마, 글꼴 및 
 
 ## 링크 작업
 
-터미널 링크(HTTP/OSC 8 URL, 파일 경로, 작업 공간, 터미널 또는 작업 핸들)를 일반 클릭하면 즉시 이동하는 대신 간결한 작업 팝오버가 열립니다. 로컬 웹 링크와 기능이 확인된 페어링 런타임 소유 링크에는 **`Orca Browser`(Orca 브라우저)**와 **`System Browser`(시스템 브라우저)**가 표시됩니다. SSH 소유 링크와 이전 런타임의 링크는 계속 시스템 브라우저에서만 열립니다. 웹 링크에는 **`Copy link`(링크 복사)**도 표시됩니다. 이 작업은 팝오버를 닫지 않고 숨겨진 OSC 8 대상을 포함해 해석된 URL을 복사하며, 파일과 작업 공간 대상은 변경하지 않습니다. `Cmd`\-click(macOS) / `Ctrl`\-click(Windows/Linux)는 계속 직접 열고, `Shift+Cmd` / `Shift+Ctrl`\-click는 계속 [링크 라우팅](/orca-docs-ko/docs/browser/overview/#link-routing)의 대체 동작을 사용합니다.
+터미널 링크(HTTP/OSC 8 URL, 파일 경로, 작업 공간, 터미널 또는 작업 핸들)를 일반 클릭하면 즉시 이동하는 대신 간결한 작업 팝오버가 열립니다. 로컬 웹 링크와 적격 SSH 작업 공간 또는 기능이 확인된 페어링 런타임이 소유한 링크에는 **`Orca Browser`(Orca 브라우저)**와 **`System Browser`(시스템 브라우저)**가 제공되며, 이전 런타임은 계속 시스템 브라우저에서만 열립니다. 웹 링크에는 **`Copy link`(링크 복사)**도 제공됩니다. 이 작업은 팝오버를 닫지 않고 숨겨진 OSC 8 대상을 포함해 해석된 URL을 복사하며, 파일 및 작업 공간 대상은 변경되지 않습니다. `Cmd`\-click(macOS) / `Ctrl`\-click(Windows/Linux)는 계속 직접 열고, `Shift+Cmd` / `Shift+Ctrl`\-click는 계속 [링크 라우팅](/orca-docs-ko/docs/browser/overview/#link-routing)의 대체 동작을 사용합니다.
 
 미리 볼 수 있는 HTML 파일 링크는 로컬, SSH 및 페어링 런타임 작업 공간에서 Orca로 열 수 있으며, 원격 파일 행에는 **`Download & open with default app`(다운로드 후 기본 앱으로 열기)**도 표시됩니다. 연결된 파일이 형제 작업 공간 탭에서 이미 열려 있으면 Orca는 중복으로 열지 않고 해당 탭을 활성화합니다. [HTML 뷰어](/orca-docs-ko/docs/editing/viewers/#html)를 참조합니다.
 

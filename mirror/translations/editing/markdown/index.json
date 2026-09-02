@@ -3,8 +3,8 @@
   "mirrorPath": "/docs/editing/markdown/",
   "entries": {
     "/docs/editing/markdown/:paragraph:rich-markdown-editor:1": {
-      "sourceHash": "0bf9a415f6b9968d5613bc26f1f2b2746090d8501caa8baf21abdf615ce44d3e",
-      "translated": "300 KB보다 큰 파일은 입력 반응성을 유지하기 위해 ORCA_PROTECTED_0001가 먼저 원시 편집기에서 엽니다. 해당 파일을 리치 편집기에서 사용하려면 대체 배너에서 **`Open anyway`(그래도 열기)**를 선택합니다. 이 선택은 해당 탭을 닫을 때까지 유지됩니다. 리치 편집기에서 안전하게 보존할 수 없는 Markdown 구문을 사용하는 파일은 계속 원시 편집기에서 열립니다."
+      "sourceHash": "3480352123af8d0b41d59b73a14fd5729635af60a0761021462da83dfffd567b",
+      "translated": "600 KB보다 큰 파일은 입력 반응성을 유지하기 위해 ORCA_PROTECTED_0001가 먼저 원시 편집기에서 엽니다. 해당 파일을 리치 편집기에서 사용하려면 대체 배너에서 **`Open anyway`(그래도 열기)**를 선택합니다. 이 선택은 해당 탭을 닫을 때까지 유지됩니다. 리치 편집기에서 안전하게 보존할 수 없는 Markdown 구문을 사용하는 파일은 계속 원시 편집기에서 열립니다."
     },
     "/docs/editing/markdown/:paragraph:tables:2": {
       "sourceHash": "426e5d120989743b4ad881b9fb837496cccfe760f436ec7251cd727779bae991",

@@ -43,8 +43,8 @@
       "translated": "## 컨트롤"
     },
     "/docs/browser/overview/:list:controls:0": {
-      "sourceHash": "118415fdc9003eb24cac400c4b5c4312920e057f79ae2cd154e838d4793ef8ee",
-      "translated": "-   기록 및 퍼지 URL 완성 기능이 있는 주소 표시줄입니다. URL이 아닌 텍스트는 [**`Default Search Engine`(기본 검색 엔진)**](ORCA_PROTECTED_0001), 즉 [새 탭 옴니박스](ORCA_PROTECTED_0002)와 동일한 엔진으로 검색합니다. **+** 필드에서 검색을 강제하려면 검색어 앞에 `ORCA_PROTECTED_0003`을 붙입니다.\n-   뒤로/앞으로/새로고침/중지 컨트롤입니다. 새로고침 컨트롤 위에 마우스를 올리면 일반 새로고침 단축키가 표시됩니다. 마우스 오른쪽 버튼으로 클릭하거나 길게 누르면 **`Reload`(새로고침)** 및 **`Hard Reload`(강력 새로고침)**와 각 단축키가 표시됩니다. 강력 새로고침은 로컬 프런트엔드 자산을 반복 수정할 때 캐시를 우회합니다.\n-   `ORCA_PROTECTED_0004` — 페이지에서 찾습니다.\n-   `ORCA_PROTECTED_0005` — 이 작업 트리로 범위가 지정된 새 탭을 엽니다.\n-   `ORCA_PROTECTED_0006` — 마지막으로 닫은 탭을 다시 엽니다.\n-   `ORCA_PROTECTED_0007`을 사용하는 페이지 링크와 이름이 지정되지 않은 일반 팝업은 링크를 연 탭의 브라우저 프로필을 사용하여 새 ORCA_PROTECTED_0008 탭에서 열립니다. 이름이 지정되었거나 OAuth 방식인 팝업은 계속 별도 창에서 열릴 수 있습니다."
+      "sourceHash": "dbc757d9a04c50ba51ee7b77b87191ba99e3ef886f1f52b31e760103fab98e31",
+      "translated": "-   기록 및 퍼지 URL 완성 기능이 있는 주소 표시줄입니다. URL이 아닌 텍스트는 [**`Default Search Engine`(기본 검색 엔진)**](ORCA_PROTECTED_0001), 즉 [새 탭 옴니박스](ORCA_PROTECTED_0002)와 동일한 엔진으로 검색합니다. **+** 필드에서 검색을 강제하려면 검색어 앞에 `ORCA_PROTECTED_0003`을 붙입니다.\n-   뒤로/앞으로/새로고침/중지 컨트롤입니다. 새로고침 컨트롤 위에 마우스를 올리면 일반 새로고침 단축키가 표시됩니다. 마우스 오른쪽 버튼으로 클릭하거나 길게 누르면 **`Reload`(새로고침)** 및 **`Hard Reload`(강력 새로고침)**와 각 단축키가 표시됩니다. 강력 새로고침은 로컬 프런트엔드 자산을 반복 수정할 때 캐시를 우회합니다.\n-   `ORCA_PROTECTED_0004` — 페이지에서 찾습니다.\n-   `ORCA_PROTECTED_0005` — 이 작업 트리로 범위가 지정된 새 탭을 엽니다.\n-   `ORCA_PROTECTED_0006` — 마지막으로 닫은 탭을 다시 엽니다.\n-   `ORCA_PROTECTED_0007`을 사용하는 페이지 링크와 이름이 지정되지 않은 일반 팝업은 링크를 연 탭의 브라우저 프로필을 사용하여 새 ORCA_PROTECTED_0008 탭에서 열립니다. 이름이 지정되었거나 OAuth 방식인 팝업은 계속 별도 창에서 열릴 수 있습니다.\n-   HTML 미리 보기의 주소 표시줄에는 문서 경로가 표시됩니다. 웹 URL을 입력하면 해당 미리 보기가 그 자리에서 브라우저 탭으로 전환되고, 브라우저 탭에 작업 공간의 HTML 경로를 입력하면 다시 미리 보기로 전환됩니다. 탭에 중간 탐색 기록이 없으면 **`Back`(뒤로)**을 사용해 전환 이전 상태로 돌아갑니다."
     },
     "/docs/browser/overview/:heading:worktree-scoping:0": {
       "sourceHash": "5662d881ef5bd89dd3b99a62a1cdbd96e1f26f85cb458485d9c19364b1206bba",
@@ -111,8 +111,8 @@
       "translated": "-   링크가 **ORCA_PROTECTED_0001**에서 열리도록 설정된 경우 수정 키를 사용하면 해당 링크 하나를 시스템 브라우저로 보냅니다.\n-   링크가 **시스템 브라우저**에서 열리도록 설정된 경우 토글을 켜면 수정 키를 사용한 링크 하나가 ORCA_PROTECTED_0002의 내장 브라우저에서 대신 열립니다. 일반 클릭은 계속 시스템 브라우저에서 열립니다."
     },
     "/docs/browser/overview/:paragraph:link-routing:2": {
-      "sourceHash": "b52497012bceaec945bc241e919fdd35a7b8f017b8e8cf1cf1fb0bdceb6076ad",
-      "translated": "기능이 확인된 페어링 런타임은 터미널 링크에도 동일한 ORCA_PROTECTED_0001 선택 항목을 제공할 수 있습니다. SSH 소유 터미널 링크와 이전 런타임의 링크는 계속 시스템 브라우저에서만 열립니다. [Terminal → Link actions(터미널 → 링크 작업)](ORCA_PROTECTED_0002)을 참조합니다."
+      "sourceHash": "020e0d08c6d54e0836833553a520226ab4fb5701ac5b9d8722896bb09640091d",
+      "translated": "기능이 확인된 페어링 런타임 또는 적격 SSH 작업 공간은 터미널 링크에도 동일한 ORCA_PROTECTED_0001 선택 항목을 제공할 수 있습니다. 이전 런타임에서 보낸 링크는 계속 시스템 브라우저에서만 열립니다. [Terminal → Link actions(터미널 → 링크 작업)](ORCA_PROTECTED_0002)을 참조합니다."
     }
   }
 }

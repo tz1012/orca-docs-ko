@@ -1,7 +1,7 @@
 ---
 title: "모바일 동반자"
 sourceUrl: https://www.onorca.dev/docs/mobile
-checkedAt: "2026-09-01T01:03:52.289Z"
+checkedAt: "2026-09-02T01:04:12.540Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/skills/
 next: /orca-docs-ko/docs/android-apk/
@@ -21,7 +21,7 @@ Orca 모바일 — 상담원 상태, 스크롤백 및 전화기를 통한 빠른
 
 베타
 
-모바일 컴패니언은 베타 버전입니다. [App Store](https://apps.apple.com/us/app/orca-ide/id6766130217)에서 iOS를 설치하거나, [TestFlight 미리 보기 채널](https://testflight.apple.com/join/YjeGMQBA)에 참여하거나, [현재 APK 0.0.47](https://github.com/stablyai/orca/releases/download/mobile-android-v0.0.47/app-release.apk)에서 Android를 설치합니다.
+모바일 컴패니언은 베타 버전입니다. [App Store](https://apps.apple.com/us/app/orca-ide/id6766130217)에서 iOS를 설치하거나, [현재 APK 0.0.47](https://github.com/stablyai/orca/releases/download/mobile-android-v0.0.47/app-release.apk)에서 Android를 설치합니다.
 
 ## 모바일에서 할 수 있는 일
 

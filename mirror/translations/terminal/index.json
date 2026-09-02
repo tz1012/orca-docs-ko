@@ -155,8 +155,8 @@
       "translated": "## 링크 작업"
     },
     "/docs/terminal/:paragraph:link-actions:0": {
-      "sourceHash": "1c5f5e8d50a3ad6fa67b36599603fb77b1c0d438b17d1cb92dff633a313234fd",
-      "translated": "터미널 링크(ORCA_PROTECTED_0001 8 URL, 파일 경로, 작업 공간, 터미널 또는 작업 핸들)를 일반 클릭하면 즉시 이동하는 대신 간결한 작업 팝오버가 열립니다. 로컬 웹 링크와 기능이 확인된 페어링 런타임 소유 링크에는 **`ORCA_PROTECTED_0002 Browser`(Orca 브라우저)**와 **`System Browser`(시스템 브라우저)**가 표시됩니다. SSH 소유 링크와 이전 런타임의 링크는 계속 시스템 브라우저에서만 열립니다. 웹 링크에는 **`Copy link`(링크 복사)**도 표시됩니다. 이 작업은 팝오버를 닫지 않고 숨겨진 OSC 8 대상을 포함해 해석된 URL을 복사하며, 파일과 작업 공간 대상은 변경하지 않습니다. `ORCA_PROTECTED_0003`\\ORCA_PROTECTED_0004(macOS) / `ORCA_PROTECTED_0005`\\ORCA_PROTECTED_0006(Windows/Linux)는 계속 직접 열고, `ORCA_PROTECTED_0007` / `ORCA_PROTECTED_0008`\\ORCA_PROTECTED_0009는 계속 [링크 라우팅](ORCA_PROTECTED_0010)의 대체 동작을 사용합니다."
+      "sourceHash": "32cba037b51cf5d1c4764dc02aeedfb5f66b2963a0e7f87bc719801850cf95fa",
+      "translated": "터미널 링크(ORCA_PROTECTED_0001 8 URL, 파일 경로, 작업 공간, 터미널 또는 작업 핸들)를 일반 클릭하면 즉시 이동하는 대신 간결한 작업 팝오버가 열립니다. 로컬 웹 링크와 적격 SSH 작업 공간 또는 기능이 확인된 페어링 런타임이 소유한 링크에는 **`ORCA_PROTECTED_0002 Browser`(Orca 브라우저)**와 **`System Browser`(시스템 브라우저)**가 제공되며, 이전 런타임은 계속 시스템 브라우저에서만 열립니다. 웹 링크에는 **`Copy link`(링크 복사)**도 제공됩니다. 이 작업은 팝오버를 닫지 않고 숨겨진 OSC 8 대상을 포함해 해석된 URL을 복사하며, 파일 및 작업 공간 대상은 변경되지 않습니다. `ORCA_PROTECTED_0003`\\ORCA_PROTECTED_0004(macOS) / `ORCA_PROTECTED_0005`\\ORCA_PROTECTED_0006(Windows/Linux)는 계속 직접 열고, `ORCA_PROTECTED_0007` / `ORCA_PROTECTED_0008`\\ORCA_PROTECTED_0009는 계속 [링크 라우팅](ORCA_PROTECTED_0010)의 대체 동작을 사용합니다."
     },
     "/docs/terminal/:paragraph:link-actions:1": {
       "sourceHash": "0a2c783e56cbad295648d880b834e9e03390b7f82a94892113fb5eda568222c0",

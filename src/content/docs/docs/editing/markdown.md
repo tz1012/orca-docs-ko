@@ -1,7 +1,7 @@
 ---
 title: "리치 마크다운 편집기"
 sourceUrl: https://www.onorca.dev/docs/editing/markdown
-checkedAt: "2026-09-01T01:03:52.289Z"
+checkedAt: "2026-09-02T01:04:12.540Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/monaco/
 next: /orca-docs-ko/docs/editing/viewers/
@@ -17,7 +17,7 @@ translationNotice:
 
 풍부한 마크다운 편집기 — 슬래시 메뉴, 인라인 미리보기, 내부 링크 자동 완성
 
-300 KB보다 큰 파일은 입력 반응성을 유지하기 위해 Orca가 먼저 원시 편집기에서 엽니다. 해당 파일을 리치 편집기에서 사용하려면 대체 배너에서 **`Open anyway`(그래도 열기)**를 선택합니다. 이 선택은 해당 탭을 닫을 때까지 유지됩니다. 리치 편집기에서 안전하게 보존할 수 없는 Markdown 구문을 사용하는 파일은 계속 원시 편집기에서 열립니다.
+600 KB보다 큰 파일은 입력 반응성을 유지하기 위해 Orca가 먼저 원시 편집기에서 엽니다. 해당 파일을 리치 편집기에서 사용하려면 대체 배너에서 **`Open anyway`(그래도 열기)**를 선택합니다. 이 선택은 해당 탭을 닫을 때까지 유지됩니다. 리치 편집기에서 안전하게 보존할 수 없는 Markdown 구문을 사용하는 파일은 계속 원시 편집기에서 열립니다.
 
 ## 슬래시 메뉴
 
