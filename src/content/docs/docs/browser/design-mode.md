@@ -1,7 +1,7 @@
 ---
 title: "디자인 모드"
 sourceUrl: https://www.onorca.dev/docs/browser/design-mode
-checkedAt: "2026-09-02T01:04:12.540Z"
+checkedAt: "2026-09-03T01:05:09.592Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/overview/
 next: /orca-docs-ko/docs/browser/profiles/
@@ -31,6 +31,10 @@ translationNotice:
 - 개발 모드 소스 맵을 사용할 수 있는 경우 소스 file/line입니다.
 
 이 모든 것이 활성 에이전트 터미널에 하나의 첨부 파일로 제공되며 변경하려는 내용을 입력하면 됩니다.
+
+## 페이지 주석 검토
+
+주석 트레이를 사용하면 페이지에 여러 메모를 모아 두었다가 에이전트에게 전송할 수 있습니다. 메모 위에 포인터를 올리고 **`Edit`(편집)**를 선택하면 해당 위치에서 코멘트나 의도를 수정할 수 있습니다. 작업을 마치면 **`Save`(저장)** 또는 **`Cancel`(취소)**을 선택합니다.
 
 ## 결과 사용
 

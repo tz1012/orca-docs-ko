@@ -45,6 +45,14 @@
     "/docs/browser/design-mode/:paragraph:use-the-result:0": {
       "sourceHash": "f099df3ea4274f0753bb64d05e314086789e7d8b051ed234592538995d17c0d8",
       "translated": "에이전트가 ORCA_PROTECTED_0001 핫 리로드 소스를 편집하면 다시 클릭하여 확인하세요. 이 루프의 가장 엄격한 버전은 영웅 레시피 [디자인 모드로 UI 버그 수정](ORCA_PROTECTED_0002)입니다."
+    },
+    "/docs/browser/design-mode/:heading:review-page-annotations:0": {
+      "sourceHash": "42b8cfef10c56a5ef9bd75755980a7c33a60fdc0dd451677ace199d57f859852",
+      "translated": "## 페이지 주석 검토"
+    },
+    "/docs/browser/design-mode/:paragraph:review-page-annotations:0": {
+      "sourceHash": "1efb813728a65f43f8268455f1ebf504025fbc7e64db13a2086c6a13e531161e",
+      "translated": "주석 트레이를 사용하면 페이지에 여러 메모를 모아 두었다가 에이전트에게 전송할 수 있습니다. 메모 위에 포인터를 올리고 **`Edit`(편집)**를 선택하면 해당 위치에서 코멘트나 의도를 수정할 수 있습니다. 작업을 마치면 **`Save`(저장)** 또는 **`Cancel`(취소)**을 선택합니다."
     }
   }
 }

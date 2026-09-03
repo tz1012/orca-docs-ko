@@ -1,7 +1,7 @@
 ---
 title: "Linear 항목 서랍"
 sourceUrl: https://www.onorca.dev/docs/review/linear
-checkedAt: "2026-09-02T01:04:12.540Z"
+checkedAt: "2026-09-03T01:05:09.592Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/github/
 next: /orca-docs-ko/docs/review/jira/
