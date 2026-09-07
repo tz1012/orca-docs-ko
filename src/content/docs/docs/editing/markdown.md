@@ -1,7 +1,7 @@
 ---
 title: "리치 마크다운 편집기"
 sourceUrl: https://www.onorca.dev/docs/editing/markdown
-checkedAt: "2026-09-03T01:05:09.592Z"
+checkedAt: "2026-09-07T01:10:18.682Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/monaco/
 next: /orca-docs-ko/docs/editing/viewers/
@@ -12,6 +12,8 @@ translationNotice:
 ---
 
 마크다운 파일은 기본적으로 슬래시 메뉴, 도구 모음, 이미지 및 코드에 대한 인라인 미리 보기, 내부 링크 자동 완성 등 다양한 편집기에서 열립니다. `Cmd-Shift-M`을 사용하여 원할 때마다 원시 모나코로 전환하세요.
+
+macOS, Windows, Linux에서는 기존 기본 편집기를 바꾸지 않고 Markdown 파일을 열 수 있는 **`Open With`(연결 프로그램)** 앱으로 Orca 앱이 등록됩니다. 리치 편집기에서 파일을 열려면 운영 체제의 파일 연결 메뉴에서 Orca 앱을 선택합니다.
 
 ![리치 마크다운 편집기 — 슬래시 메뉴, 인라인 미리보기, 내부 링크 자동 완성](/orca-docs-ko/assets/mirror/9d33395b9d561531ddd731a1c759489eeb91e1cfecb76b68ba69308db9817e25.jpg)
 
@@ -64,4 +66,4 @@ YAML 및 TOML 프런트매터는 기본적으로 리치 편집기와 렌더링�
 
 ## 아티팩트로 공유
 
-편집기 헤더에서 **`Share as artifact`(아티팩트로 공유)**를 사용하면 열린 Markdown 파일을 로그인한 Orca 계정을 통해 공개 보기 링크로 게시합니다. 기본적으로 꺼져 있는 **`Settings → Artifacts → Allow publishing public artifact links`(설정 → 아티팩트 → 공개 아티팩트 링크 게시 허용)**를 활성화해야 합니다. Orca에 매핑이 남아 있으면 다시 게시할 때 같은 링크가 업데이트됩니다. 사이드바의 **`Artifacts`(아티팩트)** 페이지에서 링크를 관리하거나 삭제합니다. 에이전트와 스크립트에서는 `orca artifacts share|update|list|delete`을 사용할 수 있습니다. [`CLI reference → Artifacts`(CLI 참조 → 아티팩트)](/orca-docs-ko/docs/cli/reference/#artifacts)를 참조합니다.
+편집기 헤더에서 **`Share as artifact`(아티팩트로 공유)**를 사용하면 열린 Markdown 파일을 로그인한 Orca 계정을 통해 공개 보기 링크로 게시합니다. 최대 **10 MiB**의 파일을 지원합니다. 기본적으로 꺼져 있는 **`Settings → Artifacts → Allow publishing public artifact links`(설정 → 아티팩트 → 공개 아티팩트 링크 게시 허용)**를 활성화해야 합니다. Orca에 매핑이 남아 있으면 다시 게시할 때 같은 링크가 업데이트됩니다. 사이드바의 **`Artifacts`(아티팩트)** 페이지에서 링크를 관리하거나 삭제합니다. 에이전트와 스크립트에서는 `orca artifacts share|update|list|delete`을 사용할 수 있습니다. [`CLI reference → Artifacts`(CLI 참조 → 아티팩트)](/orca-docs-ko/docs/cli/reference/#artifacts)를 참조합니다.

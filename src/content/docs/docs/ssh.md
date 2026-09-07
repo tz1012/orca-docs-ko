@@ -1,7 +1,7 @@
 ---
 title: "SSH 작업 트리"
 sourceUrl: https://www.onorca.dev/docs/ssh
-checkedAt: "2026-09-03T01:05:09.592Z"
+checkedAt: "2026-09-07T01:10:18.682Z"
 editUrl: false
 prev: /orca-docs-ko/docs/ways-to-run/
 next: /orca-docs-ko/docs/remote-servers/

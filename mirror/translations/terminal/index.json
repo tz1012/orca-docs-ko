@@ -50,6 +50,10 @@
       "sourceHash": "e2111ddded0b0b28da4bff1b36e9ecef60f3c86d970fd607feb23cbe51d442b0",
       "translated": "터미널을 마우스 오른쪽 버튼으로 클릭하고 `Copy Context`(컨텍스트 복사)를 선택하여 해당 창에서 제한된 기록을 복사합니다. ORCA_PROTECTED_0001 포크를 시작하지 않고 최근 에이전트 출력을 다른 도구에 붙여넣고 싶을 때 사용합니다."
     },
+    "/docs/terminal/:paragraph:copy-terminal-context:1": {
+      "sourceHash": "f204fe8466e884548c1d430b05e1a1f851e7ac68c487daccca28bda269b06bdb",
+      "translated": "터미널 탭 컨텍스트 메뉴의 **`Copy Session ID`(세션 ID 복사)**를 사용하여 스크립트, 지원 요청 또는 다른 도구에 사용할 세션 식별자를 복사합니다."
+    },
     "/docs/terminal/:heading:themes:0": {
       "sourceHash": "087abce968c8fc3250f517d664d2161942ee9642763a09ce5fe0ec143feeb9a6",
       "translated": "## 테마"

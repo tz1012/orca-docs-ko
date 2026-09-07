@@ -1,7 +1,7 @@
 ---
 title: "차이점 뷰어"
 sourceUrl: https://www.onorca.dev/docs/review/diff-viewer
-checkedAt: "2026-09-03T01:05:09.592Z"
+checkedAt: "2026-09-07T01:10:18.682Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/hooks-memory/
 next: /orca-docs-ko/docs/review/annotate-ai-diff/
@@ -21,6 +21,7 @@ Orca의 diff 뷰어는 AI 생성 코드를 잠깐 살펴보는 것이 아니라 
 -   **`HTML preview`(HTML 미리 보기)**는 **`View all`(모두 보기)** / 결합된 차이에서 작업 트리에 여전히 존재하는 HTML 섹션의 항상 표시되는 파일 열기 컨트롤 옆에 **`Open Preview to the Side`(옆에서 미리 보기 열기)**(눈 모양)를 표시합니다. 미리 보기는 작업 트리의 HTML을 측면 브라우저 분할 창에서 엽니다. 삭제된 HTML 및 커밋 전용 결합 화면에는 눈 모양이 표시되지 않습니다.
 -   **`Merge-conflict UI`(병합 충돌 UI)**는 3방향 보기와 인라인 해결 기능을 제공합니다.
 -   **`Staging by hunk or line`(덩어리 또는 줄별 스테이징)**은 `git add -p`과 동일한 작업을 시각적으로 수행합니다.
+-   **`Show Whitespace`(공백 표시)**는 diff를 검토할 때 스페이스, 탭 및 기타 공백 문자를 표시합니다. diff 뷰어 작업 메뉴에서 전환합니다.
 
 ## 범위 지정
 

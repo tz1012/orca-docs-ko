@@ -214,6 +214,10 @@
       "sourceHash": "7062fea6299eedce682be963a084e7d81188cd424f3f3fdb465001aefee31d3e",
       "translated": "사이드바에서 작업 트리 제목을 두 번 클릭하면 인라인으로 이름을 변경할 수 있습니다. 카드의 다른 위치를 두 번 클릭하면 기존처럼 전체 편집 대화 상자가 열립니다. **`Edit Worktree Details`(작업 트리 세부 정보 편집)**에서 이슈 필드는 **ORCA_PROTECTED_0001** 또는 **ORCA_PROTECTED_0002**를 허용합니다(필드의 칩을 사용하며 URL을 붙여넣으면 자동으로 감지합니다). 작업 공간마다 하나의 이슈만 연결할 수 있으며, 공급자를 변경하거나 필드를 지우면 이전 연결이 해제됩니다. 호스트 연결이 끊긴 SSH 작업 공간에서는 카드 제목 행에 인라인 재연결 컨트롤이 표시될 수 있습니다([SSH 작업 트리](ORCA_PROTECTED_0003) 참조)."
     },
+    "/docs/model/worktrees/:paragraph:sidebar-layout:8": {
+      "sourceHash": "435340db571bcc94eb6eae1a268af5aa000a807c38e813880434f03c93537b52",
+      "translated": "사용자가 작업 공간 이름을 직접 바꾸면 ORCA_PROTECTED_0001는 작업 트리의 브랜치가 변경되어도 해당 표시 이름을 유지합니다. 사용자 지정 이름을 지우면 브랜치에서 자동으로 이름을 만드는 동작을 다시 시작합니다. ORCA_PROTECTED_0002가 생성한 이름은 계속 브랜치를 따릅니다."
+    },
     "/docs/model/worktrees/:heading:resource-manager-cleanup:0": {
       "sourceHash": "9be1e92601a7a0a0604a36e76c583e8c113ace15f63405c5741721a69e2913a4",
       "translated": "## `Resource Manager`(리소스 관리자) 정리"

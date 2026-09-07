@@ -1,7 +1,7 @@
 ---
 title: "터미널"
 sourceUrl: https://www.onorca.dev/docs/terminal
-checkedAt: "2026-09-03T01:05:09.592Z"
+checkedAt: "2026-09-07T01:10:18.682Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/profiles/
 next: /orca-docs-ko/docs/ways-to-run/
@@ -44,6 +44,8 @@ Ghostty 스타일 터미널 — 처음 시작할 때 Ghostty 테마, 글꼴 및 
 ## 터미널 컨텍스트 복사
 
 터미널을 마우스 오른쪽 버튼으로 클릭하고 `Copy Context`(컨텍스트 복사)를 선택하여 해당 창에서 제한된 기록을 복사합니다. Orca 포크를 시작하지 않고 최근 에이전트 출력을 다른 도구에 붙여넣고 싶을 때 사용합니다.
+
+터미널 탭 컨텍스트 메뉴의 **`Copy Session ID`(세션 ID 복사)**를 사용하여 스크립트, 지원 요청 또는 다른 도구에 사용할 세션 식별자를 복사합니다.
 
 ## 테마
 

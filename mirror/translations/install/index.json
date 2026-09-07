@@ -19,8 +19,8 @@
       "translated": "ORCA_PROTECTED_0001은 데스크톱 앱입니다. macOS, Windows 또는 Linux에서 열 수 있는 링크를 자신에게 이메일로 보내세요."
     },
     "/docs/install/:list:download:0": {
-      "sourceHash": "7fa00ad64c9143c8148cea055e015d4a0584d8131a6cb3aff3a4aa347b5555f2",
-      "translated": "- **macOS:** [Apple Silicon](ORCA_PROTECTED_0001) · [Intel](ORCA_PROTECTED_0002)\n\n- **Windows:** [설치 프로그램](ORCA_PROTECTED_0003)\n\n- **Linux:** [앱 이미지](ORCA_PROTECTED_0004) · [.deb](ORCA_PROTECTED_0005)\n\n- 이전 버전: [ORCA_PROTECTED_0006 릴리스](ORCA_PROTECTED_0007)."
+      "sourceHash": "2db56b8db072186a59701bf27b25a08265e289f270c248b35c916ed475759359",
+      "translated": "-   **macOS:** [Apple Silicon](ORCA_PROTECTED_0001) · [Intel](ORCA_PROTECTED_0002)\n\n-   **Windows:** [설치 프로그램](ORCA_PROTECTED_0003)\n\n-   **Linux:** [AppImage](ORCA_PROTECTED_0004) · [.deb](ORCA_PROTECTED_0005) · [.rpm](ORCA_PROTECTED_0006)\n\n-   이전 버전: [ORCA_PROTECTED_0007 릴리스](ORCA_PROTECTED_0008)."
     },
     "/docs/install/:heading:homebrew-macos:0": {
       "sourceHash": "05b500816f3622c0f78bc0ad6e8a7b2f895d9276296d75efba9e440603a9d9da",
@@ -95,8 +95,8 @@
       "translated": "### 리눅스"
     },
     "/docs/install/:paragraph:linux:0": {
-      "sourceHash": "c1e95d1198a5507c89f74ef65dc2518dce5a66ef9f6abba4087c67cd68c2cb73",
-      "translated": "AppImage 및 `ORCA_PROTECTED_0001` 빌드를 사용할 수 있습니다. 자세한 내용은 릴리스 페이지를 참조하세요."
+      "sourceHash": "403a82356846ae6fb06f629375e8a7397edbb3ae94bd138865a0208db2b37f77",
+      "translated": "자동 업데이트 기능을 사용하려면 ORCA_PROTECTED_0001 AppImage를 선택합니다. `ORCA_PROTECTED_0002` 및 `ORCA_PROTECTED_0003` 패키지는 사용 가능한 업데이트를 알리고 설치에 사용할 패키지 관리자 명령을 제공합니다. 해당 명령을 실행하기 전에 ORCA_PROTECTED_0004 앱을 종료합니다. Linux CLI의 이름은 GNOME ORCA_PROTECTED_0006 스크린 리더와 충돌하지 않도록 `ORCA_PROTECTED_0005`입니다."
     },
     "/docs/install/:table:updates:0": {
       "sourceHash": "b0aa2b88081d126fd121d39a4fefb5a476f6b91fa868f88c42ab1221ce459d48",

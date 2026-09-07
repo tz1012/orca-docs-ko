@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-09-03T01:05:09.592Z"
+checkedAt: "2026-09-07T01:10:18.682Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -87,11 +87,11 @@ translationNotice:
 
 ## 아티팩트
 
--   **Orca `account`(계정)** — 파일을 게시하고 관리하려면 로그인합니다. Orca Relay와 같은 계정 계열을 사용합니다.
--   **`Allow publishing public artifact links`(공개 아티팩트 링크 게시 허용)** — **기본적으로 꺼져 있습니다**. 기기 전체에 적용되는 설정으로, 켜면 사용자, 에이전트 및 이 컴퓨터의 `orca` CLI가 HTML/Markdown을 업로드하고 공개 보기 링크를 만들 수 있습니다. 설정을 꺼도 기존 링크는 삭제되지 않습니다.
+-   **`Orca account`(Orca 계정)** — 공유 파일을 게시하고 관리하려면 로그인합니다. Orca Relay와 같은 계정 계열을 사용합니다.
+-   **`Allow publishing public artifact links`(공개 아티팩트 링크 게시 허용)** — **기본적으로 꺼져 있습니다**. 기기 전체에 적용되는 설정으로, 켜면 사용자, 에이전트 및 이 컴퓨터의 `orca` CLI가 최대 **10 MiB**의 HTML/Markdown을 업로드하고 공개 보기 링크를 만들 수 있습니다. 설정을 꺼도 기존 링크는 삭제되지 않습니다.
 -   **`Show Artifacts`(아티팩트 표시)**/사이드바 바로 가기 — `Artifacts`(아티팩트) 목록을 열어 계정 소유 링크를 검색하고, 미리 보고, 복사하거나 삭제합니다.
 -   **`Ask Before Deleting Artifacts`(아티팩트 삭제 전 확인)** — 공개 링크를 끊기 전에 선택적으로 확인합니다.
--   열린 로컬 HTML 페이지나 Markdown 편집기에서 **`Share as artifact`(아티팩트로 공유)**를 사용하거나 `orca artifacts …`을 통해 공유합니다. [CLI reference → Artifacts(CLI 참조 → 아티팩트)](/orca-docs-ko/docs/cli/reference/#artifacts)를 참조합니다.
+-   열린 로컬 HTML 페이지나 Markdown 편집기에서 **`Share as artifact`(아티팩트로 공유)**를 사용하거나 `orca artifacts …`을 통해 공유합니다. [`CLI reference → Artifacts`(CLI 참조 → 아티팩트)](/orca-docs-ko/docs/cli/reference/#artifacts)를 참조합니다.
 
 ## 통합
 

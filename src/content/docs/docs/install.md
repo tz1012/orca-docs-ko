@@ -1,7 +1,7 @@
 ---
 title: "설치"
 sourceUrl: https://www.onorca.dev/docs/install
-checkedAt: "2026-09-03T01:05:09.592Z"
+checkedAt: "2026-09-07T01:10:18.682Z"
 editUrl: false
 prev: /orca-docs-ko/docs/
 next: /orca-docs-ko/docs/first-session/
@@ -17,13 +17,13 @@ macOS, Windows 또는 Linux용 Orca을 다운로드하고 RC 빌드를 선택하
 
 Orca은 데스크톱 앱입니다. macOS, Windows 또는 Linux에서 열 수 있는 링크를 자신에게 이메일로 보내세요.
 
-- **macOS:** [Apple Silicon](https://github.com/stablyai/orca/releases/latest/download/orca-macos-arm64.dmg) · [Intel](https://github.com/stablyai/orca/releases/latest/download/orca-macos-x64.dmg)
+-   **macOS:** [Apple Silicon](https://github.com/stablyai/orca/releases/latest/download/orca-macos-arm64.dmg) · [Intel](https://github.com/stablyai/orca/releases/latest/download/orca-macos-x64.dmg)
 
-- **Windows:** [설치 프로그램](https://github.com/stablyai/orca/releases/latest/download/orca-windows-setup.exe)
+-   **Windows:** [설치 프로그램](https://github.com/stablyai/orca/releases/latest/download/orca-windows-setup.exe)
 
-- **Linux:** [앱 이미지](https://github.com/stablyai/orca/releases/latest/download/orca-linux.AppImage) · [.deb](https://github.com/stablyai/orca/releases)
+-   **Linux:** [AppImage](https://github.com/stablyai/orca/releases/latest/download/orca-linux.AppImage) · [.deb](https://github.com/stablyai/orca/releases) · [.rpm](https://github.com/stablyai/orca/releases)
 
-- 이전 버전: [GitHub 릴리스](https://github.com/stablyai/orca/releases).
+-   이전 버전: [GitHub 릴리스](https://github.com/stablyai/orca/releases).
 
 ### 홈브루(macOS)
 
@@ -73,4 +73,4 @@ RC 채널을 항상 사용하도록 설정하는 앱 내 옵션은 없습니다.
 
 ### 리눅스
 
-AppImage 및 `.deb` 빌드를 사용할 수 있습니다. 자세한 내용은 릴리스 페이지를 참조하세요.
+자동 업데이트 기능을 사용하려면 Orca AppImage를 선택합니다. `.deb` 및 `.rpm` 패키지는 사용 가능한 업데이트를 알리고 설치에 사용할 패키지 관리자 명령을 제공합니다. 해당 명령을 실행하기 전에 Orca 앱을 종료합니다. Linux CLI의 이름은 GNOME Orca 스크린 리더와 충돌하지 않도록 `orca-ide`입니다.

@@ -155,6 +155,10 @@
       "translated": "자동화 목록이 열려 있을 때 검색 필드에 입력하고 **`ArrowUp`(위쪽 화살표)** 또는 **`ArrowDown`(아래쪽 화살표)**을 눌러 표시된 일치 행 사이에서 선택 항목을 이동합니다. 목록은 선택된 행이 보이도록 유지합니다. 보조 키와 함께 입력하거나 IME 조합 중일 때에는 일반적인 커서 동작을 유지합니다."
     },
     "/docs/cli/automations/:paragraph:review-and-enable:4": {
+      "sourceHash": "a8fef328e6ca9227dc8bb34a2c34da08bfc19015702c838f1527a908d33d84f0",
+      "translated": "자동화 세부 정보에서도 키보드 탐색을 사용할 수 있습니다. **`Enter`(Enter 키)**를 눌러 선택한 자동화 또는 실행을 열고, **`ArrowUp`(위쪽 화살표)** / **`ArrowDown`(아래쪽 화살표)**을 눌러 실행 기록을 이동하며, **`ArrowLeft`(왼쪽 화살표)** / **`ArrowRight`(오른쪽 화살표)**을 눌러 `Overview`(개요)와 `Runs`(실행) 사이를 전환합니다. **`Escape`(Escape 키)**를 누르면 세부 정보 보기에서 목록으로 돌아갑니다."
+    },
+    "/docs/cli/automations/:paragraph:review-and-enable:5": {
       "sourceHash": "e9af02ebfeef91a4903030f2a8ea1c1dfe07462842ff8196b6fbe0ece5436810",
       "translated": "이름, 프롬프트, 공급자, 대상, 일정 또는 활성화 상태를 변경하려면 `ORCA_PROTECTED_0001`을 사용합니다. `ORCA_PROTECTED_0002`는 자동화와 실행 기록을 삭제합니다."
     }

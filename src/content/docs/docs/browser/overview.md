@@ -1,7 +1,7 @@
 ---
 title: "작업트리별 브라우저"
 sourceUrl: https://www.onorca.dev/docs/browser/overview
-checkedAt: "2026-09-03T01:05:09.592Z"
+checkedAt: "2026-09-07T01:10:18.682Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/file-explorer/
 next: /orca-docs-ko/docs/browser/design-mode/
@@ -60,7 +60,7 @@ SSH 작업 공간에서는 **`Browse through SSH workspace hosts`(SSH 작업 공
 
 ## 아티팩트로 공유
 
-작업 트리 브라우저에서 연 로컬 HTML 파일은 도구 모음의 **`Share as artifact`(아티팩트로 공유)**를 사용하여 로그인한 Orca 계정을 통해 공개 보기 링크를 만들 수 있습니다. Markdown과 동일한 명시적 활성화 설정 및 관리 화면을 사용합니다. 상대 경로 HTML 자산은 업로드되지 않으므로 자체 완결형 파일을 공유하거나 절대 자산 URL을 사용합니다. [`Settings → Artifacts`(설정 → 아티팩트)](/orca-docs-ko/docs/settings/#artifacts) 및 [`CLI reference → Artifacts`(CLI 참조 → 아티팩트)](/orca-docs-ko/docs/cli/reference/#artifacts)를 참조합니다.
+작업 트리 브라우저에서 연 로컬 HTML 파일은 도구 모음의 **`Share as artifact`(아티팩트로 공유)**를 사용하여 로그인한 Orca 계정을 통해 공개 보기 링크를 만들 수 있습니다. Markdown과 동일한 명시적 활성화 설정 및 관리 화면을 사용합니다. 공유 콘텐츠는 파일당 **10 MiB**로 제한됩니다. 상대 경로 HTML 자산은 업로드되지 않으므로 자체 완결형 파일을 공유하거나 절대 자산 URL을 사용합니다. [`Settings → Artifacts`(설정 → 아티팩트)](/orca-docs-ko/docs/settings/#artifacts) 및 [`CLI reference → Artifacts`(CLI 참조 → 아티팩트)](/orca-docs-ko/docs/cli/reference/#artifacts)를 참조합니다.
 
 ## 뷰포트 크기 에뮬레이션
 

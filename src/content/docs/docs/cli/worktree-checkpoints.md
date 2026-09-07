@@ -1,7 +1,7 @@
 ---
 title: "워크트리 체크포인트"
 sourceUrl: https://www.onorca.dev/docs/cli/worktree-checkpoints
-checkedAt: "2026-09-03T01:05:09.592Z"
+checkedAt: "2026-09-07T01:10:18.682Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/computer-use/
 next: /orca-docs-ko/docs/cli/skills/

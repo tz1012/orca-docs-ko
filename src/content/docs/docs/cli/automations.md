@@ -1,7 +1,7 @@
 ---
 title: "예약된 자동화"
 sourceUrl: https://www.onorca.dev/docs/cli/automations
-checkedAt: "2026-09-03T01:05:09.592Z"
+checkedAt: "2026-09-07T01:10:18.682Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/orchestration/
 next: /orca-docs-ko/docs/cli/computer-use/
@@ -126,6 +126,8 @@ orca automations edit <automationId> --enabled --json
 **`Filters`(필터)**를 사용하여 **`Host`(호스트)**, **`Enabled`(활성화됨)** 또는 **`Paused`(일시 중지됨)** 상태, 마지막 실행 결과인 **`Failed`(실패)**, **`Succeeded`(성공)** 또는 **`Never ran`(실행 기록 없음)**, 하나 이상의 **`Agents`(에이전트)**를 기준으로 목록을 좁힙니다. 목록이 길면 에이전트 하위 메뉴에서 검색합니다. 활성 필터는 표 위에 개별적으로 제거할 수 있는 필로 표시됩니다. 표에는 각 자동화의 호스트, 마지막 실행 결과 및 상대 시간이 표시됩니다. **`Name`(이름)** 또는 **`Last run`(마지막 실행)** 열을 클릭하여 정렬합니다. 이름은 사전순으로 정렬되며, 마지막 실행은 기본적으로 최신순으로 정렬됩니다.
 
 자동화 목록이 열려 있을 때 검색 필드에 입력하고 **`ArrowUp`(위쪽 화살표)** 또는 **`ArrowDown`(아래쪽 화살표)**을 눌러 표시된 일치 행 사이에서 선택 항목을 이동합니다. 목록은 선택된 행이 보이도록 유지합니다. 보조 키와 함께 입력하거나 IME 조합 중일 때에는 일반적인 커서 동작을 유지합니다.
+
+자동화 세부 정보에서도 키보드 탐색을 사용할 수 있습니다. **`Enter`(Enter 키)**를 눌러 선택한 자동화 또는 실행을 열고, **`ArrowUp`(위쪽 화살표)** / **`ArrowDown`(아래쪽 화살표)**을 눌러 실행 기록을 이동하며, **`ArrowLeft`(왼쪽 화살표)** / **`ArrowRight`(오른쪽 화살표)**을 눌러 `Overview`(개요)와 `Runs`(실행) 사이를 전환합니다. **`Escape`(Escape 키)**를 누르면 세부 정보 보기에서 목록으로 돌아갑니다.
 
 이름, 프롬프트, 공급자, 대상, 일정 또는 활성화 상태를 변경하려면 `edit`을 사용합니다. `remove`는 자동화와 실행 기록을 삭제합니다.
 

@@ -1,7 +1,7 @@
 ---
 title: "퀵 오픈 & 점프 팔레트"
 sourceUrl: https://www.onorca.dev/docs/model/quick-open
-checkedAt: "2026-09-03T01:05:09.592Z"
+checkedAt: "2026-09-07T01:10:18.682Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/session-restore/
 next: /orca-docs-ko/docs/agents/supported/
@@ -22,6 +22,8 @@ Cmd-J 범위는 작업 트리, 최근 항목 및 탭 간에 이동합니다.
 ## 새 탭 옴니박스(+)
 
 탭 표시줄의 **+** 옴니박스는 **열린 탭**, 파일, URL 및 에이전트를 한 필드에서 검색합니다(자리 표시자: *`Search open tabs, files, URLs, agents…`(열린 탭, 파일, URL, 에이전트 검색…)*). 파일 행은 빠른 열기와 동일하게 파일 이름을 먼저 표시합니다. 이미 열린 편집기 탭과 일치하면 중복 파일 결과보다 해당 탭을 우선하므로, 파일을 두 번째로 열지 않고 열린 버퍼로 이동합니다.
+
+**`+`(새 탭)** 옴니박스에서는 이 작업 트리의 브라우저 기록도 검색합니다. 일치하는 방문 기록은 URL 및 페이지 제목 제안으로 표시되며, 일치 정도와 최근 방문 시점을 기준으로 순위가 정해집니다.
 
 경로나 URL 대신 웹 검색어를 입력하면 작업 트리 브라우저에서 [**`Default Search Engine`(기본 검색 엔진)**](/orca-docs-ko/docs/settings/)으로 검색 결과를 엽니다. 토큰이 하나뿐이면 파일 일치 항목을 계속 우선하고, 여러 단어로 된 구문이면 검색 행을 위로 올립니다. 파일 및 탭 일치 과정을 건너뛰고 즉시 검색하려면 검색어 앞에 `?`을 붙입니다.
 

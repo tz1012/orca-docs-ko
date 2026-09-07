@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 참조"
 sourceUrl: https://www.onorca.dev/docs/cli/reference
-checkedAt: "2026-09-03T01:05:09.592Z"
+checkedAt: "2026-09-07T01:10:18.682Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/overview/
 next: /orca-docs-ko/docs/cli/orchestration/
@@ -308,6 +308,7 @@ orca artifacts delete <id> --json
 ```
 
 -   허용되는 파일 형식은 `.html`, `.htm`, `.md`, `.markdown`입니다.
+-   공유 아티팩트 콘텐츠는 파일당 **10 MiB**로 제한됩니다.
 -   `share`는 편집 토큰을 활성 Orca 프로필에 저장하며 출력하지 않습니다. `update`과 `unshare`은 파일을 처음 공유한 것과 같은 로컬 경로 및 프로필을 기준으로 대상을 찾습니다.
 -   `list`는 페이지를 나누며(`nextCursor` → `--cursor`), `delete`는 `list`에서 확인한 아티팩트 ID를 사용하므로 원본 파일이 필요하지 않습니다.
 -   상대 경로 HTML 자산은 업로드되지 않으므로 자체 완결형 HTML 또는 절대 자산 URL을 공유합니다.

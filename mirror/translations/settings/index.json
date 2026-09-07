@@ -7,8 +7,8 @@
       "translated": "## 아티팩트"
     },
     "/docs/settings/:list:artifacts:0": {
-      "sourceHash": "468d61c121ea75e38231ab2a32c73897e88c8efa151a6150463ada1f700d38e0",
-      "translated": "-   **ORCA_PROTECTED_0001 `account`(계정)** — 파일을 게시하고 관리하려면 로그인합니다. ORCA_PROTECTED_0002 Relay와 같은 계정 계열을 사용합니다.\n-   **`Allow publishing public artifact links`(공개 아티팩트 링크 게시 허용)** — **기본적으로 꺼져 있습니다**. 기기 전체에 적용되는 설정으로, 켜면 사용자, 에이전트 및 이 컴퓨터의 `ORCA_PROTECTED_0003` CLI가 ORCA_PROTECTED_0004을 업로드하고 공개 보기 링크를 만들 수 있습니다. 설정을 꺼도 기존 링크는 삭제되지 않습니다.\n-   **`Show Artifacts`(아티팩트 표시)**/사이드바 바로 가기 — `Artifacts`(아티팩트) 목록을 열어 계정 소유 링크를 검색하고, 미리 보고, 복사하거나 삭제합니다.\n-   **`Ask Before Deleting Artifacts`(아티팩트 삭제 전 확인)** — 공개 링크를 끊기 전에 선택적으로 확인합니다.\n-   열린 로컬 HTML 페이지나 Markdown 편집기에서 **`Share as artifact`(아티팩트로 공유)**를 사용하거나 `ORCA_PROTECTED_0005`을 통해 공유합니다. [CLI reference → Artifacts(CLI 참조 → 아티팩트)](ORCA_PROTECTED_0006)를 참조합니다."
+      "sourceHash": "99f4c862b0ff7d06aab78eed19dfa365ed06f3955d6bde7cbc236339382a33dc",
+      "translated": "-   **`ORCA_PROTECTED_0001 account`(Orca 계정)** — 공유 파일을 게시하고 관리하려면 로그인합니다. ORCA_PROTECTED_0002 Relay와 같은 계정 계열을 사용합니다.\n-   **`Allow publishing public artifact links`(공개 아티팩트 링크 게시 허용)** — **기본적으로 꺼져 있습니다**. 기기 전체에 적용되는 설정으로, 켜면 사용자, 에이전트 및 이 컴퓨터의 `ORCA_PROTECTED_0003` CLI가 최대 **10 MiB**의 ORCA_PROTECTED_0004을 업로드하고 공개 보기 링크를 만들 수 있습니다. 설정을 꺼도 기존 링크는 삭제되지 않습니다.\n-   **`Show Artifacts`(아티팩트 표시)**/사이드바 바로 가기 — `Artifacts`(아티팩트) 목록을 열어 계정 소유 링크를 검색하고, 미리 보고, 복사하거나 삭제합니다.\n-   **`Ask Before Deleting Artifacts`(아티팩트 삭제 전 확인)** — 공개 링크를 끊기 전에 선택적으로 확인합니다.\n-   열린 로컬 HTML 페이지나 Markdown 편집기에서 **`Share as artifact`(아티팩트로 공유)**를 사용하거나 `ORCA_PROTECTED_0005`을 통해 공유합니다. [`CLI reference → Artifacts`(CLI 참조 → 아티팩트)](ORCA_PROTECTED_0006)를 참조합니다."
     },
     "/docs/settings/:heading:settings-reference:0": {
       "sourceHash": "db1ec37fb568b721b3f74e9fbaa1227a1d50de56bafee128b2b3567c3bb5b9b9",

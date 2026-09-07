@@ -67,6 +67,10 @@
       "translated": "바로가기 바인딩은 [설정 → 바로가기](ORCA_PROTECTED_0001)에서 다시 매핑할 수 있습니다."
     },
     "/docs/model/quick-open/:paragraph:new-tab-omnibox:1": {
+      "sourceHash": "4c38c2c26605931fed2be59c212b00dba2224262d27207b841778a748143821e",
+      "translated": "**`+`(새 탭)** 옴니박스에서는 이 작업 트리의 브라우저 기록도 검색합니다. 일치하는 방문 기록은 URL 및 페이지 제목 제안으로 표시되며, 일치 정도와 최근 방문 시점을 기준으로 순위가 정해집니다."
+    },
+    "/docs/model/quick-open/:paragraph:new-tab-omnibox:2": {
       "sourceHash": "bbf970349f3f7eabcebc007cdf5122a9e7f301d1af30514ec34a5d974ef4c195",
       "translated": "경로나 URL 대신 웹 검색어를 입력하면 작업 트리 브라우저에서 [**`Default Search Engine`(기본 검색 엔진)**](ORCA_PROTECTED_0001)으로 검색 결과를 엽니다. 토큰이 하나뿐이면 파일 일치 항목을 계속 우선하고, 여러 단어로 된 구문이면 검색 행을 위로 올립니다. 파일 및 탭 일치 과정을 건너뛰고 즉시 검색하려면 검색어 앞에 `ORCA_PROTECTED_0002`을 붙입니다."
     }
