@@ -1,7 +1,7 @@
 ---
 title: "작업트리별 브라우저"
 sourceUrl: https://www.onorca.dev/docs/browser/overview
-checkedAt: "2026-09-09T01:02:36.462Z"
+checkedAt: "2026-09-15T01:02:37.902Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/file-explorer/
 next: /orca-docs-ko/docs/browser/design-mode/
@@ -25,6 +25,7 @@ translationNotice:
 -   `Cmd-T` — 이 작업 트리로 범위가 지정된 새 탭을 엽니다.
 -   `Cmd-Shift-T` — 마지막으로 닫은 탭을 다시 엽니다.
 -   `target=_blank`을 사용하는 페이지 링크와 이름이 지정되지 않은 일반 팝업은 링크를 연 탭의 브라우저 프로필을 사용하여 새 Orca 탭에서 열립니다. 이름이 지정되었거나 OAuth 방식인 팝업은 계속 별도 창에서 열릴 수 있습니다.
+-   새 탭은 활성 상태가 아니어도 백그라운드에서 불러오므로 전환할 때 URL, 제목 및 탐색 상태가 준비되어 있습니다. 복원된 비활성 탭은 계속 지연 로드될 수 있습니다.
 -   HTML 미리 보기의 주소 표시줄에는 문서 경로가 표시됩니다. 웹 URL을 입력하면 해당 미리 보기가 그 자리에서 브라우저 탭으로 전환되고, 브라우저 탭에 작업 공간의 HTML 경로를 입력하면 다시 미리 보기로 전환됩니다. 탭에 중간 탐색 기록이 없으면 **`Back`(뒤로)**을 사용해 전환 이전 상태로 돌아갑니다.
 
 ## 작업 트리 범위 지정

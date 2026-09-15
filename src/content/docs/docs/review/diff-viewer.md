@@ -1,7 +1,7 @@
 ---
 title: "차이점 뷰어"
 sourceUrl: https://www.onorca.dev/docs/review/diff-viewer
-checkedAt: "2026-09-09T01:02:36.462Z"
+checkedAt: "2026-09-15T01:02:37.902Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/hooks-memory/
 next: /orca-docs-ko/docs/review/annotate-ai-diff/

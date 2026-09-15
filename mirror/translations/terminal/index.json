@@ -165,6 +165,14 @@
     "/docs/terminal/:paragraph:link-actions:1": {
       "sourceHash": "0a2c783e56cbad295648d880b834e9e03390b7f82a94892113fb5eda568222c0",
       "translated": "미리 볼 수 있는 HTML 파일 링크는 로컬, SSH 및 페어링 런타임 작업 공간에서 ORCA_PROTECTED_0001로 열 수 있으며, 원격 파일 행에는 **`Download & open with default app`(다운로드 후 기본 앱으로 열기)**도 표시됩니다. 연결된 파일이 형제 작업 공간 탭에서 이미 열려 있으면 ORCA_PROTECTED_0002는 중복으로 열지 않고 해당 탭을 활성화합니다. [HTML 뷰어](ORCA_PROTECTED_0003)를 참조합니다."
+    },
+    "/docs/terminal/:heading:color-contrast:0": {
+      "sourceHash": "b11e67e0a7b32fed2dd0e5cb3979034980cc4683b7e8bcad9959979769c9969b",
+      "translated": "## 색상 대비"
+    },
+    "/docs/terminal/:paragraph:color-contrast:0": {
+      "sourceHash": "bb7a9ffc4c072799a3a07bd970167ea98882f8aaa75566e6eb89e21802c1cb72",
+      "translated": "**`Settings → Terminal → Rendering → Color Contrast`(설정 → 터미널 → 렌더링 → 색상 대비)**에서 **`Automatic`(자동)**을 선택하면 ORCA_PROTECTED_0001가 터미널 텍스트를 읽기 쉽게 유지합니다. **`Off`(끔)**를 선택하면 테마의 흐린 색상과 Powerline 색상을 그대로 유지하며, **`Custom`(사용자 지정)**을 선택하면 대비 목표를 1~21 사이로 설정할 수 있습니다."
     }
   }
 }

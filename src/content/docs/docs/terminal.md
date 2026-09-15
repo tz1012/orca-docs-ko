@@ -1,7 +1,7 @@
 ---
 title: "터미널"
 sourceUrl: https://www.onorca.dev/docs/terminal
-checkedAt: "2026-09-09T01:02:36.462Z"
+checkedAt: "2026-09-15T01:02:37.902Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/profiles/
 next: /orca-docs-ko/docs/ways-to-run/
@@ -50,6 +50,10 @@ Ghostty 스타일 터미널 — 처음 시작할 때 Ghostty 테마, 글꼴 및 
 ## 테마
 
 터미널 색상 테마는 [설정 → 터미널](/orca-docs-ko/docs/settings/)에서 구성할 수 있습니다. Orca는 인기 있는 테마 라이브러리를 제공하며 이를 사용자 정의할 수 있습니다.
+
+## 색상 대비
+
+**`Settings → Terminal → Rendering → Color Contrast`(설정 → 터미널 → 렌더링 → 색상 대비)**에서 **`Automatic`(자동)**을 선택하면 Orca가 터미널 텍스트를 읽기 쉽게 유지합니다. **`Off`(끔)**를 선택하면 테마의 흐린 색상과 Powerline 색상을 그대로 유지하며, **`Custom`(사용자 지정)**을 선택하면 대비 목표를 1~21 사이로 설정할 수 있습니다.
 
 ## 유령 가져오기
 
