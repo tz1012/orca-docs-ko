@@ -187,8 +187,8 @@
       "translated": "-   **`Sleeping`(절전 중)** 작업 공간 — 이 필터에서도 각 프로젝트의 **`entry-point / main`(진입점/기본)** 작업 공간이 계속 표시되어 해당 체크아웃이 유휴 상태일 때 프로젝트 행이 사라지지 않습니다.\n-   **`Except default branch`(기본 브랜치 제외)**(**`Hide sleeping`(절전 중인 항목 숨기기)**이 켜진 동안만) — 절전 중인 항목을 정리할 때 기본 브랜치 작업 공간을 계속 표시합니다. 절전 중인 작업 공간이 이미 표시되는 경우 이 하위 옵션은 숨겨집니다.\n-   **`Default branch`(기본 브랜치)** 작업 공간(기본 체크아웃 행)\n-   **`Automation-created`(자동화에서 생성됨)** 작업 공간\n-   **`CLI-created`(CLI에서 생성됨)** 작업 공간 — `ORCA_PROTECTED_0001`을 통해 생성됩니다(카드에 마우스를 올리면 **`ORCA_PROTECTED_0002 CLI`(Orca CLI)** 출처 세부 정보가 표시됩니다).\n-   **`Other-client`(다른 클라이언트)** 작업 공간 — 공유 [원격 ORCA_PROTECTED_0003 서버](ORCA_PROTECTED_0004)에 다른 페어링 클라이언트가 만든 작업 공간이 있으면 **`Hide other-client workspaces`(다른 클라이언트의 작업 공간 숨기기)**가 표시됩니다. 이 옵션을 켜면 이 기기의 목록에는 여기서 만든 작업 공간만 유지됩니다. 빈 `ORCA_PROTECTED_0005` 최근 항목과 숫자 단축키에도 동일한 필터가 적용되지만, 검색어를 입력하면 숨겨진 행도 계속 찾습니다.\n-   **`Detached HEAD`(분리된 HEAD)** 작업 공간 — 브랜치가 아닌 커밋에 있는 체크아웃"
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:5": {
-      "sourceHash": "1db67e0a64a9ea117f73a8692d0346dc05c774a23263deab9bd5bac025e9e592",
-      "translated": "장기 작업을 계속 표시하려면 작업 트리를 프로젝트 맨 위에 고정할 수 있으며, 작업 트리를 마우스 오른쪽 버튼으로 클릭하면 보관/절전/삭제 작업이 표시됩니다. 키보드로 삭제를 시작하려면 작업 트리 또는 폴더 작업 공간에 마우스를 올리고 macOS에서는 `ORCA_PROTECTED_0001`, Windows/Linux에서는 `ORCA_PROTECTED_0002`를 누릅니다. 일반 확인 대화 상자는 계속 표시됩니다. 클릭할 때 `ORCA_PROTECTED_0003`을 누릅니다(ORCA_PROTECTED_0004는 ORCA_PROTECTED_0005에서 사용합니다). 그러면 작업 트리가 다중 선택에 추가됩니다. `ORCA_PROTECTED_0006`를 누르면 연속 범위를 선택합니다. 선택된 작업 트리 중 하나를 마우스 오른쪽 버튼으로 클릭하면 선택한 모든 작업 트리에 작업이 적용됩니다. 저장소 행 자체는 드래그하여 순서를 바꿀 수 있습니다."
+      "sourceHash": "174c1e393db1a0842b9d69bf009d10755c5e875f75314b3f6d145610faeccdd2",
+      "translated": "장기 실행 작업을 계속 눈에 띄게 하려면 작업 트리를 해당 프로젝트 맨 위에 고정할 수 있으며, 작업 트리를 마우스 오른쪽 버튼으로 클릭하면 `archive`(보관) / `sleep`(절전) / `delete`(삭제) 작업이 표시됩니다. 키보드로 삭제를 시작하려면 작업 트리 또는 폴더 작업 공간에 마우스를 올리고 macOS에서는 `ORCA_PROTECTED_0001`, Windows/Linux에서는 `ORCA_PROTECTED_0002`를 누릅니다. 일반 확인 대화 상자는 그대로 나타납니다. 클릭할 때 `ORCA_PROTECTED_0003`(`ORCA_PROTECTED_0004`은 ORCA_PROTECTED_0005에서 사용)을 누르면 작업 트리를 다중 선택에 추가하고, `ORCA_PROTECTED_0006`를 누르면 연속 범위를 선택합니다. 선택한 작업 트리 중 하나를 마우스 오른쪽 버튼으로 클릭하면 선택 항목의 모든 작업 트리에 작업이 적용됩니다. 저장소 행 자체는 드래그하여 순서를 바꿀 수 있습니다. 행을 드래그할 때 중첩 대상은 넓고 안정적인 드롭 영역으로 표시됩니다. 행의 위나 아래로 드래그해 순서를 바꾸고, `ORCA_PROTECTED_0007`를 눌러 취소합니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:6": {
       "sourceHash": "16e24a40c3dc82698786dd479f760eab148adab4aa354abace11b969ba50e3d5",
@@ -223,8 +223,8 @@
       "translated": "## `Resource Manager`(리소스 관리자) 정리"
     },
     "/docs/model/worktrees/:paragraph:resource-manager-cleanup:0": {
-      "sourceHash": "a49eca1e3956c6916b59490b6efe9b32e019d3d0573de6ca94d1aa2b10c87e44",
-      "translated": "제거하기 전에 사용 환경 전반의 작업 공간을 검토해야 할 때 **`Resource Manager → Clean up workspaces`(리소스 관리자 → 작업 공간 정리)**를 사용합니다. 목록에는 로컬 작업 트리, 메인 작업 트리, 폴더 작업 공간 및 연결이 끊긴 SSH 호스트의 작업 공간이 포함됩니다. 제거할 항목을 선택하기 전에 목록을 검색하거나 필터링하거나 정렬하여 각 작업 공간의 상태, 최근 활동, 크기, Git 상태 및 연결된 리뷰를 확인합니다."
+      "sourceHash": "b7d8920622ecc210768256e2dde3a0b56ac25ba5fcfdf3203e5503dc8f9702d6",
+      "translated": "제거하기 전에 사용 환경 전반의 작업 공간을 검토해야 할 때 **`Resource Manager → Clean up workspaces`(리소스 관리자 → 작업 공간 정리)**를 사용합니다. 목록에는 로컬 작업 트리, 메인 작업 트리, 폴더 작업 공간 및 연결이 끊긴 SSH 호스트의 작업 공간이 포함됩니다. 폴더 작업 공간과 프로젝트 그룹은 여기에서 내부 ID 대신 저장된 표시 이름(예: `ORCA_PROTECTED_0001`)을 사용하며, ORCA_PROTECTED_0002가 재시작 후 세션을 복구한 뒤에도 이 이름이 유지됩니다. 제거할 항목을 선택하기 전에 목록을 검색하거나 필터링하거나 정렬하여 각 작업 공간의 상태, 최근 활동, 크기, Git 상태 및 연결된 리뷰를 확인합니다."
     },
     "/docs/model/worktrees/:heading:preserved-branches:0": {
       "sourceHash": "10a8c92b7f2775c2e00d8413cfe63e745920227d114c5a79cf9ad28dbda02efa",
