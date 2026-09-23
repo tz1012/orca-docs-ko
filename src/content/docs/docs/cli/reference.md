@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 참조"
 sourceUrl: https://www.onorca.dev/docs/cli/reference
-checkedAt: "2026-09-21T03:03:34.856Z"
+checkedAt: "2026-09-23T01:05:13.359Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/overview/
 next: /orca-docs-ko/docs/cli/orchestration/
@@ -78,6 +78,18 @@ orca repo search-refs --repo id:<repoId> --query main --limit 10 --json
 ````
 
 많은 작업 트리를 생성하기 전에 저장소 기본 참조를 설정하여 기본적으로 새 작업이 올바른 위치에서 분기되도록 합니다.
+
+## 세션 검색
+
+셸에서 인덱싱된 에이전트 대화 기록을 검색합니다:
+
+```
+orca search --query "rate limit" --scope conversation --limit 20 --json
+orca search --query "migration" --agent codex --since 30d --sort recent --json
+orca search --index-status --json
+```
+
+대화 일치 항목과 인덱싱된 전체 텍스트 중에서 선택하려면 `--scope conversation|all`을 사용합니다. `--fresh`는 검색 전에 인덱스를 새로 고치며, `--limit`, `--cursor`, `--agent`, `--path`, `--since`, `--sort`은 결과 범위를 좁히거나 페이지를 나눕니다. `--index-status`는 쿼리를 실행하지 않고 인덱싱 상태를 보고합니다. 해당 호스트가 액세스를 허용한 경우 결과에 연결된 컴퓨터와 페어링된 서버의 세션도 포함될 수 있습니다.
 
 ## 작업 트리
 

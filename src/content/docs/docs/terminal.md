@@ -1,7 +1,7 @@
 ---
 title: "터미널"
 sourceUrl: https://www.onorca.dev/docs/terminal
-checkedAt: "2026-09-21T03:03:34.856Z"
+checkedAt: "2026-09-23T01:05:13.359Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/profiles/
 next: /orca-docs-ko/docs/ways-to-run/
@@ -31,15 +31,17 @@ Ghostty 스타일 터미널 — 처음 시작할 때 Ghostty 테마, 글꼴 및 
 
 ## 검색
 
-`Cmd-F`은 스크롤백에서 찾기를 엽니다. 일치 강조 표시, 대소문자, 정규식 및 일치 탐색이 모두 지원됩니다.
+`Cmd-F`은 스크롤백 검색을 엽니다. 검색 표시줄은 현재 일치 항목과 전체 개수를 표시하며, 대소문자 구분, 정규식, 일치 항목 탐색을 제공합니다. `Cmd-F` / `Ctrl-F`을 다시 누르면 쿼리에 포커스를 두고 전체 선택하며, `Escape`는 표시줄을 닫습니다. 포커스 및 닫기 동작은 편집기 검색 표시줄과 같습니다.
 
 ## 링크 작업
 
 터미널 링크(HTTP/OSC 8 URL, 파일 경로, 작업 공간, 터미널 또는 작업 핸들)를 일반 클릭하면 즉시 이동하는 대신 간결한 작업 팝오버가 열립니다. 로컬 웹 링크와 적격 SSH 작업 공간 또는 기능이 확인된 페어링 런타임이 소유한 링크에는 **`Orca Browser`(Orca 브라우저)**와 **`System Browser`(시스템 브라우저)**가 제공되며, 이전 런타임은 계속 시스템 브라우저에서만 열립니다. 웹 링크에는 **`Copy link`(링크 복사)**도 제공됩니다. 이 작업은 팝오버를 닫지 않고 숨겨진 OSC 8 대상을 포함해 해석된 URL을 복사하며, 파일 및 작업 공간 대상은 변경되지 않습니다. `Cmd`\-click(macOS) / `Ctrl`\-click(Windows/Linux)는 계속 직접 열고, `Shift+Cmd` / `Shift+Ctrl`\-click는 계속 [링크 라우팅](/orca-docs-ko/docs/browser/overview/#link-routing)의 대체 동작을 사용합니다.
 
-미리 볼 수 있는 HTML 파일 링크는 로컬, SSH 및 페어링 런타임 작업 공간에서 Orca로 열 수 있으며, 원격 파일 행에는 **`Download & open with default app`(다운로드 후 기본 앱으로 열기)**도 표시됩니다. 연결된 파일이 형제 작업 공간 탭에서 이미 열려 있으면 Orca는 중복으로 열지 않고 해당 탭을 활성화합니다. [HTML 뷰어](/orca-docs-ko/docs/editing/viewers/#html)를 참조합니다.
+[`Settings → Browser → Terminal URL clicks`(설정 → 브라우저 → 터미널 URL 클릭)](/orca-docs-ko/docs/settings/)에서 URL을 일반 클릭했을 때 작업 메뉴를 열지, 즉시 열지, 수정 키를 기다릴지 선택합니다. 가운데 버튼으로 URL을 클릭했을 때의 동작은 별도로 설정합니다. 수정 키를 누른 클릭은 일회성 대체 라우팅에 계속 사용할 수 있습니다.
 
-[**`Settings → Browser → Show terminal link actions`(설정 → 브라우저 → 터미널 링크 작업 표시)**](/orca-docs-ko/docs/settings/)에서 팝오버를 끕니다. 팝오버를 끄면 링크를 열 때 수정 키를 누른 채 클릭해야 합니다.
+미리 볼 수 있는 HTML 파일 링크는 로컬, SSH, 페어링 런타임 작업 공간에서 Orca로 열 수 있으며, 원격 파일 행에는 **`Download & open with default app`(다운로드 후 기본 앱으로 열기)**도 표시됩니다. 링크된 파일이 형제 작업 공간 탭에 이미 열려 있으면 Orca는 중복으로 열지 않고 해당 탭을 활성화합니다. [HTML 뷰어](/orca-docs-ko/docs/editing/viewers/#html)를 참조합니다.
+
+[`Settings → Browser → Show terminal link actions`(설정 → 브라우저 → 터미널 링크 작업 표시)](/orca-docs-ko/docs/settings/)에서 팝오버를 끍니다. 팝오버를 끄면 링크를 열 때 수정 키를 누른 채 클릭해야 합니다.
 
 ## 터미널 컨텍스트 복사
 
@@ -65,11 +67,11 @@ Warp에서 테마를 수집한 경우 [설정 → 터미널](/orca-docs-ko/docs/
 
 가져온 테마는 테마 드롭다운에서 Orca의 내장 기능과 함께 표시됩니다.
 
-## 윈도우 셸
+## 기본 셸
 
-Windows의 기본 셸은 [설정 → 터미널](/orca-docs-ko/docs/settings/)에서 PowerShell, 명령 프롬프트, WSL 간에 구성할 수 있습니다. `wsl.exe --status`가 성공하면 WSL이 자동으로 제공됩니다. 탭 표시줄의 **++** 드롭다운에는 하위 메뉴도 표시되므로 기본값을 변경하지 않고도 모든 셸에서 일회용 탭을 열 수 있습니다.
+[`Settings → Terminal`(설정 → 터미널)](/orca-docs-ko/docs/settings/)에서 새 로컬 터미널 탭의 기본 셸을 선택합니다. 시스템 기본값을 사용하려면 비워 둡니다. Windows에서는 PowerShell, Command Prompt, WSL 등을 선택할 수 있으며, `wsl.exe --status`가 성공하면 WSL이 자동으로 제공됩니다. 이 설정은 새 로컬 창에 적용되며 기존 창과 SSH 셸은 현재 동작을 유지합니다. 탭 표시줄의 **+** 드롭다운에도 하위 메뉴가 표시되므로 기본값을 변경하지 않고 임의의 셸에서 일회성 탭을 열 수 있습니다.
 
-WSL 파일 시스템(`\\wsl.localhost\...`)에 있는 저장소의 경우 Orca는 `wsl.exe -d <distro>`을 통해 시작됩니다. WSL에서 열린 Windows 경로 저장소의 경우 Orca는 cwd를 `/mnt/<drive>/...`로 변환하고 로그인 bash로 이동합니다.
+WSL 파일 시스템(`\\wsl.localhost\...`)에 있는 저장소의 경우 Orca는 `wsl.exe -d <distro>`을 통해 시작됩니다. WSL에서 연 Windows 경로 저장소의 경우 Orca는 현재 작업 디렉터리를 `/mnt/<drive>/...`로 변환하고 로그인 bash로 진입합니다.
 
 ## 단축키
 

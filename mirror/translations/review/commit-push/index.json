@@ -51,8 +51,8 @@
       "translated": "ORCA_PROTECTED_0001이 PR 만들기 흐름의 일부로 후속 커밋을 실행해야 하고 해당 커밋이 실패하는 경우(후크가 이를 거부하거나 작업 트리가 커밋할 수 없는 상태인 경우) 컨텍스트 없이 패널로 다시 돌아가는 대신 대화 상자에 후크 출력 및 다음 단계 버튼이 포함된 자세한 실패 요약이 표시됩니다. 요약에서 `Fix with AI`(AI로 수정)를 사용하여 오류를 에이전트에 전달하거나 직접 해결하고 다시 실행하세요."
     },
     "/docs/review/commit-push/:paragraph:open-a-hosted-review:2": {
-      "sourceHash": "14ab8c1bf7ca54d295da88691ea3b82d0ed691a33767f0bf7515cf3fe65995f3",
-      "translated": "ORCA_PROTECTED_0001가 브랜치 차이와 커밋을 바탕으로 제목, 설명 및 초안 상태를 작성하게 하려면 검토 만들기 대화 상자에서 **`Generate pull request details with AI`(AI로 풀 리퀘스트 세부 정보 생성)**를 사용합니다. 생성된 문구는 짧고 이해하기 쉬운 ORCA_PROTECTED_0002 섹션과 연결된 이슈에 대한 안내를 목표로 합니다. 이 안내는 `ORCA_PROTECTED_0003`와 `ORCA_PROTECTED_0004` 중 무엇을 사용할지 설명하며, ORCA_PROTECTED_0005 이슈가 연결되었는지에 따라 달라집니다. ORCA_PROTECTED_0006는 선택한 기준 브랜치를 유지하고 빈 설명을 거부하며, 빈 본문이 게시되지 않도록 다시 시도할 수 있는 명확한 오류를 표시합니다. 검토를 만들기 전에 필드를 확인합니다."
+      "sourceHash": "a5603b61ecbc2e535466d10972d132912898087a102233840e160a7db0b55891",
+      "translated": "ORCA_PROTECTED_0001가 브랜치 diff와 커밋을 바탕으로 제목, 설명, 초안 상태를 작성하게 하려면 검토 생성 대화 상자에서 **`Generate pull request details with AI`(AI로 풀 리퀘스트 세부 정보 생성)**을 사용합니다. 생성된 문구는 짧고 이해하기 쉬운 ORCA_PROTECTED_0002 섹션과 연결된 이슈에 대한 안내를 목표로 합니다(`ORCA_PROTECTED_0003`와 `ORCA_PROTECTED_0004` 중 ORCA_PROTECTED_0005 이슈가 첨부된 경우에 맞는 표현을 안내합니다). ORCA_PROTECTED_0006는 선택한 기준 브랜치를 유지하고 빈 설명을 거부하며, 빈 본문을 게시하는 대신 다시 시도할 수 있도록 명확한 오류를 표시합니다. 검토를 생성하기 전에 필드를 확인합니다. Source Control AI는 ORCA_PROTECTED_0007을 통해 이러한 생성 작업을 실행할 수 있으며, 이는 ORCA_PROTECTED_0008이 선택된 작업 에이전트인 경우에 해당합니다."
     },
     "/docs/review/commit-push/:heading:per-repo-ai-action-recipes:0": {
       "sourceHash": "7aa910530983a4f2295f7b76640ca128b3301f31b30c356202ee6679e40f0a39",

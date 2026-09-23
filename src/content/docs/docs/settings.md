@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-09-21T03:03:34.856Z"
+checkedAt: "2026-09-23T01:05:13.359Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -24,10 +24,11 @@ translationNotice:
 | **Cmd+클릭**(macOS) / **Ctrl+클릭**(Windows/Linux) | 최신 **perf**\-tagged 시험판을 포함합니다. |
 | **Option+클릭**(macOS만 해당) | 호환성 검사를 통과한 **검증된 로컬 macOS 빌드**를 선택합니다. 실패하면 `Could Not Use Local Build`(로컬 빌드를 사용할 수 없음)와 **`Choose Another Build`(다른 빌드 선택)**가 표시됩니다. |
 
--   **`Open in menu`(다음에서 열기 메뉴)** — 작업 트리의 **`Open in`(다음에서 열기)** 메뉴에 표시할 앱을 선택합니다. VS Code/Insiders는 SSH 작업 트리에서 **Remote SSH** 열기를 지원하며, 다른 편집기는 로컬 경로만 지원합니다.
+-   **`Open in menu`(다음에서 열기 메뉴)** — 작업 트리의 **`Open in`(다음에서 열기)** 메뉴에 표시할 앱을 선택합니다. VS Code/Insiders는 SSH 작업 트리에서 **`Remote SSH`(원격 SSH)** 열기를 지원하며, 다른 편집기는 로컬 경로만 지원합니다.
 -   **`UI zoom`(UI 확대/축소)** — 설치별 UI 배율입니다.
 -   **`Default new-worktree name`(새 작업 트리 기본 이름)** — 사용자 지정 접두사 또는 해양 생물 이름을 사용합니다.
 -   **`Editor Word Wrap`(편집기 자동 줄 바꿈)** — 파일 편집기의 기본 줄 바꿈이며 기본적으로 켜져 있습니다. 파일 탭의 **⋯** 메뉴 또는 `Alt+Z`로 전환합니다. **`Diff Word Wrap`(diff 자동 줄 바꿈)**과는 별개입니다.
+-   **`Collapse Unchanged Regions`(변경되지 않은 영역 접기)** — 단일 파일 diff의 변경되지 않은 긴 구간을 접으면서 주변 컨텍스트를 약간 표시합니다. 전체 파일이 필요할 때는 구간을 펼칩니다. **`View all changes`(모든 변경 사항 보기)**는 자체 접힌 레이아웃을 유지합니다.
 
 ## 외관
 
@@ -52,9 +53,9 @@ translationNotice:
 -   글꼴, 테마, 커서 스타일, 여백을 설정합니다.
 -   Ghostty 설정을 가져옵니다.
 -   Warp 테마 가져오기 — **`Import themes from Warp`(Warp에서 테마 가져오기)**를 사용하여 Warp YAML 테마를 가져오거나(OS별 Warp 테마 폴더를 자동 검색), Warp 형식 테마 파일이 있는 임의의 폴더에는 **`Import from YAML`(YAML에서 가져오기)**을 사용합니다.
--   macOS 일본어 키보드에서 `JIS Yen (¥) to Backslash (\\)`(JIS 엔(¥)을 백슬래시(\\)로 변환)을 설정합니다.
--   Windows 기본 셸(PowerShell 또는 CMD)을 설정합니다.
--   **`Allow TUI Clipboard Writes (OSC 52)`(TUI 클립보드 쓰기 허용)** — **기본적으로 켜져 있습니다**. Zellij, tmux, Neovim, fzf, Grok 및 유사 도구가 SSH 연결을 포함하여 PTY를 통해 시스템 클립보드에 쓸 수 있게 합니다. 이전의 제한된 동작을 선호하면 끕니다.
+-   macOS 일본어 키보드에서 `JIS Yen (¥) to Backslash (\)`(JIS 엔(¥)을 백슬래시(\)로 변환)을 설정합니다.
+-   **`Default shell`(기본 셸)** — 새 로컬 터미널 탭의 기본 셸을 설정합니다. 시스템 기본값을 사용하려면 비워 둡니다. Windows에서는 사용 가능한 경우 PowerShell, Command Prompt, WSL도 제공합니다.
+-   **`Allow TUI Clipboard Writes (OSC 52)`(TUI 클립보드 쓰기 허용)** — **기본적으로 켜져 있습니다**. Zellij, tmux, Neovim, fzf, Grok 및 유사 도구가 SSH 연결을 포함하여 PTY를 통해 시스템 클립보드에 쓸 수 있게 합니다. 이전의 제한된 동작을 선호하면 끍니다.
 
 ## 빠른 명령
 
@@ -75,14 +76,15 @@ translationNotice:
 
 ## 브라우저
 
--   프로필([브라우저 사용 프로필](/orca-docs-ko/docs/browser/profiles/) 참조)을 설정합니다.
+-   프로필([Browser-use profiles(브라우저 사용 프로필)](/orca-docs-ko/docs/browser/profiles/) 참조)을 설정합니다.
 -   `Default Zoom`(기본 확대/축소) — 새로 연 브라우저 탭에 적용할 확대/축소 수준입니다. `Cmd-wheel`(Cmd+휠)로 탭별로 조정한 값은 별도로 기억됩니다.
 -   `Design Mode`(디자인 모드) 기본값을 설정합니다.
 -   `Devtools`(개발자 도구) 사용 여부를 설정합니다.
 -   **`Remote server workspaces`(원격 서버 작업 공간)** — 새 페어링 런타임 브라우저 페이지를 이 데스크톱에서 렌더링하려면 **`This device`(이 기기)**를 선택하고, 서버에서 렌더링하려면 **`Server (streamed)`(서버(스트리밍))**를 선택합니다. 트래픽은 항상 원격 서버를 통과하며 선택 내용은 새 페이지에만 적용됩니다. [Per-worktree browser → Remote workspaces(작업 트리별 브라우저 → 원격 작업 공간)](/orca-docs-ko/docs/browser/overview/#remote-workspaces)를 참조합니다.
--   **`Browse through SSH workspace hosts`(SSH 작업 공간 호스트를 통해 탐색)** — 브라우저 트래픽과 DNS를 각 작업 공간의 SSH 호스트를 통해 전송합니다. 이 기기에서 탐색하려면 이 옵션을 끕니다.
--   **`Link Routing`(링크 라우팅)** — 터미널, 마크다운 및 편집기의 http(s) 링크를 Orca 브라우저 또는 시스템 브라우저에서 엽니다. 중첩된 **`Hold Shift…`(Shift 키 누르기…)** 옵션은 한 번의 클릭에 대해 이 기본 동작을 반대로 전환합니다(`⇧⌘-click` / `Shift+Ctrl+click`). [작업 트리별 브라우저](/orca-docs-ko/docs/browser/overview/#link-routing)를 참조합니다.
--   **`Show terminal link actions`(터미널 링크 작업 표시)** — **기본적으로 켜져 있습니다**. 터미널 링크를 일반 클릭하면 간결한 작업 팝오버가 열립니다. 이 옵션을 끄면 `⌘`\-click / `Ctrl`\-click가 필요합니다. [Terminal → Link actions(터미널 → 링크 작업)](/orca-docs-ko/docs/terminal/#link-actions)을 참조합니다.
+-   **`Browse through SSH workspace hosts`(SSH 작업 공간 호스트를 통해 탐색)** — 브라우저 트래픽과 DNS를 각 작업 공간의 SSH 호스트를 통해 전송합니다. 이 기기에서 탐색하려면 이 옵션을 끍니다.
+-   **`Link Routing`(링크 라우팅)** — 터미널, 마크다운, 편집기의 http(s) 링크를 Orca의 브라우저 또는 시스템 브라우저에서 엽니다. 하위 **`Hold Shift…`(Shift 키 누르기…)**는 한 번의 클릭에 대해 이 기본 동작을 반대로 전환합니다(`⇧⌘-click` / `Shift+Ctrl+click`). [작업 트리별 브라우저](/orca-docs-ko/docs/browser/overview/#link-routing)를 참조합니다.
+-   **`Terminal URL clicks`(터미널 URL 클릭)** — URL을 일반 클릭했을 때 작업 메뉴를 열지, 즉시 열지, 수정 키를 요구할지 선택합니다. 가운데 버튼으로 URL을 클릭했을 때의 동작은 별도로 설정합니다.
+-   **`Show terminal link actions`(터미널 링크 작업 표시)** — **기본적으로 켜져 있습니다**. 터미널 링크를 일반 클릭하면 간결한 작업 팝오버가 열립니다. 이 옵션을 끄면 `⌘`\-click / `Ctrl`\-click이 필요합니다. [Terminal → Link actions(터미널 → 링크 작업)](/orca-docs-ko/docs/terminal/#link-actions)을 참조합니다.
 -   **`Default Search Engine`(기본 검색 엔진)** — 브라우저 주소 표시줄이나 [새 탭 옴니박스](/orca-docs-ko/docs/model/quick-open/#new-tab-omnibox)에 URL이 아닌 텍스트를 입력할 때 사용합니다.
 
 ## 아티팩트

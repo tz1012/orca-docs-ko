@@ -1,7 +1,7 @@
 ---
 title: "작업 트리"
 sourceUrl: https://www.onorca.dev/docs/model/worktrees
-checkedAt: "2026-09-21T03:03:34.856Z"
+checkedAt: "2026-09-23T01:05:13.359Z"
 editUrl: false
 prev: /orca-docs-ko/docs/first-session/
 next: /orca-docs-ko/docs/model/tabs-panes-splits/
@@ -36,7 +36,7 @@ Orca은 작업 트리 기반입니다. 한 번의 체크아웃으로 분기하�
 
 ## 선택기에서 시작
 
-작업 트리를 생성할 때 분기할 대상을 선택합니다. 이는 다음과 같습니다.
+작업 트리를 생성할 때 `New Workspace`(새 작업 공간) 작성기의 `Branch from`(다음에서 브랜치 생성) 컨트롤이 시작 참조를 설정합니다. 다음 중 하나를 사용할 수 있습니다:
 
 - 저장소의 기본 참조(빠른 경로).
 - 또 다른 로컬 브랜치 - 검토 중인 PR 위에 작업을 쌓는 데 유용합니다.

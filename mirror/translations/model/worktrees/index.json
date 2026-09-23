@@ -47,8 +47,8 @@
       "translated": "## 선택기에서 시작"
     },
     "/docs/model/worktrees/:paragraph:start-from-picker:0": {
-      "sourceHash": "27183e7c84d08a0d26c6ae55c2bdae99e0681cd2feef04d140fc5c6dc3c9aa21",
-      "translated": "작업 트리를 생성할 때 분기할 대상을 선택합니다. 이는 다음과 같습니다."
+      "sourceHash": "7336dddcc6a20868986ae25ac6fa1e2b20bf5a93463893710d2b521c3edddf5e",
+      "translated": "작업 트리를 생성할 때 `New Workspace`(새 작업 공간) 작성기의 `Branch from`(다음에서 브랜치 생성) 컨트롤이 시작 참조를 설정합니다. 다음 중 하나를 사용할 수 있습니다:"
     },
     "/docs/model/worktrees/:list:start-from-picker:0": {
       "sourceHash": "cbe9eab0687bc45cf1af932df46ef8f29e96f62fc53a63c649de040c17a2cea0",

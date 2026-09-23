@@ -377,6 +377,22 @@
     "/docs/cli/reference/:paragraph:account-host-local-runtime:1": {
       "sourceHash": "047eb7a0e7cff5ef0ad7ce43b7db6f63eaf4e143b4d29e6b6cd5399f576fe605",
       "translated": "`ORCA_PROTECTED_0001`는 호스트의 **현재** 터미널에서 `ORCA_PROTECTED_0002` / `ORCA_PROTECTED_0003`을 실행한 다음, 수집한 자격 증명을 로컬 런타임에 등록합니다. ORCA_PROTECTED_0004는 기기 인증을 사용하므로 다른 시스템의 브라우저에서 인증을 완료할 수 있습니다. 클라이언트 전용 원격 세션을 통하지 말고 계정을 소유하는 시스템에서 이 명령을 실행합니다."
+    },
+    "/docs/cli/reference/:heading:session-search:0": {
+      "sourceHash": "5a98c6c8c5f17e5d0e2b880eb13d918964066476af7f40256ca60698c117278b",
+      "translated": "## 세션 검색"
+    },
+    "/docs/cli/reference/:paragraph:session-search:0": {
+      "sourceHash": "457102d3393b35147e7340c3591a7e64e40351b89a306b48bd46fd50c7536191",
+      "translated": "셸에서 인덱싱된 에이전트 대화 기록을 검색합니다:"
+    },
+    "/docs/cli/reference/:code:session-search:0": {
+      "sourceHash": "735937607ce3f5e96d22f78664fdc5730908132c5ad020f6979b1bfa3ef5a7e0",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/reference/:paragraph:session-search:1": {
+      "sourceHash": "5e1ce9cf02f490b6d44e375c349e2cbf0a71d04f48bd380401d7970ef4fde2c7",
+      "translated": "대화 일치 항목과 인덱싱된 전체 텍스트 중에서 선택하려면 `ORCA_PROTECTED_0001`을 사용합니다. `ORCA_PROTECTED_0002`는 검색 전에 인덱스를 새로 고치며, `ORCA_PROTECTED_0003`, `ORCA_PROTECTED_0004`, `ORCA_PROTECTED_0005`, `ORCA_PROTECTED_0006`, `ORCA_PROTECTED_0007`, `ORCA_PROTECTED_0008`은 결과 범위를 좁히거나 페이지를 나눕니다. `ORCA_PROTECTED_0009`는 쿼리를 실행하지 않고 인덱싱 상태를 보고합니다. 해당 호스트가 액세스를 허용한 경우 결과에 연결된 컴퓨터와 페어링된 서버의 세션도 포함될 수 있습니다."
     }
   }
 }

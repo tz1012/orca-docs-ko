@@ -19,8 +19,8 @@
       "translated": "## 댓글을 남겨주세요"
     },
     "/docs/review/annotate-ai-diff/:list:leave-a-comment:0": {
-      "sourceHash": "f20164755e52b53807f5a4639213978a5004a3d2a5aefafc82575aa245173b0b",
-      "translated": "1. diff에서 아무 라인이나 마우스로 가리킵니다. 홈통에 ***가 나타납니다.\n2. 클릭하세요(또는 줄에 커서를 두고 `ORCA_PROTECTED_0001`을 누르세요).\n3. 피드백을 입력하세요. 마크다운이 지원됩니다.\n4. 저장하려면 `ORCA_PROTECTED_0002`를 누르고, 취소하려면 `ORCA_PROTECTED_0003`을 누르세요."
+      "sourceHash": "e509604d43e431ef301a57bdb72fb7765a6a04168381ff1de1554976a7bb9f67",
+      "translated": "1.  diff의 아무 줄에 마우스 커서를 올리면 줄 번호 영역에 **+**가 표시됩니다. 인접한 줄을 드래그하거나 선택 범위를 늘리면서 `ORCA_PROTECTED_0001`를 누르면 여러 줄에 댓글을 남길 수 있습니다. ORCA_PROTECTED_0002는 선택 범위를 해당 헝크 안에 유지하고 선택한 줄 범위로 라벨을 붙입니다.\n2.  해당 항목을 클릭하거나 줄에 커서를 둔 상태에서 `ORCA_PROTECTED_0003`을 누릅니다.\n3.  피드백을 입력합니다. 마크다운을 지원합니다.\n4.  저장하려면 `ORCA_PROTECTED_0004`를, 취소하려면 `ORCA_PROTECTED_0005`를 누릅니다."
     },
     "/docs/review/annotate-ai-diff/:paragraph:leave-a-comment:0": {
       "sourceHash": "3dd722f7262c6bf70047d4257b60f965a2eed72cbe60ad1ff489006fc498cf38",

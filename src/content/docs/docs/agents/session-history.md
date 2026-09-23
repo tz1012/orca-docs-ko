@@ -1,7 +1,7 @@
 ---
 title: "에이전트 세션 기록"
 sourceUrl: https://www.onorca.dev/docs/agents/session-history
-checkedAt: "2026-09-21T03:03:34.856Z"
+checkedAt: "2026-09-23T01:05:13.359Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/native-chat/
 next: /orca-docs-ko/docs/agents/hibernation/
@@ -20,6 +20,10 @@ Orca은 지원 에이전트 CLI가 남긴 온디스크 세션 기록을 스캔�
 오른쪽 사이드바를 열고 `Agents`(에이전트) 탭으로 전환하세요. 패널 헤더에는 "에이전트 세션 기록"이 표시됩니다.
 
 헤더에는 `12 shown · 47 recent`과 같은 개수와 검색창이 표시됩니다. 세션 제목, 작업 디렉터리, 분기, 모델을 기준으로 필터링하거나 대화의 텍스트 미리보기를 입력하세요.
+
+Session History는 연결된 다른 컴퓨터와 페어링된 Orca Servers(서버)의 인덱싱된 대화 기록도 검색할 수 있습니다. 검색할 컴퓨터에 대해 **`Search inside sessions`(세션 내부 검색)**를 **`Settings → Session History`(설정 → 세션 기록)**에서 켜거나 **`Enable on all computers`(모든 컴퓨터에서 활성화)**를 사용합니다. 컴퓨터가 오프라인이거나 인덱싱 액세스를 허용하지 않은 경우 Orca가 호스트 범위 알림을 표시합니다. 검색 가능한 데이터는 각 컴퓨터에 유지되며, 로컬 패널에서는 인덱스에 추가되지 않은 세션도 계속 찾아볼 수 있습니다.
+
+스크립트와 터미널 워크플로에서는 패널을 열지 않고 같은 인덱스를 조회하려면 [`orca search`](/orca-docs-ko/docs/cli/reference/#session-search)을 사용합니다.
 
 ## 범위
 

@@ -3,8 +3,8 @@
   "mirrorPath": "/docs/terminal/",
   "entries": {
     "/docs/terminal/:paragraph:link-actions:2": {
-      "sourceHash": "74ff2feeef062b06ab759e715fe83475ad7e6f69a2b8f416385c5cc1d1420def",
-      "translated": "[**`Settings → Browser → Show terminal link actions`(설정 → 브라우저 → 터미널 링크 작업 표시)**](ORCA_PROTECTED_0001)에서 팝오버를 끕니다. 팝오버를 끄면 링크를 열 때 수정 키를 누른 채 클릭해야 합니다."
+      "sourceHash": "0a2c783e56cbad295648d880b834e9e03390b7f82a94892113fb5eda568222c0",
+      "translated": "미리 볼 수 있는 HTML 파일 링크는 로컬, SSH, 페어링 런타임 작업 공간에서 ORCA_PROTECTED_0001로 열 수 있으며, 원격 파일 행에는 **`Download & open with default app`(다운로드 후 기본 앱으로 열기)**도 표시됩니다. 링크된 파일이 형제 작업 공간 탭에 이미 열려 있으면 ORCA_PROTECTED_0002는 중복으로 열지 않고 해당 탭을 활성화합니다. [HTML 뷰어](ORCA_PROTECTED_0003)를 참조합니다."
     },
     "/docs/terminal/:paragraph:quick-commands:2": {
       "sourceHash": "b6d5e7166bd383223ead3cf6b21bc2464597b7a6968f6756abb714c952bee38d",
@@ -39,8 +39,8 @@
       "translated": "## 검색"
     },
     "/docs/terminal/:paragraph:search:0": {
-      "sourceHash": "9d1f84c1fcc72dfa3dae1c3061bba0535be179a34d588d1bf4af3da60cc116d1",
-      "translated": "`ORCA_PROTECTED_0001`은 스크롤백에서 찾기를 엽니다. 일치 강조 표시, 대소문자, 정규식 및 일치 탐색이 모두 지원됩니다."
+      "sourceHash": "ff72a53dec75fc5b7092aceb1aab6ac6ea2885ed0e7645162c89b68ccf8af6d5",
+      "translated": "`ORCA_PROTECTED_0001`은 스크롤백 검색을 엽니다. 검색 표시줄은 현재 일치 항목과 전체 개수를 표시하며, 대소문자 구분, 정규식, 일치 항목 탐색을 제공합니다. `ORCA_PROTECTED_0002` / `ORCA_PROTECTED_0003`을 다시 누르면 쿼리에 포커스를 두고 전체 선택하며, `ORCA_PROTECTED_0004`는 표시줄을 닫습니다. 포커스 및 닫기 동작은 편집기 검색 표시줄과 같습니다."
     },
     "/docs/terminal/:heading:copy-terminal-context:0": {
       "sourceHash": "db76d4986f616f670a4c333b81f88ea23c1ee06ffaaef061d31e6ae07b9d6f3c",
@@ -163,8 +163,8 @@
       "translated": "터미널 링크(ORCA_PROTECTED_0001 8 URL, 파일 경로, 작업 공간, 터미널 또는 작업 핸들)를 일반 클릭하면 즉시 이동하는 대신 간결한 작업 팝오버가 열립니다. 로컬 웹 링크와 적격 SSH 작업 공간 또는 기능이 확인된 페어링 런타임이 소유한 링크에는 **`ORCA_PROTECTED_0002 Browser`(Orca 브라우저)**와 **`System Browser`(시스템 브라우저)**가 제공되며, 이전 런타임은 계속 시스템 브라우저에서만 열립니다. 웹 링크에는 **`Copy link`(링크 복사)**도 제공됩니다. 이 작업은 팝오버를 닫지 않고 숨겨진 OSC 8 대상을 포함해 해석된 URL을 복사하며, 파일 및 작업 공간 대상은 변경되지 않습니다. `ORCA_PROTECTED_0003`\\ORCA_PROTECTED_0004(macOS) / `ORCA_PROTECTED_0005`\\ORCA_PROTECTED_0006(Windows/Linux)는 계속 직접 열고, `ORCA_PROTECTED_0007` / `ORCA_PROTECTED_0008`\\ORCA_PROTECTED_0009는 계속 [링크 라우팅](ORCA_PROTECTED_0010)의 대체 동작을 사용합니다."
     },
     "/docs/terminal/:paragraph:link-actions:1": {
-      "sourceHash": "0a2c783e56cbad295648d880b834e9e03390b7f82a94892113fb5eda568222c0",
-      "translated": "미리 볼 수 있는 HTML 파일 링크는 로컬, SSH 및 페어링 런타임 작업 공간에서 ORCA_PROTECTED_0001로 열 수 있으며, 원격 파일 행에는 **`Download & open with default app`(다운로드 후 기본 앱으로 열기)**도 표시됩니다. 연결된 파일이 형제 작업 공간 탭에서 이미 열려 있으면 ORCA_PROTECTED_0002는 중복으로 열지 않고 해당 탭을 활성화합니다. [HTML 뷰어](ORCA_PROTECTED_0003)를 참조합니다."
+      "sourceHash": "5e363d18dfc20ff9f9b2a130774278326f672884e9e85880ecbbe6a5d5dbddfd",
+      "translated": "[`Settings → Browser → Terminal URL clicks`(설정 → 브라우저 → 터미널 URL 클릭)](ORCA_PROTECTED_0001)에서 URL을 일반 클릭했을 때 작업 메뉴를 열지, 즉시 열지, 수정 키를 기다릴지 선택합니다. 가운데 버튼으로 URL을 클릭했을 때의 동작은 별도로 설정합니다. 수정 키를 누른 클릭은 일회성 대체 라우팅에 계속 사용할 수 있습니다."
     },
     "/docs/terminal/:heading:color-contrast:0": {
       "sourceHash": "b11e67e0a7b32fed2dd0e5cb3979034980cc4683b7e8bcad9959979769c9969b",
@@ -173,6 +173,22 @@
     "/docs/terminal/:paragraph:color-contrast:0": {
       "sourceHash": "bb7a9ffc4c072799a3a07bd970167ea98882f8aaa75566e6eb89e21802c1cb72",
       "translated": "**`Settings → Terminal → Rendering → Color Contrast`(설정 → 터미널 → 렌더링 → 색상 대비)**에서 **`Automatic`(자동)**을 선택하면 ORCA_PROTECTED_0001가 터미널 텍스트를 읽기 쉽게 유지합니다. **`Off`(끔)**를 선택하면 테마의 흐린 색상과 Powerline 색상을 그대로 유지하며, **`Custom`(사용자 지정)**을 선택하면 대비 목표를 1~21 사이로 설정할 수 있습니다."
+    },
+    "/docs/terminal/:paragraph:link-actions:3": {
+      "sourceHash": "74ff2feeef062b06ab759e715fe83475ad7e6f69a2b8f416385c5cc1d1420def",
+      "translated": "[`Settings → Browser → Show terminal link actions`(설정 → 브라우저 → 터미널 링크 작업 표시)](ORCA_PROTECTED_0001)에서 팝오버를 끍니다. 팝오버를 끄면 링크를 열 때 수정 키를 누른 채 클릭해야 합니다."
+    },
+    "/docs/terminal/:heading:default-shell:0": {
+      "sourceHash": "a16b2d0a03832442130264b922aebdcecbd666bcb290a96d2078f707f19f91e8",
+      "translated": "## 기본 셸"
+    },
+    "/docs/terminal/:paragraph:default-shell:0": {
+      "sourceHash": "404bd83cedfcc5b1afcd59cb96c3d8aef3c3122161459a637144f8fbe5e642f4",
+      "translated": "[`Settings → Terminal`(설정 → 터미널)](ORCA_PROTECTED_0001)에서 새 로컬 터미널 탭의 기본 셸을 선택합니다. 시스템 기본값을 사용하려면 비워 둡니다. Windows에서는 PowerShell, Command Prompt, WSL 등을 선택할 수 있으며, `ORCA_PROTECTED_0002`가 성공하면 WSL이 자동으로 제공됩니다. 이 설정은 새 로컬 창에 적용되며 기존 창과 SSH 셸은 현재 동작을 유지합니다. 탭 표시줄의 **+** 드롭다운에도 하위 메뉴가 표시되므로 기본값을 변경하지 않고 임의의 셸에서 일회성 탭을 열 수 있습니다."
+    },
+    "/docs/terminal/:paragraph:default-shell:1": {
+      "sourceHash": "1cfdb782ab39ece64aacf383220d5316b8503028110175080c9c910cca491044",
+      "translated": "WSL 파일 시스템(`ORCA_PROTECTED_0001`)에 있는 저장소의 경우 ORCA_PROTECTED_0002는 `ORCA_PROTECTED_0003`을 통해 시작됩니다. WSL에서 연 Windows 경로 저장소의 경우 ORCA_PROTECTED_0004는 현재 작업 디렉터리를 `ORCA_PROTECTED_0005`로 변환하고 로그인 bash로 진입합니다."
     }
   }
 }

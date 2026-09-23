@@ -1,7 +1,7 @@
 ---
 title: "차이점 뷰어"
 sourceUrl: https://www.onorca.dev/docs/review/diff-viewer
-checkedAt: "2026-09-21T03:03:34.856Z"
+checkedAt: "2026-09-23T01:05:13.359Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/hooks-memory/
 next: /orca-docs-ko/docs/review/annotate-ai-diff/
@@ -15,13 +15,14 @@ Orca의 diff 뷰어는 AI 생성 코드를 잠깐 살펴보는 것이 아니라 
 
 ## 기능
 
--   스테이징된 파일, 스테이징되지 않은 파일 및 추적되지 않은 모든 파일의 **`Combined diff`(결합된 차이)**를 표시합니다.
+-   스테이징된 파일, 스테이징되지 않은 파일, 추적되지 않은 모든 파일의 **`Combined diff`(결합 diff)**를 표시합니다.
 -   양쪽의 **`Line numbers`(줄 번호)**를 표시하며 전환할 수 있습니다.
--   **`Image diffs`(이미지 차이)**는 바이너리 이미지를 나란히 보기, 스와이프 및 어니언 스킨 모드로 표시합니다.
--   **`HTML preview`(HTML 미리 보기)**는 **`View all`(모두 보기)** / 결합된 차이에서 작업 트리에 여전히 존재하는 HTML 섹션의 항상 표시되는 파일 열기 컨트롤 옆에 **`Open Preview to the Side`(옆에서 미리 보기 열기)**(눈 모양)를 표시합니다. 미리 보기는 작업 트리의 HTML을 측면 브라우저 분할 창에서 엽니다. 삭제된 HTML 및 커밋 전용 결합 화면에는 눈 모양이 표시되지 않습니다.
+-   **`Image diffs`(이미지 diff)**는 바이너리 이미지를 나란히 보기, 스와이프, 어니언 스킨 모드로 표시합니다.
+-   **`HTML preview`(HTML 미리 보기)** — **`View all`(모두 보기)**/결합 diff에서 작업 트리에 아직 존재하는 HTML 섹션에는 항상 표시되는 파일 열기 컨트롤 옆에 **`Open Preview to the Side`(옆에서 미리 보기 열기)**(눈 모양)가 표시됩니다. 미리 보기는 작업 트리의 HTML을 측면 브라우저 분할에서 엽니다. 삭제된 HTML과 커밋 전용 결합 화면에는 눈 모양이 표시되지 않습니다.
 -   **`Merge-conflict UI`(병합 충돌 UI)**는 3방향 보기와 인라인 해결 기능을 제공합니다.
--   **`Staging by hunk or line`(덩어리 또는 줄별 스테이징)**은 `git add -p`과 동일한 작업을 시각적으로 수행합니다.
--   **`Show Whitespace`(공백 표시)**는 diff를 검토할 때 스페이스, 탭 및 기타 공백 문자를 표시합니다. diff 뷰어 작업 메뉴에서 전환합니다.
+-   **`Staging by hunk or line`(헝크 또는 줄별 스테이징)**은 `git add -p`과 같은 작업을 시각적으로 수행합니다.
+-   **`Show Whitespace`(공백 표시)**는 diff를 검토할 때 스페이스, 탭, 기타 공백 문자를 표시합니다. diff 뷰어 작업 메뉴에서 전환합니다.
+-   **`Collapse unchanged regions`(변경되지 않은 영역 접기)**은 파일 diff의 긴 컨텍스트 구간을 선택적으로 접어 변경된 줄이 보이게 합니다. diff 편집기 작업 메뉴에서 켜며 기본값은 꺼짐입니다.
 
 ## 범위 지정
 
@@ -30,6 +31,8 @@ diff는 기본적으로 작업 트리의 시작 참조에 대한 변경 사항�
 ## 단어 줄 바꿈
 
 diff 단어 줄 바꿈이 켜져 있으면 긴 줄이 제자리에 배치되므로 넓은 diff는 가로 스크롤 없이 위에서 아래로 읽혀집니다. 기본적으로 꺼져 있습니다. diff 편집기 헤더의 `⋯`(더보기) 작업 메뉴에서 `Word Wrap`(자동 줄 바꿈)을 전환하거나 `Settings → General → Diff Word Wrap`(설정 → 일반 → Diff 단어 줄 바꿈)에서 전역 기본값을 설정합니다. 두 컨트롤 모두 동일한 설정을 공유합니다. 즉, 편집기에서 전환하면 모든 위치에서 반전됩니다.
+
+`Collapse unchanged regions`(변경되지 않은 영역 접기)와 자동 줄 바꿈은 파일 diff에 적용되며, 결합 diff는 자체 파일 트리와 헝크 컨트롤을 유지합니다.
 
 ## 파일 트리
 

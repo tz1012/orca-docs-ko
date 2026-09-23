@@ -93,6 +93,14 @@
     "/docs/agents/session-history/:list:resume-a-session:1": {
       "sourceHash": "c9d1ed2021a6e9e277bec631db7bbaa4bf9074676a0fb44d2027c81d86625b05",
       "translated": "-   **`Copy resume command`(재개 명령 복사)** — 외부 터미널에서 사용할 수 있도록 동일한 셸 명령을 클립보드에 복사합니다.\n-   **`Copy session ID`(세션 ID 복사)** / **`Copy log path`(로그 경로 복사)** — 스크립팅하거나 버그 보고서에 대화 기록을 첨부할 때 사용합니다.\n-   **`Open log`(로그 열기)** / **`Reveal log`(로그 위치 표시)** — ORCA_PROTECTED_0001에서 원시 대화 기록 파일을 열거나 OS 파일 관리자에서 해당 위치로 이동합니다.\n-   **`Open cwd`(현재 작업 디렉터리 열기)** — 세션의 작업 디렉터리를 작업 공간으로 엽니다."
+    },
+    "/docs/agents/session-history/:paragraph:open-the-panel:2": {
+      "sourceHash": "0a4fcbb9fa9ff8ebea628c7a1f818cccdae0cecb34d0ed99d4778157da1dcc8f",
+      "translated": "Session History는 연결된 다른 컴퓨터와 페어링된 ORCA_PROTECTED_0001 Servers(서버)의 인덱싱된 대화 기록도 검색할 수 있습니다. 검색할 컴퓨터에 대해 **`Search inside sessions`(세션 내부 검색)**를 **`Settings → Session History`(설정 → 세션 기록)**에서 켜거나 **`Enable on all computers`(모든 컴퓨터에서 활성화)**를 사용합니다. 컴퓨터가 오프라인이거나 인덱싱 액세스를 허용하지 않은 경우 ORCA_PROTECTED_0002가 호스트 범위 알림을 표시합니다. 검색 가능한 데이터는 각 컴퓨터에 유지되며, 로컬 패널에서는 인덱스에 추가되지 않은 세션도 계속 찾아볼 수 있습니다."
+    },
+    "/docs/agents/session-history/:paragraph:open-the-panel:3": {
+      "sourceHash": "75773e2892af85c5bec1f3892ddd7c7b6a930a2d4fedb763dcf92a34149cb105",
+      "translated": "스크립트와 터미널 워크플로에서는 패널을 열지 않고 같은 인덱스를 조회하려면 [`ORCA_PROTECTED_0001`](ORCA_PROTECTED_0002)을 사용합니다."
     }
   }
 }

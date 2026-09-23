@@ -15,8 +15,8 @@
       "translated": "## 기능"
     },
     "/docs/review/diff-viewer/:list:features:0": {
-      "sourceHash": "74dd6787e751af49a420e168a51f9f1147a7b02ebf091edcf89b556e9fe44a61",
-      "translated": "-   스테이징된 파일, 스테이징되지 않은 파일 및 추적되지 않은 모든 파일의 **`Combined diff`(결합된 차이)**를 표시합니다.\n-   양쪽의 **`Line numbers`(줄 번호)**를 표시하며 전환할 수 있습니다.\n-   **`Image diffs`(이미지 차이)**는 바이너리 이미지를 나란히 보기, 스와이프 및 어니언 스킨 모드로 표시합니다.\n-   **`HTML preview`(HTML 미리 보기)**는 **`View all`(모두 보기)** / 결합된 차이에서 작업 트리에 여전히 존재하는 HTML 섹션의 항상 표시되는 파일 열기 컨트롤 옆에 **`Open Preview to the Side`(옆에서 미리 보기 열기)**(눈 모양)를 표시합니다. 미리 보기는 작업 트리의 HTML을 측면 브라우저 분할 창에서 엽니다. 삭제된 HTML 및 커밋 전용 결합 화면에는 눈 모양이 표시되지 않습니다.\n-   **`Merge-conflict UI`(병합 충돌 UI)**는 3방향 보기와 인라인 해결 기능을 제공합니다.\n-   **`Staging by hunk or line`(덩어리 또는 줄별 스테이징)**은 `ORCA_PROTECTED_0001`과 동일한 작업을 시각적으로 수행합니다.\n-   **`Show Whitespace`(공백 표시)**는 diff를 검토할 때 스페이스, 탭 및 기타 공백 문자를 표시합니다. diff 뷰어 작업 메뉴에서 전환합니다."
+      "sourceHash": "e4e49a3c1ae89f3188799b19448a0aa3b17df781f2bd9b9ac0ab121d3d1a1469",
+      "translated": "-   스테이징된 파일, 스테이징되지 않은 파일, 추적되지 않은 모든 파일의 **`Combined diff`(결합 diff)**를 표시합니다.\n-   양쪽의 **`Line numbers`(줄 번호)**를 표시하며 전환할 수 있습니다.\n-   **`Image diffs`(이미지 diff)**는 바이너리 이미지를 나란히 보기, 스와이프, 어니언 스킨 모드로 표시합니다.\n-   **`HTML preview`(HTML 미리 보기)** — **`View all`(모두 보기)**/결합 diff에서 작업 트리에 아직 존재하는 HTML 섹션에는 항상 표시되는 파일 열기 컨트롤 옆에 **`Open Preview to the Side`(옆에서 미리 보기 열기)**(눈 모양)가 표시됩니다. 미리 보기는 작업 트리의 HTML을 측면 브라우저 분할에서 엽니다. 삭제된 HTML과 커밋 전용 결합 화면에는 눈 모양이 표시되지 않습니다.\n-   **`Merge-conflict UI`(병합 충돌 UI)**는 3방향 보기와 인라인 해결 기능을 제공합니다.\n-   **`Staging by hunk or line`(헝크 또는 줄별 스테이징)**은 `ORCA_PROTECTED_0001`과 같은 작업을 시각적으로 수행합니다.\n-   **`Show Whitespace`(공백 표시)**는 diff를 검토할 때 스페이스, 탭, 기타 공백 문자를 표시합니다. diff 뷰어 작업 메뉴에서 전환합니다.\n-   **`Collapse unchanged regions`(변경되지 않은 영역 접기)**은 파일 diff의 긴 컨텍스트 구간을 선택적으로 접어 변경된 줄이 보이게 합니다. diff 편집기 작업 메뉴에서 켜며 기본값은 꺼짐입니다."
     },
     "/docs/review/diff-viewer/:heading:scoping:0": {
       "sourceHash": "cb697dfa47b71e43a5f465e2446b13d8e238203a56da1c112da36ab043485a23",
@@ -49,6 +49,10 @@
     "/docs/review/diff-viewer/:paragraph:file-tree:0": {
       "sourceHash": "ceedac6faa46e6c1d7c30c39d4f9b15cac5ef493991aa90fbed7f95322fef2e2",
       "translated": "통합 diff에서는 헝크 옆에 접을 수 있는 파일 트리를 표시할 수 있습니다. 트리의 크기 조절 핸들을 드래그하거나 핸들에서 화살표 키를 사용하여 너비를 설정합니다. Shift를 누르면 조절 단위가 커지며, 크기는 세션 간에 기억됩니다. 통합 diff 도구 모음에서 트리를 접거나 표시할 수 있습니다."
+    },
+    "/docs/review/diff-viewer/:paragraph:word-wrap:1": {
+      "sourceHash": "6fd0f4231debe1bd85db908dfd00e15424a12a6ff9716c8e15b91be2fa8130f3",
+      "translated": "`Collapse unchanged regions`(변경되지 않은 영역 접기)와 자동 줄 바꿈은 파일 diff에 적용되며, 결합 diff는 자체 파일 트리와 헝크 컨트롤을 유지합니다."
     }
   }
 }

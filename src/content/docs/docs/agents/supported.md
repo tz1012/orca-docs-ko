@@ -1,7 +1,7 @@
 ---
 title: "지원되는 에이전트"
 sourceUrl: https://www.onorca.dev/docs/agents/supported
-checkedAt: "2026-09-21T03:03:34.856Z"
+checkedAt: "2026-09-23T01:05:13.359Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/quick-open/
 next: /orca-docs-ko/docs/agents/claude-code/
@@ -26,11 +26,11 @@ Orca은 새로운 실행에 대해 지원되는 각 CLI의 권한 우회 플래�
 | 에이전트 | 참고 | 문서 |
 | --- | --- | --- |
 | Claude Code | 심층 통합: 사용량, 빠른 전환, 후크 | [Anthropic](https://docs.anthropic.com/claude/docs/claude-code) |
-| Claude Agent Teams | 기본적으로 비활성화됨 — `Settings`(설정) → `Agents`(에이전트)에서 활성화하면 `orca claude-teams`로 실행하며 각 팀원에게 네이티브 창을 제공합니다 | [Anthropic](https://code.claude.com/docs/agent-teams) |
+| Claude Agent Teams | 기본적으로 비활성화됨 — `Settings`(설정) → `Agents`(에이전트)에서 활성화하면 `orca claude-teams`로 실행하며 각 팀원에게 네이티브 창을 제공함 | [Anthropic](https://code.claude.com/docs/agent-teams) |
 | Codex | 심층 통합: 사용량, 빠른 전환 | [OpenAI](https://github.com/openai/codex) |
 | Grok | 자동 설정 | [xAI](https://x.ai/cli) |
 | GitHub Copilot CLI | 자동 설정 | [GitHub](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli) |
-| OpenCode | 자동 설정, 상태 | [OpenCode](https://opencode.ai/docs/cli/) |
+| OpenCode | 자동 설정, 상태; OpenCode 2 베타 지원 | [OpenCode](https://opencode.ai/docs/cli/) |
 | Pi | 자동 설정, 후크, 상태 | [Pi](https://pi.dev/) |
 | OMP | 자동 설정, 후크, 상태 | [OMP](https://omp.sh/) |
 | Prime Agent | 자동 설정, 후크, 상태, 세션 기록 | [Prime Intellect](https://github.com/PrimeIntellect-ai/prime-agent) |
@@ -59,4 +59,4 @@ Orca은 새로운 실행에 대해 지원되는 각 CLI의 권한 우회 플래�
 | Rovo Dev | 자동 설정 | [Atlassian](https://support.atlassian.com/rovo/docs/install-and-run-rovo-dev-cli-on-your-device/) |
 | Hermes | 자동 설정 | [Nous](https://hermes-agent.nousresearch.com/docs/) |
 | OpenClaw | 자동 설정 | [OpenClaw](https://github.com/openclaw/openclaw) |
-| Trae | `traecli`(TRAE CN CLI)을 통한 자동 설정 | [Trae](https://www.trae.ai/) |
+| Trae | `traecli`(TRAE CN CLI)를 통한 자동 설정 | [Trae](https://www.trae.ai/) |

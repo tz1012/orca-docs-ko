@@ -1,7 +1,7 @@
 ---
 title: "Orca에서 커밋 및 푸시"
 sourceUrl: https://www.onorca.dev/docs/review/commit-push
-checkedAt: "2026-09-21T03:03:34.856Z"
+checkedAt: "2026-09-23T01:05:13.359Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/attribution/
 next: /orca-docs-ko/docs/review/github/
@@ -35,7 +35,7 @@ Orca을 종료하지 않고도 검토를 커밋하고 푸시하고 열 수 있�
 
 Orca이 PR 만들기 흐름의 일부로 후속 커밋을 실행해야 하고 해당 커밋이 실패하는 경우(후크가 이를 거부하거나 작업 트리가 커밋할 수 없는 상태인 경우) 컨텍스트 없이 패널로 다시 돌아가는 대신 대화 상자에 후크 출력 및 다음 단계 버튼이 포함된 자세한 실패 요약이 표시됩니다. 요약에서 `Fix with AI`(AI로 수정)를 사용하여 오류를 에이전트에 전달하거나 직접 해결하고 다시 실행하세요.
 
-Orca가 브랜치 차이와 커밋을 바탕으로 제목, 설명 및 초안 상태를 작성하게 하려면 검토 만들기 대화 상자에서 **`Generate pull request details with AI`(AI로 풀 리퀘스트 세부 정보 생성)**를 사용합니다. 생성된 문구는 짧고 이해하기 쉬운 problem/solution 섹션과 연결된 이슈에 대한 안내를 목표로 합니다. 이 안내는 `Fixes`와 `Refs` 중 무엇을 사용할지 설명하며, GitHub 이슈가 연결되었는지에 따라 달라집니다. Orca는 선택한 기준 브랜치를 유지하고 빈 설명을 거부하며, 빈 본문이 게시되지 않도록 다시 시도할 수 있는 명확한 오류를 표시합니다. 검토를 만들기 전에 필드를 확인합니다.
+Orca가 브랜치 diff와 커밋을 바탕으로 제목, 설명, 초안 상태를 작성하게 하려면 검토 생성 대화 상자에서 **`Generate pull request details with AI`(AI로 풀 리퀘스트 세부 정보 생성)**을 사용합니다. 생성된 문구는 짧고 이해하기 쉬운 problem/solution 섹션과 연결된 이슈에 대한 안내를 목표로 합니다(`Fixes`와 `Refs` 중 GitHub 이슈가 첨부된 경우에 맞는 표현을 안내합니다). Orca는 선택한 기준 브랜치를 유지하고 빈 설명을 거부하며, 빈 본문을 게시하는 대신 다시 시도할 수 있도록 명확한 오류를 표시합니다. 검토를 생성하기 전에 필드를 확인합니다. Source Control AI는 OMP을 통해 이러한 생성 작업을 실행할 수 있으며, 이는 OMP이 선택된 작업 에이전트인 경우에 해당합니다.
 
 ## 저장소별 AI 액션 레시피
 
