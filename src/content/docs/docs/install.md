@@ -1,7 +1,7 @@
 ---
 title: "설치"
 sourceUrl: https://www.onorca.dev/docs/install
-checkedAt: "2026-09-23T01:05:13.359Z"
+checkedAt: "2026-10-06T01:03:33.118Z"
 editUrl: false
 prev: /orca-docs-ko/docs/
 next: /orca-docs-ko/docs/first-session/
@@ -69,7 +69,7 @@ RC 채널을 항상 사용하도록 설정하는 앱 내 옵션은 없습니다.
 
 ### 윈도우
 
-기본 셸은 [설정 → 터미널](/orca-docs-ko/docs/settings/)에서 PowerShell 또는 CMD로 설정할 수 있습니다. 대부분의 사용자는 PowerShell을 원합니다.
+기본 셸은 [`Settings → Terminal`(설정 → 터미널)](/orca-docs-ko/docs/settings/)에서 PowerShell 또는 CMD로 설정할 수 있습니다. 대부분의 사용자에게는 PowerShell이 적합합니다. 번들로 제공되는 `orca` 명령은 네이티브 프로그램이므로 Visual C++ Redistributable 없이 실행됩니다.
 
 ### 리눅스
 

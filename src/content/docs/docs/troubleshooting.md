@@ -1,7 +1,7 @@
 ---
 title: "문제 해결 및 FAQ"
 sourceUrl: https://www.onorca.dev/docs/troubleshooting
-checkedAt: "2026-09-23T01:05:13.359Z"
+checkedAt: "2026-10-06T01:03:33.118Z"
 editUrl: false
 prev: /orca-docs-ko/docs/telemetry/
 next: /orca-docs-ko/docs/github-errors/
@@ -13,9 +13,17 @@ translationNotice:
 
 ## 에이전트가 시작되지 않습니다
 
-- 터미널을 열고 에이전트의 CLI를 수동으로 실행합니다. 여기서 실패하면 Orca이 아닌 CLI 자체의 인증 또는 설치 문제입니다.
-- CLI가 Orca이 보는 `PATH`에 있는지 확인하세요([설정 → 에이전트](/orca-docs-ko/docs/settings/) 확인).
-- 탭에서 `Restart`(다시 시작) 칩을 사용해 보세요.
+-   Orca 외부의 일반 터미널에서 에이전트 CLI를 실행합니다. 해당 환경에서도 실패하면 CLI 설치와 로그인을 확인합니다. Orca에서만 실패하면 아래 지침을 확인합니다.
+-   Orca에서 확인하는 `PATH`에 CLI가 포함되어 있는지 확인합니다([`Settings → Agents`(설정 → 에이전트)](/orca-docs-ko/docs/settings/) 확인).
+-   탭의 **`Restart`(재시작)** 칩을 사용해 봅니다.
+
+## Codex에서 `path must be shorter than SUN_LEN` 오류를 보고함
+
+Orca를 v1.4.212 이상으로 업데이트합니다. Codex 0.157 이상에서는 Orca가 관리하는 계정 홈의 백그라운드 데몬 소켓 경로가 너무 길 때 이 오류가 발생할 수 있습니다. 이제 Orca가 영향을 받는 홈을 자동으로 조정하므로 계정을 이동하거나 시스템 `~/.codex/config.toml`을 편집할 필요가 없습니다. [Orca의 Codex](/orca-docs-ko/docs/agents/codex/)을 참조합니다.
+
+## Orca에서 사용할 프로필 사본을 묻는 경우
+
+프로필의 JSON 및 SQLite 사본을 모두 읽을 수 있지만 내용이 다르면 Orca가 각 사본의 마지막 저장 시각을 표시합니다. 유지할 사본에 따라 **`Use SQLite (Recommended)`(SQLite 사용(권장))** 또는 **`Use JSON`(JSON 사용)**을 선택합니다. Orca가 선택 사항을 적용하고 재시작합니다. 먼저 사본을 확인해야 하면 **`Quit`(종료)**를 선택합니다. 다른 프로필 복구 오류에는 별도의 명령 지침이 계속 표시될 수 있습니다.
 
 ## Diff 보기가 잘못되었거나 멈춘 것 같습니다.
 
@@ -29,13 +37,13 @@ translationNotice:
 
 ## Orca CLI에 "명령을 찾을 수 없습니다"라고 표시됩니다.
 
-[`Settings`(설정) → `General`(일반) → `Orca CLI`](/orca-docs-ko/docs/settings/)에서 CLI를 등록합니다. macOS에서는 `~/.local/bin`에 심을 설치하므로 해당 경로가 셸의 `PATH`에 포함되어 있는지 확인합니다.
+[`Settings`(설정) → `General`(일반) → `Orca CLI`](/orca-docs-ko/docs/settings/)에서 CLI를 등록합니다. macOS에서는 `~/.local/bin`에 심을 설치하므로 해당 경로가 셸의 `PATH`에 포함되어 있는지 확인합니다. Windows에서는 `orca`가 설치 프로그램이 `PATH`에 추가하는 네이티브 프로그램입니다.
 
 ## SSH는 연결되지만 원격 터미널이 실패하는 경우
 
--   원격에 Node가 설치되어 있고 최초 릴레이 설치를 위한 네트워크 액세스가 가능한지 확인합니다.
--   Linux에서 터미널이 전혀 생성되지 않으면 C/C++ 도구 체인인 make, g++/clang++, python3을 설치합니다([SSH 작업 트리](/orca-docs-ko/docs/ssh/) 참조).
--   도구를 설치한 후 Orca가 네이티브 모듈을 다시 설치할 수 있도록 다시 연결합니다.
+-   Orca는 처음 연결할 때 호스트에 런타임을 설치합니다. 기본 **`Auto`(자동)** 런타임에서는 Orca의 관리형 Node 또는 호스트의 Node를 사용하므로 일반적으로 컴파일러가 필요하지 않습니다. [SSH 작업 트리 → 호스트의 원격 런타임](/orca-docs-ko/docs/ssh/#remote-runtime-on-the-host)을 참조합니다.
+-   호스트에서 실행을 차단하면(예: `noexec` 홈 디렉터리) Orca는 일반 SSH 터미널 및 SFTP 파일 탐색으로 대체하고 이유를 표시합니다. 전체 런타임을 복원하려면 홈 디렉터리의 실행을 허용합니다.
+-   레거시 npm 경로만 실행할 수 있는 호스트에서 터미널이 생성되지 않으면 C/C++ 도구 체인(make, g++/clang++, python3)을 설치한 다음 다시 연결합니다.
 
 ## SSH 파일은 작동하지만 `Download Folder`(폴더 다운로드)는 작동하지 않는 경우
 

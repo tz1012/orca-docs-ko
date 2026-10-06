@@ -61,6 +61,10 @@
     "/docs/notifications/:paragraph:custom-sounds:2": {
       "sourceHash": "703e3719c440acd9d56bd36939b8bd7b5f7f88f6f47380b86d386ff7058ea363",
       "translated": "사용자 정의 사운드를 사용하는 경우 동일한 설정 창에서 재생 볼륨을 설정하세요."
+    },
+    "/docs/notifications/:paragraph:agent-finished-pings:1": {
+      "sourceHash": "105754011b060e0c3a37461406b44975b716a75559ee9aa27090af982583d686",
+      "translated": "[업데이트된 구조화 채팅](ORCA_PROTECTED_0001)에서는 정상적으로 완료된 턴이 대신 해당 탭과 워크스페이스를 읽지 않음으로 표시합니다. 시스템 알림을 보내거나 소리를 재생하지 않습니다. 실패하거나 취소된 턴에는 읽지 않음 표시가 추가되지 않습니다."
     }
   }
 }

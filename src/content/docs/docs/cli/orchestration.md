@@ -1,7 +1,7 @@
 ---
 title: "오케스트레이션"
 sourceUrl: https://www.onorca.dev/docs/cli/orchestration
-checkedAt: "2026-09-23T01:05:13.359Z"
+checkedAt: "2026-10-06T01:03:33.118Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/reference/
 next: /orca-docs-ko/docs/cli/automations/
@@ -45,20 +45,24 @@ orca orchestration task-create --spec "Audit billing settings for mobile layout"
 orca orchestration worker-start --task <taskId> --worktree current --agent codex --json
 # or new worktree:
 orca orchestration worker-start --task <taskId> --worktree new-child --name billing-audit --agent codex --setup run --json
-# optional per-worker model / effort (Claude, Codex, Cursor only; not with --terminal):
+# optional per-worker model / effort (Claude, Codex, Muse, Cursor, Antigravity; not with --terminal):
 orca orchestration worker-start --task <taskId> --worktree current --agent claude --model <opaque-model-id> --effort high --json
+# Run Antigravity as a supervised worker in a local child worktree:
+orca orchestration worker-start --task <taskId> --worktree new-child --name research --agent antigravity --setup run --json
 ```
 
-`--model`은 Claude, Codex 및 Cursor의 불투명한 공급자 모델 ID를 받습니다. `--effort`에는 `--model`이 필요하며, 해당 agent/model이 그 수준을 지원할 때만 적용됩니다. 두 플래그 모두 기존 창을 재사용하는 `--terminal`과 함께 사용할 수 없습니다. 재정의는 해당 실행에만 적용되며 시작 처리 결과의 `launch.requested` / `launch.effective` 아래에 표시됩니다. 연합 실행에는 실행 환경 설정 지원을 알리는 워커 호스트가 필요합니다.
+`--model`은 Claude, Codex, Muse, Cursor 및 Antigravity의 불투명 제공자 모델 ID를 허용합니다. Muse에는 설치된 Muse에서 허용하는 모델 ID(예: `muse-spark-1.3`)를 전달합니다. Antigravity에는 `agy models`에서 보고한 모델 슬러그를 사용합니다. `--effort`에는 `--model`이 필요하며 해당 agent/model가 그 수준을 지원할 때만 적용됩니다. 두 플래그 모두 기존 창을 재사용하는 `--terminal`과 함께 사용할 수 없습니다. 재정의는 해당 시작에만 적용되며 시작 확인서의 `launch.requested` / `launch.effective` 아래에 표시됩니다. 연합형 시작에는 시작 환경 설정 지원을 알리는 워커 호스트가 필요합니다.
 
-완료를 기다립니다. Delivery의 모든 메시지를 처리한 다음 확인합니다.
+Orca는 로컬 Antigravity 하위 작업 트리의 워커를 시작하기 전에 신뢰 설정을 준비합니다. 이 신뢰 설정은 SSH를 통한 Antigravity 감독을 지원하지 않습니다. 일반 에이전트 기능은 [지원되는 에이전트](/orca-docs-ko/docs/agents/supported/)를 참조합니다.
+
+완료를 기다립니다(각 Delivery의 모든 메시지를 처리한 뒤 승인합니다):
 
 ```
 orca orchestration check --wait --types worker_done,escalation,question --timeout-ms 900000 --json
 orca orchestration check --ack <deliveryId> --wait --types worker_done,escalation,question --timeout-ms 900000 --json
 ```
 
-워커 완료 시 워커 창에서 주입된 ID를 포함하여 다음을 실행합니다.
+워커 완료(워커 창에서 실행하며 주입된 ID를 포함합니다):
 
 ```
 orca orchestration send \
@@ -74,7 +78,7 @@ orca orchestration send \
 
 `worker_done`에는 `--outcome succeeded|failed`가 필요합니다.
 
-검사/복구 명령은 다음과 같습니다.
+검사 / 복구:
 
 ```
 orca orchestration worker-show --dispatch <dispatchId> --json
@@ -89,7 +93,7 @@ orca orchestration worker-retain --dispatch <dispatchId> --json
 orca orchestration worker-start --task <taskId> --retry-of <dispatchId> --worktree current --agent codex --json
 ```
 
-완료된 워커 터미널을 출력을 다시 읽기 위한 용도로만 열어 두지 말고, `worker-read`은 `worker-release` 뒤에 사용합니다. 범용 `terminal close`은 릴리스가 `release_pending` 또는 `release_unknown`를 반환할 때 대체 수단으로 사용하지 말고, 처리 결과에 지정된 복구 작업을 따릅니다.
+출력을 다시 읽기 위한 목적으로 완료된 워커 터미널을 열어 둔 채로 두지 않습니다. `worker-release` 후에 `worker-read`을 사용합니다. 해제 결과가 `release_pending` 또는 `release_unknown`인 경우 포괄적인 `terminal close` 명령으로 대체하지 말고 확인서의 복구 조치를 따릅니다.
 
 ## 연합 워커(선택 사항)
 

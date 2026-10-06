@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-09-23T01:05:13.359Z"
+checkedAt: "2026-10-06T01:03:33.118Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -24,11 +24,12 @@ translationNotice:
 | **Cmd+클릭**(macOS) / **Ctrl+클릭**(Windows/Linux) | 최신 **perf**\-tagged 시험판을 포함합니다. |
 | **Option+클릭**(macOS만 해당) | 호환성 검사를 통과한 **검증된 로컬 macOS 빌드**를 선택합니다. 실패하면 `Could Not Use Local Build`(로컬 빌드를 사용할 수 없음)와 **`Choose Another Build`(다른 빌드 선택)**가 표시됩니다. |
 
--   **`Open in menu`(다음에서 열기 메뉴)** — 작업 트리의 **`Open in`(다음에서 열기)** 메뉴에 표시할 앱을 선택합니다. VS Code/Insiders는 SSH 작업 트리에서 **`Remote SSH`(원격 SSH)** 열기를 지원하며, 다른 편집기는 로컬 경로만 지원합니다.
+-   **`Open in menu`(다음에서 열기 메뉴)** — 작업 트리의 **`Open in`(다음에서 열기)** 메뉴에 표시할 앱을 선택합니다. VS Code / Insiders에서는 SSH 작업 트리에 대해 **`Remote SSH`(원격 SSH)** 열기를 사용할 수 있으며, 다른 편집기는 로컬 경로만 지원합니다.
 -   **`UI zoom`(UI 확대/축소)** — 설치별 UI 배율입니다.
--   **`Default new-worktree name`(새 작업 트리 기본 이름)** — 사용자 지정 접두사 또는 해양 생물 이름을 사용합니다.
--   **`Editor Word Wrap`(편집기 자동 줄 바꿈)** — 파일 편집기의 기본 줄 바꿈이며 기본적으로 켜져 있습니다. 파일 탭의 **⋯** 메뉴 또는 `Alt+Z`로 전환합니다. **`Diff Word Wrap`(diff 자동 줄 바꿈)**과는 별개입니다.
--   **`Collapse Unchanged Regions`(변경되지 않은 영역 접기)** — 단일 파일 diff의 변경되지 않은 긴 구간을 접으면서 주변 컨텍스트를 약간 표시합니다. 전체 파일이 필요할 때는 구간을 펼칩니다. **`View all changes`(모든 변경 사항 보기)**는 자체 접힌 레이아웃을 유지합니다.
+-   **`Default new-worktree name`(새 작업 트리 기본 이름)** — 사용자 지정 접두사 또는 해양 생물을 선택합니다.
+-   **`Editor Word Wrap`(편집기 자동 줄 바꿈)** — 파일 편집기의 기본 줄 바꿈 설정이며 기본적으로 켜져 있습니다. 파일 탭의 **⋯** 메뉴 또는 `Alt+Z`에서 전환합니다. **`Diff Word Wrap`(diff 자동 줄 바꿈)**과는 별개입니다.
+-   **`Reuse a preview tab when browsing files`(파일 탐색 시 미리 보기 탭 재사용)** — 기본적으로 켜져 있습니다. 현재 미리 보기 탭을 교체하지 않고 한 번 클릭한 파일을 각각 별도 탭에서 열려면 끕니다.
+-   **`Collapse Unchanged Regions`(변경되지 않은 영역 접기)** — 단일 파일 diff에서 주변 컨텍스트를 약간 표시한 채 변경되지 않은 긴 구간을 접습니다. 전체 파일이 필요하면 구간을 펼칩니다. **`View all changes`(모든 변경 사항 보기)**는 자체적으로 접힌 레이아웃을 유지합니다.
 
 ## 외관
 
@@ -51,11 +52,12 @@ translationNotice:
 ## 터미널
 
 -   글꼴, 테마, 커서 스타일, 여백을 설정합니다.
--   Ghostty 설정을 가져옵니다.
--   Warp 테마 가져오기 — **`Import themes from Warp`(Warp에서 테마 가져오기)**를 사용하여 Warp YAML 테마를 가져오거나(OS별 Warp 테마 폴더를 자동 검색), Warp 형식 테마 파일이 있는 임의의 폴더에는 **`Import from YAML`(YAML에서 가져오기)**을 사용합니다.
--   macOS 일본어 키보드에서 `JIS Yen (¥) to Backslash (\)`(JIS 엔(¥)을 백슬래시(\)로 변환)을 설정합니다.
--   **`Default shell`(기본 셸)** — 새 로컬 터미널 탭의 기본 셸을 설정합니다. 시스템 기본값을 사용하려면 비워 둡니다. Windows에서는 사용 가능한 경우 PowerShell, Command Prompt, WSL도 제공합니다.
--   **`Allow TUI Clipboard Writes (OSC 52)`(TUI 클립보드 쓰기 허용)** — **기본적으로 켜져 있습니다**. Zellij, tmux, Neovim, fzf, Grok 및 유사 도구가 SSH 연결을 포함하여 PTY를 통해 시스템 클립보드에 쓸 수 있게 합니다. 이전의 제한된 동작을 선호하면 끍니다.
+-   Ghostty 가져오기를 지원합니다.
+-   Warp 테마 가져오기 — **`Import themes from Warp`(Warp에서 테마 가져오기)**로 Warp YAML 테마를 가져오거나(운영 체제별 Warp 테마 폴더를 자동으로 찾음), **`Import from YAML`(YAML에서 가져오기)**로 Warp 형식 테마 파일이 있는 임의 폴더에서 가져옵니다.
+-   macOS 일본어 키보드에서 JIS Yen(¥)을 Backslash(\)로 변환합니다.
+-   새 로컬 터미널 탭의 **`Default shell`(기본 셸)**을 설정합니다. 시스템 기본값을 사용하려면 비워 둡니다. Windows에서는 사용 가능한 경우 PowerShell, Command Prompt 및 WSL도 제공합니다.
+-   사용자 지정 Unix 기본 셸의 **`Shell arguments`(셸 인수)**를 **`Default shell → Advanced`(기본 셸 → 고급)** 아래에서 설정합니다. 로그인 셸에는 **`-l (default)`(-l, 기본값)**를 선택하거나, **`Custom args`(사용자 지정 인수)**를 선택하고 줄마다 인수 하나를 입력합니다. 사용자 지정 목록이 비어 있으면 인수를 전달하지 않습니다.
+-   **`Allow TUI Clipboard Writes (OSC 52)`(TUI 클립보드 쓰기 허용(OSC 52))** — **기본적으로 켜져 있습니다**. Zellij, tmux, Neovim, fzf, Grok 등이 SSH 연결을 포함해 PTY를 통해 시스템 클립보드에 쓸 수 있게 합니다. 이전의 제한된 동작을 선호하면 끕니다.
 
 ## 빠른 명령
 
@@ -65,14 +67,17 @@ translationNotice:
 
 ## 에이전트
 
--   **`Installed agents`(설치된 에이전트)** — 활성화하거나 비활성화할 수 있는 감지된 CLI를 표시합니다.
--   감지된 에이전트를 활성화하거나 비활성화하여 실행 메뉴에 사용할 CLI만 표시합니다.
--   `Agent Permissions`(에이전트 권한)에서 CLI 권한 프롬프트를 줄이려면 **`Yolo`(자동 승인)**를 선택하고, 사용자 지정하지 않은 에이전트가 자체 승인 흐름을 유지하도록 하려면 **`Manual`(수동)**을 선택합니다.
--   Claude 및 Codex 계정 목록을 표시합니다.
--   에이전트별 시작 훅을 설정합니다.
--   **`Agent status hooks`(에이전트 상태 훅)** — Orca에 작업 중/대기 중/완료 상태를 표시합니다. Windows WSL 훅 릴레이를 포함하여 앱을 다시 시작하지 않아도 토글이 적용됩니다. CLI 명령은 `orca agent hooks on|off|status`입니다.
--   **`Keep computer awake`(컴퓨터 절전 방지)** — **`On`(켜짐)**은 계속 절전을 방지하고, **`Agent`(에이전트)**는 에이전트가 작업하는 동안 절전을 방지하며, **`Off`(꺼짐)**는 이 기능을 끕니다. 데스크톱 상태 표시줄에도 커피 아이콘과 함께 동일한 **`Caffeinate`(절전 방지)** 컨트롤이 있습니다. 페어링된 웹 클라이언트에서는 숨겨집니다.
--   **`Skill freshness`(스킬 최신 상태)** — `Agents`(에이전트) 창과 스킬 카드는 전체 상태를 계속 표시합니다. 사이드바 탐색에는 조치가 필요한 스킬만 배지가 표시됩니다(**`Update available`(업데이트 사용 가능)**, **`Needs attention`(확인 필요)**/검토). 정상, 로딩 중 및 설치되지 않은 선택 항목에는 배지가 표시되지 않습니다. 대화 상자의 **`Update`(업데이트)**를 사용하면 터미널 없이 전역 스킬을 백그라운드에서 새로 고칩니다. 진행 상태는 상태 표시줄에 나타나며 대화 상자를 닫아도 실행은 취소되지 않습니다. [Orca 스킬](/orca-docs-ko/docs/cli/skills/#keep-skills-up-to-date)을 참조합니다.
+-   `Installed agents`(설치된 에이전트) — 활성화하거나 비활성화할 수 있는 감지된 CLI입니다.
+-   감지된 에이전트를 활성화하거나 비활성화하여 시작 메뉴에 사용하려는 CLI만 표시합니다.
+-   `Agent Permissions`(에이전트 권한) — 사용자 지정하지 않은 에이전트에 대해 CLI 권한 확인을 줄이려면 **`Yolo`**, 각 에이전트의 자체 승인 흐름을 유지하려면 **`Manual`(수동)**을 선택합니다.
+-   **`Trust the folder when Orca starts an agent`(Orca에서 에이전트를 시작할 때 폴더 신뢰)** — **기본적으로 켜져 있습니다**. 오케스트레이션 워커, 자동화 및 휴대전화에서 시작한 에이전트를 포함하여 Orca가 시작하는 에이전트는 "이 폴더를 신뢰하십니까?" 프롬프트를 건너뜁니다. 각 에이전트의 자체 신뢰 프롬프트를 유지하려면 끕니다. [Codex의 Orca 통합](/orca-docs-ko/docs/agents/codex/) 및 [지원되는 에이전트](/orca-docs-ko/docs/agents/supported/)를 참조합니다.
+-   **`Run each Codex terminal on its own server`(각 Codex 터미널을 자체 서버에서 실행)** — **기본적으로 켜져 있습니다**. Orca의 상태와 탭 닫기 동작을 Codex 탭에서 정확하게 유지합니다. Codex의 공유 서버와 에이전트 개요를 사용하려면 끕니다. 새 터미널에 적용됩니다. 함께 제공되는 **`Warn when a Codex tab shares a server`(Codex 탭이 서버를 공유할 때 경고)** 알림은 직접 시작한 Codex가 서버를 공유할 때 표시됩니다. [Codex의 Orca 통합](/orca-docs-ko/docs/agents/codex/)을 참조합니다.
+-   Claude 및 Codex 계정 목록을 관리합니다. Linux에서는 암호화할 수 없었던 저장된 자격 증명이 이곳에 경고와 함께 표시됩니다.
+-   OpenCode Go 세션 쿠키 — Go 속도 제한을 표시하려면 전체 `opencode.ai` Cookie 헤더에 `__Host-console_session`를 포함해 붙여 넣습니다. `auth` 쿠키만으로는 충분하지 않습니다.
+-   에이전트별 시작 후크를 설정합니다.
+-   **`Agent status hooks`(에이전트 상태 후크)** — Orca에 작업 중 / 대기 중 / 완료 상태를 표시합니다. 앱을 재시작하지 않아도 토글이 적용되며 Windows WSL 후크 릴레이에도 적용됩니다. CLI: `orca agent hooks on|off|status`.
+-   **`Keep computer awake`(컴퓨터 절전 방지)** — **`On`(켜기)**(항상 절전 방지), **`Agent`(에이전트)**(에이전트가 작업 중일 때 절전 방지) 또는 **`Off`(끄기)**를 선택합니다. 같은 컨트롤이 데스크톱 상태 표시줄에 **`Caffeinate`(절전 방지)**(커피 아이콘)로 표시됩니다. 페어링된 웹 클라이언트에서는 숨겨집니다.
+-   **`Skill freshness`(스킬 최신 상태)** — 에이전트 창과 스킬 카드에는 계속 전체 상태가 표시됩니다. 사이드바 탐색에는 조치가 필요한 스킬(**`Update available`(업데이트 가능)**, **`Needs attention`(확인 필요)** / 검토)에만 배지가 표시되며, 정상, 로드 중, 선택적 미설치 행은 별도 표시를 하지 않습니다. 대화 상자에서 **`Update`(업데이트)**를 선택하면 터미널 없이 전역 스킬을 백그라운드에서 새로 고칩니다. 진행 상황은 상태 표시줄에 표시되며 대화 상자를 닫아도 실행이 취소되지 않습니다. [Orca 스킬](/orca-docs-ko/docs/cli/skills/#keep-skills-up-to-date)을 참조합니다.
 
 ## 브라우저
 
@@ -135,9 +140,10 @@ translationNotice:
 
 ## 원격 Orca 서버
 
-- 원격 Orca 런타임에 페어링하고 연결합니다.
-- 이 데스크톱 앱을 서버로 광고하고 취소 가능한 액세스 링크를 생성하세요.
-- 서버 라우팅 프로젝트, 터미널 및 공급자 확인을 위한 고급 기본 런타임 선택.
+-   원격 Orca 런타임과 페어링하고 연결합니다.
+-   이 데스크톱 앱을 서버로 알리고 취소 가능한 액세스 링크를 만듭니다.
+-   페어링된 모바일 호스트에 사용할 이 데스크톱의 **`Machine name`(컴퓨터 이름)**을 설정합니다. 감지된 컴퓨터 이름을 사용하려면 비워 둡니다. [모바일 컴패니언](/orca-docs-ko/docs/mobile/#pairing)을 참조합니다.
+-   서버를 통해 라우팅되는 프로젝트, 터미널 및 제공자 검사의 고급 기본 런타임 선택을 설정합니다.
 
 ## 단축키
 

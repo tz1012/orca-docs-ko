@@ -1,7 +1,7 @@
 ---
 title: "Orca의 Codex"
 sourceUrl: https://www.onorca.dev/docs/agents/codex
-checkedAt: "2026-09-23T01:05:13.359Z"
+checkedAt: "2026-10-06T01:03:33.118Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/glm-agent/
 next: /orca-docs-ko/docs/agents/cursor-cli/
@@ -30,6 +30,20 @@ Codex은 OpenAI의 에이전트 CLI입니다. Orca의 Codex 통합은 앱에서 
 ## 시스템 기본 계정과 추가 계정
 
 **`System default`(시스템 기본값)**는 실제 `~/.codex` 로그인을 사용합니다(Orca 외부에서 별도로 실행한 `codex`가 사용하는 것과 동일한 홈입니다). Orca가 관리하는 추가 계정은 Orca의 계정 데이터 아래에 각각 전용 홈을 두므로 자격 증명과 롤아웃이 격리됩니다. 새 Codex 실행은 활성 계정을 따르지만, 이미 실행 중인 세션은 다시 시작할 때까지 시작할 때 사용한 홈을 유지합니다.
+
+## Codex 0.157 이상
+
+Orca에서 관리하는 계정 홈 경로가 Codex의 백그라운드 데몬 소켓에서 사용하기에 너무 길면, Orca는 해당 홈에서 데몬을 비활성화하여 Codex가 시작될 수 있게 합니다. 이는 에이전트 선택기에서 Codex를 시작하거나 Orca 터미널에서 `codex`을 입력하는 경우 모두에 적용됩니다. Orca는 계정 데이터를 그대로 유지하며 시스템의 `~/.codex/config.toml`을 변경하지 않습니다.
+
+영향을 받는 홈에서는 `codex agents`와 데몬 기반 재개 또는 계속 기능을 사용할 수 없습니다. Codex에서 계속 `path must be shorter than SUN_LEN` 오류를 보고하면 [문제 해결](/orca-docs-ko/docs/troubleshooting/)을 참조합니다.
+
+## 각 Codex 터미널은 자체 서버에서 실행됩니다
+
+Codex 0.157 이상에서는 각 Codex 탭이 Orca 터미널에서 기본적으로 자체 백그라운드 서버를 실행합니다. 따라서 탭마다 에이전트 상태가 정확하게 유지되며, Codex 탭 하나를 닫아도 다른 탭의 연결이 끊기지 않습니다. 이 동작은 새 터미널에 적용됩니다. 업데이트할 때 이미 열려 있던 터미널은 다시 열 때까지 이전 동작을 유지합니다.
+
+-   절충점: 탭별 서버를 사용하면 Codex의 공유 서버 기능(백그라운드 실행, `codex agents`, Codex 데스크톱 앱 또는 IDE에서 연 세션)이 Orca에서 시작된 세션을 인식하지 못합니다.
+-   대신 Codex의 서버를 공유하려면 새 터미널을 열기 전에 **`Settings → Agents → Run each Codex terminal on its own server`(설정 → 에이전트 → 각 Codex 터미널을 자체 서버에서 실행)**를 끄거나 `ORCA_CODEX_ISOLATE=0`을 설정합니다(예: 셸 시작 파일의 `export ORCA_CODEX_ISOLATE=0`). 그러면 공유 서버에서 Codex의 에이전트 개요를 다시 사용할 수 있습니다.
+-   직접 시작한 Codex가 공유 서버에 연결되면 Orca가 해당 탭 상단에 알림을 표시합니다. 알림의 **`Fix`(수정)**를 선택하면 공유가 꺼지며, 업데이트 전에 열린 탭에서는 대신 새 터미널을 열도록 안내합니다.
 
 ## 중첩된 Task 하위 에이전트
 

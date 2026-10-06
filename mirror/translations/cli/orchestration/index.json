@@ -267,32 +267,32 @@
       "translated": "## 권장 감독 루프"
     },
     "/docs/cli/orchestration/:code:preferred-supervised-loop:0": {
-      "sourceHash": "9ebea90077eac4ebcdb38ac3b5ee0d1f5c56ed7a92237b91f3b9bbdce1ba2411",
+      "sourceHash": "5b7f6ab7ad0b798a71a232cf3a0f91a2bfe656e1076c359d01cb7c0a33a7db60",
       "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/orchestration/:paragraph:preferred-supervised-loop:0": {
-      "sourceHash": "2bc3a70a46ea885cac10c4917659fdd4bc8222114647fd15b2a1993371823749",
-      "translated": "`ORCA_PROTECTED_0001`은 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003 및 ORCA_PROTECTED_0004의 불투명한 공급자 모델 ID를 받습니다. `ORCA_PROTECTED_0005`에는 `ORCA_PROTECTED_0006`이 필요하며, 해당 ORCA_PROTECTED_0007이 그 수준을 지원할 때만 적용됩니다. 두 플래그 모두 기존 창을 재사용하는 `ORCA_PROTECTED_0008`과 함께 사용할 수 없습니다. 재정의는 해당 실행에만 적용되며 시작 처리 결과의 `ORCA_PROTECTED_0009` / `ORCA_PROTECTED_0010` 아래에 표시됩니다. 연합 실행에는 실행 환경 설정 지원을 알리는 워커 호스트가 필요합니다."
+      "sourceHash": "026bbf7819daa8e748ff2f17306d5aeb21803d32b80f0ceb7d344e4fdd9e9985",
+      "translated": "`ORCA_PROTECTED_0001`은 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, Muse, ORCA_PROTECTED_0004 및 ORCA_PROTECTED_0005의 불투명 제공자 모델 ID를 허용합니다. Muse에는 설치된 Muse에서 허용하는 모델 ID(예: `ORCA_PROTECTED_0006`)를 전달합니다. ORCA_PROTECTED_0007에는 `ORCA_PROTECTED_0008`에서 보고한 모델 슬러그를 사용합니다. `ORCA_PROTECTED_0009`에는 `ORCA_PROTECTED_0010`이 필요하며 해당 ORCA_PROTECTED_0011가 그 수준을 지원할 때만 적용됩니다. 두 플래그 모두 기존 창을 재사용하는 `ORCA_PROTECTED_0012`과 함께 사용할 수 없습니다. 재정의는 해당 시작에만 적용되며 시작 확인서의 `ORCA_PROTECTED_0013` / `ORCA_PROTECTED_0014` 아래에 표시됩니다. 연합형 시작에는 시작 환경 설정 지원을 알리는 워커 호스트가 필요합니다."
     },
     "/docs/cli/orchestration/:code:preferred-supervised-loop:1": {
       "sourceHash": "ddfb5cd10ad694d6877b36de7d318ee193a4527679fe8c53d28448155cdba65e",
       "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/orchestration/:paragraph:preferred-supervised-loop:1": {
-      "sourceHash": "5e3cf1dcad9ffe0beb8a74284a8d47ed2f8452f679a8e76f1cd2dfa14d711a8d",
-      "translated": "완료를 기다립니다. Delivery의 모든 메시지를 처리한 다음 확인합니다."
+      "sourceHash": "8be6c52da9786112cc49149f07666b9a0a892298c39802c2df5690216892aee4",
+      "translated": "ORCA_PROTECTED_0001는 로컬 ORCA_PROTECTED_0002 하위 작업 트리의 워커를 시작하기 전에 신뢰 설정을 준비합니다. 이 신뢰 설정은 SSH를 통한 ORCA_PROTECTED_0003 감독을 지원하지 않습니다. 일반 에이전트 기능은 [지원되는 에이전트](ORCA_PROTECTED_0004)를 참조합니다."
     },
     "/docs/cli/orchestration/:code:preferred-supervised-loop:2": {
       "sourceHash": "fcdaf1c76c8853272aea7fef5b272cea10b7e7696e3929e9a1b2e372b2192ae6",
       "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/orchestration/:paragraph:preferred-supervised-loop:2": {
-      "sourceHash": "d3b1fa43fae6699d5d0f4dc83cb5312d2940b6d287d394605cc5fd8a14988ac6",
-      "translated": "워커 완료 시 워커 창에서 주입된 ID를 포함하여 다음을 실행합니다."
+      "sourceHash": "5e3cf1dcad9ffe0beb8a74284a8d47ed2f8452f679a8e76f1cd2dfa14d711a8d",
+      "translated": "완료를 기다립니다(각 Delivery의 모든 메시지를 처리한 뒤 승인합니다):"
     },
     "/docs/cli/orchestration/:paragraph:preferred-supervised-loop:3": {
-      "sourceHash": "554ce7c15895940c77e0ff3421462894655bd94346640b1b1e8ba6d2ae5ffead",
-      "translated": "`ORCA_PROTECTED_0001`에는 `ORCA_PROTECTED_0002`가 필요합니다."
+      "sourceHash": "d3b1fa43fae6699d5d0f4dc83cb5312d2940b6d287d394605cc5fd8a14988ac6",
+      "translated": "워커 완료(워커 창에서 실행하며 주입된 ID를 포함합니다):"
     },
     "/docs/cli/orchestration/:code:preferred-supervised-loop:3": {
       "sourceHash": "7171dd4157242032e466ea803ff199088f10b91631e7f83f3fdd6d69a23d62ad",
@@ -347,12 +347,16 @@
       "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/orchestration/:paragraph:preferred-supervised-loop:4": {
-      "sourceHash": "d7e4e86911cc6c2d6a9ba5cebf8dfa2e3b8c3e3ce07ba27d3d5014cab283541c",
-      "translated": "검사/복구 명령은 다음과 같습니다."
+      "sourceHash": "554ce7c15895940c77e0ff3421462894655bd94346640b1b1e8ba6d2ae5ffead",
+      "translated": "`ORCA_PROTECTED_0001`에는 `ORCA_PROTECTED_0002`가 필요합니다."
     },
     "/docs/cli/orchestration/:paragraph:preferred-supervised-loop:5": {
+      "sourceHash": "d7e4e86911cc6c2d6a9ba5cebf8dfa2e3b8c3e3ce07ba27d3d5014cab283541c",
+      "translated": "검사 / 복구:"
+    },
+    "/docs/cli/orchestration/:paragraph:preferred-supervised-loop:6": {
       "sourceHash": "0f9f61e41b0c9aca2529b2a454eb4264e2b77b11672679feb2c24627c841477a",
-      "translated": "완료된 워커 터미널을 출력을 다시 읽기 위한 용도로만 열어 두지 말고, `ORCA_PROTECTED_0001`은 `ORCA_PROTECTED_0002` 뒤에 사용합니다. 범용 `ORCA_PROTECTED_0003`은 릴리스가 `ORCA_PROTECTED_0004` 또는 `ORCA_PROTECTED_0005`를 반환할 때 대체 수단으로 사용하지 말고, 처리 결과에 지정된 복구 작업을 따릅니다."
+      "translated": "출력을 다시 읽기 위한 목적으로 완료된 워커 터미널을 열어 둔 채로 두지 않습니다. `ORCA_PROTECTED_0002` 후에 `ORCA_PROTECTED_0001`을 사용합니다. 해제 결과가 `ORCA_PROTECTED_0004` 또는 `ORCA_PROTECTED_0005`인 경우 포괄적인 `ORCA_PROTECTED_0003` 명령으로 대체하지 말고 확인서의 복구 조치를 따릅니다."
     }
   }
 }

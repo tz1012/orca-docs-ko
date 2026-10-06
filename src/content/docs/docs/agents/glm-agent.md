@@ -1,7 +1,7 @@
 ---
 title: "Orca ADE에서 GLM-5.2를 사용하는 방법"
 sourceUrl: https://www.onorca.dev/docs/agents/glm-agent
-checkedAt: "2026-09-23T01:05:13.359Z"
+checkedAt: "2026-10-06T01:03:33.118Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/claude-code/
 next: /orca-docs-ko/docs/agents/codex/

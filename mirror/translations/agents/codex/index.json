@@ -81,6 +81,30 @@
     "/docs/agents/codex/:paragraph:continue-in-a-new-session:0": {
       "sourceHash": "1c238ece160a1f61c389d19397332a4bc70c0a126f3e79a569795b23a96de03c",
       "translated": "에이전트 터미널의 헤더나 컨텍스트 메뉴에서 **`ORCA_PROTECTED_0001 in New Session…`(새 세션에서 계속)**을 선택합니다. ORCA_PROTECTED_0002는 동일하거나 다른 CLI로 새 에이전트 세션을 시작하고 이전 기록 또는 캡처한 컨텍스트에서 범위를 제한한 인계 프롬프트를 주입합니다. 원래 세션은 그대로 유지되며, 이는 `ORCA_PROTECTED_0003`이 아닙니다."
+    },
+    "/docs/agents/codex/:heading:codex-0157-and-later:0": {
+      "sourceHash": "0fd87a79bf81cc9ff855458c4d39a013d13807cb897f59f49991728cc05513f1",
+      "translated": "## ORCA_PROTECTED_0001 0.157 이상"
+    },
+    "/docs/agents/codex/:paragraph:codex-0157-and-later:0": {
+      "sourceHash": "d8d06d067146a5c0e112eb21057c2ca62ba033711e527eb06ef230a1383e3067",
+      "translated": "ORCA_PROTECTED_0001에서 관리하는 계정 홈 경로가 ORCA_PROTECTED_0002의 백그라운드 데몬 소켓에서 사용하기에 너무 길면, ORCA_PROTECTED_0003는 해당 홈에서 데몬을 비활성화하여 ORCA_PROTECTED_0004가 시작될 수 있게 합니다. 이는 에이전트 선택기에서 ORCA_PROTECTED_0005를 시작하거나 ORCA_PROTECTED_0007 터미널에서 `ORCA_PROTECTED_0006`을 입력하는 경우 모두에 적용됩니다. ORCA_PROTECTED_0008는 계정 데이터를 그대로 유지하며 시스템의 `ORCA_PROTECTED_0009`을 변경하지 않습니다."
+    },
+    "/docs/agents/codex/:paragraph:codex-0157-and-later:1": {
+      "sourceHash": "ed1311d37dacd6693db93e98347bc6cf2a3e43ee0d9dac294f2024c52198dea9",
+      "translated": "영향을 받는 홈에서는 `ORCA_PROTECTED_0001`와 데몬 기반 재개 또는 계속 기능을 사용할 수 없습니다. ORCA_PROTECTED_0002에서 계속 `ORCA_PROTECTED_0003` 오류를 보고하면 [문제 해결](ORCA_PROTECTED_0004)을 참조합니다."
+    },
+    "/docs/agents/codex/:heading:each-codex-terminal-runs-its-own-server:0": {
+      "sourceHash": "4bdb58964c499b9a4aeb95b22e3ea2fc504eb36617206569d8a0b98919777737",
+      "translated": "## 각 ORCA_PROTECTED_0001 터미널은 자체 서버에서 실행됩니다"
+    },
+    "/docs/agents/codex/:paragraph:each-codex-terminal-runs-its-own-server:0": {
+      "sourceHash": "b7efb42605761822cacadedb8f26f7e0ace6058794dc73dc133a8dd54bdf347f",
+      "translated": "ORCA_PROTECTED_0001 0.157 이상에서는 각 ORCA_PROTECTED_0002 탭이 ORCA_PROTECTED_0003 터미널에서 기본적으로 자체 백그라운드 서버를 실행합니다. 따라서 탭마다 에이전트 상태가 정확하게 유지되며, ORCA_PROTECTED_0004 탭 하나를 닫아도 다른 탭의 연결이 끊기지 않습니다. 이 동작은 새 터미널에 적용됩니다. 업데이트할 때 이미 열려 있던 터미널은 다시 열 때까지 이전 동작을 유지합니다."
+    },
+    "/docs/agents/codex/:list:each-codex-terminal-runs-its-own-server:0": {
+      "sourceHash": "8855ada9730f8d48e395078f1d324fc6f54d8dac83bf44962ef938805c46ad75",
+      "translated": "-   절충점: 탭별 서버를 사용하면 ORCA_PROTECTED_0001의 공유 서버 기능(백그라운드 실행, `ORCA_PROTECTED_0002`, ORCA_PROTECTED_0003 데스크톱 앱 또는 IDE에서 연 세션)이 ORCA_PROTECTED_0004에서 시작된 세션을 인식하지 못합니다.\n-   대신 ORCA_PROTECTED_0005의 서버를 공유하려면 새 터미널을 열기 전에 **`Settings → Agents → Run each ORCA_PROTECTED_0006 terminal on its own server`(설정 → 에이전트 → 각 Codex 터미널을 자체 서버에서 실행)**를 끄거나 `ORCA_PROTECTED_0007`을 설정합니다(예: 셸 시작 파일의 `ORCA_PROTECTED_0008`). 그러면 공유 서버에서 ORCA_PROTECTED_0009의 에이전트 개요를 다시 사용할 수 있습니다.\n-   직접 시작한 ORCA_PROTECTED_0010가 공유 서버에 연결되면 ORCA_PROTECTED_0011가 해당 탭 상단에 알림을 표시합니다. 알림의 **`Fix`(수정)**를 선택하면 공유가 꺼지며, 업데이트 전에 열린 탭에서는 대신 새 터미널을 열도록 안내합니다."
     }
   }
 }

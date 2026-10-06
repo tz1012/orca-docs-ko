@@ -53,6 +53,14 @@
     "/docs/editing/file-explorer/:paragraph:download-ssh-remote:0": {
       "sourceHash": "170d57121608174b18987fe49c1e553bea44292ca1bb7c5eaf50fea572f3c1fc",
       "translated": "데스크톱 앱에서 원격 파일을 마우스 오른쪽 버튼으로 클릭한 후 **`Download`(다운로드)**를 선택하거나, 연결이 재귀 전송을 지원하는 경우 원격 폴더에서 **`Download Folder`(폴더 다운로드)**를 선택합니다. ORCA_PROTECTED_0001가 네이티브 ORCA_PROTECTED_0002 대화 상자를 엽니다. 웹 클라이언트에서는 사용할 수 없으며 로컬 작업 트리에는 이 작업이 표시되지 않습니다."
+    },
+    "/docs/editing/file-explorer/:paragraph:search-a-folder:1": {
+      "sourceHash": "38144d5e014307597710545bfcfae7da4085f909b5784d18cf0b1dfedd9b94a4",
+      "translated": "매우 큰 워크스페이스가 목록 한도에 도달한 경우에도 `Explorer`(탐색기)의 이름 필터는 전체 로컬 파일 목록을 검색하므로 최초 목록 밖의 파일도 일치 항목으로 찾을 수 있습니다. 입력 중에는 일치 검색에 짧은 디바운스가 적용되며, 작은 워크스페이스에서는 즉시 필터링 동작이 유지됩니다."
+    },
+    "/docs/editing/file-explorer/:paragraph:file-explorer-external-drag-drop:1": {
+      "sourceHash": "c6909c717776e67166492b4bfefff2b638411f840da92917cfae0782d6896cf4",
+      "translated": "작업 트리에서 Git **희소 체크아웃**을 사용하면 탐색기의 트리 범위가 체크아웃 디렉터리로 제한되므로 전체 저장소 대신 실제로 작업하는 폴더가 표시됩니다."
     }
   }
 }

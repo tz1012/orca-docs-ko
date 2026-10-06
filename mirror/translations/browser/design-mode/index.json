@@ -19,8 +19,8 @@
       "translated": "## 켜세요"
     },
     "/docs/browser/design-mode/:paragraph:turn-it-on:0": {
-      "sourceHash": "93b1c0d5944a5db2e0e42a8f90c7a5ce7a02aec5f1d19c78e7935ddf01300ab9",
-      "translated": "브라우저 툴바에서 `Design Mode`(디자인 모드) 토글을 클릭하세요. 커서가 선택 도구가 됩니다. 마우스를 올리면 그 아래의 요소가 강조 표시됩니다."
+      "sourceHash": "0d6f7aa0bf49ceac16c4f57413e42a89438cb243dadcca425254f0379708eebb",
+      "translated": "브라우저 툴바에서 **`Design Mode`(디자인 모드)** 토글을 클릭합니다. 커서가 선택 도구로 바뀌며, 마우스를 올리면 그 아래의 요소가 강조 표시됩니다. **`Annotate page element`(페이지 요소에 주석 달기)** 작업은 [`Settings → Shortcuts`(설정 → 단축키)](ORCA_PROTECTED_0001)에서 다시 지정할 수 있는 단축키로도 제공됩니다."
     },
     "/docs/browser/design-mode/:heading:drop-into-chat:0": {
       "sourceHash": "b6ad763b3ed4d6200fb319097ede06f4dab32c53e5a9470699083e1f4d7522fe",
@@ -53,6 +53,10 @@
     "/docs/browser/design-mode/:paragraph:review-page-annotations:0": {
       "sourceHash": "1efb813728a65f43f8268455f1ebf504025fbc7e64db13a2086c6a13e531161e",
       "translated": "주석 트레이를 사용하면 페이지에 여러 메모를 모아 두었다가 에이전트에게 전송할 수 있습니다. 메모 위에 포인터를 올리고 **`Edit`(편집)**를 선택하면 해당 위치에서 코멘트나 의도를 수정할 수 있습니다. 작업을 마치면 **`Save`(저장)** 또는 **`Cancel`(취소)**을 선택합니다."
+    },
+    "/docs/browser/design-mode/:paragraph:review-page-annotations:1": {
+      "sourceHash": "d52d4368ebdc12755585375e331c42abfdd81477f338073e11c26b95148f8dd5",
+      "translated": "프롬프트가 전달되면 ORCA_PROTECTED_0001는 전송한 주석을 제거합니다. 전달이 진행되는 동안 추가하거나 편집한 메모는 페이지에 유지됩니다."
     }
   }
 }

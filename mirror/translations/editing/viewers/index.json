@@ -51,8 +51,8 @@
       "translated": "## PDF"
     },
     "/docs/editing/viewers/:paragraph:pdf:0": {
-      "sourceHash": "93bdf8b0a438ac8035488b482d90cc19c1874842942db4a6c3467897152df764",
-      "translated": "스크롤, 확대/축소 및 텍스트 선택을 지원합니다. 저장소에 체크인된 디자인 문서를 볼 때 유용합니다. PDF 탭에서 다른 곳으로 전환했다가 돌아오면(같은 세션에서 탭을 닫았다 다시 여는 경우 포함) 페이지와 페이지 내 중간 오프셋까지 스크롤 위치가 복원되므로 이전에 보던 위치로 돌아갑니다. 위치 정보는 세션 동안만 유지되며 ORCA_PROTECTED_0001을 다시 시작하면 지워집니다."
+      "sourceHash": "2b30e1a6136233c74f9c266fada3f8b070896bbf57c6c7b28b8cdba594bb9e72",
+      "translated": "스크롤, 확대/축소 및 텍스트 선택을 지원합니다. 저장소에 체크인된 디자인 문서를 볼 때 유용합니다. ORCA_PROTECTED_0001는 탭을 전환하거나 앱을 재시작해도 PDF 확대/축소 수준을 기억합니다. PDF 탭에서 다른 탭으로 전환했다가 돌아오면 같은 세션에서 탭을 닫았다 다시 여는 경우를 포함해 스크롤 위치를 복원합니다. 페이지와 페이지 중간 오프셋을 함께 복원하므로 이전 위치로 돌아갑니다. 위치 정보는 세션에서만 유지되며 ORCA_PROTECTED_0002를 재시작하면 지워집니다."
     },
     "/docs/editing/viewers/:heading:images:0": {
       "sourceHash": "a543e293c615aa544f0eddfe7c2a5ce1621376987585e646f7a54eb3d6e4a5f6",
@@ -75,12 +75,24 @@
       "translated": "## 주피터 노트북"
     },
     "/docs/editing/viewers/:paragraph:jupyter-notebooks:0": {
-      "sourceHash": "61b7ace70340325627e8f990d5aaf43439790cc306bb168df8dac579cfd308a9",
-      "translated": "`ORCA_PROTECTED_0001` 파일은 렌더링된 마크다운, 구문 강조 코드 셀, 저장된 출력이 포함된 노트북 뷰어에서 열립니다. 셀을 편집하면 nbformat을 유지하면서 디스크의 `ORCA_PROTECTED_0002`에 다시 기록되므로 diff는 깨끗하게 유지됩니다."
+      "sourceHash": "51588cd8ee4b1c66df9d8cb0bf9ee8591f975393ccb52ebd9dba2923a657c8de",
+      "translated": "`ORCA_PROTECTED_0001` 파일을 열면 렌더링된 Markdown, 코드 셀 및 저장된 출력을 볼 수 있습니다. 코드 셀을 클릭하면 편집할 수 있으며, Markdown 셀을 두 번 클릭하거나 Enter 키를 누르면 소스를 편집할 수 있습니다. 편집 내용은 nbformat을 유지한 채 노트북 파일에 저장됩니다."
     },
     "/docs/editing/viewers/:aside:jupyter-notebooks:0": {
       "sourceHash": "3ca0d978838788eafeab8facdd9835edf46aff4b524dab26ca180d14ddcdbf4a",
       "translated": "베타\n\n노트북 편집기는 베타로 표시되어 있습니다. 셀 실행 및 더욱 풍부한 출력 렌더링이 아직 해결 중입니다. 저장소의 노트북이 제대로 로드되지 않으면 문제를 신고하세요."
+    },
+    "/docs/editing/viewers/:paragraph:jupyter-notebooks:1": {
+      "sourceHash": "72c76621cfb4fc16dfd6aa3c489756b70b68486ed5d5dbcf7307e71cdd5abb5e",
+      "translated": "로컬 Python 노트북에서는 **Shift+Enter**로 셀을 실행하고 다음 셀로 이동하거나 **ORCA_PROTECTED_0001+Enter**로 현재 셀에 머무릅니다. 처음 실행한 시점부터 탭을 닫을 때까지 ORCA_PROTECTED_0002는 해당 노트북의 Jupyter 커널을 유지하므로 셀 사이에서 변수가 유지됩니다. 플롯, 리치 출력, 오류 및 실행 횟수가 셀과 함께 표시됩니다. 노트북 헤더에서 **`Run All`(모두 실행)**, **`Interrupt`(중단)**, **`Restart`(재시작)** 또는 **`Clear All Outputs`(모든 출력 지우기)**를 사용합니다."
+    },
+    "/docs/editing/viewers/:paragraph:jupyter-notebooks:2": {
+      "sourceHash": "1da1bcb8453388bfea9beb80e6eb15a93854a9397d23b655a9a29096c1443e0f",
+      "translated": "헤더의 커널 선택기는 인접한 `ORCA_PROTECTED_0001` 또는 `ORCA_PROTECTED_0002` 환경을 권장합니다. 다른 Python을 선택하거나 직접 찾아볼 수 있으며, ORCA_PROTECTED_0003는 해당 노트북의 선택을 기억합니다. Python에는 `ORCA_PROTECTED_0004`과 `ORCA_PROTECTED_0005`가 필요합니다. `ORCA_PROTECTED_0006`이 없으면 ORCA_PROTECTED_0007가 설치를 제안합니다. 선택한 Python이 패키지 설치를 차단하는 경우 **`Create .venv`(.venv 만들기)**를 선택해 워크스페이스 환경을 대신 설정합니다. 설정 대화 상자에 진행 상황과 오류가 표시됩니다."
+    },
+    "/docs/editing/viewers/:paragraph:jupyter-notebooks:3": {
+      "sourceHash": "18614288d29daa1687885c987d970b1a2ebf30cfb17bea0c281efdee6831b8a1",
+      "translated": "노트북 코드를 실행하기 전에 ORCA_PROTECTED_0001의 신뢰 확인 메시지를 승인합니다. 노트북을 신뢰하기 전에는 ORCA_PROTECTED_0002가 워크스페이스 Python 인터프리터를 시작하지 않습니다. SSH 작업 트리의 노트북과 다른 언어의 노트북도 계속 보고 편집할 수 있습니다. 작업 트리에서 노트북을 찾으려면 [파일 탐색기](ORCA_PROTECTED_0003)를 참조합니다."
     }
   }
 }

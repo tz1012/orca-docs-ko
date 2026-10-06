@@ -7,8 +7,8 @@
       "translated": "# 사용량 및 속도 제한 추적"
     },
     "/docs/agents/usage-tracking/:paragraph:usage-rate-limit-tracking:0": {
-      "sourceHash": "8b6b84d12dc1c8df561f7ec9b4ce474d15cadb0bb508bab44d2f0c66ea56274a",
-      "translated": "ORCA_PROTECTED_0001은 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, ORCA_PROTECTED_0004, ORCA_PROTECTED_0005, ORCA_PROTECTED_0006 코드 및 ORCA_PROTECTED_0007에 대한 로컬 사용 상태를 읽고 이를 상태 표시줄에 표시하므로 에이전트가 정지되기 전에 속도 제한에 얼마나 근접했는지 알 수 있습니다."
+      "sourceHash": "4f44500359b0bdbb94deecc355bf5345d40660fadc672062fca74fc0c096aee4",
+      "translated": "ORCA_PROTECTED_0001는 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, Muse Code, ORCA_PROTECTED_0004, ORCA_PROTECTED_0005, ORCA_PROTECTED_0006, ORCA_PROTECTED_0007 Code, ORCA_PROTECTED_0008, ORCA_PROTECTED_0009 및 ZCode의 사용량을 추적해 상태 표시줄에 표시합니다. 따라서 에이전트가 멈추기 전에 속도 제한에 얼마나 가까운지 알 수 있습니다."
     },
     "/docs/agents/usage-tracking/:heading:whats-shown:0": {
       "sourceHash": "d15ce61a6832d2de882e15da9f610660137184aebce2274edba18ab433e72d99",
@@ -23,8 +23,8 @@
       "translated": "## 작동 방식"
     },
     "/docs/agents/usage-tracking/:paragraph:how-it-works:0": {
-      "sourceHash": "d942f6be1ef4ee2bee85cb8b506e8e2e799ad5547aa48739e7a37e25dc3fa2d4",
-      "translated": "ORCA_PROTECTED_0001은 각 에이전트가 디스크(`ORCA_PROTECTED_0002`, `ORCA_PROTECTED_0003` 및 ORCA_PROTECTED_0004에 해당하는 항목)에서 유지 관리하는 로컬 사용 상태를 읽습니다. API 호출이나 추가 인증이 없습니다. 이는 판독값이 상담원 자신의 장부만큼만 최신임을 의미합니다. 숫자는 실시간이 아니라 상담원이 쓸 때 업데이트됩니다."
+      "sourceHash": "05d6e2b5ff9229b21789aa3b3d4f3f19ef514ec4c7d1006182e66d1bd515f544",
+      "translated": "데이터 원본은 제공자에 따라 다릅니다. ORCA_PROTECTED_0001는 사용 가능한 경우 Muse Code의 로컬 세션 로그를 포함한 로컬 에이전트 상태를 읽습니다. Muse 사용량은 로컬 토큰 계산값이며 예상 가격은 포함하지 않습니다. ORCA_PROTECTED_0002 Go 사용량은 콘솔 API에서 가져오며 **`Settings → Accounts`(설정 → 계정)**에 `ORCA_PROTECTED_0004`를 포함한 전체 `ORCA_PROTECTED_0003` Cookie 헤더가 필요합니다. `ORCA_PROTECTED_0005` 쿠키만으로는 워크스페이스를 찾을 수 있지만 Go 사용량은 가져올 수 없습니다. 다른 제공자는 설정에서 각자 별도의 계정 구성이 필요할 수 있습니다."
     },
     "/docs/agents/usage-tracking/:heading:multi-account-accounting:0": {
       "sourceHash": "57a7ad1c0671cede5ca5b4249b764c9a69fd46ceaee2c714302e1c2c96fbb9d7",
@@ -47,12 +47,12 @@
       "translated": "-   **`Detailed`(자세히)** — 모든 기간의 전체 막대, 레이블 및 백분율을 표시합니다.\n-   **`Compact`(간단히)** — 공급자별로 가장 촉박한 기간만 표시합니다."
     },
     "/docs/agents/usage-tracking/:paragraph:usage-roster:1": {
-      "sourceHash": "e6f64544ac5f8166bca326e637644369a7f8a05baf1df28ca2df0a04e4485ea7",
-      "translated": "[`Settings`(설정) → `Appearance`(모양)](ORCA_PROTECTED_0001)에서 숫자를 표시할 방법으로 **`% used`(사용한 비율)** 또는 **`% remaining`(남은 비율)**을 선택합니다."
+      "sourceHash": "50045f2efb2d8e80fbeee15a7949635d48427d0e60890554a4058c098551d813",
+      "translated": "창 너비가 좁으면 상태 표시줄은 미니 막대와 레이블을 숨기고 제공자별 백분율 하나만 표시해 한 줄을 유지합니다. 공간이 여전히 부족하면 일부 제공자 칩이 **+N** 칩으로 바뀝니다. 이를 클릭하면 `Usage`(사용량) 팝오버에서 모든 제공자를 볼 수 있습니다. 사용량이 80% 이상인 제공자는 가장 마지막에 접힙니다."
     },
     "/docs/agents/usage-tracking/:paragraph:usage-roster:2": {
-      "sourceHash": "11b71b728cdcc18cfc53b3274a1c78a0c089114a89dc4fa919cbfd44afb1766b",
-      "translated": "실시간 수치가 없는 행에는 **`Loading usage…`(사용량 불러오는 중)**, **`not signed in`(로그인하지 않음)**, **`Usage unavailable`(사용량 확인 불가)**, **`No usage data`(사용량 데이터 없음)** 또는 공급자별 오류와 같은 짧은 상태가 대신 표시됩니다. ORCA_PROTECTED_0001 및 ORCA_PROTECTED_0002 행에서는 계정 전환 화면으로 이동할 수 있으며, **`Manage accounts`(계정 관리)**를 선택하면 `Settings`(설정)가 열립니다."
+      "sourceHash": "e6f64544ac5f8166bca326e637644369a7f8a05baf1df28ca2df0a04e4485ea7",
+      "translated": "[`Settings → Appearance`(설정 → 모양)](ORCA_PROTECTED_0001)에서 숫자 표시 방식을 **`% used`(사용한 비율)** 또는 **`% remaining`(남은 비율)** 중에서 선택합니다."
     },
     "/docs/agents/usage-tracking/:heading:mobile:0": {
       "sourceHash": "73c19fede127ab081cda2f6b54fbe61ae9d81a5a951430be9fce38ae0e177b0b",
@@ -67,8 +67,20 @@
       "translated": "## 예상 비용(통계)"
     },
     "/docs/agents/usage-tracking/:paragraph:estimated-cost-stats:0": {
-      "sourceHash": "ef5f9dfb14f6c8e2783b018f4a7aa98a8922c56105ae252e97d6898e9984969b",
-      "translated": "통계 상세 내역에는 알려진 모델 제품군(ORCA_PROTECTED_0001 5 계열 및 ORCA_PROTECTED_0002 GPT-5.6 행 포함)의 **예상 비용**이 표시될 수 있습니다. **`• inferred pricing`(추론된 가격)**으로 표시된 행은 공급자의 실시간 청구 금액이 아니라 ORCA_PROTECTED_0003의 로컬 가격표를 사용합니다. 정확한 지출액은 공급자 콘솔에서 확인하는 것이 좋습니다."
+      "sourceHash": "0c9941eb2b6ad9f5f74d2e04c5c8b061da8b10e671db2830ca3ac44d42e5b163",
+      "translated": "`Stats`(통계) 세부 내역에는 ORCA_PROTECTED_0001 Opus 5.5, Fable 5.1과 ORCA_PROTECTED_0002 GPT-5.6, GPT-6 Astra, Sol, Luna 등 알려진 모델 계열의 **`estimated cost`(예상 비용)**가 표시될 수 있습니다. ORCA_PROTECTED_0003는 제공자의 실시간 청구서가 아니라 로컬 가격표를 사용합니다. **`• inferred pricing`(• 추론된 가격)**은 ORCA_PROTECTED_0004가 모델을 추론한 경우의 추정치를 나타냅니다. **`• excludes unpriced models`(• 가격이 없는 모델 제외)**로 표시된 ORCA_PROTECTED_0005 비용은 해당 모델을 추정치에서 제외하며, `Overview`(개요)에도 부분 합계라는 표시가 나타납니다. 정확한 지출액은 제공자 콘솔에서 확인하는 것이 좋습니다."
+    },
+    "/docs/agents/usage-tracking/:paragraph:how-it-works:1": {
+      "sourceHash": "0a9e2dddd6ca98d2ce9757cc8e4f1add51286a93c663e301c3599eb89831ff8d",
+      "translated": "ORCA_PROTECTED_0001의 경우 ORCA_PROTECTED_0002는 컴퓨터의 기존 ORCA_PROTECTED_0003 로그인을 읽고 상태 표시줄, `Usage`(사용량) 팝오버 및 **`Settings → Accounts → ORCA_PROTECTED_0004`(설정 → 계정 → Cursor)**에 요금제의 월간 사용량을 표시합니다. 로그인 작업을 대신 수행하지 않으므로 저장된 세션이 만료되면 `ORCA_PROTECTED_0005`을 실행합니다. 사용량 요청이 거부되면 만료된 로그인이 아니라 사용량 조회 실패로 표시됩니다."
+    },
+    "/docs/agents/usage-tracking/:paragraph:usage-roster:3": {
+      "sourceHash": "11b71b728cdcc18cfc53b3274a1c78a0c089114a89dc4fa919cbfd44afb1766b",
+      "translated": "실시간 수치가 없는 행에는 대신 **`Loading usage…`(사용량 불러오는 중…)**, **`not signed in`(로그인되지 않음)**, **`Usage unavailable`(사용량 확인 불가)**, **`No usage data`(사용량 데이터 없음)** 또는 제공자별 오류 같은 짧은 상태가 표시됩니다. ORCA_PROTECTED_0001 및 ORCA_PROTECTED_0002 행에서는 계정 전환 화면으로 들어갈 수 있으며, **`Manage accounts`(계정 관리)**를 선택하면 설정이 열립니다."
+    },
+    "/docs/agents/usage-tracking/:paragraph:how-it-works:2": {
+      "sourceHash": "56d1f1780aec645a50e096bc429592b6e99f0cc4203519065a2acba36b7d06ca",
+      "translated": "ORCA_PROTECTED_0001의 경우 ORCA_PROTECTED_0002는 모델 그룹 풀을 포함한 할당량을 ORCA_PROTECTED_0003의 자체 CLI에서 읽습니다. 따라서 로그인된 ORCA_PROTECTED_0004 CLI가 없어도 되며 확인할 때 할당량을 소비하지 않습니다. ZCode의 경우 **`Coding Plan`(코딩 요금제)** 할당량이 디스크의 대화 기록에서 읽은 세션 기록과 함께 표시됩니다."
     }
   }
 }

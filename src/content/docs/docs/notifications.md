@@ -1,7 +1,7 @@
 ---
 title: "알림 및 받은 편지함"
 sourceUrl: https://www.onorca.dev/docs/notifications
-checkedAt: "2026-09-23T01:05:13.359Z"
+checkedAt: "2026-10-06T01:03:33.118Z"
 editUrl: false
 prev: /orca-docs-ko/docs/android-apk/
 next: /orca-docs-ko/docs/activity/
@@ -16,6 +16,8 @@ Orca은 터미널뿐만 아니라 에이전트를 실행하므로 에이전트�
 ## 에이전트 완료 핑
 
 에이전트가 작업 중에서 유휴 상태로 전환되면 Orca은 알림(시스템 알림, 사운드 및 작업 트리의 칩)을 발생시킵니다.
+
+[업데이트된 구조화 채팅](/orca-docs-ko/docs/agents/native-chat/#updated-structured-chat)에서는 정상적으로 완료된 턴이 대신 해당 탭과 워크스페이스를 읽지 않음으로 표시합니다. 시스템 알림을 보내거나 소리를 재생하지 않습니다. 실패하거나 취소된 턴에는 읽지 않음 표시가 추가되지 않습니다.
 
 ## 지속적인 벨
 

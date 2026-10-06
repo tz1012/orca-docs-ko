@@ -1,7 +1,7 @@
 ---
 title: "Orca의 Cursor CLI"
 sourceUrl: https://www.onorca.dev/docs/agents/cursor-cli
-checkedAt: "2026-09-23T01:05:13.359Z"
+checkedAt: "2026-10-06T01:03:33.118Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/codex/
 next: /orca-docs-ko/docs/agents/codex-hot-swap/
@@ -26,3 +26,5 @@ Cursor CLI은 Cursor의 명령줄 에이전트입니다. Orca은 콤보박스에
 ## 모델 선택
 
 모델 선택은 Cursor의 자체 설정에 따라 결정됩니다. Orca는 이를 재정의하지 않으며 CLI 내부에서 구성합니다.
+
+Orca는 상태 표시줄과 **`Settings → Accounts → Cursor`(설정 → 계정 → 해당 제공자)**에도 기존 Cursor 로그인에서 가져온 Cursor 요금제 사용량을 표시합니다. [사용량 및 속도 제한 추적](/orca-docs-ko/docs/agents/usage-tracking/)을 참조합니다.

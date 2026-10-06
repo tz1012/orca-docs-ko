@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 참조"
 sourceUrl: https://www.onorca.dev/docs/cli/reference
-checkedAt: "2026-09-23T01:05:13.359Z"
+checkedAt: "2026-10-06T01:03:33.118Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/overview/
 next: /orca-docs-ko/docs/cli/orchestration/
@@ -114,7 +114,7 @@ orca worktree create --name quick-check --agent codex --prompt "Summarize the di
 orca worktree create --name hidden-setup --setup inherit --json
 ````
 
-`--agent`은 첫 번째 터미널에서 선택한 에이전트를 시작합니다. `--prompt`는 해당 에이전트에 초기 작업을 보냅니다. `--setup run|skip|inherit`은 저장소 설정 후크를 제어합니다. `inherit`는 저장소 정책을 따릅니다.
+`--agent`은 선택한 에이전트를 첫 번째 터미널에서 시작합니다. `--prompt`는 터미널에서 실행 중인 에이전트를 포함해 해당 에이전트에 초기 작업을 직접 전송합니다. `--setup run|skip|inherit`은 저장소 설정 후크를 제어하며, `inherit`은 저장소 정책을 따릅니다.
 
 ## 터미널
 
@@ -154,6 +154,8 @@ orca file open-changed --mode both --worktree active --json
 ````
 
 경로는 선택한 작업 트리를 기준으로 합니다. `open-changed`은 git 상태를 읽고 편집, 비교 또는 두 모드 모두에서 변경된 파일을 엽니다.
+
+이 명령은 화면에 표시된 작업 트리에서도 현재 보기를 바꾸지 않고 파일을 탭으로 엽니다. 열린 탭을 화면에 표시하려면 `--focus`를 전달합니다. 에이전트는 사용자가 파일을 보도록 요청한 경우에만 이 플래그를 전달해야 합니다.
 
 ## 내장 브라우저
 

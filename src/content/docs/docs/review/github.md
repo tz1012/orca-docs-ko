@@ -1,7 +1,7 @@
 ---
 title: "호스팅된 리뷰, 문제 및 조치"
 sourceUrl: https://www.onorca.dev/docs/review/github
-checkedAt: "2026-09-23T01:05:13.359Z"
+checkedAt: "2026-10-06T01:03:33.118Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/commit-push/
 next: /orca-docs-ko/docs/review/linear/

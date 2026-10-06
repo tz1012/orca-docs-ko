@@ -1,7 +1,7 @@
 ---
 title: "작업트리별 브라우저"
 sourceUrl: https://www.onorca.dev/docs/browser/overview
-checkedAt: "2026-09-23T01:05:13.359Z"
+checkedAt: "2026-10-06T01:03:33.118Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/file-explorer/
 next: /orca-docs-ko/docs/browser/design-mode/
@@ -19,9 +19,10 @@ translationNotice:
 
 ## 컨트롤
 
--   기록 및 퍼지 URL 완성 기능이 있는 주소 표시줄입니다. URL이 아닌 텍스트는 [**`Default Search Engine`(기본 검색 엔진)**](/orca-docs-ko/docs/settings/), 즉 [새 탭 옴니박스](/orca-docs-ko/docs/model/quick-open/#new-tab-omnibox)와 동일한 엔진으로 검색합니다. **+** 필드에서 검색을 강제하려면 검색어 앞에 `?`을 붙입니다.
+-   기록 및 퍼지 URL 완성 기능이 있는 주소 표시줄입니다. URL이 아닌 텍스트는 [**`Default Search Engine`(기본 검색 엔진)**](/orca-docs-ko/docs/settings/), 즉 [새 탭 옴니박스](/orca-docs-ko/docs/model/quick-open/#new-tab-omnibox)와 동일한 엔진으로 검색합니다. **`+`(추가)** 필드에서 검색을 강제하려면 검색어 앞에 `?`을 붙입니다.
 -   뒤로/앞으로/새로고침/중지 컨트롤입니다. 새로고침 컨트롤 위에 마우스를 올리면 일반 새로고침 단축키가 표시됩니다. 마우스 오른쪽 버튼으로 클릭하거나 길게 누르면 **`Reload`(새로고침)** 및 **`Hard Reload`(강력 새로고침)**와 각 단축키가 표시됩니다. 강력 새로고침은 로컬 프런트엔드 자산을 반복 수정할 때 캐시를 우회합니다.
 -   `Cmd-F` — 페이지에서 찾습니다.
+-   좁은 창에서는 보조 브라우저 도구가 더보기 메뉴에 들어가므로 탐색 컨트롤, 주소 표시줄 및 `Cmd-F`에 계속 접근할 수 있습니다.
 -   `Cmd-T` — 이 작업 트리로 범위가 지정된 새 탭을 엽니다.
 -   `Cmd-Shift-T` — 마지막으로 닫은 탭을 다시 엽니다.
 -   `target=_blank`을 사용하는 페이지 링크와 이름이 지정되지 않은 일반 팝업은 링크를 연 탭의 브라우저 프로필을 사용하여 새 Orca 탭에서 열립니다. 이름이 지정되었거나 OAuth 방식인 팝업은 계속 별도 창에서 열릴 수 있습니다.

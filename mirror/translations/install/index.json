@@ -87,8 +87,8 @@
       "translated": "### 윈도우"
     },
     "/docs/install/:paragraph:windows:0": {
-      "sourceHash": "1afc5660cd5e9a865197809857248604a3cf5d06cb0da92c6a35eef7f8d524fd",
-      "translated": "기본 셸은 [설정 → 터미널](ORCA_PROTECTED_0001)에서 PowerShell 또는 CMD로 설정할 수 있습니다. 대부분의 사용자는 PowerShell을 원합니다."
+      "sourceHash": "4a1d78cdcd702931085d12b932d9f6db5df4959ac3976123fba8430677c4d558",
+      "translated": "기본 셸은 [`Settings → Terminal`(설정 → 터미널)](ORCA_PROTECTED_0001)에서 PowerShell 또는 CMD로 설정할 수 있습니다. 대부분의 사용자에게는 PowerShell이 적합합니다. 번들로 제공되는 `ORCA_PROTECTED_0002` 명령은 네이티브 프로그램이므로 Visual C++ Redistributable 없이 실행됩니다."
     },
     "/docs/install/:heading:linux:0": {
       "sourceHash": "6061d7e666c692fe8458059518a5ba57308808c58b60ddec4e99eb0bfecb8020",

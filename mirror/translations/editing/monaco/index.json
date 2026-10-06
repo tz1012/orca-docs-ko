@@ -63,8 +63,8 @@
       "translated": "## 언어 지원"
     },
     "/docs/editing/monaco/:paragraph:language-support:0": {
-      "sourceHash": "2b9bfb1eba69e2fdb99ae5ca346c2aca403c021aaf3007f677beebd63d8a2550",
-      "translated": "Monaco가 기본적으로 지원하는 언어에 대한 구문 강조 기능이 제공됩니다. ORCA_PROTECTED_0001은 의도적으로 IDE 우선이 아닌 편집기 우선입니다. 터미널 창에서 유형 검사기와 린터를 실행합니다."
+      "sourceHash": "1a67b52707d699b346e12d699161733d4860924906749e5544979cb5ae4adb8a",
+      "translated": "Solidity, Typst, Twig 템플릿과 `ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002` 같은 셸 시작 도트 파일을 포함하여 Monaco가 기본적으로 지원하는 언어에 대한 구문 강조 기능이 제공됩니다. ORCA_PROTECTED_0003는 의도적으로 IDE 우선이 아닌 편집기 우선입니다. 터미널 창에서 유형 검사기와 린터를 실행합니다."
     }
   }
 }

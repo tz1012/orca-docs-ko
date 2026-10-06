@@ -1,7 +1,7 @@
 ---
 title: "AI 차이점에 주석 달기"
 sourceUrl: https://www.onorca.dev/docs/review/annotate-ai-diff
-checkedAt: "2026-09-23T01:05:13.359Z"
+checkedAt: "2026-10-06T01:03:33.118Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/diff-viewer/
 next: /orca-docs-ko/docs/review/attribution/
@@ -19,10 +19,10 @@ AI Diff에 주석 달기 — diff 라인에 고정된 인라인 댓글
 
 ## 댓글을 남겨주세요
 
-1.  diff의 아무 줄에 마우스 커서를 올리면 줄 번호 영역에 **+**가 표시됩니다. 인접한 줄을 드래그하거나 선택 범위를 늘리면서 `Shift`를 누르면 여러 줄에 댓글을 남길 수 있습니다. Orca는 선택 범위를 해당 헝크 안에 유지하고 선택한 줄 범위로 라벨을 붙입니다.
-2.  해당 항목을 클릭하거나 줄에 커서를 둔 상태에서 `c`을 누릅니다.
-3.  피드백을 입력합니다. 마크다운을 지원합니다.
-4.  저장하려면 `Cmd-Enter`를, 취소하려면 `Esc`를 누릅니다.
+1.  diff의 아무 줄에 마우스를 올립니다. 거터에 **+**가 나타납니다. 여러 줄 범위에 주석을 달려면 인접한 줄을 가로질러 드래그하거나 선택 영역을 확장하면서 `Shift`를 누릅니다. Orca는 범위를 헝크 내부로 제한하고 선택한 줄 범위를 레이블로 표시합니다.
+2.  **+**를 클릭하거나 줄에 커서를 둔 채 `c`를 누릅니다.
+3.  피드백을 입력합니다. Markdown을 지원합니다.
+4.  저장하려면 `Enter` 또는 `Cmd/Ctrl-Enter`, 새 줄을 입력하려면 `Shift-Enter`, 취소하려면 `Esc`를 누릅니다.
 
 댓글은 정확한 줄에 고정됩니다. Orca은 편집 전반에 걸쳐 이를 추적하므로 diff가 이동하면 라인을 따릅니다.
 

@@ -1,7 +1,7 @@
 ---
 title: "지원되는 에이전트"
 sourceUrl: https://www.onorca.dev/docs/agents/supported
-checkedAt: "2026-09-23T01:05:13.359Z"
+checkedAt: "2026-10-06T01:03:33.118Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/quick-open/
 next: /orca-docs-ko/docs/agents/claude-code/
@@ -25,17 +25,20 @@ Orca은 새로운 실행에 대해 지원되는 각 CLI의 권한 우회 플래�
 
 | 에이전트 | 참고 | 문서 |
 | --- | --- | --- |
-| Claude Code | 심층 통합: 사용량, 빠른 전환, 후크 | [Anthropic](https://docs.anthropic.com/claude/docs/claude-code) |
-| Claude Agent Teams | 기본적으로 비활성화됨 — `Settings`(설정) → `Agents`(에이전트)에서 활성화하면 `orca claude-teams`로 실행하며 각 팀원에게 네이티브 창을 제공함 | [Anthropic](https://code.claude.com/docs/agent-teams) |
-| Codex | 심층 통합: 사용량, 빠른 전환 | [OpenAI](https://github.com/openai/codex) |
+| Claude Code | 심층 통합: 사용량, 핫스왑, 후크 | [Anthropic](https://docs.anthropic.com/claude/docs/claude-code) |
+| Claude Agent Teams | 기본적으로 비활성화됨 — `Settings → Agents`(설정 → 에이전트)에서 활성화하면 `orca claude-teams`로 시작하고 각 팀원에게 네이티브 창을 제공합니다 | [Anthropic](https://code.claude.com/docs/agent-teams) |
+| Codex | 심층 통합: 사용량, 핫스왑 | [OpenAI](https://github.com/openai/codex) |
+| Muse Code | 심층 통합: 후크, 상태, 사용량, 세션 기록 | [Meta](https://dev.meta.ai/docs/muse-code) |
 | Grok | 자동 설정 | [xAI](https://x.ai/cli) |
 | GitHub Copilot CLI | 자동 설정 | [GitHub](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli) |
-| OpenCode | 자동 설정, 상태; OpenCode 2 베타 지원 | [OpenCode](https://opencode.ai/docs/cli/) |
+| OpenCode | 자동 설정, 상태. OpenCode 2 베타 지원 | [OpenCode](https://opencode.ai/docs/cli/) |
 | Pi | 자동 설정, 후크, 상태 | [Pi](https://pi.dev/) |
+| ZCode | 자동 설정, 후크, 상태, 세션 재개, 사용량, 감독형 워커. 터미널 UI가 포함된 `zcode` 빌드를 설치해야 합니다 | [ZCode](https://github.com/zai-org/ZCode) |
+| DeepSeek Harness | 자동 설정, 후크, 상태, 질문, 재개. `dsh-tui` 프로필을 통해 시작됩니다 | [DeepSeek](https://deepseek-harness.github.io/deepseek-harness/) |
 | OMP | 자동 설정, 후크, 상태 | [OMP](https://omp.sh/) |
 | Prime Agent | 자동 설정, 후크, 상태, 세션 기록 | [Prime Intellect](https://github.com/PrimeIntellect-ai/prime-agent) |
 | Gemini | 자동 설정 | [Google](https://github.com/google-gemini/gemini-cli) |
-| Antigravity | 자동 설정, 후크, 상태 | [Google](https://antigravity.google/docs/cli-overview) |
+| Antigravity | 자동 설정, 후크, 상태. 로컬 [감독형 워커](/orca-docs-ko/docs/cli/orchestration/) 지원 | [Google](https://antigravity.google/docs/cli-overview) |
 | Ante | 자동 설정, 상태 | [Ante](https://github.com/AntigmaLabs/ante-preview) |
 | Aider | 자동 설정 | [Aider](https://aider.chat/docs/) |
 | Goose | 자동 설정 | [Block](https://block.github.io/goose/docs/quickstart/) |
@@ -46,7 +49,9 @@ Orca은 새로운 실행에 대해 지원되는 각 CLI의 권한 우회 플래�
 | Auggie | 자동 설정 | [Augment](https://docs.augmentcode.com/cli/overview) |
 | Autohand | 자동 설정 | [Autohand](https://github.com/autohandai/code-cli) |
 | Cline | 자동 설정 | [Cline](https://docs.cline.bot/cline-cli/overview) |
+| CodeBuddy | 자동 설정, 후크, 상태, 세션 기록. `npm install -g @tencent-ai/codebuddy-code` | [CodeBuddy](https://www.codebuddy.ai/cli) |
 | Codebuff | 자동 설정 | [Codebuff](https://www.codebuff.com/docs/help/quick-start) |
+| Freebuff | 자동 설정, 상태 | [Freebuff](https://freebuff.com/cli) |
 | Command Code | 자동 설정, 상태 | [Command Code](https://commandcode.ai/docs/quickstart) |
 | Continue | 자동 설정 | [Continue](https://docs.continue.dev/guides/cli) |
 | Cursor CLI | 심층 통합 | [Cursor](https://cursor.com/cli) |
@@ -54,7 +59,8 @@ Orca은 새로운 실행에 대해 지원되는 각 CLI의 권한 우회 플래�
 | Droid (Factory) | 자동 설정, 후크, 상태 | [Factory](https://docs.factory.ai/cli/getting-started/quickstart) |
 | Kimi | 자동 설정 | [Moonshot](https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html) |
 | Mistral Vibe | 자동 설정 | [Mistral](https://github.com/mistralai/mistral-vibe) |
-| MiniMax | 자동 설정, 사용량 추적, 사용 한도 추적 | [MiniMax](https://www.minimax.chat/) |
+| MiniMax | 자동 설정, 사용량 추적, 속도 제한 추적 | [MiniMax](https://www.minimax.chat/) |
+| Qoder CLI | 자동 설정, 후크, 상태, 작업 공간 신뢰, 세션 재개 | [Qoder](https://docs.qoder.com/cli) |
 | Qwen Code | 설치된 `qwen` 실행 파일을 통한 자동 설정 | [Qwen](https://github.com/QwenLM/qwen-code) |
 | Rovo Dev | 자동 설정 | [Atlassian](https://support.atlassian.com/rovo/docs/install-and-run-rovo-dev-cli-on-your-device/) |
 | Hermes | 자동 설정 | [Nous](https://hermes-agent.nousresearch.com/docs/) |

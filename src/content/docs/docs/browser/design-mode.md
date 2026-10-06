@@ -1,7 +1,7 @@
 ---
 title: "디자인 모드"
 sourceUrl: https://www.onorca.dev/docs/browser/design-mode
-checkedAt: "2026-09-23T01:05:13.359Z"
+checkedAt: "2026-10-06T01:03:33.118Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/overview/
 next: /orca-docs-ko/docs/browser/profiles/
@@ -19,7 +19,7 @@ translationNotice:
 
 ## 켜세요
 
-브라우저 툴바에서 `Design Mode`(디자인 모드) 토글을 클릭하세요. 커서가 선택 도구가 됩니다. 마우스를 올리면 그 아래의 요소가 강조 표시됩니다.
+브라우저 툴바에서 **`Design Mode`(디자인 모드)** 토글을 클릭합니다. 커서가 선택 도구로 바뀌며, 마우스를 올리면 그 아래의 요소가 강조 표시됩니다. **`Annotate page element`(페이지 요소에 주석 달기)** 작업은 [`Settings → Shortcuts`(설정 → 단축키)](/orca-docs-ko/docs/settings/)에서 다시 지정할 수 있는 단축키로도 제공됩니다.
 
 ## 채팅에 참여하세요
 
@@ -35,6 +35,8 @@ translationNotice:
 ## 페이지 주석 검토
 
 주석 트레이를 사용하면 페이지에 여러 메모를 모아 두었다가 에이전트에게 전송할 수 있습니다. 메모 위에 포인터를 올리고 **`Edit`(편집)**를 선택하면 해당 위치에서 코멘트나 의도를 수정할 수 있습니다. 작업을 마치면 **`Save`(저장)** 또는 **`Cancel`(취소)**을 선택합니다.
+
+프롬프트가 전달되면 Orca는 전송한 주석을 제거합니다. 전달이 진행되는 동안 추가하거나 편집한 메모는 페이지에 유지됩니다.
 
 ## 결과 사용
 

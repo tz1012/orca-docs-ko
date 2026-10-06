@@ -1,7 +1,7 @@
 ---
 title: "터미널"
 sourceUrl: https://www.onorca.dev/docs/terminal
-checkedAt: "2026-09-23T01:05:13.359Z"
+checkedAt: "2026-10-06T01:03:33.118Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/profiles/
 next: /orca-docs-ko/docs/ways-to-run/
@@ -19,9 +19,9 @@ Ghostty 스타일 터미널 — 처음 시작할 때 Ghostty 테마, 글꼴 및 
 
 ## 창 및 탭
 
-터미널은 단순한 탭입니다. [탭, 창 및 분할 레이아웃](/orca-docs-ko/docs/model/tabs-panes-splits/)을 참조하세요. 터미널 창을 분할하면 두 개의 셸이 나란히 제공됩니다.
+터미널은 일반 탭과 같습니다. [탭, 창 및 분할 레이아웃](/orca-docs-ko/docs/model/tabs-panes-splits/)을 참조합니다. 터미널 창을 분할하면 두 셸을 나란히 사용할 수 있습니다. 터미널 창은 탭의 유일한 창인 경우에도 닫기 버튼을 제공합니다.
 
-에이전트 터미널 탭에는 에이전트 ID와 실시간 상태(작업 중, 입력 대기 중, 완료 또는 완료 후 미확인)가 함께 표시됩니다. Claude 및 Codex의 경우 Orca가 해당 창을 세션에 연결할 수 있으면 탭 제목에 **`AI Vault conversation name`(AI Vault 대화 이름)**(사용자 지정 제목/스레드 이름)도 표시할 수 있습니다. 수동으로 바꾼 이름이 항상 우선합니다.
+에이전트 터미널 탭에는 에이전트 ID와 실시간 상태(작업 중, 입력 대기 중, 완료 또는 완료 후 미확인)가 함께 표시됩니다. Claude 및 Codex의 경우 Orca가 해당 창을 세션에 연결할 수 있으면 탭 제목에 **`AI Vault conversation name`(AI Vault 대화 이름)**(사용자 지정 제목/스레드 이름)도 표시할 수 있습니다. 수동으로 바꾼 이름이 항상 우선합니다. 백그라운드로 이동한 터미널은 돌아올 때 중복 탭을 열지 않고 자체 탭에 다시 연결됩니다.
 
 ## TUI 클립보드(OSC 52)
 
@@ -49,9 +49,21 @@ Ghostty 스타일 터미널 — 처음 시작할 때 Ghostty 테마, 글꼴 및 
 
 터미널 탭 컨텍스트 메뉴의 **`Copy Session ID`(세션 ID 복사)**를 사용하여 스크립트, 지원 요청 또는 다른 도구에 사용할 세션 식별자를 복사합니다.
 
+## 터미널 재설정
+
+충돌한 프로그램 때문에 키보드 또는 마우스 모드가 고정되면 터미널을 마우스 오른쪽 버튼으로 클릭하고 **`Reset Terminal`(터미널 재설정)**을 선택합니다. 셸을 다시 시작하지 않고 호스트와 창에 남은 입력 모드를 지웁니다. `Shift+Enter` 또는 수정자 키가 앱에 전달되지 않을 때 유용합니다.
+
+Orca는 프로그램이 종료되었다고 합리적으로 추정했다는 이유만으로 더 이상 해당 모드를 끄지 않습니다. 따라서 Ctrl+C 이후에도 실행 중인 프로그램은 키보드 모드를 유지합니다. SSH 터미널도 로컬 터미널과 같은 방식으로 충돌한 프로그램의 상태를 정리합니다.
+
+## 파일 및 스크린샷 끌어다 놓기
+
+파일을 터미널에 놓으면 프롬프트에 해당 경로가 붙여 넣어집니다. macOS 스크린샷 썸네일은 로컬 Claude Code 터미널 또는 새 작업 공간 작성기에 놓을 수 있습니다. Orca는 에이전트가 실제로 열 수 있도록 임시 이미지의 읽을 수 있는 복사본을 제공합니다. 끌어다 놓은 파일을 건너뛰면 알림에 그 이유가 표시됩니다.
+
 ## 테마
 
 터미널 색상 테마는 [설정 → 터미널](/orca-docs-ko/docs/settings/)에서 구성할 수 있습니다. Orca는 인기 있는 테마 라이브러리를 제공하며 이를 사용자 정의할 수 있습니다.
+
+Ghostty 색상을 가져온 경우 Orca에서 터미널 테마를 선택하면 해당 테마의 색상이 적용됩니다. 테마를 전환하기 위해 Ghostty 구성을 제거할 필요는 없습니다.
 
 ## 색상 대비
 
@@ -71,7 +83,11 @@ Warp에서 테마를 수집한 경우 [설정 → 터미널](/orca-docs-ko/docs/
 
 [`Settings → Terminal`(설정 → 터미널)](/orca-docs-ko/docs/settings/)에서 새 로컬 터미널 탭의 기본 셸을 선택합니다. 시스템 기본값을 사용하려면 비워 둡니다. Windows에서는 PowerShell, Command Prompt, WSL 등을 선택할 수 있으며, `wsl.exe --status`가 성공하면 WSL이 자동으로 제공됩니다. 이 설정은 새 로컬 창에 적용되며 기존 창과 SSH 셸은 현재 동작을 유지합니다. 탭 표시줄의 **+** 드롭다운에도 하위 메뉴가 표시되므로 기본값을 변경하지 않고 임의의 셸에서 일회성 탭을 열 수 있습니다.
 
-WSL 파일 시스템(`\\wsl.localhost\...`)에 있는 저장소의 경우 Orca는 `wsl.exe -d <distro>`을 통해 시작됩니다. WSL에서 연 Windows 경로 저장소의 경우 Orca는 현재 작업 디렉터리를 `/mnt/<drive>/...`로 변환하고 로그인 bash로 진입합니다.
+사용자 지정 Unix 기본 셸에서는 **`Advanced → Shell arguments`(고급 → 셸 인수)**를 엽니다. 로그인 셸에는 **`-l (default)`(-l, 기본값)**를 유지하거나 **`Custom args`(사용자 지정 인수)**를 선택하고 줄마다 인수 하나를 입력합니다(예: `--rcfile`와 해당 경로를 서로 다른 줄에 입력). 인수 없이 셸을 시작하려면 사용자 지정 목록을 비워 둡니다. [터미널 설정](/orca-docs-ko/docs/settings/#terminal)을 참조합니다.
+
+WSL 파일 시스템(`\\wsl.localhost\...`)의 저장소에서는 Orca가 `wsl.exe -d <distro>`을 통해 시작합니다. WSL에서 연 Windows 경로 저장소의 경우 Orca가 현재 작업 디렉터리를 `/mnt/<drive>/...`로 변환하고 로그인 bash로 이동합니다.
+
+Orca는 관리되는 WSL 터미널에서 [Orca CLI](/orca-docs-ko/docs/cli/overview/)를 자동으로 제공합니다.
 
 ## 단축키
 
@@ -83,7 +99,7 @@ WSL 파일 시스템(`\\wsl.localhost\...`)에 있는 저장소의 경우 Orca�
 
 ## 기본 키 바인딩
 
-Orca은 키티 키보드 프로토콜을 광고하므로 터미널 앱은 실제 `Shift+Enter`, `Ctrl+Enter` 및 기타 수정자 인식 키 입력을 볼 수 있습니다. 바인딩은 Ghostty, WezTerm 또는 기본 터미널에서와 마찬가지로 Orca에서도 동일하게 작동합니다.
+Orca은 키티 키보드 프로토콜을 광고하므로 터미널 앱은 실제 `Shift+Enter`, `Ctrl+Enter` 및 기타 수정자 인식 키 입력을 볼 수 있습니다. 바인딩은 Ghostty, WezTerm 또는 기본 터미널에서와 마찬가지로 Orca에서도 동일하게 작동합니다. macOS의 기본 **`Auto`(자동)** 모드에서는 ABC 키보드에서 `Option`/`Alt` 단축키가 터미널 앱에 전달됩니다.
 
 ![키티 키보드 프로토콜을 통한 기본 키 바인딩 — Shift+Enter 및 친구들은 독립형 터미널에서와 똑같이 에이전트 CLI에 도달합니다.](/orca-docs-ko/assets/mirror/5b4b383b58509c12e086db79890586733e77617f33b383789b7a679a1626c99a.jpg)
 
