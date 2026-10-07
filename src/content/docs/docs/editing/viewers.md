@@ -1,7 +1,7 @@
 ---
 title: "HTML, Mermaid, PDF 및 이미지 뷰어"
 sourceUrl: https://www.onorca.dev/docs/editing/viewers
-checkedAt: "2026-10-06T01:03:33.118Z"
+checkedAt: "2026-10-07T03:54:46.558Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/markdown/
 next: /orca-docs-ko/docs/editing/file-explorer/
@@ -38,6 +38,8 @@ Orca에는 대부분의 저장소에서 자주 사용하는 형식을 위한 뷰
 ## CSV / TSV
 
 `.csv` 및 `.tsv` 파일은 정렬 가능한 열과 빠른 검색 기능이 있는 테이블 뷰어에서 열립니다. 고정 장치, 내보내기 및 리포지토리에 체크인된 모든 표 형식 데이터에 유용합니다. 셀을 직접 편집해야 하는 경우 도구 모음을 사용하여 원시 텍스트 보기로 다시 전환하세요.
+
+뷰어는 구분 기호(쉼표, 세미콜론 또는 탭)를 자동 감지합니다. **`Delimiter`(구분 기호)** 선택기에서 **`Auto`(자동)**, **`Comma`(쉼표)**, **`Semicolon`(세미콜론)** 또는 **`Tab`(탭)**을 강제로 지정할 수도 있으며, 세미콜론으로 구분된 내보내기 파일에 유용합니다.
 
 ## 주피터 노트북
 

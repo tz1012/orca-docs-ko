@@ -51,8 +51,8 @@
       "translated": "검색 상자 옆의 보기 옵션 메뉴에서 검색할 에이전트와 세션 그룹화 방식을 제어합니다."
     },
     "/docs/agents/session-history/:list:view-options:0": {
-      "sourceHash": "39d181e9bceb3350340d11ae99e9d1119190094d6efd46e186921e594b958275",
-      "translated": "-   **`Agents`(에이전트)** — 개별 CLI(ORCA_PROTECTED_0001, ORCA_PROTECTED_0002, Muse Code, ORCA_PROTECTED_0003, ORCA_PROTECTED_0004, ORCA_PROTECTED_0005, Prime Agent, ORCA_PROTECTED_0006, ORCA_PROTECTED_0007, ORCA_PROTECTED_0008, ORCA_PROTECTED_0009, ORCA_PROTECTED_0010, ORCA_PROTECTED_0011, ORCA_PROTECTED_0012, ORCA_PROTECTED_0013, ORCA_PROTECTED_0014, ORCA_PROTECTED_0015, ORCA_PROTECTED_0016)를 켜거나 끕니다. 비활성화된 에이전트는 검색에서 제외됩니다. 에이전트 헤더의 **`Select all`(모두 선택)** / **`Clear`(지우기)**를 사용하면 모든 에이전트를 한 번에 전환할 수 있습니다. **`Clear`(지우기)**를 선택하면 아무것도 선택되지 않으므로 긴 목록을 하나씩 해제하지 않고 필요한 CLI만 켤 수 있습니다. 선택 항목이 비어 있으면 일반적인 빈 필터 메시지 대신 **`No agents selected`(선택한 에이전트 없음)**가 표시됩니다.\n-   **`Group`(그룹)** — `ORCA_PROTECTED_0017`(프로젝트), `ORCA_PROTECTED_0018`(폴더)(`ORCA_PROTECTED_0019`마다 제목 하나) 또는 `ORCA_PROTECTED_0020`(에이전트)(CLI마다 제목 하나)로 그룹화합니다.\n-   **`Hide empty sessions`(빈 세션 숨기기)** — 기록된 메시지가 0개인 세션을 제외합니다."
+      "sourceHash": "01b94bb3193ee7d7a78bea139092405c65bce66149cd9dd7f0a47f4b8fc79960",
+      "translated": "-   **`Agents`(에이전트)** — 개별 CLI(ORCA_PROTECTED_0001, ORCA_PROTECTED_0002, Muse Code, ORCA_PROTECTED_0003, ORCA_PROTECTED_0004, ORCA_PROTECTED_0005, Prime Agent, ORCA_PROTECTED_0006, ORCA_PROTECTED_0007, ORCA_PROTECTED_0008, ORCA_PROTECTED_0009, ORCA_PROTECTED_0010, ORCA_PROTECTED_0011, ORCA_PROTECTED_0012, ORCA_PROTECTED_0013, ORCA_PROTECTED_0014, ORCA_PROTECTED_0015, ORCA_PROTECTED_0016, CodeBuddy, ZCode, Qoder)를 켜거나 끕니다. 비활성화된 에이전트는 스캔에서 제외됩니다. `Agents`(에이전트) 헤더의 **`Select all`(모두 선택)** / **`Clear`(지우기)**를 사용하면 모든 에이전트를 한 번에 전환할 수 있습니다. **`Clear`(지우기)**를 선택하면 아무것도 선택되지 않으므로 긴 목록을 하나씩 해제하지 않고 필요한 CLI만 켤 수 있습니다. 선택 항목이 비어 있으면 일반적인 빈 필터 메시지 대신 **`No agents selected`(선택한 에이전트 없음)**가 표시됩니다.\n-   **`Group`(그룹)** — `ORCA_PROTECTED_0017`(프로젝트), `ORCA_PROTECTED_0018`(폴더)(`ORCA_PROTECTED_0019`마다 제목 하나) 또는 `ORCA_PROTECTED_0020`(에이전트)(CLI마다 제목 하나)로 그룹화합니다.\n-   **`Hide empty sessions`(빈 세션 숨기기)** — 기록된 메시지가 0개인 세션을 제외합니다."
     },
     "/docs/agents/session-history/:heading:resume-a-session:0": {
       "sourceHash": "c2de38e7a185b425ef2ae4e0956aa9e6e8ce88455586a56b76c8f13645db0a38",
@@ -75,8 +75,8 @@
       "translated": "## 성적표의 출처"
     },
     "/docs/agents/session-history/:paragraph:where-the-transcripts-come-from:0": {
-      "sourceHash": "a51fd84cb0c7d706bcefb164a45f21fcbc62eeca442e9f7f678f532b330b2d46",
-      "translated": "ORCA_PROTECTED_0001는 각 에이전트의 자체 디스크 세션 저장소를 읽습니다. 예를 들어 ORCA_PROTECTED_0002의 `ORCA_PROTECTED_0003`, ORCA_PROTECTED_0004의 `ORCA_PROTECTED_0005` 기록, Muse Code의 `ORCA_PROTECTED_0006`, ORCA_PROTECTED_0007의 세션 로그, ORCA_PROTECTED_0008의 레거시 세션 파일 또는 `ORCA_PROTECTED_0009`, `ORCA_PROTECTED_0010` 아래의 CodeBuddy 프로젝트 대화 기록, ZCode에 저장된 대화 기록 등을 사용합니다. 별도로 활성화할 항목은 없습니다. CLI가 대화 기록을 작성하면 다음 스캔 후 패널에 표시됩니다. 헤더의 **`Refresh Session History`(세션 기록 새로 고침)** 버튼을 사용하면 필요할 때 다시 스캔할 수 있습니다."
+      "sourceHash": "3f79df9a6551089156985a98bcbc274e12b5348b5b06c9cb5e5f63aead43684a",
+      "translated": "ORCA_PROTECTED_0001는 각 에이전트의 자체 디스크 세션 저장소를 읽습니다. 예를 들어 ORCA_PROTECTED_0002의 `ORCA_PROTECTED_0003`, ORCA_PROTECTED_0004의 `ORCA_PROTECTED_0005` 기록, Muse Code의 `ORCA_PROTECTED_0006`, ORCA_PROTECTED_0007의 세션 로그, ORCA_PROTECTED_0008의 레거시 세션 파일 또는 `ORCA_PROTECTED_0009`, `ORCA_PROTECTED_0010` 아래의 CodeBuddy 프로젝트 대화 기록, ZCode에 저장된 대화 기록, Qoder의 `ORCA_PROTECTED_0011` 대화 기록 등을 사용합니다. 별도로 활성화할 항목은 없습니다. CLI가 대화 기록을 작성하면 다음 스캔 후 패널에 표시됩니다. 헤더의 **`Refresh Session History`(세션 기록 새로 고침)** 버튼을 사용하면 필요할 때 다시 스캔할 수 있습니다."
     },
     "/docs/agents/session-history/:heading:next-steps:0": {
       "sourceHash": "3a5d9cbc49e6e5f0c98349dd1cd7cfe5713807fc5f02234240621031925d1f32",

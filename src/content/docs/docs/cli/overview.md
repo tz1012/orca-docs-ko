@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 개요"
 sourceUrl: https://www.onorca.dev/docs/cli/overview
-checkedAt: "2026-10-06T01:03:33.118Z"
+checkedAt: "2026-10-07T03:54:46.558Z"
 editUrl: false
 prev: /orca-docs-ko/docs/remote-servers/
 next: /orca-docs-ko/docs/cli/reference/
@@ -15,7 +15,7 @@ Orca CLI를 사용하여 터미널에서 Orca를 스크립팅하고, 작업 트�
 
 Orca CLI는 `orca` 명령줄 인터페이스로, 모든 셸에서 실행 중인 Orca 편집기를 스크립팅합니다. 이를 사용하여 작업 트리를 생성 및 검사하고, 에이전트 터미널을 구동하고, 파일과 차이점을 열고, 내장 브라우저를 자동화하고, 예약된 자동화를 실행하고, HTML/Markdown 아티팩트를 공유하고, 스크립트 또는 AI 에이전트에서 Orca 기본 도구를 제어합니다.
 
-데스크톱 앱에 포함되어 있으며 [`Settings`(설정) → `General`(일반) → `Orca CLI`](/orca-docs-ko/docs/settings/)에서 등록합니다.
+데스크톱 앱에 포함되어 있으며 [`Settings → General → Orca CLI`(설정 → 일반 → CLI)](/orca-docs-ko/docs/settings/)에서 등록합니다. 셸 시작 파일에서 오래된 전역 설치를 추가하더라도 Orca는 자체 `orca` 명령을 터미널의 `PATH` 맨 앞에 유지하므로, 스크립트와 에이전트가 실행 중인 앱과 일치하는 CLI를 호출합니다.
 
 에이전트는 다음을 사용하여 일치하는 Orca CLI 기술을 설치할 수 있습니다.
 
@@ -40,13 +40,15 @@ orca status --json
 
 ## 작업트리 명령
 
-````
+```
 orca worktree ps --json
 orca worktree create --repo id:<repoId> --name my-task --issue 123 --json
+orca worktree create --repo id:<repoId> --name review-pr-123 --pr 123 --json
 orca worktree current --json
 orca worktree set --worktree active --comment "reproduced bug" --json
+orca worktree set --worktree active --gitlab-issue 42 --gitlab-mr 77 --json
 orca worktree rm --worktree id:<id> --force --json
-````
+```
 
 선택기, 설정 플래그, parent/child 작업 트리 및 더 광범위한 명령 맵은 [Orca CLI 참조](/orca-docs-ko/docs/cli/reference/)를 참조하세요.
 

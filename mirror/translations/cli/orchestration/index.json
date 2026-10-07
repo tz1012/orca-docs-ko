@@ -271,8 +271,8 @@
       "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/orchestration/:paragraph:preferred-supervised-loop:0": {
-      "sourceHash": "026bbf7819daa8e748ff2f17306d5aeb21803d32b80f0ceb7d344e4fdd9e9985",
-      "translated": "`ORCA_PROTECTED_0001`은 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, Muse, ORCA_PROTECTED_0004 및 ORCA_PROTECTED_0005의 불투명 제공자 모델 ID를 허용합니다. Muse에는 설치된 Muse에서 허용하는 모델 ID(예: `ORCA_PROTECTED_0006`)를 전달합니다. ORCA_PROTECTED_0007에는 `ORCA_PROTECTED_0008`에서 보고한 모델 슬러그를 사용합니다. `ORCA_PROTECTED_0009`에는 `ORCA_PROTECTED_0010`이 필요하며 해당 ORCA_PROTECTED_0011가 그 수준을 지원할 때만 적용됩니다. 두 플래그 모두 기존 창을 재사용하는 `ORCA_PROTECTED_0012`과 함께 사용할 수 없습니다. 재정의는 해당 시작에만 적용되며 시작 확인서의 `ORCA_PROTECTED_0013` / `ORCA_PROTECTED_0014` 아래에 표시됩니다. 연합형 시작에는 시작 환경 설정 지원을 알리는 워커 호스트가 필요합니다."
+      "sourceHash": "9700dee4ff9d5f3e7253023c4010e94607684daf5203904f9a9a045f2e52cbc3",
+      "translated": "`ORCA_PROTECTED_0001`은 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, Muse, ORCA_PROTECTED_0004 및 ORCA_PROTECTED_0005의 불투명 제공자 모델 ID를 허용합니다. Muse에는 설치된 Muse에서 허용하는 모델 ID(예: `ORCA_PROTECTED_0006`)를 전달합니다. ORCA_PROTECTED_0007에는 `ORCA_PROTECTED_0008`에서 보고한 모델 슬러그를 사용합니다. `ORCA_PROTECTED_0009` 플래그를 사용하려면 `ORCA_PROTECTED_0010`이 필요하며, 해당 수준을 ORCA_PROTECTED_0011에서 지원할 때만 적용됩니다. 두 플래그 모두 기존 창을 재사용하는 `ORCA_PROTECTED_0012`과 함께 사용할 수 없습니다. ORCA_PROTECTED_0013 모델이 ORCA_PROTECTED_0014의 기본 제공 목록보다 최신인 경우(예: `ORCA_PROTECTED_0015`), `ORCA_PROTECTED_0016` 플래그는 `ORCA_PROTECTED_0017` 및 `ORCA_PROTECTED_0018` 항목을 포함한 알려진 전체 어휘를 허용하며, 설치된 ORCA_PROTECTED_0019에서 이를 지원해야 합니다. 알 수 없는 추론 강도 이름은 계속 거부됩니다. 재정의는 해당 시작에만 적용되며 시작 확인서의 `ORCA_PROTECTED_0020` / `ORCA_PROTECTED_0021` 아래에 표시됩니다. 연합형 시작에는 시작 환경 설정 지원을 알리는 워커 호스트가 필요합니다."
     },
     "/docs/cli/orchestration/:code:preferred-supervised-loop:1": {
       "sourceHash": "ddfb5cd10ad694d6877b36de7d318ee193a4527679fe8c53d28448155cdba65e",

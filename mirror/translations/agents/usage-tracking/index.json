@@ -7,8 +7,8 @@
       "translated": "# 사용량 및 속도 제한 추적"
     },
     "/docs/agents/usage-tracking/:paragraph:usage-rate-limit-tracking:0": {
-      "sourceHash": "4f44500359b0bdbb94deecc355bf5345d40660fadc672062fca74fc0c096aee4",
-      "translated": "ORCA_PROTECTED_0001는 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, Muse Code, ORCA_PROTECTED_0004, ORCA_PROTECTED_0005, ORCA_PROTECTED_0006, ORCA_PROTECTED_0007 Code, ORCA_PROTECTED_0008, ORCA_PROTECTED_0009 및 ZCode의 사용량을 추적해 상태 표시줄에 표시합니다. 따라서 에이전트가 멈추기 전에 속도 제한에 얼마나 가까운지 알 수 있습니다."
+      "sourceHash": "ed5e90b85211f12c2d2a934eebd8119056375b8c5dfd3cb52647fcfdaaaa1e3b",
+      "translated": "ORCA_PROTECTED_0001는 ORCA_PROTECTED_0002, ORCA_PROTECTED_0003, Muse Code, ORCA_PROTECTED_0004, ORCA_PROTECTED_0005, ORCA_PROTECTED_0006, ORCA_PROTECTED_0007 Code, ORCA_PROTECTED_0008, ORCA_PROTECTED_0009, ZCode 및 GLM Coding Plan의 사용량을 추적해 상태 표시줄에 표시합니다. 따라서 에이전트가 멈추기 전에 속도 제한에 얼마나 가까운지 알 수 있습니다."
     },
     "/docs/agents/usage-tracking/:heading:whats-shown:0": {
       "sourceHash": "d15ce61a6832d2de882e15da9f610660137184aebce2274edba18ab433e72d99",
@@ -81,6 +81,10 @@
     "/docs/agents/usage-tracking/:paragraph:how-it-works:2": {
       "sourceHash": "56d1f1780aec645a50e096bc429592b6e99f0cc4203519065a2acba36b7d06ca",
       "translated": "ORCA_PROTECTED_0001의 경우 ORCA_PROTECTED_0002는 모델 그룹 풀을 포함한 할당량을 ORCA_PROTECTED_0003의 자체 CLI에서 읽습니다. 따라서 로그인된 ORCA_PROTECTED_0004 CLI가 없어도 되며 확인할 때 할당량을 소비하지 않습니다. ZCode의 경우 **`Coding Plan`(코딩 요금제)** 할당량이 디스크의 대화 기록에서 읽은 세션 기록과 함께 표시됩니다."
+    },
+    "/docs/agents/usage-tracking/:paragraph:how-it-works:3": {
+      "sourceHash": "6191ab62b5f1d6f227594cda1f6c6768c4c19b7ab154a45982d2f464a34d97ab",
+      "translated": "**`Settings → Accounts → GLM Coding Plan`(설정 → 계정 → GLM 코딩 요금제)**에서 GLM Coding Plan을 직접 연결할 수도 있습니다. 요금제 사이트(Z.AI 또는 Zhipu BigModel)를 선택하고 요금제 API 키를 저장합니다. ZCode CLI 로그인이 필요하지 않으며, 저장된 키가 ZCode CLI 로그인보다 우선합니다. 이 요금제는 다른 제공자와 마찬가지로 사용량 목록에 표시됩니다."
     }
   }
 }

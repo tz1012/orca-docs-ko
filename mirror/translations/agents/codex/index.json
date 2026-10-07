@@ -55,8 +55,12 @@
       "translated": "## Windows(WSL)의 ORCA_PROTECTED_0001"
     },
     "/docs/agents/codex/:paragraph:codex-on-windows-wsl:0": {
+      "sourceHash": "d77d3730888fc3e6f8da31919c64ab8c1e3350232dd58e91a14807e4ab1f15e0",
+      "translated": "Windows에서 ORCA_PROTECTED_0001는 macOS 및 Linux와 동일한 실제 `ORCA_PROTECTED_0002` 홈에서 실행됩니다. 업데이트 후 ORCA_PROTECTED_0003 터미널이 처음 나타날 때 ORCA_PROTECTED_0004는 일회성 알림을 표시합니다. ORCA_PROTECTED_0005가 폴더 신뢰 또는 명령 승인을 다시 요청할 수 있으며, ORCA_PROTECTED_0006 안에서만 추가한 MCP 서버는 다시 추가해야 합니다. 이미 열려 있던 ORCA_PROTECTED_0007 터미널은 다시 열 때까지 ORCA_PROTECTED_0008의 이전 홈에서 계속 실행됩니다."
+    },
+    "/docs/agents/codex/:paragraph:codex-on-windows-wsl:1": {
       "sourceHash": "43503b2b806d6edd511fea8a77f231ce23db34f20ee076ee9b21e8d2eea445e7",
-      "translated": "Windows에서 ORCA_PROTECTED_0001은 호스트 설치 또는 WSL 배포판에서 ORCA_PROTECTED_0002를 실행할 수 있습니다. 계정 전환기에서 WSL 호스팅 ORCA_PROTECTED_0003 계정 추가 — ORCA_PROTECTED_0004는 distro(`ORCA_PROTECTED_0005` 아래) 내부에 격리된 계정 홈을 생성하고 인증 읽기를 위한 `ORCA_PROTECTED_0006` 경로로 호스트에 다시 매핑하며 선택한 배포판을 통해 시작, 핫스왑 및 속도 제한 가져오기를 라우팅합니다. ORCA_PROTECTED_0007이 대상 배포판에 설치되지 않은 경우 바이너리가 누락된 배포판을 알려주는 실행 가능한 메시지와 함께 `Add account`(계정 추가) 대화 상자가 실패합니다."
+      "translated": "Windows에서 ORCA_PROTECTED_0001는 호스트 설치 또는 WSL 배포판에서 ORCA_PROTECTED_0002를 실행할 수 있습니다. 계정 전환기에서 WSL 호스팅 ORCA_PROTECTED_0003 계정을 추가하면 ORCA_PROTECTED_0004가 배포판 내부의 `ORCA_PROTECTED_0005` 아래에 격리된 계정 홈을 만들고, 인증 정보를 읽을 수 있도록 호스트의 `ORCA_PROTECTED_0006` 경로에 다시 매핑하며, 시작·핫스왑·속도 제한 조회를 선택한 배포판을 통해 라우팅합니다. 대상 배포판에 ORCA_PROTECTED_0007가 설치되어 있지 않으면 **`Add account`(계정 추가)** 대화 상자에 바이너리가 없는 배포판을 알려 주는 조치 가능한 오류 메시지가 표시됩니다."
     },
     "/docs/agents/codex/:heading:system-default-vs-extra-accounts:0": {
       "sourceHash": "195a837c7e493ef811117330967c8343bba4c7cd463b07137703fef0e4eda625",

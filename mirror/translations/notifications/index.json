@@ -65,6 +65,14 @@
     "/docs/notifications/:paragraph:agent-finished-pings:1": {
       "sourceHash": "105754011b060e0c3a37461406b44975b716a75559ee9aa27090af982583d686",
       "translated": "[업데이트된 구조화 채팅](ORCA_PROTECTED_0001)에서는 정상적으로 완료된 턴이 대신 해당 탭과 워크스페이스를 읽지 않음으로 표시합니다. 시스템 알림을 보내거나 소리를 재생하지 않습니다. 실패하거나 취소된 턴에는 읽지 않음 표시가 추가되지 않습니다."
+    },
+    "/docs/notifications/:heading:per-machine:0": {
+      "sourceHash": "50cd39554eac76e5aa3c8148c66797d68bed4f9756e615c794d92a248ceea83f",
+      "translated": "## 컴퓨터별 설정"
+    },
+    "/docs/notifications/:paragraph:per-machine:0": {
+      "sourceHash": "e5c08cbba5b063c912945afa96c86e48fed98344b07b1d633b41f9f31da673b3",
+      "translated": "**`Settings → Notifications → Machines`(설정 → 알림 → 컴퓨터)**에서 이 컴퓨터, SSH 대상 및 페어링된 ORCA_PROTECTED_0001 서버 중 이 컴퓨터에 알림을 표시할 수 있는 컴퓨터를 선택합니다. 페어링된 서버의 스위치는 해당 서버를 통해 접근하는 작업에도 적용됩니다. 음소거된 컴퓨터는 제외 목록으로 저장되므로 나중에 추가한 컴퓨터는 계속 알림을 보냅니다. 이 스위치는 이 컴퓨터의 데스크톱 알림에만 영향을 주며 휴대전화 푸시 알림은 변경되지 않습니다."
     }
   }
 }

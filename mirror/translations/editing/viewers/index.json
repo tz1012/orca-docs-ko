@@ -93,6 +93,10 @@
     "/docs/editing/viewers/:paragraph:jupyter-notebooks:3": {
       "sourceHash": "18614288d29daa1687885c987d970b1a2ebf30cfb17bea0c281efdee6831b8a1",
       "translated": "노트북 코드를 실행하기 전에 ORCA_PROTECTED_0001의 신뢰 확인 메시지를 승인합니다. 노트북을 신뢰하기 전에는 ORCA_PROTECTED_0002가 워크스페이스 Python 인터프리터를 시작하지 않습니다. SSH 작업 트리의 노트북과 다른 언어의 노트북도 계속 보고 편집할 수 있습니다. 작업 트리에서 노트북을 찾으려면 [파일 탐색기](ORCA_PROTECTED_0003)를 참조합니다."
+    },
+    "/docs/editing/viewers/:paragraph:csv-tsv:1": {
+      "sourceHash": "b1c3353ecbb96907591c0b9f5e2c0771a878625c565345aaab214640a8d033ac",
+      "translated": "뷰어는 구분 기호(쉼표, 세미콜론 또는 탭)를 자동 감지합니다. **`Delimiter`(구분 기호)** 선택기에서 **`Auto`(자동)**, **`Comma`(쉼표)**, **`Semicolon`(세미콜론)** 또는 **`Tab`(탭)**을 강제로 지정할 수도 있으며, 세미콜론으로 구분된 내보내기 파일에 유용합니다."
     }
   }
 }

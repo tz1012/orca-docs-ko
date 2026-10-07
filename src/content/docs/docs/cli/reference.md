@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 참조"
 sourceUrl: https://www.onorca.dev/docs/cli/reference
-checkedAt: "2026-10-06T01:03:33.118Z"
+checkedAt: "2026-10-07T03:54:46.558Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/overview/
 next: /orca-docs-ko/docs/cli/orchestration/
@@ -93,7 +93,7 @@ orca search --index-status --json
 
 ## 작업 트리
 
-````
+```
 orca worktree list --repo id:<repoId> --json
 orca worktree ps --json
 orca worktree current --json
@@ -101,10 +101,13 @@ orca worktree show --worktree active --json
 orca worktree create --repo id:<repoId> --name fix-login --json
 orca worktree create --name child-task --agent codex --prompt "Investigate the flaky login test" --json
 orca worktree set --worktree active --comment "reproduced failure; testing token refresh fix" --json
+orca worktree set --worktree active --workspace-status in-review --unread --json
 orca worktree rm --worktree id:<worktreeId> --force --json
-````
+```
 
 `worktree create`이 Orca 관리 작업 트리 내부에서 실행되면 Orca은 관계를 유추할 수 있을 때 새 작업 트리를 하위 작업 트리로 기록합니다. 명시적으로 하려면 `--parent-worktree active`를 전달하고 새 작업이 독립적인 경우에는 `--no-parent`를 전달합니다.
+
+`worktree set --unread` 명령은 사이드바의 작업 공간에 읽지 않음 점을 표시합니다. 이는 에이전트가 완료될 때 Orca가 표시하는 점과 같습니다. `--read` 옵션은 이 표시를 지웁니다.
 
 에이전트 시작 플래그:
 
@@ -114,7 +117,18 @@ orca worktree create --name quick-check --agent codex --prompt "Summarize the di
 orca worktree create --name hidden-setup --setup inherit --json
 ````
 
-`--agent`은 선택한 에이전트를 첫 번째 터미널에서 시작합니다. `--prompt`는 터미널에서 실행 중인 에이전트를 포함해 해당 에이전트에 초기 작업을 직접 전송합니다. `--setup run|skip|inherit`은 저장소 설정 후크를 제어하며, `inherit`은 저장소 정책을 따릅니다.
+`--agent` 옵션은 선택한 에이전트를 첫 번째 터미널에서 시작합니다. `--prompt`는 터미널에서 실행 중인 에이전트를 포함해 해당 에이전트에 초기 작업을 직접 전송합니다. `--setup run|skip|inherit` 옵션은 저장소 설정 후크를 제어하며, `inherit` 값은 저장소 정책을 따릅니다.
+
+작업 트리에 이미 저장된 작업 공간 메타데이터를 사용하여 이슈와 리뷰를 연결합니다:
+
+```
+orca worktree create --repo id:<repoId> --name review-task --pr 123 --json
+orca worktree create --repo id:<repoId> --name gitlab-task --gitlab-issue 42 --gitlab-mr 77 --json
+orca worktree set --worktree active --gitlab-issue '#42' --gitlab-mr '!77' --json
+orca worktree set --worktree active --pr null --gitlab-mr null --json
+```
+
+`--pr`은 GitHub 풀 리퀘스트 번호입니다. `--gitlab-issue` 플래그는 이슈 번호 또는 `#42`를 허용하며, `--gitlab-mr` 플래그는 병합 요청 번호 또는 `!77`을 허용합니다. GitLab 플래그는 자체 호스팅 인스턴스와 중첩 그룹을 포함한 HTTP(S) 이슈 또는 병합 요청 URL도 허용합니다. 단, URL의 호스트와 프로젝트가 작업 공간에 저장된 GitLab 소스 컨텍스트 또는 저장소의 원격과 일치해야 합니다. 플래그를 생략하면 해당 링크가 변경되지 않습니다. `set`에서 리터럴 `null`을 지정하면 명시한 링크만 지워지며, `create` 명령에서는 `null`을 허용하지 않습니다. 제공자별 필드는 분리되어 있으므로 GitLab 링크를 설정해도 GitHub 및 Linear 링크는 유지됩니다.
 
 ## 터미널
 

@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-10-06T01:03:33.118Z"
+checkedAt: "2026-10-07T03:54:46.558Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -69,15 +69,15 @@ translationNotice:
 
 -   `Installed agents`(설치된 에이전트) — 활성화하거나 비활성화할 수 있는 감지된 CLI입니다.
 -   감지된 에이전트를 활성화하거나 비활성화하여 시작 메뉴에 사용하려는 CLI만 표시합니다.
--   `Agent Permissions`(에이전트 권한) — 사용자 지정하지 않은 에이전트에 대해 CLI 권한 확인을 줄이려면 **`Yolo`**, 각 에이전트의 자체 승인 흐름을 유지하려면 **`Manual`(수동)**을 선택합니다.
--   **`Trust the folder when Orca starts an agent`(Orca에서 에이전트를 시작할 때 폴더 신뢰)** — **기본적으로 켜져 있습니다**. 오케스트레이션 워커, 자동화 및 휴대전화에서 시작한 에이전트를 포함하여 Orca가 시작하는 에이전트는 "이 폴더를 신뢰하십니까?" 프롬프트를 건너뜁니다. 각 에이전트의 자체 신뢰 프롬프트를 유지하려면 끕니다. [Codex의 Orca 통합](/orca-docs-ko/docs/agents/codex/) 및 [지원되는 에이전트](/orca-docs-ko/docs/agents/supported/)를 참조합니다.
--   **`Run each Codex terminal on its own server`(각 Codex 터미널을 자체 서버에서 실행)** — **기본적으로 켜져 있습니다**. Orca의 상태와 탭 닫기 동작을 Codex 탭에서 정확하게 유지합니다. Codex의 공유 서버와 에이전트 개요를 사용하려면 끕니다. 새 터미널에 적용됩니다. 함께 제공되는 **`Warn when a Codex tab shares a server`(Codex 탭이 서버를 공유할 때 경고)** 알림은 직접 시작한 Codex가 서버를 공유할 때 표시됩니다. [Codex의 Orca 통합](/orca-docs-ko/docs/agents/codex/)을 참조합니다.
--   Claude 및 Codex 계정 목록을 관리합니다. Linux에서는 암호화할 수 없었던 저장된 자격 증명이 이곳에 경고와 함께 표시됩니다.
--   OpenCode Go 세션 쿠키 — Go 속도 제한을 표시하려면 전체 `opencode.ai` Cookie 헤더에 `__Host-console_session`를 포함해 붙여 넣습니다. `auth` 쿠키만으로는 충분하지 않습니다.
+-   `Agent Permissions`(에이전트 권한) — CLI 권한 확인을 줄이려면 **`Yolo`(자동 승인)**를 선택하고, 사용자 지정하지 않은 에이전트에서 각 에이전트의 자체 승인 흐름을 유지하려면 **`Manual`(수동)**을 선택합니다.
+-   **`Trust the folder when Orca starts an agent`(Orca에서 에이전트를 시작할 때 폴더 신뢰)** — **기본적으로 켜져 있습니다**. 오케스트레이션 워커, 자동화 및 휴대전화에서 시작한 에이전트를 포함하여 Orca가 시작하는 에이전트는 `Do you trust this folder?`(이 폴더를 신뢰하십니까?) 프롬프트를 건너뜁니다. 각 에이전트의 자체 신뢰 프롬프트를 유지하려면 끕니다. [Codex를 Orca에서 사용하기](/orca-docs-ko/docs/agents/codex/) 및 [지원되는 에이전트](/orca-docs-ko/docs/agents/supported/)를 참조합니다.
+-   **`Run each Codex terminal on its own server`(각 Codex 터미널을 자체 서버에서 실행)** — **기본적으로 켜져 있습니다**. Orca의 상태와 탭 닫기 동작을 Codex 탭에서 정확하게 유지합니다. Codex의 공유 서버와 에이전트 개요를 사용하려면 끕니다. 새 터미널에 적용됩니다. 함께 제공되는 **`Warn when a Codex tab shares a server`(Codex 탭이 서버를 공유할 때 경고)** 알림은 직접 시작한 Codex가 서버를 공유할 때 표시됩니다. [Codex를 Orca에서 사용하기](/orca-docs-ko/docs/agents/codex/)을 참조합니다.
+-   Claude, Codex, OpenCode, Devin, Antigravity 및 GLM Coding Plan의 계정 목록을 관리합니다. Linux에서는 암호화할 수 없었던 저장된 자격 증명이 이곳에 경고와 함께 표시됩니다.
+-   OpenCode Go 세션 쿠키 — Go 속도 제한을 표시하려면 전체 `opencode.ai` Cookie 헤더를 붙여 넣되 `__Host-console_session` 쿠키를 포함해야 합니다. `auth` 쿠키만으로는 충분하지 않습니다.
 -   에이전트별 시작 후크를 설정합니다.
 -   **`Agent status hooks`(에이전트 상태 후크)** — Orca에 작업 중 / 대기 중 / 완료 상태를 표시합니다. 앱을 재시작하지 않아도 토글이 적용되며 Windows WSL 후크 릴레이에도 적용됩니다. CLI: `orca agent hooks on|off|status`.
 -   **`Keep computer awake`(컴퓨터 절전 방지)** — **`On`(켜기)**(항상 절전 방지), **`Agent`(에이전트)**(에이전트가 작업 중일 때 절전 방지) 또는 **`Off`(끄기)**를 선택합니다. 같은 컨트롤이 데스크톱 상태 표시줄에 **`Caffeinate`(절전 방지)**(커피 아이콘)로 표시됩니다. 페어링된 웹 클라이언트에서는 숨겨집니다.
--   **`Skill freshness`(스킬 최신 상태)** — 에이전트 창과 스킬 카드에는 계속 전체 상태가 표시됩니다. 사이드바 탐색에는 조치가 필요한 스킬(**`Update available`(업데이트 가능)**, **`Needs attention`(확인 필요)** / 검토)에만 배지가 표시되며, 정상, 로드 중, 선택적 미설치 행은 별도 표시를 하지 않습니다. 대화 상자에서 **`Update`(업데이트)**를 선택하면 터미널 없이 전역 스킬을 백그라운드에서 새로 고칩니다. 진행 상황은 상태 표시줄에 표시되며 대화 상자를 닫아도 실행이 취소되지 않습니다. [Orca 스킬](/orca-docs-ko/docs/cli/skills/#keep-skills-up-to-date)을 참조합니다.
+-   **`Skill freshness`(스킬 최신 상태)** — `Agents`(에이전트) 창과 스킬 카드에는 계속 전체 상태가 표시됩니다. 사이드바 탐색에는 조치가 필요한 스킬(**`Update available`(업데이트 가능)**, **`Needs attention`(확인 필요)** / 검토)에만 배지가 표시되며, 정상, 로드 중, 선택적 미설치 행은 별도 표시를 하지 않습니다. 대화 상자에서 **`Update`(업데이트)**를 선택하면 터미널 없이 전역 스킬을 백그라운드에서 새로 고칩니다. 진행 상황은 상태 표시줄에 표시되며 대화 상자를 닫아도 실행이 취소되지 않습니다. [Orca 스킬](/orca-docs-ko/docs/cli/skills/#keep-skills-up-to-date)을 참조합니다.
 
 ## 브라우저
 
@@ -111,10 +111,11 @@ translationNotice:
 
 ## 알림
 
-- 에이전트 완료: 시스템, 사운드, 칩.
-- 카테고리별로 사용자 정의 데스크탑 알림 소리.
-- PR 확인 실패.
-- 업데이트가 가능합니다.
+-   에이전트 완료: 시스템, 소리, 칩.
+-   카테고리별 사용자 지정 데스크톱 알림 소리.
+-   **`Machines`(컴퓨터)** — 이 컴퓨터, SSH 대상 및 페어링된 Orca 서버 중 이 컴퓨터에 알림을 표시할 수 있는 컴퓨터를 선택합니다. 페어링된 서버의 스위치는 해당 서버를 통해 접근하는 작업에도 적용되며, 새로 추가한 컴퓨터는 계속 알림을 보냅니다. [알림 및 받은 편지함](/orca-docs-ko/docs/notifications/#per-machine)을 참조합니다.
+-   PR 확인 실패.
+-   업데이트 가능.
 
 ## 음성
 
@@ -149,9 +150,10 @@ translationNotice:
 
 -   `Full keymap`(전체 키맵) — 모든 키 바인딩을 다시 매핑할 수 있습니다.
 -   `Toggle Sleeping Workspaces`(절전 작업 공간 전환)는 기본적으로 키가 할당되지 않습니다. 사이드바의 절전 작업 트리 필터를 직접 전환하려면 여기서 할당합니다.
+-   **`Toggle Child Workspaces`(하위 작업 공간 전환)**는 기본적으로 키가 할당되지 않습니다. 상위 작업 트리의 중첩된 하위 항목을 표시하거나 숨기려면 여기서 할당합니다. **`N children`(하위 N개)** 칩을 클릭하는 것과 같은 동작입니다. 포인터 아래의 작업 트리에 적용되며, 가리키는 항목이 없으면 활성 작업 트리에 적용됩니다.
 -   **`Toggle Workspace Board`(작업 공간 보드 전환)**는 기본적으로 키가 할당되지 않습니다. 하나의 단축키로 `Workspace Board`(작업 공간 보드)를 열거나 닫으려면 여기서 할당합니다. 기존 `workspace.openBoard` 바인딩도 계속 작동합니다.
 -   `Close all editor tabs`(모든 편집기 탭 닫기)의 기본값은 macOS에서 `Cmd+Option+W`, Windows/Linux에서 `Ctrl+Alt+W`입니다.
--   **`Tab navigation defaults (new installs)`(탭 탐색 기본값(새 설치)):** **모든 유형**을 가로지르는 next/previous 탭은 `Cmd+Shift+]` / `Cmd+Shift+[`(Linux/Windows에서는 Ctrl)입니다. 같은 유형 내 next/previous은 `Cmd+Option+]` / `Cmd+Option+[`입니다. 최근 사용한 이전 탭은 `Ctrl+Tab`입니다. 기존 설치는 사용자 지정 재정의를 `~/.orca/keybindings.json`에 유지합니다.
+-   **`Tab navigation defaults (new installs)`(탭 탐색 기본값(새 설치)):** **모든 유형**을 가로지르는 next/previous 탭은 `Cmd+Shift+]` / `Cmd+Shift+[`(Linux/Windows에서는 Ctrl)입니다. 같은 유형 내 next/previous 탐색은 `Cmd+Option+]` / `Cmd+Option+[`입니다. 최근 사용한 이전 탭은 `Ctrl+Tab`입니다. 기존 설치는 사용자 지정 재정의를 `~/.orca/keybindings.json`에 유지합니다.
 -   **`Add Review Note`(검토 메모 추가)**의 기본값은 `Cmd+Shift+A`(macOS) / `Ctrl+Shift+A`(Windows/Linux)이며 다시 매핑할 수 있습니다.
 -   **`Send Review Notes to Agent`(에이전트에 검토 메모 보내기)**는 기본적으로 키가 할당되지 않습니다. 마우스를 사용하지 않고 활성 작업 트리의 diff 메모 보내기 메뉴를 열려면 여기서 할당합니다.
 -   **`Delete workspace`(작업 공간 삭제)**의 기본값은 macOS에서 `Cmd+Shift+Backspace`, Windows/Linux에서 `Ctrl+Shift+Backspace`입니다. 삭제하려는 사이드바 작업 공간에 마우스를 올리면 Orca가 계속 확인을 요청합니다.

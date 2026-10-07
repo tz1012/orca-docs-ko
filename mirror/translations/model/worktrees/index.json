@@ -23,8 +23,8 @@
       "translated": "## 모델"
     },
     "/docs/model/worktrees/:list:the-model:0": {
-      "sourceHash": "b1b0b1f39bb3b1feff3e059a7f2ee0eeaa5bd0dcc71efc5404e9f9bc910eaae3",
-      "translated": "-   각 저장소에는 **`base ref`(기본 참조)**가 있으며, 일반적으로 `ORCA_PROTECTED_0001`입니다.\n-   각 작업 트리에는 분기 기준인 **`start-from ref`(시작 참조)**가 있습니다.\n-   각 작업 트리에는 자체 브랜치, 디스크의 자체 파일 및 자체 에이전트 터미널이 있습니다.\n-   작업 트리를 삭제하면 디렉터리와 브랜치가 모두 제거됩니다(확인 필요). Git에서 체크아웃을 제거하도록 하면 제거 중에 채팅이나 파일 작업이 멈추지 않습니다. 병합되지 않은 커밋이 있을 수 있어 Git이 로컬 브랜치를 유지하면 ORCA_PROTECTED_0002가 검토 단계를 제공할 수 있습니다. [보존된 브랜치](ORCA_PROTECTED_0003)를 참조합니다."
+      "sourceHash": "b0247c5d377c210885283bf7bbcd367360a72a701c841d17813198a1cb4bef91",
+      "translated": "-   각 저장소에는 **`base ref`(기본 참조)**가 있으며, 일반적으로 `ORCA_PROTECTED_0001`입니다.\n-   각 작업 트리에는 분기 기준인 **`start-from ref`(시작 참조)**가 있습니다.\n-   각 작업 트리에는 자체 브랜치, 디스크의 자체 파일 및 자체 에이전트 터미널이 있습니다.\n-   작업 트리를 삭제하면 디렉터리와 브랜치가 모두 제거됩니다(확인 필요). Git에서 체크아웃을 제거하도록 하면 제거 중에 채팅이나 파일 작업이 멈추지 않습니다. Git에서 체크아웃 제거를 완료하지 못하면 작업 공간이 목록에 남아 다시 시도할 수 있으며, 실패 유형상 가능한 경우 ORCA_PROTECTED_0002에서 **`Force Delete`(강제 삭제)**를 제공합니다. 병합되지 않은 커밋이 있을 수 있어 Git이 로컬 브랜치를 유지하면 ORCA_PROTECTED_0003에서 검토 단계를 제공할 수 있습니다. [보존된 브랜치](ORCA_PROTECTED_0004)를 참조합니다."
     },
     "/docs/model/worktrees/:heading:per-feature-lifecycle:0": {
       "sourceHash": "9f68a46ce57df35ed2b3b81c0f90a68d451cbe234df1209f224cb5a03a0c53a8",
@@ -211,12 +211,12 @@
       "translated": "[ORCA_PROTECTED_0001 실행 방식](ORCA_PROTECTED_0002)을 참조합니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:7": {
-      "sourceHash": "7062fea6299eedce682be963a084e7d81188cd424f3f3fdb465001aefee31d3e",
-      "translated": "사이드바에서 작업 트리 제목을 두 번 클릭하면 인라인으로 이름을 변경할 수 있습니다. 카드의 다른 위치를 두 번 클릭하면 기존처럼 전체 편집 대화 상자가 열립니다. **`Edit Worktree Details`(작업 트리 세부 정보 편집)**에서 이슈 필드는 **ORCA_PROTECTED_0001** 또는 **ORCA_PROTECTED_0002**를 허용합니다(필드의 칩을 사용하며 URL을 붙여넣으면 자동으로 감지합니다). 작업 공간마다 하나의 이슈만 연결할 수 있으며, 공급자를 변경하거나 필드를 지우면 이전 연결이 해제됩니다. 호스트 연결이 끊긴 SSH 작업 공간에서는 카드 제목 행에 인라인 재연결 컨트롤이 표시될 수 있습니다([SSH 작업 트리](ORCA_PROTECTED_0003) 참조)."
+      "sourceHash": "88570e7b6b4871a7954ed5af7459750cce05a2f84ac5f0971ff7ac3b63f5a421",
+      "translated": "상위 작업 트리에는 중첩된 하위 작업 트리가 **`N children`(하위 N개)** 칩 아래에 표시됩니다. 칩을 클릭하면 이를 표시하거나 숨길 수 있습니다. 키보드로 같은 작업을 수행하려면 [`Settings → Shortcuts`(설정 → 단축키)](ORCA_PROTECTED_0001)에서 **`Toggle Child Workspaces`(하위 작업 공간 전환)**를 할당합니다. 포인터 아래의 작업 트리에 적용되며, 가리키는 항목이 없으면 활성 작업 트리에 적용되어 해당 카드의 칩과 정확히 같은 작업을 수행합니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:8": {
-      "sourceHash": "f9c636109a7fa9ce721d6f1aa51b15dd9564d85c7b3cbdbbb62597385cb176a4",
-      "translated": "단일 워크스페이스를 마우스 오른쪽 버튼으로 클릭하고 **`Copy Worktree Name`(작업 트리 이름 복사)**을 선택하면 ORCA_PROTECTED_0001가 작업 트리 선택기에 사용하는 정식 이름을 복사합니다. 사용자 지정 이름, 브랜치, 폴더의 순서로 대체 값을 사용하므로 폴더 워크스페이스와 사용자 지정 이름을 지운 워크스페이스에서도 작동합니다."
+      "sourceHash": "7062fea6299eedce682be963a084e7d81188cd424f3f3fdb465001aefee31d3e",
+      "translated": "사이드바에서 작업 트리 제목을 두 번 클릭하면 인라인으로 이름을 변경할 수 있습니다. 카드의 다른 위치를 두 번 클릭하면 기존처럼 전체 편집 대화 상자가 열립니다. **`Edit Worktree Details`(작업 트리 세부 정보 편집)**에서 이슈 필드는 **ORCA_PROTECTED_0001** 또는 **ORCA_PROTECTED_0002**를 허용합니다(필드의 칩을 사용하며 URL을 붙여 넣으면 자동으로 감지합니다). 작업 공간마다 하나의 이슈만 연결할 수 있으며, 제공자를 변경하거나 필드를 지우면 이전 연결이 해제됩니다. 호스트 연결이 끊긴 SSH 작업 공간에서는 카드 제목 행에 인라인 재연결 컨트롤이 표시될 수 있습니다([SSH 작업 트리](ORCA_PROTECTED_0003) 참조)."
     },
     "/docs/model/worktrees/:heading:resource-manager-cleanup:0": {
       "sourceHash": "9be1e92601a7a0a0604a36e76c583e8c113ace15f63405c5741721a69e2913a4",
@@ -235,8 +235,12 @@
       "translated": "작업 공간을 일괄 삭제하면(사이드바 다중 선택 또는 `Resource Manager`(리소스 관리자) 정리) 디스크의 폴더는 그대로 제거됩니다. 병합되지 않은 커밋이 있을 수 있어 Git이 로컬 브랜치 삭제를 거부하면 ORCA_PROTECTED_0001가 해당 브랜치를 유지하고 **`Review N Branches`(N개 브랜치 검토)**와 같은 토스트를 표시합니다. 토스트를 열면 유지된 브랜치 목록이 표시되어 일부는 강제로 삭제하고 나머지는 남겨 둘 수 있습니다. 선택하지 않은 브랜치는 저장소에 남으며 작업 공간 폴더는 복원되지 않습니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:9": {
+      "sourceHash": "f9c636109a7fa9ce721d6f1aa51b15dd9564d85c7b3cbdbbb62597385cb176a4",
+      "translated": "단일 작업 공간을 마우스 오른쪽 버튼으로 클릭하고 **`Copy Worktree Name`(작업 트리 이름 복사)**을 선택하면 ORCA_PROTECTED_0001가 작업 트리 선택기에 사용하는 정식 이름을 복사합니다. 사용자 지정 이름, 브랜치, 폴더의 순서로 대체 값을 사용하므로 폴더 작업 공간과 사용자 지정 이름을 지운 작업 공간에서도 작동합니다."
+    },
+    "/docs/model/worktrees/:paragraph:sidebar-layout:10": {
       "sourceHash": "435340db571bcc94eb6eae1a268af5aa000a807c38e813880434f03c93537b52",
-      "translated": "워크스페이스 이름을 직접 바꾸면 작업 트리의 브랜치가 변경되어도 ORCA_PROTECTED_0001는 해당 표시 이름을 유지합니다. 사용자 지정 이름을 지우면 브랜치에서 자동으로 이름을 가져오는 동작을 다시 사용합니다. ORCA_PROTECTED_0002가 생성한 이름은 계속 브랜치를 따릅니다."
+      "translated": "작업 공간 이름을 직접 바꾸면 작업 트리의 브랜치가 변경되어도 ORCA_PROTECTED_0001는 해당 표시 이름을 유지합니다. 사용자 지정 이름을 지우면 브랜치에서 자동으로 이름을 가져오는 동작을 다시 사용합니다. ORCA_PROTECTED_0002가 생성한 이름은 계속 브랜치를 따릅니다."
     }
   }
 }

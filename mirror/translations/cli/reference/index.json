@@ -115,24 +115,24 @@
       "translated": "## 작업 트리"
     },
     "/docs/cli/reference/:code:worktrees:0": {
-      "sourceHash": "8b9c34b7f1e905a5123cceb3e0809dbb5ed40661d3013eadecc3675910d5d832",
-      "translated": "````\nORCA_PROTECTED_0001\n````"
+      "sourceHash": "bd6d16f5495923ebceddd19de5433166142f810d97a41fad598bd8ca55b39214",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/reference/:paragraph:worktrees:0": {
       "sourceHash": "4b3e73a1207192d9a0b9d90145145508e0b33fc9d5b61b52057154aad56db80a",
       "translated": "`ORCA_PROTECTED_0001`이 ORCA_PROTECTED_0002 관리 작업 트리 내부에서 실행되면 ORCA_PROTECTED_0003은 관계를 유추할 수 있을 때 새 작업 트리를 하위 작업 트리로 기록합니다. 명시적으로 하려면 `ORCA_PROTECTED_0004`를 전달하고 새 작업이 독립적인 경우에는 `ORCA_PROTECTED_0005`를 전달합니다."
     },
     "/docs/cli/reference/:paragraph:worktrees:1": {
-      "sourceHash": "d89b8780a7716579e9c75eb2a60ed45dce3c9caaf6d64ef9c2af943bf91db352",
-      "translated": "에이전트 시작 플래그:"
+      "sourceHash": "f08ef81650f2cebd6710834e35578967e6afc8056698330bd5e834b9050a2a47",
+      "translated": "`ORCA_PROTECTED_0001` 명령은 사이드바의 작업 공간에 읽지 않음 점을 표시합니다. 이는 에이전트가 완료될 때 ORCA_PROTECTED_0002가 표시하는 점과 같습니다. `ORCA_PROTECTED_0003` 옵션은 이 표시를 지웁니다."
     },
     "/docs/cli/reference/:code:worktrees:1": {
       "sourceHash": "10845b90279df035617495c689c00d52a3bb730c31b845970d05f6226d68e603",
       "translated": "````\nORCA_PROTECTED_0001\n````"
     },
     "/docs/cli/reference/:paragraph:worktrees:2": {
-      "sourceHash": "4670dd1eaf5dba914fd25a8c2141e2f75c61c88b8093091578243054b200a921",
-      "translated": "`ORCA_PROTECTED_0001`은 선택한 에이전트를 첫 번째 터미널에서 시작합니다. `ORCA_PROTECTED_0002`는 터미널에서 실행 중인 에이전트를 포함해 해당 에이전트에 초기 작업을 직접 전송합니다. `ORCA_PROTECTED_0003`은 저장소 설정 후크를 제어하며, `ORCA_PROTECTED_0004`은 저장소 정책을 따릅니다."
+      "sourceHash": "d89b8780a7716579e9c75eb2a60ed45dce3c9caaf6d64ef9c2af943bf91db352",
+      "translated": "에이전트 시작 플래그:"
     },
     "/docs/cli/reference/:heading:terminals:0": {
       "sourceHash": "dab8b31de6469c29d660c870ee1181727d0ef95d8150857f0f3c18fe23d366e5",
@@ -397,6 +397,22 @@
     "/docs/cli/reference/:paragraph:files:1": {
       "sourceHash": "698fe334a06006663079719bab1941f01a535ed1b165b07cdb68621528137721",
       "translated": "이 명령은 화면에 표시된 작업 트리에서도 현재 보기를 바꾸지 않고 파일을 탭으로 엽니다. 열린 탭을 화면에 표시하려면 `ORCA_PROTECTED_0001`를 전달합니다. 에이전트는 사용자가 파일을 보도록 요청한 경우에만 이 플래그를 전달해야 합니다."
+    },
+    "/docs/cli/reference/:paragraph:worktrees:3": {
+      "sourceHash": "4670dd1eaf5dba914fd25a8c2141e2f75c61c88b8093091578243054b200a921",
+      "translated": "`ORCA_PROTECTED_0001` 옵션은 선택한 에이전트를 첫 번째 터미널에서 시작합니다. `ORCA_PROTECTED_0002`는 터미널에서 실행 중인 에이전트를 포함해 해당 에이전트에 초기 작업을 직접 전송합니다. `ORCA_PROTECTED_0003` 옵션은 저장소 설정 후크를 제어하며, `ORCA_PROTECTED_0004` 값은 저장소 정책을 따릅니다."
+    },
+    "/docs/cli/reference/:paragraph:worktrees:4": {
+      "sourceHash": "d80cb0b4d7a86c479f88b81c370ab4b8d1f3a052eacc043fd33b1c557c411d32",
+      "translated": "작업 트리에 이미 저장된 작업 공간 메타데이터를 사용하여 이슈와 리뷰를 연결합니다:"
+    },
+    "/docs/cli/reference/:code:worktrees:2": {
+      "sourceHash": "ff706414f43b0b982f815e4385399e342550336292dc572a190b991d1ad05385",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/reference/:paragraph:worktrees:5": {
+      "sourceHash": "86719b9068b0de177f66817ae11605526177f62cd97dd7e196bd8cdaf9699c52",
+      "translated": "`ORCA_PROTECTED_0001`은 ORCA_PROTECTED_0002 풀 리퀘스트 번호입니다. `ORCA_PROTECTED_0003` 플래그는 이슈 번호 또는 `ORCA_PROTECTED_0004`를 허용하며, `ORCA_PROTECTED_0005` 플래그는 병합 요청 번호 또는 `ORCA_PROTECTED_0006`을 허용합니다. GitLab 플래그는 자체 호스팅 인스턴스와 중첩 그룹을 포함한 HTTP(S) 이슈 또는 병합 요청 URL도 허용합니다. 단, URL의 호스트와 프로젝트가 작업 공간에 저장된 GitLab 소스 컨텍스트 또는 저장소의 원격과 일치해야 합니다. 플래그를 생략하면 해당 링크가 변경되지 않습니다. `ORCA_PROTECTED_0007`에서 리터럴 `ORCA_PROTECTED_0008`을 지정하면 명시한 링크만 지워지며, `ORCA_PROTECTED_0009` 명령에서는 `ORCA_PROTECTED_0010`을 허용하지 않습니다. 제공자별 필드는 분리되어 있으므로 GitLab 링크를 설정해도 ORCA_PROTECTED_0011 및 ORCA_PROTECTED_0012 링크는 유지됩니다."
     }
   }
 }

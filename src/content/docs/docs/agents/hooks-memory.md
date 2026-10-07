@@ -1,7 +1,7 @@
 ---
 title: "에이전트 후크 및 메모리"
 sourceUrl: https://www.onorca.dev/docs/agents/hooks-memory
-checkedAt: "2026-10-06T01:03:33.118Z"
+checkedAt: "2026-10-07T03:54:46.558Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/usage-tracking/
 next: /orca-docs-ko/docs/review/diff-viewer/

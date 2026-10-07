@@ -23,8 +23,8 @@
       "translated": "ORCA_PROTECTED_0001 CLI는 `ORCA_PROTECTED_0002` 명령줄 인터페이스로, 모든 셸에서 실행 중인 ORCA_PROTECTED_0003 편집기를 스크립팅합니다. 이를 사용하여 작업 트리를 생성 및 검사하고, 에이전트 터미널을 구동하고, 파일과 차이점을 열고, 내장 브라우저를 자동화하고, 예약된 자동화를 실행하고, ORCA_PROTECTED_0004 아티팩트를 공유하고, 스크립트 또는 AI 에이전트에서 ORCA_PROTECTED_0005 기본 도구를 제어합니다."
     },
     "/docs/cli/overview/:paragraph:orca-cli-overview:2": {
-      "sourceHash": "ec50e12f4f3b06225971767952f9ba85693e220022fe67def28744891103ee84",
-      "translated": "데스크톱 앱에 포함되어 있으며 [`Settings`(설정) → `General`(일반) → `ORCA_PROTECTED_0001 CLI`](ORCA_PROTECTED_0002)에서 등록합니다."
+      "sourceHash": "9d7094847bd6eb588e435609de75424b9c60d4de57801720e1791e842f83a0ac",
+      "translated": "데스크톱 앱에 포함되어 있으며 [`Settings → General → ORCA_PROTECTED_0001 CLI`(설정 → 일반 → CLI)](ORCA_PROTECTED_0002)에서 등록합니다. 셸 시작 파일에서 오래된 전역 설치를 추가하더라도 ORCA_PROTECTED_0003는 자체 `ORCA_PROTECTED_0004` 명령을 터미널의 `ORCA_PROTECTED_0005` 맨 앞에 유지하므로, 스크립트와 에이전트가 실행 중인 앱과 일치하는 CLI를 호출합니다."
     },
     "/docs/cli/overview/:paragraph:orca-cli-overview:3": {
       "sourceHash": "ed435a4d926d49365c0f28cbf00f0d8e4f30df2d38b0370c5a38425de1c3ab4f",
@@ -55,8 +55,8 @@
       "translated": "## 작업트리 명령"
     },
     "/docs/cli/overview/:code:worktree-commands:0": {
-      "sourceHash": "97ca45efd8467948b5e01f0e280a7506cc07645e41b0496c385cb711d50e685a",
-      "translated": "````\nORCA_PROTECTED_0001\n````"
+      "sourceHash": "1d274662af910307c03fc18331f9e6d359207cefe3f154d62c9ad74dd6c42329",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/overview/:paragraph:worktree-commands:0": {
       "sourceHash": "3928f1dc48143db9fea724d7114be67e7ccb0e6c4d4217e52db57b6716ffaee4",

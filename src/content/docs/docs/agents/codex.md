@@ -1,7 +1,7 @@
 ---
 title: "Orca의 Codex"
 sourceUrl: https://www.onorca.dev/docs/agents/codex
-checkedAt: "2026-10-06T01:03:33.118Z"
+checkedAt: "2026-10-07T03:54:46.558Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/glm-agent/
 next: /orca-docs-ko/docs/agents/cursor-cli/
@@ -63,4 +63,6 @@ Orca은 활성 계정에 대한 로컬 Codex 사용 상태를 읽고 이를 상�
 
 ## Windows(WSL)의 Codex
 
-Windows에서 Orca은 호스트 설치 또는 WSL 배포판에서 Codex를 실행할 수 있습니다. 계정 전환기에서 WSL 호스팅 Codex 계정 추가 — Orca는 distro(`~/.local/share/orca/codex-accounts/<id>/home` 아래) 내부에 격리된 계정 홈을 생성하고 인증 읽기를 위한 `\\wsl.localhost\<distro>\...` 경로로 호스트에 다시 매핑하며 선택한 배포판을 통해 시작, 핫스왑 및 속도 제한 가져오기를 라우팅합니다. Codex이 대상 배포판에 설치되지 않은 경우 바이너리가 누락된 배포판을 알려주는 실행 가능한 메시지와 함께 `Add account`(계정 추가) 대화 상자가 실패합니다.
+Windows에서 Codex는 macOS 및 Linux와 동일한 실제 `~/.codex` 홈에서 실행됩니다. 업데이트 후 Codex 터미널이 처음 나타날 때 Orca는 일회성 알림을 표시합니다. Codex가 폴더 신뢰 또는 명령 승인을 다시 요청할 수 있으며, Orca 안에서만 추가한 MCP 서버는 다시 추가해야 합니다. 이미 열려 있던 Codex 터미널은 다시 열 때까지 Orca의 이전 홈에서 계속 실행됩니다.
+
+Windows에서 Orca는 호스트 설치 또는 WSL 배포판에서 Codex를 실행할 수 있습니다. 계정 전환기에서 WSL 호스팅 Codex 계정을 추가하면 Orca가 배포판 내부의 `~/.local/share/orca/codex-accounts/<id>/home` 아래에 격리된 계정 홈을 만들고, 인증 정보를 읽을 수 있도록 호스트의 `\\wsl.localhost\<distro>\...` 경로에 다시 매핑하며, 시작·핫스왑·속도 제한 조회를 선택한 배포판을 통해 라우팅합니다. 대상 배포판에 Codex가 설치되어 있지 않으면 **`Add account`(계정 추가)** 대화 상자에 바이너리가 없는 배포판을 알려 주는 조치 가능한 오류 메시지가 표시됩니다.

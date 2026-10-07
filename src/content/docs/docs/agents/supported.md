@@ -1,7 +1,7 @@
 ---
 title: "지원되는 에이전트"
 sourceUrl: https://www.onorca.dev/docs/agents/supported
-checkedAt: "2026-10-06T01:03:33.118Z"
+checkedAt: "2026-10-07T03:54:46.558Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/quick-open/
 next: /orca-docs-ko/docs/agents/claude-code/
@@ -31,14 +31,14 @@ Orca은 새로운 실행에 대해 지원되는 각 CLI의 권한 우회 플래�
 | Muse Code | 심층 통합: 후크, 상태, 사용량, 세션 기록 | [Meta](https://dev.meta.ai/docs/muse-code) |
 | Grok | 자동 설정 | [xAI](https://x.ai/cli) |
 | GitHub Copilot CLI | 자동 설정 | [GitHub](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli) |
-| OpenCode | 자동 설정, 상태. OpenCode 2 베타 지원 | [OpenCode](https://opencode.ai/docs/cli/) |
+| OpenCode | 자동 설정, 상태, 계정 프로필. OpenCode 2 베타 지원 | [OpenCode](https://opencode.ai/docs/cli/) |
 | Pi | 자동 설정, 후크, 상태 | [Pi](https://pi.dev/) |
 | ZCode | 자동 설정, 후크, 상태, 세션 재개, 사용량, 감독형 워커. 터미널 UI가 포함된 `zcode` 빌드를 설치해야 합니다 | [ZCode](https://github.com/zai-org/ZCode) |
 | DeepSeek Harness | 자동 설정, 후크, 상태, 질문, 재개. `dsh-tui` 프로필을 통해 시작됩니다 | [DeepSeek](https://deepseek-harness.github.io/deepseek-harness/) |
 | OMP | 자동 설정, 후크, 상태 | [OMP](https://omp.sh/) |
 | Prime Agent | 자동 설정, 후크, 상태, 세션 기록 | [Prime Intellect](https://github.com/PrimeIntellect-ai/prime-agent) |
 | Gemini | 자동 설정 | [Google](https://github.com/google-gemini/gemini-cli) |
-| Antigravity | 자동 설정, 후크, 상태. 로컬 [감독형 워커](/orca-docs-ko/docs/cli/orchestration/) 지원 | [Google](https://antigravity.google/docs/cli-overview) |
+| Antigravity | 자동 설정, 후크, 상태, 계정. 로컬 [감독형 워커](/orca-docs-ko/docs/cli/orchestration/)를 지원하며 IDE 및 2.0 대화를 새 CLI 대화에서 계속할 수 있습니다 | [Google](https://antigravity.google/docs/cli-overview) |
 | Ante | 자동 설정, 상태 | [Ante](https://github.com/AntigmaLabs/ante-preview) |
 | Aider | 자동 설정 | [Aider](https://aider.chat/docs/) |
 | Goose | 자동 설정 | [Block](https://block.github.io/goose/docs/quickstart/) |
@@ -55,13 +55,13 @@ Orca은 새로운 실행에 대해 지원되는 각 CLI의 권한 우회 플래�
 | Command Code | 자동 설정, 상태 | [Command Code](https://commandcode.ai/docs/quickstart) |
 | Continue | 자동 설정 | [Continue](https://docs.continue.dev/guides/cli) |
 | Cursor CLI | 심층 통합 | [Cursor](https://cursor.com/cli) |
-| Devin | 자동 설정 | [Devin](https://devin.ai/cli) |
+| Devin | 자동 설정, 계정 프로필 | [Devin](https://devin.ai/cli) |
 | Droid (Factory) | 자동 설정, 후크, 상태 | [Factory](https://docs.factory.ai/cli/getting-started/quickstart) |
 | Kimi | 자동 설정 | [Moonshot](https://www.kimi.com/code/docs/en/kimi-code-cli/getting-started.html) |
 | Mistral Vibe | 자동 설정 | [Mistral](https://github.com/mistralai/mistral-vibe) |
 | MiniMax | 자동 설정, 사용량 추적, 속도 제한 추적 | [MiniMax](https://www.minimax.chat/) |
-| Qoder CLI | 자동 설정, 후크, 상태, 작업 공간 신뢰, 세션 재개 | [Qoder](https://docs.qoder.com/cli) |
-| Qwen Code | 설치된 `qwen` 실행 파일을 통한 자동 설정 | [Qwen](https://github.com/QwenLM/qwen-code) |
+| Qoder CLI | 자동 설정, 후크, 상태, 작업 공간 신뢰, 세션 재개, 감독형 워커. Qoder CLI CN 포함 | [Qoder](https://docs.qoder.com/cli) |
+| Qwen Code | 설치된 `qwen` 실행 파일을 통한 자동 설정. 감독형 워커 지원 | [Qwen](https://github.com/QwenLM/qwen-code) |
 | Rovo Dev | 자동 설정 | [Atlassian](https://support.atlassian.com/rovo/docs/install-and-run-rovo-dev-cli-on-your-device/) |
 | Hermes | 자동 설정 | [Nous](https://hermes-agent.nousresearch.com/docs/) |
 | OpenClaw | 자동 설정 | [OpenClaw](https://github.com/openclaw/openclaw) |

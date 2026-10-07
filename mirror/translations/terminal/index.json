@@ -221,6 +221,34 @@
     "/docs/terminal/:paragraph:dropping-files-and-screenshots:0": {
       "sourceHash": "2469144099d48639cf03232563ad7c1af2d845ed4aaf9d93ccb4b5fe6301e1ab",
       "translated": "파일을 터미널에 놓으면 프롬프트에 해당 경로가 붙여 넣어집니다. macOS 스크린샷 썸네일은 로컬 ORCA_PROTECTED_0001 터미널 또는 새 작업 공간 작성기에 놓을 수 있습니다. ORCA_PROTECTED_0002는 에이전트가 실제로 열 수 있도록 임시 이미지의 읽을 수 있는 복사본을 제공합니다. 끌어다 놓은 파일을 건너뛰면 알림에 그 이유가 표시됩니다."
+    },
+    "/docs/terminal/:heading:macos-and-linux-shell-startup:0": {
+      "sourceHash": "99a1635be152db0ee8f1818432af361302aaff67fcc3edc5d3f3fef6f410f4cc",
+      "translated": "### macOS 및 Linux 셸 시작"
+    },
+    "/docs/terminal/:paragraph:macos-and-linux-shell-startup:0": {
+      "sourceHash": "b0183803d19f926ab0c6c44135de0f03c707c6ac80d62ccb2ab92f1bb88b8f61",
+      "translated": "기본적으로 macOS 및 Linux의 로컬 터미널 창은 시스템 셸(`ORCA_PROTECTED_0001`)을 **로그인 셸**(`ORCA_PROTECTED_0002`)로 엽니다. 기본 인수를 사용할 때의 동작은 다음과 같습니다:"
+    },
+    "/docs/terminal/:list:macos-and-linux-shell-startup:0": {
+      "sourceHash": "6121767c29d4065d1a6ba271880a92abddc8a78976009ea0854bb70e26414249",
+      "translated": "-   **zsh**는 `ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002`, `ORCA_PROTECTED_0003` 및 `ORCA_PROTECTED_0004` 파일을 순서대로 읽습니다. 이 파일의 위치는 `ORCA_PROTECTED_0005`이며, 설정되어 있지 않으면 홈 디렉터리를 사용합니다.\n-   **bash**는 `ORCA_PROTECTED_0006` 파일을 읽은 다음, 존재하는 `ORCA_PROTECTED_0007`, `ORCA_PROTECTED_0008`, `ORCA_PROTECTED_0009` 중 첫 번째 파일을 읽습니다. 자체적으로 `ORCA_PROTECTED_0010` 파일을 읽지는 않습니다. `ORCA_PROTECTED_0011` 또는 버전 관리자 설정(nvm, asdf, mise)이 `ORCA_PROTECTED_0012`에 있다면 bash가 읽는 로그인 파일에서 이를 불러옵니다. 대부분 배포판의 기본 `ORCA_PROTECTED_0013`도 이미 이렇게 동작합니다."
+    },
+    "/docs/terminal/:paragraph:macos-and-linux-shell-startup:1": {
+      "sourceHash": "02d61f7f5ae3b6bdc72f3ed239dff8ae7b3f249f4cc2d9d516822c94f0792241",
+      "translated": "ORCA_PROTECTED_0001에서 bash 통합 래퍼를 사용하면 bash를 `ORCA_PROTECTED_0002`로 시작하고 `ORCA_PROTECTED_0003`으로는 시작하지 않습니다. 래퍼는 `ORCA_PROTECTED_0004` 파일을 별도로 불러오지 않고 동일한 로그인 파일을 불러옵니다."
+    },
+    "/docs/terminal/:paragraph:macos-and-linux-shell-startup:2": {
+      "sourceHash": "98714e802970ad328c401c4007cb9744d46ebe1a0f5e88957e4ade2ab36f1839",
+      "translated": "사용자 지정 셸을 사용하면 입력한 인수가 일반 로컬 창의 기본 `ORCA_PROTECTED_0001`을 대체합니다. 빈 목록은 인수를 사용하지 않도록 요청합니다. 그러면 래핑되지 않은 대화형 bash는 로그인 파일 대신 `ORCA_PROTECTED_0002` 파일을 읽습니다. 터미널 데몬을 사용할 수 없으면 ORCA_PROTECTED_0003의 bash 또는 zsh 통합이 사용자 지정 인수를 재정의하고 로그인 시작 동작을 유지할 수 있습니다. 에이전트 시작, 시작 명령 및 일회성 셸 선택에는 이 인수 설정이 적용되지 않습니다."
+    },
+    "/docs/terminal/:paragraph:macos-and-linux-shell-startup:3": {
+      "sourceHash": "1cfdb782ab39ece64aacf383220d5316b8503028110175080c9c910cca491044",
+      "translated": "WSL 파일 시스템(`ORCA_PROTECTED_0001`)에 있는 저장소의 경우 ORCA_PROTECTED_0002는 `ORCA_PROTECTED_0003` 명령을 통해 시작합니다. WSL에서 연 Windows 경로의 저장소인 경우 ORCA_PROTECTED_0004는 현재 작업 디렉터리를 `ORCA_PROTECTED_0005`로 변환하고 로그인 bash로 진입합니다."
+    },
+    "/docs/terminal/:paragraph:macos-and-linux-shell-startup:4": {
+      "sourceHash": "d1b794e22c3a00339c899b08a3a747397f2e274d2b5685771b88992db439ba49",
+      "translated": "ORCA_PROTECTED_0001는 관리형 WSL 터미널에서 [ORCA_PROTECTED_0002 CLI](ORCA_PROTECTED_0003)를 자동으로 제공합니다."
     }
   }
 }

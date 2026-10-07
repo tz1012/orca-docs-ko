@@ -15,8 +15,8 @@
       "translated": "1.  **`Settings → Experimental → Chat UI`(설정 → 실험적 기능 → 채팅 UI)**를 엽니다.\n2.  **`Chat UI`(채팅 UI)**를 켠 다음 **`Use updated structured native chat`(업데이트된 구조화 네이티브 채팅 사용)**을 켭니다.\n3.  로컬 작업 공간에서 새 **ORCA_PROTECTED_0001** 또는 **ORCA_PROTECTED_0002** 세션을 시작합니다."
     },
     "/docs/agents/native-chat/:paragraph:updated-structured-chat:1": {
-      "sourceHash": "b0fa5820632c9f604de6f0a1973792896093859798403ff1c8e6ca9cedf17100",
-      "translated": "업데이트된 구조화 채팅은 적격한 로컬 macOS, Linux 및 네이티브 Windows 세션에서 사용할 수 있습니다. WSL, 원격 및 SSH 세션은 계속 터미널 기반 `Chat UI`(채팅 UI)를 사용합니다. 기존 터미널 세션은 계속 터미널 세션으로 유지됩니다."
+      "sourceHash": "f2cc5accfe0963db43c8fced74ef8e7119d70fb0124c324feb60d9f6ac07f9e4",
+      "translated": "업데이트된 구조화 채팅은 적격한 로컬 macOS, Linux 및 네이티브 Windows 세션에서 사용할 수 있습니다. 채팅을 기본값으로 사용하는 경우, 해당 작업 공간을 소유한 페어링된 ORCA_PROTECTED_0001 서버의 작업 공간에서도 사용할 수 있습니다. WSL 및 SSH 세션은 계속 터미널 기반 `Chat UI`(채팅 UI)를 사용합니다. 기존 터미널 세션은 계속 터미널 세션으로 유지됩니다."
     },
     "/docs/agents/native-chat/:heading:chat-ui-native-chat:0": {
       "sourceHash": "c5c005ee8eee2f39beddc5dfb5e289b399edff27c934bbe95abda970911b0eab",
@@ -27,8 +27,8 @@
       "translated": "지원되는 에이전트 터미널 위에 선택적으로 제공되는 채팅 인터페이스로, 스킬, 모델 선택기 및 대화 기록 보기를 지원합니다."
     },
     "/docs/agents/native-chat/:paragraph:chat-ui-native-chat:1": {
-      "sourceHash": "0bde4d50122ea46c1907fe151897a1eda285cdddc9e3a2a6d8c3a96221b8761c",
-      "translated": "`Chat UI`(채팅 UI)는 지원되는 에이전트 터미널 세션 위에 계층으로 제공되는 실험적 보기입니다. 터미널이 계속 기준 정보이며, `Chat UI`(채팅 UI)는 동일한 PTY를 위한 구조화된 대화 기록과 작성기입니다. 대화 기록 디코딩은 **ORCA_PROTECTED_0001**, **ORCA_PROTECTED_0002**, **ORCA_PROTECTED_0003**, **ORCA_PROTECTED_0004**를 지원하며, ORCA_PROTECTED_0005 세션도 원시 터미널 전용 상태로 남지 않고 다른 세션처럼 `Chat UI`(채팅 UI)에서 열립니다. 적격한 로컬 ORCA_PROTECTED_0006 및 ORCA_PROTECTED_0007 세션에서는 대신 아래에서 설명하는 별도의 업데이트된 구조화 네이티브 채팅을 사용할 수 있습니다."
+      "sourceHash": "80e19af133e5a2c94758f8084f92760b08e717c67ed7f958638e693e30e63304",
+      "translated": "`Chat UI`(채팅 UI)는 지원되는 에이전트 터미널 세션 위에 계층으로 제공되는 실험적 보기입니다. 터미널이 계속 기준 정보이며, `Chat UI`(채팅 UI)는 동일한 PTY를 위한 구조화된 대화 기록과 작성기입니다. 대화 기록 디코딩은 **ORCA_PROTECTED_0001**, **ORCA_PROTECTED_0002**, **ORCA_PROTECTED_0003**, **ORCA_PROTECTED_0004**, **ORCA_PROTECTED_0005**를 지원하며, ORCA_PROTECTED_0006 및 ORCA_PROTECTED_0007 세션도 원시 터미널 전용 상태로 남지 않고 다른 세션처럼 `Chat UI`(채팅 UI)에서 열립니다. 적격한 로컬 ORCA_PROTECTED_0008 및 ORCA_PROTECTED_0009 세션에서는 대신 아래에서 설명하는 별도의 업데이트된 구조화 네이티브 채팅을 사용할 수 있습니다."
     },
     "/docs/agents/native-chat/:heading:enable:0": {
       "sourceHash": "4fe368d6a2c35a1e623685bc079c2fe8351cd96e46c7675b32d77d7c6551d046",
@@ -67,8 +67,8 @@
       "translated": "구조화 채팅은 기본 턴이 진행되는 동안과 완료된 후에도 위임된 작업과 백그라운드 작업을 계속 표시합니다."
     },
     "/docs/agents/native-chat/:list:follow-agent-work:0": {
-      "sourceHash": "ea2ad719fbcf4335b279b1ca6fc5bd388565b6e75e93c865c9b8faeff9c366a5",
-      "translated": "-   작업이 진행 중인 동안 백그라운드 작업 표시줄이 계속 표시됩니다. 요약에는 에이전트, 셸, 모니터, 워크플로 및 기타 작업 수가 표시됩니다. 이를 펼치면 이름, 상태 점, 경과 시간이 포함된 그룹별 행을 볼 수 있습니다. ORCA_PROTECTED_0001 또는 ORCA_PROTECTED_0002 하위 항목은 각각의 작업이 끝날 때까지 유지되며 펼친 보기에 작업과 결과가 표시됩니다. 에이전트 하위 항목은 사이드바의 세션 아래에도 들여쓰기된 행으로 나타납니다. ORCA_PROTECTED_0003 작업에는 개별 중지 컨트롤이 제공되지 않습니다.\n-   ORCA_PROTECTED_0004 `ORCA_PROTECTED_0005`와 ORCA_PROTECTED_0006 `ORCA_PROTECTED_0007` 업데이트는 인라인 체크리스트로 렌더링됩니다. 최신 계획은 작성기 위의 접을 수 있는 진행 상황 패널에도 표시됩니다.\n-   활성 ORCA_PROTECTED_0008 목표는 작성기 위에 현재 상태와 함께 표시됩니다. 해당 위치의 목표 컨트롤을 사용해 목표를 일시 중지, 재개, 지우거나 펼칠 수 있습니다. `ORCA_PROTECTED_0009`을 입력하면 다음 초안을 목표로 전송합니다.\n-   실행 중인 턴에는 대화 기록 끝에 하나의 활동 행이 있습니다. **`Thinking`(생각 중)**은 현재 턴에서 추론을 생성하고 있음을 의미합니다. 명령 실행 같은 제공자 활동이 있으면 해당 활동이 우선 표시됩니다. 완료되거나 중단된 턴의 소요 시간은 다시 로드하거나 앱을 재시작해도 유지됩니다. ORCA_PROTECTED_0010가 턴 종료를 관찰하지 못한 경우 시간을 추정하지 않고 생략합니다.\n-   ORCA_PROTECTED_0011 목표를 설정, 일시 중지, 차단, 완료, 중단 또는 삭제하면 변경 사항이 대화 기록 행으로 표시됩니다. 반복적인 계산 업데이트는 중복 행을 추가하지 않습니다.\n-   턴이 끝나면 헤더에 변경된 고유 파일과 해당 ORCA_PROTECTED_0012가 요약될 수 있습니다. 헤더를 펼치면 기존 diff 카드가 나타납니다. 응답이 완료된 승인 및 질문 카드는 선택한 답변을 보여 주는 기록으로 유지됩니다.\n-   완료된 턴은 답변으로 접힙니다. 에이전트가 턴 실패를 보고하면 실행 중인 상태로 계속 표시되지 않고 턴이 종료됩니다."
+      "sourceHash": "4350a218d28eeb4985141b0bfcbadb4383de258d44f6a7d0473f5358a9ee1ae7",
+      "translated": "-   작업이 진행 중인 동안 백그라운드 작업 표시줄이 계속 표시됩니다. 요약에는 에이전트, 셸, 모니터, 워크플로 및 기타 작업 수가 표시됩니다. 이를 펼치면 이름, 상태 점, 경과 시간이 포함된 그룹별 행을 볼 수 있습니다. ORCA_PROTECTED_0001 또는 ORCA_PROTECTED_0002 하위 항목은 각각의 작업이 끝날 때까지 유지되며 펼친 보기에 작업과 결과가 표시됩니다. 에이전트 하위 항목은 사이드바의 세션 아래에도 들여쓰기된 행으로 나타납니다. ORCA_PROTECTED_0003 작업에는 개별 중지 컨트롤이 제공되지 않습니다.\n-   ORCA_PROTECTED_0004 하위 에이전트가 권한 프롬프트를 기다리는 동안 하위 행에는 대기 중으로 표시되고, 상위 세션에는 **`waiting`(대기 중)**이 표시됩니다. 이는 CLI에서 승인을 요청하는 하위 에이전트를 **`blocked`(차단됨)**가 아니라 대기 중으로 보고하는 방식과 같습니다.\n-   ORCA_PROTECTED_0005 `ORCA_PROTECTED_0006`와 ORCA_PROTECTED_0007 `ORCA_PROTECTED_0008` 업데이트는 인라인 체크리스트로 렌더링됩니다. 최신 계획은 작성기 위의 접을 수 있는 진행 상황 패널에도 표시됩니다.\n-   활성 ORCA_PROTECTED_0009 목표는 작성기 위에 현재 상태와 함께 표시됩니다. 해당 위치의 목표 컨트롤을 사용해 목표를 일시 중지, 재개, 지우거나 펼칠 수 있습니다. `ORCA_PROTECTED_0010`을 입력하면 다음 초안을 목표로 전송합니다.\n-   실행 중인 턴에는 대화 기록 끝에 하나의 활동 행이 있습니다. **`Thinking`(생각 중)**은 현재 턴에서 추론을 생성하고 있음을 의미합니다. 명령 실행 같은 제공자 활동이 있으면 해당 활동이 우선 표시됩니다. 완료되거나 중단된 턴의 소요 시간은 다시 로드하거나 앱을 재시작해도 유지됩니다. ORCA_PROTECTED_0011가 턴 종료를 관찰하지 못한 경우 시간을 추정하지 않고 생략합니다.\n-   ORCA_PROTECTED_0012 목표를 설정, 일시 중지, 차단, 완료, 중단 또는 지우면 변경 사항이 대화 기록 행으로 표시됩니다. 반복적인 계산 업데이트는 중복 행을 추가하지 않습니다.\n-   턴이 끝나면 헤더에 변경된 고유 파일과 해당 ORCA_PROTECTED_0013가 요약될 수 있습니다. 헤더를 펼치면 기존 diff 카드가 나타납니다. 응답이 완료된 승인 및 질문 카드는 선택한 답변을 보여 주는 기록으로 유지됩니다.\n-   완료된 턴은 답변으로 접힙니다. 에이전트가 턴 실패를 보고하면 실행 중인 상태로 계속 표시되지 않고 턴이 종료됩니다."
     },
     "/docs/agents/native-chat/:paragraph:follow-agent-work:1": {
       "sourceHash": "526cdaee08be4ad64964ad2e711da9f1cdcfc8f4bfa01332d33394772479440e",

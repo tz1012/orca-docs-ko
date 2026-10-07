@@ -1,7 +1,7 @@
 ---
 title: "오케스트레이션"
 sourceUrl: https://www.onorca.dev/docs/cli/orchestration
-checkedAt: "2026-10-06T01:03:33.118Z"
+checkedAt: "2026-10-07T03:54:46.558Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/reference/
 next: /orca-docs-ko/docs/cli/automations/
@@ -51,7 +51,7 @@ orca orchestration worker-start --task <taskId> --worktree current --agent claud
 orca orchestration worker-start --task <taskId> --worktree new-child --name research --agent antigravity --setup run --json
 ```
 
-`--model`은 Claude, Codex, Muse, Cursor 및 Antigravity의 불투명 제공자 모델 ID를 허용합니다. Muse에는 설치된 Muse에서 허용하는 모델 ID(예: `muse-spark-1.3`)를 전달합니다. Antigravity에는 `agy models`에서 보고한 모델 슬러그를 사용합니다. `--effort`에는 `--model`이 필요하며 해당 agent/model가 그 수준을 지원할 때만 적용됩니다. 두 플래그 모두 기존 창을 재사용하는 `--terminal`과 함께 사용할 수 없습니다. 재정의는 해당 시작에만 적용되며 시작 확인서의 `launch.requested` / `launch.effective` 아래에 표시됩니다. 연합형 시작에는 시작 환경 설정 지원을 알리는 워커 호스트가 필요합니다.
+`--model`은 Claude, Codex, Muse, Cursor 및 Antigravity의 불투명 제공자 모델 ID를 허용합니다. Muse에는 설치된 Muse에서 허용하는 모델 ID(예: `muse-spark-1.3`)를 전달합니다. Antigravity에는 `agy models`에서 보고한 모델 슬러그를 사용합니다. `--effort` 플래그를 사용하려면 `--model`이 필요하며, 해당 수준을 agent/model에서 지원할 때만 적용됩니다. 두 플래그 모두 기존 창을 재사용하는 `--terminal`과 함께 사용할 수 없습니다. Codex 모델이 Orca의 기본 제공 목록보다 최신인 경우(예: `gpt-6.x`), `--effort` 플래그는 `max` 및 `ultra` 항목을 포함한 알려진 전체 어휘를 허용하며, 설치된 Codex에서 이를 지원해야 합니다. 알 수 없는 추론 강도 이름은 계속 거부됩니다. 재정의는 해당 시작에만 적용되며 시작 확인서의 `launch.requested` / `launch.effective` 아래에 표시됩니다. 연합형 시작에는 시작 환경 설정 지원을 알리는 워커 호스트가 필요합니다.
 
 Orca는 로컬 Antigravity 하위 작업 트리의 워커를 시작하기 전에 신뢰 설정을 준비합니다. 이 신뢰 설정은 SSH를 통한 Antigravity 감독을 지원하지 않습니다. 일반 에이전트 기능은 [지원되는 에이전트](/orca-docs-ko/docs/agents/supported/)를 참조합니다.
 

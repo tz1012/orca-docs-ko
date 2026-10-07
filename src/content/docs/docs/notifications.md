@@ -1,7 +1,7 @@
 ---
 title: "알림 및 받은 편지함"
 sourceUrl: https://www.onorca.dev/docs/notifications
-checkedAt: "2026-10-06T01:03:33.118Z"
+checkedAt: "2026-10-07T03:54:46.558Z"
 editUrl: false
 prev: /orca-docs-ko/docs/android-apk/
 next: /orca-docs-ko/docs/activity/
@@ -32,6 +32,10 @@ macOS에서는 읽지 않은 동일한 개수가 Dock 아이콘에 배지로 미
 ## 튜닝
 
 [설정 → 알림](/orca-docs-ko/docs/settings/)에서 특정 카테고리(시스템, 사운드, 칩 전용)를 끄세요.
+
+## 컴퓨터별 설정
+
+**`Settings → Notifications → Machines`(설정 → 알림 → 컴퓨터)**에서 이 컴퓨터, SSH 대상 및 페어링된 Orca 서버 중 이 컴퓨터에 알림을 표시할 수 있는 컴퓨터를 선택합니다. 페어링된 서버의 스위치는 해당 서버를 통해 접근하는 작업에도 적용됩니다. 음소거된 컴퓨터는 제외 목록으로 저장되므로 나중에 추가한 컴퓨터는 계속 알림을 보냅니다. 이 스위치는 이 컴퓨터의 데스크톱 알림에만 영향을 주며 휴대전화 푸시 알림은 변경되지 않습니다.
 
 ## 맞춤 사운드
 

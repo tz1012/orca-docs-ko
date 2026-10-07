@@ -1,7 +1,7 @@
 ---
 title: "에이전트 세션 기록"
 sourceUrl: https://www.onorca.dev/docs/agents/session-history
-checkedAt: "2026-10-06T01:03:33.118Z"
+checkedAt: "2026-10-07T03:54:46.558Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/native-chat/
 next: /orca-docs-ko/docs/agents/hibernation/
@@ -39,7 +39,7 @@ Session History는 연결된 다른 컴퓨터와 페어링된 Orca Servers(서�
 
 검색 상자 옆의 보기 옵션 메뉴에서 검색할 에이전트와 세션 그룹화 방식을 제어합니다.
 
--   **`Agents`(에이전트)** — 개별 CLI(Claude, Codex, Muse Code, Hermes, Pi, OMP, Prime Agent, Cursor, Gemini, Antigravity, Rovo Dev, Copilot, OpenCode, Grok, OpenClaw, Devin, Droid, Kimi)를 켜거나 끕니다. 비활성화된 에이전트는 검색에서 제외됩니다. 에이전트 헤더의 **`Select all`(모두 선택)** / **`Clear`(지우기)**를 사용하면 모든 에이전트를 한 번에 전환할 수 있습니다. **`Clear`(지우기)**를 선택하면 아무것도 선택되지 않으므로 긴 목록을 하나씩 해제하지 않고 필요한 CLI만 켤 수 있습니다. 선택 항목이 비어 있으면 일반적인 빈 필터 메시지 대신 **`No agents selected`(선택한 에이전트 없음)**가 표시됩니다.
+-   **`Agents`(에이전트)** — 개별 CLI(Claude, Codex, Muse Code, Hermes, Pi, OMP, Prime Agent, Cursor, Gemini, Antigravity, Rovo Dev, Copilot, OpenCode, Grok, OpenClaw, Devin, Droid, Kimi, CodeBuddy, ZCode, Qoder)를 켜거나 끕니다. 비활성화된 에이전트는 스캔에서 제외됩니다. `Agents`(에이전트) 헤더의 **`Select all`(모두 선택)** / **`Clear`(지우기)**를 사용하면 모든 에이전트를 한 번에 전환할 수 있습니다. **`Clear`(지우기)**를 선택하면 아무것도 선택되지 않으므로 긴 목록을 하나씩 해제하지 않고 필요한 CLI만 켤 수 있습니다. 선택 항목이 비어 있으면 일반적인 빈 필터 메시지 대신 **`No agents selected`(선택한 에이전트 없음)**가 표시됩니다.
 -   **`Group`(그룹)** — `Project`(프로젝트), `Folder`(폴더)(`cwd`마다 제목 하나) 또는 `Agent`(에이전트)(CLI마다 제목 하나)로 그룹화합니다.
 -   **`Hide empty sessions`(빈 세션 숨기기)** — 기록된 메시지가 0개인 세션을 제외합니다.
 
@@ -66,7 +66,7 @@ Pi는 단순 세션 ID가 아니라 후크에서 보고한 디스크상의 세�
 
 ## 성적표의 출처
 
-Orca는 각 에이전트의 자체 디스크 세션 저장소를 읽습니다. 예를 들어 Codex의 `~/.codex/sessions`, Claude의 `~/.claude` 기록, Muse Code의 `~/.local/share/muse/sessions`, Cursor의 세션 로그, OpenCode의 레거시 세션 파일 또는 `~/.local/share/opencode/opencode.db`, `.codebuddy/projects` 아래의 CodeBuddy 프로젝트 대화 기록, ZCode에 저장된 대화 기록 등을 사용합니다. 별도로 활성화할 항목은 없습니다. CLI가 대화 기록을 작성하면 다음 스캔 후 패널에 표시됩니다. 헤더의 **`Refresh Session History`(세션 기록 새로 고침)** 버튼을 사용하면 필요할 때 다시 스캔할 수 있습니다.
+Orca는 각 에이전트의 자체 디스크 세션 저장소를 읽습니다. 예를 들어 Codex의 `~/.codex/sessions`, Claude의 `~/.claude` 기록, Muse Code의 `~/.local/share/muse/sessions`, Cursor의 세션 로그, OpenCode의 레거시 세션 파일 또는 `~/.local/share/opencode/opencode.db`, `.codebuddy/projects` 아래의 CodeBuddy 프로젝트 대화 기록, ZCode에 저장된 대화 기록, Qoder의 `~/.qoder/projects` 대화 기록 등을 사용합니다. 별도로 활성화할 항목은 없습니다. CLI가 대화 기록을 작성하면 다음 스캔 후 패널에 표시됩니다. 헤더의 **`Refresh Session History`(세션 기록 새로 고침)** 버튼을 사용하면 필요할 때 다시 스캔할 수 있습니다.
 
 ## 다음 단계
 

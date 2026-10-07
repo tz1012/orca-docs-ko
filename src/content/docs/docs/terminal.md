@@ -1,7 +1,7 @@
 ---
 title: "터미널"
 sourceUrl: https://www.onorca.dev/docs/terminal
-checkedAt: "2026-10-06T01:03:33.118Z"
+checkedAt: "2026-10-07T03:54:46.558Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/profiles/
 next: /orca-docs-ko/docs/ways-to-run/
@@ -85,9 +85,20 @@ Warp에서 테마를 수집한 경우 [설정 → 터미널](/orca-docs-ko/docs/
 
 사용자 지정 Unix 기본 셸에서는 **`Advanced → Shell arguments`(고급 → 셸 인수)**를 엽니다. 로그인 셸에는 **`-l (default)`(-l, 기본값)**를 유지하거나 **`Custom args`(사용자 지정 인수)**를 선택하고 줄마다 인수 하나를 입력합니다(예: `--rcfile`와 해당 경로를 서로 다른 줄에 입력). 인수 없이 셸을 시작하려면 사용자 지정 목록을 비워 둡니다. [터미널 설정](/orca-docs-ko/docs/settings/#terminal)을 참조합니다.
 
-WSL 파일 시스템(`\\wsl.localhost\...`)의 저장소에서는 Orca가 `wsl.exe -d <distro>`을 통해 시작합니다. WSL에서 연 Windows 경로 저장소의 경우 Orca가 현재 작업 디렉터리를 `/mnt/<drive>/...`로 변환하고 로그인 bash로 이동합니다.
+### macOS 및 Linux 셸 시작
 
-Orca는 관리되는 WSL 터미널에서 [Orca CLI](/orca-docs-ko/docs/cli/overview/)를 자동으로 제공합니다.
+기본적으로 macOS 및 Linux의 로컬 터미널 창은 시스템 셸(`$SHELL`)을 **로그인 셸**(`-l`)로 엽니다. 기본 인수를 사용할 때의 동작은 다음과 같습니다:
+
+-   **zsh**는 `.zshenv`, `.zprofile`, `.zshrc` 및 `.zlogin` 파일을 순서대로 읽습니다. 이 파일의 위치는 `$ZDOTDIR`이며, 설정되어 있지 않으면 홈 디렉터리를 사용합니다.
+-   **bash**는 `/etc/profile` 파일을 읽은 다음, 존재하는 `~/.bash_profile`, `~/.bash_login`, `~/.profile` 중 첫 번째 파일을 읽습니다. 자체적으로 `~/.bashrc` 파일을 읽지는 않습니다. `PATH` 또는 버전 관리자 설정(nvm, asdf, mise)이 `~/.bashrc`에 있다면 bash가 읽는 로그인 파일에서 이를 불러옵니다. 대부분 배포판의 기본 `~/.profile`도 이미 이렇게 동작합니다.
+
+Orca에서 bash 통합 래퍼를 사용하면 bash를 `--rcfile`로 시작하고 `-l`으로는 시작하지 않습니다. 래퍼는 `~/.bashrc` 파일을 별도로 불러오지 않고 동일한 로그인 파일을 불러옵니다.
+
+사용자 지정 셸을 사용하면 입력한 인수가 일반 로컬 창의 기본 `-l`을 대체합니다. 빈 목록은 인수를 사용하지 않도록 요청합니다. 그러면 래핑되지 않은 대화형 bash는 로그인 파일 대신 `~/.bashrc` 파일을 읽습니다. 터미널 데몬을 사용할 수 없으면 Orca의 bash 또는 zsh 통합이 사용자 지정 인수를 재정의하고 로그인 시작 동작을 유지할 수 있습니다. 에이전트 시작, 시작 명령 및 일회성 셸 선택에는 이 인수 설정이 적용되지 않습니다.
+
+WSL 파일 시스템(`\\wsl.localhost\...`)에 있는 저장소의 경우 Orca는 `wsl.exe -d <distro>` 명령을 통해 시작합니다. WSL에서 연 Windows 경로의 저장소인 경우 Orca는 현재 작업 디렉터리를 `/mnt/<drive>/...`로 변환하고 로그인 bash로 진입합니다.
+
+Orca는 관리형 WSL 터미널에서 [Orca CLI](/orca-docs-ko/docs/cli/overview/)를 자동으로 제공합니다.
 
 ## 단축키
 

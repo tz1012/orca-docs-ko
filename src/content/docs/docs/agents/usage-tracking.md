@@ -1,7 +1,7 @@
 ---
 title: "사용량 및 속도 제한 추적"
 sourceUrl: https://www.onorca.dev/docs/agents/usage-tracking
-checkedAt: "2026-10-06T01:03:33.118Z"
+checkedAt: "2026-10-07T03:54:46.558Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/hibernation/
 next: /orca-docs-ko/docs/agents/hooks-memory/
@@ -11,7 +11,7 @@ translationNotice:
   rights: "원본 문서와 이미지의 권리는 Lovecast Inc. 및 각 권리자에게 있습니다."
 ---
 
-Orca는 Claude Code, Codex, Muse Code, Gemini, Antigravity, OpenCode, Kimi Code, MiniMax, Cursor 및 ZCode의 사용량을 추적해 상태 표시줄에 표시합니다. 따라서 에이전트가 멈추기 전에 속도 제한에 얼마나 가까운지 알 수 있습니다.
+Orca는 Claude Code, Codex, Muse Code, Gemini, Antigravity, OpenCode, Kimi Code, MiniMax, Cursor, ZCode 및 GLM Coding Plan의 사용량을 추적해 상태 표시줄에 표시합니다. 따라서 에이전트가 멈추기 전에 속도 제한에 얼마나 가까운지 알 수 있습니다.
 
 ## 표시되는 내용
 
@@ -26,6 +26,8 @@ Orca는 Claude Code, Codex, Muse Code, Gemini, Antigravity, OpenCode, Kimi Code,
 Cursor의 경우 Orca는 컴퓨터의 기존 Cursor 로그인을 읽고 상태 표시줄, `Usage`(사용량) 팝오버 및 **`Settings → Accounts → Cursor`(설정 → 계정 → Cursor)**에 요금제의 월간 사용량을 표시합니다. 로그인 작업을 대신 수행하지 않으므로 저장된 세션이 만료되면 `cursor-agent login`을 실행합니다. 사용량 요청이 거부되면 만료된 로그인이 아니라 사용량 조회 실패로 표시됩니다.
 
 Antigravity의 경우 Orca는 모델 그룹 풀을 포함한 할당량을 Antigravity의 자체 CLI에서 읽습니다. 따라서 로그인된 Gemini CLI가 없어도 되며 확인할 때 할당량을 소비하지 않습니다. ZCode의 경우 **`Coding Plan`(코딩 요금제)** 할당량이 디스크의 대화 기록에서 읽은 세션 기록과 함께 표시됩니다.
+
+**`Settings → Accounts → GLM Coding Plan`(설정 → 계정 → GLM 코딩 요금제)**에서 GLM Coding Plan을 직접 연결할 수도 있습니다. 요금제 사이트(Z.AI 또는 Zhipu BigModel)를 선택하고 요금제 API 키를 저장합니다. ZCode CLI 로그인이 필요하지 않으며, 저장된 키가 ZCode CLI 로그인보다 우선합니다. 이 요금제는 다른 제공자와 마찬가지로 사용량 목록에 표시됩니다.
 
 ## 다중 계정 회계
 
