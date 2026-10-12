@@ -1,7 +1,7 @@
 ---
 title: "Orca의 Codex"
 sourceUrl: https://www.onorca.dev/docs/agents/codex
-checkedAt: "2026-10-07T03:54:46.558Z"
+checkedAt: "2026-10-12T01:04:28.526Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/glm-agent/
 next: /orca-docs-ko/docs/agents/cursor-cli/
@@ -49,9 +49,9 @@ Codex 0.157 이상에서는 각 Codex 탭이 Orca 터미널에서 기본적으�
 
 Codex가 Task 하위 에이전트를 생성하면 Orca는 작업 트리 에이전트 목록과 [에이전트 대시보드](/orca-docs-ko/docs/model/agents-sessions/#agent-dashboard)에서 이를 상위 에이전트 아래의 하위 행으로 표시할 수 있습니다. 펼침 화살표를 열어 각 하위 에이전트를 확인할 수 있으며, 하위 에이전트를 클릭하면 상위 터미널에 포커스가 맞춰집니다(하위 에이전트에는 별도 창이 할당되지 않습니다).
 
-## 새 세션에서 `Continue`(계속)
+## 다른 에이전트로 인계
 
-에이전트 터미널의 헤더나 컨텍스트 메뉴에서 **`Continue in New Session…`(새 세션에서 계속)**을 선택합니다. Orca는 동일하거나 다른 CLI로 새 에이전트 세션을 시작하고 이전 기록 또는 캡처한 컨텍스트에서 범위를 제한한 인계 프롬프트를 주입합니다. 원래 세션은 그대로 유지되며, 이는 `codex resume`이 아닙니다.
+에이전트 터미널의 헤더나 컨텍스트 메뉴에서 **`Hand Off to Another Agent`(다른 에이전트로 인계)**를 선택합니다. Orca는 동일하거나 다른 CLI로 새 에이전트 세션을 시작하고 이전 대화 기록 또는 캡처한 컨텍스트에서 범위를 제한한 인계 프롬프트를 주입합니다. 원래 세션은 그대로 유지되며, 이는 `codex resume`이 아닙니다.
 
 ## 칩 재시작
 

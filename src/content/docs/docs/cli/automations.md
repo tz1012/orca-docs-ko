@@ -1,7 +1,7 @@
 ---
 title: "예약된 자동화"
 sourceUrl: https://www.onorca.dev/docs/cli/automations
-checkedAt: "2026-10-07T03:54:46.558Z"
+checkedAt: "2026-10-12T01:04:28.526Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/orchestration/
 next: /orca-docs-ko/docs/cli/computer-use/
@@ -46,6 +46,8 @@ orca automations create \
 ````
 
 두 대상 플래그를 모두 생략하면 Orca은 가능한 경우 현재 셸 디렉터리에서 바깥쪽 작업 트리를 확인합니다.
+
+Orca 서버의 기존 워크스페이스에서 예약 실행이 시작되면, Orca는 시작 후 프롬프트를 읽는 에이전트(Aider, Goose, Amp 등)가 준비되는 즉시 자동화 프롬프트를 입력하여 유휴 상태로 남지 않게 합니다. Claude 및 Codex처럼 명령줄에서 프롬프트를 받는 에이전트는 원래부터 영향을 받지 않았습니다.
 
 ## 실행 전 사전 검사
 
@@ -110,6 +112,24 @@ orca automations create \
 ````
 
 실행할 때마다 자동화를 새로운 터미널로 다시 전환하려면 `orca automations edit <automationId> --fresh-session --json`을 사용하세요.
+
+## 실행별 모델 및 노력 수준
+
+각 자동화는 실행할 때마다 추가 에이전트 인수를 전달할 수 있으므로, 다른 자동화의 호스트 기본값을 변경하지 않고 특정 자동화에만 다른 모델이나 노력 수준을 사용할 수 있습니다.
+
+```
+orca automations create \
+  --name "Docs tidy" \
+  --trigger daily \
+  --prompt "Tidy the docs" \
+  --provider claude \
+  --extra-agent-args="--model opus --add-dir docs" \
+  --disabled
+```
+
+데스크톱 자동화 편집기에서 같은 필드는 **`Advanced → Extra agent arguments`(고급 → 추가 에이전트 인수)**입니다. 새로 실행할 때마다 Orca는 해당 에이전트에 대한 호스트의 기본 **`Arguments`(인수)**에서 시작해 추가 인수를 덧붙이며, 추가 인수의 모델 또는 노력 수준 옵션은 기본값을 대체합니다. 값은 `=` 기호를 사용해 전달합니다. `--`로 시작하기 때문입니다.
+
+추가 인수로 허용되는 것은 Claude의 `--add-dir`와 Claude, Codex, CodeBuddy, Cursor, Grok 및 OMP용 모델 및 노력 수준 옵션뿐입니다. 권한, 구성, 프롬프트 및 세션 옵션은 거부됩니다. 이러한 인수는 실행할 때마다 새 세션이 필요하므로 `--reuse-session`과 함께 사용할 수 없습니다. `orca automations edit <automationId> --extra-agent-args=`으로 지웁니다.
 
 ## 검토 및 활성화
 

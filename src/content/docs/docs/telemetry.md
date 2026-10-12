@@ -1,7 +1,7 @@
 ---
 title: "개인 정보 보호 및 원격 측정"
 sourceUrl: https://www.onorca.dev/docs/telemetry
-checkedAt: "2026-10-07T03:54:46.558Z"
+checkedAt: "2026-10-12T01:04:28.526Z"
 editUrl: false
 prev: /orca-docs-ko/docs/settings/
 next: /orca-docs-ko/docs/troubleshooting/

@@ -439,8 +439,8 @@
       "translated": "여러 페어링 클라이언트가 해당 서버를 공유하면 사이드바 필터에서 **`Hide other-client workspaces`(다른 클라이언트의 작업 공간 숨기기)**를 제공하여 이 기기가 직접 만든 작업 공간만 표시할 수 있습니다. [Worktrees → Sidebar layout(작업 트리 → 사이드바 레이아웃)](ORCA_PROTECTED_0001)을 참조합니다."
     },
     "/docs/remote-servers/:list:use-the-remote-server:0": {
-      "sourceHash": "2fe2b8a11c591d30b5c604a30c9bf153c5fbcf34435f95a493cb55c6d16825db",
-      "translated": "-   클라이언트 노트북이 절전 상태가 되거나 연결이 끊겨도 에이전트는 계속 실행됩니다.\n-   서버에는 해당 에이전트가 사용하는 저장소, 도구 및 자격 증명이 필요합니다.\n-   서버는 절전 상태가 아니어야 하며 tailnet에 계속 연결되어 있어야 합니다.\n-   클라이언트를 다시 연결하거나 ORCA_PROTECTED_0001를 다시 열면 페어링된 탭을 중복 생성하지 않고 서버가 소유한 작업 공간, 탭 및 표시 창 상태로 돌아갑니다.\n-   서버에서 삭제한 프로젝트는 페어링된 모든 클라이언트의 사이드바에서도 사라지며 영구적인 유령 행이 남지 않습니다."
+      "sourceHash": "6165b51d7d1fc4082895ab9fc98c9dc7c536de47dd9f096115f0788d0dc35808",
+      "translated": "-   클라이언트 노트북이 절전 상태가 되거나 연결이 끊겨도 에이전트는 계속 실행됩니다.\n-   서버에는 해당 에이전트가 사용하는 저장소, 도구 및 자격 증명이 필요합니다.\n-   서버는 절전 상태가 아니어야 하며 tailnet에 계속 연결되어 있어야 합니다.\n-   클라이언트를 다시 연결하거나 ORCA_PROTECTED_0001를 다시 열면 페어링된 탭을 중복 생성하지 않고 서버가 소유한 작업 공간, 탭 및 표시 창 상태로 돌아갑니다.\n-   호스트 앱을 다시 실행하면 페어링된 터미널이 입력을 다시 받아들이고, 네트워크 연결이 끊겼다가 복구되면 원격 브라우저 탭이 돌아오며, `ORCA_PROTECTED_0002`가 재시작된 뒤에도 휴대전화의 터미널은 유지됩니다.\n-   원격 호스트에서 작업 공간을 만들어도 연결된 다른 데스크톱이 그 작업 공간으로 전환되지 않습니다.\n-   서버에서 삭제한 프로젝트는 페어링된 모든 클라이언트의 사이드바에서도 사라지며 영구적인 유령 행이 남지 않습니다."
     },
     "/docs/remote-servers/:heading:access-and-security:0": {
       "sourceHash": "3afbf5655474d660c7decaa1bac8479d835bec7f871ccf9c162162f6b3c74ea4",
@@ -487,18 +487,22 @@
       "translated": "-   데스크톱 창을 열지 않고 ORCA_PROTECTED_0001 런타임을 시작합니다.\n-   `ORCA_PROTECTED_0002`을 누를 때까지 포그라운드에서 실행됩니다.\n-   바인딩된 엔드포인트와 런타임 페어링 URL을 출력합니다.\n-   `ORCA_PROTECTED_0003`은 클라이언트가 연결할 주소를 지정하는 용도로만 사용합니다."
     },
     "/docs/remote-servers/:paragraph:alternative-orca-serve:4": {
-      "sourceHash": "11daed569e06b6e59a377c065cb3a5f5eb441dd96dd667f88775f991292fcf18",
-      "translated": "출력된 페어링 URL을 클라이언트의 **`Settings → Remote ORCA_PROTECTED_0001 Servers → Add Server`(설정 → 원격 Orca 서버 → 서버 추가)**에 붙여 넣습니다."
+      "sourceHash": "cae48f489db37e9f8ebe2f010a3c8f08a4711ea8346adb5858f544645e2f87d3",
+      "translated": "`ORCA_PROTECTED_0001` 명령은 기본적으로 ORCA_PROTECTED_0002의 자체 Node 서버(orcad)에서 실행됩니다. 해당 컴퓨터에서 orcad가 서비스를 제공할 수 없으면 ORCA_PROTECTED_0003는 데스크톱 앱 서버로 대체하고 그 이유를 한 줄로 출력합니다. 현재 패키징된 macOS 앱은 페어링된 클라이언트가 계속 업데이트할 수 있도록 항상 데스크톱 앱 서버를 사용합니다. 이 경로를 강제로 사용하려면 `ORCA_PROTECTED_0004` 환경 변수를 설정합니다."
     },
     "/docs/remote-servers/:paragraph:alternative-orca-serve:5": {
-      "sourceHash": "d659989664653338e363748c1099fe867289c4e10bb10f99522668af3cf5fd76",
-      "translated": "방화벽, 터널 또는 서비스 정의에 고정 포트가 필요하면 `ORCA_PROTECTED_0001`을 추가합니다."
+      "sourceHash": "11daed569e06b6e59a377c065cb3a5f5eb441dd96dd667f88775f991292fcf18",
+      "translated": "출력된 페어링 URL을 클라이언트의 **`Settings → Remote ORCA_PROTECTED_0001 Servers → Add Server`(설정 → 원격 Orca 서버 → 서버 추가)**에 붙여 넣습니다."
     },
     "/docs/remote-servers/:code:alternative-orca-serve:2": {
       "sourceHash": "564e6604bc03aa1bf10204b3b23f2933c96c0f6670aa0a621d47788c03551da2",
       "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/remote-servers/:paragraph:alternative-orca-serve:6": {
+      "sourceHash": "d659989664653338e363748c1099fe867289c4e10bb10f99522668af3cf5fd76",
+      "translated": "방화벽, 터널 또는 서비스 정의에 고정 포트가 필요하면 `ORCA_PROTECTED_0001`을 추가합니다."
+    },
+    "/docs/remote-servers/:paragraph:alternative-orca-serve:7": {
       "sourceHash": "38c3c4ab1f071f4725cc4be6bec7fda78b5e2a8b0bd099f67de92ceaba3e0234",
       "translated": "한 번에 하나의 호스트 모드만 사용합니다. ORCA_PROTECTED_0001 데스크톱 앱이 이미 해당 컴퓨터를 공유하고 있다면 같은 설정에 두 번째 `ORCA_PROTECTED_0002` 프로세스를 시작하지 않습니다."
     },

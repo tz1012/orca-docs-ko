@@ -15,8 +15,8 @@
       "translated": "## 에이전트 완료 핑"
     },
     "/docs/notifications/:paragraph:agent-finished-pings:0": {
-      "sourceHash": "f589d2720a26b76c98b04afb5211a16a10963acfb8447a01d03d6114cd96419e",
-      "translated": "에이전트가 작업 중에서 유휴 상태로 전환되면 ORCA_PROTECTED_0001은 알림(시스템 알림, 사운드 및 작업 트리의 칩)을 발생시킵니다."
+      "sourceHash": "585dbcf7d6a9d1772808fe534d5beab49f5b3c6fa8daf2baf86fa7f304fe9c2c",
+      "translated": "에이전트가 작업 중에서 유휴 상태로 전환되면 ORCA_PROTECTED_0001는 시스템 알림, 사운드 및 작업 트리의 칩으로 알립니다. 한 에이전트가 다른 에이전트 직후에 완료되더라도 완료 사운드가 누락되지 않고 계속 재생됩니다."
     },
     "/docs/notifications/:heading:persistent-bell:0": {
       "sourceHash": "d67db63d152d45aae5931248a99121e8a0449e75d0bd014c6fbe1100f8444406",
@@ -27,8 +27,8 @@
       "translated": "헤더 벨은 모든 작업 트리에서 읽지 않은 알림을 표시합니다. 알림을 클릭하면 일치하는 작업 트리 및 창으로 이동합니다."
     },
     "/docs/notifications/:paragraph:persistent-bell:1": {
-      "sourceHash": "68d21b35d694d3aa3254ad4dbb814252a1c2752383feaaf2bbb9dde4a2546d37",
-      "translated": "macOS에서는 읽지 않은 동일한 개수가 Dock 아이콘에 배지로 미러링되므로 ORCA_PROTECTED_0001을 포그라운드로 가져오지 않고도 보류 중인 에이전트 핑을 확인할 수 있습니다."
+      "sourceHash": "819c84ec1a75367cf83d6dbd8d8f3db7fd1542bed4eeac4b6078e07ea51bba91",
+      "translated": "macOS에서는 읽지 않은 동일한 개수가 Dock 아이콘에 배지로 표시되므로 ORCA_PROTECTED_0001를 포그라운드로 가져오지 않고도 대기 중인 에이전트 핑을 확인할 수 있습니다. 작업 공간을 방문하면 배지가 사라집니다."
     },
     "/docs/notifications/:heading:mark-unread:0": {
       "sourceHash": "55158c6cfd848ae203b62691a33fa9034ec961f8636731e6205d7f0da202b07f",

@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-10-07T03:54:46.558Z"
+checkedAt: "2026-10-12T01:04:28.526Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -33,13 +33,21 @@ translationNotice:
 
 ## 외관
 
--   테마, 강조색, 밀도를 설정합니다.
--   UI 글꼴 패밀리를 설정합니다. 편집기 글꼴은 선택 사항이며, 비워 두면 터미널 글꼴을 따르고 값을 설정하면 파일 편집기와 diff만 재정의합니다.
--   편집기 미니맵을 전환합니다.
--   **`Resource Manager`(리소스 관리자)**(CPU/memory/sessions, 데몬 컨트롤, 작업 공간 디스크 스캔)를 포함한 상태 표시줄 항목을 전환합니다.
--   **`Usage percentages`(사용량 백분율)** — 상태 표시줄 목록에서 공급자 한도를 **`% used`(사용한 비율)** 또는 **`% remaining`(남은 비율)**으로 표시합니다.
--   `App Icon`(앱 아이콘) — Dock 및 창 전환기에 표시되는 아이콘을 Classic, Watercolor, Blue 순으로 전환합니다.
--   **`Language`(언어)** — 기본 인터페이스 설정입니다. `System`(시스템, OS 설정을 따름), English, 中文（简体）, 한국어, 日本語 또는 Español 중에서 선택합니다. 설정 검색은 “language”에 해당하는 각 언어의 단어(语言 / 語言 / 언어 / 言語 / Idioma)도 인식하므로 UI가 아직 영어여도 `Language`(언어)를 찾을 수 있습니다.
+-   테마, 강조색 및 밀도를 설정합니다.
+-   UI의 글꼴 패밀리를 설정합니다. 편집기 글꼴은 선택 사항이며, 비워 두면 터미널 글꼴을 따르고 값을 설정하면 파일 편집기와 diff에만 해당 글꼴을 사용합니다.
+-   편집기 미니맵을 켜거나 끕니다.
+-   **`Resource Manager`(리소스 관리자)**(CPU/memory/sessions, 데몬 제어, 작업 공간 디스크 검사)를 포함한 상태 표시줄 항목을 켜거나 끕니다.
+-   **`Usage percentages`(사용량 백분율)** — 상태 표시줄 목록에서 공급자 한도를 **`% used`(사용한 비율)** 또는 **`% remaining`(남은 비율)**으로 표시합니다. 이미 보기를 선택하지 않았다면 이제 목록은 더 짧은 **`Compact`(간결하게)** 보기를 기본값으로 사용하며, 같은 선택기에서 **`Detailed`(자세히)** 보기도 계속 사용할 수 있습니다.
+-   **`App Icon`(앱 아이콘)** — Dock 및 창 전환기에 표시되는 아이콘을 **`Classic`(클래식)**, **`Watercolor`(수채화)** 및 **`Blue`(파랑)** 사이에서 전환합니다.
+-   **`Language`(언어)** — `Interface`(인터페이스) 영역의 기본 컨트롤입니다. **`System`(시스템, OS 설정을 따름)**, English, 中文（简体）, 한국어, 日本語 또는 Español 중에서 선택합니다. 설정 검색은 “language”에 해당하는 각 언어의 단어(语言 / 語言 / 언어 / 言語 / Idioma)도 인식하므로 UI가 아직 영어여도 **`Language`(언어)**를 찾을 수 있습니다.
+
+## 채팅
+
+**`Chat UI`(채팅 UI)**가 켜져 있을 때 표시됩니다([채팅 UI](/orca-docs-ko/docs/agents/native-chat/) 참조). 구조화된 채팅의 모양과 동작을 다음과 같이 한데 모아 설정합니다.
+
+-   **`Appearance`(모양)** — 픽셀 단위의 **`Text size`(텍스트 크기)**와 **`Code text size`(코드 텍스트 크기)**, **`Width`(너비)** 및 **`Contrast`(대비)**를 설정합니다. **`Match terminal interface`(터미널 인터페이스와 일치)**를 켜면 전체 채팅에 터미널의 글꼴과 색상을 사용하며, 나중에 터미널 테마를 변경해도 동기화됩니다. 이 기능이 켜져 있으면 크기 컨트롤이 비활성화됩니다. **`Reset chat appearance`(채팅 모양 재설정)**는 기본값을 복원합니다.
+-   **`Inline visuals`(인라인 시각 자료)** — 에이전트가 답변 안에 차트, 다이어그램 및 목업을 표시할 수 있게 합니다. 새로 시작한 채팅에 적용됩니다.
+-   **`Chat names`(채팅 이름)** — 에이전트를 사용하여 새 채팅의 첫 메시지를 바탕으로 이름을 지정합니다. 생성된 이름이 없으면 채팅 이름은 **Claude Chat** 또는 **Codex Chat**으로 유지됩니다.
 
 ## 힘내
 
@@ -67,17 +75,18 @@ translationNotice:
 
 ## 에이전트
 
--   `Installed agents`(설치된 에이전트) — 활성화하거나 비활성화할 수 있는 감지된 CLI입니다.
+-   **`Installed agents`(설치된 에이전트)** — 활성화하거나 비활성화할 수 있는 감지된 CLI입니다.
+-   **`Per-agent launch defaults`(에이전트별 시작 기본값)** — 에이전트의 바이너리 경로나 이름을 재정의하고 기본 **`Command`(명령)**, **`Arguments`(인수)** 및 환경을 편집합니다. 구조화된 네이티브 채팅도 저장된 명령과 인수를 동일하게 사용합니다.
 -   감지된 에이전트를 활성화하거나 비활성화하여 시작 메뉴에 사용하려는 CLI만 표시합니다.
--   `Agent Permissions`(에이전트 권한) — CLI 권한 확인을 줄이려면 **`Yolo`(자동 승인)**를 선택하고, 사용자 지정하지 않은 에이전트에서 각 에이전트의 자체 승인 흐름을 유지하려면 **`Manual`(수동)**을 선택합니다.
--   **`Trust the folder when Orca starts an agent`(Orca에서 에이전트를 시작할 때 폴더 신뢰)** — **기본적으로 켜져 있습니다**. 오케스트레이션 워커, 자동화 및 휴대전화에서 시작한 에이전트를 포함하여 Orca가 시작하는 에이전트는 `Do you trust this folder?`(이 폴더를 신뢰하십니까?) 프롬프트를 건너뜁니다. 각 에이전트의 자체 신뢰 프롬프트를 유지하려면 끕니다. [Codex를 Orca에서 사용하기](/orca-docs-ko/docs/agents/codex/) 및 [지원되는 에이전트](/orca-docs-ko/docs/agents/supported/)를 참조합니다.
--   **`Run each Codex terminal on its own server`(각 Codex 터미널을 자체 서버에서 실행)** — **기본적으로 켜져 있습니다**. Orca의 상태와 탭 닫기 동작을 Codex 탭에서 정확하게 유지합니다. Codex의 공유 서버와 에이전트 개요를 사용하려면 끕니다. 새 터미널에 적용됩니다. 함께 제공되는 **`Warn when a Codex tab shares a server`(Codex 탭이 서버를 공유할 때 경고)** 알림은 직접 시작한 Codex가 서버를 공유할 때 표시됩니다. [Codex를 Orca에서 사용하기](/orca-docs-ko/docs/agents/codex/)을 참조합니다.
+-   **`Agent Permissions`(에이전트 권한)** — CLI 권한 프롬프트를 줄이려면 **`Yolo`(자동 승인)**를 선택하고, 사용자 지정하지 않은 에이전트에서 각 에이전트의 자체 승인 흐름을 유지하려면 **`Manual`(수동)**을 선택합니다.
+-   **`Trust the folder when Orca starts an agent`(Orca에서 에이전트를 시작할 때 폴더 신뢰)** — **기본적으로 켜져 있습니다**. 오케스트레이션 워커, 자동화 및 휴대전화에서 시작한 에이전트를 포함하여 Orca가 시작하는 에이전트는 **`Do you trust this folder?`(이 폴더를 신뢰하십니까?)** 프롬프트를 건너뜁니다. 각 에이전트의 자체 신뢰 프롬프트를 유지하려면 끕니다. [Codex를 Orca에서 사용하기](/orca-docs-ko/docs/agents/codex/) 및 [지원되는 에이전트](/orca-docs-ko/docs/agents/supported/)를 참조합니다.
+-   **`Run each Codex terminal on its own server`(각 Codex 터미널을 자체 서버에서 실행)** — **기본적으로 켜져 있습니다**. Orca의 상태와 탭 닫기 동작을 Codex 탭에서 정확하게 유지합니다. Codex의 공유 서버와 에이전트 개요를 사용하려면 끕니다. 새 터미널에 적용됩니다. 함께 제공되는 **`Warn when a Codex tab shares a server`(Codex 탭이 서버를 공유할 때 경고)** 알림은 직접 시작한 Codex가 서버를 공유할 때 표시됩니다. [Codex를 Orca에서 사용하기](/orca-docs-ko/docs/agents/codex/)를 참조합니다.
 -   Claude, Codex, OpenCode, Devin, Antigravity 및 GLM Coding Plan의 계정 목록을 관리합니다. Linux에서는 암호화할 수 없었던 저장된 자격 증명이 이곳에 경고와 함께 표시됩니다.
--   OpenCode Go 세션 쿠키 — Go 속도 제한을 표시하려면 전체 `opencode.ai` Cookie 헤더를 붙여 넣되 `__Host-console_session` 쿠키를 포함해야 합니다. `auth` 쿠키만으로는 충분하지 않습니다.
+-   OpenCode Go 세션 쿠키 — Go 속도 제한을 표시하려면 전체 `opencode.ai` Cookie 헤더를 붙여 넣되 `__Host-console_session`을 포함해야 합니다. `auth` 쿠키만으로는 충분하지 않습니다.
 -   에이전트별 시작 후크를 설정합니다.
--   **`Agent status hooks`(에이전트 상태 후크)** — Orca에 작업 중 / 대기 중 / 완료 상태를 표시합니다. 앱을 재시작하지 않아도 토글이 적용되며 Windows WSL 후크 릴레이에도 적용됩니다. CLI: `orca agent hooks on|off|status`.
+-   **`Agent status hooks`(에이전트 상태 후크)** — Orca에 작업 중 / 대기 중 / 완료 상태를 표시합니다. 앱을 다시 시작하지 않아도 토글이 적용되며 Windows WSL 후크 릴레이에도 적용됩니다. CLI: `orca agent hooks on|off|status`.
 -   **`Keep computer awake`(컴퓨터 절전 방지)** — **`On`(켜기)**(항상 절전 방지), **`Agent`(에이전트)**(에이전트가 작업 중일 때 절전 방지) 또는 **`Off`(끄기)**를 선택합니다. 같은 컨트롤이 데스크톱 상태 표시줄에 **`Caffeinate`(절전 방지)**(커피 아이콘)로 표시됩니다. 페어링된 웹 클라이언트에서는 숨겨집니다.
--   **`Skill freshness`(스킬 최신 상태)** — `Agents`(에이전트) 창과 스킬 카드에는 계속 전체 상태가 표시됩니다. 사이드바 탐색에는 조치가 필요한 스킬(**`Update available`(업데이트 가능)**, **`Needs attention`(확인 필요)** / 검토)에만 배지가 표시되며, 정상, 로드 중, 선택적 미설치 행은 별도 표시를 하지 않습니다. 대화 상자에서 **`Update`(업데이트)**를 선택하면 터미널 없이 전역 스킬을 백그라운드에서 새로 고칩니다. 진행 상황은 상태 표시줄에 표시되며 대화 상자를 닫아도 실행이 취소되지 않습니다. [Orca 스킬](/orca-docs-ko/docs/cli/skills/#keep-skills-up-to-date)을 참조합니다.
+-   **`Skill freshness`(스킬 최신 상태)** — **`Agents`(에이전트)** 창과 스킬 카드에는 계속 전체 상태가 표시됩니다. 사이드바 탐색에는 조치가 필요한 스킬(**`Update available`(업데이트 가능)**, **`Needs attention`(확인 필요)** / 검토)에만 배지가 표시되며, 정상, 로드 중 및 선택적 미설치 행은 별도 표시를 하지 않습니다. 대화 상자에서 **`Update`(업데이트)**를 선택하면 터미널 없이 전역 스킬을 백그라운드에서 새로 고칩니다. 진행 상황은 상태 표시줄에 표시되며 대화 상자를 닫아도 실행이 취소되지 않습니다. [Orca 스킬](/orca-docs-ko/docs/cli/skills/#keep-skills-up-to-date)을 참조합니다.
 
 ## 브라우저
 
@@ -136,8 +145,9 @@ translationNotice:
 ## SSH
 
 -   SSH 작업 트리, 대상, 암호 및 기본 ID 파일을 설정합니다.
--   고급: 프록시/점프 호스트 및 **`Reuse SSH connection for faster setup`(빠른 설정을 위해 SSH 연결 재사용)**을 설정합니다. 시스템 OpenSSH 다중화를 사용하며 기본적으로 켜져 있습니다.
--   Kerberos 호스트: OpenSSH 구성의 `GSSAPIAuthentication`가 시스템 OpenSSH 인증을 제어합니다([SSH 작업 트리](/orca-docs-ko/docs/ssh/) 참조).
+-   고급: 프록시/점프 호스트, **`Reuse SSH connection for faster setup`(빠른 설정을 위해 SSH 연결 재사용)**(시스템 OpenSSH 다중화, 기본적으로 켜짐) 및 호스트별 **`Allow this host's orca CLI to control Orca`(이 호스트의 orca CLI가 Orca를 제어하도록 허용)**을 설정합니다.
+-   **`Managed servers`(관리형 서버)** — Orca가 빈 SSH 호스트에 자체 서버를 설치하고 실행하며 최신 상태로 유지합니다. 버전과 터미널을 확인하고 각 서버를 **`Update`(업데이트)**, **`Roll back`(롤백)**, **`Recover`(복구)** 또는 **`Stop…`(중지…)** / **`Forget…`(잊기…)**할 수 있습니다. [SSH 작업 트리 → 관리형 Orca 서버](/orca-docs-ko/docs/ssh/#managed-orca-server)를 참조합니다.
+-   Kerberos 호스트: OpenSSH 구성의 `GSSAPIAuthentication` 설정이 시스템 OpenSSH 인증을 제어합니다([SSH 작업 트리](/orca-docs-ko/docs/ssh/) 참조).
 
 ## 원격 Orca 서버
 
@@ -182,9 +192,9 @@ translationNotice:
 ## 실험적
 
 -   [`Activity Page`(활동 페이지)](/orca-docs-ko/docs/activity/) — 에이전트 이벤트를 보여 주는 Slack 스타일 작업 트리 피드입니다.
--   `Compact worktree cards`(간결한 작업 트리 카드) — 레이아웃이 실험 단계인 동안 사이드바의 중복된 두 번째 줄을 숨깁니다.
+-   **`Compact worktree cards`(간결한 작업 트리 카드)** — 레이아웃이 실험 단계인 동안 사이드바에서 중복되는 두 번째 줄을 숨깁니다.
 -   [에이전트 최대 절전 모드](/orca-docs-ko/docs/agents/hibernation/) — 유휴 백그라운드 에이전트를 일시 중지하고 다시 열 때 자동으로 재개합니다.
--   **`Agent Dashboard`(에이전트 대시보드)** — `Needs You`(확인 필요), `Working`(작업 중), `Done`(완료) 에이전트와 선택적 `Idle`(유휴) 에이전트를 보여 주는 칸반 보드입니다. 검색과 `project/workspace/PR`(프로젝트/작업 공간/PR) 필터를 제공하며 창 내부 또는 팝아웃으로 열 수 있습니다. **`Show idle agents`(유휴 에이전트 표시)**는 이 설정이 아니라 대시보드 보드 설정 컨트롤에 있습니다. [에이전트 및 세션](/orca-docs-ko/docs/model/agents-sessions/#agent-dashboard)을 참조합니다.
--   **`Chat UI`(채팅 UI)** — 지원되는 에이전트 터미널에서 선택적으로 사용하는 채팅 화면입니다. [채팅 UI](/orca-docs-ko/docs/agents/native-chat/)를 참조합니다.
+-   **`Agent Dashboard`(에이전트 대시보드)** — **`Needs You`(확인 필요)** / **`Working`(작업 중)** / **`Done`(완료)** 에이전트와 선택적 **`Idle`(유휴)** 에이전트를 보여 주는 칸반 보드입니다. 검색과 project/workspace/PR(프로젝트/작업 공간/PR) 필터를 제공하며 창 내부 또는 팝아웃으로 열 수 있습니다. **`Show idle agents`(유휴 에이전트 표시)**는 이곳이 아니라 대시보드의 보드 설정 컨트롤에 있습니다. [에이전트 및 세션](/orca-docs-ko/docs/model/agents-sessions/#agent-dashboard)을 참조합니다.
+-   **`Chat UI`(채팅 UI)** — 지원되는 에이전트 세션에서 선택적으로 사용하는 채팅 화면입니다. [채팅 UI](/orca-docs-ko/docs/agents/native-chat/)를 참조합니다. 구조화된 채팅의 모양, 인라인 시각 자료 및 이름 지정 설정은 [설정 → 채팅](/orca-docs-ko/docs/settings/#chat)에 있습니다.
 -   **`Cloud VM`(클라우드 VM)** — 저장소에서 관리하는 주문형 환경(클라우드 샌드박스, VM 또는 로컬 Docker)의 설정 컨트롤과 작업 공간 **`Run on`(실행 위치)** 대상을 표시합니다. 설정 가이드와 레시피 설치는 이 실험 기능 토글 아래에 있습니다. [Orca 실행 방식](/orca-docs-ko/docs/ways-to-run/#4-cloud-vms-per-workspace-environments)을 참조합니다.
 -   아직 안정화되지 않은 기능은 동작이 변경될 수 있습니다.

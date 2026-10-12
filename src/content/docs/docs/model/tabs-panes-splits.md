@@ -1,7 +1,7 @@
 ---
 title: "탭, 창 및 분할 레이아웃"
 sourceUrl: https://www.onorca.dev/docs/model/tabs-panes-splits
-checkedAt: "2026-10-07T03:54:46.558Z"
+checkedAt: "2026-10-12T01:04:28.526Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/worktrees/
 next: /orca-docs-ko/docs/model/agents-sessions/
@@ -23,10 +23,11 @@ Orca의 창 시스템은 컨텍스트를 잃지 않고 여러 에이전트의 �
 
 각 탭에는 터미널, 편집기 버퍼, 브라우저, diff, PR 등 한 가지 항목이 포함됩니다. 탭은 `tab group`(탭 그룹) 내에 있습니다.
 
-- 그룹 내에서 탭을 위아래로 드래그하여 순서를 바꾸세요.
-- 탭을 다른 그룹으로 드래그하여 이동하세요.
-- macOS에서는 `Cmd+Option+W`, Windows/Linux에서는 `Ctrl+Alt+W`를 사용하여 활성 작업 트리의 모든 편집기 파일 탭을 닫습니다.
-- 활성 탭 색상 막대는 어느 창에 초점이 맞춰져 있는지 표시합니다.
+-   그룹 내에서 탭을 위아래로 드래그하여 순서를 바꿉니다.
+-   탭을 다른 그룹으로 드래그하여 이동합니다.
+-   macOS에서는 `Cmd+Option+W`, Windows/Linux에서는 `Ctrl+Alt+W`를 사용하여 활성 작업 트리의 모든 편집기 파일 탭을 닫습니다.
+-   활성 탭 색상 막대는 어느 창에 초점이 맞춰져 있는지 표시합니다.
+-   탭의 어느 위치에든 마우스를 올리면 전체 제목이 표시되고, 그 아래 행에는 탭 아이콘과 프로그램이 나타납니다. 다음 탭으로 이동하면 짧은 슬라이드와 함께 해당 카드가 즉시 표시되므로 잘린 제목도 텍스트를 정확히 가리키지 않고 쉽게 식별할 수 있습니다.
 
 ### 탭 전환
 

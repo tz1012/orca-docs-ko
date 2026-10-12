@@ -1,7 +1,7 @@
 ---
 title: "원격 Orca 서버"
 sourceUrl: https://www.onorca.dev/docs/remote-servers
-checkedAt: "2026-10-07T03:54:46.558Z"
+checkedAt: "2026-10-12T01:04:28.526Z"
 editUrl: false
 prev: /orca-docs-ko/docs/ssh/
 next: /orca-docs-ko/docs/cli/overview/
@@ -112,6 +112,8 @@ Tailscale 주소가 없으면 Tailscale이 연결되어 있는지 확인하고 *
 -   서버에는 해당 에이전트가 사용하는 저장소, 도구 및 자격 증명이 필요합니다.
 -   서버는 절전 상태가 아니어야 하며 tailnet에 계속 연결되어 있어야 합니다.
 -   클라이언트를 다시 연결하거나 Orca를 다시 열면 페어링된 탭을 중복 생성하지 않고 서버가 소유한 작업 공간, 탭 및 표시 창 상태로 돌아갑니다.
+-   호스트 앱을 다시 실행하면 페어링된 터미널이 입력을 다시 받아들이고, 네트워크 연결이 끊겼다가 복구되면 원격 브라우저 탭이 돌아오며, `orca serve`가 재시작된 뒤에도 휴대전화의 터미널은 유지됩니다.
+-   원격 호스트에서 작업 공간을 만들어도 연결된 다른 데스크톱이 그 작업 공간으로 전환되지 않습니다.
 -   서버에서 삭제한 프로젝트는 페어링된 모든 클라이언트의 사이드바에서도 사라지며 영구적인 유령 행이 남지 않습니다.
 
 ## 액세스 및 보안
@@ -146,6 +148,8 @@ orca serve --pairing-address 100.64.1.20
 -   `Ctrl-C`을 누를 때까지 포그라운드에서 실행됩니다.
 -   바인딩된 엔드포인트와 런타임 페어링 URL을 출력합니다.
 -   `--pairing-address`은 클라이언트가 연결할 주소를 지정하는 용도로만 사용합니다.
+
+`orca serve` 명령은 기본적으로 Orca의 자체 Node 서버(orcad)에서 실행됩니다. 해당 컴퓨터에서 orcad가 서비스를 제공할 수 없으면 Orca는 데스크톱 앱 서버로 대체하고 그 이유를 한 줄로 출력합니다. 현재 패키징된 macOS 앱은 페어링된 클라이언트가 계속 업데이트할 수 있도록 항상 데스크톱 앱 서버를 사용합니다. 이 경로를 강제로 사용하려면 `ORCA_SERVE_RUNTIME=electron` 환경 변수를 설정합니다.
 
 출력된 페어링 URL을 클라이언트의 **`Settings → Remote Orca Servers → Add Server`(설정 → 원격 Orca 서버 → 서버 추가)**에 붙여 넣습니다.
 

@@ -1,7 +1,7 @@
 ---
 title: "Orca의 Claude Code"
 sourceUrl: https://www.onorca.dev/docs/agents/claude-code
-checkedAt: "2026-10-07T03:54:46.558Z"
+checkedAt: "2026-10-12T01:04:28.526Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/supported/
 next: /orca-docs-ko/docs/agents/glm-agent/
@@ -29,7 +29,7 @@ Orca은 로컬 `~/.claude` 사용 상태를 읽고 상태 표시줄에 현재 �
 
 ## 계정 핫스왑
 
-Orca은 여러 Claude 계정을 지원하며 Codex 흐름과 일치하도록 한 번의 클릭으로 계정 간에 전환할 수 있습니다. 계정 전환은 라이브 Claude 세션이 실행 중인 경우에도 작동합니다. Orca는 진행 중인 스위치를 가드 뒤에 보유하므로 중복된 인증 새로 고침이 트리거되지 않습니다. [핫스왑 Codex 계정](/orca-docs-ko/docs/agents/codex-hot-swap/)을 참조하세요. Claude 흐름은 모양이 동일합니다.
+Orca는 여러 Claude 계정을 지원하며 Codex 흐름과 동일하게 한 번의 클릭으로 계정을 전환할 수 있습니다. 라이브 Claude 세션이 실행 중인 동안에도 계정을 전환할 수 있습니다. Orca는 진행 중인 전환을 가드로 보호해 인증 새로 고침이 중복 실행되지 않도록 합니다. 계정을 전환해도 공유 MCP 서버 로그인은 유지되므로 MCP 서버에 다시 인증할 필요가 없습니다. [Codex 계정 핫스왑](/orca-docs-ko/docs/agents/codex-hot-swap/)을 참조하세요. Claude 흐름도 같은 방식입니다.
 
 ## 하위 에이전트와 팀
 

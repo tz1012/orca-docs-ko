@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 참조"
 sourceUrl: https://www.onorca.dev/docs/cli/reference
-checkedAt: "2026-10-07T03:54:46.558Z"
+checkedAt: "2026-10-12T01:04:28.526Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/overview/
 next: /orca-docs-ko/docs/cli/orchestration/
@@ -347,27 +347,43 @@ orca artifacts delete <id> --json
 
 예약된 프롬프트:
 
-````
+```
 orca automations list --json
-orca automations create --name "Daily review" --trigger daily --time 09:00 --prompt "Review open changes" --provider codex --repo id:<repoId> --disabled --json
+orca automations create --name "Daily review" --trigger daily --time 09:00 --prompt "Review open changes" --provider claude --repo id:<repoId> --extra-agent-args="--model opus" --disabled --json
 orca automations run <automationId> --json
-````
+```
+
+`--extra-agent-args` 옵션은 호스트의 기본값을 변경하지 않고 특정 자동화의 새 실행에 사용할 모델 또는 노력 수준을 설정합니다. [예약 자동화](/orca-docs-ko/docs/cli/automations/#per-run-model-and-effort)를 참조합니다.
+
+관리형 SSH 서버:
+
+```
+orca environment list --json
+orca environment status --environment <selector> --json
+orca environment update --environment <selector> --json
+orca environment rollback --environment <selector> --json
+orca environment recover --environment <selector> --json
+orca environment stop --environment <selector> --yes --json
+orca environment forget --environment <selector> --yes --json
+```
+
+`--environment` 옵션은 이 컴퓨터가 SSH를 통해 배포한 관리형 Orca 서버를 지정합니다(**`Settings → Managed servers`(설정 → 관리형 서버)**와 동일한 동작). `stop`은 서버를 폐기하고 `forget`은 호스트가 사라진 서버의 연결을 해제합니다. [SSH 작업 트리 → 관리형 Orca 서버](/orca-docs-ko/docs/ssh/#managed-orca-server)를 참조합니다.
 
 원격 런타임 환경:
 
-````
+```
 orca environment add --name work-laptop --pairing-code "orca://pair?code=..." --json
 orca environment list --json
 orca environment rm --environment <selector> --json
-````
+```
 
-에이전트 상태 후크:
+에이전트 상태 훅:
 
-````
+```
 orca agent hooks status --json
 orca agent hooks on --json
 orca agent hooks off --json
-````
+```
 
 ## 상담원 습관
 

@@ -1,7 +1,7 @@
 ---
 title: "에이전트 세션 기록"
 sourceUrl: https://www.onorca.dev/docs/agents/session-history
-checkedAt: "2026-10-07T03:54:46.558Z"
+checkedAt: "2026-10-12T01:04:28.526Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/native-chat/
 next: /orca-docs-ko/docs/agents/hibernation/
@@ -51,7 +51,7 @@ Session History는 연결된 다른 컴퓨터와 페어링된 Orca Servers(서�
 
 -   **`Resume`(재개)** — 세션의 `cwd`에서 새 터미널을 열고 에이전트의 재개 명령(예: `claude --resume <id>`, `codex resume <id>`, `muse resume <session-id>`, `pi --session <session_file>`, `prime-agent --resume <path>`, `cursor-agent --resume <id>`, `acli rovodev run --restore <id>`)을 실행합니다. 원래 세션에서 설정한 경우 Codex 세션은 `CODEX_HOME`도 다시 내보냅니다.
 
--   **`Resume in New Chat`(새 채팅에서 재개)** — 조건을 충족하는 로컬 Claude 및 Codex 세션의 경우 이전 대화가 표시되는 새 구조화 채팅 탭을 엽니다. Claude는 원래 워크스페이스에서 재개해야 하며, Codex는 다른 워크스페이스에서 재개할 수 있습니다. 이 작업은 대화를 Orca의 구조화 채팅으로 이동하므로 이후 해당 세션에서는 터미널 **`Resume`(재개)**를 더 이상 사용할 수 없습니다. 지원 여부는 [채팅 UI](/orca-docs-ko/docs/agents/native-chat/)를 참조합니다.
+-   **`Resume in New Native Chat`(새 네이티브 채팅에서 재개)** — 지원되는 세션의 이전 대화가 표시되는 새 구조화 채팅 탭을 엽니다(Claude는 원래 워크스페이스에서 재개해야 하며 Codex는 다른 워크스페이스에서도 재개할 수 있습니다). **`Resume in New CLI`(새 CLI에서 재개)**는 반대로 구조화 채팅의 대화를 터미널로 분기합니다. 두 동작 모두 탭의 마우스 오른쪽 버튼 메뉴에서도 사용할 수 있습니다. 대화가 구조화 채팅용으로 예약되면 해당 세션에서 터미널 **`Resume`(재개)**를 더 이상 사용할 수 없습니다. 지원 여부는 [Chat UI](/orca-docs-ko/docs/agents/native-chat/)를 참조합니다.
 
 Pi는 단순 세션 ID가 아니라 후크에서 보고한 디스크상의 세션 파일(`--session <path>`)에서 재개합니다. 해당 파일이 없으면 세션 ID가 있더라도 그 행에서 `Resume`(재개)을 사용할 수 없습니다.
 

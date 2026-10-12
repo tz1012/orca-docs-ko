@@ -7,8 +7,8 @@
       "translated": "## 에이전트 상태 훅"
     },
     "/docs/agents/hooks-memory/:paragraph:agent-status-hooks:0": {
-      "sourceHash": "b19cff289ab6fcc2e0c429ce3504a0aeadc4699424cf32c212d25ab2ca796336",
-      "translated": "`Settings → Agents → Agent status hooks`(설정 → 에이전트 → 에이전트 상태 훅)에서는 작업 중/대기 중/완료 상태를 UI에 보고하는 ORCA_PROTECTED_0001 관리 훅을 제어합니다. 이 설정을 끄면 관리되는 훅이 제거되고 재설치도 중단되며, 다시 켜면 **ORCA_PROTECTED_0002를 다시 시작하지 않고도** 훅이 복원됩니다. Windows에서는 WSL 훅 릴레이에도 동일한 실시간 설정이 적용됩니다. 동일한 CLI 명령은 `ORCA_PROTECTED_0003`입니다."
+      "sourceHash": "af4b22cee63a7f6efebc56373385906b67203eb9639d988483da2e29c168e129",
+      "translated": "**`Settings → Agents → Agent status hooks`(설정 → 에이전트 → 에이전트 상태 훅)**에서는 작업 중/대기 중/완료 상태를 UI에 보고하는 ORCA_PROTECTED_0001 관리 훅을 제어합니다. 이 설정을 끄면 관리되는 훅이 제거되고 재설치도 중단되며, 다시 켜면 **ORCA_PROTECTED_0002를 다시 시작하지 않고도** 훅이 복원됩니다(Windows의 WSL 훅 릴레이에도 동일한 실시간 설정이 적용됩니다). 동일한 CLI 명령은 `ORCA_PROTECTED_0003`입니다. ORCA_PROTECTED_0004는 변경 사항이 있을 때만 ORCA_PROTECTED_0005 훅을 `ORCA_PROTECTED_0006`에 기록하며, 실행할 때마다 기록하지 않으므로 ORCA_PROTECTED_0007가 승인을 반복해서 요청하지 않습니다."
     },
     "/docs/agents/hooks-memory/:heading:agent-hooks-memory:0": {
       "sourceHash": "9d154a55a5fe46575a8a4a9383d21fecfe947a4f137ef12c70273c9fd89e8ff9",

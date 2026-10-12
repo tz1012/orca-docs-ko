@@ -1,7 +1,7 @@
 ---
 title: "파일 탐색기 및 외부 드래그-드롭"
 sourceUrl: https://www.onorca.dev/docs/editing/file-explorer
-checkedAt: "2026-10-07T03:54:46.558Z"
+checkedAt: "2026-10-12T01:04:28.526Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/viewers/
 next: /orca-docs-ko/docs/browser/overview/
@@ -17,6 +17,8 @@ translationNotice:
 
 ## 외부 드래그-드롭
 
+드롭한 항목은 활성 작업 공간이 아니라 파일 트리, 프로젝트 사이드바, 편집기, 탭 표시줄 또는 커서 아래의 특정 터미널 창처럼 정확히 가리킨 위치에 놓입니다.
+
 - Finder/Explorer의 파일을 파일 트리에 끌어서 복사하세요.
 - 이미지를 마크다운 편집기에 놓아 커서에 삽입합니다.
 - 프롬프트에 경로를 붙여넣으려면 에이전트 터미널에 파일을 놓습니다.
@@ -31,6 +33,10 @@ translationNotice:
 ## 다운로드(SSH/원격)
 
 데스크톱 앱에서 원격 파일을 마우스 오른쪽 버튼으로 클릭한 후 **`Download`(다운로드)**를 선택하거나, 연결이 재귀 전송을 지원하는 경우 원격 폴더에서 **`Download Folder`(폴더 다운로드)**를 선택합니다. Orca가 네이티브 save/folder 대화 상자를 엽니다. 웹 클라이언트에서는 사용할 수 없으며 로컬 작업 트리에는 이 작업이 표시되지 않습니다.
+
+## `Reveal in Finder`(Finder에서 보기) / `Reveal in File Explorer`(파일 탐색기에서 보기)
+
+탐색기의 파일, `Source Control`(소스 제어)의 변경된 파일 또는 터미널의 파일 경로 링크를 마우스 오른쪽 버튼으로 클릭하고 **`Reveal in Finder`(Finder에서 보기)**(macOS) 또는 **`Reveal in File Explorer`(파일 탐색기에서 보기)**(Windows)를 선택하면 운영 체제의 파일 관리자에서 해당 위치를 엽니다.
 
 ## 폴더 검색
 

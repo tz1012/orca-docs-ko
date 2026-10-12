@@ -61,6 +61,18 @@
     "/docs/editing/file-explorer/:paragraph:file-explorer-external-drag-drop:1": {
       "sourceHash": "c6909c717776e67166492b4bfefff2b638411f840da92917cfae0782d6896cf4",
       "translated": "작업 트리에서 Git **희소 체크아웃**을 사용하면 탐색기의 트리 범위가 체크아웃 디렉터리로 제한되므로 전체 저장소 대신 실제로 작업하는 폴더가 표시됩니다."
+    },
+    "/docs/editing/file-explorer/:paragraph:external-drag-drop:0": {
+      "sourceHash": "d2eefdf25679de06b9d251b530aa3547534d2c320ebf405e489c60907191f87d",
+      "translated": "드롭한 항목은 활성 작업 공간이 아니라 파일 트리, 프로젝트 사이드바, 편집기, 탭 표시줄 또는 커서 아래의 특정 터미널 창처럼 정확히 가리킨 위치에 놓입니다."
+    },
+    "/docs/editing/file-explorer/:heading:reveal-in-finder-file-explorer:0": {
+      "sourceHash": "4f31b541b453a5a5480122ca719ae5c0782a1c62cc8187dac4c25f9ec37e2c5a",
+      "translated": "## `Reveal in Finder`(Finder에서 보기) / `Reveal in File Explorer`(파일 탐색기에서 보기)"
+    },
+    "/docs/editing/file-explorer/:paragraph:reveal-in-finder-file-explorer:0": {
+      "sourceHash": "5ca80c671c5ff7a0ad0d69889cbe0bb0a69eb6a3b4245217c3170e4a2097104d",
+      "translated": "탐색기의 파일, `Source Control`(소스 제어)의 변경된 파일 또는 터미널의 파일 경로 링크를 마우스 오른쪽 버튼으로 클릭하고 **`Reveal in Finder`(Finder에서 보기)**(macOS) 또는 **`Reveal in File Explorer`(파일 탐색기에서 보기)**(Windows)를 선택하면 운영 체제의 파일 관리자에서 해당 위치를 엽니다."
     }
   }
 }

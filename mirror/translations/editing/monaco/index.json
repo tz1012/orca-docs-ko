@@ -63,8 +63,16 @@
       "translated": "## 언어 지원"
     },
     "/docs/editing/monaco/:paragraph:language-support:0": {
-      "sourceHash": "1a67b52707d699b346e12d699161733d4860924906749e5544979cb5ae4adb8a",
-      "translated": "Solidity, Typst, Twig 템플릿과 `ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002` 같은 셸 시작 도트 파일을 포함하여 Monaco가 기본적으로 지원하는 언어에 대한 구문 강조 기능이 제공됩니다. ORCA_PROTECTED_0003는 의도적으로 IDE 우선이 아닌 편집기 우선입니다. 터미널 창에서 유형 검사기와 린터를 실행합니다."
+      "sourceHash": "986f18ccb15721c0168143d061bcfce3117c023eb1835a0f3dd7acfb422254f1",
+      "translated": "Solidity, Typst, Twig 템플릿과 `ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002` 같은 셸 시작 도트 파일을 포함해 Monaco가 기본적으로 지원하는 언어의 구문 강조 기능이 제공됩니다. Quarto(`ORCA_PROTECTED_0003`) 및 R Markdown(`ORCA_PROTECTED_0004`) 파일도 일반 텍스트로 열리지 않고 구문이 강조됩니다. ORCA_PROTECTED_0005는 의도적으로 IDE 우선이 아니라 편집기 우선입니다. 유형 검사기와 린터는 터미널 창에서 실행합니다."
+    },
+    "/docs/editing/monaco/:heading:per-host-editor-state:0": {
+      "sourceHash": "a904c9fafd07b42c3fdb8feeae0441984e1c75b47732cfc7276bf45537933405",
+      "translated": "## 호스트별 편집기 상태"
+    },
+    "/docs/editing/monaco/:paragraph:per-host-editor-state:0": {
+      "sourceHash": "2cf4a45b96f09a4adf833c4539b7072a98245a1ead93e55d55cad9b7537ce55a",
+      "translated": "서로 다른 호스트에 같은 경로의 파일이 있어도 편집기 텍스트와 `Undo`(실행 취소) 기록을 각각 별도로 유지하므로, 로컬 파일과 경로가 같은 원격 파일을 열어도 다른 파일의 `Undo`(실행 취소) 스택이 노출되지 않습니다. 동일한 로컬 파일의 탭은 계속 하나의 모델을 공유합니다."
     }
   }
 }

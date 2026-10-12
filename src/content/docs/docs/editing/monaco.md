@@ -1,7 +1,7 @@
 ---
 title: "모나코 편집기 및 자동 저장"
 sourceUrl: https://www.onorca.dev/docs/editing/monaco
-checkedAt: "2026-10-07T03:54:46.558Z"
+checkedAt: "2026-10-12T01:04:28.526Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/jira/
 next: /orca-docs-ko/docs/editing/markdown/
@@ -16,6 +16,10 @@ Orca의 코드 편집기는 VS Code가 사용하는 것과 동일한 편집기�
 ## 자동 저장
 
 흐려지거나 짧은 유휴 기간이 지나면 파일이 저장됩니다. 일반 흐름에는 저장되지 않은 변경 사항이 없기 때문에 "더티" 점이 없습니다.
+
+## 호스트별 편집기 상태
+
+서로 다른 호스트에 같은 경로의 파일이 있어도 편집기 텍스트와 `Undo`(실행 취소) 기록을 각각 별도로 유지하므로, 로컬 파일과 경로가 같은 원격 파일을 열어도 다른 파일의 `Undo`(실행 취소) 스택이 노출되지 않습니다. 동일한 로컬 파일의 탭은 계속 하나의 모델을 공유합니다.
 
 ## 다중 커서, 이동, 찾기
 
@@ -41,4 +45,4 @@ Orca의 코드 편집기는 VS Code가 사용하는 것과 동일한 편집기�
 
 ## 언어 지원
 
-Solidity, Typst, Twig 템플릿과 `.bashrc`, `.zshrc` 같은 셸 시작 도트 파일을 포함하여 Monaco가 기본적으로 지원하는 언어에 대한 구문 강조 기능이 제공됩니다. Orca는 의도적으로 IDE 우선이 아닌 편집기 우선입니다. 터미널 창에서 유형 검사기와 린터를 실행합니다.
+Solidity, Typst, Twig 템플릿과 `.bashrc`, `.zshrc` 같은 셸 시작 도트 파일을 포함해 Monaco가 기본적으로 지원하는 언어의 구문 강조 기능이 제공됩니다. Quarto(`.qmd`) 및 R Markdown(`.Rmd`) 파일도 일반 텍스트로 열리지 않고 구문이 강조됩니다. Orca는 의도적으로 IDE 우선이 아니라 편집기 우선입니다. 유형 검사기와 린터는 터미널 창에서 실행합니다.

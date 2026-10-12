@@ -138,6 +138,30 @@
       "sourceHash": "196b742bd3d441426761edac162a8adcc7f71c94598717d338072f4ae905c61e",
       "translated": "설정 ID가 이미 있으면 `ORCA_PROTECTED_0001`을 사용합니다. 선택적 `ORCA_PROTECTED_0002`는 ORCA_PROTECTED_0003 데이터를 ORCA_PROTECTED_0004에 고정합니다. 지우려면 편집 시 `ORCA_PROTECTED_0005`를 전달합니다."
     },
+    "/docs/cli/automations/:paragraph:choose-where-runs-happen:2": {
+      "sourceHash": "7736d7e31e2bd46dac8e5b2be03ce348ffe480f019f59389952cf424ef7fe3a7",
+      "translated": "ORCA_PROTECTED_0001 서버의 기존 워크스페이스에서 예약 실행이 시작되면, ORCA_PROTECTED_0002는 시작 후 프롬프트를 읽는 에이전트(ORCA_PROTECTED_0003, ORCA_PROTECTED_0004, ORCA_PROTECTED_0005 등)가 준비되는 즉시 자동화 프롬프트를 입력하여 유휴 상태로 남지 않게 합니다. ORCA_PROTECTED_0006 및 ORCA_PROTECTED_0007처럼 명령줄에서 프롬프트를 받는 에이전트는 원래부터 영향을 받지 않았습니다."
+    },
+    "/docs/cli/automations/:heading:per-run-model-and-effort:0": {
+      "sourceHash": "b561d0c03fdcc1487fa3cf972e60cd50c05af832901b651146a78db2b2bd594f",
+      "translated": "## 실행별 모델 및 노력 수준"
+    },
+    "/docs/cli/automations/:paragraph:per-run-model-and-effort:0": {
+      "sourceHash": "da3d14ec1a8e2fb6f1fc4f10eb5a1459128d9cade3c20affc8893a4e795f0c11",
+      "translated": "각 자동화는 실행할 때마다 추가 에이전트 인수를 전달할 수 있으므로, 다른 자동화의 호스트 기본값을 변경하지 않고 특정 자동화에만 다른 모델이나 노력 수준을 사용할 수 있습니다."
+    },
+    "/docs/cli/automations/:code:per-run-model-and-effort:0": {
+      "sourceHash": "9e327006321c3d9609e8c4965b5a272f3f346728f470a889a35ebc38a3802bf3",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/automations/:paragraph:per-run-model-and-effort:1": {
+      "sourceHash": "6f81f7e006967c87a80bd5093059ab28c28225747ad68154d07ef1366ee02506",
+      "translated": "데스크톱 자동화 편집기에서 같은 필드는 **`Advanced → Extra agent arguments`(고급 → 추가 에이전트 인수)**입니다. 새로 실행할 때마다 ORCA_PROTECTED_0001는 해당 에이전트에 대한 호스트의 기본 **`Arguments`(인수)**에서 시작해 추가 인수를 덧붙이며, 추가 인수의 모델 또는 노력 수준 옵션은 기본값을 대체합니다. 값은 `ORCA_PROTECTED_0002` 기호를 사용해 전달합니다. `ORCA_PROTECTED_0003`로 시작하기 때문입니다."
+    },
+    "/docs/cli/automations/:paragraph:per-run-model-and-effort:2": {
+      "sourceHash": "9ac32e4c77e6b0a99108adf6d5f3a84949cf1deb81fb8f20caf4aacacd551ae6",
+      "translated": "추가 인수로 허용되는 것은 ORCA_PROTECTED_0001의 `ORCA_PROTECTED_0002`와 ORCA_PROTECTED_0003, ORCA_PROTECTED_0004, CodeBuddy, ORCA_PROTECTED_0005, ORCA_PROTECTED_0006 및 ORCA_PROTECTED_0007용 모델 및 노력 수준 옵션뿐입니다. 권한, 구성, 프롬프트 및 세션 옵션은 거부됩니다. 이러한 인수는 실행할 때마다 새 세션이 필요하므로 `ORCA_PROTECTED_0008`과 함께 사용할 수 없습니다. `ORCA_PROTECTED_0009`으로 지웁니다."
+    },
     "/docs/cli/automations/:heading:missed-run-grace:0": {
       "sourceHash": "600ffdcadaf6e62b2e393a5f779eca8335f4ff36d83794fca3667e2da18418d4",
       "translated": "## 누락된 실행의 유예 시간"

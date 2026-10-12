@@ -1,7 +1,7 @@
 ---
 title: "문제 해결 및 FAQ"
 sourceUrl: https://www.onorca.dev/docs/troubleshooting
-checkedAt: "2026-10-07T03:54:46.558Z"
+checkedAt: "2026-10-12T01:04:28.526Z"
 editUrl: false
 prev: /orca-docs-ko/docs/telemetry/
 next: /orca-docs-ko/docs/github-errors/
@@ -41,8 +41,9 @@ Orca를 v1.4.212 이상으로 업데이트합니다. Codex 0.157 이상에서는
 
 ## SSH는 연결되지만 원격 터미널이 실패하는 경우
 
--   Orca는 처음 연결할 때 호스트에 런타임을 설치합니다. 기본 **`Auto`(자동)** 런타임에서는 Orca의 관리형 Node 또는 호스트의 Node를 사용하므로 일반적으로 컴파일러가 필요하지 않습니다. [SSH 작업 트리 → 호스트의 원격 런타임](/orca-docs-ko/docs/ssh/#remote-runtime-on-the-host)을 참조합니다.
--   호스트에서 실행을 차단하면(예: `noexec` 홈 디렉터리) Orca는 일반 SSH 터미널 및 SFTP 파일 탐색으로 대체하고 이유를 표시합니다. 전체 런타임을 복원하려면 홈 디렉터리의 실행을 허용합니다.
+-   Orca는 이제 호스트에 자체 관리형 서버를 설정하므로 잘못된 Node 버전이나 누락된 빌드 도구로 인해 더 이상 연결이 차단되지 않습니다. **`Settings → SSH Hosts`(설정 → SSH 호스트)**에는 호스트가 실행하는 서버가 표시되며, **`Settings → Managed servers`(설정 → 관리형 서버)**에서 서버를 업데이트, 롤백 또는 복구할 수 있습니다. [SSH 작업 트리 → 관리형 Orca 서버](/orca-docs-ko/docs/ssh/#managed-orca-server)를 참조합니다.
+-   대체 릴레이를 실행하는 호스트에서는 Orca가 처음 연결할 때 런타임을 설치합니다. 기본 **`Auto`(자동)** 런타임은 Orca의 관리형 Node 또는 호스트의 Node를 사용하므로 일반적으로 컴파일러가 필요하지 않습니다. [SSH 작업 트리 → 호스트의 원격 런타임](/orca-docs-ko/docs/ssh/#remote-runtime-on-the-host)을 참조합니다.
+-   호스트가 실행을 차단하는 경우(예: `noexec` 홈 디렉터리) Orca는 일반 SSH 터미널 및 SFTP 파일 탐색으로 대체하고 그 이유를 표시합니다. 전체 런타임을 복원하려면 홈 디렉터리에서 실행을 허용합니다.
 -   레거시 npm 경로만 실행할 수 있는 호스트에서 터미널이 생성되지 않으면 C/C++ 도구 체인(make, g++/clang++, python3)을 설치한 다음 다시 연결합니다.
 
 ## SSH 파일은 작동하지만 `Download Folder`(폴더 다운로드)는 작동하지 않는 경우
@@ -72,6 +73,8 @@ Orca를 v1.4.212 이상으로 업데이트합니다. Codex 0.157 이상에서는
 ## GitHub PR 패널, 검사 및 Tasks 오류
 
 속도 제한, 잘못된 `gh` 인증, 누락된 범위 및 저장소 접근 문제는 모두 `Source Control`(소스 제어)과 `PR Checks`(PR 검사) 패널에 표시됩니다. 전체 오류 분류표와 설정의 **`GitHub API Budget`(GitHub API 예산)** 수치가 정상인데도 REST가 차단될 수 있는 이유는 **[GitHub 오류 문제 해결](/orca-docs-ko/docs/github-errors/)**을 참조합니다.
+
+Orca가 GitHub CLI가 설치되지 않았다고 표시하지만 터미널에서 `gh` 명령이 작동한다면, `gh` 실행기가 `PATH`에서 멈췄을 가능성이 큽니다. Orca는 CLI가 없다고 보고하는 대신 멈춘 실행기를 지나 계속 검색하여 버전 검사를 통과한 사본을 사용합니다.
 
 빠른 확인:
 

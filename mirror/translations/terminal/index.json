@@ -31,8 +31,16 @@
       "translated": "터미널은 일반 탭과 같습니다. [탭, 창 및 분할 레이아웃](ORCA_PROTECTED_0001)을 참조합니다. 터미널 창을 분할하면 두 셸을 나란히 사용할 수 있습니다. 터미널 창은 탭의 유일한 창인 경우에도 닫기 버튼을 제공합니다."
     },
     "/docs/terminal/:paragraph:panes-tabs:1": {
-      "sourceHash": "c7f44514677bc7c359320b07a97df3c4ad4157bddcf9c64fd461d8f24239a4f6",
-      "translated": "에이전트 터미널 탭에는 에이전트 ID와 실시간 상태(작업 중, 입력 대기 중, 완료 또는 완료 후 미확인)가 함께 표시됩니다. ORCA_PROTECTED_0001 및 ORCA_PROTECTED_0002의 경우 ORCA_PROTECTED_0003가 해당 창을 세션에 연결할 수 있으면 탭 제목에 **`AI Vault conversation name`(AI Vault 대화 이름)**(사용자 지정 제목/스레드 이름)도 표시할 수 있습니다. 수동으로 바꾼 이름이 항상 우선합니다. 백그라운드로 이동한 터미널은 돌아올 때 중복 탭을 열지 않고 자체 탭에 다시 연결됩니다."
+      "sourceHash": "4b9dcbc68894090a5a7a61c26586f07d7ca4f4364871e0827537c9b6b7761239",
+      "translated": "에이전트 터미널 탭에는 에이전트 ID와 실시간 상태(작업 중, 입력 대기 중, 완료 또는 완료 후 미확인)가 함께 표시됩니다. ORCA_PROTECTED_0001 및 ORCA_PROTECTED_0002의 경우 ORCA_PROTECTED_0003가 해당 창을 세션에 연결할 수 있으면 탭 제목에 **`AI Vault conversation name`(AI Vault 대화 이름)**(사용자 지정 제목/스레드 이름)도 표시할 수 있습니다. 수동으로 바꾼 이름이 항상 우선합니다. 백그라운드로 이동한 터미널은 돌아올 때 중복 탭을 열지 않고 자체 탭에 다시 연결됩니다. 종료 직전에 닫은 창은 다시 실행해도 더 이상 돌아오지 않으며, 창을 끌어 별도 탭으로 옮겨도 두 탭에 동시에 표시되지 않습니다."
+    },
+    "/docs/terminal/:heading:agent-launch-commands:0": {
+      "sourceHash": "2c7c0ce45f2693398fc55f9fac479272d8dd8e5c234db93b3f8a0bd803d19ed6",
+      "translated": "## 에이전트 시작 명령"
+    },
+    "/docs/terminal/:paragraph:agent-launch-commands:0": {
+      "sourceHash": "3350fc5e42de75ed8f25fedc2a347f64be2d8996e763ba0f40ba2603b14717ba",
+      "translated": "macOS와 Linux에서 길거나 여러 줄로 된 에이전트 시작 명령은 잘리거나 한 줄씩 실행되지 않고 전체가 에이전트에 전달되며, 시작 명령은 실제 Enter 입력으로 제출됩니다. 이 동작은 업데이트 후 새로 연 터미널에 적용됩니다. 이미 열려 있던 터미널은 다시 열 때까지 이전 동작을 유지합니다."
     },
     "/docs/terminal/:heading:search:0": {
       "sourceHash": "62c53ea4911e0c798f817b7767cc46f15ba8aef089fe3921b0d7adee26e954a1",

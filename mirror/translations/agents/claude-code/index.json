@@ -39,8 +39,8 @@
       "translated": "## 계정 핫스왑"
     },
     "/docs/agents/claude-code/:paragraph:account-hot-swap:0": {
-      "sourceHash": "246186d104636b778d09f8daab1c429680455654dff99a5faa7595bc92609e88",
-      "translated": "ORCA_PROTECTED_0001은 여러 ORCA_PROTECTED_0002 계정을 지원하며 ORCA_PROTECTED_0003 흐름과 일치하도록 한 번의 클릭으로 계정 간에 전환할 수 있습니다. 계정 전환은 라이브 ORCA_PROTECTED_0004 세션이 실행 중인 경우에도 작동합니다. ORCA_PROTECTED_0005는 진행 중인 스위치를 가드 뒤에 보유하므로 중복된 인증 새로 고침이 트리거되지 않습니다. [핫스왑 ORCA_PROTECTED_0006 계정](ORCA_PROTECTED_0007)을 참조하세요. ORCA_PROTECTED_0008 흐름은 모양이 동일합니다."
+      "sourceHash": "9a078f2c9e21e524a3437dd8bd96475ec1ab4fdd803a95155adeafe0ffa4faae",
+      "translated": "ORCA_PROTECTED_0001는 여러 ORCA_PROTECTED_0002 계정을 지원하며 ORCA_PROTECTED_0003 흐름과 동일하게 한 번의 클릭으로 계정을 전환할 수 있습니다. 라이브 ORCA_PROTECTED_0004 세션이 실행 중인 동안에도 계정을 전환할 수 있습니다. ORCA_PROTECTED_0005는 진행 중인 전환을 가드로 보호해 인증 새로 고침이 중복 실행되지 않도록 합니다. 계정을 전환해도 공유 MCP 서버 로그인은 유지되므로 MCP 서버에 다시 인증할 필요가 없습니다. [ORCA_PROTECTED_0006 계정 핫스왑](ORCA_PROTECTED_0007)을 참조하세요. ORCA_PROTECTED_0008 흐름도 같은 방식입니다."
     },
     "/docs/agents/claude-code/:heading:hooks-memory:0": {
       "sourceHash": "0cf22c451605cbcbaab8413087bc0b4597b4724a7492780c1cba7a10a0960d1a",

@@ -98,6 +98,14 @@
       "sourceHash": "ed1311d37dacd6693db93e98347bc6cf2a3e43ee0d9dac294f2024c52198dea9",
       "translated": "영향을 받는 홈에서는 `ORCA_PROTECTED_0001`와 데몬 기반 재개 또는 계속 기능을 사용할 수 없습니다. ORCA_PROTECTED_0002에서 계속 `ORCA_PROTECTED_0003` 오류를 보고하면 [문제 해결](ORCA_PROTECTED_0004)을 참조합니다."
     },
+    "/docs/agents/codex/:heading:hand-off-to-another-agent:0": {
+      "sourceHash": "8a68c14fd4ed12e52b72dc58b51c09824886c1e6b8ed77ae9489975a8d2f51f6",
+      "translated": "## 다른 에이전트로 인계"
+    },
+    "/docs/agents/codex/:paragraph:hand-off-to-another-agent:0": {
+      "sourceHash": "a2ae21323f5932c8e34dcf79d1e9ed861b462da8c89d161290e6e41c02a3189f",
+      "translated": "에이전트 터미널의 헤더나 컨텍스트 메뉴에서 **`Hand Off to Another Agent`(다른 에이전트로 인계)**를 선택합니다. ORCA_PROTECTED_0001는 동일하거나 다른 CLI로 새 에이전트 세션을 시작하고 이전 대화 기록 또는 캡처한 컨텍스트에서 범위를 제한한 인계 프롬프트를 주입합니다. 원래 세션은 그대로 유지되며, 이는 `ORCA_PROTECTED_0002`이 아닙니다."
+    },
     "/docs/agents/codex/:heading:each-codex-terminal-runs-its-own-server:0": {
       "sourceHash": "4bdb58964c499b9a4aeb95b22e3ea2fc504eb36617206569d8a0b98919777737",
       "translated": "## 각 ORCA_PROTECTED_0001 터미널은 자체 서버에서 실행됩니다"

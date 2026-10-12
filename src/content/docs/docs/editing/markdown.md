@@ -1,7 +1,7 @@
 ---
 title: "리치 마크다운 편집기"
 sourceUrl: https://www.onorca.dev/docs/editing/markdown
-checkedAt: "2026-10-07T03:54:46.558Z"
+checkedAt: "2026-10-12T01:04:28.526Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/monaco/
 next: /orca-docs-ko/docs/editing/viewers/
@@ -26,6 +26,10 @@ macOS, Windows, Linux에서는 기존 기본 편집기를 바꾸지 않고 Markd
 슬래시 메뉴(제목, 목록, 코드 블록, 설명선, 이미지, 인어 다이어그램, 토글 블록)를 열려면 빈 줄에 `/`을 입력하세요.
 
 접을 수 있는 메모에는 `/toggle-text`을 사용하고, 토글 요약을 제목 수준처럼 표시하려면 `/toggle-h1` … `/toggle-h5`을 사용합니다. 중첩된 토글은 그 자리에서 편집할 수 있습니다. Orca는 토글을 이식 가능한 `<details>` / `<summary>` Markdown으로 저장하므로 Orca 외부에서도 파일을 미리 볼 수 있습니다.
+
+## 콜아웃
+
+GitHub 스타일 알림은 제목이 있는 색상 상자로 렌더링됩니다. 첫 줄이 `> [!NOTE]`, `> [!TIP]`, `> [!IMPORTANT]`, `> [!WARNING]` 또는 `> [!CAUTION]`인 인용 블록은 마커가 텍스트로 남은 일반 인용문 대신 해당 아이콘과 제목을 표시합니다. 이 동작은 미리보기를 포함해 Orca가 Markdown을 읽기 전용으로 렌더링하는 모든 곳에 적용됩니다.
 
 ## 내부 링크
 

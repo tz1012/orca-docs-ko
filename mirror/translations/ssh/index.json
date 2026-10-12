@@ -190,13 +190,49 @@
       "sourceHash": "b473691cf0b94a6e2ce8ab3ef4a929c7eeb4555667bd7d2215de01631d3cbff7",
       "translated": "확인 코드나 기타 키보드 대화형 프롬프트(일회용 암호, MFA 요청 또는 유사한 프롬프트)를 요구하는 호스트도 기본 제공 연결을 통해 사용할 수 있습니다. ORCA_PROTECTED_0001가 프롬프트를 사용자에게 전달하고 답변을 호스트로 전달합니다. 프롬프트가 스크립트로 작성된 설정 단계의 일부이면 연결에 실패하는 대신 사용자가 답할 수 있는 단계로 연기됩니다."
     },
+    "/docs/ssh/:heading:reconnect-and-restart:0": {
+      "sourceHash": "82fda3289eb79cad940044468399bfb9ca8fa2806be5ee980f2cc0bf6d0012ae",
+      "translated": "## 다시 연결 및 다시 시작"
+    },
+    "/docs/ssh/:paragraph:reconnect-and-restart:0": {
+      "sourceHash": "bcaa56cc509de1f4127e925abdae3e9cb873c875d093d5e519e2ad9893c6f7ee",
+      "translated": "열린 파일, 실행 중인 에이전트 탭 및 일시 중지된 ORCA_PROTECTED_0001 또는 ORCA_PROTECTED_0002 재개 제안은 SSH 재연결과 앱 재시작 후에도 유지되므로 작업 공간이 떠났을 때의 상태로 돌아옵니다. 연결이 끊긴 동안 입력한 키는 연결이 복구되면 순서대로 정확히 한 번 전달되며, 창의 스크롤백과 크기도 재연결 후 유지됩니다. 관리형 서버 업데이트 후에는 열린 탭이 다시 연결됩니다. 오래전에 닫은 탭이 더 이상 빈 셸로 돌아오지 않으며, 마지막 탭을 닫은 SSH 작업 트리를 클릭하면 새 터미널이 열립니다."
+    },
+    "/docs/ssh/:paragraph:reconnect-and-restart:1": {
+      "sourceHash": "0def65db19be61c9191e68b0e27cc785f12ec6b81f8af8ff172aa058e208f365",
+      "translated": "텍스트를 출력하는 셸 시작 파일, 항목이 수만 개에 이르는 폴더 및 64비트 ARM Linux 서버로 인해 더 이상 연결이 끊기거나 실패하지 않습니다. 두 컴퓨터가 한 경로를 공유할 때 파일, 브라우저 탭, 링크 및 끌어서 놓기 작업은 각각 원래 소속된 컴퓨터에 유지됩니다."
+    },
+    "/docs/ssh/:heading:the-orca-cli-on-an-ssh-host:0": {
+      "sourceHash": "dc40836d23f2eedc49e1af32529ab74fa0c8b7d23e637b3a287a3111497e725e",
+      "translated": "## SSH 호스트의 orca CLI"
+    },
+    "/docs/ssh/:paragraph:the-orca-cli-on-an-ssh-host:0": {
+      "sourceHash": "7e5a14c0eb9c5b6986ed21f268b0d36378366933d02cd8febd9d49bcc861a2d4",
+      "translated": "기본적으로 SSH 호스트에서 실행되는 `ORCA_PROTECTED_0001` 명령은 해당 호스트 자체의 터미널과 오케스트레이션 메시지에만 접근합니다. 그곳의 에이전트는 자신을 디스패치한 코디네이터에게 계속 보고할 수 있지만 다른 호스트, 데스크톱 제어, 계정 또는 설정에는 접근할 수 없습니다. 해당 호스트의 에이전트가 `ORCA_PROTECTED_0002` 명령을 통해 작업 트리를 만들고, 터미널을 열거나, 작업을 디스패치하도록 허용하려면 그 호스트에서 **`Allow this host's orca CLI to control ORCA_PROTECTED_0003`(이 호스트의 orca CLI가 Orca를 제어하도록 허용)**을 켭니다(**`Settings → SSH → edit the host → Advanced Connection`(설정 → SSH → 호스트 편집 → 고급 연결)**)."
+    },
+    "/docs/ssh/:heading:managed-orca-server:0": {
+      "sourceHash": "d66e86341c00453d4728442efb33b7b76c409911a51757bc0204ef15f3123cfa",
+      "translated": "## 관리형 ORCA_PROTECTED_0001 서버"
+    },
+    "/docs/ssh/:paragraph:managed-orca-server:0": {
+      "sourceHash": "f3d63c3142f1c82493099fa528f962a70744445b30171e249f8c5a3c7aae6a94",
+      "translated": "처음 연결할 때 ORCA_PROTECTED_0001는 호스트에 자체 서버, 즉 함께 제공하며 최신 상태로 유지하는 고정 버전 런타임을 설정합니다. 따라서 호스트의 Node 버전이 잘못되었거나 빌드 도구가 없어도 더 이상 연결이 실패하지 않습니다. 이 기능을 켜는 별도 설정은 없습니다."
+    },
+    "/docs/ssh/:list:managed-orca-server:0": {
+      "sourceHash": "4e2457ab0149363ea1c798befa5b52c701eed86c8e6660a05f5b711ce04d0a0a",
+      "translated": "-   빈 호스트는 설정을 마친 뒤 관리형 서버에 연결됩니다.\n-   이미 ORCA_PROTECTED_0001 프로젝트가 있지만 열린 터미널은 없는 호스트는 다음 연결 시 프로젝트, 폴더, 프로젝트 그룹 및 열린 편집기 탭을 관리형 서버로 이동합니다.\n-   이 데스크톱에서 연 터미널이 있는 호스트는 이전 릴레이에서 계속 작동하며, 해당 터미널을 다시 시작하는 **`Move to a managed ORCA_PROTECTED_0002 server…`(관리형 Orca 서버로 이동…)** 옵션을 제공합니다. 열린 터미널이 다른 데스크톱에 속한 호스트는 그대로 두므로 이 데스크톱이 다른 데스크톱의 셸을 다시 시작하지 않습니다.\n-   관리형 서버를 실행할 수 없는 호스트는 현재 연결을 유지하며 **`Settings → SSH Hosts`(설정 → SSH 호스트)**에 그 이유가 표시됩니다."
+    },
+    "/docs/ssh/:paragraph:managed-orca-server:1": {
+      "sourceHash": "40b5e484ffd868ae760c724ec08bae6b6b47743fab51056282c9eb6faae99039",
+      "translated": "**`Settings → Managed servers`(설정 → 관리형 서버)**에서 각 서버를 관리합니다. 버전과 실행 중인 터미널을 확인하고, **`Update`(업데이트)** 또는 **`Roll back`(롤백)**하거나, 중단된 업데이트를 **`Recover`(복구)**하고, 서버를 **`Stop…`(중지…)** / **`Forget…`(잊기…)**할 수 있습니다. CLI에서도 `ORCA_PROTECTED_0001`을 사용하여 같은 작업을 수행할 수 있습니다. [CLI 참고](ORCA_PROTECTED_0002)를 참조합니다."
+    },
     "/docs/ssh/:heading:remote-runtime-on-the-host:0": {
       "sourceHash": "7a881ec0a2ada218d563bdbd214f9ad587586b535061664b489ec5921bf4cf05",
       "translated": "## 호스트의 원격 런타임"
     },
     "/docs/ssh/:paragraph:remote-runtime-on-the-host:0": {
-      "sourceHash": "befd7e12c8b8c71b781f237562a6f862d0fe70f43eaeaea4d782add2254183b4",
-      "translated": "처음 연결할 때 ORCA_PROTECTED_0001는 터미널, 파일, Git 및 에이전트를 지원하는 작은 릴레이를 원격 호스트에 설치합니다."
+      "sourceHash": "4fc71671930f191938ae14ac53291f04c80aeefcb22b14f6be1be3b0ce663a05",
+      "translated": "호스트가 관리형 서버 대신 대체 릴레이를 실행하는 경우, ORCA_PROTECTED_0001는 처음 연결할 때 터미널, 파일, Git 및 에이전트를 지원하도록 해당 릴레이를 설치합니다."
     },
     "/docs/ssh/:paragraph:remote-runtime-on-the-host:1": {
       "sourceHash": "0fa069f7ae0c34ea87bc58c349a7ce3e415dacf8f7c6287f96a928af3b2805b3",

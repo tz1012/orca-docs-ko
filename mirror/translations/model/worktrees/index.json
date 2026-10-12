@@ -23,8 +23,8 @@
       "translated": "## 모델"
     },
     "/docs/model/worktrees/:list:the-model:0": {
-      "sourceHash": "b0247c5d377c210885283bf7bbcd367360a72a701c841d17813198a1cb4bef91",
-      "translated": "-   각 저장소에는 **`base ref`(기본 참조)**가 있으며, 일반적으로 `ORCA_PROTECTED_0001`입니다.\n-   각 작업 트리에는 분기 기준인 **`start-from ref`(시작 참조)**가 있습니다.\n-   각 작업 트리에는 자체 브랜치, 디스크의 자체 파일 및 자체 에이전트 터미널이 있습니다.\n-   작업 트리를 삭제하면 디렉터리와 브랜치가 모두 제거됩니다(확인 필요). Git에서 체크아웃을 제거하도록 하면 제거 중에 채팅이나 파일 작업이 멈추지 않습니다. Git에서 체크아웃 제거를 완료하지 못하면 작업 공간이 목록에 남아 다시 시도할 수 있으며, 실패 유형상 가능한 경우 ORCA_PROTECTED_0002에서 **`Force Delete`(강제 삭제)**를 제공합니다. 병합되지 않은 커밋이 있을 수 있어 Git이 로컬 브랜치를 유지하면 ORCA_PROTECTED_0003에서 검토 단계를 제공할 수 있습니다. [보존된 브랜치](ORCA_PROTECTED_0004)를 참조합니다."
+      "sourceHash": "e79a8d56dda21be0443da789d1ac6873782f6bcd79d2c58b7d2edf4ea567d620",
+      "translated": "-   각 저장소에는 **기본 참조**(base ref)가 있으며, 일반적으로 `ORCA_PROTECTED_0001`입니다.\n-   각 작업 트리에는 분기 기준인 **분기 시작 참조**(start-from ref)가 있습니다.\n-   각 작업 트리에는 자체 브랜치, 디스크의 자체 파일 및 자체 에이전트 터미널이 있습니다.\n-   작업 트리를 삭제하면 디렉터리와 브랜치가 모두 제거됩니다(확인 필요). Git에서 체크아웃을 제거하도록 하면 제거 중에 채팅이나 파일 작업이 멈추지 않습니다. Git에서 체크아웃 제거를 완료하지 못하면 작업 공간이 목록에 남아 다시 시도할 수 있으며, 실패 유형상 가능한 경우 ORCA_PROTECTED_0002에서 **`Force Delete`(강제 삭제)**를 제공합니다. **`Force Delete`(강제 삭제)**는 분할 컨트롤이며, 화살표 메뉴의 **`Always force delete`(항상 강제 삭제)**를 선택하면 이후의 모든 작업 공간 삭제에 이 설정을 기억합니다. 병합되지 않은 커밋이 있을 수 있어 Git이 로컬 브랜치를 유지하면 ORCA_PROTECTED_0003에서 검토 단계를 제공할 수 있습니다. [보존된 브랜치](ORCA_PROTECTED_0004)를 참조합니다."
     },
     "/docs/model/worktrees/:heading:per-feature-lifecycle:0": {
       "sourceHash": "9f68a46ce57df35ed2b3b81c0f90a68d451cbe234df1209f224cb5a03a0c53a8",
@@ -87,8 +87,8 @@
       "translated": "여러 Git 저장소가 들어 있는 상위 폴더를 추가하면 ORCA_PROTECTED_0001는 선택한 저장소를 각각 가져오거나 하나의 프로젝트 그룹 아래에 묶을 수 있습니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:4": {
-      "sourceHash": "a1677fa4f263a2cb506fa38c0bbf991907bdc6ef4119e7995fd5c869617413a1",
-      "translated": "사이드바 위쪽의 **`Search`(검색)** 버튼은 [작업 트리 점프 팔레트](ORCA_PROTECTED_0001)(`ORCA_PROTECTED_0002`)를 엽니다. 키보드 탐색을 주로 사용하지 않는 사용자가 클릭으로 열 수 있는 동일한 화면입니다. 상태 표시줄에는 에이전트 활동이 인라인으로 표시되며, 읽지 않은 작업 트리는 배지 대신 굵게 표시됩니다."
+      "sourceHash": "ed9427be5a8f277b4584145042887caa0431fd9128baf019a0d7ac059c4782d2",
+      "translated": "사이드바 위쪽의 **`Search`(검색)** 버튼은 [작업 트리 점프 팔레트](ORCA_PROTECTED_0001)(`ORCA_PROTECTED_0002`)를 엽니다. 키보드 탐색을 주로 사용하지 않는 사용자가 클릭으로 열 수 있는 동일한 화면입니다. 상태 표시줄에는 에이전트 활동이 인라인으로 표시되며, 읽지 않은 작업 트리는 배지 대신 굵게 표시됩니다. ORCA_PROTECTED_0003는 재시작 후에도 왼쪽 사이드바가 열려 있었는지 기억하며, 다른 클라이언트에서 원격 작업 공간을 표시해도 로컬 사이드바 섹션은 펼쳐지지 않습니다."
     },
     "/docs/model/worktrees/:heading:multi-repo-project-groups-folder-workspaces:0": {
       "sourceHash": "7663df7a86330bd081d81770e54fa457d8c06348fefae684d29b919b58b3e46d",
@@ -191,8 +191,8 @@
       "translated": "장기 실행 작업을 계속 눈에 띄게 하려면 작업 트리를 해당 프로젝트 맨 위에 고정할 수 있으며, 작업 트리를 마우스 오른쪽 버튼으로 클릭하면 `archive`(보관) / `sleep`(절전) / `delete`(삭제) 작업이 표시됩니다. 키보드로 삭제를 시작하려면 작업 트리 또는 폴더 작업 공간에 마우스를 올리고 macOS에서는 `ORCA_PROTECTED_0001`, Windows/Linux에서는 `ORCA_PROTECTED_0002`를 누릅니다. 일반 확인 대화 상자는 그대로 나타납니다. 클릭할 때 `ORCA_PROTECTED_0003`(`ORCA_PROTECTED_0004`은 ORCA_PROTECTED_0005에서 사용)을 누르면 작업 트리를 다중 선택에 추가하고, `ORCA_PROTECTED_0006`를 누르면 연속 범위를 선택합니다. 선택한 작업 트리 중 하나를 마우스 오른쪽 버튼으로 클릭하면 선택 항목의 모든 작업 트리에 작업이 적용됩니다. 저장소 행 자체는 드래그하여 순서를 바꿀 수 있습니다. 행을 드래그할 때 중첩 대상은 넓고 안정적인 드롭 영역으로 표시됩니다. 행의 위나 아래로 드래그해 순서를 바꾸고, `ORCA_PROTECTED_0007`를 눌러 취소합니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:6": {
-      "sourceHash": "16e24a40c3dc82698786dd479f760eab148adab4aa354abace11b969ba50e3d5",
-      "translated": "작업 트리에 중첩된 하위 작업 트리가 있으면(예: 오케스트레이션 또는 상위 항목을 지정한 `ORCA_PROTECTED_0001`으로 생성한 경우) 컨텍스트 메뉴에 **`Sleep with Descendants (N)`(하위 항목과 함께 절전(N))** 및 **`Delete with Descendants…`(하위 항목과 함께 삭제…)**가 표시될 수 있습니다. 하위 항목과 함께 절전하면 선택한 작업 공간과 동일한 프로젝트, 저장소 및 호스트에 속하며 검증된 모든 중첩 하위 항목의 활성 패널을 닫습니다. 활성 터미널이나 브라우저 탭이 있는 작업 공간만 절전 대상이 됩니다. 하위 항목과 함께 삭제는 기존 연쇄 삭제 동작을 명시적으로 제공합니다. 오래된 계보 링크, 순환 및 호스트나 저장소 경계를 넘는 하위 항목은 제외됩니다."
+      "sourceHash": "da252e590f3698e133444a18005adf620e5f520a04156b3f93868377e7e250f0",
+      "translated": "작업 트리에 중첩된 하위 작업 트리가 있으면(예: 오케스트레이션 또는 상위 항목을 지정한 `ORCA_PROTECTED_0001`으로 생성한 경우) 컨텍스트 메뉴에 **`Sleep with Descendants (N)`(하위 항목과 함께 절전(N))** 및 **`Delete with Descendants…`(하위 항목과 함께 삭제…)**가 표시될 수 있습니다. 하위 항목과 함께 절전하면 선택한 작업 공간과 동일한 프로젝트, 저장소 및 호스트에 속하며 검증된 모든 중첩 하위 항목의 활성 패널을 닫습니다. 활성 터미널이나 브라우저 탭이 있는 작업 공간만 절전 대상이 됩니다. 하위 항목과 함께 삭제는 기존 연쇄 삭제 동작을 명시적으로 제공하며 백그라운드에서 실행되므로 확인 절차가 ORCA_PROTECTED_0002의 나머지 부분을 차단하지 않습니다. 오래된 계보 링크, 순환 및 호스트나 저장소 경계를 넘는 하위 항목은 제외됩니다."
     },
     "/docs/model/worktrees/:heading:create-dialog-project-run-on-agent-and-task-links:0": {
       "sourceHash": "426986dc868cd9c631874f147afbb46b6cb8bfae3d14a2d7e555673532403268",
@@ -203,8 +203,8 @@
       "translated": "`Create Workspace`(작업 공간 생성) 대화 상자는 **`Project`(프로젝트)**와 **`Run on`(실행 위치)**에 자동 완성 콤보 상자를 사용합니다."
     },
     "/docs/model/worktrees/:list:create-dialog-project-run-on-agent-and-task-links:0": {
-      "sourceHash": "ade2ad1281025b06b94566336ed8c069a7d1ac3ff4803c2c0e540688a539aed4",
-      "translated": "-   입력하여 필터링하고 `Enter`(Enter 키)를 누르면 선택된 행을 확정합니다.\n-   **`Project`(프로젝트)**는 **`Add a new project`(새 프로젝트 추가)**를 항상 맨 아래에 고정합니다. 아직 프로젝트가 없는 설치 환경에서도 생성 흐름이 막히지 않습니다.\n-   **`Run on`(실행 위치)**에는 준비된 호스트와 레시피뿐 아니라 해당 시스템에서 프로젝트 설정이 아직 필요한 호스트도 표시됩니다. 설정이 필요한 호스트에서는 생성 양식을 벗어나지 않고 **`Set project location`(프로젝트 위치 설정)**을 선택한 다음 기존 ORCA_PROTECTED_0001를 찾아 선택하거나 Git 저장소를 해당 호스트에 복제합니다. ORCA_PROTECTED_0002는 새로 준비된 위치를 선택하므로 작업 트리 생성을 계속할 수 있습니다. 연결이 끊긴 SSH/원격 호스트에는 실행 대상으로 선택하지 않고 **`Connect`(연결)** 옵션을 제공할 수 있습니다. **`Add host`(호스트 추가)**는 SSH 또는 Remote ORCA_PROTECTED_0003 Server 대상에 대해 계속 고정됩니다.\n-   **`Agent`(에이전트)** 선택기는 접힌 상태나 펼친 상태에서 생성 시 선택한 에이전트를 **`Set as default`(기본값으로 설정)**할 수 있으며 `Blank Terminal`(빈 터미널)도 포함합니다.\n-   이름 필드에서 ORCA_PROTECTED_0004 PR, ORCA_PROTECTED_0005 이슈, GitLab MR 또는 **`Jira`(Jira)** 이슈를 연결합니다. Jira URL을 붙여 넣거나 **`Jira`(Jira)** 모드에서 검색할 수 있습니다. 연결된 이슈는 작업 트리 카드에 표시됩니다. [Jira 항목 서랍](ORCA_PROTECTED_0006)을 참조합니다."
+      "sourceHash": "995f98ba671eedfe73d3cd1f874c7bcf23f08689590a3fef4dd46cf0a995311f",
+      "translated": "-   입력하여 필터링하고 `Enter`(Enter 키)를 누르면 선택된 행을 확정합니다.\n-   **`Project`(프로젝트)**는 **`Add a new project`(새 프로젝트 추가)**를 항상 맨 아래에 고정합니다. 아직 프로젝트가 없는 설치 환경에서도 생성 흐름이 막히지 않습니다.\n-   **`Run on`(실행 위치)**에는 준비된 호스트와 레시피뿐 아니라 해당 시스템에서 프로젝트 설정이 아직 필요한 호스트도 표시됩니다. 설정이 필요한 호스트에서는 생성 양식을 벗어나지 않고 **`Set project location`(프로젝트 위치 설정)**을 선택한 다음 기존 ORCA_PROTECTED_0001를 찾아 선택하거나 Git 저장소를 해당 호스트에 복제합니다. ORCA_PROTECTED_0002는 새로 준비된 위치를 선택하므로 작업 트리 생성을 계속할 수 있습니다. 연결이 끊긴 SSH/원격 호스트에는 실행 대상으로 선택하지 않고 **`Connect`(연결)** 옵션을 제공할 수 있습니다. **`Add host`(호스트 추가)**는 SSH 또는 Remote ORCA_PROTECTED_0003 Server 대상에 대해 계속 고정됩니다.\n-   **`Agent`(에이전트)** 선택기는 접힌 상태나 펼친 상태에서 생성 시 선택한 에이전트를 **`Set as default`(기본값으로 설정)**할 수 있으며 `Blank Terminal`(빈 터미널)도 포함합니다.\n-   이름 필드에서 ORCA_PROTECTED_0004 PR, ORCA_PROTECTED_0005 이슈, GitLab MR 또는 Jira 이슈를 연결합니다. Jira URL을 붙여 넣거나 **`Jira`(Jira)** 모드에서 검색할 수 있습니다. 연결된 이슈는 작업 트리 카드에 표시됩니다. [Jira 항목 서랍](ORCA_PROTECTED_0006)을 참조합니다. 이후에는 **`Edit Worktree Details`(작업 트리 세부 정보 편집)**에서 리뷰와 작업을 더 첨부할 수 있습니다."
     },
     "/docs/model/worktrees/:paragraph:create-dialog-project-run-on-agent-and-task-links:1": {
       "sourceHash": "f20a249078c4b8039310d795d5cab606a21e86d5c90f02dffa8fd0ef048349cb",
@@ -215,8 +215,8 @@
       "translated": "상위 작업 트리에는 중첩된 하위 작업 트리가 **`N children`(하위 N개)** 칩 아래에 표시됩니다. 칩을 클릭하면 이를 표시하거나 숨길 수 있습니다. 키보드로 같은 작업을 수행하려면 [`Settings → Shortcuts`(설정 → 단축키)](ORCA_PROTECTED_0001)에서 **`Toggle Child Workspaces`(하위 작업 공간 전환)**를 할당합니다. 포인터 아래의 작업 트리에 적용되며, 가리키는 항목이 없으면 활성 작업 트리에 적용되어 해당 카드의 칩과 정확히 같은 작업을 수행합니다."
     },
     "/docs/model/worktrees/:paragraph:sidebar-layout:8": {
-      "sourceHash": "7062fea6299eedce682be963a084e7d81188cd424f3f3fdb465001aefee31d3e",
-      "translated": "사이드바에서 작업 트리 제목을 두 번 클릭하면 인라인으로 이름을 변경할 수 있습니다. 카드의 다른 위치를 두 번 클릭하면 기존처럼 전체 편집 대화 상자가 열립니다. **`Edit Worktree Details`(작업 트리 세부 정보 편집)**에서 이슈 필드는 **ORCA_PROTECTED_0001** 또는 **ORCA_PROTECTED_0002**를 허용합니다(필드의 칩을 사용하며 URL을 붙여 넣으면 자동으로 감지합니다). 작업 공간마다 하나의 이슈만 연결할 수 있으며, 제공자를 변경하거나 필드를 지우면 이전 연결이 해제됩니다. 호스트 연결이 끊긴 SSH 작업 공간에서는 카드 제목 행에 인라인 재연결 컨트롤이 표시될 수 있습니다([SSH 작업 트리](ORCA_PROTECTED_0003) 참조)."
+      "sourceHash": "46fe5aa0eecfe8171e5b69650156a62056bfa9eca509ddb52704d83adc5b788e",
+      "translated": "사이드바에서 작업 트리 제목을 두 번 클릭하면 인라인으로 이름을 변경할 수 있습니다. 카드의 다른 위치를 두 번 클릭하면 기존처럼 전체 편집 대화 상자가 열립니다. **`Edit Worktree Details`(작업 트리 세부 정보 편집)**에는 하나의 작업 공간에 여러 리뷰와 작업을 첨부하는 **`Linked work`(연결된 작업)** 섹션이 있습니다. ORCA_PROTECTED_0001, GitLab, ORCA_PROTECTED_0002 또는 Jira URL을 붙여 넣거나 연결된 제공자에서 검색합니다. 첨부된 항목은 개수와 함께 **`Reviews`(리뷰)**(풀 리퀘스트 및 병합 요청)와 **`Issues & tasks`(이슈 및 작업)**로 그룹화되며 작업 공간 카드에는 항목이 쌓여 표시됩니다. 링크는 작업 공간의 저장소에 속해야 합니다. 호스트 연결이 끊긴 SSH 작업 공간에서는 카드 제목 행에 인라인 재연결 컨트롤이 표시될 수 있습니다([SSH 작업 트리](ORCA_PROTECTED_0003) 참조)."
     },
     "/docs/model/worktrees/:heading:resource-manager-cleanup:0": {
       "sourceHash": "9be1e92601a7a0a0604a36e76c583e8c113ace15f63405c5741721a69e2913a4",

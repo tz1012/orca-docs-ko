@@ -1,7 +1,7 @@
 ---
 title: "에이전트 피드"
 sourceUrl: https://www.onorca.dev/docs/activity
-checkedAt: "2026-10-07T03:54:46.558Z"
+checkedAt: "2026-10-12T01:04:28.526Z"
 editUrl: false
 prev: /orca-docs-ko/docs/notifications/
 next: /orca-docs-ko/docs/recipes/parallel-agents/
@@ -18,6 +18,8 @@ translationNotice:
 항목은 기본적으로 켜져 있습니다. 마지막 방문 이후 새로운 이벤트가 도착하면 읽지 않은 배지가 표시됩니다. 항목을 클릭하면 일치하는 작업 트리 및 창으로 이동합니다. Orca이 시스템 알림에서 수행하는 것과 동일한 전달입니다.
 
 피드 필터에 초점을 맞추려면 macOS에서는 `Cmd+F`을 사용하고 Windows 및 Linux에서는 `Ctrl+F`를 사용하세요. 내장된 터미널에 포커스가 있으면 동일한 바로 가기가 터미널에 그대로 유지됩니다.
+
+피드 헤더에는 현재 적용된 필터가 표시됩니다. 에이전트 행을 마우스 오른쪽 버튼으로 클릭하면 사용 가능한 작업 메뉴를 열 수 있으며, `Cmd`(Windows / Linux에서는 `Ctrl`)을 누른 채 여러 행을 선택하면 하나의 동작을 모든 행에 한 번에 적용할 수 있습니다. 행에서 동작을 실행해도 활동 보기는 그대로 유지됩니다.
 
 ## 무엇이 나타나는가
 

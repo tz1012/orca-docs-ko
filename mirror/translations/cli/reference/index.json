@@ -283,24 +283,40 @@
       "translated": "예약된 프롬프트:"
     },
     "/docs/cli/reference/:code:automations-environments-and-hooks:0": {
-      "sourceHash": "5e4836457ad17b3b41bf35b2a7eeb4d20fc34573d9234debb88a0fca7193416c",
-      "translated": "````\nORCA_PROTECTED_0001\n````"
+      "sourceHash": "8138f23530a8c33af58869532c232c31922f4d9a9174233577ba949d7305dc80",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/reference/:paragraph:automations-environments-and-hooks:1": {
+      "sourceHash": "02a3e6bfa91de62dd28c81b891dd73529719b9bb8b0537e3f82c24f217ea95ae",
+      "translated": "`ORCA_PROTECTED_0001` 옵션은 호스트의 기본값을 변경하지 않고 특정 자동화의 새 실행에 사용할 모델 또는 노력 수준을 설정합니다. [예약 자동화](ORCA_PROTECTED_0002)를 참조합니다."
+    },
+    "/docs/cli/reference/:code:automations-environments-and-hooks:1": {
+      "sourceHash": "18101b46daf151fd0a4799a800388184e6d009bf37b01a60f06bbe3758e3d6c1",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/reference/:paragraph:automations-environments-and-hooks:2": {
+      "sourceHash": "bc291739e746f5a5da4ee0b27231b39eb1b33b147631e99237f7d3ce680d646d",
+      "translated": "관리형 SSH 서버:"
+    },
+    "/docs/cli/reference/:code:automations-environments-and-hooks:2": {
+      "sourceHash": "43b8a92de6aa9c58d52e1fa304e6bfa221862929cf8ad74a017db70557756bef",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/cli/reference/:paragraph:automations-environments-and-hooks:3": {
+      "sourceHash": "2a1c430ec03a590db50e7001005dddb389308134f1f7b8af14ce98c1cb298a05",
+      "translated": "`ORCA_PROTECTED_0001` 옵션은 이 컴퓨터가 SSH를 통해 배포한 관리형 ORCA_PROTECTED_0002 서버를 지정합니다(**`Settings → Managed servers`(설정 → 관리형 서버)**와 동일한 동작). `ORCA_PROTECTED_0003`은 서버를 폐기하고 `ORCA_PROTECTED_0004`은 호스트가 사라진 서버의 연결을 해제합니다. [SSH 작업 트리 → 관리형 ORCA_PROTECTED_0005 서버](ORCA_PROTECTED_0006)를 참조합니다."
+    },
+    "/docs/cli/reference/:paragraph:automations-environments-and-hooks:4": {
       "sourceHash": "303c797478891c66c9233c91c145cdc696225637d92de388e41470c7a5347d35",
       "translated": "원격 런타임 환경:"
     },
-    "/docs/cli/reference/:code:automations-environments-and-hooks:1": {
-      "sourceHash": "43b8a92de6aa9c58d52e1fa304e6bfa221862929cf8ad74a017db70557756bef",
-      "translated": "````\nORCA_PROTECTED_0001\n````"
-    },
-    "/docs/cli/reference/:paragraph:automations-environments-and-hooks:2": {
+    "/docs/cli/reference/:paragraph:automations-environments-and-hooks:5": {
       "sourceHash": "eb161aa5bb5ee0a7faa85ee61262e3f725fb20a378b7a67977e6a78797e8c99d",
-      "translated": "에이전트 상태 후크:"
+      "translated": "에이전트 상태 훅:"
     },
-    "/docs/cli/reference/:code:automations-environments-and-hooks:2": {
+    "/docs/cli/reference/:code:automations-environments-and-hooks:3": {
       "sourceHash": "2c50d0ca31b349ab881805fd64877ea61b4e37611be58e4b08685cbad21c584e",
-      "translated": "````\nORCA_PROTECTED_0001\n````"
+      "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/reference/:heading:agent-habits:0": {
       "sourceHash": "114d233788aad195e2316cdf2c7af6460655165ed64c11af6db562485b527f95",
