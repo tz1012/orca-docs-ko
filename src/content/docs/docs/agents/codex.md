@@ -1,7 +1,7 @@
 ---
 title: "Orca의 Codex"
 sourceUrl: https://www.onorca.dev/docs/agents/codex
-checkedAt: "2026-10-12T01:04:28.526Z"
+checkedAt: "2026-10-16T01:04:49.331Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/glm-agent/
 next: /orca-docs-ko/docs/agents/cursor-cli/

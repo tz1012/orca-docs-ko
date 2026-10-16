@@ -1,7 +1,7 @@
 ---
 title: "에이전트 세션 기록"
 sourceUrl: https://www.onorca.dev/docs/agents/session-history
-checkedAt: "2026-10-12T01:04:28.526Z"
+checkedAt: "2026-10-16T01:04:49.331Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/native-chat/
 next: /orca-docs-ko/docs/agents/hibernation/
@@ -39,9 +39,9 @@ Session History는 연결된 다른 컴퓨터와 페어링된 Orca Servers(서�
 
 검색 상자 옆의 보기 옵션 메뉴에서 검색할 에이전트와 세션 그룹화 방식을 제어합니다.
 
--   **`Agents`(에이전트)** — 개별 CLI(Claude, Codex, Muse Code, Hermes, Pi, OMP, Prime Agent, Cursor, Gemini, Antigravity, Rovo Dev, Copilot, OpenCode, Grok, OpenClaw, Devin, Droid, Kimi, CodeBuddy, ZCode, Qoder)를 켜거나 끕니다. 비활성화된 에이전트는 스캔에서 제외됩니다. `Agents`(에이전트) 헤더의 **`Select all`(모두 선택)** / **`Clear`(지우기)**를 사용하면 모든 에이전트를 한 번에 전환할 수 있습니다. **`Clear`(지우기)**를 선택하면 아무것도 선택되지 않으므로 긴 목록을 하나씩 해제하지 않고 필요한 CLI만 켤 수 있습니다. 선택 항목이 비어 있으면 일반적인 빈 필터 메시지 대신 **`No agents selected`(선택한 에이전트 없음)**가 표시됩니다.
--   **`Group`(그룹)** — `Project`(프로젝트), `Folder`(폴더)(`cwd`마다 제목 하나) 또는 `Agent`(에이전트)(CLI마다 제목 하나)로 그룹화합니다.
--   **`Hide empty sessions`(빈 세션 숨기기)** — 기록된 메시지가 0개인 세션을 제외합니다.
+-   **`Agents`(에이전트)** — 개별 CLI(Claude, Codex, Muse Code, Hermes, Pi, OMP, Prime Agent, Cursor, Gemini, Antigravity, Rovo Dev, Copilot, OpenCode, Grok, OpenClaw, Devin, Droid, Kimi, Kiro, CodeBuddy, ZCode, Qoder)를 켜거나 끕니다. 비활성화된 에이전트는 스캔에서 건너뜁니다. `Agents`(에이전트) 헤더의 **`Select all`(모두 선택)** / **`Clear`(지우기)**를 사용하면 모든 에이전트를 한 번에 전환할 수 있습니다. **`Clear`(지우기)**는 아무것도 선택하지 않은 상태로 만들어 긴 목록의 선택을 일일이 해제하지 않고 원하는 CLI만 켤 수 있게 합니다. 선택 항목이 비어 있으면 일반적인 빈 필터 메시지 대신 **`No agents selected`(선택된 에이전트 없음)**가 표시됩니다.
+-   **`Group`(그룹)** — `Project`, `Folder`(`cwd`마다 헤더 하나) 또는 `Agent`(CLI마다 헤더 하나)로 그룹화합니다.
+-   **`Hide empty sessions`(빈 세션 숨기기)** — 기록된 메시지가 없는 세션을 제외합니다.
 
 세션 목록 위의 정렬 컨트롤을 사용해 탐색 결과를 **`Last updated`(최근 업데이트순)** 또는 **`Created`(생성순)**으로 정렬합니다. 검색 중에는 이 컨트롤에서 **`Most relevant`(관련도순)** 또는 **`Newest`(최신순)**을 선택할 수 있습니다. 관련도가 같은 결과는 더 최신 세션을 먼저 표시합니다. 검색 정렬은 탐색 정렬과 별도로 기억됩니다. 검색이 스캔 한도에 도달하면 결과 아래의 **`Show more`(더 보기)**를 선택해 더 이전 범위까지 검색합니다.
 
@@ -49,9 +49,9 @@ Session History는 연결된 다른 컴퓨터와 페어링된 Orca Servers(서�
 
 세션 행을 클릭하면 작업 디렉터리, 브랜치, 모델, 메시지 수, **`First prompt`(첫 번째 프롬프트)**, 최신 대화 차례 등 세부 정보가 열립니다. 세부 정보를 펼치면 **`First prompt`(첫 번째 프롬프트)**가 대화 기록에서 잘리지 않은 첫 사용자 메시지를 불러옵니다(목록 행에는 검색용 짧은 미리 보기만 유지됩니다). 해당 카드의 **`Copy`(복사)**를 사용하면 전체 요청을 클립보드에 넣을 수 있어 로그를 다시 열지 않고도 긴 프롬프트를 재사용할 때 유용합니다. 활성화된 세션 행을 작업 공간으로 끌어 재개할 수도 있습니다. 행의 작업에서 다음을 수행할 수 있습니다.
 
--   **`Resume`(재개)** — 세션의 `cwd`에서 새 터미널을 열고 에이전트의 재개 명령(예: `claude --resume <id>`, `codex resume <id>`, `muse resume <session-id>`, `pi --session <session_file>`, `prime-agent --resume <path>`, `cursor-agent --resume <id>`, `acli rovodev run --restore <id>`)을 실행합니다. 원래 세션에서 설정한 경우 Codex 세션은 `CODEX_HOME`도 다시 내보냅니다.
+-   **`Resume`(재개)** — 세션의 `cwd`에서 새 터미널을 열고 에이전트의 재개 명령(예: `claude --resume <id>`, `codex resume <id>`, `muse resume <session-id>`, `pi --session <session_file>`, `prime-agent --resume <path>`, `cursor-agent --resume <id>`, `acli rovodev run --restore <id>`)을 실행합니다. 원래 세션에서 `CODEX_HOME`을 설정한 경우 Codex 세션은 이 값도 다시 내보냅니다.
 
--   **`Resume in New Native Chat`(새 네이티브 채팅에서 재개)** — 지원되는 세션의 이전 대화가 표시되는 새 구조화 채팅 탭을 엽니다(Claude는 원래 워크스페이스에서 재개해야 하며 Codex는 다른 워크스페이스에서도 재개할 수 있습니다). **`Resume in New CLI`(새 CLI에서 재개)**는 반대로 구조화 채팅의 대화를 터미널로 분기합니다. 두 동작 모두 탭의 마우스 오른쪽 버튼 메뉴에서도 사용할 수 있습니다. 대화가 구조화 채팅용으로 예약되면 해당 세션에서 터미널 **`Resume`(재개)**를 더 이상 사용할 수 없습니다. 지원 여부는 [Chat UI](/orca-docs-ko/docs/agents/native-chat/)를 참조합니다.
+-   **`Resume in New Native Chat`(새 네이티브 채팅에서 재개)** — 지원되는 세션에서 이전 대화를 표시하는 새 구조화된 채팅 탭을 엽니다. Claude는 원래 작업 공간에서 재개해야 하고, Codex는 다른 작업 공간에서도 재개할 수 있으며, 폴더 작업 공간에서 시작한 채팅은 같은 폴더에서 재개됩니다. **`Resume in New CLI`(새 CLI에서 재개)**는 반대로 구조화된 채팅의 대화를 터미널로 분기합니다. 두 작업 모두 탭의 오른쪽 클릭 메뉴에도 있습니다. 대화가 구조화된 채팅용으로 예약되면 터미널의 **`Resume`(재개)**은 더 이상 사용할 수 없습니다. 지원 여부는 [채팅 UI](/orca-docs-ko/docs/agents/native-chat/)를 참조하세요.
 
 Pi는 단순 세션 ID가 아니라 후크에서 보고한 디스크상의 세션 파일(`--session <path>`)에서 재개합니다. 해당 파일이 없으면 세션 ID가 있더라도 그 행에서 `Resume`(재개)을 사용할 수 없습니다.
 

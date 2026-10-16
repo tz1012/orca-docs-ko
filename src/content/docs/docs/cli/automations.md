@@ -1,7 +1,7 @@
 ---
 title: "예약된 자동화"
 sourceUrl: https://www.onorca.dev/docs/cli/automations
-checkedAt: "2026-10-12T01:04:28.526Z"
+checkedAt: "2026-10-16T01:04:49.331Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/orchestration/
 next: /orca-docs-ko/docs/cli/computer-use/
@@ -29,11 +29,11 @@ orca automations create \
   --json
 ````
 
-`--trigger`은 `hourly`, `daily`, `weekdays`, `weekly`와 같은 사전 설정과 크론 표현식 또는 RRULE 문자열을 허용합니다. 일정이 런타임 기본값 대신 특정 IANA 시간대를 따라야 하는 경우 `--timezone <tz>`을 사용하세요.
+`--trigger`은 `hourly`, `daily`, `weekdays`, `weekly` 같은 프리셋뿐 아니라 cron 표현식 또는 RRULE 문자열도 받습니다. 런타임 기본값이 아닌 특정 IANA 시간대를 따르도록 예약하려면 `--timezone <tz>`을 사용합니다. Tuesday/Thursday/Saturday처럼 프리셋 레이블이 없는 여러 요일 규칙은 **`Invalid schedule`(잘못된 일정)** 대신 저장된 일정으로 표시됩니다.
 
 ## 실행이 발생하는 위치 선택
 
-각 실행이 저장소에서 작업을 생성하거나 선택해야 하는 경우 `--repo <selector>`을 사용하세요. 대신 기존 Orca 작업 트리 내에서 자동화를 실행해야 하는 경우 `--workspace <selector>`를 사용하세요.
+실행할 때마다 저장소에서 작업을 만들거나 선택해야 하면 `--repo <selector>`을 사용합니다. 자동화가 기존 Orca 작업 트리나 폴더 작업 공간 안에서 실행되어야 하면 대신 `--workspace <selector>`를 사용합니다.
 
 ````
 orca automations create \

@@ -1,7 +1,7 @@
 ---
 title: "원격 Orca 서버"
 sourceUrl: https://www.onorca.dev/docs/remote-servers
-checkedAt: "2026-10-12T01:04:28.526Z"
+checkedAt: "2026-10-16T01:04:49.331Z"
 editUrl: false
 prev: /orca-docs-ko/docs/ssh/
 next: /orca-docs-ko/docs/cli/overview/
@@ -170,6 +170,20 @@ orca serve --pairing-address 100.64.1.20 --mobile-pairing
 ```
 
 휴대전화를 동일한 tailnet에 연결한 상태에서 Orca Mobile을 열고 **`Pair`(페어링)**를 선택한 다음 터미널의 QR 코드를 스캔하거나 출력된 링크를 붙여 넣습니다.
+
+### `orca serve`을 서비스로 실행
+
+서비스 관리자 아래에서 서버를 계속 실행하려면 `orca serve`가 자체 프로세스를 감독하고 사용자별 서비스를 설치하도록 할 수 있습니다.
+
+```
+orca serve service install --port 6768
+orca serve service status
+orca serve service uninstall
+```
+
+`install`은 이 프로필에 대해 `orca serve --supervise --no-pairing`를 실행하는 LaunchAgent(macOS) 또는 systemd 사용자 유닛(Linux)을 작성합니다. 감독자는 반복해서 실패할 때 계속 순환하지 않고 점점 길어지는 지연 시간으로 서버를 재시작하며, 업데이트가 앱을 교체하는 동안 기다립니다. 서비스는 로그에 페어링 링크를 출력하지 않습니다. 데스크톱 앱에서 클라이언트를 페어링하거나 서비스를 중지한 상태에서 터미널에서 `orca serve`를 실행합니다. Linux에서는 lingering을 켜지 않으면 로그아웃할 때 서비스가 중지되며(`loginctl enable-linger`), 설치 과정에서 이 상태를 보고합니다. `status`는 실행 중인지 알려 주고, `uninstall`은 터미널 데몬과 세션은 계속 실행한 채 서비스를 중지하고 유닛을 제거합니다. 아직 Windows에서는 이러한 서비스 명령을 사용할 수 없습니다.
+
+다른 서비스 관리자나 컨테이너가 이미 프로세스를 재시작한다면 `orca serve --supervise`을 직접 사용합니다.
 
 ## 데스크톱 앱과 `orca serve` 중 선택하기
 

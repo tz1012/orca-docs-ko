@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 참조"
 sourceUrl: https://www.onorca.dev/docs/cli/reference
-checkedAt: "2026-10-12T01:04:28.526Z"
+checkedAt: "2026-10-16T01:04:49.331Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/overview/
 next: /orca-docs-ko/docs/cli/orchestration/
@@ -59,13 +59,20 @@ orca host list --json
 
 ## 런타임 명령
 
-````
+```
 orca open --json
 orca status --json
 orca serve --port 6768 --pairing-address 100.64.1.20 --json
-````
+orca serve --supervise --json
+orca serve service install --port 6768 --dry-run
+orca serve service status --json
+orca serve service uninstall --json
+orca serve restore resume --json
+```
 
 `orca serve`은 데스크톱 창을 열지 않고 포그라운드에서 런타임 서버를 시작합니다. [원격 Orca 서버](/orca-docs-ko/docs/remote-servers/) 또는 헤드리스 환경에 사용하고 `Ctrl-C`로 중지합니다.
+
+`orca serve --supervise`은 서비스 관리자를 위한 명령입니다. 서버가 중지되면 종료하는 대신 점점 길어지는 지연 시간으로 자체 재시작하고, 업데이트가 앱을 교체하는 동안 기다리며, 반복해서 실패하면 재시도를 중단합니다. `orca serve service install`는 이 프로필에 대해 `orca serve --supervise --no-pairing`을 실행하는 사용자별 LaunchAgent(macOS) 또는 systemd 사용자 유닛(Linux)을 작성합니다. `orca serve service status`는 실행 중인지 보고하고 `orca serve service uninstall`는 서비스를 중지하고 제거합니다. `orca serve restore resume`은 자동 터미널 복원의 일시 중지를 해제하고 이전 클라이언트가 요청한 복원 목록을 표시합니다. 아직 Windows에서는 이 명령을 사용할 수 없으며, 서비스 및 감독자 명령을 사용하려면 머신에 Orca 앱이 설치되어 있어야 합니다. [원격 Orca 서버 → `orca serve`을 서비스로 실행](/orca-docs-ko/docs/remote-servers/#orca-serve-as-a-service)을 참조하세요.
 
 ## 저장소
 
@@ -129,6 +136,39 @@ orca worktree set --worktree active --pr null --gitlab-mr null --json
 ```
 
 `--pr`은 GitHub 풀 리퀘스트 번호입니다. `--gitlab-issue` 플래그는 이슈 번호 또는 `#42`를 허용하며, `--gitlab-mr` 플래그는 병합 요청 번호 또는 `!77`을 허용합니다. GitLab 플래그는 자체 호스팅 인스턴스와 중첩 그룹을 포함한 HTTP(S) 이슈 또는 병합 요청 URL도 허용합니다. 단, URL의 호스트와 프로젝트가 작업 공간에 저장된 GitLab 소스 컨텍스트 또는 저장소의 원격과 일치해야 합니다. 플래그를 생략하면 해당 링크가 변경되지 않습니다. `set`에서 리터럴 `null`을 지정하면 명시한 링크만 지워지며, `create` 명령에서는 `null`을 허용하지 않습니다. 제공자별 필드는 분리되어 있으므로 GitLab 링크를 설정해도 GitHub 및 Linear 링크는 유지됩니다.
+
+## 기존 작업 공간에서 에이전트 시작
+
+```
+orca agent launch --agent codex --json
+orca agent launch --agent codex --model gpt-6-astra --effort high --prompt "Write the design doc" --json
+orca agent launch --agent claude --worktree path:/projects/myapp --focus --json
+```
+
+`agent launch`는 새 에이전트 탭과 같은 방식으로 에이전트를 시작합니다. [채팅 UI](/orca-docs-ko/docs/agents/native-chat/) 설정이 켜져 있고 에이전트와 호스트가 지원하면 구조화된 채팅으로, 그렇지 않으면 터미널로 시작합니다. 결과에는 열린 화면(`outcome.kind`)과 그 이유가 표시됩니다. `--worktree`의 기본값은 현재 디렉터리를 포함하는 작업 트리 또는 폴더 작업 공간입니다. 완전히 새로운 체크아웃에는 `orca worktree create --agent`를 사용합니다. `--model`과 `--effort`(`--model` 필요)은 어느 화면에도 적용되며, `--focus`를 전달하지 않으면 탭이 포커스를 가져오지 않고 열립니다. 시작 응답을 잃어버렸다면 두 번째 에이전트를 시작하지 말고 같은 호스트의 같은 디렉터리에서 동일한 명령을 `--retry-launch <operationId>`과 함께 다시 실행합니다.
+
+## 참조
+
+작업 공간은 저장소 외부 소스를 포함해 여러 검토와 이슈를 연결할 수 있습니다.
+
+```
+orca reference list --worktree name:api --json
+orca reference add https://github.com/acme/api/pull/5123 https://linear.app/acme/issue/STA-1234 --worktree name:api --json
+orca reference remove https://github.com/acme/api/pull/5123 --worktree name:api --json
+orca reference remove --key '<key-from-list>' --worktree name:api --json
+orca worktree create --name fix --reference https://github.com/acme/api/pull/5123 --reference https://linear.app/acme/issue/STA-1234 --json
+orca reference find STA-1234 --json
+```
+
+-   **쓰기는** 전체 URL을 받습니다. `remove --key`은 URL이 없는 `list`의 이전 링크도 처리합니다. 중복 추가와 존재하지 않는 항목 제거는 아무 작업도 하지 않으며 관련 없는 링크는 보존됩니다. 연결된 이슈 플래그(`--pr`, `--gitlab-issue`, `--linear-issue`)와 `--reference`은 한 명령에서 함께 사용할 수 없습니다.
+-   **찾기는** 전체 URL 또는 `STA-1234` 같은 기본 이슈 키를 받으며 숫자만 입력하면 거부됩니다. 저장된 메타데이터만 읽고 공급자 요청이나 대화 기록 검색은 하지 않으며, 일치하는 작업 공간과 연결된 에이전트를 각 에이전트의 `linked` 상태 및 터미널 또는 사서함 주소와 함께 반환합니다. 대화 텍스트를 검색하려면 `orca search`를 사용합니다.
+
+그런 다음 찾은 에이전트의 명시적 주소로 메시지를 보냅니다.
+
+```
+orca terminal send --terminal '<terminal-from-find>' --text 'Status?' --enter
+orca orchestration send --to '<mailbox-from-find>' --subject 'Status?' --type question
+```
 
 ## 터미널
 

@@ -35,16 +35,16 @@
       "translated": "````\nORCA_PROTECTED_0001\n````"
     },
     "/docs/cli/automations/:paragraph:create-a-safe-first-automation:1": {
-      "sourceHash": "40d5caa1e1081da2d62842404ba29b9b178728afbd366128bd39b1230d74b26b",
-      "translated": "`ORCA_PROTECTED_0001`은 `ORCA_PROTECTED_0002`, `ORCA_PROTECTED_0003`, `ORCA_PROTECTED_0004`, `ORCA_PROTECTED_0005`와 같은 사전 설정과 크론 표현식 또는 RRULE 문자열을 허용합니다. 일정이 런타임 기본값 대신 특정 IANA 시간대를 따라야 하는 경우 `ORCA_PROTECTED_0006`을 사용하세요."
+      "sourceHash": "8bb6ca21146e61c1594d485502bae8a45e222e052f752871832db4a64ed69eaf",
+      "translated": "`ORCA_PROTECTED_0001`은 `ORCA_PROTECTED_0002`, `ORCA_PROTECTED_0003`, `ORCA_PROTECTED_0004`, `ORCA_PROTECTED_0005` 같은 프리셋뿐 아니라 cron 표현식 또는 RRULE 문자열도 받습니다. 런타임 기본값이 아닌 특정 IANA 시간대를 따르도록 예약하려면 `ORCA_PROTECTED_0006`을 사용합니다. ORCA_PROTECTED_0007처럼 프리셋 레이블이 없는 여러 요일 규칙은 **`Invalid schedule`(잘못된 일정)** 대신 저장된 일정으로 표시됩니다."
     },
     "/docs/cli/automations/:heading:choose-where-runs-happen:0": {
       "sourceHash": "d62a57264726eb9920a42f3aaec804ce297025509cea20898c41d926289440a3",
       "translated": "## 실행이 발생하는 위치 선택"
     },
     "/docs/cli/automations/:paragraph:choose-where-runs-happen:0": {
-      "sourceHash": "04224d45eff18b8c6487ea3583cb73f7ea0be6875846bf27078f0de7612dcfb5",
-      "translated": "각 실행이 저장소에서 작업을 생성하거나 선택해야 하는 경우 `ORCA_PROTECTED_0001`을 사용하세요. 대신 기존 ORCA_PROTECTED_0003 작업 트리 내에서 자동화를 실행해야 하는 경우 `ORCA_PROTECTED_0002`를 사용하세요."
+      "sourceHash": "b1aec7c5f2055e6cd525790b616b464ed03a3e88c837588572de7f1887a21927",
+      "translated": "실행할 때마다 저장소에서 작업을 만들거나 선택해야 하면 `ORCA_PROTECTED_0001`을 사용합니다. 자동화가 기존 ORCA_PROTECTED_0003 작업 트리나 폴더 작업 공간 안에서 실행되어야 하면 대신 `ORCA_PROTECTED_0002`를 사용합니다."
     },
     "/docs/cli/automations/:code:choose-where-runs-happen:0": {
       "sourceHash": "bf175ed8ede7e96df3f361a4796a1605ebd40744557278e6b22c487da1e4504f",

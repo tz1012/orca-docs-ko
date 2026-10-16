@@ -63,8 +63,8 @@
       "translated": "## 언어 지원"
     },
     "/docs/editing/monaco/:paragraph:language-support:0": {
-      "sourceHash": "986f18ccb15721c0168143d061bcfce3117c023eb1835a0f3dd7acfb422254f1",
-      "translated": "Solidity, Typst, Twig 템플릿과 `ORCA_PROTECTED_0001`, `ORCA_PROTECTED_0002` 같은 셸 시작 도트 파일을 포함해 Monaco가 기본적으로 지원하는 언어의 구문 강조 기능이 제공됩니다. Quarto(`ORCA_PROTECTED_0003`) 및 R Markdown(`ORCA_PROTECTED_0004`) 파일도 일반 텍스트로 열리지 않고 구문이 강조됩니다. ORCA_PROTECTED_0005는 의도적으로 IDE 우선이 아니라 편집기 우선입니다. 유형 검사기와 린터는 터미널 창에서 실행합니다."
+      "sourceHash": "f25753448bfa92289e4a707e3678a7f98f30d0b2461d24bab42bec979f0025bf",
+      "translated": "Monaco가 기본 제공하는 언어 외에도 Solidity, Twig 템플릿, Quarto(`ORCA_PROTECTED_0001`), R Markdown(`ORCA_PROTECTED_0002`), `ORCA_PROTECTED_0003` 및 `ORCA_PROTECTED_0004` 같은 셸 시작 dotfile에 구문 강조를 제공합니다. Nim과 Typst는 ORCA_PROTECTED_0005의 공유 TextMate 문법 계층을 통해 강조되므로 매우 긴 단일 행이 있어도 창이 멈추지 않습니다. ORCA_PROTECTED_0006는 의도적으로 IDE보다 편집기를 우선합니다. 형식 검사기와 린터는 터미널 창에서 실행합니다."
     },
     "/docs/editing/monaco/:heading:per-host-editor-state:0": {
       "sourceHash": "a904c9fafd07b42c3fdb8feeae0441984e1c75b47732cfc7276bf45537933405",

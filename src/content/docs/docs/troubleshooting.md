@@ -1,7 +1,7 @@
 ---
 title: "문제 해결 및 FAQ"
 sourceUrl: https://www.onorca.dev/docs/troubleshooting
-checkedAt: "2026-10-12T01:04:28.526Z"
+checkedAt: "2026-10-16T01:04:49.331Z"
 editUrl: false
 prev: /orca-docs-ko/docs/telemetry/
 next: /orca-docs-ko/docs/github-errors/
@@ -41,10 +41,9 @@ Orca를 v1.4.212 이상으로 업데이트합니다. Codex 0.157 이상에서는
 
 ## SSH는 연결되지만 원격 터미널이 실패하는 경우
 
--   Orca는 이제 호스트에 자체 관리형 서버를 설정하므로 잘못된 Node 버전이나 누락된 빌드 도구로 인해 더 이상 연결이 차단되지 않습니다. **`Settings → SSH Hosts`(설정 → SSH 호스트)**에는 호스트가 실행하는 서버가 표시되며, **`Settings → Managed servers`(설정 → 관리형 서버)**에서 서버를 업데이트, 롤백 또는 복구할 수 있습니다. [SSH 작업 트리 → 관리형 Orca 서버](/orca-docs-ko/docs/ssh/#managed-orca-server)를 참조합니다.
--   대체 릴레이를 실행하는 호스트에서는 Orca가 처음 연결할 때 런타임을 설치합니다. 기본 **`Auto`(자동)** 런타임은 Orca의 관리형 Node 또는 호스트의 Node를 사용하므로 일반적으로 컴파일러가 필요하지 않습니다. [SSH 작업 트리 → 호스트의 원격 런타임](/orca-docs-ko/docs/ssh/#remote-runtime-on-the-host)을 참조합니다.
--   호스트가 실행을 차단하는 경우(예: `noexec` 홈 디렉터리) Orca는 일반 SSH 터미널 및 SFTP 파일 탐색으로 대체하고 그 이유를 표시합니다. 전체 런타임을 복원하려면 홈 디렉터리에서 실행을 허용합니다.
--   레거시 npm 경로만 실행할 수 있는 호스트에서 터미널이 생성되지 않으면 C/C++ 도구 체인(make, g++/clang++, python3)을 설치한 다음 다시 연결합니다.
+-   Orca는 호스트에 자체 관리 서버를 설정하므로 잘못된 Node 버전이나 누락된 빌드 도구 때문에 더 이상 연결이 차단되지 않습니다. **`Settings → SSH Hosts`(설정 → SSH 호스트)**에는 호스트가 실행하는 서버가 표시되고, **`Settings → Managed servers`(설정 → 관리 서버)**에서 업데이트, 롤백 또는 복구할 수 있습니다. [SSH 작업 트리 → 관리형 Orca 서버](/orca-docs-ko/docs/ssh/#managed-orca-server)를 참조하세요.
+-   관리 서버를 실행할 수 없는 호스트는 더 이상 이전 SSH 런타임으로 대체되지 않습니다. **`Settings → SSH Hosts`(설정 → SSH 호스트)**에 이유가 표시되고 해당 이유와 함께 연결이 실패합니다. 해당 호스트에 계속 연결하려면 이전 Orca 버전을 사용합니다.
+-   v1.4.224에서 이어진 터미널은 계속 입력과 출력을 처리하지만 `orca` CLI는 제공하지 않습니다. 같은 호스트에서 새 터미널을 열어 `orca` 명령을 실행합니다.
 
 ## SSH 파일은 작동하지만 `Download Folder`(폴더 다운로드)는 작동하지 않는 경우
 

@@ -617,6 +617,26 @@
     "/docs/remote-servers/:paragraph:use-the-remote-server:2": {
       "sourceHash": "b7c8f75b254873c20dcc6a56de2986e2de15c6bdfe1d7dc04b26020eec60497a",
       "translated": "즉, 다음과 같이 동작합니다."
+    },
+    "/docs/remote-servers/:heading:orca-serve-as-a-service:0": {
+      "sourceHash": "05eaa2768b5e8e31db97ed400a8d9d698e917e24c101742e8791d40b6f217941",
+      "translated": "### `ORCA_PROTECTED_0001`을 서비스로 실행"
+    },
+    "/docs/remote-servers/:paragraph:orca-serve-as-a-service:0": {
+      "sourceHash": "8794db17d529f07b38bd23ef6c9fd19f155648646d8b56abaafd04d32865873d",
+      "translated": "서비스 관리자 아래에서 서버를 계속 실행하려면 `ORCA_PROTECTED_0001`가 자체 프로세스를 감독하고 사용자별 서비스를 설치하도록 할 수 있습니다."
+    },
+    "/docs/remote-servers/:code:orca-serve-as-a-service:0": {
+      "sourceHash": "7b54aba87c03f5b0290142161b7e39d946c94b2da456da90cfdc7f8adc4d35d2",
+      "translated": "```\nORCA_PROTECTED_0001\n```"
+    },
+    "/docs/remote-servers/:paragraph:orca-serve-as-a-service:1": {
+      "sourceHash": "c8ccc6ab65860d5e275832fd31723078cb96fb479962fa0f69515d647876981c",
+      "translated": "`ORCA_PROTECTED_0001`은 이 프로필에 대해 `ORCA_PROTECTED_0002`를 실행하는 LaunchAgent(macOS) 또는 systemd 사용자 유닛(Linux)을 작성합니다. 감독자는 반복해서 실패할 때 계속 순환하지 않고 점점 길어지는 지연 시간으로 서버를 재시작하며, 업데이트가 앱을 교체하는 동안 기다립니다. 서비스는 로그에 페어링 링크를 출력하지 않습니다. 데스크톱 앱에서 클라이언트를 페어링하거나 서비스를 중지한 상태에서 터미널에서 `ORCA_PROTECTED_0003`를 실행합니다. Linux에서는 lingering을 켜지 않으면 로그아웃할 때 서비스가 중지되며(`ORCA_PROTECTED_0004`), 설치 과정에서 이 상태를 보고합니다. `ORCA_PROTECTED_0005`는 실행 중인지 알려 주고, `ORCA_PROTECTED_0006`은 터미널 데몬과 세션은 계속 실행한 채 서비스를 중지하고 유닛을 제거합니다. 아직 Windows에서는 이러한 서비스 명령을 사용할 수 없습니다."
+    },
+    "/docs/remote-servers/:paragraph:orca-serve-as-a-service:2": {
+      "sourceHash": "d86839b3459ee674a3fb0104e9ea21c8d460e763cfe288f6982abf081299b035",
+      "translated": "다른 서비스 관리자나 컨테이너가 이미 프로세스를 재시작한다면 `ORCA_PROTECTED_0001`을 직접 사용합니다."
     }
   }
 }

@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-10-12T01:04:28.526Z"
+checkedAt: "2026-10-16T01:04:49.331Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -33,13 +33,13 @@ translationNotice:
 
 ## 외관
 
--   테마, 강조색 및 밀도를 설정합니다.
--   UI의 글꼴 패밀리를 설정합니다. 편집기 글꼴은 선택 사항이며, 비워 두면 터미널 글꼴을 따르고 값을 설정하면 파일 편집기와 diff에만 해당 글꼴을 사용합니다.
+-   테마, 강조 색상, 밀도를 설정합니다.
+-   UI 글꼴 모음을 설정합니다. 편집기 글꼴은 선택적으로 적용되며 비워 두면 터미널 글꼴을 따르고, 값을 설정하면 파일 편집기와 diff에만 재정의됩니다.
 -   편집기 미니맵을 켜거나 끕니다.
--   **`Resource Manager`(리소스 관리자)**(CPU/memory/sessions, 데몬 제어, 작업 공간 디스크 검사)를 포함한 상태 표시줄 항목을 켜거나 끕니다.
--   **`Usage percentages`(사용량 백분율)** — 상태 표시줄 목록에서 공급자 한도를 **`% used`(사용한 비율)** 또는 **`% remaining`(남은 비율)**으로 표시합니다. 이미 보기를 선택하지 않았다면 이제 목록은 더 짧은 **`Compact`(간결하게)** 보기를 기본값으로 사용하며, 같은 선택기에서 **`Detailed`(자세히)** 보기도 계속 사용할 수 있습니다.
--   **`App Icon`(앱 아이콘)** — Dock 및 창 전환기에 표시되는 아이콘을 **`Classic`(클래식)**, **`Watercolor`(수채화)** 및 **`Blue`(파랑)** 사이에서 전환합니다.
--   **`Language`(언어)** — `Interface`(인터페이스) 영역의 기본 컨트롤입니다. **`System`(시스템, OS 설정을 따름)**, English, 中文（简体）, 한국어, 日本語 또는 Español 중에서 선택합니다. 설정 검색은 “language”에 해당하는 각 언어의 단어(语言 / 語言 / 언어 / 言語 / Idioma)도 인식하므로 UI가 아직 영어여도 **`Language`(언어)**를 찾을 수 있습니다.
+-   **`Resource Manager`(리소스 관리자)**를 포함한 상태 표시줄 항목을 켜거나 끕니다(CPU/memory/sessions, 데몬 제어, 작업 공간 디스크 스캔을 제공하며, 프로젝트가 페어링된 Orca 서버에 있으면 해당 서버의 프로세스를 서버 이름 아래에 표시합니다).
+-   **`Usage percentages`(사용량 백분율)** — 상태 표시줄 명단에서 공급자 한도를 **`% used`(% 사용됨)** 또는 **`% remaining`(% 남음)**으로 표시합니다. 이미 다른 보기를 선택하지 않았다면 이제 더 짧은 **`Compact`(간결하게)** 보기가 기본이며, 같은 선택기에서 **`Detailed`(자세히)** 보기도 사용할 수 있습니다.
+-   **`App Icon`(앱 아이콘)** — Dock과 창 전환기에 표시되는 아이콘을 `Classic`(클래식), `Watercolor`(수채화), `Blue`(파랑) 중에서 순환합니다.
+-   **`Language`(언어)** — 기본 인터페이스 컨트롤입니다. `System`(시스템, OS 설정 따름), `English`, `中文（简体）`, `한국어`, `日本語`, `Español` 사이에서 전환합니다. 설정 검색은 "language"의 각 언어 표현(语言 / 語言 / 언어 / 言語 / Idioma)도 일치시키므로 UI가 아직 영어여도 `Language`(언어)를 찾을 수 있습니다.
 
 ## 채팅
 
@@ -76,17 +76,17 @@ translationNotice:
 ## 에이전트
 
 -   **`Installed agents`(설치된 에이전트)** — 활성화하거나 비활성화할 수 있는 감지된 CLI입니다.
--   **`Per-agent launch defaults`(에이전트별 시작 기본값)** — 에이전트의 바이너리 경로나 이름을 재정의하고 기본 **`Command`(명령)**, **`Arguments`(인수)** 및 환경을 편집합니다. 구조화된 네이티브 채팅도 저장된 명령과 인수를 동일하게 사용합니다.
--   감지된 에이전트를 활성화하거나 비활성화하여 시작 메뉴에 사용하려는 CLI만 표시합니다.
--   **`Agent Permissions`(에이전트 권한)** — CLI 권한 프롬프트를 줄이려면 **`Yolo`(자동 승인)**를 선택하고, 사용자 지정하지 않은 에이전트에서 각 에이전트의 자체 승인 흐름을 유지하려면 **`Manual`(수동)**을 선택합니다.
--   **`Trust the folder when Orca starts an agent`(Orca에서 에이전트를 시작할 때 폴더 신뢰)** — **기본적으로 켜져 있습니다**. 오케스트레이션 워커, 자동화 및 휴대전화에서 시작한 에이전트를 포함하여 Orca가 시작하는 에이전트는 **`Do you trust this folder?`(이 폴더를 신뢰하십니까?)** 프롬프트를 건너뜁니다. 각 에이전트의 자체 신뢰 프롬프트를 유지하려면 끕니다. [Codex를 Orca에서 사용하기](/orca-docs-ko/docs/agents/codex/) 및 [지원되는 에이전트](/orca-docs-ko/docs/agents/supported/)를 참조합니다.
--   **`Run each Codex terminal on its own server`(각 Codex 터미널을 자체 서버에서 실행)** — **기본적으로 켜져 있습니다**. Orca의 상태와 탭 닫기 동작을 Codex 탭에서 정확하게 유지합니다. Codex의 공유 서버와 에이전트 개요를 사용하려면 끕니다. 새 터미널에 적용됩니다. 함께 제공되는 **`Warn when a Codex tab shares a server`(Codex 탭이 서버를 공유할 때 경고)** 알림은 직접 시작한 Codex가 서버를 공유할 때 표시됩니다. [Codex를 Orca에서 사용하기](/orca-docs-ko/docs/agents/codex/)를 참조합니다.
--   Claude, Codex, OpenCode, Devin, Antigravity 및 GLM Coding Plan의 계정 목록을 관리합니다. Linux에서는 암호화할 수 없었던 저장된 자격 증명이 이곳에 경고와 함께 표시됩니다.
--   OpenCode Go 세션 쿠키 — Go 속도 제한을 표시하려면 전체 `opencode.ai` Cookie 헤더를 붙여 넣되 `__Host-console_session`을 포함해야 합니다. `auth` 쿠키만으로는 충분하지 않습니다.
--   에이전트별 시작 후크를 설정합니다.
--   **`Agent status hooks`(에이전트 상태 후크)** — Orca에 작업 중 / 대기 중 / 완료 상태를 표시합니다. 앱을 다시 시작하지 않아도 토글이 적용되며 Windows WSL 후크 릴레이에도 적용됩니다. CLI: `orca agent hooks on|off|status`.
--   **`Keep computer awake`(컴퓨터 절전 방지)** — **`On`(켜기)**(항상 절전 방지), **`Agent`(에이전트)**(에이전트가 작업 중일 때 절전 방지) 또는 **`Off`(끄기)**를 선택합니다. 같은 컨트롤이 데스크톱 상태 표시줄에 **`Caffeinate`(절전 방지)**(커피 아이콘)로 표시됩니다. 페어링된 웹 클라이언트에서는 숨겨집니다.
--   **`Skill freshness`(스킬 최신 상태)** — **`Agents`(에이전트)** 창과 스킬 카드에는 계속 전체 상태가 표시됩니다. 사이드바 탐색에는 조치가 필요한 스킬(**`Update available`(업데이트 가능)**, **`Needs attention`(확인 필요)** / 검토)에만 배지가 표시되며, 정상, 로드 중 및 선택적 미설치 행은 별도 표시를 하지 않습니다. 대화 상자에서 **`Update`(업데이트)**를 선택하면 터미널 없이 전역 스킬을 백그라운드에서 새로 고칩니다. 진행 상황은 상태 표시줄에 표시되며 대화 상자를 닫아도 실행이 취소되지 않습니다. [Orca 스킬](/orca-docs-ko/docs/cli/skills/#keep-skills-up-to-date)을 참조합니다.
+-   **에이전트별 시작 기본값** — 에이전트의 바이너리 경로나 이름을 재정의하고 기본 **`Command`(명령)**, **`Arguments`(인수)** 및 환경을 편집합니다. 구조화된 네이티브 채팅도 저장된 동일한 명령과 인수를 사용합니다. 이러한 시작 설정은 작업 공간 자체 호스트에서 편집하므로 원격 또는 SSH 작업 공간은 이를 실행하는 머신의 설정을 사용합니다.
+-   감지된 에이전트를 활성화하거나 비활성화하여 시작 메뉴에 사용할 CLI만 표시합니다.
+-   **`Agent Permissions`(에이전트 권한)** — 사용자 지정하지 않은 에이전트에서 CLI 권한 프롬프트를 줄이려면 **`Yolo`**, 각 에이전트의 자체 승인 흐름을 유지하려면 **`Manual`(수동)**을 선택합니다.
+-   **`Trust the folder when Orca starts an agent`(앱이 에이전트를 시작할 때 폴더 신뢰)** — **기본적으로 켜져 있습니다**. Orca가 시작하는 에이전트(오케스트레이션 워커, 자동화 및 휴대전화에서 시작한 에이전트 포함)는 "Do you trust this folder?" 프롬프트를 건너뜁니다. 각 에이전트의 자체 신뢰 프롬프트를 유지하려면 끕니다. [Orca의 Codex](/orca-docs-ko/docs/agents/codex/) 및 [지원되는 에이전트](/orca-docs-ko/docs/agents/supported/)를 참조하세요.
+-   **`Run each Codex terminal on its own server`(각 터미널을 자체 서버에서 실행)** — **기본적으로 켜져 있습니다**. Codex 탭에서 Orca의 상태와 탭 닫기 동작을 올바르게 유지합니다. Codex의 공유 서버와 에이전트 개요를 사용하려면 끕니다. 새 터미널에 적용됩니다. 직접 시작한 Codex가 서버를 공유하면 함께 제공되는 **`Warn when a Codex tab shares a server`(탭이 서버를 공유할 때 경고)** 알림이 나타납니다. [Orca의 Codex](/orca-docs-ko/docs/agents/codex/)을 참조하세요.
+-   Claude, Codex, OpenCode, Devin, Antigravity 및 GLM Coding Plan의 계정 목록입니다. Linux에서는 암호화할 수 없는 저장된 자격 증명이 경고와 함께 표시됩니다. 각 Claude 계정은 자체 설정 폴더를 유지하며, 계정을 추가할 때 기본 브라우저가 이미 다른 Claude 이메일로 로그인되어 있으면 **`Copy sign-in link instead`(대신 로그인 링크 복사)**를 선택할 수 있습니다.
+-   OpenCode Go 세션 쿠키 — Go 사용 한도를 표시하려면 `__Host-console_session`를 포함한 전체 `opencode.ai` Cookie 헤더를 붙여 넣습니다. `auth` 쿠키만으로는 충분하지 않습니다.
+-   에이전트별 시작 훅을 설정합니다.
+-   **`Agent status hooks`(에이전트 상태 훅)** — Orca에 작업 중/대기 중/완료 상태를 표시합니다. 토글은 Windows WSL 훅 릴레이를 포함해 앱을 다시 시작하지 않아도 적용됩니다. CLI: `orca agent hooks on|off|status`.
+-   **`Keep computer awake`(컴퓨터 절전 방지)** — 계속 절전을 방지하려면 **`On`(켬)**, 에이전트가 작업 중일 때만 방지하려면 **`Agent`(에이전트)**, 비활성화하려면 **`Off`(끔)**를 선택합니다. 같은 컨트롤은 데스크톱 상태 표시줄의 **`Caffeinate`(절전 방지)**(커피 아이콘)에도 있습니다. 페어링된 웹 클라이언트에서는 숨겨집니다.
+-   **`Skill freshness`(스킬 최신 상태)** — 에이전트 창과 스킬 카드에는 계속 전체 상태가 표시됩니다. 사이드바 탐색은 조치가 필요한 스킬(**`Update available`(업데이트 가능)**, **`Needs attention`(확인 필요)**/검토)에만 배지를 표시하며 정상, 로드 중 및 선택적 미설치 행은 조용히 유지됩니다. 대화 상자의 **`Update`(업데이트)**를 사용하면 터미널 없이 전역 스킬을 백그라운드에서 새로 고칩니다. 진행 상황은 상태 표시줄에 나타나며 대화 상자를 닫아도 실행이 취소되지 않습니다. [Orca 스킬](/orca-docs-ko/docs/cli/skills/#keep-skills-up-to-date)을 참조하세요.
 
 ## 브라우저
 
@@ -111,12 +111,12 @@ translationNotice:
 
 ## 통합
 
--   GitHub OAuth.
--   Linear API 토큰.
--   Jira — Cloud(이메일 + API 토큰) 또는 자체 호스팅 Server/Data Center(PAT 또는 username/password)를 연결합니다. [Jira 항목 서랍](/orca-docs-ko/docs/review/jira/)을 참조합니다.
--   Bitbucket Cloud — **`Connect`(연결)**에서 기본값인 **`Email & API token`(이메일 및 API 토큰)** 또는 **`Access token`(액세스 토큰)**을 사용합니다. Orca는 자격 증명을 저장하기 전에 검증합니다. `ORCA_BITBUCKET_*` 환경 변수가 우선하며 `Connect`(연결)/`Disconnect`(연결 해제)를 숨깁니다. 저장된 자격 증명은 이 컴퓨터에만 보관됩니다. [원격 Orca 서버](/orca-docs-ko/docs/remote-servers/)에서는 대신 서버에 환경 변수를 설정합니다. [호스팅 검토](/orca-docs-ko/docs/review/github/)를 참조합니다.
--   MiniMax — MiniMax 세션 쿠키(`platform.minimax.io/console/usage`에서 가져옴)를 붙여 넣어 MiniMax CLI의 로컬 사용량과 사용 한도 추적을 활성화합니다. 선택적인 그룹 ID와 사용 모델 필드는 쿠키에서 선택한 기본값을 재정의합니다.
--   MCP 서버.
+-   GitHub OAuth를 설정합니다.
+-   Linear API 토큰을 설정합니다.
+-   Jira — Cloud(이메일 + API 토큰) 또는 자체 호스팅 Server/Data Center(PAT 또는 username/password)를 설정합니다. [Jira 항목 서랍](/orca-docs-ko/docs/review/jira/)을 참조하세요.
+-   Bitbucket Cloud — **`Connect`(연결)**에서 기본 방식인 **`Email & API token`(이메일 및 API 토큰)** 또는 **`Access token`(액세스 토큰)**을 사용합니다. Orca는 저장하기 전에 자격 증명을 확인합니다. `ORCA_BITBUCKET_*` 환경 변수는 우선 적용되며 `Connect`(연결) / `Disconnect`(연결 해제)를 숨깁니다. 저장된 자격 증명은 이 머신에 유지됩니다. [원격 Orca 서버](/orca-docs-ko/docs/remote-servers/)에서는 서버에 환경 변수를 설정하세요. [호스팅된 검토](/orca-docs-ko/docs/review/github/)를 참조하세요.
+-   MiniMax — MiniMax CLI의 로컬 사용량 및 사용 한도 추적을 사용하려면 `platform.minimax.io/console/usage`에서 가져온 MiniMax 세션 쿠키를 붙여 넣습니다. 선택적 그룹 ID와 사용량 모델 필드는 쿠키에서 선택한 기본값을 재정의합니다.
+-   MCP 서버를 설정합니다. 저장소 MCP 설정은 설정할 때 선택한 호스트에 유지됩니다.
 
 ## 알림
 
@@ -145,9 +145,9 @@ translationNotice:
 ## SSH
 
 -   SSH 작업 트리, 대상, 암호 및 기본 ID 파일을 설정합니다.
--   고급: 프록시/점프 호스트, **`Reuse SSH connection for faster setup`(빠른 설정을 위해 SSH 연결 재사용)**(시스템 OpenSSH 다중화, 기본적으로 켜짐) 및 호스트별 **`Allow this host's orca CLI to control Orca`(이 호스트의 orca CLI가 Orca를 제어하도록 허용)**을 설정합니다.
--   **`Managed servers`(관리형 서버)** — Orca가 빈 SSH 호스트에 자체 서버를 설치하고 실행하며 최신 상태로 유지합니다. 버전과 터미널을 확인하고 각 서버를 **`Update`(업데이트)**, **`Roll back`(롤백)**, **`Recover`(복구)** 또는 **`Stop…`(중지…)** / **`Forget…`(잊기…)**할 수 있습니다. [SSH 작업 트리 → 관리형 Orca 서버](/orca-docs-ko/docs/ssh/#managed-orca-server)를 참조합니다.
--   Kerberos 호스트: OpenSSH 구성의 `GSSAPIAuthentication` 설정이 시스템 OpenSSH 인증을 제어합니다([SSH 작업 트리](/orca-docs-ko/docs/ssh/) 참조).
+-   **`Advanced`(고급)**: 프록시/점프 호스트, **`Reuse SSH connection for faster setup`(더 빠른 설정을 위해 SSH 연결 재사용)**(시스템 OpenSSH 다중화, 기본적으로 켜짐), 호스트별 **`Allow this host's orca CLI to control Orca`(이 호스트 CLI의 앱 제어 허용)**을 설정합니다.
+-   **`Managed servers`(관리 서버)** — Orca가 비어 있는 SSH 호스트에 자체 서버를 설치·실행하고 최신 상태로 유지합니다. 버전과 터미널을 확인하고 각 서버를 **`Update`(업데이트)**, **`Roll back`(롤백)**, **`Recover`(복구)** 또는 **`Stop…`(중지…)** / **`Forget…`(삭제…)**할 수 있습니다. 모든 SSH 호스트는 이 관리 서버에서 실행됩니다. 이전 `Runtime`(런타임) 선택기는 제거되었으며 실행할 수 없는 호스트는 이유를 표시하고 연결하지 않습니다. [SSH 작업 트리 → 관리형 Orca 서버](/orca-docs-ko/docs/ssh/#managed-orca-server)를 참조하세요.
+-   Kerberos 호스트: OpenSSH 설정의 `GSSAPIAuthentication`이 시스템 OpenSSH 인증을 제어합니다([SSH 작업 트리](/orca-docs-ko/docs/ssh/) 참조).
 
 ## 원격 Orca 서버
 

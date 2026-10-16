@@ -1,7 +1,7 @@
 ---
 title: "모나코 편집기 및 자동 저장"
 sourceUrl: https://www.onorca.dev/docs/editing/monaco
-checkedAt: "2026-10-12T01:04:28.526Z"
+checkedAt: "2026-10-16T01:04:49.331Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/jira/
 next: /orca-docs-ko/docs/editing/markdown/
@@ -45,4 +45,4 @@ Orca의 코드 편집기는 VS Code가 사용하는 것과 동일한 편집기�
 
 ## 언어 지원
 
-Solidity, Typst, Twig 템플릿과 `.bashrc`, `.zshrc` 같은 셸 시작 도트 파일을 포함해 Monaco가 기본적으로 지원하는 언어의 구문 강조 기능이 제공됩니다. Quarto(`.qmd`) 및 R Markdown(`.Rmd`) 파일도 일반 텍스트로 열리지 않고 구문이 강조됩니다. Orca는 의도적으로 IDE 우선이 아니라 편집기 우선입니다. 유형 검사기와 린터는 터미널 창에서 실행합니다.
+Monaco가 기본 제공하는 언어 외에도 Solidity, Twig 템플릿, Quarto(`.qmd`), R Markdown(`.Rmd`), `.bashrc` 및 `.zshrc` 같은 셸 시작 dotfile에 구문 강조를 제공합니다. Nim과 Typst는 Orca의 공유 TextMate 문법 계층을 통해 강조되므로 매우 긴 단일 행이 있어도 창이 멈추지 않습니다. Orca는 의도적으로 IDE보다 편집기를 우선합니다. 형식 검사기와 린터는 터미널 창에서 실행합니다.

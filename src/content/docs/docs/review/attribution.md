@@ -1,7 +1,7 @@
 ---
 title: "기여"
 sourceUrl: https://www.onorca.dev/docs/review/attribution
-checkedAt: "2026-10-12T01:04:28.526Z"
+checkedAt: "2026-10-16T01:04:49.331Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/annotate-ai-diff/
 next: /orca-docs-ko/docs/review/commit-push/
