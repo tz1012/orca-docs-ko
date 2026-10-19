@@ -1,7 +1,7 @@
 ---
 title: "Jira 항목 서랍"
 sourceUrl: https://www.onorca.dev/docs/review/jira
-checkedAt: "2026-10-16T01:04:49.331Z"
+checkedAt: "2026-10-19T01:00:41.238Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/linear/
 next: /orca-docs-ko/docs/editing/monaco/

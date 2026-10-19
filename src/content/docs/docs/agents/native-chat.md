@@ -1,7 +1,7 @@
 ---
 title: "채팅 UI(네이티브 채팅)"
 sourceUrl: https://www.onorca.dev/docs/agents/native-chat
-checkedAt: "2026-10-16T01:04:49.331Z"
+checkedAt: "2026-10-19T01:00:41.238Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/codex-hot-swap/
 next: /orca-docs-ko/docs/agents/session-history/
@@ -30,7 +30,7 @@ translationNotice:
 
 **`Settings → Experimental → Chat UI`(설정 → 실험적 기능 → 채팅 UI)** 아래의 **`Use your shell environment`(셸 환경 사용)** 설정은 새로 시작하거나 재개한 구조화 채팅에 전달할 변수를 제어합니다. 기본적으로 켜져 있으므로 로그인 셸에서 내보낸 변수를 받습니다. 이 설정을 끄면 `PATH`, 로캘 및 `SSH_AUTH_SOCK` 같은 기본 셸 변수에 더해 선택한 이름의 변수만 허용합니다. 터미널 기반 채팅은 계속 해당 터미널 셸을 사용합니다.
 
-구조화 채팅은 [Settings → Agents](/orca-docs-ko/docs/settings/#agents)(설정 → 에이전트)에서 해당 에이전트에 저장한 **`Command`(명령)** 및 **`Arguments`(인수)**로 에이전트를 시작합니다. [Settings → Chat](/orca-docs-ko/docs/settings/#chat)(설정 → 채팅)에서 구조화 채팅의 텍스트 크기, 코드 크기, 너비 및 대비를 설정하거나 **`Match terminal interface`(터미널 인터페이스와 일치)**를 켜서 이후 테마 변경을 포함한 터미널 글꼴과 색상을 따르게 합니다. 이 창의 **`Inline visuals`(인라인 시각화)**를 사용하면 에이전트가 데스크톱과 휴대폰의 응답 안에 차트, 다이어그램 및 목업을 그릴 수 있습니다. 더 넓은 공간이 필요하면 시각화를 자체 탭에서 열 수 있으며, Mermaid 다이어그램은 다크 모드에서 채팅 테마를 따릅니다.
+구조화 채팅은 [`Settings → Agents`](/orca-docs-ko/docs/settings/#agents)(설정 → 에이전트)에서 해당 에이전트에 저장한 **`Command`(명령)** 및 **`Arguments`(인수)**로 에이전트를 시작합니다. [`Settings → Chat`](/orca-docs-ko/docs/settings/#chat)(설정 → 채팅)에서 구조화 채팅의 텍스트 크기, 코드 크기, 너비 및 대비를 설정하거나 **`Match terminal interface`(터미널 인터페이스와 일치)**를 켜서 이후 테마 변경을 포함한 터미널 글꼴과 색상을 따르게 합니다. 이 창의 **`Inline visuals`(인라인 시각화)**를 사용하면 에이전트가 데스크톱과 휴대폰의 응답 안에 차트, 다이어그램 및 목업을 그릴 수 있습니다. 더 넓은 공간이 필요하면 시각화를 자체 탭에서 열 수 있으며, Mermaid 다이어그램은 다크 모드에서 채팅 테마를 따릅니다. **`Chat → Behavior`(채팅 → 동작)**에서 새 Claude 및 Codex 채팅이 시작될 때 사용할 권한 모드를 선택합니다. 이 기본값을 변경하거나 모델을 전환해도 기존 채팅은 자체 권한 모드를 유지합니다.
 
 앱 재시작으로 구조화 채팅이 중단된 경우 다시 연결하면 Orca가 재개 여부를 묻습니다. 이 대화 상자를 닫아도 나중에 상태 표시줄의 **`chats to resume`(재개할 채팅)** 항목에서 다시 열 수 있습니다. 재개할 수 있는 채팅이 더 이상 없으면 이 항목은 사라집니다. 닫은 채팅 탭은 오른쪽에 다시 나타나지 않고 닫힌 상태로 유지됩니다.
 

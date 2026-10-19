@@ -1,7 +1,7 @@
 ---
 title: "HTML, Mermaid, PDF 및 이미지 뷰어"
 sourceUrl: https://www.onorca.dev/docs/editing/viewers
-checkedAt: "2026-10-16T01:04:49.331Z"
+checkedAt: "2026-10-19T01:00:41.238Z"
 editUrl: false
 prev: /orca-docs-ko/docs/editing/markdown/
 next: /orca-docs-ko/docs/editing/file-explorer/

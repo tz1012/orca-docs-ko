@@ -1,7 +1,7 @@
 ---
 title: "SSH를 통해 원격 컴퓨터에서 작업"
 sourceUrl: https://www.onorca.dev/docs/recipes/remote-worktrees
-checkedAt: "2026-10-16T01:04:49.331Z"
+checkedAt: "2026-10-19T01:00:41.238Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/design-mode-fix/
 next: /orca-docs-ko/docs/settings/

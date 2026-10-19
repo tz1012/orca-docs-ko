@@ -59,8 +59,8 @@
       "translated": "**`Settings → Experimental → Chat UI`(설정 → 실험적 기능 → 채팅 UI)** 아래의 **`Use your shell environment`(셸 환경 사용)** 설정은 새로 시작하거나 재개한 구조화 채팅에 전달할 변수를 제어합니다. 기본적으로 켜져 있으므로 로그인 셸에서 내보낸 변수를 받습니다. 이 설정을 끄면 `ORCA_PROTECTED_0001`, 로캘 및 `ORCA_PROTECTED_0002` 같은 기본 셸 변수에 더해 선택한 이름의 변수만 허용합니다. 터미널 기반 채팅은 계속 해당 터미널 셸을 사용합니다."
     },
     "/docs/agents/native-chat/:paragraph:structured-chat:3": {
-      "sourceHash": "d54ed8b0bb41961a9323905d5a4f269500571f47717d5f24a73a6945836f92db",
-      "translated": "구조화 채팅은 [Settings → Agents](ORCA_PROTECTED_0001)(설정 → 에이전트)에서 해당 에이전트에 저장한 **`Command`(명령)** 및 **`Arguments`(인수)**로 에이전트를 시작합니다. [Settings → Chat](ORCA_PROTECTED_0002)(설정 → 채팅)에서 구조화 채팅의 텍스트 크기, 코드 크기, 너비 및 대비를 설정하거나 **`Match terminal interface`(터미널 인터페이스와 일치)**를 켜서 이후 테마 변경을 포함한 터미널 글꼴과 색상을 따르게 합니다. 이 창의 **`Inline visuals`(인라인 시각화)**를 사용하면 에이전트가 데스크톱과 휴대폰의 응답 안에 차트, 다이어그램 및 목업을 그릴 수 있습니다. 더 넓은 공간이 필요하면 시각화를 자체 탭에서 열 수 있으며, Mermaid 다이어그램은 다크 모드에서 채팅 테마를 따릅니다."
+      "sourceHash": "8084f872f0c4da44d5eba794bc96d44491b2a3cc2b4e53d600d00a7373982f06",
+      "translated": "구조화 채팅은 [`Settings → Agents`](ORCA_PROTECTED_0001)(설정 → 에이전트)에서 해당 에이전트에 저장한 **`Command`(명령)** 및 **`Arguments`(인수)**로 에이전트를 시작합니다. [`Settings → Chat`](ORCA_PROTECTED_0002)(설정 → 채팅)에서 구조화 채팅의 텍스트 크기, 코드 크기, 너비 및 대비를 설정하거나 **`Match terminal interface`(터미널 인터페이스와 일치)**를 켜서 이후 테마 변경을 포함한 터미널 글꼴과 색상을 따르게 합니다. 이 창의 **`Inline visuals`(인라인 시각화)**를 사용하면 에이전트가 데스크톱과 휴대폰의 응답 안에 차트, 다이어그램 및 목업을 그릴 수 있습니다. 더 넓은 공간이 필요하면 시각화를 자체 탭에서 열 수 있으며, Mermaid 다이어그램은 다크 모드에서 채팅 테마를 따릅니다. **`Chat → Behavior`(채팅 → 동작)**에서 새 ORCA_PROTECTED_0003 및 ORCA_PROTECTED_0004 채팅이 시작될 때 사용할 권한 모드를 선택합니다. 이 기본값을 변경하거나 모델을 전환해도 기존 채팅은 자체 권한 모드를 유지합니다."
     },
     "/docs/agents/native-chat/:paragraph:structured-chat:4": {
       "sourceHash": "635cba47c7223d9cc4b1dd6c5fd472023759bb177e801529f69212a4476690a1",

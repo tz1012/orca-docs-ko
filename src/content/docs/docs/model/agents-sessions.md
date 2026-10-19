@@ -1,7 +1,7 @@
 ---
 title: "에이전트 및 세션"
 sourceUrl: https://www.onorca.dev/docs/model/agents-sessions
-checkedAt: "2026-10-16T01:04:49.331Z"
+checkedAt: "2026-10-19T01:00:41.238Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/tabs-panes-splits/
 next: /orca-docs-ko/docs/model/session-restore/

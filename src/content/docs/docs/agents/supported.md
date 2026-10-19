@@ -1,7 +1,7 @@
 ---
 title: "지원되는 에이전트"
 sourceUrl: https://www.onorca.dev/docs/agents/supported
-checkedAt: "2026-10-16T01:04:49.331Z"
+checkedAt: "2026-10-19T01:00:41.238Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/quick-open/
 next: /orca-docs-ko/docs/agents/claude-code/
@@ -19,7 +19,7 @@ Orca은 `any CLI agent`(모든 CLI 에이전트)와 함께 작동합니다. 에�
 
 Orca은 새로운 실행에 대해 지원되는 각 CLI의 권한 우회 플래그를 미리 채웁니다. — Claude의 경우 `--dangerously-skip-permissions`, Codex의 경우 `--dangerously-bypass-approvals-and-sandbox`, Gemini의 경우 `--yolo` Cursor / Crush / Kimi / Rovo Dev / Hermes / GitHub Copilot / Command Code 및 이를 노출하는 다른 모든 에이전트에 대한 동등한 플래그. 그 이유는 작업 트리가 일회용이기 때문입니다. 자체 체크아웃에서 실행 중인 에이전트는 모든 셸 명령을 다시 확인하지 않고도 실험할 수 있으며 병합하기 전에 여전히 diff를 선별하거나 삭제할 수 있습니다.
 
-사용자 지정하지 않은 모든 에이전트의 실행 방식을 `Yolo`(자동 승인)와 `Manual`(수동 승인) 사이에서 전환하려면 `Settings → Agents → Agent Permissions`(설정 → 에이전트 → 에이전트 권한)을 사용하세요. 특정 에이전트의 시작 인수 또는 환경을 이미 재정의한 경우 Orca은 해당 에이전트를 그대로 두므로 전역 전환이 사용자 지정 명령을 지우지 않습니다.
+사용자 지정하지 않은 터미널 에이전트의 실행 방식을 **`Yolo`(자동 승인)**와 **`Manual`(수동 승인)** 사이에서 전환하려면 **`Settings → Agents → Agent Permissions`(설정 → 에이전트 → 에이전트 권한)**를 사용합니다. 네이티브 Claude 및 Codex 채팅의 기본값은 **`Settings → Chat → Behavior`(설정 → 채팅 → 동작)**에서 별도로 설정하며 새 채팅을 시작할 때만 적용됩니다. 특정 에이전트의 시작 인수 또는 환경을 이미 재정의한 경우 Orca는 해당 에이전트를 그대로 두므로 전역 전환이 사용자 지정 명령을 지우지 않습니다.
 
 한 에이전트에 대한 프롬프트만 복원하려면 설정에서 해당 에이전트의 기본 인수 또는 환경을 편집하세요. Orca은 비어 있지 않은 사용자 정의 값을 명시적 재정의로 처리하고 해당 에이전트를 향후 권한 모드 마이그레이션에서 제외합니다.
 
