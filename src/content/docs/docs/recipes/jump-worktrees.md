@@ -1,7 +1,7 @@
 ---
 title: "10개의 작업 트리 사이를 이동합니다."
 sourceUrl: https://www.onorca.dev/docs/recipes/jump-worktrees
-checkedAt: "2026-10-19T01:00:41.238Z"
+checkedAt: "2026-10-20T01:01:00.563Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/review-ai-diff/
 next: /orca-docs-ko/docs/recipes/design-mode-fix/

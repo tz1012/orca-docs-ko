@@ -1,7 +1,7 @@
 ---
 title: "퀵 오픈 & 점프 팔레트"
 sourceUrl: https://www.onorca.dev/docs/model/quick-open
-checkedAt: "2026-10-19T01:00:41.238Z"
+checkedAt: "2026-10-20T01:01:00.563Z"
 editUrl: false
 prev: /orca-docs-ko/docs/model/session-restore/
 next: /orca-docs-ko/docs/agents/supported/

@@ -355,10 +355,14 @@
       "translated": "### 필드 도우미(계속 유효함)"
     },
     "/docs/cli/reference/:code:field-helpers-still-valid:0": {
-      "sourceHash": "91e4e4fda1f4091fe912b99b73313a315ea66b222d14958af49f3995d0700528",
+      "sourceHash": "d990e1f2df65a46bff4e307597841aa220ea52d79da7e79d8a8e2dcf14328e2c",
       "translated": "```\nORCA_PROTECTED_0001\n```"
     },
     "/docs/cli/reference/:paragraph:field-helpers-still-valid:0": {
+      "sourceHash": "179ce6eaca2ddc6472f6e900469e7c8ff15dba2a6bd446a0e5d4e195f74ea744",
+      "translated": "`ORCA_PROTECTED_0001`와 `ORCA_PROTECTED_0002`는 정확한 ORCA_PROTECTED_0003 댓글 ID를 대상으로 하며, `ORCA_PROTECTED_0004`은 삭제의 별칭입니다. 대체 텍스트를 파일이나 표준 입력에서 가져오는 경우 편집할 때 `ORCA_PROTECTED_0005`를 사용합니다."
+    },
+    "/docs/cli/reference/:paragraph:field-helpers-still-valid:1": {
       "sourceHash": "d59283829a9e397337f0797157aa79591c8408af6df001a0b87a608f85bf963a",
       "translated": "버전이 일치하는 목록을 확인하려면 `ORCA_PROTECTED_0001` 또는 `ORCA_PROTECTED_0002`를 실행합니다. ORCA_PROTECTED_0004에 연결된 작업 트리 외부에서 스크립트가 실행될 수 있으면 명시적인 이슈 ID(예: `ORCA_PROTECTED_0003`)를 전달합니다."
     },

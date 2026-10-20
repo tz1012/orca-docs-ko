@@ -1,7 +1,7 @@
 ---
 title: "브라우저 사용 프로필"
 sourceUrl: https://www.onorca.dev/docs/browser/profiles
-checkedAt: "2026-10-19T01:00:41.238Z"
+checkedAt: "2026-10-20T01:01:00.563Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/design-mode/
 next: /orca-docs-ko/docs/terminal/

@@ -1,7 +1,7 @@
 ---
 title: "설정 참고"
 sourceUrl: https://www.onorca.dev/docs/settings
-checkedAt: "2026-10-19T01:00:41.238Z"
+checkedAt: "2026-10-20T01:01:00.563Z"
 editUrl: false
 prev: /orca-docs-ko/docs/recipes/remote-worktrees/
 next: /orca-docs-ko/docs/telemetry/
@@ -46,6 +46,7 @@ translationNotice:
 **`Chat UI`(채팅 UI)**가 켜져 있을 때 표시됩니다([채팅 UI](/orca-docs-ko/docs/agents/native-chat/) 참조). 구조화된 채팅의 모양과 동작을 다음과 같이 한데 모아 설정합니다.
 
 -   **`Behavior`(동작)** — 새 Claude 및 Codex 채팅의 권한 모드를 선택합니다. 이는 기본값일 뿐입니다. 각 채팅은 시작할 때 사용한 모드를 유지하므로 설정을 변경하거나 모델을 전환해도 기존 대화는 변경되지 않습니다.
+-   **`Providers`(제공자)** — 구조화 채팅으로 열 채팅 지원 에이전트를 선택합니다. 제공자를 끄면 해당 제공자의 새 세션이 대신 터미널에서 열립니다. 제공자 선택은 CLI, 오케스트레이션 및 휴대전화에서 중계된 시작을 포함하여 이 데스크톱에서 시작하는 작업에 적용됩니다. Antigravity의 채팅 런타임이 설치되어 있지 않으면 해당 행에 **`Install`(설치)**이 표시됩니다. 설치한 뒤 **`Remove`(제거)**를 선택하면 채팅 기록은 유지하면서 실행 중인 채팅을 중지하고 다운로드한 런타임을 제거합니다.
 -   **`Appearance`(모양)** — 픽셀 단위의 **`Text size`(텍스트 크기)**와 **`Code text size`(코드 텍스트 크기)**, **`Width`(너비)** 및 **`Contrast`(대비)**를 설정합니다. **`Match terminal interface`(터미널 인터페이스와 일치)**를 켜면 전체 채팅에 터미널의 글꼴과 색상을 사용하며, 나중에 터미널 테마를 변경해도 동기화됩니다. 이 기능이 켜져 있으면 크기 컨트롤이 비활성화됩니다. **`Reset chat appearance`(채팅 모양 재설정)**는 기본값을 복원합니다.
 -   **`Inline visuals`(인라인 시각 자료)** — 에이전트가 답변 안에 차트, 다이어그램 및 목업을 표시할 수 있게 합니다. 새로 시작한 채팅에 적용됩니다.
 -   **`Chat names`(채팅 이름)** — 에이전트를 사용하여 새 채팅의 첫 메시지를 바탕으로 이름을 지정합니다. 생성된 이름이 없으면 채팅 이름은 **Claude Chat** 또는 **Codex Chat**으로 유지됩니다.
@@ -82,8 +83,8 @@ translationNotice:
 -   새 Claude 및 Codex 채팅의 권한은 **`Chat → Behavior`(채팅 → 동작)**에서 설정합니다. 터미널 에이전트는 자체 승인 흐름과 시작 설정을 유지합니다.
 -   **`Trust the folder when Orca starts an agent`(앱이 에이전트를 시작할 때 폴더 신뢰)** — **기본적으로 켜져 있습니다**. Orca가 시작하는 에이전트(오케스트레이션 워커, 자동화 및 휴대전화에서 시작한 에이전트 포함)는 **`Do you trust this folder?`(이 폴더를 신뢰하시겠습니까?)** 프롬프트를 건너뜁니다. 각 에이전트의 자체 신뢰 프롬프트를 유지하려면 끕니다. [Orca의 Codex](/orca-docs-ko/docs/agents/codex/) 및 [지원되는 에이전트](/orca-docs-ko/docs/agents/supported/)를 참조합니다.
 -   **`Run each Codex terminal on its own server`(각 터미널을 자체 서버에서 실행)** — **기본적으로 켜져 있습니다**. Codex 탭에서 Orca의 상태와 탭 닫기 동작을 올바르게 유지합니다. Codex의 공유 서버와 에이전트 개요를 사용하려면 끕니다. 새 터미널에 적용됩니다. 직접 시작한 Codex가 서버를 공유하면 함께 제공되는 **`Warn when a Codex tab shares a server`(탭이 서버를 공유할 때 경고)** 알림이 나타납니다. [Orca의 Codex](/orca-docs-ko/docs/agents/codex/)을 참조합니다.
--   Claude, Codex, OpenCode, Devin, Antigravity 및 GLM Coding Plan의 계정 목록입니다. Linux에서는 암호화할 수 없는 저장된 자격 증명이 경고와 함께 표시됩니다. 각 Claude 계정은 자체 설정 폴더를 유지하며, 계정을 추가할 때 기본 브라우저가 이미 다른 Claude 이메일로 로그인되어 있으면 **`Copy sign-in link instead`(대신 로그인 링크 복사)**를 선택할 수 있습니다.
--   OpenCode Go 세션 쿠키 — Go 사용 한도를 표시하려면 `__Host-console_session`을 포함한 전체 `opencode.ai` Cookie 헤더를 붙여 넣습니다. `auth` 쿠키만으로는 충분하지 않습니다.
+-   Claude, Codex, OpenCode, Devin, Antigravity 및 GLM Coding Plan의 계정 목록입니다. Linux에서는 암호화할 수 없는 저장된 자격 증명이 경고와 함께 표시됩니다. 각 Claude 계정은 자체 설정 폴더를 유지하며, 계정을 추가할 때 기본 브라우저가 이미 다른 Claude 이메일로 로그인되어 있으면 **`Copy sign-in link instead`(대신 로그인 링크 복사)**를 선택할 수 있습니다. Antigravity 계정 행에는 채팅 런타임의 설치 상태도 표시되며, 해당 호스트에서 런타임을 설치하거나 제거할 수 있습니다.
+-   OpenCode Go 세션 쿠키 — Go 사용 한도를 표시하려면 `opencode.ai` Cookie 헤더 전체를 붙여 넣습니다. 헤더에는 `__Host-console_session`이 포함되어야 합니다. `auth` 쿠키만으로는 충분하지 않습니다.
 -   에이전트별 시작 훅을 설정합니다.
 -   **`Agent status hooks`(에이전트 상태 훅)** — Orca에 작업 중/대기 중/완료 상태를 표시합니다. 토글은 Windows WSL 훅 릴레이를 포함해 앱을 다시 시작하지 않아도 적용됩니다. CLI: `orca agent hooks on|off|status`.
 -   **`Keep computer awake`(컴퓨터 절전 방지)** — 계속 절전을 방지하려면 **`On`(켬)**, 에이전트가 작업 중일 때만 방지하려면 **`Agent`(에이전트)**, 비활성화하려면 **`Off`(끔)**를 선택합니다. 같은 컨트롤은 데스크톱 상태 표시줄의 **`Caffeinate`(절전 방지)**(커피 아이콘)에도 있습니다. 페어링된 웹 클라이언트에서는 숨겨집니다.

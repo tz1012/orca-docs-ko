@@ -1,7 +1,7 @@
 ---
 title: "작업 트리"
 sourceUrl: https://www.onorca.dev/docs/model/worktrees
-checkedAt: "2026-10-19T01:00:41.238Z"
+checkedAt: "2026-10-20T01:01:00.563Z"
 editUrl: false
 prev: /orca-docs-ko/docs/first-session/
 next: /orca-docs-ko/docs/model/tabs-panes-splits/

@@ -1,7 +1,7 @@
 ---
 title: "Orca CLI 참조"
 sourceUrl: https://www.onorca.dev/docs/cli/reference
-checkedAt: "2026-10-19T01:00:41.238Z"
+checkedAt: "2026-10-20T01:01:00.563Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/overview/
 next: /orca-docs-ko/docs/cli/orchestration/
@@ -328,9 +328,13 @@ orca linear estimate set --current --to 3 --json
 orca linear due-date set --current --to 2026-08-01 --json
 orca linear label add --current --label backend --json
 orca linear comment add --current --body "Investigating regression" --json
+orca linear comment edit <commentId> --body "Investigating the regression" --json
+orca linear comment delete <commentId> --json
 orca linear attach --current --url https://example.com/repro --title "Repro" --json
 orca linear create --title "Flaky login test" --team ENG --priority high --json
 ```
+
+`comment edit`와 `comment delete`는 정확한 Linear 댓글 ID를 대상으로 하며, `comment rm`은 삭제의 별칭입니다. 대체 텍스트를 파일이나 표준 입력에서 가져오는 경우 편집할 때 `--body-file <path|->`를 사용합니다.
 
 버전이 일치하는 목록을 확인하려면 `orca linear --help` 또는 `orca skills get orca-linear`를 실행합니다. Orca에 연결된 작업 트리 외부에서 스크립트가 실행될 수 있으면 명시적인 이슈 ID(예: `ENG-123`)를 전달합니다.
 
