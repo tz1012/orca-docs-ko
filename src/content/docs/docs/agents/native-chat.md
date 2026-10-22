@@ -1,7 +1,7 @@
 ---
 title: "채팅 UI(네이티브 채팅)"
 sourceUrl: https://www.onorca.dev/docs/agents/native-chat
-checkedAt: "2026-10-20T01:01:00.563Z"
+checkedAt: "2026-10-22T00:59:02.690Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/codex-hot-swap/
 next: /orca-docs-ko/docs/agents/session-history/
@@ -30,7 +30,7 @@ translationNotice:
 
 **`Settings → Experimental → Chat UI`(설정 → 실험적 기능 → 채팅 UI)** 아래의 **`Use your shell environment`(셸 환경 사용)** 설정은 새로 시작하거나 재개한 구조화 채팅에 전달할 변수를 제어합니다. 기본적으로 켜져 있으므로 로그인 셸에서 내보낸 변수를 받습니다. 이 설정을 끄면 `PATH`, 로캘 및 `SSH_AUTH_SOCK` 같은 기본 셸 변수에 더해 선택한 이름의 변수만 허용합니다. 터미널 기반 채팅은 계속 해당 터미널 셸을 사용합니다.
 
-구조화 채팅은 [`Settings → Agents`](/orca-docs-ko/docs/settings/#agents)(설정 → 에이전트)에서 해당 에이전트에 저장한 **`Command`(명령)** 및 **`Arguments`(인수)**로 에이전트를 시작합니다. [`Settings → Chat`](/orca-docs-ko/docs/settings/#chat)(설정 → 채팅)에서 구조화 채팅의 텍스트 크기, 코드 크기, 너비 및 대비를 설정하거나 **`Match terminal interface`(터미널 인터페이스와 일치)**를 켜서 이후 테마 변경을 포함한 터미널 글꼴과 색상을 따르게 합니다. 이 창의 **`Inline visuals`(인라인 시각화)**를 사용하면 에이전트가 데스크톱과 휴대폰의 응답 안에 차트, 다이어그램 및 목업을 그릴 수 있습니다. 더 넓은 공간이 필요하면 시각화를 자체 탭에서 열 수 있으며, Mermaid 다이어그램은 다크 모드에서 채팅 테마를 따릅니다. **`Chat → Behavior`(채팅 → 동작)**에서 새 Claude 및 Codex 채팅이 시작될 때 사용할 권한 모드를 선택합니다. 이 기본값을 변경하거나 모델을 전환해도 기존 채팅은 자체 권한 모드를 유지합니다.
+구조화 채팅은 [`Settings → Agents`](/orca-docs-ko/docs/settings/#agents)(설정 → 에이전트)에서 해당 에이전트에 저장한 **`Command`(명령)** 및 **`Arguments`(인수)**로 에이전트를 시작합니다. [`Settings → Chat`](/orca-docs-ko/docs/settings/#chat)(설정 → 채팅)에서 구조화 채팅의 텍스트 크기, 코드 크기, 너비 및 대비를 설정하거나 **`Match terminal interface`(터미널 인터페이스와 일치)**를 켜서 이후 테마 변경을 포함한 터미널 글꼴과 색상을 따르게 합니다. 이 창의 **`Inline visuals`(인라인 시각화)**를 사용하면 에이전트가 데스크톱과 휴대폰의 응답 안에 차트, 다이어그램 및 목업을 그릴 수 있습니다. 더 넓은 공간이 필요하면 시각화를 자체 탭에서 열 수 있으며, Mermaid 다이어그램은 다크 모드에서 채팅 테마를 따릅니다. **`Settings → Agents`(설정 → 에이전트)**에서 새 Claude 및 Codex 터미널과 구조화 채팅 세션에 사용할 **`Manual`(수동)**, **`Auto`(자동)** 또는 **`Yolo`(욜로)**를 선택합니다. **`Auto`(자동)**를 사용하면 지원되는 에이전트가 일상적인 작업을 자체 승인할 수 있습니다. Auto를 지원하지 않는 에이전트에는 **`Other agents`(기타 에이전트)**에서 Manual 또는 Yolo를 선택합니다. 기본값을 변경하거나 모델을 전환해도 기존 채팅은 자체 모드를 유지합니다.
 
 Antigravity 채팅은 자체 채팅 서버를 사용합니다. 채팅을 실행할 호스트에 서버가 설치되어 있지 않으면 해당 **`Providers`(제공자)** 행이나 채팅의 설치 카드에서 **`Install`(설치)**을 선택한 다음, 그 서버의 Google 흐름으로 로그인합니다. 런타임은 `Install`(설치)을 선택한 후에만 다운로드됩니다. 설치된 **`Providers`(제공자)** 행에서 **`Remove`(제거)**를 선택하면 다운로드한 런타임을 제거합니다. 이 경우 해당 호스트에서 실행 중인 Antigravity 채팅은 중지되지만 채팅 기록은 유지됩니다.
 

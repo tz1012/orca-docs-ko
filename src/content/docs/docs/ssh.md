@@ -1,7 +1,7 @@
 ---
 title: "SSH 작업 트리"
 sourceUrl: https://www.onorca.dev/docs/ssh
-checkedAt: "2026-10-20T01:01:00.563Z"
+checkedAt: "2026-10-22T00:59:02.690Z"
 editUrl: false
 prev: /orca-docs-ko/docs/ways-to-run/
 next: /orca-docs-ko/docs/remote-servers/
@@ -109,6 +109,8 @@ OpenSSH 구성의 호스트에 `GSSAPIAuthentication yes`가 설정되어 있으
 ## 관리형 Orca 서버
 
 처음 연결할 때 Orca는 호스트에 자체 서버, 즉 함께 제공하며 최신 상태로 유지하는 고정 버전 런타임을 설정합니다. 따라서 호스트의 Node 버전이 잘못되었거나 빌드 도구가 없어도 더 이상 연결이 실패하지 않습니다. 이 기능을 켜는 별도 설정은 없습니다.
+
+컴퓨터와 호스트 어느 쪽에서도 Node.js 런타임을 다운로드할 수 없으면 연결 오류에 **`Use a Node.js mirror…`(Node.js 미러 사용…)**가 표시됩니다. 미리 입력된 미러를 검토하거나 바꾼 다음 **`Save and retry`(저장 후 재시도)**를 선택합니다. Orca는 각 다운로드를 고정된 체크섬과 대조해 확인합니다. 구성한 미러도 실패하면 다시 연결하기 전에 **`Settings → Advanced → Network`(설정 → 고급 → 네트워크)**를 열어 미러를 수정합니다.
 
 -   비어 있는 호스트는 설정 후 관리 서버에 연결됩니다.
 -   이미 Orca 프로젝트가 있지만 열린 터미널이 없는 호스트는 다음 연결 시 프로젝트, 폴더, 프로젝트 그룹 및 열린 편집기 탭을 관리 서버로 이동합니다.

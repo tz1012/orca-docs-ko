@@ -1,7 +1,7 @@
 ---
 title: "모나코 편집기 및 자동 저장"
 sourceUrl: https://www.onorca.dev/docs/editing/monaco
-checkedAt: "2026-10-20T01:01:00.563Z"
+checkedAt: "2026-10-22T00:59:02.690Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/jira/
 next: /orca-docs-ko/docs/editing/markdown/
@@ -16,6 +16,8 @@ Orca의 코드 편집기는 VS Code가 사용하는 것과 동일한 편집기�
 ## 자동 저장
 
 흐려지거나 짧은 유휴 기간이 지나면 파일이 저장됩니다. 일반 흐름에는 저장되지 않은 변경 사항이 없기 때문에 "더티" 점이 없습니다.
+
+저장하기 전에 Orca는 탭에서 파일을 마지막으로 읽거나 쓴 이후 디스크의 파일이 변경되지 않았는지 매번 확인합니다. 변경되었다면 자동 저장이 일시 중지되고, 디스크 변경 알림 배너에서 비교, 다시 불러오기, 편집 내용 유지 또는 디스크 버전 명시적 덮어쓰기를 선택할 수 있습니다. 선택하기 전까지 편집 내용은 탭에 그대로 유지됩니다.
 
 ## 호스트별 편집기 상태
 

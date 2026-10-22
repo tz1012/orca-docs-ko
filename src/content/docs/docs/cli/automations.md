@@ -1,7 +1,7 @@
 ---
 title: "예약된 자동화"
 sourceUrl: https://www.onorca.dev/docs/cli/automations
-checkedAt: "2026-10-20T01:01:00.563Z"
+checkedAt: "2026-10-22T00:59:02.690Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/orchestration/
 next: /orca-docs-ko/docs/cli/computer-use/
