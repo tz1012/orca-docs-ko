@@ -95,8 +95,8 @@
       "translated": "## 포트 포워딩"
     },
     "/docs/ssh/:paragraph:port-forwarding:0": {
-      "sourceHash": "a5a39ff97daaee95645bd5ad7b204889cec61da2d4dfa170fee15642d9e19a9f",
-      "translated": "원격 작업 트리의 오른쪽 사이드바에는 **`Ports`(포트)** 탭이 표시되며 `ORCA_PROTECTED_0001`로 전환할 수 있습니다. ORCA_PROTECTED_0002는 노트북이 아니라 작업 트리가 실행되는 관리형 SSH 서버 또는 페어링된 서버인 작업 공간 자체 호스트를 스캔하고 **`Detected`(감지됨)** 아래에 수신 대기 중인 포트를 나열합니다. 한 번 클릭해 로컬로 전달할 수 있고 같은 패널에서 감지된 포트를 중지할 수 있습니다. 전달을 직접 추가, 편집 또는 제거할 수도 있습니다. 저장된 전달은 관리 호스트가 다시 연결된 후 복원되고 앱 재시작 후에도 유지되며, 권한이 필요한 원격 포트는 로컬에서 자동으로 다시 매핑됩니다(예: 원격 80 → 로컬 10080)."
+      "sourceHash": "60c6a8526a3dcb4c03d0d72a44eacb1de26024a6c5101c484c3cf8d82fcf4552",
+      "translated": "원격 작업 트리의 오른쪽 사이드바에는 **`Ports`(포트)** 탭이 표시되며 `ORCA_PROTECTED_0001`로 전환할 수 있습니다. ORCA_PROTECTED_0002는 노트북이 아니라 작업 트리가 실행되는 관리형 SSH 서버 또는 페어링된 서버인 작업 공간 자체 호스트를 스캔하고 **`Detected`(감지됨)** 아래에 수신 대기 중인 포트를 나열합니다. 한 번 클릭해 로컬로 전달할 수 있고 같은 패널에서 감지된 포트를 중지할 수 있습니다. 전달을 직접 추가, 편집 또는 제거할 수도 있습니다. 저장된 전달은 관리 호스트가 다시 연결된 후 복원되고 앱 재시작 후에도 유지되며, 권한이 필요한 원격 포트는 로컬에서 자동으로 다시 매핑됩니다(예: 원격 80 → 로컬 10080). 저장된 전달을 시작할 수 없으면 해당 행에 이유가 표시되며 그 전달을 제거할 수 있습니다."
     },
     "/docs/ssh/:aside:ssh-worktrees:0": {
       "sourceHash": "03641fefc1a187570249524f8d609835d67b2e681914c387459d85a9520a06e5",
@@ -227,8 +227,8 @@
       "translated": "컴퓨터와 호스트 어느 쪽에서도 ORCA_PROTECTED_0001 런타임을 다운로드할 수 없으면 연결 오류에 **`Use a ORCA_PROTECTED_0002 mirror…`(Node.js 미러 사용…)**가 표시됩니다. 미리 입력된 미러를 검토하거나 바꾼 다음 **`Save and retry`(저장 후 재시도)**를 선택합니다. ORCA_PROTECTED_0003는 각 다운로드를 고정된 체크섬과 대조해 확인합니다. 구성한 미러도 실패하면 다시 연결하기 전에 **`Settings → Advanced → Network`(설정 → 고급 → 네트워크)**를 열어 미러를 수정합니다."
     },
     "/docs/ssh/:paragraph:managed-orca-server:2": {
-      "sourceHash": "40b5e484ffd868ae760c724ec08bae6b6b47743fab51056282c9eb6faae99039",
-      "translated": "**`Settings → Managed servers`(설정 → 관리형 서버)**에서 각 서버를 관리합니다. 버전과 실행 중인 터미널을 확인하고, **`Update`(업데이트)** 또는 **`Roll back`(롤백)**하거나, 중단된 업데이트를 **`Recover`(복구)**하고, 서버를 **`Stop…`(중지…)** / **`Forget…`(잊기…)**할 수 있습니다. CLI에서도 `ORCA_PROTECTED_0001`을 사용하여 같은 작업을 수행할 수 있습니다. [CLI 참고](ORCA_PROTECTED_0002)를 참조합니다."
+      "sourceHash": "0b035bc8b155167401cb20b4495cc46e1e6c49a220af9ebc2d1fc432b33ea3b9",
+      "translated": "**`Settings → Managed servers`(설정 → 관리형 서버)**에서 각 서버를 관리합니다. 버전과 실행 중인 터미널을 확인하고, **`Update`(업데이트)** 또는 **`Roll back`(롤백)**하거나, 중단된 업데이트를 **`Recover`(복구)**하고, 서버를 **`Stop…`(중지…)** / **`Forget…`(잊기…)**할 수 있습니다. 터미널이 실행 중이면 **`Update anyway`(그래도 업데이트)**를 선택해 터미널을 닫지 않고 서버를 업데이트합니다. CLI에서도 `ORCA_PROTECTED_0001`을 사용하여 같은 작업을 수행할 수 있습니다. [CLI 참고](ORCA_PROTECTED_0002)를 참조합니다."
     },
     "/docs/ssh/:heading:remote-runtime-on-the-host:0": {
       "sourceHash": "7a881ec0a2ada218d563bdbd214f9ad587586b535061664b489ec5921bf4cf05",
@@ -265,6 +265,10 @@
     "/docs/ssh/:paragraph:runtime-choices:0": {
       "sourceHash": "7a7e59ba12209ce895b2aca205e3ee48fc896fdcffc1c83dcd48479a265c12ed",
       "translated": "이전의 호스트별 **`Runtime`(런타임)** 선택기(Auto / ORCA_PROTECTED_0001 관리형 Node / Host Node)와 릴레이 전용 수명 주기 설정은 제거되었습니다. 모든 SSH 연결은 관리형 ORCA_PROTECTED_0002 서버에서 실행됩니다. 지원되지 않는 OS나 CPU, `ORCA_PROTECTED_0004` 홈 디렉터리 또는 포트 전달을 거부하는 SSH 서버 때문에 ORCA_PROTECTED_0003가 호스트에서 관리 서버를 실행할 수 없으면 자동으로 대체하지 않고 **`Settings → SSH Hosts`(설정 → SSH 호스트)**에 연결할 수 없는 이유를 표시합니다."
+    },
+    "/docs/ssh/:paragraph:multi-factor-sign-in:1": {
+      "sourceHash": "933fca4911884846acb6653a73917d320669cf854f26f854f976363b39d40b3f",
+      "translated": "기본 제공 클라이언트와 호스트 사이에 호환되는 SSH 알고리즘이 없으면 ORCA_PROTECTED_0001는 시스템의 `ORCA_PROTECTED_0002`를 통해 다시 시도합니다. 이때 해당 설치에 구성된 알고리즘을 사용할 수 있습니다."
     }
   }
 }

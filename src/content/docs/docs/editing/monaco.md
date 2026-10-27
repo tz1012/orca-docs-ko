@@ -1,7 +1,7 @@
 ---
 title: "모나코 편집기 및 자동 저장"
 sourceUrl: https://www.onorca.dev/docs/editing/monaco
-checkedAt: "2026-10-22T00:59:02.690Z"
+checkedAt: "2026-10-27T01:05:44.421Z"
 editUrl: false
 prev: /orca-docs-ko/docs/review/jira/
 next: /orca-docs-ko/docs/editing/markdown/

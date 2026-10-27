@@ -1,7 +1,7 @@
 ---
 title: "Orca이란 무엇입니까?"
 sourceUrl: https://www.onorca.dev/docs
-checkedAt: "2026-10-22T00:59:02.690Z"
+checkedAt: "2026-10-27T01:05:44.421Z"
 editUrl: false
 prev: false
 next: /orca-docs-ko/docs/install/

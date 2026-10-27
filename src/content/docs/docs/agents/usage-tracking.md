@@ -1,7 +1,7 @@
 ---
 title: "사용량 및 속도 제한 추적"
 sourceUrl: https://www.onorca.dev/docs/agents/usage-tracking
-checkedAt: "2026-10-22T00:59:02.690Z"
+checkedAt: "2026-10-27T01:05:44.421Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/hibernation/
 next: /orca-docs-ko/docs/agents/hooks-memory/

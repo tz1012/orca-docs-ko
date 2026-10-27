@@ -1,7 +1,7 @@
 ---
 title: "Android에 Orca 모바일 설치"
 sourceUrl: https://www.onorca.dev/docs/android-apk
-checkedAt: "2026-10-22T00:59:02.690Z"
+checkedAt: "2026-10-27T01:05:44.421Z"
 editUrl: false
 prev: /orca-docs-ko/docs/mobile/
 next: /orca-docs-ko/docs/notifications/

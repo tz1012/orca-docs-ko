@@ -1,7 +1,7 @@
 ---
 title: "Orca 기술 레지스트리 및 MCP"
 sourceUrl: https://www.onorca.dev/docs/cli/skills
-checkedAt: "2026-10-22T00:59:02.690Z"
+checkedAt: "2026-10-27T01:05:44.421Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/worktree-checkpoints/
 next: /orca-docs-ko/docs/mobile/

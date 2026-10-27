@@ -1,7 +1,7 @@
 ---
 title: "터미널"
 sourceUrl: https://www.onorca.dev/docs/terminal
-checkedAt: "2026-10-22T00:59:02.690Z"
+checkedAt: "2026-10-27T01:05:44.421Z"
 editUrl: false
 prev: /orca-docs-ko/docs/browser/profiles/
 next: /orca-docs-ko/docs/ways-to-run/
