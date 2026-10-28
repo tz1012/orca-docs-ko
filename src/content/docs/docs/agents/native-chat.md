@@ -1,7 +1,7 @@
 ---
 title: "채팅 UI(네이티브 채팅)"
 sourceUrl: https://www.onorca.dev/docs/agents/native-chat
-checkedAt: "2026-10-27T01:05:44.421Z"
+checkedAt: "2026-10-28T00:57:57.699Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/codex-hot-swap/
 next: /orca-docs-ko/docs/agents/session-history/
@@ -32,7 +32,9 @@ translationNotice:
 
 구조화 채팅은 [`Settings → Agents`](/orca-docs-ko/docs/settings/#agents)(설정 → 에이전트)에서 해당 에이전트에 저장한 **`Command`(명령)** 및 **`Arguments`(인수)**로 에이전트를 시작합니다. [`Settings → Chat`](/orca-docs-ko/docs/settings/#chat)(설정 → 채팅)에서 구조화 채팅의 글꼴, 텍스트 크기, 코드 크기, 너비 및 대비를 설정하거나 **`Match terminal interface`(터미널 인터페이스와 일치)**를 켜서 이후 테마 변경을 포함한 터미널 글꼴과 색상을 따르게 합니다. 이 창의 **`Inline visuals`(인라인 시각화)**를 사용하면 에이전트가 데스크톱과 휴대전화의 응답 안에 차트, 다이어그램 및 목업을 그릴 수 있습니다. 더 넓은 공간이 필요하면 시각화를 자체 탭에서 열 수 있으며, Mermaid 다이어그램은 다크 모드에서 채팅 테마를 따릅니다. **`Settings → Agents`(설정 → 에이전트)**에서 새 Claude 및 Codex 터미널과 구조화 채팅 세션에 사용할 **`Manual`(수동)**, **`Auto`(자동)** 또는 **`Yolo`(욜로)**를 선택합니다. **`Auto`(자동)**를 사용하면 지원되는 에이전트가 일상적인 작업을 자체 승인할 수 있습니다. Auto를 지원하지 않는 에이전트에는 **`Other agents`(기타 에이전트)**에서 Manual 또는 Yolo를 선택합니다. 기본값을 변경하거나 모델을 전환해도 기존 채팅은 자체 모드를 유지합니다.
 
-Antigravity 채팅은 자체 채팅 서버를 사용합니다. 채팅을 실행할 호스트에 서버가 설치되어 있지 않으면 해당 **`Providers`(제공자)** 행이나 채팅의 설치 카드에서 **`Install`(설치)**을 선택한 다음, 그 서버의 Google 흐름으로 로그인합니다. 런타임은 `Install`(설치)을 선택한 후에만 다운로드됩니다. 설치된 **`Providers`(제공자)** 행에서 **`Remove`(제거)**를 선택하면 다운로드한 런타임을 제거합니다. 이 경우 해당 호스트에서 실행 중인 Antigravity 채팅은 중지되지만 채팅 기록은 유지됩니다.
+Codex 채팅을 **`Ask`(질문)** 모드로 실행하면 Orca는 Codex가 편집을 요청할 때까지 작업 공간 접근을 읽기 전용으로 유지합니다. 요청을 승인하면 편집을 진행할 수 있으며, 작업에 적합한 경우 채팅을 **`Approve for me`(대신 승인)** 또는 **`Full access`(전체 액세스)**로 시작할 수도 있습니다. 권한 선택은 다음 턴부터 적용되며, 이미 실행 중인 작업은 시작할 때의 권한을 유지합니다.
+
+Antigravity 채팅은 자체 채팅 서버를 사용합니다. 채팅을 실행할 호스트에 서버가 설치되어 있지 않으면 **`Providers`(공급자)** 행이나 채팅 설치 카드에서 **`Install`(설치)**을 선택한 다음, 해당 서버의 Google 흐름으로 로그인합니다. 런타임은 `Install`(설치)을 선택한 뒤에만 다운로드됩니다. 설치된 **`Providers`(공급자)** 행에서 **`Remove`(제거)**를 선택하면 다운로드한 런타임이 제거됩니다. 이때 해당 호스트에서 실행 중인 Antigravity 채팅은 중지되지만 기록은 유지됩니다.
 
 앱 재시작으로 구조화 채팅이 중단된 경우 다시 연결하면 Orca가 재개 여부를 묻습니다. 이 대화 상자를 닫아도 나중에 상태 표시줄의 **`chats to resume`(재개할 채팅)** 항목에서 다시 열 수 있습니다. 재개할 수 있는 채팅이 더 이상 없으면 이 항목은 사라집니다. 닫은 채팅 탭은 오른쪽에 다시 나타나지 않고 닫힌 상태로 유지됩니다.
 

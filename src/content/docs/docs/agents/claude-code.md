@@ -1,7 +1,7 @@
 ---
 title: "Orca의 Claude Code"
 sourceUrl: https://www.onorca.dev/docs/agents/claude-code
-checkedAt: "2026-10-27T01:05:44.421Z"
+checkedAt: "2026-10-28T00:57:57.699Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/supported/
 next: /orca-docs-ko/docs/agents/glm-agent/
@@ -33,7 +33,7 @@ Orca는 여러 Claude 계정을 지원하며 Codex 흐름과 동일하게 한 �
 
 ## 하위 에이전트와 팀
 
-백그라운드 하위 에이전트와 Agent Teams 팀원은 작업 트리 에이전트 목록과 [에이전트 대시보드](/orca-docs-ko/docs/model/agents-sessions/#agent-dashboard)에서 리드 에이전트 아래의 펼칠 수 있는 하위 행으로 표시될 수 있습니다. 하위 에이전트를 선택하면 리드 터미널에 포커스가 맞춰집니다.
+백그라운드 하위 에이전트와 Agent Teams 팀원은 작업 트리 에이전트 목록과 [Agent Dashboard](/orca-docs-ko/docs/model/agents-sessions/#agent-dashboard)에서 리드 에이전트 아래의 펼칠 수 있는 하위 행으로 표시될 수 있습니다. 하위 항목을 선택하면 리드 터미널에서 해당 대화 기록을 볼 수 있고, 상위 항목을 선택하면 돌아갑니다. 눈 모양 아이콘은 현재 표시 중인 대화 기록을 나타냅니다. Claude 상태 후크를 사용할 수 있으면 이 탐색 기능은 기본적으로 켜져 있습니다. 리드 터미널을 계속 표시하려면 **`Settings → Agents → Claude subagent navigation`(설정 → 에이전트 → 하위 에이전트 탐색)**에서 이 기능을 끕니다. 이 설정을 변경한 뒤에는 새로운 Claude 세션을 시작합니다.
 
 ## 후크 및 메모리
 

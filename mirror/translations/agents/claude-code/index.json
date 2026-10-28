@@ -55,8 +55,8 @@
       "translated": "## 하위 에이전트와 팀"
     },
     "/docs/agents/claude-code/:paragraph:subagents-and-teams:0": {
-      "sourceHash": "e152fd0ca986111bd8c79a6c83a356eb25a94a6130c2e112a97c4288470fab84",
-      "translated": "백그라운드 하위 에이전트와 Agent Teams 팀원은 작업 트리 에이전트 목록과 [에이전트 대시보드](ORCA_PROTECTED_0001)에서 리드 에이전트 아래의 펼칠 수 있는 하위 행으로 표시될 수 있습니다. 하위 에이전트를 선택하면 리드 터미널에 포커스가 맞춰집니다."
+      "sourceHash": "bfb062a09c4d096a03de9f1df6f7e463d20b4425a6308805f40ba3320c912db6",
+      "translated": "백그라운드 하위 에이전트와 Agent Teams 팀원은 작업 트리 에이전트 목록과 [Agent Dashboard](ORCA_PROTECTED_0001)에서 리드 에이전트 아래의 펼칠 수 있는 하위 행으로 표시될 수 있습니다. 하위 항목을 선택하면 리드 터미널에서 해당 대화 기록을 볼 수 있고, 상위 항목을 선택하면 돌아갑니다. 눈 모양 아이콘은 현재 표시 중인 대화 기록을 나타냅니다. ORCA_PROTECTED_0002 상태 후크를 사용할 수 있으면 이 탐색 기능은 기본적으로 켜져 있습니다. 리드 터미널을 계속 표시하려면 **`Settings → Agents → ORCA_PROTECTED_0003 subagent navigation`(설정 → 에이전트 → 하위 에이전트 탐색)**에서 이 기능을 끕니다. 이 설정을 변경한 뒤에는 새로운 ORCA_PROTECTED_0004 세션을 시작합니다."
     }
   }
 }

@@ -157,6 +157,18 @@
     "/docs/agents/native-chat/:paragraph:composer:3": {
       "sourceHash": "7f8dcdeb12fe40ffc2a2e3f54064e128ee03e3e45f91cc68c6449deca00d460f",
       "translated": "채팅의 코드 펜스 블록과 셸 명령은 구문 강조되며, 각 코드 펜스 블록에는 **`Copy code`(코드 복사)** 버튼이 있습니다. 이 버튼은 주변 메시지가 아니라 코드 조각만 복사합니다."
+    },
+    "/docs/agents/native-chat/:paragraph:structured-chat:4": {
+      "sourceHash": "9b0242d8a7bbf4726cb5c60211ce38278df070b657afb38cadd05f81c9c6bfd5",
+      "translated": "ORCA_PROTECTED_0001 채팅을 **`Ask`(질문)** 모드로 실행하면 ORCA_PROTECTED_0002는 ORCA_PROTECTED_0003가 편집을 요청할 때까지 작업 공간 접근을 읽기 전용으로 유지합니다. 요청을 승인하면 편집을 진행할 수 있으며, 작업에 적합한 경우 채팅을 **`Approve for me`(대신 승인)** 또는 **`Full access`(전체 액세스)**로 시작할 수도 있습니다. 권한 선택은 다음 턴부터 적용되며, 이미 실행 중인 작업은 시작할 때의 권한을 유지합니다."
+    },
+    "/docs/agents/native-chat/:paragraph:structured-chat:5": {
+      "sourceHash": "c85c95eb9d7772002f36709bab084135f38e24ebf2fdb82587e0e29790d0fbfa",
+      "translated": "ORCA_PROTECTED_0001 채팅은 자체 채팅 서버를 사용합니다. 채팅을 실행할 호스트에 서버가 설치되어 있지 않으면 **`Providers`(공급자)** 행이나 채팅 설치 카드에서 **`Install`(설치)**을 선택한 다음, 해당 서버의 ORCA_PROTECTED_0002 흐름으로 로그인합니다. 런타임은 `Install`(설치)을 선택한 뒤에만 다운로드됩니다. 설치된 **`Providers`(공급자)** 행에서 **`Remove`(제거)**를 선택하면 다운로드한 런타임이 제거됩니다. 이때 해당 호스트에서 실행 중인 ORCA_PROTECTED_0003 채팅은 중지되지만 기록은 유지됩니다."
+    },
+    "/docs/agents/native-chat/:paragraph:structured-chat:6": {
+      "sourceHash": "635cba47c7223d9cc4b1dd6c5fd472023759bb177e801529f69212a4476690a1",
+      "translated": "앱 재시작으로 구조화 채팅이 중단된 경우 다시 연결하면 ORCA_PROTECTED_0001가 재개 여부를 묻습니다. 이 대화 상자를 닫아도 나중에 상태 표시줄의 **`chats to resume`(재개할 채팅)** 항목에서 다시 열 수 있습니다. 재개할 수 있는 채팅이 더 이상 없으면 이 항목은 사라집니다. 닫은 채팅 탭은 오른쪽에 다시 나타나지 않고 닫힌 상태로 유지됩니다."
     }
   }
 }

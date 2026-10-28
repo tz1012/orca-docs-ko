@@ -1,7 +1,7 @@
 ---
 title: "핫스왑 Codex 계정"
 sourceUrl: https://www.onorca.dev/docs/agents/codex-hot-swap
-checkedAt: "2026-10-27T01:05:44.421Z"
+checkedAt: "2026-10-28T00:57:57.699Z"
 editUrl: false
 prev: /orca-docs-ko/docs/agents/cursor-cli/
 next: /orca-docs-ko/docs/agents/native-chat/

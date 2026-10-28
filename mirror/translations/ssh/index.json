@@ -269,6 +269,14 @@
     "/docs/ssh/:paragraph:multi-factor-sign-in:1": {
       "sourceHash": "933fca4911884846acb6653a73917d320669cf854f26f854f976363b39d40b3f",
       "translated": "기본 제공 클라이언트와 호스트 사이에 호환되는 SSH 알고리즘이 없으면 ORCA_PROTECTED_0001는 시스템의 `ORCA_PROTECTED_0002`를 통해 다시 시도합니다. 이때 해당 설치에 구성된 알고리즘을 사용할 수 있습니다."
+    },
+    "/docs/ssh/:paragraph:reconnect-and-restart:1": {
+      "sourceHash": "d4c5dfe7188b169e6b5e5bb78da34321df8f18781f1251ff8f61d0d32a83b792",
+      "translated": "ORCA_PROTECTED_0001을 시작할 때 주문형 SSH 호스트를 연결 해제 상태로 유지하려면 해당 호스트를 편집하고 **`Advanced → Reconnect on launch`(고급 → 시작 시 다시 연결)**를 끕니다. 이 스위치는 기본적으로 켜져 있습니다. 꺼져 있는 동안에는 해당 세션에서 **`Connect`(연결)**를 선택해야 ORCA_PROTECTED_0002가 호스트 또는 그 관리형 서버를 다시 연결합니다."
+    },
+    "/docs/ssh/:paragraph:reconnect-and-restart:2": {
+      "sourceHash": "0def65db19be61c9191e68b0e27cc785f12ec6b81f8af8ff172aa058e208f365",
+      "translated": "텍스트를 출력하는 셸 시작 파일, 항목이 수만 개인 폴더, 64비트 ARM Linux 서버로 인해 더 이상 연결에 문제가 생기거나 연결이 끊기지 않습니다. 두 머신이 경로를 공유하더라도 파일, 브라우저 탭, 링크, 끌어서 놓기는 각각 원래 속한 머신에 유지됩니다."
     }
   }
 }

@@ -1,7 +1,7 @@
 ---
 title: "컴퓨터 사용"
 sourceUrl: https://www.onorca.dev/docs/cli/computer-use
-checkedAt: "2026-10-27T01:05:44.421Z"
+checkedAt: "2026-10-28T00:57:57.699Z"
 editUrl: false
 prev: /orca-docs-ko/docs/cli/automations/
 next: /orca-docs-ko/docs/cli/worktree-checkpoints/
